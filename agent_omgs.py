@@ -354,7 +354,6 @@ def process_omgs_multi_expert_query(
     cutoff_dt = make_cutoff(time, days_after=1)
     cutoff_str = cutoff_dt.strftime("%Y-%m-%d %H:%M:%S") if cutoff_dt else "None"
     print(f"{Color.OKBLUE}{Color.BOLD}⏱️  CUTOFF_DT (time + 1d): {cutoff_str}{Color.RESET}")
-    print(meta_info,labs_json)
     lab_timeline_raw, lab_reports = load_patient_labs(meta_info, labs_json)
     
     im_timeline_raw, im_reports = load_patient_imaging(meta_info, imaging_json)
@@ -438,7 +437,7 @@ def process_omgs_multi_expert_query(
         else:
             context["pathology"][role] = []
 
-        if role in ("chair", "oncologist", "pathologist") and mut_reports:
+        if ROLE_PERMISSIONS[role].get("mutation") and mut_reports:
             context["mutation"][role] = [
                 {
                     "report_id": str(r.get("report_id")),
@@ -471,7 +470,7 @@ def process_omgs_multi_expert_query(
     )
     
     rag_query = build_rag_query_for_mdt(rag_query_builder, question_str)
-
+    print("rag_query",rag_query)
     # Use global guideline RAG (respects config: use_per_role_rag / default_role)
     from utils.rag_utils import get_global_guideline_rag
     rag_pack, rag_raw = get_global_guideline_rag(
@@ -636,6 +635,7 @@ def process_omgs_multi_expert_query(
             global_guideline_digest=global_guideline_digest,
             interaction_log=interaction_log,
             question_raw=question_raw,
+            trial_note=trial_note,
             initial_ops=initial_ops,
             final_round_ops=final_round_ops,
             trace_events=trace.events,

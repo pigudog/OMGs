@@ -1,6 +1,6 @@
 # OMGs - Ovarian-cancer Multidisciplinary intelligent aGent System
 
-[![Python 3.10](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 **OMGs** (Ovarian-cancer Multidisciplinary intelligent aGent System) is a multi-agent clinical decision-support system for ovarian cancer MDT (multidisciplinary team) discussions. It simulates multiple specialist roles (Chair, Medical Oncology, Radiology, Pathology, Nuclear Medicine), runs multi-round deliberation, and produces structured MDT recommendations.
@@ -57,7 +57,7 @@ Save artifacts (JSON + TXT + HTML)
 
 ## 📋 Requirements
 
-- **Python**: 3.8+
+- **Python**: 3.10+
 - **OS**: Linux, macOS, Windows
 - **Azure OpenAI**: valid Azure OpenAI account
 - **GPU** (optional): to accelerate local embeddings

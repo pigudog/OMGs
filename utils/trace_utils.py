@@ -73,7 +73,13 @@ def preview_text(x: Any, n: int = 160) -> str:
 
 def print_selected_reports_table(context: Dict[str, Dict[str, List[Dict[str, Any]]]], roles: List[str]):
     """PrettyTable summary: selected report counts and newest date per role/type."""
-    tbl = PrettyTable(["Role", "Lab(n)", "Lab newest", "Img(n)", "Img newest", "Path(n)", "Path newest", "Mut(n)"])
+    tbl = PrettyTable([
+        "Role",
+        "Lab(n)", "Lab newest",
+        "Img(n)", "Img newest",
+        "Path(n)", "Path newest",
+        "Mut(n)", "Mut newest",
+    ])
     tbl.align = "l"
 
     def _newest_date(lst: List[Dict[str, Any]]):
@@ -94,7 +100,7 @@ def print_selected_reports_table(context: Dict[str, Dict[str, List[Dict[str, Any
             len(labs), _newest_date(labs),
             len(imgs), _newest_date(imgs),
             len(paths), _newest_date(paths),
-            len(muts),
+            len(muts), _newest_date(muts),
         ])
 
     print(f"\n{Color.BOLD}{Color.OKBLUE}📌 Selected Reports Overview{Color.RESET}")

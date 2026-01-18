@@ -1,0 +1,384 @@
+patient_id: 342622195710226949
+patient_id_safe: 342622195710226949
+Time: 2023-01-03 07:47:18.527000
+
+==== SOURCE TEXT ====
+卵巢恶性肿瘤：流调否认中高风险地区旅居史，否认体温异常等新冠肺炎症状。腹膜肿瘤：流调否认中高风险地区旅居史，否认体温异常等新冠肺炎症状。流调否认中高风险地区旅居史，否认体温异常等新冠肺炎症状。结合原单位细胞块形态及本次免疫酶标结果，诊断为癌，浆液性癌可能。建议首先查女性生殖系统及腹膜等处。免疫酶标结果（IC22-00224）：细胞块中异形细胞：AE1/AE3（+），CK7（+），PAX8（部分+），WT1（+），P53（基本-），HNF1B（个别弱+），ER（多数+），HER2（个别弱+），Vimentin（个别+），CK20（-），CDX2-88（-），TTF-1（-），Calretinin（-），CK5/6（-），P63（个别+），CD68/kp1（-）。注：1、如有占位性病变，必要时请组织学检查。2、本例ER、HER-2、TTF-1免疫酶标均设置组织芯片对照，并行染色，对照片染色结果符合预期。MR:腹膜弥漫增厚，多发结节CA125>1000PET复片：双侧附件MT可能。腹膜广泛转移（肠道表面种植可能）；腹盆腔大量积液；左侧锁骨上、两侧内乳、横膈前、右侧膈脚后、肝门区多发淋巴结转移可能。左侧胸膜转移。白紫+卡铂新辅助化疗3次2022.09.21在全麻下行瘤体减灭术+改良子宫根治性切除术+盆底腹膜切除术+双附件切除术+右侧盆腔淋巴结清扫术+阑尾切除术+盆腔肿瘤（肿块）切除术+膈肌修补术+复杂肠粘连松解术+肝、十二指肠韧带骨骼化清扫（盆底腹膜、盆腔肿块、阑尾、升结肠壁结节、横结肠壁肿瘤、大网膜、肝圆韧带及镰状韧带、膈肌肿瘤＋肝肾隐窝）见高级别浆液性癌累及，部分瘤细胞退变，符合治疗后改变。（子宫）宫颈浆膜面见癌累及，子宫内膜呈萎缩性改变，阴道壁切缘未见癌累及。左宫旁、右宫旁见癌累及。(双附件)左、右卵巢小灶见钙化。双侧输卵管局灶上皮示P53印记，输卵管内另见少量游离退变的肿瘤细胞。（右侧盆腔淋巴结）淋巴结（1/2）见癌转移。（肝门淋巴结）淋巴结（2/2）见癌转移。免疫组化：瘤细胞示：PAX8（+），WT1（+），P53（-），Calretinin（-），ER（+）。输卵管：P53（小灶强+）CT（2022.10.19）：左侧颈总静脉充盈缺损影，栓子可能，请结合临床及超声检查。左侧气胸已吸收；左侧胸腔少量积液并左肺叶不张较前好转，右侧胸腔积液并右肺下叶不张；余两肺炎症，部分较前吸收，部分较前增多；随访复查。纵隔及左锁骨区增大淋巴结同前；前膈组多发淋巴结，部分稍大，部分较前减小；随访。腹部情况请结合相关检查。口服利伐沙班术后2022.10.21白紫+卡铂化疗3程 末次2022.12.9
+
+==== EHR ====
+finish: stop
+parse_status: ok
+attempts: 1
+repair_attempted: False
+repair_used: False
+
+==== EHR JSON ====
+{
+  "CASE_CORE": {
+    "VISIT_DATE": "2023-01-03",
+    "last_platinum_end_date": "2022-12-09",
+    "first_relapse_date": "Unknown",
+    "PFI_days": "Unknown",
+    "PLATINUM_STATUS": "Unknown",
+    "PLATINUM_STATUS_CURRENT": "Unknown",
+    "PLATINUM_PFI_CURRENT": "Unknown",
+    "SCENE": "Frontline_PDS_or_NACT_IDS",
+    "PLATINUM_HISTORY": [
+      {
+        "line": "1L",
+        "start_date": "Unknown",
+        "end_date": "2022-12-09",
+        "first_relapse_date": "Unknown",
+        "PFI_days": "Unknown",
+        "status": "Unknown",
+        "evidence_type": "Unknown",
+        "evidence": "白紫+卡铂 chemotherapy: 3 cycles neoadjuvant and additional 3 cycles with last on 2022-12-09"
+      }
+    ],
+    "DIAGNOSIS": {
+      "primary": "卵巢恶性肿瘤",
+      "histology": "高级别浆液性癌",
+      "site": "卵巢、腹膜",
+      "laterality": "Bilateral",
+      "components": [
+        "腹膜弥漫增厚",
+        "腹盆腔大量积液",
+        "淋巴结转移",
+        "左侧胸膜转移"
+      ]
+    },
+    "STAGE": {
+      "stage_text": "Unknown",
+      "stage_system": "Unknown",
+      "stage_basis": "Unknown"
+    },
+    "INITIAL_TREATMENT": "Yes",
+    "SURGERY_DONE": {
+      "performed": "Yes",
+      "date": "2022-09-21",
+      "procedure": "Debulking surgery + modified radical hysterectomy + pelvic peritoneal resection + bilateral salpingo-oophorectomy + right pelvic lymphadenectomy + appendectomy + pelvic tumor resection + diaphragm repair + adhesiolysis + hepatic/falciform ligament clearance"
+    },
+    "NEOADJUVANT": "Yes",
+    "ADJUVANT_TREATMENT": {
+      "given": "Yes",
+      "regimens": [
+        "白紫+卡铂"
+      ],
+      "cycles_or_courses": "3 cycles neoadjuvant + 3 cycles post-op, last 2022-12-09"
+    },
+    "LINE_OF_THERAPY": [
+      {
+        "line": "1L",
+        "intent": "Unknown",
+        "regimen": "白紫+卡铂",
+        "start_date": "Unknown",
+        "end_date": "2022-12-09",
+        "cycles": "3 neoadjuvant + 3 adjuvant, last 2022-12-09"
+      }
+    ],
+    "MAINTENANCE": "Unknown",
+    "MAINTENANCE_DETAIL": {
+      "given": "Unknown",
+      "regimens": [],
+      "start_date": "Unknown",
+      "end_date": "Unknown"
+    },
+    "RELAPSE": "No",
+    "RELAPSE_DATE": {
+      "date": "Unknown",
+      "type": "Unknown",
+      "evidence": ""
+    },
+    "HRD": "Unknown",
+    "BRCA1": "Unknown",
+    "BRCA2": "Unknown",
+    "BIOMARKERS": {
+      "TMB": "Unknown",
+      "MSI": "Unknown",
+      "PDL1_CPS": "Unknown",
+      "HER2": "个别弱+",
+      "AFP": "Unknown",
+      "CA125": ">1000"
+    },
+    "CURRENT_STATUS": "Post debulking surgery (2022-09-21); completed 白紫+卡铂 chemotherapy, last cycle 2022-12-09."
+  },
+  "TIMELINE": {
+    "events": [
+      {
+        "date": "2022-09-21",
+        "event_type": "Surgery",
+        "description": "Cytoreductive surgery and modified radical hysterectomy with multiple resections and repairs",
+        "regimen_or_test": "Surgical procedure",
+        "key_result": "Pathology showed high-grade serous carcinoma involvement and treatment effect"
+      },
+      {
+        "date": "2022-10-19",
+        "event_type": "Imaging",
+        "description": "CT chest/abdomen/pelvis showing left common jugular vein filling defect (possible thrombus), pleural effusions, variable pulmonary changes, mediastinal and left supraclavicular lymphadenopathy",
+        "regimen_or_test": "CT",
+        "key_result": "Left common jugular vein filling defect; pleural and nodal disease as described"
+      },
+      {
+        "date": "2022-12-09",
+        "event_type": "Chemo",
+        "description": "Last administration of 白紫+卡铂 chemotherapy",
+        "regimen_or_test": "白紫+卡铂",
+        "key_result": "3 post-op cycles completed, last on 2022-12-09"
+      },
+      {
+        "date": "Unknown",
+        "event_type": "Imaging",
+        "description": "MR: diffuse peritoneal thickening and multiple nodules; PET suggested bilateral adnexal metastases and extensive peritoneal metastases with large ascites",
+        "regimen_or_test": "MR and PET",
+        "key_result": "Peritoneal disease and suspected bilateral adnexal metastases; multiple nodal metastases; left pleural metastasis"
+      }
+    ],
+    "constraints": {
+      "min_events": 3,
+      "max_events": 30,
+      "must_include": [
+        "first diagnostic imaging or pathology confirmation (if available)"
+      ],
+      "ordering_rules": {
+        "prioritize_last_event": true
+      }
+    }
+  },
+  "MED_ONC": {
+    "current_regimen": {
+      "name": "Unknown",
+      "last_admin_date": "2022-12-09",
+      "cycle_info": "3 neoadjuvant + 3 adjuvant completed, last 2022-12-09"
+    },
+    "planned_next_regimen": "Unknown",
+    "prior_systemic_therapies": [
+      "白紫+卡铂",
+      "口服利伐沙班"
+    ],
+    "genetic_testing": {
+      "somatic": [],
+      "germline": []
+    },
+    "monitoring_points": []
+  },
+  "RADIOLOGY": {
+    "studies": [
+      {
+        "date": "Unknown",
+        "modality": "MRI",
+        "anatomic_sites": [
+          "Peritoneum",
+          "Bilateral adnexa",
+          "Abdomen/pelvis"
+        ],
+        "findings": [
+          "Peritoneal diffuse thickening",
+          "Multiple nodules",
+          "Suspected bilateral adnexal metastases",
+          "Extensive peritoneal metastases and large ascites"
+        ],
+        "impression": "Peritoneal diffuse thickening with multiple nodules and suspected bilateral adnexal metastases; widespread peritoneal disease and ascites",
+        "trend_vs_prior": "Unknown"
+      },
+      {
+        "date": "2022-10-19",
+        "modality": "CT",
+        "anatomic_sites": [
+          "Chest",
+          "Mediastinum",
+          "Left supraclavicular",
+          "Lungs",
+          "Abdomen"
+        ],
+        "findings": [
+          "Left common jugular vein filling defect, possible embolus",
+          "Left pneumothorax resolved",
+          "Small left pleural effusion with improved left lung lobe atelectasis",
+          "Right pleural effusion with right lower lobe atelectasis",
+          "Bilateral lung inflammatory changes",
+          "Enlarged mediastinal and left supraclavicular lymph nodes"
+        ],
+        "impression": "Findings consistent with nodal disease and pleural/ pulmonary changes; possible venous thrombus",
+        "trend_vs_prior": "Mixed"
+      }
+    ],
+    "next_imaging_plan": {
+      "modality": "Unknown",
+      "timing": "Unknown"
+    }
+  },
+  "PATHOLOGY": {
+    "specimens": [
+      {
+        "date": "2022-09-21",
+        "site": "Pelvis, peritoneum, bilateral adnexa, fallopian tubes, lymph nodes, diaphragm, omentum, hepatic ligaments",
+        "diagnosis": "高级别浆液性癌累及，部分瘤细胞退变，符合治疗后改变。",
+        "components": [
+          "子宫宫颈浆膜面见癌累及",
+          "子宫内膜萎缩性改变",
+          "左、右卵巢小灶钙化",
+          "输卵管局灶P53印记并见少量游离退变肿瘤细胞",
+          "右侧盆腔淋巴结及肝门淋巴结转移"
+        ],
+        "grade": "Unknown",
+        "tumor_size": "Unknown",
+        "laterality": "Bilateral",
+        "sample_type": "Surgical resection specimens",
+        "involvement_sites": [
+          "Pelvic peritoneum",
+          "Uterus (cervical serosa)",
+          "Bilateral ovaries",
+          "Bilateral fallopian tubes",
+          "Pelvic lymph nodes",
+          "Hepatic hilum lymph nodes",
+          "Diaphragm",
+          "Omentum",
+          "Hepatic ligaments"
+        ],
+        "ihc": [
+          {
+            "marker": "AE1/AE3",
+            "result": "(+)"
+          },
+          {
+            "marker": "CK7",
+            "result": "(+)"
+          },
+          {
+            "marker": "PAX8",
+            "result": "部分+"
+          },
+          {
+            "marker": "WT1",
+            "result": "(+)"
+          },
+          {
+            "marker": "P53",
+            "result": "基本-"
+          },
+          {
+            "marker": "HNF1B",
+            "result": "个别弱+"
+          },
+          {
+            "marker": "ER",
+            "result": "多数+"
+          },
+          {
+            "marker": "HER2",
+            "result": "个别弱+"
+          },
+          {
+            "marker": "Vimentin",
+            "result": "个别+"
+          },
+          {
+            "marker": "CK20",
+            "result": "(-)"
+          },
+          {
+            "marker": "CDX2-88",
+            "result": "(-)"
+          },
+          {
+            "marker": "TTF-1",
+            "result": "(-)"
+          },
+          {
+            "marker": "Calretinin",
+            "result": "(-)"
+          },
+          {
+            "marker": "CK5/6",
+            "result": "(-)"
+          },
+          {
+            "marker": "P63",
+            "result": "个别+"
+          },
+          {
+            "marker": "CD68/kp1",
+            "result": "(-)"
+          },
+          {
+            "marker": "PAX8 (surgical specimen)",
+            "result": "(+)"
+          },
+          {
+            "marker": "WT1 (surgical specimen)",
+            "result": "(+)"
+          },
+          {
+            "marker": "P53 (surgical specimen)",
+            "result": "(-)"
+          },
+          {
+            "marker": "Calretinin (surgical specimen)",
+            "result": "(-)"
+          },
+          {
+            "marker": "ER (surgical specimen)",
+            "result": "(+)"
+          },
+          {
+            "marker": "输卵管 P53",
+            "result": "小灶强+"
+          }
+        ],
+        "molecular": [],
+        "raw_text": "结合原单位细胞块形态及本次免疫酶标结果，诊断为癌，浆液性癌可能。免疫酶标结果（IC22-00224）：细胞块中异形细胞：AE1/AE3（+），CK7（+），PAX8（部分+），WT1（+），P53（基本-），HNF1B（个别弱+），ER（多数+），HER2（个别弱+），Vimentin（个别+），CK20（-），CDX2-88（-），TTF-1（-），Calretinin（-），CK5/6（-），P63（个别+），CD68/kp1（-）。见高级别浆液性癌累及，部分瘤细胞退变，符合治疗后改变。宫颈浆膜面见癌累及，子宫内膜呈萎缩性改变，阴道壁切缘未见癌累及。左宫旁、右宫旁见癌累及。左、右卵巢小灶见钙化。双侧输卵管局灶上皮示P53印记，输卵管内另见少量游离退变的肿瘤细胞。右侧盆腔淋巴结（1/2）及肝门淋巴结（2/2）见癌转移。免疫组化：瘤细胞示：PAX8（+），WT1（+），P53（-），Calretinin（-），ER（+）。",
+        "uncertainty_or_missing": [
+          "Specimen-level report date not explicitly stated; surgery date assumed 2022-09-21"
+        ]
+      }
+    ]
+  },
+  "NUC_MED": {
+    "studies": [
+      {
+        "date": "Unknown",
+        "type": "FDG-PET/CT",
+        "avid_lesions": [
+          "Suspected bilateral adnexal metastases",
+          "Widespread peritoneal metastases (possible serosal/intestinal surface implants)",
+          "Large volume abdominopelvic ascites",
+          "Multiple lymph node metastases (left supraclavicular, internal mammary, anterior diaphragm, right diaphragmatic crus, hepatic hilum)"
+        ],
+        "non_avid_notes": [],
+        "confidence": "Moderate"
+      }
+    ]
+  },
+  "LAB_TRENDS": {
+    "labs": [
+      {
+        "analyte": "CA125",
+        "unit": "Unknown",
+        "reference_range": "Unknown",
+        "latest": {
+          "date": "Unknown",
+          "value": ">1000",
+          "flag": "↑"
+        },
+        "history": []
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2022-09-21",
+        "type": "Surgery",
+        "description": "Cytoreductive surgery and multiple resections"
+      },
+      {
+        "date": "2022-12-09",
+        "type": "ChemoEnd",
+        "description": "Last administration of 白紫+卡铂"
+      },
+      {
+        "date": "2022-10-19",
+        "type": "Imaging",
+        "description": "CT showing venous filling defect and nodal/pleural disease"
+      }
+    ]
+  }
+}

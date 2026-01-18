@@ -18,6 +18,7 @@ import html as _html
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 from .console_utils import Color
+from .time_utils import parse_dt
 
 ###############################################################################
 # SAVE FULL MDT LOG TO DISK
@@ -150,6 +151,51 @@ def _html_pre(x: Any) -> str:
     return f"<pre>{_html_escape(x)}</pre>"
 
 
+def _newest_date(items: List[Dict[str, Any]]) -> str:
+    dts = []
+    for r in items or []:
+        dt = parse_dt(r.get("date")) or parse_dt(r.get("report_date")) or parse_dt(r.get("time"))
+        if dt is not None:
+            dts.append(dt)
+    return (max(dts).strftime("%Y-%m-%d") if dts else "-")
+
+
+def _render_selected_reports_table(context: Dict[str, Dict[str, List[Dict[str, Any]]]]) -> str:
+    """Render selected report counts + newest dates, including mutation."""
+    roles = sorted(set((context.get("lab") or {}).keys())
+                   | set((context.get("imaging") or {}).keys())
+                   | set((context.get("pathology") or {}).keys())
+                   | set((context.get("mutation") or {}).keys()))
+    if not roles:
+        return "<div class='warn'>No selected reports.</div>"
+
+    header = (
+        "<tr><th>Role</th>"
+        "<th>Lab (n)</th><th>Lab newest</th>"
+        "<th>Imaging (n)</th><th>Imaging newest</th>"
+        "<th>Pathology (n)</th><th>Pathology newest</th>"
+        "<th>Mutation (n)</th><th>Mutation newest</th></tr>"
+    )
+
+    rows: List[str] = []
+    for role in roles:
+        labs = (context.get("lab", {}) or {}).get(role, [])
+        imgs = (context.get("imaging", {}) or {}).get(role, [])
+        paths = (context.get("pathology", {}) or {}).get(role, [])
+        muts = (context.get("mutation", {}) or {}).get(role, [])
+        rows.append(
+            "<tr>"
+            f"<td class='mono'>{_html_escape(role)}</td>"
+            f"<td>{len(labs)}</td><td>{_html_escape(_newest_date(labs))}</td>"
+            f"<td>{len(imgs)}</td><td>{_html_escape(_newest_date(imgs))}</td>"
+            f"<td>{len(paths)}</td><td>{_html_escape(_newest_date(paths))}</td>"
+            f"<td>{len(muts)}</td><td>{_html_escape(_newest_date(muts))}</td>"
+            "</tr>"
+        )
+
+    return "<table class='grid'>" + header + "".join(rows) + "</table>"
+
+
 def _render_interaction_table(interaction_log: Dict[str, Any]) -> str:
     """Render interaction_log as a readable Round×Turn table."""
     if not interaction_log:
@@ -197,6 +243,7 @@ def save_case_html_report(
     global_guideline_digest: str,
     interaction_log: Dict[str, Any],
     question_raw: str,
+    trial_note: str = "",
     initial_ops: Optional[Dict[str, Any]] = None,
     final_round_ops: Optional[Dict[str, Any]] = None,
     trace_events: Optional[List[Dict[str, Any]]] = None,
@@ -256,6 +303,7 @@ def save_case_html_report(
         )
 
     interaction_block = _render_interaction_table(interaction_log or {})
+    selected_reports_table = _render_selected_reports_table(context or {})
 
     # NOTE: Do NOT use f-string here.
     template = """<!doctype html>
@@ -316,6 +364,12 @@ def save_case_html_report(
   </div>
 
   <details class=\"mt\" open>
+    <summary>Clinical Trial Recommendation</summary>
+    __TRIAL_NOTE__
+    <div class=\"hint\">Shown only when the trial matcher produced a recommendation.</div>
+  </details>
+
+  <details class=\"mt\" open>
     <summary>Expert Debate (Round × Turn)</summary>
     __INTERACTION_TABLE__
     <div class=\"hint\">Only includes messages that were actually emitted (non-empty).</div>
@@ -331,9 +385,14 @@ def save_case_html_report(
     __FINAL_ROUND_OPS__
   </details>
 
-  <details class=\"mt\">
-    <summary>Selected Clinical Context (JSON)</summary>
-    __CONTEXT__
+  <details class=\"mt\" open>
+    <summary>Selected Clinical Context</summary>
+    __SELECTED_REPORTS_TABLE__
+    <div class=\"hint\">Counts and newest dates per role/report type (including mutation).</div>
+    <details class=\"mt\">
+      <summary>Raw Context (JSON)</summary>
+      __CONTEXT__
+    </details>
   </details>
 
   <details class=\"mt\">
@@ -364,9 +423,11 @@ def save_case_html_report(
     html_page = html_page.replace("__FINAL_OUTPUT__", _html_pre(final_output))
     html_page = html_page.replace("__QUESTION_RAW__", _html_pre(question_raw))
     html_page = html_page.replace("__QUESTION_STRUCT__", _html_pre(question_str))
+    html_page = html_page.replace("__TRIAL_NOTE__", _html_pre(trial_note or "None"))
     html_page = html_page.replace("__INTERACTION_TABLE__", interaction_block)
     html_page = html_page.replace("__INITIAL_OPS__", _html_pre(init_ops_pretty))
     html_page = html_page.replace("__FINAL_ROUND_OPS__", _html_pre(final_round_ops_pretty))
+    html_page = html_page.replace("__SELECTED_REPORTS_TABLE__", selected_reports_table)
     html_page = html_page.replace("__CONTEXT__", _html_pre(context_pretty))
     html_page = html_page.replace("__RAG_QUERY__", _html_pre(rag_query))
     html_page = html_page.replace("__RAG_PACK__", _html_pre(rag_pack))
