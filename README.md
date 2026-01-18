@@ -47,13 +47,13 @@ Save artifacts (JSON + TXT + HTML)
 
 ### Roles and Permissions
 
-| Role | Lab Reports | Imaging Reports | Pathology Reports | Guideline Type |
-|------|-------------|----------------|-------------------|----------------|
-| Chair | ✅ | ✅ | ❌ | chair |
-| Oncologist | ✅ | ❌ | ❌ | oncologist |
-| Radiologist | ❌ | ✅ | ❌ | radiologist |
-| Pathologist | ❌ | ❌ | ✅ | pathologist |
-| Nuclear Medicine | ❌ | ✅ | ❌ | nuclear |
+| Role | Lab Reports | Imaging Reports | Pathology Reports | Mutation Reports | Guideline Type |
+|------|-------------|----------------|-------------------|------------------|----------------|
+| Chair | ✅ | ✅ | ❌ | ✅ | chair |
+| Oncologist | ✅ | ❌ | ❌ | ✅ | oncologist |
+| Radiologist | ❌ | ✅ | ❌ | ❌ | radiologist |
+| Pathologist | ❌ | ❌ | ✅ | ✅ | pathologist |
+| Nuclear Medicine | ❌ | ✅ | ❌ | ❌ | nuclear |
 
 ## 📋 Requirements
 

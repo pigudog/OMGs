@@ -14,11 +14,11 @@ from .select_utils import parse_date_any
 ROLES = ["chair", "oncologist", "radiologist", "pathologist", "nuclear"]
 
 ROLE_PERMISSIONS = {
-    "chair":        {"lab": True,  "imaging": True,  "pathology": False, "guideline": "chair"},
-    "oncologist":   {"lab": True,  "imaging": False, "pathology": False, "guideline": "oncologist"},
-    "radiologist":  {"lab": False, "imaging": True,  "pathology": False, "guideline": "radiologist"},
-    "pathologist":  {"lab": False, "imaging": False, "pathology": True,  "guideline": "pathologist"},
-    "nuclear":      {"lab": False, "imaging": True,  "pathology": False, "guideline": "nuclear"},
+    "chair":        {"lab": True,  "imaging": True,  "pathology": False, "mutation": True,  "guideline": "chair"},
+    "oncologist":   {"lab": True,  "imaging": False, "pathology": False, "mutation": True,  "guideline": "oncologist"},
+    "radiologist":  {"lab": False, "imaging": True,  "pathology": False, "mutation": False, "guideline": "radiologist"},
+    "pathologist":  {"lab": False, "imaging": False, "pathology": True,  "mutation": True,  "guideline": "pathologist"},
+    "nuclear":      {"lab": False, "imaging": True,  "pathology": False, "mutation": False, "guideline": "nuclear"},
 }
 
 ###############################################################################
