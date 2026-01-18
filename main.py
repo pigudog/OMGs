@@ -5,7 +5,7 @@ import argparse
 from tqdm import tqdm
 from datetime import datetime
 
-from agent_published import (
+from agent_omgs import (
     process_omgs_multi_expert_query,
     setup_model,
     load_data,

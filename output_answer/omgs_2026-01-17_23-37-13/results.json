@@ -1,0 +1,546 @@
+[
+    {
+        "scene": null,
+        "question": {
+            "CASE_CORE": {
+                "VISIT_DATE": "2025-07-01",
+                "last_platinum_end_date": "2025-06-09",
+                "first_relapse_date": "Unknown",
+                "PFI_days": "Unknown",
+                "PLATINUM_STATUS": "Unknown",
+                "PLATINUM_STATUS_CURRENT": "Unknown",
+                "PLATINUM_PFI_CURRENT": "Unknown",
+                "PLATINUM_HISTORY": [
+                    {
+                        "line": "Unknown",
+                        "start_date": "2025-05-09",
+                        "end_date": "2025-06-09",
+                        "first_relapse_date": "Unknown",
+                        "PFI_days": "Unknown",
+                        "status": "Unknown",
+                        "evidence_type": "Unknown",
+                        "evidence": ""
+                    }
+                ],
+                "DIAGNOSIS": {
+                    "primary": "Ovarian malignant tumor",
+                    "histology": "分化差的癌",
+                    "site": "Pelvis / adnexa",
+                    "laterality": "Bilateral",
+                    "components": [
+                        "Peritoneal seeding",
+                        "Ascites",
+                        "Lymph node metastases",
+                        "Pelvic mass"
+                    ]
+                },
+                "STAGE": {
+                    "stage_text": "Unknown",
+                    "stage_system": "Unknown",
+                    "stage_basis": "Unknown"
+                },
+                "INITIAL_TREATMENT": "Unknown",
+                "SURGERY_DONE": {
+                    "performed": "Unknown",
+                    "date": "Unknown",
+                    "procedure": "Unknown"
+                },
+                "NEOADJUVANT": "Yes",
+                "ADJUVANT_TREATMENT": {
+                    "given": "Unknown",
+                    "regimens": [],
+                    "cycles_or_courses": "Unknown"
+                },
+                "LINE_OF_THERAPY": [
+                    {
+                        "line": "Unknown",
+                        "intent": "Unknown",
+                        "regimen": "紫杉醇+卡铂",
+                        "start_date": "2025-05-09",
+                        "end_date": "2025-06-09",
+                        "cycles": "2"
+                    }
+                ],
+                "MAINTENANCE": "Unknown",
+                "MAINTENANCE_DETAIL": {
+                    "given": "Unknown",
+                    "regimens": [],
+                    "start_date": "Unknown",
+                    "end_date": "Unknown"
+                },
+                "RELAPSE": "Unknown",
+                "RELAPSE_DATE": {
+                    "date": "Unknown",
+                    "type": "Unknown",
+                    "evidence": ""
+                },
+                "HRD": "Unknown",
+                "BRCA1": "Unknown",
+                "BRCA2": "Unknown",
+                "BIOMARKERS": {
+                    "TMB": "Unknown",
+                    "MSI": "Unknown",
+                    "PDL1_CPS": "Unknown",
+                    "HER2": "Unknown",
+                    "AFP": "2.53 ng/ml (latest 2025-06-30)",
+                    "CA125": "75.00 U/ml (latest 2025-06-30)"
+                },
+                "CURRENT_STATUS": "Consulted for surgery"
+            },
+            "TIMELINE": {
+                "events": [
+                    {
+                        "date": "2025-04-26",
+                        "event_type": "Imaging",
+                        "description": "External CT: bilateral adnexal masses (left 59x74x92 mm), extensive peritoneal implants, moderate ascites, multiple enlarged nodes suspicious for metastasis",
+                        "regimen_or_test": "CT",
+                        "key_result": "Bilateral adnexal masses; peritoneal metastases suspected"
+                    },
+                    {
+                        "date": "2025-04-27",
+                        "event_type": "Lab",
+                        "description": "Tumor markers drawn",
+                        "regimen_or_test": "CA125, CA153, CA724, CEA, NSE, CA199, HE4, AFP, SCCA",
+                        "key_result": "CA125 823; CA153 294; CA724 62.7; CEA 0.8; NSE 19.7; CA199 10.6; HE4 480; AFP 2.43; SCCA 0.92"
+                    },
+                    {
+                        "date": "2025-04-28",
+                        "event_type": "Other",
+                        "description": "Ultrasound-guided paracentesis with drain and pelvic mass core biopsy",
+                        "regimen_or_test": "Paracentesis and biopsy",
+                        "key_result": "Biopsy: morphology consistent with malignancy; considered poorly differentiated carcinoma"
+                    },
+                    {
+                        "date": "2025-04-29",
+                        "event_type": "Imaging",
+                        "description": "External PET/CT showed FDG-avid bilateral adnexal lesions, multiple FDG-avid lymph nodes and peritoneal implants",
+                        "regimen_or_test": "PET/CT",
+                        "key_result": "Metastatic disease suspected"
+                    },
+                    {
+                        "date": "2025-05-07",
+                        "event_type": "Lab",
+                        "description": "Ascites cytology: tumor cells present, favor adenocarcinoma; recommended cell block and IHC",
+                        "regimen_or_test": "Ascites cytology",
+                        "key_result": "Tumor cells present; favors adenocarcinoma"
+                    },
+                    {
+                        "date": "2025-05-09",
+                        "event_type": "Chemo",
+                        "description": "Start chemotherapy: 紫杉醇+卡铂 neoadjuvant",
+                        "regimen_or_test": "紫杉醇+卡铂",
+                        "key_result": "Planned 2 cycles (neoadjuvant)"
+                    },
+                    {
+                        "date": "2025-06-09",
+                        "event_type": "Chemo",
+                        "description": "Completed 2 cycles of 紫杉醇+卡铂",
+                        "regimen_or_test": "紫杉醇+卡铂",
+                        "key_result": "End of listed chemotherapy course"
+                    },
+                    {
+                        "date": "2025-06-30",
+                        "event_type": "Lab",
+                        "description": "Repeat tumor markers",
+                        "regimen_or_test": "CA19-9, CA125, AFP, CEA, HE4, ROMA",
+                        "key_result": "CA19-9 17.50 U/ml; CA125 75.00 U/ml↑; AFP 2.53 ng/ml; CEA 1.64 ng/ml; HE4 126.00 pmol/L↑; ROMA 44.54% (premenopausal)↑; ROMA 52.50% (postmenopausal)↑"
+                    },
+                    {
+                        "date": "2025-07-01",
+                        "event_type": "Imaging",
+                        "description": "CT: multiple small enhancing peritoneal and mesenteric nodules, scanty peritoneal thickening, scattered small retroperitoneal nodes",
+                        "regimen_or_test": "CT",
+                        "key_result": "Peritoneal/mesenteric nodules; follow clinical correlation"
+                    }
+                ],
+                "constraints": {
+                    "min_events": 3,
+                    "max_events": 30,
+                    "must_include": [
+                        "first diagnostic imaging or pathology confirmation (if available)"
+                    ],
+                    "ordering_rules": {
+                        "prioritize_last_event": true
+                    }
+                }
+            },
+            "MED_ONC": {
+                "current_regimen": {
+                    "name": "Unknown",
+                    "last_admin_date": "2025-06-09",
+                    "cycle_info": "Completed 2 cycles of 紫杉醇+卡铂 (2025-05-09 to 2025-06-09)"
+                },
+                "planned_next_regimen": "Unknown",
+                "prior_systemic_therapies": [
+                    "紫杉醇+卡铂 (2025-05-09-2025-06-09)"
+                ],
+                "genetic_testing": {
+                    "somatic": [],
+                    "germline": []
+                },
+                "monitoring_points": []
+            },
+            "RADIOLOGY": {
+                "studies": [
+                    {
+                        "date": "2025-04-26",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Bilateral adnexa",
+                            "Peritoneum",
+                            "Uterus",
+                            "Pelvis"
+                        ],
+                        "findings": [
+                            "Bilateral adnexal masses (left 59x74x92 mm)",
+                            "Extensive peritoneal implants",
+                            "Moderate ascites",
+                            "Multiple enlarged lymph nodes (left iliac vessel, retroperitoneal, cardiophrenic)"
+                        ],
+                        "impression": "Bilateral adnexal lesions suspicious for malignancy with peritoneal metastases and ascites",
+                        "trend_vs_prior": "Unknown"
+                    },
+                    {
+                        "date": "2025-07-01",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Peritoneum",
+                            "Mesentery",
+                            "Liver-gastric space",
+                            "Retroperitoneum"
+                        ],
+                        "findings": [
+                            "Multiple small enhancing peritoneal and mesenteric nodules",
+                            "Peritoneal/mesenteric slight hazy thickening",
+                            "Scattered small retroperitoneal lymph nodes",
+                            "Liver cysts",
+                            "Cholelithiasis"
+                        ],
+                        "impression": "Peritoneal and mesenteric enhancing nodules consistent with peritoneal disease; retroperitoneal nodes; correlate clinically",
+                        "trend_vs_prior": "Unknown"
+                    }
+                ],
+                "next_imaging_plan": {
+                    "modality": "Unknown",
+                    "timing": "Unknown"
+                }
+            },
+            "PATHOLOGY": {
+                "specimens": [
+                    {
+                        "date": "2025-04-28",
+                        "site": "Pelvic mass (adnexal)",
+                        "diagnosis": "镜下形态符合恶性，考虑为分化差的癌，不排除高浆病理切片未带",
+                        "components": [
+                            "Malignant cells",
+                            "Poorly differentiated carcinoma (considered)"
+                        ],
+                        "grade": "Unknown",
+                        "tumor_size": "Unknown",
+                        "laterality": "Unknown",
+                        "sample_type": "Core biopsy",
+                        "involvement_sites": [
+                            "Pelvic mass"
+                        ],
+                        "ihc": [],
+                        "molecular": [],
+                        "raw_text": "镜下形态符合恶性，考虑为分化差的癌，不排除高浆病理切片未带",
+                        "uncertainty_or_missing": [
+                            "IHC not yet reported"
+                        ]
+                    },
+                    {
+                        "date": "2025-05-07",
+                        "site": "Ascites",
+                        "diagnosis": "倾向腺癌",
+                        "components": [
+                            "Tumor cells in ascites favor adenocarcinoma"
+                        ],
+                        "grade": "Unknown",
+                        "tumor_size": "Unknown",
+                        "laterality": "Unknown",
+                        "sample_type": "Cytology (ascites)",
+                        "involvement_sites": [
+                            "Peritoneal cavity"
+                        ],
+                        "ihc": [],
+                        "molecular": [],
+                        "raw_text": "腹水冲洗液见肿瘤细胞， 倾向腺癌。建议行细胞块及免疫酶标检查帮助诊断。",
+                        "uncertainty_or_missing": [
+                            "Cell block and IHC recommended"
+                        ]
+                    },
+                    {
+                        "date": "2025-05-08",
+                        "site": "Ascites cell block",
+                        "diagnosis": "腹水细胞块切片内见恶性肿瘤细胞，倾向腺癌",
+                        "components": [
+                            "Malignant tumor cells, favors adenocarcinoma"
+                        ],
+                        "grade": "Unknown",
+                        "tumor_size": "Unknown",
+                        "laterality": "Unknown",
+                        "sample_type": "Cell block",
+                        "involvement_sites": [
+                            "Peritoneal cavity"
+                        ],
+                        "ihc": [],
+                        "molecular": [],
+                        "raw_text": "常规报告（2025.05.08）：腹水细胞块切片内见恶性肿瘤细胞，倾向腺癌。建议行免疫酶标检查帮助诊断。",
+                        "uncertainty_or_missing": [
+                            "IHC recommended"
+                        ]
+                    }
+                ]
+            },
+            "NUC_MED": {
+                "studies": [
+                    {
+                        "date": "2025-04-29",
+                        "type": "FDG-PET/CT",
+                        "avid_lesions": [
+                            "Bilateral adnexal lesions",
+                            "Left supraclavicular and bilateral internal mammary nodes",
+                            "Bilateral costophrenic angle nodes",
+                            "Abdominal, retroperitoneal, left iliac vessel nodes",
+                            "Multiple peritoneal and pelvic implants"
+                        ],
+                        "non_avid_notes": [],
+                        "confidence": "High"
+                    }
+                ]
+            },
+            "LAB_TRENDS": {
+                "labs": [
+                    {
+                        "analyte": "CA125",
+                        "unit": "U/ml",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-06-30",
+                            "value": "75.00",
+                            "flag": "↑"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-04-27",
+                                "value": "823",
+                                "flag": "Unknown"
+                            },
+                            {
+                                "date": "2025-06-30",
+                                "value": "75.00",
+                                "flag": "↑"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "HE4",
+                        "unit": "pmol/L",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-06-30",
+                            "value": "126.00",
+                            "flag": "↑"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-04-27",
+                                "value": "480",
+                                "flag": "Unknown"
+                            },
+                            {
+                                "date": "2025-06-30",
+                                "value": "126.00",
+                                "flag": "↑"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "CA19-9",
+                        "unit": "U/ml",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-06-30",
+                            "value": "17.50",
+                            "flag": "Unknown"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-04-27",
+                                "value": "10.6",
+                                "flag": "Unknown"
+                            },
+                            {
+                                "date": "2025-06-30",
+                                "value": "17.50",
+                                "flag": "Unknown"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "CA153",
+                        "unit": "Unknown",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-04-27",
+                            "value": "294",
+                            "flag": "Unknown"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-04-27",
+                                "value": "294",
+                                "flag": "Unknown"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "CA724",
+                        "unit": "Unknown",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-04-27",
+                            "value": "62.7",
+                            "flag": "Unknown"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-04-27",
+                                "value": "62.7",
+                                "flag": "Unknown"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "CEA",
+                        "unit": "ng/ml",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-06-30",
+                            "value": "1.64",
+                            "flag": "Unknown"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-04-27",
+                                "value": "0.8",
+                                "flag": "Unknown"
+                            },
+                            {
+                                "date": "2025-06-30",
+                                "value": "1.64",
+                                "flag": "Unknown"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "NSE",
+                        "unit": "Unknown",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-04-27",
+                            "value": "19.7",
+                            "flag": "Unknown"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-04-27",
+                                "value": "19.7",
+                                "flag": "Unknown"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "AFP",
+                        "unit": "ng/ml",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-06-30",
+                            "value": "2.53",
+                            "flag": "Unknown"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-04-27",
+                                "value": "2.43",
+                                "flag": "Unknown"
+                            },
+                            {
+                                "date": "2025-06-30",
+                                "value": "2.53",
+                                "flag": "Unknown"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "SCCA",
+                        "unit": "Unknown",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-04-27",
+                            "value": "0.92",
+                            "flag": "Unknown"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-04-27",
+                                "value": "0.92",
+                                "flag": "Unknown"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "ROMA",
+                        "unit": "%",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-06-30",
+                            "value": "52.50 (postmenopausal) / 44.54 (premenopausal)",
+                            "flag": "↑"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-06-30",
+                                "value": "44.54 (premenopausal)",
+                                "flag": "↑"
+                            },
+                            {
+                                "date": "2025-06-30",
+                                "value": "52.50 (postmenopausal)",
+                                "flag": "↑"
+                            }
+                        ]
+                    }
+                ],
+                "milestones": [
+                    {
+                        "date": "2025-04-28",
+                        "type": "Other",
+                        "description": "Biopsy with malignant morphology"
+                    },
+                    {
+                        "date": "2025-05-09",
+                        "type": "ChemoStart",
+                        "description": "Start 紫杉醇+卡铂 (neoadjuvant)"
+                    },
+                    {
+                        "date": "2025-06-09",
+                        "type": "ChemoEnd",
+                        "description": "Completed 2 cycles 紫杉醇+卡铂"
+                    },
+                    {
+                        "date": "2025-04-29",
+                        "type": "Imaging",
+                        "description": "FDG-PET/CT showing widespread avid disease"
+                    }
+                ]
+            }
+        },
+        "response": "Final Assessment:\nAdvanced epithelial adnexal malignancy with peritoneal and nodal disease on neoadjuvant platinum–taxane, but histologic subtype, response, and operability remain insufficiently characterized for definitive surgical versus systemic sequencing decisions.\n\nCore Treatment Strategy:\n- Do not commit today to interval debulking; await structured radiology response and resectability assessment integrating CT and PET findings (requested, pending).  \n- Obtain urgent comprehensive preoperative assessment (ECOG, comorbidities, nutrition, anesthetic risk, chemo tolerance) to determine surgical fitness and perioperative risk.  \n- Complete IHC and finalize histology (subtype, grade, primary site), then proceed with germline and somatic profiling to plan maintenance.  \n- Maintain platinum-taxane–based systemic strategy in principle, but adjust intensity and timing only after imaging, pathology, molecular, and fitness data are integrated.  \n\nChange Triggers:\n- If imaging shows substantial response and disease judged resectable with acceptable risk, shift toward interval debulking followed by systemic/maintenance therapy.  \n- If imaging or fitness assessment indicates unresectable disease or prohibitive surgical risk, prioritize continued systemic therapy and defer debulking, reassessing periodically.",
+        "gold_plan": "解释病情，再化疗1程手术治疗17665020972入院通知单：姓名：马赛买，身份证号：63212719700818194X，联系电话：18697281212，入院诊断：盆腔肿物，入院科室：妇科，入院病区：十病区，主诊医师：吴小华团队多学科门诊，住院押金金额：15000.00元，预约类别：普通。温馨提示：1. 请保持手机畅通，接到入院通知后，请携带相关的证件（就诊卡、医保卡、身份证）及银行卡或现金(支持支付宝和微信)到徐汇院区（东安路270号）3号楼1楼大厅入院处办理入院手续。2. 在我院接受治疗过程中产生的一切费用，均须在医院现场缴费受理，医院不会以任何形式要求通过网络转账、汇款等方式进行缴费，特此提醒，谨防受骗3. 患者因参保地相关要求拟住院自费结算进行放疗相关治疗，住院自费结算后回当地报销，该行为患者已咨询当地医保部门并得到肯定确认4. 请手术患者从接到入院通知起立即戒烟戒酒，如有使用抗凝药物请及时告知您的医生。5. 感谢无偿献血者的无私奉献，鼓励用血者大力宣传无偿献血。如患者本人献过血或其亲属五年内本市献过血，出院结账时携带关系证明可直接在出院结账窗口办理用血减免，亲属范围:配偶、父母、子女、兄弟姐妹、祖父母、外祖父母、孙子女、外孙子女、配偶的父母。此入院通知单自开出之日起三个月内有效，逾期请重新登记。住院缴费可用银联、现金、支付宝及微信。请您尊重我们医务人员，不向医务人员赠送现金、卡券及物品。",
+        "question_raw": "盆腔肿块新辅2程，咨询手术；卵巢恶性肿瘤：盆腔肿物：2025.04.26 外院CT：双侧附件区占位（左侧59*74*92mm），左侧较大，考虑恶性；子宫左壁受侵待排，广泛腹膜种植转移，中量腹水，左侧髂血管旁、腹膜后、心膈角多发肿大淋巴结，考虑转移；子宫上壁稍低强化结节，转移瘤待排2025.04.27 CA125 823,CA153 294,CA724 62.7,CEA 0.8,NSE 19.7,CA199 10.6,HE4 480,AFP 2.43,SCCA 0.92025.04.28 外院超声下腹腔积液置管引流，盆腔占位穿刺活检：镜下形态符合恶性，考虑为分化差的癌，不排除高浆病理切片未带2025.04.29 外院PETCT：双侧附件区病灶代谢活跃，考虑恶性；左侧锁上、双侧内乳区、双侧肋膈角、腹腔、腹膜后、左侧髂血管旁多发淋巴结代谢活跃，考虑转移；腹盆腔腹膜多发病灶代谢活跃2025.04.30 外院肠镜：未见明显异常2025.04.30 外院胃镜：慢性非萎缩性胃炎常规报告（2025.05.07）：腹水冲洗液见肿瘤细胞， 倾向腺癌。建议行细胞块及免疫酶标检查帮助诊断。常规报告（2025.05.08）：腹水细胞块切片内见恶性肿瘤细胞，倾向腺癌。建议行免疫酶标检查帮助诊断。2025.05.09-2025.06.09 紫杉醇+卡铂新辅2程2025.06.30：CA19-9:17.50U/ml,CA125:75.00U/ml↑,AFP:2.53ng/ml,CEA:1.64ng/ml,HE4:126.00pmol/L↑,ROMA:44.54%(绝经前)↑,ROMA.:52.50%(绝经后)↑CT（2025.07.01）：腹膜及系膜多发强化小结节，请结合其他检查。肝胃间隙、腹膜后散在小淋巴结，请结合临床。肝囊肿，随访。胰头脂肪浸润可能，随访；胆囊结石。CT（2025.07.01）：腹膜及系膜稍浑浊增厚，伴多发强化小结节影，请结合临床。腹膜后散在小淋巴结，请随访。咨询手术治疗",
+        "Time": "2025-07-01 15:38:50.183000",
+        "meta_info": "63212719700818194X"
+    }
+]
