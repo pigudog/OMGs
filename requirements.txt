@@ -1,0 +1,37 @@
+# OMGs - MDT Multi-Expert Pipeline Requirements
+# Python 3.8+
+
+# Core OpenAI/Azure OpenAI
+openai>=1.0.0
+
+# Vector database and embeddings
+chromadb>=0.4.0
+langchain-huggingface>=0.0.1
+
+# Deep learning (for embeddings)
+torch>=2.0.0
+
+# Token counting
+tiktoken>=0.5.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Table formatting
+prettytable>=3.8.0
+
+# Standard library dependencies (no installation needed):
+# - json
+# - datetime
+# - pathlib
+# - sqlite3
+# - typing
+# - os
+# - sys
+# - re
+# - random
+# - hashlib
+# - html
+# - dataclasses
+# - argparse
+# - time

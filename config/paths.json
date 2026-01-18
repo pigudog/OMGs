@@ -1,0 +1,24 @@
+{
+  "data_files": {
+    "lab_reports": "files/lab_reports_summary.jsonl",
+    "imaging_reports": "files/imaging_reports.jsonl",
+    "pathology_reports": null,
+    "mutation_reports": "files/mutation_reports.jsonl",
+    "trials": "all_trials_filtered.json"
+  },
+  "rag_store": {
+    "base_dir": "rag_store",
+    "index_dir_template": "rag_store/{role}/index/chroma",
+    "embedding_model": "BAAI/bge-m3"
+  },
+  "output_dirs": {
+    "output_answer": "output_answer",
+    "mdt_logs": "mdt_logs",
+    "api_trace_db": "api_trace.db"
+  },
+  "comments": {
+    "data_files": "Path to clinical reports and trial data files",
+    "rag_store": "RAG vector index configuration",
+    "output_dirs": "Output directories for results and logs"
+  }
+}
