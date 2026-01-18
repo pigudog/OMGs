@@ -324,7 +324,62 @@ def create_question(sample: dict):
     - question_raw: original raw user query text (for observability/HTML)
     """
     q = sample.get("question", "")
-    return q
+    normalized, warnings = normalize_case_schema(q)
+    if warnings:
+        meta = sample.get("meta_info") or sample.get("patient_id") or "unknown"
+        for w in warnings:
+            print(f"[WARNING] Case schema ({meta}): {w}")
+    return normalized
+
+
+def normalize_case_schema(case_json: Any) -> (Dict[str, Any], List[str]):
+    """
+    Normalize case schema for MDT pipeline and return warnings.
+    Keeps patient facts intact while aligning key section locations/types.
+    """
+    warnings: List[str] = []
+    if not isinstance(case_json, dict):
+        return {}, ["question is not a dict; replaced with empty object"]
+
+    normalized = dict(case_json)
+
+    def _ensure_dict(key: str):
+        val = normalized.get(key)
+        if val is None:
+            normalized[key] = {}
+            warnings.append(f"missing section '{key}'; inserted empty object")
+        elif not isinstance(val, dict):
+            normalized[key] = {}
+            warnings.append(f"section '{key}' is not an object; replaced with empty object")
+
+    # Core sections expected by the MDT pipeline
+    for section in ["CASE_CORE", "TIMELINE", "MED_ONC", "RADIOLOGY", "PATHOLOGY", "NUC_MED", "LAB_TRENDS"]:
+        _ensure_dict(section)
+
+    case_core = normalized.get("CASE_CORE", {})
+    timeline_top = normalized.get("TIMELINE", {})
+    timeline_core = case_core.get("TIMELINE") if isinstance(case_core, dict) else None
+
+    # Align TIMELINE between CASE_CORE and top-level
+    if timeline_top == {} and isinstance(timeline_core, dict) and timeline_core:
+        normalized["TIMELINE"] = dict(timeline_core)
+        warnings.append("TIMELINE found only under CASE_CORE; copied to top-level")
+    elif timeline_top and (timeline_core is None or timeline_core == {}):
+        if isinstance(case_core, dict):
+            case_core["TIMELINE"] = dict(timeline_top)
+            normalized["CASE_CORE"] = case_core
+            warnings.append("TIMELINE found only at top-level; copied into CASE_CORE")
+    elif isinstance(timeline_core, dict) and isinstance(timeline_top, dict):
+        if timeline_top and timeline_core and timeline_top != timeline_core:
+            warnings.append("TIMELINE differs between CASE_CORE and top-level; kept top-level for pipeline")
+
+    # Minimal validation for CASE_CORE subkeys
+    if isinstance(case_core, dict):
+        for key in ["DIAGNOSIS", "LINE_OF_THERAPY", "BIOMARKERS", "CURRENT_STATUS"]:
+            if key not in case_core:
+                warnings.append(f"CASE_CORE missing '{key}'")
+
+    return normalized, warnings
 
 # =========================================================
 # 5. setup_model (simple adapter)

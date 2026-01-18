@@ -1,0 +1,444 @@
+[
+    {
+        "scene": null,
+        "question": {
+            "CASE_CORE": {
+                "VISIT_DATE": "2024-10-29",
+                "last_platinum_end_date": "2024-10-23",
+                "first_relapse_date": "Unknown",
+                "PFI_days": "Unknown",
+                "PLATINUM_STATUS": "Unknown",
+                "PLATINUM_STATUS_CURRENT": "Unknown",
+                "PLATINUM_PFI_CURRENT": "Unknown",
+                "SCENE": "Frontline_PDS_or_NACT_IDS",
+                "PLATINUM_HISTORY": [
+                    {
+                        "line": "1L",
+                        "start_date": "2024-08-23",
+                        "end_date": "2024-10-23",
+                        "first_relapse_date": "Unknown",
+                        "PFI_days": "Unknown",
+                        "status": "Unknown",
+                        "evidence_type": "Clinical",
+                        "evidence": "BEP方案化疗2程:BLM 15mg d1-3 +DDP 30mg d1-3+ VP-16 0.1g d1-3，q21d，末次2024.10.23"
+                    }
+                ],
+                "DIAGNOSIS": {
+                    "primary": "Ovarian mixed germ cell tumor",
+                    "histology": "无性细胞瘤合并畸胎瘤成分",
+                    "site": "Ovary",
+                    "laterality": "Right",
+                    "components": [
+                        "畸胎瘤成分"
+                    ]
+                },
+                "STAGE": {
+                    "stage_text": "Unknown",
+                    "stage_system": "Unknown",
+                    "stage_basis": "Unknown"
+                },
+                "INITIAL_TREATMENT": "Yes",
+                "SURGERY_DONE": {
+                    "performed": "Yes",
+                    "date": "2024-09-02",
+                    "procedure": "Laparoscopic right ovary + salpingectomy"
+                },
+                "NEOADJUVANT": "Yes",
+                "ADJUVANT_TREATMENT": {
+                    "given": "Unknown",
+                    "regimens": [
+                        "BEP方案化疗2程:BLM 15mg d1-3 +DDP 30mg d1-3+ VP-16 0.1g d1-3，q21d"
+                    ],
+                    "cycles_or_courses": "2 cycles"
+                },
+                "LINE_OF_THERAPY": [
+                    {
+                        "line": "1L",
+                        "intent": "Unknown",
+                        "regimen": "BLM 15mg d1-3 +DDP 30mg d1-3+ VP-16 0.1g d1-3, q21d",
+                        "start_date": "2024-08-23",
+                        "end_date": "2024-10-23",
+                        "cycles": "2"
+                    }
+                ],
+                "MAINTENANCE": "Unknown",
+                "MAINTENANCE_DETAIL": {
+                    "given": "Unknown",
+                    "regimens": [],
+                    "start_date": "Unknown",
+                    "end_date": "Unknown"
+                },
+                "RELAPSE": "Unknown",
+                "RELAPSE_DATE": {
+                    "date": "Unknown",
+                    "type": "Unknown",
+                    "evidence": ""
+                },
+                "HRD": "Unknown",
+                "BRCA1": "Unknown",
+                "BRCA2": "Unknown",
+                "BIOMARKERS": {
+                    "TMB": "Unknown",
+                    "MSI": "Unknown",
+                    "PDL1_CPS": "Unknown",
+                    "HER2": "Unknown",
+                    "AFP": "<2 (2024-10-22)",
+                    "CA125": "36.10 (2024-09-27)"
+                },
+                "CURRENT_STATUS": "Post right oophorectomy; received 2 cycles BEP; left ovarian surface nodule noted, under imaging evaluation",
+                "TIMELINE": {
+                    "events": [
+                        {
+                            "date": "2024-08-23",
+                            "event_type": "Chemo",
+                            "description": "Start BEP chemotherapy (2 cycles)",
+                            "regimen_or_test": "BEP方案化疗: BLM 15mg d1-3 +DDP 30mg d1-3+ VP-16 0.1g d1-3, q21d",
+                            "key_result": "AFP 15.84; CA125 44.1"
+                        },
+                        {
+                            "date": "2024-09-02",
+                            "event_type": "Surgery",
+                            "description": "Laparoscopic right ovary + salpingectomy",
+                            "regimen_or_test": "Pathology performed",
+                            "key_result": "Pathology: 卵巢恶性肿瘤, 无性细胞瘤合并畸胎瘤成分"
+                        },
+                        {
+                            "date": "2024-09-27",
+                            "event_type": "Imaging",
+                            "description": "MRI: post-right oophorectomy, left adnexal/posterior to left ovary mass; small pelvic effusion",
+                            "regimen_or_test": "MRI pelvis",
+                            "key_result": "Left ovarian extra-surface mass noted"
+                        },
+                        {
+                            "date": "2024-09-28",
+                            "event_type": "Imaging",
+                            "description": "CT pelvis post-op showing pelvic mass",
+                            "regimen_or_test": "CT",
+                            "key_result": "Postoperative pelvic mass"
+                        },
+                        {
+                            "date": "2024-09",
+                            "event_type": "Other",
+                            "description": "亮丙瑞林 1 time (subcutaneous injection)",
+                            "regimen_or_test": "亮丙瑞林",
+                            "key_result": ""
+                        },
+                        {
+                            "date": "2024-10-22",
+                            "event_type": "Lab",
+                            "description": "AFP measurement",
+                            "regimen_or_test": "AFP",
+                            "key_result": "AFP <2"
+                        },
+                        {
+                            "date": "2024-10-23",
+                            "event_type": "Chemo",
+                            "description": "Last BEP administration (documented last dose)",
+                            "regimen_or_test": "BEP",
+                            "key_result": "Last administration 2024-10-23"
+                        }
+                    ],
+                    "constraints": {
+                        "min_events": 3,
+                        "max_events": 30,
+                        "must_include": [
+                            "first diagnostic imaging or pathology confirmation (if available)"
+                        ],
+                        "ordering_rules": {
+                            "prioritize_last_event": true
+                        }
+                    }
+                }
+            },
+            "TIMELINE": {
+                "events": [
+                    {
+                        "date": "2024-08-23",
+                        "event_type": "Chemo",
+                        "description": "Start BEP chemotherapy (2 cycles)",
+                        "regimen_or_test": "BEP方案化疗: BLM 15mg d1-3 +DDP 30mg d1-3+ VP-16 0.1g d1-3, q21d",
+                        "key_result": "AFP 15.84; CA125 44.1"
+                    },
+                    {
+                        "date": "2024-09-02",
+                        "event_type": "Surgery",
+                        "description": "Laparoscopic right ovary + salpingectomy",
+                        "regimen_or_test": "Pathology performed",
+                        "key_result": "Pathology: 卵巢恶性肿瘤, 无性细胞瘤合并畸胎瘤成分"
+                    },
+                    {
+                        "date": "2024-09-27",
+                        "event_type": "Imaging",
+                        "description": "MRI: post-right oophorectomy, left adnexal/posterior to left ovary mass; small pelvic effusion",
+                        "regimen_or_test": "MRI pelvis",
+                        "key_result": "Left ovarian extra-surface mass noted"
+                    },
+                    {
+                        "date": "2024-09-28",
+                        "event_type": "Imaging",
+                        "description": "CT pelvis post-op showing pelvic mass",
+                        "regimen_or_test": "CT",
+                        "key_result": "Postoperative pelvic mass"
+                    },
+                    {
+                        "date": "2024-09",
+                        "event_type": "Other",
+                        "description": "亮丙瑞林 1 time (subcutaneous injection)",
+                        "regimen_or_test": "亮丙瑞林",
+                        "key_result": ""
+                    },
+                    {
+                        "date": "2024-10-22",
+                        "event_type": "Lab",
+                        "description": "AFP measurement",
+                        "regimen_or_test": "AFP",
+                        "key_result": "AFP <2"
+                    },
+                    {
+                        "date": "2024-10-23",
+                        "event_type": "Chemo",
+                        "description": "Last BEP administration (documented last dose)",
+                        "regimen_or_test": "BEP",
+                        "key_result": "Last administration 2024-10-23"
+                    }
+                ],
+                "constraints": {
+                    "min_events": 3,
+                    "max_events": 30,
+                    "must_include": [
+                        "first diagnostic imaging or pathology confirmation (if available)"
+                    ],
+                    "ordering_rules": {
+                        "prioritize_last_event": true
+                    }
+                }
+            },
+            "MED_ONC": {
+                "current_regimen": {
+                    "name": "Unknown",
+                    "last_admin_date": "2024-10-23",
+                    "cycle_info": "2 cycles completed"
+                },
+                "planned_next_regimen": "Unknown",
+                "prior_systemic_therapies": [
+                    "BLM 15mg d1-3 +DDP 30mg d1-3+ VP-16 0.1g d1-3, q21d"
+                ],
+                "genetic_testing": {
+                    "somatic": [],
+                    "germline": []
+                },
+                "monitoring_points": []
+            },
+            "RADIOLOGY": {
+                "studies": [
+                    {
+                        "date": "2024-09-27",
+                        "modality": "MRI",
+                        "anatomic_sites": [
+                            "Left ovary",
+                            "Pelvis"
+                        ],
+                        "findings": [
+                            "Post-right oophorectomy; left adnexal/posterior to left ovary mass",
+                            "Small pelvic effusion"
+                        ],
+                        "impression": "Left-sided adnexal extra-surface mass; consider implantation",
+                        "trend_vs_prior": "Unknown"
+                    },
+                    {
+                        "date": "2024-09-28",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Pelvis"
+                        ],
+                        "findings": [
+                            "Postoperative pelvic mass"
+                        ],
+                        "impression": "Pelvic postoperative change with residual mass",
+                        "trend_vs_prior": "Unknown"
+                    },
+                    {
+                        "date": "Unknown",
+                        "modality": "MRI",
+                        "anatomic_sites": [
+                            "Left ovary"
+                        ],
+                        "findings": [
+                            "Left ovarian surface solid nodule 1.8cm, decreased in size compared with prior"
+                        ],
+                        "impression": "Left ovarian surface solid nodule 1.8cm; decreased; suspect implantation; recommend FAPI",
+                        "trend_vs_prior": "Improved"
+                    }
+                ],
+                "next_imaging_plan": {
+                    "modality": "FAPI",
+                    "timing": "Unknown"
+                }
+            },
+            "PATHOLOGY": {
+                "specimens": [
+                    {
+                        "date": "2024-09-02",
+                        "site": "Right adnexa",
+                        "diagnosis": "卵巢恶性肿瘤，结合免疫组化诊断为：无性细胞瘤合并畸胎瘤成分（占比约10%），伴局部坏死及血管增生。病理会诊：卵巢混合性生殖细胞肿瘤，以无性细胞瘤成分为主，合并少量成熟性畸胎瘤成分；输卵管慢性炎。",
+                        "components": [
+                            "无性细胞瘤成分",
+                            "畸胎瘤成分"
+                        ],
+                        "grade": "Unknown",
+                        "tumor_size": "Unknown",
+                        "laterality": "Right",
+                        "sample_type": "Resection",
+                        "involvement_sites": [],
+                        "ihc": [
+                            {
+                                "marker": "SALL4",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "Oct4",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "PLAP",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "D2-40",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "GPC-3",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "AFP",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "ZBTB16",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "EMA",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "CD30",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "CD117",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "Ki-67",
+                                "result": "(+约80％)"
+                            }
+                        ],
+                        "molecular": [],
+                        "raw_text": "术后病理：卵巢恶性肿瘤，结合免疫组化诊断为：无性细胞瘤合并畸胎瘤成分（占比约10%），伴局部坏死及血管增生。病理会诊（右附件）：卵巢混合性生殖细胞肿瘤，以无性细胞瘤成分为主，合并少量成熟性畸胎瘤成分；输卵管慢性炎。免疫组化：SALL4（+），Oct4（+），PLAP（+），D2-40（+），GPC-3（-），AFP（-），ZBTB16（-），EMA（-），CD30（-），CD117（+），Ki-67（+约80％）",
+                        "uncertainty_or_missing": [
+                            "Stage not provided"
+                        ]
+                    }
+                ]
+            },
+            "NUC_MED": {
+                "studies": []
+            },
+            "LAB_TRENDS": {
+                "labs": [
+                    {
+                        "analyte": "AFP",
+                        "unit": "ng/mL",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2024-10-22",
+                            "value": "<2",
+                            "flag": "↓"
+                        },
+                        "history": [
+                            {
+                                "date": "2024-08-23",
+                                "value": "15.84",
+                                "flag": "Unknown"
+                            },
+                            {
+                                "date": "2024-10-22",
+                                "value": "<2",
+                                "flag": "↓"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "CA125",
+                        "unit": "U/ml",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2024-09-27",
+                            "value": "36.10",
+                            "flag": "↑"
+                        },
+                        "history": [
+                            {
+                                "date": "2024-08-23",
+                                "value": "44.1",
+                                "flag": "Unknown"
+                            },
+                            {
+                                "date": "2024-09-27",
+                                "value": "36.10",
+                                "flag": "↑"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "NSE",
+                        "unit": "ng/ml",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2024-09-27",
+                            "value": "19.60",
+                            "flag": "↑"
+                        },
+                        "history": [
+                            {
+                                "date": "2024-09-27",
+                                "value": "19.60",
+                                "flag": "↑"
+                            }
+                        ]
+                    }
+                ],
+                "milestones": [
+                    {
+                        "date": "2024-08-23",
+                        "type": "ChemoStart",
+                        "description": "Start BEP chemotherapy"
+                    },
+                    {
+                        "date": "2024-09-02",
+                        "type": "Surgery",
+                        "description": "Laparoscopic right ovary + salpingectomy"
+                    },
+                    {
+                        "date": "2024-10-23",
+                        "type": "ChemoEnd",
+                        "description": "Last documented BEP administration"
+                    },
+                    {
+                        "date": "2024-09-27",
+                        "type": "Imaging",
+                        "description": "MRI showing left ovarian mass"
+                    }
+                ]
+            }
+        },
+        "response": "Final Assessment:\nMixed ovarian germ cell tumour (dysgerminoma‑predominant) post right adnexectomy and 2 BEP cycles, with a shrinking but indeterminate 1.8 cm left ovarian surface nodule and incomplete staging, organ-function, and fertility information.\n\nCore Treatment Strategy:\n- Do not modify systemic‑therapy plan or schedule further cycles until FIGO stage, staging completeness, and organ function are clarified.\n- Arrange unified post‑BEP restaging: contrast CT/MRI abdomen–pelvis ± chest plus whole‑body PET/FAPI to assess left nodule and extrapelvic disease.\n- Request pathology addendum to provide full staging details (tumour size, capsule/surface, washings, extraovarian disease, FIGO stage, teratoma maturity).\n- Implement standardized serial tumour markers (AFP, β‑hCG, LDH, CA125, NSE) and document renal, pulmonary, marrow status and fertility goals to guide chemo vs fertility‑sparing surgery.\n\nChange Triggers:\n- If imaging/PET shows active left implant or additional disease, prioritize completion/optimization of systemic therapy and consider non‑fertility‑sparing surgery.\n- If imaging/PET shows no active disease and markers normalize, consider limited fertility‑sparing surgery or surveillance rather than intensifying chemotherapy.\n- If organ‑function assessment reveals significant BEP toxicity, de‑escalate or switch systemic approach and increase reliance on surgical/local control.",
+        "gold_plan": "建议继续化疗3程后复查影像学MRI申请：盆腔(平扫+增强)(其中自费项目:接受MR检查之后,患者或家属选择胶片为影像资料)　检查部位：盆腔(平扫+增强)。检查地点：浦东院区(康新公路4333号) 1号楼地下1楼N区。CT申请：腹部CT（平扫+增强）(其中自费项目:接受CT检查之后,患者或家属选择胶片为影像资料)　检查部位：腹部CT（平扫+增强）。检查地点：浦东院区(康新公路4333号) 1号楼地下1楼N区。",
+        "question_raw": "无性细胞瘤合并畸胎瘤成分化疗2程：2024.8.23 AFP:15.84 CA125:44.12024.09.02外院腔镜手术切除右侧卵巢+输卵管，术后病理：卵巢恶性肿瘤，结合免疫组化诊断为：无性细胞瘤合并畸胎瘤成分（占比约10%），伴局部坏死及血管增生。血常规肝肾功能一般可MR（2024.09.27）：右卵巢切除术后，左侧卵巢外后方占位，请结合临床。盆腔少量积液。2024.9.28 CT: 盆腔占位术后2024.09 亮丙瑞林1次2024.09.27 CA125(糖类抗原CA125):36.10U/ml↑ NSE(神经元特异烯醇化酶):19.60ng/ml↑ 其余无殊BEP方案化疗2程:BLM 15mg d1-3 +DDP 30mg d1-3+ VP-16 0.1g d1-3，q21d，末次2024.10.23亮丙瑞林皮下注射病理会诊咨询意见:2430975、2430966及2430967：（右附件）卵巢混合性生殖细胞肿瘤，以无性细胞瘤成分为主，合并少量成熟性畸胎瘤成分；输卵管慢性炎。免疫组化结果（HI24-45014）：SALL4（+），Oct4（+），PLAP（+），D2-40（+），GPC-3（-），AFP（-），ZBTB16（-），EMA（-），CD30（-），CD117（+），Ki-67（+约80％）2024.10.22 AFP <2咨询病理及后续诊疗，预约MRI体格检查: 一般可影像复片: MR复片：左侧卵巢表面实性结节灶（1.8cm），较前缩小，需警惕种植，建议FAPI。",
+        "Time": "2024-10-29 15:38:50.183000",
+        "meta_info": "361127200904290341"
+    }
+]

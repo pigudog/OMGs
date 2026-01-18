@@ -101,6 +101,8 @@ Ensure the following files exist:
 - **RAG index** (`rag_store/chair/index/chroma/`)
 - **Clinical trials** (optional): `all_trials_filtered.json`
 
+All data paths can be overridden via `config/paths.json` (see **Advanced Configuration**).
+
 ### 4. Run the system
 
 ```bash
@@ -124,7 +126,9 @@ python main.py [OPTIONS]
 
 **Optional:**
 - `--model`: Azure deployment name (default: `gpt-5.1`)
-- `--agent`: agent type (default: `omgs`, currently only `omgs`)
+- `--agent`: agent type (default: `basic_baseline`). Choices:
+  `basic_baseline`, `basic_role`, `basic_rag`, `basic_rag_lab`, `basic_rag_lab_full`, `omgs`.
+  Currently only `omgs` is implemented; other values will fallback to `omgs` with a warning.
 - `--num_samples`: number of samples to process (default: 999999)
 
 **Token parameters:**
@@ -174,8 +178,10 @@ And to `mdt_logs/`:
 
 ```
 OMGs/
-├── main.py                 # entry script
-├── agent_published.py      # MDT pipeline core
+├── main.py                 # entry script (MDT pipeline)
+├── agent_omgs.py           # MDT pipeline core
+├── ehr_structurer.py       # EHR extraction / structuring
+├── pdf_to_rag.py           # RAG corpus/index builder
 ├── requirements.txt        # dependencies
 ├── README.md               # this file
 │
@@ -194,7 +200,8 @@ OMGs/
 │   └── trace_utils.py      # observability
 │
 ├── config/                 # configs
-│   └── prompts.json
+│   ├── prompts.json
+│   └── paths.json
 │
 ├── files/                  # data files
 │   ├── lab_reports_summary.jsonl
@@ -256,6 +263,54 @@ python main.py \
 for file in input_ehr/*.jsonl; do
     python main.py --input_path "$file"
 done
+
+### EHR extraction / structuring (raw → JSONL)
+
+Use `ehr_structurer.py` to convert raw notes into structured EHR JSON:
+
+```bash
+python ehr_structurer.py \
+  --input input_ehr/raw_notes.jsonl \
+  --output input_ehr/structured.jsonl \
+  --deployment gpt-5.1 \
+  --prompts config/prompts.json \
+  --field question \
+  --max-completion-tokens 40000 \
+  --retries 4 \
+  --txt-dir output_ehr/txt_out
+```
+
+Notes:
+- `--field` is the input JSONL key that contains raw note text (default: `question`).
+- `--txt-dir` is optional; when set, a per-patient TXT preview is saved.
+- `--disable-json-repair` can be used to skip automatic JSON repair.
+
+### Build / index / search RAG guidelines
+
+```bash
+# 1) Build TXT + chunks from PDFs
+python pdf_to_rag.py build \
+  --pdf_dir rag_pdf/chair \
+  --out_dir rag_store/chair/corpus \
+  --chunk_size 1200 \
+  --chunk_overlap 200
+
+# 2) Index chunks into Chroma
+python pdf_to_rag.py index \
+  --corpus_dir rag_store/chair/corpus \
+  --index_dir rag_store/chair/index/chroma \
+  --collection_name chair_chunks \
+  --model BAAI/bge-m3 \
+  --device cpu
+
+# 3) Search the index
+python pdf_to_rag.py search \
+  --index_dir rag_store/chair/index/chroma \
+  --collection_name chair_chunks \
+  --model BAAI/bge-m3 \
+  --device cpu \
+  --query "NACT in ovarian cancer"
+```
 ```
 
 ## 🔍 How It Works
@@ -317,9 +372,37 @@ The Chair synthesizes discussion into the final MDT output:
 
 ## ⚙️ Advanced Configuration
 
-### Custom report paths
+### Paths configuration (`config/paths.json`)
 
-Configure in `agent_published.py`:
+You can centralize all data and output paths here:
+
+```json
+{
+  "data_files": {
+    "lab_reports": "files/lab_reports_summary.jsonl",
+    "imaging_reports": "files/imaging_reports.jsonl",
+    "pathology_reports": null,
+    "mutation_reports": "files/mutation_reports.jsonl",
+    "trials": "all_trials_filtered.json"
+  },
+  "rag_store": {
+    "index_dir_template": "rag_store/{role}/index/chroma",
+    "collection_name_template": "{role}_chunks",
+    "embedding_model": "BAAI/bge-m3",
+    "use_per_role_rag": false,
+    "default_role": "chair"
+  },
+  "output_dirs": {
+    "output_answer": "output_answer",
+    "mdt_logs": "mdt_logs",
+    "api_trace_db": "api_trace.db"
+  }
+}
+```
+
+### Custom report paths (function-level override)
+
+Configure in `agent_omgs.py`:
 
 ```python
 process_omgs_multi_expert_query(
@@ -337,7 +420,7 @@ process_omgs_multi_expert_query(
 
 ### RAG configuration
 
-- **Index path**: `rag_store/chair/index/chroma/`
+- **Index path**: `rag_store/chair/index/chroma/` (or from `config/paths.json`)
 - **Embedding model**: `BAAI/bge-m3` (see `rag_utils.py`)
 - **Top-k**: default `topk=5`
 

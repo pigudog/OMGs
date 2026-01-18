@@ -1,5 +1,5 @@
-# agent_published.py
-# NOTE: This file is part of the published OMGs/MDT agent pipeline.
+# agent_omgs.py
+# NOTE: This file is part of the OMGs/MDT agent pipeline.
 # Any changes here should preserve clinical logic and only adjust observability/debugging unless explicitly intended.
 import os
 import re

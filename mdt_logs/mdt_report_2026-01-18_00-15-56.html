@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MDT Report</title>
+  <style>
+    :root {
+      --border: #e5e7eb;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --card: #ffffff;
+      --soft: #f7f7f8;
+      --accent: #2563eb;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; background: var(--bg); }
+    h1 { font-size: 20px; margin: 0 0 12px 0; }
+    h2 { font-size: 16px; margin: 0 0 10px 0; }
+    h3 { font-size: 14px; margin: 10px 0 6px 0; }
+    .meta { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .card { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: var(--card); }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; background: var(--card); }
+    summary { cursor: pointer; font-weight: 600; }
+    pre { white-space: pre-wrap; word-wrap: break-word; background: var(--soft); padding: 12px; border-radius: 10px; overflow-x: auto; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .mt { margin-top: 12px; }
+    .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+    .warn { color: #b45309; font-weight: 600; }
+    table.grid { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.grid th, table.grid td { border: 1px solid var(--border); padding: 8px; vertical-align: top; }
+    table.grid th { background: #f3f4f6; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>OMGs / MDT Report</h1>
+  <div class="meta">
+    <div><b>Timestamp</b>: 2026-01-18_00-15-56</div>
+  </div>
+
+  <div class="cols mt">
+    <div class="card">
+      <h2>Final MDT Output</h2>
+      <pre>- If ECOG ≥3 or refractory bowel obstruction, then adjust management from systemic therapy to best supportive/palliative-focused care.  
+
+- If imaging confirms extensive pseudomyxoma-like peritoneal disease without resectability, then adjust management from cytoreductive intent to symptom-directed systemic/supportive care.  
+
+- If CT/MRI or PET shows oligometastatic, potentially resectable lesions, then adjust management from systemic-only to consider surgical/locoregional MDT.  
+
+- If creatinine clearance falls &lt;40 mL/min or major organ dysfunction emerges, then adjust management from full-dose multiagent therapy to modified/less intensive regimens.  
+
+- If patient prioritizes quality of life over survival extension, then adjust management from aggressive multi-line chemotherapy to minimal-burden palliative and hospice-focused approach.</pre>
+    </div>
+    <div class="card">
+      <h2>Question (raw)</h2>
+      <div class="hint">Original user question for observability (passed from main via args.question_raw).</div>
+      <pre>卵巢癌二次术后复发化疗后：基因检测：胚系-，体系BRCA ETV4 KMT2A NF1 TP53突变；HER2（0）；2020.10.14于外院行卵巢癌根治+减瘤+腹腔热灌注置管，术后病理：高浆；术前顺铂+多西他赛 2个疗程；术后TC 6个疗程，末次21.08；结疗后尼拉维持；末次用药时间：2022.12；2023.04外院因复发二次手术，术后【TC6】个疗程；第4个疗程时加入贝伐；末次2023.11.22；2023.11月底CA125 200多；2023.12.外院PET检查未见异常；2024.01.03开始【依托泊苷+艾坦】；末次用药：2024.03.13；2024.03.21外院CA125 100002024.03.27【顺铂+多美素】3疗程，末次：2024.07.01；第4次开始加入贝伐3次；末次：2024.08.27；2024.07.26 外院 CA125 5400；后贝伐维持至今2024.08.26 CA125 4153.292024.10.14 CA125 3119.8患者自述大腿左侧大腿根部疼痛。【白蛋白紫杉醇100mg/m2 d1,8,15 + 贝伐珠单抗5mg/kg d1,15】*3 末次2025.02.21 PDCA125 5768本院病理会诊咨询意见:（双附件）双侧卵巢表面、双侧输卵管黏膜面及浆膜面均见低分化癌，灶区间质伴治疗后改变，依据HE形态，倾向高级别浆液性癌。（子宫）肌壁间平滑肌瘤；内膜呈萎缩性改变；宫颈慢性炎；子宫前壁浆膜面见癌累及。（右侧隔肌、左侧隔肌、回盲部系膜、子宫直肠窝、大网膜、肝肾隐窝、左侧盆壁、乙状结肠系膜表面、左结肠旁沟、右结肠旁沟）均见癌累及。（阑尾）慢性炎，浆膜面及肌壁见癌累及。本院病理会诊咨询意见:1、（胃幽门周围，胃网膜弓淋巴结）淋巴结（1/2）见癌转移。2、（左肝结节）肝组织，部分区肝窦扩张充血，另见少量游离的核大深染的上皮细胞。补充诊断1：补充报告:病理会诊咨询意见:1、（胃幽门周围，胃网膜弓淋巴结）淋巴结（1/2）见癌转移，结合免疫组化结果，首先考虑为高级别浆液性癌，请结合临床首先查女性生殖系统。2、（左肝结节）肝组织，部分区肝窦扩张充血，另见少量游离的核大深染的上皮细胞。免疫组化结果：肿瘤细胞 PAX8（+），P53（+），WT1（+），CDX2-88（-），HER2（0）2025.03.12 CA125 36432025.03.31患者完善筛选期检查，血生化报告示：肌酐86umol/l，根据患者体重51kg计算得肌酐清除率为53mL/min，不符合入组标准7，嘱患者外院先行对症治疗后复测。患者反馈于今日外院复测血生化报告示肌酐82umol/l，并告知外院测量体重：49.8kg,根据体重计算的肌酐清除率为54mL/min，经评估，仍不符合GH2616C102方案入组标准第7条。故于2025.04.07登记筛选失败2025.04.28 CA125 12287,CA199 292025.05.09 多西他赛+奥沙利铂化疗1次后因肠梗阻暂停化疗2025.06.18 CA125 218272025.06.28 外院CT：腹腔内囊性病灶，假性粘液瘤可能大；肝内稍低密度结节灶诉因EGFR 64，查见右肾轻度积水，开利尿剂治疗诉双下肢水肿，温暖后可消肿，诉肠淤积易腹胀，咨询后续治疗方案</pre>
+
+      <details class="mt">
+        <summary>Case (Structured JSON)</summary>
+        <pre>{&quot;CASE_CORE&quot;:{&quot;ADJUVANT_TREATMENT&quot;:{&quot;cycles_or_courses&quot;:&quot;6&quot;,&quot;given&quot;:&quot;Yes&quot;,&quot;regimens&quot;:[&quot;TC 6 cycles&quot;]},&quot;BIOMARKERS&quot;:{&quot;AFP&quot;:&quot;Unknown&quot;,&quot;CA125&quot;:&quot;21827 (2025-06-18)&quot;,&quot;HER2&quot;:&quot;0&quot;,&quot;MSI&quot;:&quot;Unknown&quot;,&quot;PDL1_CPS&quot;:&quot;Unknown&quot;,&quot;TMB&quot;:&quot;Unknown&quot;},&quot;BRCA1&quot;:&quot;Wildtype&quot;,&quot;BRCA2&quot;:&quot;Wildtype&quot;,&quot;CURRENT_STATUS&quot;:&quot;PD (2025-02-21)&quot;,&quot;DIAGNOSIS&quot;:{&quot;components&quot;:[&quot;poorly differentiated carcinoma&quot;,&quot;treatment effect&quot;],&quot;histology&quot;:&quot;倾向高级别浆液性癌&quot;,&quot;laterality&quot;:&quot;Bilateral&quot;,&quot;primary&quot;:&quot;Recurrent ovarian cancer&quot;,&quot;site&quot;:&quot;Ovary&quot;},&quot;HRD&quot;:&quot;Negative&quot;,&quot;INITIAL_TREATMENT&quot;:&quot;Yes&quot;,&quot;LINE_OF_THERAPY&quot;:[{&quot;cycles&quot;:&quot;2&quot;,&quot;end_date&quot;:&quot;2020-10-14&quot;,&quot;intent&quot;:&quot;Adjuvant&quot;,&quot;line&quot;:&quot;Unknown&quot;,&quot;regimen&quot;:&quot;术前顺铂+多西他赛 (2 cycles, neoadjuvant)&quot;,&quot;start_date&quot;:&quot;Unknown&quot;},{&quot;cycles&quot;:&quot;6&quot;,&quot;end_date&quot;:&quot;2021-08&quot;,&quot;intent&quot;:&quot;Adjuvant&quot;,&quot;line&quot;:&quot;1L&quot;,&quot;regimen&quot;:&quot;TC 6 cycles&quot;,&quot;start_date&quot;:&quot;Unknown&quot;},{&quot;cycles&quot;:&quot;Unknown&quot;,&quot;end_date&quot;:&quot;2022-12&quot;,&quot;intent&quot;:&quot;Unknown&quot;,&quot;line&quot;:&quot;Maintenance&quot;,&quot;regimen&quot;:&quot;尼拉维持&quot;,&quot;start_date&quot;:&quot;Unknown&quot;},{&quot;cycles&quot;:&quot;6&quot;,&quot;end_date&quot;:&quot;2023-11-22&quot;,&quot;intent&quot;:&quot;Salvage&quot;,&quot;line&quot;:&quot;2L&quot;,&quot;regimen&quot;:&quot;Post-op TC 6 cycles (4th cycle added 贝伐)&quot;,&quot;start_date&quot;:&quot;2023-04&quot;},{&quot;cycles&quot;:&quot;Unknown&quot;,&quot;end_date&quot;:&quot;2024-03-13&quot;,&quot;intent&quot;:&quot;Palliative&quot;,&quot;line&quot;:&quot;3L&quot;,&quot;regimen&quot;:&quot;依托泊苷+艾坦&quot;,&quot;start_date&quot;:&quot;2024-01-03&quot;},{&quot;cycles&quot;:&quot;4+&quot;,&quot;end_date&quot;:&quot;2024-08-27&quot;,&quot;intent&quot;:&quot;Palliative&quot;,&quot;line&quot;:&quot;3L&quot;,&quot;regimen&quot;:&quot;顺铂+多美素&quot;,&quot;start_date&quot;:&quot;2024-03-27&quot;},{&quot;cycles&quot;:&quot;3&quot;,&quot;end_date&quot;:&quot;2025-02-21&quot;,&quot;intent&quot;:&quot;Palliative&quot;,&quot;line&quot;:&quot;4L+&quot;,&quot;regimen&quot;:&quot;白蛋白紫杉醇100mg/m2 d1,8,15 + 贝伐珠单抗5mg/kg d1,15&quot;,&quot;start_date&quot;:&quot;2025-02-21&quot;},{&quot;cycles&quot;:&quot;1&quot;,&quot;end_date&quot;:&quot;2025-05-09&quot;,&quot;intent&quot;:&quot;Palliative&quot;,&quot;line&quot;:&quot;4L+&quot;,&quot;regimen&quot;:&quot;多西他赛+奥沙利铂&quot;,&quot;start_date&quot;:&quot;2025-05-09&quot;}],&quot;MAINTENANCE&quot;:&quot;Yes&quot;,&quot;MAINTENANCE_DETAIL&quot;:{&quot;end_date&quot;:&quot;Unknown&quot;,&quot;given&quot;:&quot;Yes&quot;,&quot;regimens&quot;:[&quot;尼拉维持&quot;,&quot;贝伐维持&quot;],&quot;start_date&quot;:&quot;Unknown&quot;},&quot;NEOADJUVANT&quot;:&quot;Yes&quot;,&quot;PFI_days&quot;:&quot;Unknown&quot;,&quot;PLATINUM_HISTORY&quot;:[{&quot;PFI_days&quot;:&quot;Unknown&quot;,&quot;end_date&quot;:&quot;2021-08&quot;,&quot;evidence&quot;:&quot;Recurrence requiring second surgery in 2023-04&quot;,&quot;evidence_type&quot;:&quot;Clinical&quot;,&quot;first_relapse_date&quot;:&quot;2023-04&quot;,&quot;line&quot;:&quot;1L&quot;,&quot;start_date&quot;:&quot;Unknown&quot;,&quot;status&quot;:&quot;Unknown&quot;},{&quot;PFI_days&quot;:&quot;42&quot;,&quot;end_date&quot;:&quot;2023-11-22&quot;,&quot;evidence&quot;:&quot;Start of subsequent systemic therapy (依托泊苷+艾坦) on 2024-01-03&quot;,&quot;evidence_type&quot;:&quot;Clinical&quot;,&quot;first_relapse_date&quot;:&quot;2024-01-03&quot;,&quot;line&quot;:&quot;2L&quot;,&quot;start_date&quot;:&quot;2023-04&quot;,&quot;status&quot;:&quot;Resistant&quot;},{&quot;PFI_days&quot;:&quot;48&quot;,&quot;end_date&quot;:&quot;2024-08-27&quot;,&quot;evidence&quot;:&quot;CA125 3119.8 on 2024-10-14&quot;,&quot;evidence_type&quot;:&quot;Biochemical&quot;,&quot;first_relapse_date&quot;:&quot;2024-10-14&quot;,&quot;line&quot;:&quot;3L&quot;,&quot;start_date&quot;:&quot;2024-03-27&quot;,&quot;status&quot;:&quot;Resistant&quot;},{&quot;PFI_days&quot;:&quot;40&quot;,&quot;end_date&quot;:&quot;2025-05-09&quot;,&quot;evidence&quot;:&quot;CA125 21827 on 2025-06-18&quot;,&quot;evidence_type&quot;:&quot;Biochemical&quot;,&quot;first_relapse_date&quot;:&quot;2025-06-18&quot;,&quot;line&quot;:&quot;4L+&quot;,&quot;start_date&quot;:&quot;2025-05-09&quot;,&quot;status&quot;:&quot;Resistant&quot;}],&quot;PLATINUM_PFI_CURRENT&quot;:&quot;40&quot;,&quot;PLATINUM_STATUS&quot;:&quot;Unknown&quot;,&quot;PLATINUM_STATUS_CURRENT&quot;:&quot;Resistant&quot;,&quot;RELAPSE&quot;:&quot;Yes&quot;,&quot;RELAPSE_DATE&quot;:{&quot;date&quot;:&quot;2025-06-18&quot;,&quot;evidence&quot;:&quot;CA125 21827&quot;,&quot;type&quot;:&quot;Biochemical&quot;},&quot;STAGE&quot;:{&quot;stage_basis&quot;:&quot;Pathology&quot;,&quot;stage_system&quot;:&quot;Unknown&quot;,&quot;stage_text&quot;:&quot;Unknown&quot;},&quot;SURGERY_DONE&quot;:{&quot;date&quot;:&quot;2020-10-14&quot;,&quot;performed&quot;:&quot;Yes&quot;,&quot;procedure&quot;:&quot;Radical ovarian cancer surgery + debulking + intraperitoneal hyperthermic perfusion catheter placement&quot;},&quot;VISIT_DATE&quot;:&quot;2023-07-01&quot;,&quot;first_relapse_date&quot;:&quot;2023-04&quot;,&quot;last_platinum_end_date&quot;:&quot;2025-05-09&quot;},&quot;LAB_TRENDS&quot;:{&quot;labs&quot;:[{&quot;analyte&quot;:&quot;CA125&quot;,&quot;history&quot;:[{&quot;date&quot;:&quot;2023-11&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;200+&quot;},{&quot;date&quot;:&quot;2024-03-21&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;10000&quot;},{&quot;date&quot;:&quot;2024-07-26&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;5400&quot;},{&quot;date&quot;:&quot;2024-08-26&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;4153.29&quot;},{&quot;date&quot;:&quot;2024-10-14&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;3119.8&quot;},{&quot;date&quot;:&quot;2025-02-21&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;5768&quot;},{&quot;date&quot;:&quot;2025-03-12&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;3643&quot;},{&quot;date&quot;:&quot;2025-04-28&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;12287&quot;},{&quot;date&quot;:&quot;2025-06-18&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;21827&quot;}],&quot;latest&quot;:{&quot;date&quot;:&quot;2025-06-18&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;21827&quot;},&quot;reference_range&quot;:&quot;Unknown&quot;,&quot;unit&quot;:&quot;Unknown&quot;}],&quot;milestones&quot;:[{&quot;date&quot;:&quot;2020-10-14&quot;,&quot;description&quot;:&quot;Initial radical surgery&quot;,&quot;type&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2021-08&quot;,&quot;description&quot;:&quot;Completion of adjuvant TC&quot;,&quot;type&quot;:&quot;ChemoEnd&quot;},{&quot;date&quot;:&quot;2023-04&quot;,&quot;description&quot;:&quot;Second surgery for recurrence&quot;,&quot;type&quot;:&quot;Relapse&quot;},{&quot;date&quot;:&quot;2025-05-09&quot;,&quot;description&quot;:&quot;多西他赛+奥沙利铂 given (1 cycle)&quot;,&quot;type&quot;:&quot;ChemoStart&quot;},{&quot;date&quot;:&quot;2025-06-18&quot;,&quot;description&quot;:&quot;Marked CA125 rise&quot;,&quot;type&quot;:&quot;Relapse&quot;}]},&quot;MED_ONC&quot;:{&quot;current_regimen&quot;:{&quot;cycle_info&quot;:&quot;1 cycle&quot;,&quot;last_admin_date&quot;:&quot;2025-05-09&quot;,&quot;name&quot;:&quot;多西他赛+奥沙利铂&quot;},&quot;genetic_testing&quot;:{&quot;germline&quot;:[&quot;HRD: Negative&quot;,&quot;BRCA1: Wildtype&quot;,&quot;BRCA2: Wildtype&quot;],&quot;somatic&quot;:[&quot;HRD: Negative&quot;,&quot;BRCA1: Wildtype&quot;,&quot;BRCA2: Wildtype&quot;]},&quot;monitoring_points&quot;:[],&quot;planned_next_regimen&quot;:&quot;Unknown&quot;,&quot;prior_systemic_therapies&quot;:[&quot;术前顺铂+多西他赛&quot;,&quot;TC&quot;,&quot;尼拉维持&quot;,&quot;Post-op TC (2023) + 贝伐 from cycle 4&quot;,&quot;依托泊苷+艾坦&quot;,&quot;顺铂+多美素&quot;,&quot;白蛋白紫杉醇100mg/m2 d1,8,15 + 贝伐珠单抗5mg/kg d1,15&quot;,&quot;多西他赛+奥沙利铂&quot;]},&quot;NUC_MED&quot;:{&quot;studies&quot;:[{&quot;avid_lesions&quot;:[],&quot;confidence&quot;:&quot;Moderate&quot;,&quot;date&quot;:&quot;2023-12&quot;,&quot;non_avid_notes&quot;:[&quot;No abnormality on PET&quot;],&quot;type&quot;:&quot;FDG-PET/CT&quot;}]},&quot;PATHOLOGY&quot;:{&quot;specimens&quot;:[{&quot;components&quot;:[&quot;低分化癌&quot;,&quot;treatment effect&quot;],&quot;date&quot;:&quot;Unknown&quot;,&quot;diagnosis&quot;:&quot;低分化癌，依据HE形态，倾向高级别浆液性癌&quot;,&quot;grade&quot;:&quot;Low differentiated&quot;,&quot;ihc&quot;:[{&quot;marker&quot;:&quot;PAX8&quot;,&quot;result&quot;:&quot;+&quot;},{&quot;marker&quot;:&quot;P53&quot;,&quot;result&quot;:&quot;+&quot;},{&quot;marker&quot;:&quot;WT1&quot;,&quot;result&quot;:&quot;+&quot;},{&quot;marker&quot;:&quot;CDX2-88&quot;,&quot;result&quot;:&quot;-&quot;},{&quot;marker&quot;:&quot;HER2&quot;,&quot;result&quot;:&quot;0&quot;}],&quot;involvement_sites&quot;:[&quot;right and left diaphragm&quot;,&quot;mesentery of ileocecal region&quot;,&quot;rectouterine pouch&quot;,&quot;greater omentum&quot;,&quot;hepatorenal recess&quot;,&quot;left pelvic wall&quot;,&quot;sigmoid mesocolon surface&quot;,&quot;left paracolic gutter&quot;,&quot;right paracolic gutter&quot;,&quot;appendix serosa and muscular wall&quot;,&quot;uterine serosa (anterior wall)&quot;,&quot;gastric pylorus and gastroepiploic lymph node (1/2 positive)&quot;,&quot;left liver nodule (free epithelial cells noted)&quot;],&quot;laterality&quot;:&quot;Bilateral&quot;,&quot;molecular&quot;:[{&quot;result&quot;:&quot;胚系-，体系BRCA ETV4 KMT2A NF1 TP53突变&quot;,&quot;test&quot;:&quot;Panel&quot;}],&quot;raw_text&quot;:&quot;本院病理会诊咨询意见:（双附件）双侧卵巢表面、双侧输卵管黏膜面及浆膜面均见低分化癌，灶区间质伴治疗后改变，依据HE形态，倾向高级别浆液性癌。（子宫）肌壁间平滑肌瘤；内膜呈萎缩性改变；宫颈慢性炎；子宫前壁浆膜面见癌累及。（右侧隔肌、左侧隔肌、回盲部系膜、子宫直肠窝、大网膜、肝肾隐窝、左侧盆壁、乙状结肠系膜表面、左结肠旁沟、右结肠旁沟）均见癌累及。（阑尾）慢性炎，浆膜面及肌壁见癌累及。本院病理会诊咨询意见:1、（胃幽门周围，胃网膜弓淋巴结）淋巴结（1/2）见癌转移。2、（左肝结节）肝组织，部分区肝窦扩张充血，另见少量游离的核大深染的上皮细胞。补充诊断1：补充报告:病理会诊咨询意见:1、（胃幽门周围，胃网膜弓淋巴结）淋巴结（1/2）见癌转移，结合免疫组化结果，首先考虑为高级别浆液性癌，请结合临床首先查女性生殖系统。2、（左肝结节）肝组织，部分区肝窦扩张充血，另见少量游离的核大深染的上皮细胞。免疫组化结果：肿瘤细胞 PAX8（+），P53（+），WT1（+），CDX2-88（-），HER2（0）&quot;,&quot;sample_type&quot;:&quot;Surgical specimen&quot;,&quot;site&quot;:&quot;Bilateral adnexa, fallopian tubes, uterus, peritoneal surfaces, appendix, lymph nodes, liver nodule&quot;,&quot;tumor_size&quot;:&quot;Unknown&quot;,&quot;uncertainty_or_missing&quot;:[&quot;exact pathology report date not provided&quot;,&quot;tumor sizes not specified&quot;]}]},&quot;RADIOLOGY&quot;:{&quot;next_imaging_plan&quot;:{&quot;modality&quot;:&quot;Unknown&quot;,&quot;timing&quot;:&quot;Unknown&quot;},&quot;studies&quot;:[{&quot;anatomic_sites&quot;:[&quot;abdomen&quot;],&quot;date&quot;:&quot;2025-06-28&quot;,&quot;findings&quot;:[&quot;abdominal cystic lesion, possible pseudomyxoma&quot;,&quot;slight low-density hepatic nodules&quot;,&quot;right renal mild hydronephrosis&quot;],&quot;impression&quot;:&quot;Abdominal cystic lesions possibly pseudomyxoma; hepatic low-density nodules; right mild hydronephrosis&quot;,&quot;modality&quot;:&quot;CT&quot;,&quot;trend_vs_prior&quot;:&quot;Unknown&quot;}]},&quot;TIMELINE&quot;:{&quot;constraints&quot;:{&quot;max_events&quot;:30,&quot;min_events&quot;:3,&quot;must_include&quot;:[&quot;first diagnostic imaging or pathology confirmation (if available)&quot;],&quot;ordering_rules&quot;:{&quot;prioritize_last_event&quot;:true}},&quot;events&quot;:[{&quot;date&quot;:&quot;2020-10-14&quot;,&quot;description&quot;:&quot;Radical ovarian cancer surgery + debulking + intraperitoneal hyperthermic perfusion catheter placement at outside hospital&quot;,&quot;event_type&quot;:&quot;Surgery&quot;,&quot;key_result&quot;:&quot;Postoperative pathology: 高浆&quot;,&quot;regimen_or_test&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2021-08&quot;,&quot;description&quot;:&quot;Completion of postoperative TC 6 cycles (adjuvant)&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Last adjuvant chemo 2021-08&quot;,&quot;regimen_or_test&quot;:&quot;TC&quot;},{&quot;date&quot;:&quot;2022-12&quot;,&quot;description&quot;:&quot;Last dose of maintenance 尼拉维持&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Last dose 2022-12&quot;,&quot;regimen_or_test&quot;:&quot;尼拉维持&quot;},{&quot;date&quot;:&quot;2023-04&quot;,&quot;description&quot;:&quot;Second surgery for recurrence at outside hospital&quot;,&quot;event_type&quot;:&quot;Surgery&quot;,&quot;key_result&quot;:&quot;Post-op TC 6 cycles planned&quot;,&quot;regimen_or_test&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2023-11-22&quot;,&quot;description&quot;:&quot;Completion of postoperative TC 6 cycles (second surgery adjuvant), bevacizumab added from cycle 4&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Last dose 2023-11-22&quot;,&quot;regimen_or_test&quot;:&quot;TC + 贝伐&quot;},{&quot;date&quot;:&quot;2023-11&quot;,&quot;description&quot;:&quot;CA125 elevated&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;CA125 &gt;200&quot;,&quot;regimen_or_test&quot;:&quot;CA125&quot;},{&quot;date&quot;:&quot;2023-12&quot;,&quot;description&quot;:&quot;FDG-PET at outside hospital&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;No abnormality&quot;,&quot;regimen_or_test&quot;:&quot;PET&quot;},{&quot;date&quot;:&quot;2024-01-03&quot;,&quot;description&quot;:&quot;Start 依托泊苷+艾坦 for recurrence&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Start date 2024-01-03&quot;,&quot;regimen_or_test&quot;:&quot;依托泊苷+艾坦&quot;},{&quot;date&quot;:&quot;2024-03-13&quot;,&quot;description&quot;:&quot;Last dose of 依托泊苷+艾坦&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Last dose 2024-03-13&quot;,&quot;regimen_or_test&quot;:&quot;依托泊苷+艾坦&quot;},{&quot;date&quot;:&quot;2024-03-27&quot;,&quot;description&quot;:&quot;Start 顺铂+多美素 (3 cycles then continued with bev addition)&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Start date 2024-03-27&quot;,&quot;regimen_or_test&quot;:&quot;顺铂+多美素&quot;},{&quot;date&quot;:&quot;2024-07-01&quot;,&quot;description&quot;:&quot;After 3 cycles of 顺铂+多美素, last of initial 3 cycles&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Last of first 3 cycles 2024-07-01&quot;,&quot;regimen_or_test&quot;:&quot;顺铂+多美素&quot;},{&quot;date&quot;:&quot;2024-07-26&quot;,&quot;description&quot;:&quot;CA125 measurement at outside hospital&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;CA125 5400&quot;,&quot;regimen_or_test&quot;:&quot;CA125&quot;},{&quot;date&quot;:&quot;2024-08-26&quot;,&quot;description&quot;:&quot;CA125 during bevacizumab maintenance&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;CA125 4153.29&quot;,&quot;regimen_or_test&quot;:&quot;CA125&quot;},{&quot;date&quot;:&quot;2024-08-27&quot;,&quot;description&quot;:&quot;Last administration of 4th cycle with added bevacizumab&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Last dose 2024-08-27&quot;,&quot;regimen_or_test&quot;:&quot;顺铂+多美素 + 贝伐&quot;},{&quot;date&quot;:&quot;2024-10-14&quot;,&quot;description&quot;:&quot;CA125 measured at outside hospital&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;CA125 3119.8&quot;,&quot;regimen_or_test&quot;:&quot;CA125&quot;},{&quot;date&quot;:&quot;2025-02-21&quot;,&quot;description&quot;:&quot;白蛋白紫杉醇100mg/m2 d1,8,15 + 贝伐珠单抗5mg/kg d1,15 given *3; last dose 2025-02-21; PD noted&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;PD; CA125 5768&quot;,&quot;regimen_or_test&quot;:&quot;白蛋白紫杉醇 + 贝伐珠单抗&quot;},{&quot;date&quot;:&quot;2025-03-12&quot;,&quot;description&quot;:&quot;CA125 measurement&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;CA125 3643&quot;,&quot;regimen_or_test&quot;:&quot;CA125&quot;},{&quot;date&quot;:&quot;2025-03-31&quot;,&quot;description&quot;:&quot;Screening biochemistry: creatinine 86 umol/l (weight 51kg, CrCl 53 mL/min)&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;Did not meet trial inclusion&quot;,&quot;regimen_or_test&quot;:&quot;Chemistry&quot;},{&quot;date&quot;:&quot;2025-04-07&quot;,&quot;description&quot;:&quot;Registered as screening failure for trial GH2616C102&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;Screening failed 2025-04-07&quot;,&quot;regimen_or_test&quot;:&quot;Trial screening&quot;},{&quot;date&quot;:&quot;2025-04-28&quot;,&quot;description&quot;:&quot;Tumor markers measured&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;CA125 12287, CA199 2920&quot;,&quot;regimen_or_test&quot;:&quot;CA125 / CA19-9&quot;},{&quot;date&quot;:&quot;2025-05-09&quot;,&quot;description&quot;:&quot;多西他赛+奥沙利铂 1 cycle given then chemotherapy paused for bowel obstruction&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;1 cycle given 2025-05-09&quot;,&quot;regimen_or_test&quot;:&quot;多西他赛+奥沙利铂&quot;},{&quot;date&quot;:&quot;2025-06-18&quot;,&quot;description&quot;:&quot;CA125 markedly elevated&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;CA125 21827&quot;,&quot;regimen_or_test&quot;:&quot;CA125&quot;},{&quot;date&quot;:&quot;2025-06-28&quot;,&quot;description&quot;:&quot;Outside CT: abdominal cystic lesion, possible pseudomyxoma; slight low-density hepatic nodules; right renal mild hydronephrosis&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;Findings as above&quot;,&quot;regimen_or_test&quot;:&quot;CT abdomen&quot;}]}}</pre>
+      </details>
+    </div>
+  </div>
+
+  <details class="mt" open>
+    <summary>Expert Debate (Round × Turn)</summary>
+    <table class='grid'><tr><th>Round</th><th>Turn</th><th>From</th><th>To</th><th>Message</th></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>oncologist</td><td class='mono'>chair</td><td>Systemic‑therapy decision requires contemporaneous ECOG, symptom burden, and full labs (CBC, renal, liver, nutrition); without these we cannot meaningfully weigh further chemotherapy versus best‑supportive‑care focus.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>radiologist</td><td class='mono'>oncologist</td><td>Current CT description (cystic lesions, liver nodules, hydronephrosis) lacks contrast-enhanced detail and size/trend, limiting decisions on palliative interventions (e.g., drainage, stenting, obstruction management). A dedicated contrast CT abdomen/pelvis with comparison to prior scans is needed if further procedures are being considered.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>pathologist</td><td class='mono'>chair</td><td>Key pathology variables are still undocumented (FIGO stage, original report dates, full molecular including MSI/TMB/PD‑L1); please confirm whether any outside or updated pathology/molecular reports exist that are not yet in the record.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>pathologist</td><td class='mono'>oncologist</td><td>Pathology confirms recurrent high‑grade serous tubo‑ovarian carcinoma, BRCA/HRD wildtype, HER2 0; MSI, TMB, PD‑L1 remain untested/undocumented and should be clarified only if results would realistically influence current palliative‑oriented strategy.</td></tr></table>
+    <div class="hint">Only includes messages that were actually emitted (non-empty).</div>
+  </details>
+
+  <details class="mt">
+    <summary>Initial Expert Opinions (raw)</summary>
+    <pre>{
+  &quot;chair&quot;: &quot;- Today’s intent: disease is platinum‑resistant, heavily pretreated; shift focus toward symptom‑driven, QoL‑prioritized palliative strategy.  \n- Before new systemic therapy: update ECOG, organ function (full labs, CrCl, liver tests), pain/ascites status, bowel obstruction details.  \n- Clarify current symptoms from abdominal cysts, hydronephrosis, possible obstruction to prioritize surgery/intervention, stenting, drainage versus systemic therapy.  \n- Reassess clinical‑trial eligibility (non‑platinum, non‑PARPi options) given HRD‑negative, BRCA‑wildtype, prior PARPi/anti‑VEGF exposure.  \n- Early palliative care involvement for analgesia, bowel management, nutrition, and to align treatment intensity with patient/family goals.&quot;,
+  &quot;oncologist&quot;: &quot;- Heavily pretreated recurrent high-grade serous ovarian carcinoma with progression on multiple platinum and non-platinum regimens; current line ≥5L.  \n\n- Recent sharp CA125 rise (21827, 2025-06-18) indicating biochemical progression after short-lived response to latest chemotherapy.  \n\n- Prior PARP inhibitor maintenance and prior anti-VEGF exposure limit expected benefit of reusing these targeted strategies.  \n\n- HRD and germline/somatic BRCA wildtype reduce rationale for further PARP inhibitor–based approaches.  \n\n- Missing: current ECOG/performance, detailed organ function (CBC, renal, hepatic), symptom burden/imaging to distinguish systemic therapy vs best supportive focus.&quot;,
+  &quot;radiologist&quot;: &quot;- Large abdominal cystic lesions concerning for pseudomyxoma peritonei; size, exact distribution, and organ involvement need dedicated contrast CT report update. [@IMAGING_STUDIES|2025-06-28]\n\n- Multiple low-density hepatic nodules could represent metastases; require characterization with contrast-enhanced liver protocol CT or MRI. [@IMAGING_STUDIES|2025-06-28]\n\n- Mild right hydronephrosis suggests partial urinary tract obstruction; upstream ureteral level and cause need dedicated abdominopelvic imaging description. [@IMAGING_STUDIES|2025-06-28]\n\n- Disease trend versus prior imaging is unknown; require prior CT/MRI for comparison to assess progression or stability. [unknown/needs update]\n\n- PET/CT showed no abnormal FDG-avid disease in 2023; interval metabolic status since then is unknown. [@PET_IF_AVAILABLE|2023-12]&quot;,
+  &quot;pathologist&quot;: &quot;- Histology and IHC support high-grade serous carcinoma of tubo-ovarian origin involving widespread peritoneal surfaces and nodes [@CASE_VIEW|Unknown].  \n\n- Pathology shows low differentiation; formal FIGO stage not provided but distribution suggests advanced stage disease [@CASE_VIEW|Unknown].  \n\n- Somatic panel: HRD negative, BRCA1/2 wildtype; other mutations reported (ETV4, KMT2A, NF1, TP53) [@CASE_VIEW|Unknown].  \n\n- Biomarkers: PAX8+, WT1+, aberrant p53+, HER2 0; MSI, TMB, PD-L1 not reported [@CASE_VIEW|Unknown].  \n\n- Needed updates: exact pathology report dates, tumor sizes, FIGO stage assignment, full molecular report details (including MSI/TMB/PD-L1).&quot;,
+  &quot;nuclear&quot;: &quot;- Prior FDG-PET/CT showed no hypermetabolic disease; no PET-visible metastases or recurrence at that time [@PET_CT|2023-12].  \n- Current CT describes abdominal cystic lesions and hepatic nodules, but their FDG avidity is unknown/needs update [@IMAGING_CONTEXT|2025-06-28].  \n- Right mild hydronephrosis is noted structurally; metabolic correlate on PET is unknown/needs update [@IMAGING_CONTEXT|2025-06-28].  \n- A repeat FDG-PET/CT could clarify metabolic activity of abdominal/hepatic lesions and up-/down-stage disease versus 2023 baseline.  \n- PET would meaningfully change suspicion of recurrence if new focal uptake appears in cystic, hepatic, or urinary-tract–adjacent regions.&quot;
+}</pre>
+  </details>
+
+  <details class="mt">
+    <summary>Final Refined Plans (per round, raw)</summary>
+    <pre>{
+  &quot;Round 1&quot;: {
+    &quot;chair&quot;: &quot;- Confirm current symptoms, ECOG, renal/hepatic function, bowel obstruction status; many parameters unknown and critical for further therapy choices.  \n\n- Given multi-line platinum-resistant course and rising CA125 21827 [@CASE_CORE|2025-06-18], prioritize goals-of-care and quality-of-life discussion.  \n\n- Obtain updated cross-sectional imaging and review possible pseudomyxoma, hepatic nodules, hydronephrosis [@RADIOLOGY|2025-06-28] to define disease burden and complications.  \n\n- Systemic anti-cancer options should be considered only after MDT review of organ function, prior toxicities, and patient preferences; regimen unspecified.  \n\n- Ensure early palliative-care involvement for pain, ascites, bowel/urinary issues; adjust plan dynamically as new labs and imaging return.&quot;,
+    &quot;oncologist&quot;: &quot;- Prioritize goals‑of‑care discussion, documenting ECOG, detailed symptoms, and patient preferences to guide further systemic versus supportive care (currently unknown).  \n\n- Obtain updated labs (CBC, renal incl. CrCl, liver, electrolytes, nutrition) to assess fitness and safety for any further systemic therapy (currently unknown).  \n\n- Arrange contrast‑enhanced CT abdomen/pelvis and compare to prior imaging to characterize cystic disease, liver nodules, and hydronephrosis (details unknown).  \n\n- Convene MDT with surgery, interventional radiology, urology, and palliative care to plan symptom‑targeted procedures (drainage, obstruction relief, urinary decompression).  \n\n- Reassess non‑platinum, non‑PARPi systemic or clinical trial options only if performance status, labs, and patient goals support further treatment.&quot;,
+    &quot;radiologist&quot;: &quot;- Large abdominal cystic lesions (possible pseudomyxoma) need contrast CT abdomen/pelvis with mapping for potential drainage or debulking planning. [@IMAGING_STUDIES|2025-06-28]\n\n- Low‑density hepatic nodules require contrast-enhanced liver imaging (CT/MRI) to confirm metastases versus benign lesions, if findings would alter palliation. [@IMAGING_STUDIES|2025-06-28]\n\n- Mild right hydronephrosis warrants definition of ureteric obstruction level and cause on contrast CT to guide stent/nephrostomy consideration. [@IMAGING_STUDIES|2025-06-28]\n\n- Disease trend is unknown; comparison with prior CT/MRI is needed only if it would influence symptom‑directed interventions. [unknown/needs update]\n\n- Repeat PET/CT is not routinely indicated; reserve for situations where additional metabolic information would clearly change local vs systemic strategy. [@PET_IF_AVAILABLE|2023-12]&quot;,
+    &quot;pathologist&quot;: &quot;- Confirm no additional pathology/molecular reports (FIGO stage, MSI, TMB, PD‑L1, full panel dates) from outside institutions; currently unknown.  \n\n- Maintain diagnosis: recurrent high‑grade serous tubo‑ovarian carcinoma, low differentiated, BRCA/HRD wildtype, HER2 0 [@CASE_VIEW|Unknown].  \n\n- Document somatic mutations (ETV4, KMT2A, NF1, TP53) and HRD–/BRCA WT status clearly in the MDT record [@CASE_VIEW|Unknown].  \n\n- Reserve new biomarker testing (MSI/TMB/PD‑L1) for situations where results could realistically change palliative‑oriented management; presently unknown.  \n\n- No histologic evidence of alternative primary (e.g., gastrointestinal); PAX8+/WT1+/p53+ profile supports Müllerian origin [@CASE_VIEW|Unknown].&quot;,
+    &quot;nuclear&quot;: &quot;- Prior FDG-PET/CT showed no hypermetabolic disease; no PET-detectable metastases or recurrence at that time [@PET_CT|2023-12].  \n- Current abdominal cystic lesions, hepatic nodules, and hydronephrosis lack PET correlation; metabolic activity remains unknown/needs update [@IMAGING_CONTEXT|2025-06-28].  \n- In this palliative context, repeat PET/CT is only justified if results would clearly change local versus systemic management decisions.  \n- PET would meaningfully upstage suspicion of recurrence if new focal FDG uptake appears in cystic, hepatic, or retroperitoneal regions.  \n- If future interventions are planned, consider PET/CT to distinguish metabolically active tumor from non-neoplastic cystic or treatment-related changes.&quot;
+  }
+}</pre>
+  </details>
+
+  <details class="mt">
+    <summary>Selected Clinical Context (JSON)</summary>
+    <pre>{
+  &quot;lab&quot;: {
+    &quot;chair&quot;: [],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  },
+  &quot;imaging&quot;: {
+    &quot;chair&quot;: [],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  },
+  &quot;pathology&quot;: {
+    &quot;chair&quot;: [],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  },
+  &quot;mutation&quot;: {
+    &quot;chair&quot;: [],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  }
+}</pre>
+  </details>
+
+  <details class="mt">
+    <summary>Global Guideline RAG</summary>
+    <h3>RAG Query</h3>
+    <pre>Recurrent platinum-resistant high-grade serous tubo-ovarian carcinoma with peritoneal, hepatic, appendiceal, colonic gutter and nodal involvement; PAX8+/WT1+/p53+, HER2 0, BRCA/HRD unknown; rising CA125, prior multiple lines including bevacizumab, PARPi; creatinine clearance ~53 mL/min.</pre>
+    <h3>Evidence Pack (top-k)</h3>
+    <pre>RAG Evidence Pack (top=5):
+[1] score=0.6844 esmo_cpg_epithelialovarian_2023__v00000000 [PAGE 10]
+    with ﬁrst line. This can probably be explained by an accu- mulative exposure to platinum.85 Several factors need to be taken into consideration for the selection of PARPis or anti-VEGF therapies in relapse including histotype, BRCA1/2-mut status, prior therapies (PARPi and/or bevacizumab), expected …
+[2] score=0.6613 nccn_ovariancancer_v3_2025__v00000000 [PAGE 15]
+    based chemotherapy,n preferred for first recurrence (category 1) or Recurrence therapyn,kk and/or Best supportive care (See NCCN Guidelines for Palliative Care) Consider secondary cytoreductive surgeryj,k Immediate platinum-based recurrence therapyn (category 2B) and/or Best supportive care (See NCC…
+[3] score=0.6538 esgo_esmo_esp_consensus_ovariancancer_2024__v00000000 [PAGE 10]
+    platinum-based ChT followed by niraparib or rucaparib if in CR/PR/NED [I, B]. Consensus: 97% (35) yes, 0% (0) no, 3% (1) abstain (36 voters) Recommendation 13.9: When used as maintenance in patients in CR/PR/NED to platinum-based ChT, olaparib (alone or in combination with bevacizumab) and rucaparib…
+[4] score=0.6479 esgo_ovariancancer_pocketguidelines_2025__v00000000 [PAGE 9]
+    9 13. 	Which patients should receive bevacizumab, maintenance therapy  with PARPis or the combination of PARPis with bevacizumab  and for how long?.......................................................................................  17 14. 	How should older/frail patients with tubo-ovarian carcin…
+[5] score=0.6430 esmo_cpg_epithelialovarian_2023__v00000000 [PAGE 10]
+    In phase III trials, bevacizumab was administered until progression or unacceptable toxicity occurred. Treatment should be maintained until clinical or radiological progres- sion and should not be discontinued based solely on rising CA-125. Further information is provided in the Supplementary Materi…</pre>
+    <h3>RAG Raw Hits (JSON)</h3>
+    <pre>[
+  {
+    &quot;rank&quot;: 1,
+    &quot;score&quot;: 0.6843851208686829,
+    &quot;doc_id&quot;: &quot;esmo_cpg_epithelialovarian_2023__v00000000&quot;,
+    &quot;page&quot;: 10,
+    &quot;text&quot;: &quot;with ﬁrst line. This can probably be explained by an accu-\nmulative exposure to platinum.85\nSeveral factors need to be taken into consideration for\nthe selection of PARPis or anti-VEGF therapies in relapse\nincluding histotype, BRCA1/2-mut status, prior therapies\n(PARPi and/or bevacizumab), expected response to plat-\ninum ChT, presence of symptoms (speciﬁcally ascites),\npersistent toxicities from prior therapies, no contraindica-\ntion to bevacizumab and patient preference. Generally, for\nsymptomatic patients requiring a rapid treatment response,\nthe combination of carboplatin with bevacizumab would be\nrecommended (Figure 3).\nFurther information is provided in the Supplementary\nMaterial Section 4, available at https://doi.org/10.1016/j.\nannonc.2023.07.011.\nSystemic therapy when platinum is not an option\nFor some patients with recurrent ovarian cancer, platinum\nrechallenge may not be considered clinically appropriate.\nFor these patients, alternative systemic treatments are\navailable. Patients with good performance status should be\nprioritised for novel therapies within clinical trials. Inte-\ngrating early palliative care is particularly crucial.&quot;
+  },
+  {
+    &quot;rank&quot;: 2,
+    &quot;score&quot;: 0.6613308787345886,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 15,
+    &quot;text&quot;: &quot;based chemotherapy,n\npreferred for first\nrecurrence (category 1)\nor\nRecurrence therapyn,kk\nand/or\nBest supportive care\n(See NCCN Guidelines\nfor Palliative Care)\nConsider\nsecondary\ncytoreductive\nsurgeryj,k\nImmediate platinum-based\nrecurrence therapyn (category 2B)\nand/or\nBest supportive care (See NCCN\nGuidelines for Palliative Care)\nRECURRENCE THERAPY FOR PLATINUM-SENSITIVE DISEASEn,gg,hh,ii\nMaintenance therapy (if PR or CR)\n• Useful in certain circumstances:\n\u0017Continue bevacizumab if previously\ntreated with chemotherapy +\nbevacizumab;\nor\n\u0017PARPi therapy (for those with BRCA\n1/2 mutation)ll:\n ◊If not previously used (category 1)\n ◊If disease has not progressed\nduring prior PARPi treatment\nor\nObserve\ngg Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.\nhh During and after treatment for recurrence, patients should be evaluated as indicated with\ntumor markers and repeat imaging (with modalities previously used) to document response\nand/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\nkk Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.&quot;
+  },
+  {
+    &quot;rank&quot;: 3,
+    &quot;score&quot;: 0.6537737846374512,
+    &quot;doc_id&quot;: &quot;esgo_esmo_esp_consensus_ovariancancer_2024__v00000000&quot;,
+    &quot;page&quot;: 10,
+    &quot;text&quot;: &quot;platinum-based ChT followed by niraparib or rucaparib if\nin CR/PR/NED [I, B].\nConsensus: 97% (35) yes, 0% (0) no, 3% (1) abstain (36\nvoters)\nRecommendation 13.9: When used as maintenance in\npatients in CR/PR/NED to platinum-based ChT, olaparib\n(alone or in combination with bevacizumab) and rucaparib\nare recommended for 2 years, and niraparib is recom-\nmended for 3 years [I, A].\nConsensus: 97% (34) yes, 0% (0) no, 3% (1) abstain (35\nvoters)\n14. How should older/frail patients with tubo-ovarian\ncarcinoma be investigated and treated?\nOlder patients are under-represented in clinical trials due\nto their poor performance status (PS) and comorbidities,88\nand their outcomes are poorer.89 Geriatric assessment\ngathers information on functional, mental and nutritional\nstatus, emotional conditions and social support.90 Vulner-\nability scores have been validated in clinical trials.90,91\nSurgery, frequently carried out in an emergency context\nand in unspecialised centres, is often incomplete, with\nhigher\npost-operative\ncomplications.92\nChT\nmay\nbe\nunderutilised.93,94\nRecommendation 14.1: Patients should not be excluded\nfrom diagnostic procedures, clinical trials and speciﬁc&quot;
+  },
+  {
+    &quot;rank&quot;: 4,
+    &quot;score&quot;: 0.6478854417800903,
+    &quot;doc_id&quot;: &quot;esgo_ovariancancer_pocketguidelines_2025__v00000000&quot;,
+    &quot;page&quot;: 9,
+    &quot;text&quot;: &quot;9\n13. \tWhich patients should receive bevacizumab, maintenance therapy\n\nwith PARPis or the combination of PARPis with bevacizumab\n\nand for how long?.......................................................................................  17\n14. \tHow should older/frail patients with tubo-ovarian carcinoma\n\nbe investigated and treated?......................................................................... 18\nRecurrent disease ................................................................................................ 19\n15. \tWhat is the role of surgery in recurrent tubo-ovarian carcinoma?.................. 19\n16. \tWhat is the role of molecularly targeted therapy in recurrent disease?.......... 20\n17. \tWhat is the role of non-platinum drugs and supportive care options?........... 21\n18. \tWhat is recommended regarding evaluation of QoL/survivorship issues\n\nand follow-up after treatment?....................................................................  21&quot;
+  },
+  {
+    &quot;rank&quot;: 5,
+    &quot;score&quot;: 0.6429737210273743,
+    &quot;doc_id&quot;: &quot;esmo_cpg_epithelialovarian_2023__v00000000&quot;,
+    &quot;page&quot;: 10,
+    &quot;text&quot;: &quot;In phase III trials, bevacizumab was administered until\nprogression or unacceptable toxicity occurred. Treatment\nshould be maintained until clinical or radiological progres-\nsion and should not be discontinued based solely on rising\nCA-125.\nFurther information is provided in the Supplementary\nMaterial Section 4, available at https://doi.org/10.1016/j.\nannonc.2023.07.011.\nPARPis. Three PARPis (olaparib, niraparib and rucaparib) are\napproved for maintenance therapy of patients with high-\ngrade tubo-ovarian carcinoma that achieve a response to\nplatinum rechallenge, irrespective of BRCA1/2-mut or HRD\nstatus. Details of the outcome from four randomised trials\n(Study 19, SOLO2, NOVA and ARIEL3) are given in the\nSupplementary Material Section 4, available at https://doi.\norg/10.1016/j.annonc.2023.07.011.\nThe recommended length of PARPi treatment remains un-\nclear. In NOVA and ARIEL3 treatment was stopped at pro-\ngression, but in Study 19 and SOLO2 patients were allowed to\ncontinue olaparib beyond progression, if it was considered\nbeneﬁcial. From a clinical perspective, treatment beyond dis-\nease progression may have particular value in slow-growing&quot;
+  }
+]</pre>
+    <h3>Digest (<=8 bullets)</h3>
+    <pre>- In relapsed disease, selection between PARP inhibitors and anti-VEGF (bevacizumab) should consider histologic subtype, BRCA1/2 mutation status, prior PARPi and/or bevacizumab exposure, and cumulative platinum exposure, as these factors influence benefit and toxicity profiles [esmo_cpg_epithelialovarian_2023__v00000000].  
+
+- Increasing cumulative exposure to platinum is associated with changing patterns of response and toxicity over the disease course; this should be factored into decisions about further platinum-based regimens and maintenance choices at relapse [esmo_cpg_epithelialovarian_2023__v00000000].  
+
+- For first recurrence, NCCN recommends platinum-based chemotherapy as the preferred regimen (category 1) when appropriate, with consideration of secondary cytoreductive surgery and best supportive care options based on patient fitness and disease distribution [nccn_ovariancancer_v3_2025__v00000000].  
+
+- At recurrence, immediate platinum-based therapy can be considered (category 2B) as an alternative strategy, or best supportive care, depending on symptoms, prior treatments, and patient goals of care [nccn_ovariancancer_v3_2025__v00000000].  
+
+- After response (CR/PR/NED) to platinum-based chemotherapy in relapse, maintenance with PARP inhibitors (niraparib or rucaparib) is recommended; olaparib alone or with bevacizumab and rucaparib are also endorsed as maintenance options in appropriate patients [esgo_esmo_esp_consensus_ovariancancer_2024__v00000000].  
+
+- Bevacizumab used with chemotherapy and as maintenance in phase III trials was continued until disease progression or unacceptable toxicity; it should not be stopped solely for rising CA-125 in the absence of clinical or radiologic progression [esmo_cpg_epithelialovarian_2023__v00000000].  
+
+- Maintenance choice (PARP inhibitor alone, bevacizumab alone, or combination) should be individualized based on molecular profile (e.g., BRCA/HRD), previous exposure to PARP or bevacizumab, and tolerance, as reflected in consensus guideline sections on who should receive bevacizumab or PARPi and for how long [esgo_ovariancancer_pocketguidelines_2025__v00000000].</pre>
+  </details>
+
+  <details class='mt' open><summary>Pipeline Flow (Mermaid)</summary><pre class='mermaid'>flowchart TD
+  A[Load Case + Fingerprint] --&gt; B[Load Reports]
+  B --&gt; C[Report Selection per Role]
+  C --&gt; D[Global Guideline RAG]
+  D --&gt; E[Init Specialist Agents]
+  E --&gt; F[MDT Discussion Engine]
+  F --&gt; G[Trial Matching]
+  G --&gt; H[Final Chair Output]
+  H --&gt; I[Save Logs]
+</pre></details>
+
+  <details class="mt">
+    <summary>Trace Events (JSON)</summary>
+    <pre>[
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:13:34.451587&quot;,
+    &quot;event&quot;: &quot;pipeline_start&quot;,
+    &quot;payload&quot;: {
+      &quot;visit_time&quot;: &quot;2023-07-01 15:38:50.183000&quot;,
+      &quot;meta_info&quot;: &quot;410782197010112761&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:13:34.451898&quot;,
+    &quot;event&quot;: &quot;case_fingerprint&quot;,
+    &quot;payload&quot;: {
+      &quot;case_fingerprint&quot;: &quot;47b3c84d566f&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:13:34.751784&quot;,
+    &quot;event&quot;: &quot;reports_loaded&quot;,
+    &quot;payload&quot;: {
+      &quot;lab_n&quot;: 0,
+      &quot;img_n&quot;: 0,
+      &quot;path_n&quot;: 0,
+      &quot;mut_n&quot;: 0,
+      &quot;cutoff_dt&quot;: &quot;2023-07-02 15:38:50&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:13:34.812301&quot;,
+    &quot;event&quot;: &quot;reports_selected&quot;,
+    &quot;payload&quot;: {
+      &quot;lab&quot;: {
+        &quot;chair&quot;: [],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      },
+      &quot;imaging&quot;: {
+        &quot;chair&quot;: [],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      },
+      &quot;pathology&quot;: {
+        &quot;chair&quot;: [],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      },
+      &quot;mutation&quot;: {
+        &quot;chair&quot;: [],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      }
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:14:09.660641&quot;,
+    &quot;event&quot;: &quot;rag_query&quot;,
+    &quot;payload&quot;: {
+      &quot;query&quot;: &quot;Recurrent platinum-resistant high-grade serous tubo-ovarian carcinoma with peritoneal, hepatic, appendiceal, colonic gutter and nodal involvement; PAX8+/WT1+/p53+, HER2 0, BRCA/HRD unknown; rising CA125, prior multiple lines including bevacizumab, PARPi; creatinine clearance ~53 mL/min.&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:14:09.660649&quot;,
+    &quot;event&quot;: &quot;rag_hits&quot;,
+    &quot;payload&quot;: {
+      &quot;topk&quot;: 5,
+      &quot;n&quot;: 5
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:14:17.123283&quot;,
+    &quot;event&quot;: &quot;mdt_discussion_start&quot;,
+    &quot;payload&quot;: {
+      &quot;num_rounds&quot;: 2,
+      &quot;num_turns&quot;: 2
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:15:53.071822&quot;,
+    &quot;event&quot;: &quot;mdt_discussion_end&quot;,
+    &quot;payload&quot;: {
+      &quot;merged_chars&quot;: 3451
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:15:53.072540&quot;,
+    &quot;event&quot;: &quot;final_output_start&quot;,
+    &quot;payload&quot;: {}
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T00:15:56.057084&quot;,
+    &quot;event&quot;: &quot;final_output_end&quot;,
+    &quot;payload&quot;: {
+      &quot;final_output_chars&quot;: 849
+    }
+  }
+]</pre>
+  </details>
+
+</body>
+</html>
