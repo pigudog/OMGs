@@ -16,7 +16,7 @@ It is also a clear public API list for this package.
 """
 
 # Re-export public helpers for convenient imports
-from .omgs_reports import *
+from .reports_utils import *
 from .console_utils import *
 from .time_utils import *
 from .trace_utils import *

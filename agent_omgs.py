@@ -11,7 +11,7 @@ from typing import Any, Dict, List, Optional
 from chromadb import PersistentClient
 from langchain_huggingface import HuggingFaceEmbeddings
 from utils.console_utils import Color, normalize_trial_compact,safe_parse_json_block,question_to_text,generate_final_output,assistant_trial_suggestion
-from utils.omgs_reports import save_mdt_log,save_case_html_report
+from utils.reports_utils import save_mdt_log,save_case_html_report
 from utils import make_cutoff,parse_dt,safe_date10,filter_before,report_range
 from utils import build_lab_timeline,build_imaging_timeline,build_pathology_timeline
 from utils import VisualConfig, TraceLogger,print_selected_reports_table,print_section,print_rag_hits_table
