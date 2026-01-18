@@ -5,6 +5,13 @@
 
 **OMGs** (Oncology Multi-Expert Guidance System) 是一个基于多智能体协作的医疗决策支持系统，专门用于肿瘤科MDT（多学科团队）讨论场景。系统通过模拟多个医疗专家的角色（主席、肿瘤内科、影像科、病理科、核医学科），进行多轮讨论并生成综合性的临床决策建议。
 
+## 🏥 临床意义
+
+- **协作式决策支持**：将多学科意见结构化汇总，降低信息割裂导致的决策偏差
+- **证据与病例并行**：将患者事实与指南证据并列呈现，强调“事实在前、证据在后”
+- **可追溯与可复核**：全链路讨论日志、选择依据与结果输出便于复盘与质控
+- **强化安全边界**：以角色权限和报告证据约束输出，降低幻觉与越权风险
+
 ## ✨ 主要特性
 
 - **🤖 多专家智能体系统**：模拟5个医疗专家角色（Chair、Oncologist、Radiologist、Pathologist、Nuclear Medicine）
@@ -120,6 +127,9 @@ python main.py [OPTIONS]
 - `--model`: Azure部署模型名称（默认: `gpt-5.1`）
 - `--agent`: 使用的agent类型（默认: `omgs`，当前仅支持omgs）
 - `--num_samples`: 处理的样本数量（默认: 999999，即处理所有样本）
+
+**Token 参数说明：**
+- OpenAI Chat Completions 已弃用 `max_tokens`，推荐使用 `max_completion_tokens` 作为生成上限。
 
 ### 输入数据格式
 

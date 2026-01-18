@@ -38,6 +38,10 @@ class OpenAIWrapper:
         print(f"Calling model: {model}")
         start = time.time()
 
+        # Map deprecated max_tokens to max_completion_tokens for compatibility.
+        if "max_tokens" in kwargs and "max_completion_tokens" not in kwargs:
+            kwargs["max_completion_tokens"] = kwargs.pop("max_tokens")
+
         # Save raw request for logging
         raw_request = {
             "model": model,

@@ -569,7 +569,7 @@ def process_omgs_multi_expert_query(
                 role="trial_selector",
                 model_info=model,
                 client=client,
-                max_tokens=100000,
+                max_tokens=10000,
                 max_prompt_tokens=4500,
                 enable_local_log=True,
             )
