@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MDT Report</title>
+  <style>
+    :root {
+      --border: #e5e7eb;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --card: #ffffff;
+      --soft: #f7f7f8;
+      --accent: #2563eb;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; background: var(--bg); }
+    h1 { font-size: 20px; margin: 0 0 12px 0; }
+    h2 { font-size: 16px; margin: 0 0 10px 0; }
+    h3 { font-size: 14px; margin: 10px 0 6px 0; }
+    .meta { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .card { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: var(--card); }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; background: var(--card); }
+    summary { cursor: pointer; font-weight: 600; }
+    pre { white-space: pre-wrap; word-wrap: break-word; background: var(--soft); padding: 12px; border-radius: 10px; overflow-x: auto; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .mt { margin-top: 12px; }
+    .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+    .warn { color: #b45309; font-weight: 600; }
+    table.grid { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.grid th, table.grid td { border: 1px solid var(--border); padding: 8px; vertical-align: top; }
+    table.grid th { background: #f3f4f6; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>OMGs / MDT Report</h1>
+  <div class="meta">
+    <div><b>Timestamp</b>: 2026-01-17_23-04-34</div>
+  </div>
+
+  <div class="cols mt">
+    <div class="card">
+      <h2>Final MDT Output</h2>
+      <pre>Final Assessment:
+Metastatic Krukenberg-type mucinous/signet carcinoma with brain and extensive peritoneal/ureteral involvement is in a palliative, systemically untreated state, with primary site, fitness for further therapy, and current renal function still uncertain [@HISTOLOGY_AND_IHC|2024-12-20; @IMAGING_TRENDS|2025-02-10; @IMAGING_STUDIES|2025-01-20].
+
+Core Treatment Strategy:
+- Conduct structured goals-of-care visit documenting ECOG, symptom burden, and preferences for further active versus comfort-focused care (currently unknown).  
+- Obtain updated labs including creatinine/eGFR and urine output assessment, with nephrology/urology review to define ongoing obstruction and treatment feasibility (unknown).  
+- Arrange contrast-enhanced CT/MRI abdomen–pelvis and repeat brain MRI to reassess peritoneal, nodal, ureteral, and CNS disease before systemic decisions [@IMAGING_TRENDS|2025-02-10; @IMAGING_STUDIES|2025-01-20].  
+- Confirm paraffin block availability and perform extended IHC only if primary-site clarification would realistically modify systemic regimen category (availability/status unknown).  
+
+Change Triggers:
+- If ECOG ≤2, renal function acceptable, and patient desires treatment, shift from evaluation-only to offering palliative systemic and CNS-directed therapy.  
+- If ECOG ≥3, progressive renal failure, or patient prefers comfort-focused care, pivot from active oncologic interventions to best supportive and hospice care.</pre>
+    </div>
+    <div class="card">
+      <h2>Question (raw)</h2>
+      <div class="hint">Original user question for observability (passed from main via args.question_raw).</div>
+      <pre>卵巢krukenberg瘤，粘液腺癌术后：少尿 TMB-L,MSS，FBXW7 R505C；KNB-,BRCA-,ERBB2-,NTRK -，FGFR2-；卵巢恶性肿瘤：原发部位不明恶性肿瘤：代诊。外院基因检测：TMB-L,MSS，FBXW7 R505C；KNB-,BRCA-,ERBB2-,NTRK -，FGFR2-卵巢肿瘤：24.12.20LAP转开腹(子宫双附件+大网膜+腹主动脉旁淋巴结切除+膈肌+左侧输尿管及周围肿物切除+左侧输尿管支架置入+输尿管膀胱再植）术后病理：左附件krukenberg瘤，粘液腺癌，部分为高-中分化，相当一部分为低分化伴印戒细胞癌分化。子宫肌壁全层见癌组织浸润，输尿管见癌组织浸润，膈肌转移结节阳性，送检淋巴结见癌转移。建议排查消化系统，除外转移性 。IHC:ER/PR-，术后PETCT：见腹腔、盆腔多发转移。行胃肠镜：未见异常。2025年1月20日头部核磁发现头部脑沟有一处转移。2025-1-28发现腹部鼓胀，左下肢浮肿，检查无双下肢深静脉血栓，胸腹部超声示胸腔及腹腔少量积液，胸腹部增强CT：腹膜增厚，腹盆腔积液；腹膜后、两侧髂血管旁、盆腔、左侧腹股沟区多发肿大淋巴结；左侧输尿管周围软组织影增多，增大淋巴结；膀胱壁厚薄不均；直肠上段由于泌尿系感染，血培养阳性未开展化疗，昨日血培养阴性，停用抗生素。目前大便不畅，需甘油灌肠辅助排便排气，大便发黑无气味，左下肢浮肿。2025-02-10下腹部CT：1.腹膜增厚，网膜系膜浑浊伴小结节，腹膜后、双侧髂血管旁、盆腔及左侧腹股沟区多发肿大淋巴结，腹盆腔多积液；2.双侧输尿管增厚，盆腔部分肠壁增厚。患者于2025-02-10出现头晕伴血压升高，血肌酐258.9，2025-02-12九院行输尿管镜检查+内置双侧支架管术，术后肌酐降至170 umol/L。2025-02-14为进一步治疗收入上海嘉进医院后再次出现少尿，尿量100ml，对症处理后出院。2025-02-15转第九人民医院肾内科入院治疗，行左肾造瘘术，现情况稳定。20250217外院基因检测：TMB-L,MSS，FBXW7 R505C；KNB-,BRCA-,ERBB2-,NTRK -，FGFR2-本院病理会诊未出诉CRP PCT升高 不能控制排便，尿少，无发热，白蛋白低，呕吐肌酐下降至110，咨询化疗</pre>
+
+      <details class="mt">
+        <summary>Case (Structured JSON)</summary>
+        <pre>{&quot;CASE_CORE&quot;:{&quot;ADJUVANT_TREATMENT&quot;:{&quot;cycles_or_courses&quot;:&quot;Unknown&quot;,&quot;given&quot;:&quot;Unknown&quot;,&quot;regimens&quot;:[]},&quot;BIOMARKERS&quot;:{&quot;AFP&quot;:&quot;Unknown&quot;,&quot;CA125&quot;:&quot;Unknown&quot;,&quot;HER2&quot;:&quot;ERBB2-&quot;,&quot;MSI&quot;:&quot;MSS&quot;,&quot;PDL1_CPS&quot;:&quot;Unknown&quot;,&quot;TMB&quot;:&quot;TMB-L&quot;},&quot;BRCA1&quot;:&quot;Wildtype&quot;,&quot;BRCA2&quot;:&quot;Wildtype&quot;,&quot;CURRENT_STATUS&quot;:&quot;Condition stable&quot;,&quot;DIAGNOSIS&quot;:{&quot;components&quot;:[&quot;Krukenberg tumor&quot;,&quot;粘液腺癌&quot;,&quot;印戒细胞癌分化&quot;],&quot;histology&quot;:&quot;粘液腺癌，部分为高-中分化，相当一部分为低分化伴印戒细胞癌分化&quot;,&quot;laterality&quot;:&quot;Left&quot;,&quot;primary&quot;:&quot;Ovarian Krukenberg tumor&quot;,&quot;site&quot;:&quot;Ovary&quot;},&quot;HRD&quot;:&quot;Negative&quot;,&quot;INITIAL_TREATMENT&quot;:&quot;Yes&quot;,&quot;LINE_OF_THERAPY&quot;:[],&quot;MAINTENANCE&quot;:&quot;Unknown&quot;,&quot;MAINTENANCE_DETAIL&quot;:{&quot;end_date&quot;:&quot;Unknown&quot;,&quot;given&quot;:&quot;Unknown&quot;,&quot;regimens&quot;:[],&quot;start_date&quot;:&quot;Unknown&quot;},&quot;NEOADJUVANT&quot;:&quot;Unknown&quot;,&quot;PFI_days&quot;:&quot;Unknown&quot;,&quot;PLATINUM_HISTORY&quot;:[],&quot;PLATINUM_PFI_CURRENT&quot;:&quot;Unknown&quot;,&quot;PLATINUM_STATUS&quot;:&quot;Unknown&quot;,&quot;PLATINUM_STATUS_CURRENT&quot;:&quot;Unknown&quot;,&quot;RELAPSE&quot;:&quot;Yes&quot;,&quot;RELAPSE_DATE&quot;:{&quot;date&quot;:&quot;2025-01-20&quot;,&quot;evidence&quot;:&quot;Head MRI showing a metastasis in a cerebral sulcus&quot;,&quot;type&quot;:&quot;Radiologic&quot;},&quot;STAGE&quot;:{&quot;stage_basis&quot;:&quot;Unknown&quot;,&quot;stage_system&quot;:&quot;Unknown&quot;,&quot;stage_text&quot;:&quot;Unknown&quot;},&quot;SURGERY_DONE&quot;:{&quot;date&quot;:&quot;2024-12-20&quot;,&quot;performed&quot;:&quot;Yes&quot;,&quot;procedure&quot;:&quot;Laparoscopy converted to laparotomy: uterus with bilateral adnexa resection, omentectomy, para-aortic LN dissection, diaphragm lesion resection, left ureter and peri-tumor resection, left ureteral stent, ureteroneocystostomy&quot;},&quot;VISIT_DATE&quot;:&quot;2025-04-03&quot;,&quot;first_relapse_date&quot;:&quot;2025-01-20&quot;,&quot;last_platinum_end_date&quot;:&quot;Unknown&quot;},&quot;LAB_TRENDS&quot;:{&quot;labs&quot;:[{&quot;analyte&quot;:&quot;Cr&quot;,&quot;history&quot;:[{&quot;date&quot;:&quot;2025-02-10&quot;,&quot;flag&quot;:&quot;↑&quot;,&quot;value&quot;:&quot;258.9&quot;},{&quot;date&quot;:&quot;2025-02-12&quot;,&quot;flag&quot;:&quot;↓&quot;,&quot;value&quot;:&quot;170&quot;},{&quot;date&quot;:&quot;Unknown&quot;,&quot;flag&quot;:&quot;↓&quot;,&quot;value&quot;:&quot;110&quot;}],&quot;latest&quot;:{&quot;date&quot;:&quot;Unknown&quot;,&quot;flag&quot;:&quot;↓&quot;,&quot;value&quot;:&quot;110&quot;},&quot;reference_range&quot;:&quot;Unknown&quot;,&quot;unit&quot;:&quot;umol/L&quot;}],&quot;milestones&quot;:[{&quot;date&quot;:&quot;2024-12-20&quot;,&quot;description&quot;:&quot;Primary cytoreductive surgery with multiple resections&quot;,&quot;type&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2025-02-12&quot;,&quot;description&quot;:&quot;Ureteroscopy and bilateral stent placement (postop Cr decreased)&quot;,&quot;type&quot;:&quot;Other&quot;},{&quot;date&quot;:&quot;2025-02-15&quot;,&quot;description&quot;:&quot;Left nephrostomy performed&quot;,&quot;type&quot;:&quot;Other&quot;}]},&quot;MED_ONC&quot;:{&quot;current_regimen&quot;:{&quot;cycle_info&quot;:&quot;Unknown&quot;,&quot;last_admin_date&quot;:&quot;Unknown&quot;,&quot;name&quot;:&quot;Unknown&quot;},&quot;genetic_testing&quot;:{&quot;germline&quot;:[&quot;HRD: Negative&quot;,&quot;BRCA1: Wildtype&quot;,&quot;BRCA2: Wildtype&quot;],&quot;somatic&quot;:[&quot;HRD: Negative&quot;,&quot;BRCA1: Wildtype&quot;,&quot;BRCA2: Wildtype&quot;]},&quot;monitoring_points&quot;:[],&quot;planned_next_regimen&quot;:&quot;Unknown&quot;,&quot;prior_systemic_therapies&quot;:[]},&quot;NUC_MED&quot;:{&quot;studies&quot;:[]},&quot;PATHOLOGY&quot;:{&quot;specimens&quot;:[{&quot;components&quot;:[&quot;粘液腺癌&quot;,&quot;印戒细胞癌分化&quot;],&quot;date&quot;:&quot;2024-12-20&quot;,&quot;diagnosis&quot;:&quot;左附件krukenberg瘤，粘液腺癌，部分为高-中分化，相当一部分为低分化伴印戒细胞癌分化。子宫肌壁全层见癌组织浸润，输尿管见癌组织浸润，膈肌转移结节阳性，送检淋巴结见癌转移。IHC:ER/PR-&quot;,&quot;grade&quot;:&quot;Mixed high-intermediate and low differentiation&quot;,&quot;ihc&quot;:[{&quot;marker&quot;:&quot;ER/PR&quot;,&quot;result&quot;:&quot;-&quot;}],&quot;involvement_sites&quot;:[&quot;Uterine myometrium full-thickness&quot;,&quot;Ureter&quot;,&quot;Diaphragm&quot;,&quot;Lymph nodes&quot;],&quot;laterality&quot;:&quot;Left&quot;,&quot;molecular&quot;:[{&quot;result&quot;:&quot;TMB-L, MSS, FBXW7 R505C; KNB-, BRCA-, ERBB2-, NTRK-, FGFR2-&quot;,&quot;test&quot;:&quot;Genomic panel&quot;}],&quot;raw_text&quot;:&quot;左附件krukenberg瘤，粘液腺癌，部分为高-中分化，相当一部分为低分化伴印戒细胞癌分化。子宫肌壁全层见癌组织浸润，输尿管见癌组织浸润，膈肌转移结节阳性，送检淋巴结见癌转移。IHC:ER/PR-。外院基因检测：TMB-L,MSS，FBXW7 R505C；KNB-,BRCA-,ERBB2-,NTRK -，FGFR2-&quot;,&quot;sample_type&quot;:&quot;Surgical resection&quot;,&quot;site&quot;:&quot;Left adnexa&quot;,&quot;tumor_size&quot;:&quot;Unknown&quot;,&quot;uncertainty_or_missing&quot;:[&quot;Primary site unknown; recommended GI evaluation (gastroscopy negative)&quot;]}]},&quot;RADIOLOGY&quot;:{&quot;next_imaging_plan&quot;:{&quot;modality&quot;:&quot;Unknown&quot;,&quot;timing&quot;:&quot;Unknown&quot;},&quot;studies&quot;:[{&quot;anatomic_sites&quot;:[&quot;Abdomen&quot;,&quot;Pelvis&quot;],&quot;date&quot;:&quot;Unknown&quot;,&quot;findings&quot;:[&quot;Postoperative PETCT: multiple abdominal and pelvic metastases&quot;],&quot;impression&quot;:&quot;Multiple abdominal and pelvic metastases on PETCT&quot;,&quot;modality&quot;:&quot;Other&quot;,&quot;trend_vs_prior&quot;:&quot;Unknown&quot;},{&quot;anatomic_sites&quot;:[&quot;Brain (cerebral sulcus)&quot;],&quot;date&quot;:&quot;2025-01-20&quot;,&quot;findings&quot;:[&quot;Lesion in cerebral sulcus consistent with metastasis&quot;],&quot;impression&quot;:&quot;Metastasis in cerebral sulcus&quot;,&quot;modality&quot;:&quot;MRI&quot;,&quot;trend_vs_prior&quot;:&quot;Unknown&quot;},{&quot;anatomic_sites&quot;:[&quot;Chest&quot;,&quot;Abdomen&quot;,&quot;Pelvis&quot;],&quot;date&quot;:&quot;2025-01-28&quot;,&quot;findings&quot;:[&quot;Peritoneal thickening, abdominal and pelvic ascites; small pleural and peritoneal effusions; multiple enlarged lymph nodes&quot;],&quot;impression&quot;:&quot;Peritoneal disease with nodal metastases and effusions&quot;,&quot;modality&quot;:&quot;CT&quot;,&quot;trend_vs_prior&quot;:&quot;Unknown&quot;},{&quot;anatomic_sites&quot;:[&quot;Lower abdomen&quot;,&quot;Pelvis&quot;],&quot;date&quot;:&quot;2025-02-10&quot;,&quot;findings&quot;:[&quot;Peritoneal thickening, omental/mesenteric haziness with small nodules, retroperitoneal and pelvic lymphadenopathy, ascites; bilateral ureteral thickening&quot;],&quot;impression&quot;:&quot;Widespread peritoneal and nodal disease with ascites&quot;,&quot;modality&quot;:&quot;CT&quot;,&quot;trend_vs_prior&quot;:&quot;Worse&quot;}]},&quot;TIMELINE&quot;:{&quot;constraints&quot;:{&quot;max_events&quot;:30,&quot;min_events&quot;:3,&quot;must_include&quot;:[&quot;first diagnostic imaging or pathology confirmation (if available)&quot;],&quot;ordering_rules&quot;:{&quot;prioritize_last_event&quot;:true}},&quot;events&quot;:[{&quot;date&quot;:&quot;2024-12-20&quot;,&quot;description&quot;:&quot;Laparoscopy converted to laparotomy with uterus and bilateral adnexa resection and additional procedures&quot;,&quot;event_type&quot;:&quot;Surgery&quot;,&quot;key_result&quot;:&quot;Specimen: left adnexal Krukenberg tumor, mucinous adenocarcinoma with signet-ring differentiation&quot;,&quot;regimen_or_test&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2025-01-20&quot;,&quot;description&quot;:&quot;Head MRI&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;Metastasis in cerebral sulcus&quot;,&quot;regimen_or_test&quot;:&quot;MRI&quot;},{&quot;date&quot;:&quot;2025-01-28&quot;,&quot;description&quot;:&quot;Abdominal distension, left leg edema, pleural and peritoneal small effusions on ultrasound and CT&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;Peritoneal thickening, ascites, multiple enlarged lymph nodes&quot;,&quot;regimen_or_test&quot;:&quot;Chest and abdominal CT/US&quot;},{&quot;date&quot;:&quot;2025-02-10&quot;,&quot;description&quot;:&quot;Lower abdomen CT&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;Peritoneal thickening, omental/mesenteric haziness with nodules, retroperitoneal and pelvic lymphadenopathy, ascites&quot;,&quot;regimen_or_test&quot;:&quot;CT&quot;},{&quot;date&quot;:&quot;2025-02-10&quot;,&quot;description&quot;:&quot;Acute kidney injury with elevated creatinine and dizziness/hypertension&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;Cr 258.9 umol/L&quot;,&quot;regimen_or_test&quot;:&quot;Serum creatinine&quot;},{&quot;date&quot;:&quot;2025-02-12&quot;,&quot;description&quot;:&quot;Ureteroscopy with bilateral stent placement&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;Postop creatinine decreased to 170 umol/L&quot;,&quot;regimen_or_test&quot;:&quot;Ureteroscopy and stent&quot;},{&quot;date&quot;:&quot;2025-02-14&quot;,&quot;description&quot;:&quot;Admission to Shanghai hospital for further treatment; episode of oliguria&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;Urine output 100 ml&quot;,&quot;regimen_or_test&quot;:&quot;Inpatient care&quot;},{&quot;date&quot;:&quot;2025-02-15&quot;,&quot;description&quot;:&quot;Transfer to nephrology and left percutaneous nephrostomy&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;Condition stable after procedure&quot;,&quot;regimen_or_test&quot;:&quot;Left nephrostomy&quot;},{&quot;date&quot;:&quot;2025-02-17&quot;,&quot;description&quot;:&quot;External genomic testing results reported&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;TMB-L, MSS, FBXW7 R505C; KNB-, BRCA-, ERBB2-, NTRK-, FGFR2-&quot;,&quot;regimen_or_test&quot;:&quot;Genomic testing&quot;},{&quot;date&quot;:&quot;2025-04-03&quot;,&quot;description&quot;:&quot;Document time of report&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;Clinical summary recorded&quot;,&quot;regimen_or_test&quot;:&quot;Document&quot;}]}}</pre>
+      </details>
+    </div>
+  </div>
+
+  <details class="mt" open>
+    <summary>Expert Debate (Round × Turn)</summary>
+    <table class='grid'><tr><th>Round</th><th>Turn</th><th>From</th><th>To</th><th>Message</th></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>chair</td><td class='mono'>oncologist</td><td>Before committing to any systemic regimen, we must first document exact prior chemotherapy exposure, current ECOG, and up-to-date renal function/eGFR, given recent obstructive AKI and nephrostomy/stents.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>chair</td><td class='mono'>radiologist</td><td>Please propose an imaging plan (timing and modalities) to reassess brain metastasis and systemic disease, considering prior CT/MRI and potential PET/CT utility.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>chair</td><td class='mono'>pathologist</td><td>Can you clarify, based on existing histology/IHC and genomics, how strongly a GI primary is supported and what additional stains/tests would most efficiently refine the primary-site diagnosis?</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>chair</td><td class='mono'>nuclear</td><td>From your perspective, would a whole-body PET/CT meaningfully change management in this patient with known widespread peritoneal and brain metastases, or should we prioritize conventional CT/MRI only?</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>oncologist</td><td class='mono'>chair</td><td>Systemic regimen choice is currently unsafe to finalize because prior systemic therapies, detailed renal function, and ECOG status are all undocumented and critical for dosing/feasibility.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>radiologist</td><td class='mono'>chair</td><td>Key staging images are over 7 weeks old; updated cross-sectional and brain imaging are needed to guide current palliative planning.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>radiologist</td><td class='mono'>oncologist</td><td>Before further systemic decisions, updated CT/MRI (chest/abdomen/pelvis and brain) is critical to reassess obstruction, peritoneal burden, and CNS disease extent.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>pathologist</td><td class='mono'>chair</td><td>Pathology workup for primary site is incomplete; please confirm whether additional tissue or outside blocks are available for extended IHC to refine primary assignment.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>pathologist</td><td class='mono'>oncologist</td><td>Primary remains unproven (GI vs other); extended IHC panel (CDX2, SATB2, CK7/20, PAX8, MUC markers) on available tissue would better define origin and may influence systemic choices.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>nuclear</td><td class='mono'>oncologist</td><td>No recent PET/CT is available; if prognosis and goals permit, a single whole-body PET/CT could clarify current metabolic burden versus CT alone, especially extra-abdominal disease and brain involvement correlation.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>nuclear</td><td class='mono'>radiologist</td><td>If PET/CT is pursued, please ensure brain-included acquisition and tight coregistration with latest MRI to assess metabolic activity of sulcal lesions and any additional CNS foci.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 2</td><td class='mono'>chair</td><td class='mono'>oncologist</td><td>Before ordering PET/CT, we should clarify how its results would practically alter systemic or CNS management in a patient already deemed palliative with extensive disease.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 2</td><td class='mono'>chair</td><td class='mono'>pathologist</td><td>Please confirm availability of existing tissue/blocks and feasibility of extended IHC now, as primary-site assignment may materially affect systemic strategy discussions.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 2</td><td class='mono'>radiologist</td><td class='mono'>oncologist</td><td>Given prior CT evidence of bilateral ureteral thickening and worsening peritoneal disease, updated contrast-enhanced CT (or MRI) is important to reassess obstruction risk and guide palliative interventions.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 2</td><td class='mono'>radiologist</td><td class='mono'>nuclear</td><td>If PET/CT is obtained, please include full head coverage and ensure fusion with the most recent brain MRI for accurate CNS assessment.</td></tr></table>
+    <div class="hint">Only includes messages that were actually emitted (non-empty).</div>
+  </details>
+
+  <details class="mt">
+    <summary>Initial Expert Opinions (raw)</summary>
+    <pre>{
+  &quot;chair&quot;: &quot;- Widely metastatic Krukenberg-type mucinous/signet tumor with brain and extensive peritoneal disease; prognosis poor, intent palliative systemic and local control.  \n- Urgent clarification of prior systemic therapy and platinum exposure (agents, cycles, dates, responses) is essential before choosing next-line regimen.  \n- Given brain metastasis, prioritize multidisciplinary neuro-oncology/rad-onc review for local treatment plus CNS-penetrant systemic strategy, if feasible.  \n- Renal function remains impaired (Cr ~110–170 µmol/L); nephrology input to optimize drainage, stents/nephrostomy, and chemotherapy dosing constraints.  \n- Confirm updated staging imaging, performance status, symptoms, and patient goals/preferences to balance active treatment versus early palliative-focused pathway.&quot;,
+  &quot;oncologist&quot;: &quot;- Metastatic Krukenberg tumor with brain involvement; systemic therapy now palliative/relapse setting rather than curative.  \n\n- Renal function significantly impaired but improving; precise current creatinine, eGFR, and trend needed to choose/regimen-dose systemic therapy.  \n\n- No prior systemic therapy lines documented; must confirm any previous chemotherapy, dates, toxicities, and response.  \n\n- Biomarkers: HER2-, MSS, low TMB, HRD/BRCA wildtype—targeted/maintenance options limited; PD-L1, CA125, AFP levels unknown/need update.  \n\n- Need up-to-date brain and systemic imaging, performance status, and current medications to judge fitness for combination vs less intensive therapy.&quot;,
+  &quot;radiologist&quot;: &quot;- Progressive diffuse peritoneal carcinomatosis with omental/mesenteric nodularity and increasing ascites, indicating worsening intra-abdominal disease burden [@IMAGING_STUDIES|2025-02-10].  \n\n- Retroperitoneal and pelvic lymphadenopathy consistent with nodal metastases; appears increased compared with earlier CT description [@IMAGING_STUDIES|2025-02-10].  \n\n- Bilateral ureteral thickening concerning for potential evolving ureteral obstruction; renal collecting system status unknown/needs update [@IMAGING_STUDIES|2025-02-10].  \n\n- Small pleural and peritoneal effusions persist, suggesting ongoing serosal involvement; no large pleural masses described [@IMAGING_STUDIES|2025-01-28].  \n\n- Solitary or limited cerebral sulcal metastasis on brain MRI; no trend or hemorrhage information available/needs update [@IMAGING_STUDIES|2025-01-20].&quot;,
+  &quot;pathologist&quot;: &quot;- Morphology favors metastatic Krukenberg tumor with mixed mucinous and signet-ring cell features; primary gastrointestinal origin still unconfirmed.  \n\n- Extensive involvement of uterine wall, ureter, diaphragm, and lymph nodes indicates widely metastatic disease burden [@HISTOLOGY_AND_IHC|2024-12-20].  \n\n- ER/PR negative; no HER2 (ERBB2) amplification, MSS, low TMB, HRD/BRCA wildtype limit certain targeted biomarker options [@HISTOLOGY_AND_IHC|2024-12-20].  \n\n- Somatic FBXW7 R505C mutation present; clinical significance here uncertain and should be correlated with GI versus ovarian primary [@HISTOLOGY_AND_IHC|2024-12-20].  \n\n- Missing/needs update: detailed primary-site workup reports (upper/lower endoscopy, breast imaging), CA125/AFP, PD-L1 CPS, full panel IHC profile.&quot;,
+  &quot;nuclear&quot;: &quot;- Prior PET/CT showed multiple abdominal and pelvic metastases, consistent with disseminated peritoneal and nodal involvement (advanced stage pattern). [@IMAGING_CONTEXT|Unknown]  \n\n- Subsequent imaging demonstrates cerebral sulcal metastasis, indicating distant metastatic spread beyond peritoneal cavity. [@IMAGING_CONTEXT|2025-01-20]  \n\n- Progressive widespread peritoneal and nodal disease with ascites suggests high whole-abdomen tumor burden. [@IMAGING_CONTEXT|2025-01-28] [@IMAGING_CONTEXT|2025-02-10]  \n\n- No current PET/CT report available for this visit; updated whole-body PET/CT report is needed to reassess metabolic disease extent.  \n\n- PET would meaningfully refine staging/recurrence suspicion by clarifying active peritoneal, nodal, and distant (e.g., brain) metabolic disease distribution.&quot;
+}</pre>
+  </details>
+
+  <details class="mt">
+    <summary>Final Refined Plans (per round, raw)</summary>
+    <pre>{
+  &quot;Round 1&quot;: {
+    &quot;chair&quot;: &quot;- Maintain palliative intent, contingent on updated ECOG, symptom burden, and patient goals (active treatment vs comfort-focused pathway; details unknown).  \n- Clarify prior systemic therapy and platinum exposure (agents, cycles, dates, responses, toxicities all unknown) before proposing further systemic options.  \n- Obtain updated renal function (current creatinine, eGFR, obstruction status, urology/nephrology assessment unknown) to define feasibility and dosing of systemic therapy.  \n- Coordinate extended IHC on available tissue (block availability and panel completion unknown) to better assign primary site and inform regimen choice.  \n- Re-stage with updated brain MRI and contrast CT/MRI abdomen–pelvis (±PET/CT only if clearly management-changing), then review in MDT.&quot;,
+    &quot;oncologist&quot;: &quot;- Confirm prior systemic therapies, toxicities, and responses; without this, selecting appropriate palliative systemic options remains unsafe (unknown/needs update).  \n\n- Obtain current creatinine, eGFR, and updated cross‑sectional imaging of abdomen/pelvis to reassess obstruction and systemic dosing feasibility (unknown/needs update).  \n\n- Arrange updated brain MRI and neuro-oncology/radiation review to determine local versus combined CNS-directed and systemic palliative strategy (unknown/needs update).  \n\n- Proceed with extended IHC on available tissue, if blocks accessible, to better define primary site and guide regimen category (unknown/needs update).  \n\n- Clarify ECOG PS, symptom burden, goals of care, and whether PET/CT would change management before ordering further staging (unknown/needs update).&quot;,
+    &quot;radiologist&quot;: &quot;- Obtain updated contrast-enhanced CT or MRI abdomen/pelvis to reassess peritoneal burden, nodal disease, ascites, and ureteral obstruction risk [@IMAGING_STUDIES|2025-02-10].  \n\n- Repeat brain MRI to evaluate current cerebral sulcal metastasis extent, edema, and hemorrhage status for CNS-directed planning [@IMAGING_STUDIES|2025-01-20].  \n\n- If PET/CT is pursued, ensure whole-body coverage including brain and co-register with latest MRI to assess CNS/metabolic burden [@IMAGING_STUDIES|Unknown].  \n\n- Correlate new imaging with updated renal function and urology/nephrology input to guide palliative decompression and imaging contrast use (labs unknown).  \n\n- Reassess overall disease trend on new imaging to inform prognosis discussions and scope of palliative local versus systemic interventions [@IMAGING_TRENDS|2025-02-10].&quot;,
+    &quot;pathologist&quot;: &quot;- Confirm if existing paraffin blocks/slides are available and suitable for extended IHC to refine GI vs ovarian primary (unknown/needs update).  \n\n- If tissue available, perform targeted IHC panel (CK7/CK20, CDX2, SATB2, PAX8, MUCs) to better assign primary (unknown/needs update).  \n\n- Maintain current diagnosis of metastatic Krukenberg-type mucinous/signet carcinoma with extensive peritoneal, nodal, uterine, ureteral, and diaphragmatic involvement [@HISTOLOGY_AND_IHC|2024-12-20].  \n\n- Note biomarker profile: ER/PR negative, HER2-/ERBB2-, MSS, low TMB, BRCA/HRD wildtype, FBXW7 R505C mutation [@HISTOLOGY_AND_IHC|2024-12-20].  \n\n- No pathology role regarding PET/CT or CNS imaging; defer imaging decisions to radiology/nuclear medicine and oncology teams.&quot;,
+    &quot;nuclear&quot;: &quot;- No recent PET/CT is available; its value should be weighed against limited likelihood of management change in this palliative setting.  \n\n- If pursued, a single whole-body PET/CT with full head coverage could better map active extra-abdominal and CNS disease; current extent otherwise unknown/needs update.  \n\n- PET/CT may help distinguish metabolically active peritoneal/nodal deposits from treated or non-malignant changes, but impact on systemic choices remains uncertain.  \n\n- PET/CT would not define the primary site; that depends on extended IHC and GI/breast workup (status unknown/needs update).  \n\n- Coordination with updated brain MRI and contrast-enhanced CT/MRI abdomen–pelvis is essential for accurate fusion and obstruction/CNS risk assessment; timing unknown.&quot;
+  },
+  &quot;Round 2&quot;: {
+    &quot;chair&quot;: &quot;- Maintain palliative intent and conduct goals-of-care discussion, aligning active treatment aggressiveness with prognosis and patient preferences (current symptoms/ECOG unknown).  \n- Clarify prior systemic therapies and platinum exposure (all details unknown) and update labs, especially renal function and eGFR (current values unknown).  \n- Confirm block availability and perform extended IHC to better define primary site, but only if results will alter systemic strategy (status unknown).  \n- Obtain updated brain MRI and contrast-enhanced CT/MRI abdomen–pelvis to reassess CNS disease and obstruction, then review with neuro-oncology/urology.  \n- Consider PET/CT only if MDT agrees results could meaningfully change palliative systemic or local interventions; otherwise rely on targeted CT/MRI restaging.&quot;,
+    &quot;oncologist&quot;: &quot;- Clarify prior systemic therapies, responses, and toxicities; without this, it is unsafe to select further palliative regimens (unknown/needs update).  \n\n- Obtain current creatinine, eGFR, and contrast-enhanced abdominal/pelvic imaging to reassess obstruction and systemic dosing constraints (unknown/needs update).  \n\n- Confirm tissue/block availability and perform extended IHC if feasible, only if primary-site clarification would alter systemic strategy (unknown/needs update).  \n\n- Arrange updated brain MRI and neuro-oncology/radiation review to define local versus combined CNS‑directed and systemic approach (unknown/needs update).  \n\n- Document ECOG PS, symptom burden, goals of care, and decide if PET/CT would change management before ordering further staging (unknown/needs update).&quot;,
+    &quot;radiologist&quot;: &quot;- Repeat contrast-enhanced CT or MRI abdomen/pelvis to reassess peritoneal disease, nodal burden, ascites, and ureteral obstruction risk [@IMAGING_STUDIES|2025-02-10].  \n\n- Obtain updated brain MRI to define current extent of cerebral sulcal metastasis, edema, and hemorrhage risk [@IMAGING_STUDIES|2025-01-20].  \n\n- Consider PET/CT only if results would alter management; if done, include whole head and coregister with MRI [@IMAGING_STUDIES|Unknown].  \n\n- Integrate new imaging with current renal function and urology/nephrology input to guide contrast use and local decompressive interventions (labs unknown).  \n\n- Use updated imaging trends to support prognosis communication and selection of symptom-directed palliative procedures versus further systemic therapy [@IMAGING_TRENDS|2025-02-10].&quot;,
+    &quot;pathologist&quot;: &quot;- Maintain diagnosis: metastatic Krukenberg-type mucinous carcinoma with signet-ring features involving adnexa, uterus, ureter, diaphragm, nodes [@HISTOLOGY_AND_IHC|2024-12-20].  \n\n- Biomarkers: ER/PR-, HER2-/ERBB2-, MSS, TMB-L, BRCA/HRD wildtype, FBXW7 R505C mutation [@HISTOLOGY_AND_IHC|2024-12-20].  \n\n- Primary site remains unassigned (GI vs other); morphology alone insufficient for definitive origin [@HISTOLOGY_AND_IHC|2024-12-20].  \n\n- Clarify availability of existing blocks/slides for extended IHC (CK7/20, CDX2, SATB2, PAX8, MUC panel) to refine origin (unknown/needs update).  \n\n- No pathology-specific input on PET/CT or CNS imaging; defer to radiology/nuclear and oncology for those decisions.&quot;,
+    &quot;nuclear&quot;: &quot;- No recent PET/CT available; current metabolic disease extent and activity remain unknown/needs update.  \n\n- In this extensively metastatic, palliative setting, PET/CT should be ordered only if results are expected to change management.  \n\n- If performed, whole-body PET/CT with full head coverage and MRI fusion could better delineate active CNS and extra-abdominal disease.  \n\n- PET/CT may help differentiate active peritoneal/nodal disease from treated or non-malignant changes, but staging is already clearly metastatic.  \n\n- PET/CT will not clarify primary origin; this depends on extended IHC and other site-directed investigations (status unknown/needs update).&quot;
+  }
+}</pre>
+  </details>
+
+  <details class="mt">
+    <summary>Selected Clinical Context (JSON)</summary>
+    <pre>{
+  &quot;lab&quot;: {
+    &quot;chair&quot;: [],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  },
+  &quot;imaging&quot;: {
+    &quot;chair&quot;: [],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  },
+  &quot;pathology&quot;: {
+    &quot;chair&quot;: [],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  },
+  &quot;mutation&quot;: {
+    &quot;chair&quot;: [],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  }
+}</pre>
+  </details>
+
+  <details class="mt">
+    <summary>Global Guideline RAG</summary>
+    <h3>RAG Query</h3>
+    <pre>Metastatic mucinous adenocarcinoma with signet-ring (Krukenberg) of unknown GI primary, platinum‑naïve/unknown; peritoneal, nodal, diaphragm, ureter, and brain metastases; BRCA/HRD‑negative, MSS/TMB‑low; significant obstructive nephropathy with AKI and nephrostomy/stents.</pre>
+    <h3>Evidence Pack (top-k)</h3>
+    <pre>RAG Evidence Pack (top=5):
+[1] score=0.5807 esmo_cpg_nonepithelialovarian_2018__v00000000 [PAGE 3]
+    regional lymph node metastasis (N0) or regional lymph node metastasis (N1); no distant metastasis T3c-N0/N1-M0 Stage IIIC Macroscopic peritoneal metastasis beyond the pelvis &gt; 2 cm in greatest dimension and/or regional lymph node metastasis; no regional lymph node metastasis (N0) or regional lymph n…
+[2] score=0.5798 esgo_eshre_esge_fertilitysparing_pocket_2025__v00000000 [PAGE 17]
+    to the use of ovarian preservation itself and/or the natural history of the disease (whatever the preservation or not of the ovary) in these patients having poorest prognostic factors). 1non-invasive peritoneal implants; 2including immature teratoma, dysgerminoma, Yolk-sac tumours; 3well and moderat…
+[3] score=0.5772 nccn_ovariancancer_v3_2025__v00000000 [PAGE 14]
+    ff Definitions of platinum-sensitive and platinum-resistant disease represent a spectrum of disease; clinical judgment and flexibility should be utilized in determining treatment options. gg Data are limited on primary and maintenance therapy for recurrent/ persistent LCOC. hh During and after treat…
+[4] score=0.5728 nccn_ovariancancer_v3_2025__v00000000 [PAGE 15]
+    based chemotherapy,n preferred for first recurrence (category 1) or Recurrence therapyn,kk and/or Best supportive care (See NCCN Guidelines for Palliative Care) Consider secondary cytoreductive surgeryj,k Immediate platinum-based recurrence therapyn (category 2B) and/or Best supportive care (See NCC…
+[5] score=0.5696 nccn_ovariancancer_v3_2025__v00000000 [PAGE 28]
+    resection or Observe (Surveillance [LCOC-B]) Necrotic tissue Benign teratoma Residual malignancy Observe Surveillance (LCOC-B) Complete clinical response TIP (paclitaxel/ifosfamide/ cisplatin) or High-dose chemotherapyll + hematopoietic cell transplant (HCT) (strongly recommend referral to tertiary …</pre>
+    <h3>RAG Raw Hits (JSON)</h3>
+    <pre>[
+  {
+    &quot;rank&quot;: 1,
+    &quot;score&quot;: 0.5806504487991333,
+    &quot;doc_id&quot;: &quot;esmo_cpg_nonepithelialovarian_2018__v00000000&quot;,
+    &quot;page&quot;: 3,
+    &quot;text&quot;: &quot;regional lymph node metastasis (N0) or regional lymph node metastasis (N1); no distant\nmetastasis\nT3c-N0/N1-M0\nStage IIIC\nMacroscopic peritoneal metastasis beyond the pelvis &gt; 2 cm in greatest dimension and/or\nregional lymph node metastasis; no regional lymph node metastasis (N0) or regional\nlymph node metastasis (N1); no distant metastasis\nany T-any N-M1\nStage IVA\nPleural effusion with positive cytology\nany T-any N-M1\nStage IVB\nParenchymal metastases and metastases to extra-abdominal organs (including inguinal\nlymph nodes and lymph nodes outside of the abdominal cavity)\nFIGO, International Federation of Gynecology and Obstetrics; TNM, tumour, node, metastasis.\nModiﬁed from [22] and [57].\nAnnals of Oncology\nClinical Practice Guidelines\nVolume 29 | Supplement 4 | October 2018\ndoi:10.1093/annonc/mdy001 | iv3&quot;
+  },
+  {
+    &quot;rank&quot;: 2,
+    &quot;score&quot;: 0.5797759294509888,
+    &quot;doc_id&quot;: &quot;esgo_eshre_esge_fertilitysparing_pocket_2025__v00000000&quot;,
+    &quot;page&quot;: 17,
+    &quot;text&quot;: &quot;to the use of ovarian preservation itself and/or the natural history of the disease (whatever\nthe preservation or not of the ovary) in these patients having poorest prognostic factors).\n1non-invasive peritoneal implants; 2including immature teratoma, dysgerminoma, Yolk-sac\ntumours; 3well and moderately differentiated; 4poorly differentiated; #for grade 2-3 imma-\nture teratoma stage II-IV, fertility-sparing data are limited; ## for Sertoli-Leydig cell tumour\nstage IC2-3, fertility-sparing data are limited.\nBOT borderline ovarian tumour; CCC clear cell carcinoma; GCT germ cell tumour; GrCT\ngranulosa cell tumour; HGEC high-grade endometrioid carcinoma; HGSC high-grade serous\ncarcinoma; LGSC low-grade serous carcinoma; LGEC low-grade endometrioid carcinoma,\nMCexp mucinous carcinoma with expansile invasion, MCinf mucinous carcinoma with in-\nfiltrative invasion; SCC small cell carcinoma; SLCT Sertoli-Leydig cell tumour.&quot;
+  },
+  {
+    &quot;rank&quot;: 3,
+    &quot;score&quot;: 0.5772174596786499,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 14,
+    &quot;text&quot;: &quot;ff Definitions of platinum-sensitive and platinum-resistant disease\nrepresent a spectrum of disease; clinical judgment and flexibility should\nbe utilized in determining treatment options.\ngg Data are limited on primary and maintenance therapy for recurrent/\npersistent LCOC.\nhh During and after treatment for recurrence, patients should be evaluated\nas indicated with tumor markers and repeat imaging (with modalities\npreviously used) to document response and/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\njj Patients who do not respond and progress on two consecutive regimens\nwithout evidence of clinical benefits have diminished likelihood of\nbenefitting from additional therapy (Griffiths RW, et al. Int J Gynecol\nCancer 2011;21:58-65). Decisions to offer clinical trials, supportive care,\nor additional therapy should be made on an individual basis.\nkk Localized radiation therapy (RT) can be considered to palliate\nsymptoms and/or for oligometastatic disease.\nOV-8\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.&quot;
+  },
+  {
+    &quot;rank&quot;: 4,
+    &quot;score&quot;: 0.5728271007537842,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 15,
+    &quot;text&quot;: &quot;based chemotherapy,n\npreferred for first\nrecurrence (category 1)\nor\nRecurrence therapyn,kk\nand/or\nBest supportive care\n(See NCCN Guidelines\nfor Palliative Care)\nConsider\nsecondary\ncytoreductive\nsurgeryj,k\nImmediate platinum-based\nrecurrence therapyn (category 2B)\nand/or\nBest supportive care (See NCCN\nGuidelines for Palliative Care)\nRECURRENCE THERAPY FOR PLATINUM-SENSITIVE DISEASEn,gg,hh,ii\nMaintenance therapy (if PR or CR)\n• Useful in certain circumstances:\n\u0017Continue bevacizumab if previously\ntreated with chemotherapy +\nbevacizumab;\nor\n\u0017PARPi therapy (for those with BRCA\n1/2 mutation)ll:\n ◊If not previously used (category 1)\n ◊If disease has not progressed\nduring prior PARPi treatment\nor\nObserve\ngg Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.\nhh During and after treatment for recurrence, patients should be evaluated as indicated with\ntumor markers and repeat imaging (with modalities previously used) to document response\nand/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\nkk Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.&quot;
+  },
+  {
+    &quot;rank&quot;: 5,
+    &quot;score&quot;: 0.5695556402206421,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 28,
+    &quot;text&quot;: &quot;resection\nor\nObserve\n(Surveillance\n[LCOC-B])\nNecrotic\ntissue\nBenign\nteratoma\nResidual\nmalignancy\nObserve\nSurveillance (LCOC-B)\nComplete\nclinical\nresponse\nTIP (paclitaxel/ifosfamide/\ncisplatin)\nor\nHigh-dose chemotherapyll +\nhematopoietic cell transplant\n(HCT) (strongly recommend\nreferral to tertiary care center for\npotentially curative regimen)\na WHO Histologic Classification (OV-E).\np CT is performed with oral and iodinated IV contrast (unless contraindicated due to anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI is performed with\ngadolinium-based contrast agents (unless contraindicated due to anaphylaxis) and is preferred in select patients with renal dysfunction over CT. Chest CT can be done with or without\niodinated IV contrast.\nff Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.\nii Pediatric/adolescent patients with the following clinical presentations may consider observation or chemotherapy as treatment options: stage IA, IB dysgerminoma; stage IA, grade 1&quot;
+  }
+]</pre>
+    <h3>Digest (<=8 bullets)</h3>
+    <pre>- FIGO stage IIIC ovarian cancer includes macroscopic peritoneal metastases &gt;2 cm beyond the pelvis and/or regional lymph node metastases without distant metastasis [1].  
+- Platinum sensitivity in recurrent ovarian cancer is a spectrum; treatment choice (including platinum rechallenge vs non-platinum) should use clinical judgment rather than a rigid time cutoff [3].  
+- For first recurrence of platinum-sensitive epithelial ovarian cancer, platinum-based combination chemotherapy is preferred and category 1 when appropriate [4].  
+- In selected patients with recurrent disease, secondary cytoreductive surgery can be considered before systemic therapy, based on performance status, disease distribution, and likelihood of complete resection [4].  
+- For recurrent disease where systemic therapy is not appropriate or not desired, best supportive care and palliative care pathways should be actively considered [3][4].  
+- For malignant ovarian germ cell tumors with complete clinical response after initial therapy, surveillance is appropriate; if residual malignancy is present, additional chemotherapy such as TIP (paclitaxel/ifosfamide/cisplatin) or high-dose chemotherapy with hematopoietic cell transplant should be considered, ideally in a tertiary center [5].  
+- Fertility-sparing approaches may be considered in selected non-epithelial ovarian tumors (e.g., dysgerminoma, yolk sac tumor, immature teratoma) with careful counseling about prognosis and adjuvant treatment implications [2].  
+- Non-invasive peritoneal implants in selected ovarian tumors are associated with a more favorable prognosis than invasive implants and may influence decisions on the extent of surgery and adjuvant therapy [2].</pre>
+  </details>
+
+  <details class='mt' open><summary>Pipeline Flow (Mermaid)</summary><pre class='mermaid'>flowchart TD
+  A[Load Case + Fingerprint] --&gt; B[Load Reports]
+  B --&gt; C[Report Selection per Role]
+  C --&gt; D[Global Guideline RAG]
+  D --&gt; E[Init Specialist Agents]
+  E --&gt; F[MDT Discussion Engine]
+  F --&gt; G[Trial Matching]
+  G --&gt; H[Final Chair Output]
+  H --&gt; I[Save Logs]
+</pre></details>
+
+  <details class="mt">
+    <summary>Trace Events (JSON)</summary>
+    <pre>[
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:01:33.594891&quot;,
+    &quot;event&quot;: &quot;pipeline_start&quot;,
+    &quot;payload&quot;: {
+      &quot;visit_time&quot;: &quot;2025-04-03 15:38:50.183000&quot;,
+      &quot;meta_info&quot;: &quot;130104196909292146&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:01:33.597070&quot;,
+    &quot;event&quot;: &quot;case_fingerprint&quot;,
+    &quot;payload&quot;: {
+      &quot;case_fingerprint&quot;: &quot;299dd68c3006&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:01:33.883607&quot;,
+    &quot;event&quot;: &quot;reports_loaded&quot;,
+    &quot;payload&quot;: {
+      &quot;lab_n&quot;: 0,
+      &quot;img_n&quot;: 0,
+      &quot;path_n&quot;: 0,
+      &quot;mut_n&quot;: 0,
+      &quot;cutoff_dt&quot;: &quot;2025-04-04 15:38:50&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:01:33.944077&quot;,
+    &quot;event&quot;: &quot;reports_selected&quot;,
+    &quot;payload&quot;: {
+      &quot;lab&quot;: {
+        &quot;chair&quot;: [],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      },
+      &quot;imaging&quot;: {
+        &quot;chair&quot;: [],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      },
+      &quot;pathology&quot;: {
+        &quot;chair&quot;: [],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      },
+      &quot;mutation&quot;: {
+        &quot;chair&quot;: [],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      }
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:01:51.904876&quot;,
+    &quot;event&quot;: &quot;rag_query&quot;,
+    &quot;payload&quot;: {
+      &quot;query&quot;: &quot;Metastatic mucinous adenocarcinoma with signet-ring (Krukenberg) of unknown GI primary, platinum‑naïve/unknown; peritoneal, nodal, diaphragm, ureter, and brain metastases; BRCA/HRD‑negative, MSS/TMB‑low; significant obstructive nephropathy with AKI and nephrostomy/stents.&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:01:51.904883&quot;,
+    &quot;event&quot;: &quot;rag_hits&quot;,
+    &quot;payload&quot;: {
+      &quot;topk&quot;: 5,
+      &quot;n&quot;: 5
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:01:56.490675&quot;,
+    &quot;event&quot;: &quot;mdt_discussion_start&quot;,
+    &quot;payload&quot;: {
+      &quot;num_rounds&quot;: 2,
+      &quot;num_turns&quot;: 2
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:04:30.894094&quot;,
+    &quot;event&quot;: &quot;mdt_discussion_end&quot;,
+    &quot;payload&quot;: {
+      &quot;merged_chars&quot;: 2466
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:04:30.894923&quot;,
+    &quot;event&quot;: &quot;final_output_start&quot;,
+    &quot;payload&quot;: {}
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-17T23:04:34.816802&quot;,
+    &quot;event&quot;: &quot;final_output_end&quot;,
+    &quot;payload&quot;: {
+      &quot;final_output_chars&quot;: 1459
+    }
+  }
+]</pre>
+  </details>
+
+</body>
+</html>

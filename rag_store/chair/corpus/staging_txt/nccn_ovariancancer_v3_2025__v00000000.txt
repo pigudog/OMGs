@@ -1,0 +1,2777 @@
+# NCCN_OvarianCancer_v3.2025
+
+
+---
+[PAGE 1/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Clinical Practice Guidelines in Oncology (NCCN Guidelines®)
+Ovarian Cancer
+Continue
+Including Fallopian Tube Cancer
+and Primary Peritoneal Cancer
+Version 3.2025 — July 16, 2025
+NCCN recognizes the importance of clinical trials and encourages participation when applicable and available.
+Trials should be designed to maximize inclusiveness and broad representative enrollment.
+NCCN.org
+NCCN Guidelines for Patients® available at www.nccn.org/patients
+
+
+
+---
+[PAGE 2/240]
+
+NCCN Guidelines Version 3.2025
+Ovarian Cancer
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+*Deborah K. Armstrong, MD/Chair Ω †
+Johns Hopkins Kimmel Cancer Center
+*Ronald D. Alvarez, MD, MBA/Vice Chair Ω
+Vanderbilt-Ingram Cancer Center
+*Floor J. Backes, MD Ω
+The Ohio State University Comprehensive
+Cancer Center - James Cancer Hospital
+and Solove Research Institute
+Lisa Barroilhet, MD Ω
+University of Wisconsin
+Carbone Cancer Center
+Kian Behbakht, MD Ω
+University of Colorado Cancer Center
+Andrew Berchuck, MD Ω
+Duke Cancer Institute
+*Lee-may Chen, MD Ω
+UCSF Helen Diller Family
+Comprehensive Cancer Center
+Joshua Cohen, MD Ω
+City of Hope National Medical Center
+Marie DeRosa, RN ¥
+*Eric L. Eisenhauer, MD Ω
+Mass General Cancer Center
+*David M. Gershenson, MD Ω
+The University of Texas
+MD Anderson Cancer Center
+*Heidi J. Gray, MD Ω
+Fred Hutchinson Cancer Center
+Rachel Grisham, MD Ω
+Memorial Sloan Kettering Cancer Center
+NCCN
+Emily Kovach
+Swathi Ramakrishnan, PhD
+NCCN Guidelines Panel Disclosures
+Ω Gynecology oncology
+‡ Hematology/
+Hematology oncology
+Þ Internal medicine
+† Medical oncology
+# Nursing
+≠ Pathology
+¥ Patient advocacy
+* Discussion writing
+committee member
+Continue
+Ardeshir Hakam, MD ≠
+Moffitt Cancer Center
+Angela Jain, MD †
+Fox Chase Cancer Center
+Gottfried E. Konecny, MD Ω
+UCLA Jonsson Comprehensive Cancer Center
+*Charles A. Leath III, MD, MSPH Ω
+O'Neal Comprehensive
+Cancer Center at UAB
+Gary Leiserowitz, MD Ω
+UC Davis Comprehensive Cancer Center
+Babak Litkouhi, MD Ω
+Stanford Cancer Institute
+*Joyce Liu, MD, MPH † ‡
+Dana-Farber/Brigham and
+Women’s Cancer Center
+Lainie Martin, MD †
+Abramson Cancer Center
+at the University of Pennsylvania
+*Daniela Matei, MD † ‡
+Robert H. Lurie Comprehensive Cancer
+Center of Northwestern University
+Michael McHale, MD Ω
+UC San Diego Moores Cancer Center
+*David S. Miller, MD Ω
+UT Southwestern Simmons
+Comprehensive Cancer Center
+John Moroney, MD Ω
+The UChicago Medicine
+Comprehensive Cancer Center
+Sanja Percac-Lima, MD, PhD Þ
+Mass General Cancer Center
+Elena Ratner, MD, MBA Ω
+Yale Cancer Center/Smilow Cancer Hospital
+Sharon Robertson, MD, MPH Ω
+Indiana University Melvin and Bren Simon
+Comprehensive Cancer Center
+Kerry Rodabaugh, MD Ω
+Fred & Pamela Buffett Cancer Center
+John Schorge, MD Ω
+St. Jude Children's Research Hospital/The
+University of Tennessee Health Science Center
+*Premal H. Thaker, MD Ω
+Siteman Cancer Center at Barnes-Jewish Hospital
+and Washington University School of Medicine
+Shitanshu Uppal, MBBS, MBA Ω
+University of Michigan Rogel Cancer Center
+Roberto Vargas, MD Ω
+Case Comprehensive Cancer Center/
+University Hospitals Seidman Cancer
+Center and Cleveland Clinic Taussig
+Cancer Institute
+*Andrea Wahner Hendrickson, MD †
+Mayo Clinic Comprehensive Cancer Center
+*Theresa L. Werner, MD † ‡
+Huntsman Cancer Institute
+at the University of Utah
+*Emese Zsiros, MD, PhD Ω
+Roswell Park Comprehensive Cancer Center
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 3/240]
+
+NCCN Guidelines Version 3.2025
+Ovarian Cancer
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+The NCCN Guidelines® are a statement of evidence and consensus of the authors regarding their views of currently accepted approaches to
+treatment. Any clinician seeking to apply or consult the NCCN Guidelines is expected to use independent medical judgment in the context of individual
+clinical circumstances to determine any patient’s care or treatment. The National Comprehensive Cancer Network® (NCCN®) makes no representations
+or warranties of any kind regarding their content, use or application and disclaims any responsibility for their application or use in any way. The NCCN
+Guidelines are copyrighted by National Comprehensive Cancer Network®. All rights reserved. The NCCN Guidelines and the illustrations herein may not
+be reproduced in any form without the express written permission of NCCN. ©2025.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+Find an NCCN Member Institution:
+https://www.nccn.org/home/member-
+institutions.
+NCCN Categories of Evidence and
+Consensus: All recommendations are
+category 2A unless otherwise indicated.
+See NCCN Categories of Evidence
+and Consensus.
+NCCN Categories of Preference:
+All recommendations are considered
+appropriate.
+See NCCN Categories of Preference.
+NCCN Ovarian Cancer Panel Members
+Summary of the Guidelines Updates
+Epithelial Ovarian Cancer/Fallopian Tube Cancer/Primary Peritoneal Cancer:
+Clinical Presentation, Workup, Clinical Stage, Primary Treatment (OV-1)
+Poor Surgical Candidate or Low Likelihood of Optimal Cytoreduction (OV-2)
+Diagnosis by Previous Surgery: Findings and Primary Treatment (OV-3)
+Pathologic Staging, Primary Chemotherapy/Primary Adjuvant Therapy (OV-4)
+Post Primary Treatment: Maintenance Therapy (OV-5)
+Monitoring/Follow-Up, Recurrent Disease (OV-6)
+Disease Status, Therapy for Persistent Disease or Recurrence (OV-7)
+Less Common Ovarian Cancers:
+Diagnosis (LCOC-1)
+Carcinosarcoma (Malignant Mixed Müllerian Tumors) of the Ovary (LCOC-2)
+Clear Cell Carcinoma of the Ovary (LCOC-3)
+Mucinous Neoplasms of the Ovary (LCOC-4)
+Grade 1 Endometrioid Carcinoma (LCOC-5)
+Low-Grade Serous Carcinoma (LCOC-6)
+Ovarian Serous Borderline Epithelial Tumors (Low Malignant Potential) (LCOC-8)
+Malignant Sex Cord-Stromal Tumors (LCOC-11)
+Malignant Germ Cell Tumors (LCOC-12)
+Systemic Therapy Regimens - Malignant Germ Cell/Sex Cord-Stromal Tumors (LCOC-A)
+Surveillance - Malignant Germ Cell/Sex Cord-Stromal Tumors (LCOC-B)
+Principles of Surgery (OV-A)
+Principles of Pathology (OV-B)
+Principles of Systemic Therapy (OV-C)
+Management of Drug Reactions (OV-D)
+WHO Histologic Classification (OV-E)
+Staging (ST-1)
+Abbreviations (ABBR-1)
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 4/240]
+
+NCCN Guidelines Version 3.2025
+Ovarian Cancer
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+UPDATES
+Updates in Version 3.2025 of the NCCN Guidelines for Ovarian Cancer from Version 2.2025 include:
+Continued
+OV-5
+• No Bevacizumab used during primary therapy
+BRCA1/2 wild-type or unknown, maintenance therapy regimen modified: Niraparib (HR deficient).
+Updates in Version 2.2025 of the NCCN Guidelines for Ovarian Cancer from Version 1.2025 include:
+OV-4
+• Stage II, III, IV
+Imaging bullet and footnote a moved from OV-5.
+Response or Stable Disease pathways added.
+OV-5
+• Response columns removed.
+• No Bevacizumab used during primary therapy
+BRCA1/2 wild-type or unknown, maintenance therapy regimen added: Olaparib (HR deficient) (category 2B).
+• Bevacizumab used as part of primary therapy
+BRCA1/2 wild-type or unknown, HR deficient, maintenance therapy regimen added: Olaparib (category 2B).
+LCOC-7
+• Recurrence therapy
+Specific regimens removed from this page; all listed in Systemic Therapy sections (OV-C 8 and OV-C 9).
+OV-C (8 of 12)
+• Useful in Certain Circumstances
+For low-grade serous carcinoma, regimen added: Avutometinib/defactinib (for KRAS-mutated tumors).
+OV-C (9 of 12)
+• Useful in Certain Circumstances
+For low-grade serous carcinoma, regimen added: Avutometinib/defactinib (for KRAS-mutated tumors).
+OV-C (11 of 12)
+• Reference added: Banerjee S, Nieuwenhuysen EV, Santin A, et al. Avutometinib plus defactinib in recurrent low-grade serous ovarian cancer: A
+subgroup analysis of ENGOTOV60/ GOG-3052/RAMP 201 Part A. Gyn Oncol 2024;190:S55-S56.
+Updates in Version 1.2025 of the NCCN Guidelines for Ovarian Cancer from Version 3.2024 include:
+Global
+• References have been updated throughout the Guidelines.
+• Imaging footnote revised throughout OV and LCOC algorithms: CT is performed with oral and iodinated IV contrast (unless contraindicated due to
+anaphylaxis or significant renal dysfunction) and with or without rectal contrast as needed. MRI is performed with gadolinium-based contrast agents
+(unless contraindicated due to anaphylaxis) and is preferred in select patients with renal dysfunction over CT. Chest CT can be done with or without
+iodinated IV contrast.
+OV-1
+• Workup
+Bullet 2 modified: Pelvis ultrasound, and/or abdomen/pelvis CT/MRI as clinically indicated.
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 5/240]
+
+NCCN Guidelines Version 3.2025
+Ovarian Cancer
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+UPDATES
+Updates in Version 1.2025 of the NCCN Guidelines for Ovarian Cancer from Version 3.2024 include:
+Continued
+Bullet 3 modified: Chest CT or chest x-ray as clinically indicated.
+• Footnote c modified: Chest CT preferred If there is concern for metastatic or disseminated disease.
+• Footnote e added: Reconsider REI as clinically indicated once pathologic diagnosis is available.
+• Footnote h, last sentence added: For PARPi therapy in advanced stage disease, include measure of homologous recombination (HR) (OV-B). (Also for
+OV-2, OV-3, and OV-5).
+OV-2
+• Response pathway modified: Interval debulking surgery (IDS) with completion hysterectomy/BSO and cytoreduction. Consider hyperthermic
+intraperitoneal chemotherapy (HIPEC).
+• Stable disease pathway modified: IDS with completion hysterectomy/BSO and cytoreduction. Consider HIPEC.
+• Pathway added: LCOC with link to LCOC-1.
+• Footnote r added: Neoadjuvant therapy does not apply to low malignant potential (LMP) or other noninvasive cancers (see LCOC-1). (Also for OV-3)
+• Footnote removed: Hyperthermic intraperitoneal chemotherapy (HIPEC) with cisplatin (100 mg/m2) can be considered at the time of IDS for stage III
+disease.
+OV-3
+• Diagnosis by previous surgery modified: Patient referred with newly diagnosed ovarian cancer, including less common ovarian cancers (LCOCs), after
+recent surgical procedure.
+• Bullet 5 modified: Imaging as clinically indicated (eg, C/A/P CT, chest CT, A/P MRI, PET/MRI, PET/CT, and/or pelvis ultrasound).
+• Bullet 8 added: REI as clinically indicated.
+OV-5
+• Stage II, III, IV, post primary treatment, bullet 1, sub-bullet modified: eg, C/A/P CT, chest CT, A/P MRI, PET/MRI, PET/CT and/or pelvis ultrasound)
+(skull base to mid-thigh).
+OV-6
+• Heading modified: Monitoring/Follow-up for Patients Not Receiving Treatment
+• Bullet 3 modified: Imaging as clinically indicated (eg, C/A/P CT, chest CT, A/P MRI, PET/MRI, PET/CT and/or pelvis ultrasound)(skull base to mid-thigh)
+as clinically indicated.
+OV-7
+• Footnote jj modified: Patients who do not respond and progress on two consecutive therapy regimens without evidence of clinical benefits have
+diminished likelihood of benefitting from additional therapy (Griffiths RW, et al. Int J Gynecol Cancer 2011;21:58-65). Decisions to offer clinical trials,
+supportive care only, or additional therapy should be made on an highly individual basis.
+LCOC-2
+• Footnote i, last sentence added: For PARPi therapy in advanced stage disease, include measure of HR (OV-B). (Also for LCOC-3)
+LCOC-4
+• Mucinous neoplasms of the ovary
+Stage IA, IB, and IC carcinoma split into separate pathways.
+Adjuvant therapy for each stage updated based on expansile or infiltrative pattern.
+• Footnote d added: Principles of Pathology (OV-B).
+LCOC-7
+• Bullet 4 modified: Imaging as clinically indicated (eg, C/A/P CT, chest CT, A/P MRI, PET/CT, PET/MRI)(skull base to mid-thigh) as clinically indicated.
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 6/240]
+
+NCCN Guidelines Version 3.2025
+Ovarian Cancer
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+UPDATES
+Updates in Version 1.2025 of the NCCN Guidelines for Ovarian Cancer from Version 3.2024 include:
+Continued
+LCOC-9
+• Pathologic diagnosis pathway modified: Imaging C/A/P CT with contrast if not previously done.
+Bullet added: eg, C/A/P CT, chest CT, A/P MRI, PET/CT, or PET/MRI.
+LCOC-10
+• Bullet 5 modified: Imaging as clinically indicated: eg, C/A/P CT, chest CT, A/P MRI, PET/CT, PET/MRI (skull base to mid-thigh). (also for LCOC-13)
+LCOC-12
+• Incompletely staged, modified: Imaging if not previously done (eg, C/A/P CT, chest CT, A/P MRI, PET/CT, PET/MRI) with contrast (if not previously
+done).
+LCOC-A
+• Footnote removed: An FDA-approved biosimilar is an appropriate substitute for bevacizumab.
+LCOC-B
+• Surveillance for Malignant Germ Cell Tumors extensively revised.
+• Footnote a added: Only for those patients who have a residual ovary.
+OV-A (3 of 4)
+• Interval Debulking Surgery After Neoadjuvant Chemotherapy of Invasive Epithelial Ovarian Cancer
+Bullet 2 modified: HIPEC with cisplatin (100 mg/m2) can be considered at the time of IDS for stage III disease. HIPEC can also be considered for
+suitable stage IV patients (category 2B) who have had a favorable response to neoadjuvant therapy both intraperitoneally and extraperitoneally,
+or in whom stage IV disease sites have completely resolved (eg, resolution of malignant pleural effusion) or are now deemed resectable. Sodium
+thiosulfate may be administered at the start of perfusion, followed by a continuous infusion, to allow for renal protection during HIPEC.
+Bullet 5 modified: While systemic lymphadenectomy of clinical-negative nodes is not recommended, suspicious and/or enlarged nodes should be
+resected, if possible. Removal of lymph nodes noted to have potential metastasis at the time of initial diagnosis should be considered, even if not
+currently suspicious or enlarged.
+OV-A (4 of 4)
+• Special Circumstances, bullet 1, sub-bullet, second sentence added: Consider endometrial sampling to exclude synchronous primary or hyperplasia.
+OV-B (2 of 3)
+• Less Common Ovarian Cancers (LCOC)
+Bullet 3, last sentence added: Features favoring primary ovarian carcinoma versus metastasis are: unilateral, "expansile" pattern of invasion, complex
+papillary pattern, size >10 cm, smooth external surface, microscopic cystic glands, necrotic luminal debris, mural nodules, and accompanying
+teratoma, adenofibroma, endometriosis, or Brenner tumor.
+OV-B (2 of 3)(continued)
+Bullet 4 added: Most early stage invasive mucinous ovarian cancers have an expansile pattern of growth characterized by complex glandular,
+papillary and/or cribriform architecture with a labyrinthine or anastomosing pattern and little or no intervening stroma. About 20% have an infiltrative
+pattern of destructive invasion of haphazardly arranged and angulated tumor cell nests into a desmoplastic stroma and measuring at least 5 mm in
+linear extent - and this has been associated with an increased risk of relapse and mortality.
+Bullet 5 modified: Metastatic colorectal adenocarcinomas also usually are positive for CK20 and CEA.
+Bullet 6, second sentence modified: Endometrioid adenocarcinomas are usually positive for cytokeratin 7 (CK7), PAX8, CA-125, and estrogen
+receptors.
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 7/240]
+
+NCCN Guidelines Version 3.2025
+Ovarian Cancer
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+UPDATES
+Updates in Version 1.2025 of the NCCN Guidelines for Ovarian Cancer from Version 3.2024 include:
+OV-C (1 of 12)
+• General
+Bullet 3, sub-bullet 2 modified: Patients of childbearing potential who desire fertility-sparing procedures should be referred to an appropriate
+fertility specialist (see Fertility, Reproductive Endocrine, and Sexual Health Considerations for Individuals with Ovaries in the NCCN Guidelines for
+Adolescent and Young Adult (AYA) Oncology).
+Bullet 8 added: An FDA-approved biosimilar is an appropriate substitute for any recommended systemic biologic therapy in the NCCN Guidelines.
+OV-C (2 of 12)
+• Language updated: "Surgery" has replaced "IDS" throughout this page.
+• Bullet 2 modified: Any of the primary IV regimens for stage II–IV high-grade serous carcinoma and respective LCOCs can be used as neoadjuvant
+therapy before surgery. Neoadjuvant therapy does not apply to LMP and other noninvasive cancers. See OV-C (6 of 12) and LCOC-A.
+• Bullet 4 modified: After neoadjuvant therapy and surgery any of the adjuvant therapy options for high-grade serious carcinoma (IV or IP/IV) and
+respective LCOCs can be considered. Neoadjuvant therapy does not apply to LMP and other noninvasive cancers. See OV-C (6 of 12) and LCOC-A.
+OV-C (3 of 12)
+• Principles of Maintenance PARP Inhibitor (PARPi) Therapy, bullet 3, sub-bullet 7 added: Current clinical HRD tests are proxy measures of HRD and
+lack accuracy in fully predicting functional HRD. HRD testing is recommended for those patients without germline BRCA1/2 mutations as HRD test
+status may provide information on the magnitude of benefit of PARP inhibitor maintenance therapy in these patients. The Panel considers the use of
+PARPi in patients who have HRP tumors, at present, to be of minimal benefit.
+OV-C (4 of 12)
+• Bullet 9 moved from OV-C (9A of 12): Patients who do not respond and progress on two consecutive regimens without evidence of clinical benefits
+have diminished likelihood of benefitting from additional therapy (Griffiths RW, et al. Int J Gynecol Cancer 2011;21:58-65). Decisions to offer clinical
+trials, supportive care, or additional therapy should be made on an individual basis.
+OV-C (5 of 12)
+• Mucinous carcinoma row header modified: Mucinous carcinoma (stage IA, IB, and IC, grades 1–3).
+OV-C (6 of 12)
+• Footnote h, sentence removed: See the NCCN Guidelines for Older Adult Oncology.
+• Footnote removed: An FDA-approved biosimilar is an appropriate substitute for bevacizumab. (also for OV-C [7 of 12], [8 of 12] and [9A of 12]).
+OV-C (8 of 12)
+• Useful in Certain Circumstances, Targeted Therapy
+Regimen added: Fam-trastuzumab deruxtecan-nxki (for HER2-positive tumors [IHC 3+ or 2+])(category 2B).
+Regimen added: Mirvetuximab soravtansine-gynx (for FRα-expressing tumors [≥75% positive tumor cells]).
+Regimen modified: Mirvetuximab soravtansine-gynx/bevacizumab (for FRα-expressing tumors [≥50% positive tumor cells])(category 2B).
+OV-C (8 of 12)(continued)
+• Footnote y added: For patients treated with two prior lines of platinum-based therapy.
+• Footnote removed: Patients who progress on two consecutive regimens without evidence of clinical benefits have diminished likelihood of benefitting
+from additional therapy (Griffiths RW, et al. Int J Gynecol Cancer 2011;21:58-65). Decisions to offer clinical trials, supportive care, or additional therapy
+should be made on an individual basis. (Also for OV-C [9A of 12])
+OV-C (9 of 12)
+• Useful in Certain Circumstances, Targeted Therapy
+Regimen modified: Mirvetuximab soravtansine-gynx/bevacizumab (for FRα-expressing tumors [≥25% positive tumor cells]).
+Regimen added: For mucinous carcinoma: FOLFIRI ± bevacizumab (category 2B).
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 8/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Epithelial Ovarian Cancer/Fallopian Tube Cancer/
+Primary Peritoneal Cancer
+NCCN Guidelines Index
+Table of Contents
+Discussion
+OV-1
+CLINICAL
+PRESENTATION
+WORKUP
+PRIMARY TREATMENTi,j,k
+Suspicious/
+palpable pelvic
+mass on abdomen/
+pelvis exam and/or
+ascites, abdominal
+distention
+and/or
+Symptoms
+without source of
+malignancy (ie,
+bloating, pelvis/
+abdomen pain,
+difficulty eating or
+feeling full quickly,
+urinary symptoms
+[urgency or
+frequency])
+Pathologic
+Staging
+(OV-4)
+Patients with
+ovarian cancer,
+fallopian
+tube cancer,
+or primary
+peritoneal
+cancer should
+have genetic
+risk evaluation
+and germline
+and somatic
+testing (if not
+previously
+done)f,g,h,k
+• Abdominal/pelvic exam
+• Pelvis ultrasound, abdomen/
+pelvis CT/MRI as clinically
+indicateda,b
+• Chest CT as clinically
+indicateda,c
+• Complete blood count (CBC),
+chemistry profile with liver
+function test (LFT)
+• CA-125 or other tumor markers
+as clinically indicatedd
+• Evaluate performance status
+and nutritional status
+• Gastrointestinal (GI) evaluation
+as clinically indicated
+• Reproductive endocrinology
+and infertility (REI) evaluation as
+clinically indicatede
+• Obtain family historyf,g,h
+• Refer to gynecologic oncologist
+for clinically suspicious lesionsi
+a CT is performed with oral and iodinated IV contrast (unless contraindicated due to anaphylaxis
+or significant renal dysfunction) with or without rectal contrast. MRI is performed with gadolinium-
+based contrast agents (unless contraindicated due to anaphylaxis) and is preferred in select
+patients with renal dysfunction over CT. Chest CT can be done with or without iodinated IV
+contrast.
+b PET/CT, MRI, or PET/MRI may be indicated for indeterminate lesions if results will alter
+management.
+c If there is concern for metastatic or disseminated disease.
+d Other tumor markers may include inhibin, beta-human chorionic gonadotropin (β-hCG), alpha-
+fetoprotein, lactate dehydrogenase (LDH), carcinoembryonic antigen (CEA), CA 19-9, and HE4.
+See Discussion for usefulness of diagnostic tests.
+e Reconsider REI as clinically indicated once pathologic diagnosis is available.
+f See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian, Pancreatic,
+and Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment: Colorectal,
+Endometrial, and Gastric.
+g Germline and somatic BRCA1/2 status informs maintenance therapy.
+h In the absence of a BRCA1/2 mutation, homologous recombination deficiency (HRD) status may
+provide information on the magnitude of benefit of PARP inhibitor (PARPi) therapy. For PARPi
+therapy in advanced stage disease, include measure of homologous recombination (HR) (OV-B).
+i Evaluation by a gynecologic oncologist is recommended for:
+•	All patients with suspected ovarian malignancies; published data demonstrate that primary
+assessment and debulking by a gynecologic oncologist results in a survival advantage.
+•	Patients being evaluated for neoadjuvant therapy prior to being considered a poor surgical
+candidate.
+•	Management of occult STICs.
+•	Consideration of laparoscopic evaluation to determine feasibility of debulking surgery in select
+patients.
+•	Endometrial biopsy as clinically indicated.
+j Principles of Surgery (OV-A).
+k Principles of Pathology (OV-B).
+l May be an option for select patients with stage IC based on histology.
+m Uterine preservation for potential future assisted reproductive approaches.
+n See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).
+o Carcinosarcoma, clear cell, mucinous, low-grade serous, grade 1 endometrioid, borderline
+epithelial, malignant sex cord-stromal tumors, and germ cell tumors.
+IA (fertility
+desired)
+IB (fertility
+desired)
+IA–IV, surgical
+candidate, optimal
+cytoreduction
+likely (fertility not
+desired)
+Poor surgical candidate
+or
+Low likelihood of optimal
+cytoreductionj
+Unilateral salpingo-oophorectomy
+(USO) + comprehensive surgical
+stagingj,k,l,m
+Hysterectomy/BSO +
+comprehensive stagingj,k
+and debulking as needed
+Neoadjuvant Therapy (OV-2)n
+CLINICAL
+STAGEi
+Diagnosis by previous surgery or tissue biopsy (cytopathology)
+Workup, Findings, and Primary Treatment (OV-3)
+Bilateral salpingo-oophorectomy
+(BSO) + comprehensive surgical
+stagingj,k,l,m
+For less
+common
+ovarian
+cancers
+(LCOC),o
+see
+LCOC-1
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 9/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Epithelial Ovarian Cancer/Fallopian Tube Cancer/
+Primary Peritoneal Cancer
+NCCN Guidelines Index
+Table of Contents
+Discussion
+IDS with completion
+hysterectomy/BSOj,k and
+cytoreduction. Consider
+HIPEC.j
+or
+Continue current therapy (for
+a total of at least 6 cycles)n
+or
+Therapy for Persistent
+Disease or Recurrence (OV-7)
+OV-2
+f See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian, Pancreatic,
+and Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment: Colorectal,
+Endometrial, and Gastric.
+g Germline and somatic BRCA1/2 status informs maintenance therapy.
+h In the absence of a BRCA1/2 mutation, HRD status may provide information on the
+magnitude of benefit of PARPi therapy. For PARPi therapy in advanced stage disease, include
+measure of HR (OV-B).
+i Evaluation by a gynecologic oncologist is recommended for:
+•	All patients with suspected ovarian malignancies; published data demonstrate that primary
+assessment and debulking by a gynecologic oncologist results in a survival advantage.
+•	Patients being evaluated for neoadjuvant therapy prior to being considered a poor surgical
+candidate.
+•	Management of occult STICs.
+•	Consideration of laparoscopic evaluation to determine feasibility of debulking surgery in
+select patients.
+•	Endometrial biopsy as clinically indicated.
+j Principles of Surgery (OV-A).
+k Principles of Pathology (OV-B).
+n See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).
+p If biopsy is not feasible, cytopathology from ascites or pleural effusion combined with CA-
+125:CEA ratio of >25 can be used.
+q Completion surgery after 3–4 cycles is preferred; however, surgery may be performed after
+4–6 cycles based on the clinical judgment of the gynecologic oncologist.
+r Neoadjuvant therapy does not apply to low malignant potential (LMP) or other noninvasive
+cancers (see LCOC-1).
+Neoadjuvant
+therapyi,n,q,r
+(category 1)
+and
+Genetic risk
+evaluation and
+germline and
+somatic testing
+(if not previously
+done)f,g,h,k
+Evaluation by
+gynecologic
+oncologisti,j
+and
+Histologic
+confirmationk,p
+(biopsy preferred)
+and/or
+Laparoscopic
+evaluation to
+determine feasibility
+of resection
+Response
+Interval debulking surgery
+(IDS) with completion
+hysterectomy/BSOj,k and
+cytoreduction. Consider
+hyperthermic intraperitoneal
+chemotherapy (HIPEC).j
+Progressive disease
+IDS with completion
+hysterectomy/BSOj,k and
+cytoreduction. Consider
+HIPEC.j
+or
+Therapy for Persistent
+Disease or Recurrence
+(OV-7)
+Therapy for Persistent Disease or
+Recurrence (OV-7)
+Maintenance
+Therapy
+(OV-5)
+Adjuvant
+therapyn
+POOR SURGICAL CANDIDATE OR LOW LIKELIHOOD OF OPTIMAL CYTOREDUCTION
+NEOADJUVANT THERAPY
+PRIMARY TREATMENT
+Confirmed
+poor surgical
+candidate or
+low likelihood
+of optimal
+cytoreduction
+Stable
+disease
+LCOC-1
+LCOC
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 10/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Epithelial Ovarian Cancer/Fallopian Tube Cancer/
+Primary Peritoneal Cancer
+NCCN Guidelines Index
+Table of Contents
+Discussion
+OV-3
+DIAGNOSIS BY PREVIOUS SURGERY
+FINDINGS
+Patient
+referred
+with newly
+diagnosed
+ovarian
+cancer,
+including
+less common
+ovarian
+cancers
+(LCOCs),
+after recent
+surgical
+procedure
+Consider surgical stagingj,k (if not
+previously done) if considering
+observation or to inform systemic
+therapy decisionss
+Tumor
+cytoreductive
+surgeryj,k
+Neoadjuvant Therapy (OV-2)
+Suspect
+resectable
+residual disease
+Suspect
+unresectable
+residual diseaser
+Adjuvant
+Therapy
+(OV-4)
+a CT is performed with oral and iodinated IV contrast (unless contraindicated due to
+anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI is
+performed with gadolinium-based contrast agents (unless contraindicated due to
+anaphylaxis) and is preferred in select patients with renal dysfunction over CT. Chest CT
+can be done with or without iodinated IV contrast.
+d Other tumor markers may include inhibin, β-hCG, alpha-fetoprotein, LDH, CEA, CA 19-9,
+and HE4. See Discussion for usefulness of diagnostic tests.
+f See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian,
+Pancreatic, and Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment:
+Colorectal, Endometrial, and Gastric.
+g Germline and somatic BRCA1/2 status informs maintenance therapy.
+h In the absence of a BRCA1/2 mutation, HRD status may provide information on the
+magnitude of benefit of PARPi therapy. For PARPi therapy in advanced stage disease,
+include measure of HR (OV-B).
+i Evaluation by a gynecologic oncologist is recommended for:
+•	All patients with suspected ovarian malignancies; published data demonstrate that
+primary assessment and debulking by a gynecologic oncologist results in a survival
+advantage.
+•	Patients being evaluated for neoadjuvant therapy prior to being considered a poor
+surgical candidate.
+•	Management of occult STICs.
+•	Consideration of laparoscopic evaluation to determine feasibility of debulking surgery in
+select patients.
+•	Endometrial biopsy as clinically indicated.
+j Principles of Surgery (OV-A).
+k Principles of Pathology (OV-B).
+r Neoadjuvant therapy does not apply to LMP and other noninvasive cancers (see LCOC-1).
+s Although comprehensive surgical staging has not been shown to improve survival in
+patients with no evidence of residual disease, it can be important for determining the
+most appropriate postoperative management options, including selection of adjuvant and
+maintenance therapy.
+• Evaluation by gynecologic
+oncologisti
+• Obtain family historyf
+• Genetic risk evaluation and
+germline and somatic testingf,g,h
+(if not previously done)
+• Review prior imaging studies,
+operative notes, and pathologyk
+• Imaging as clinically indicateda
+(eg, C/A/P CT, chest CT, A/P MRI,
+PET/MRI, PET/CT, and/or pelvis
+ultrasound)
+• CBC, chemistry profile with LFTs
+• CA-125 or other tumor markers
+as clinically indicatedd
+• REI as clinically indicated
+PRIMARY TREATMENT
+Evidence of residual
+disease on workup
+No evidence of residual
+disease on workup
+(suspect stage I)
+No evidence of residual
+disease on workup
+(suspect stage II–IV)
+Consider surgical stagingj,k if
+not previously done, to inform
+systemic therapy decisionss
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 11/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Epithelial Ovarian Cancer/Fallopian Tube Cancer/
+Primary Peritoneal Cancer
+NCCN Guidelines Index
+Table of Contents
+Discussion
+OV-4
+PATHOLOGIC STAGINGt,u
+Stage IA or IB
+Stage lC
+(High-grade serous or
+grade 2/3 endometrioid)
+Stage II
+Stage III
+Stage IV
+IV platinum-based therapyn,v
+(see primary regimens for
+stage I disease [OV-C, 5 of 12])
+Observe
+or
+Intravenous (IV) platinum-based
+therapyn,v (see primary regimens for
+stage I disease [OV-C, 5 of 12])
+Monitoring/
+Follow-up
+(OV-6)
+Maintenance
+Therapy (OV-5)
+a CT is performed with oral and iodinated IV contrast (unless contraindicated due
+to anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI
+is performed with gadolinium-based contrast agents (unless contraindicated due
+to anaphylaxis) and is preferred in select patients with renal dysfunction over CT.
+Chest CT can be done with or without iodinated IV contrast.
+n See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions
+(OV-D).
+o Carcinosarcoma, clear cell, mucinous, low-grade serous, grade 1 endometrioid,
+borderline epithelial, malignant sex cord-stromal tumors, and germ cell tumors.
+t Pathologists recommend categorizing serous ovarian cancer as either low-grade
+or high-grade. Grade 2 serous is considered high-grade.
+u Consider expert pathologic review to confirm histologic diagnosis. See WHO
+Histologic Classification (OV-E).
+v Patients receiving primary chemotherapy will be monitored as follows:
+1. Every 1–3 cycles: Physical exam and consider pelvic exam
+2. As indicated: Interim CBC and chemistry profiles
+3. CA-125 levels or other tumor markers as clinically indicated prior to each cycle
+of chemotherapy
+4. C/A/P CT or MRI with contrast, PET/CT (skull base to mid-thigh), or PET as
+indicated.
+x No definitive evidence of disease.
+Grade 2 endometrioid
+Grade 3 endometrioid/
+high-grade serous
+carcinomat
+Platinum-based
+chemotherapy
+(see primary
+regimens for stage
+II–IV disease [OV-C,
+6 of 12])n,v
+PRIMARY CHEMOTHERAPY/PRIMARY ADJUVANT THERAPYv
+Provide symptom
+management and
+best supportive care.
+Refer for palliative
+care assessment, if
+appropriate.
+• See NCCN Guidelines
+for Palliative Care
+• See NCCN Guidelines
+for Survivorship
+• Provide symptom
+management and
+best supportive care.
+Refer for palliative
+care assessment, if
+appropriate.
+See NCCN Guidelines
+for Palliative Care
+See NCCN Guidelines
+for Survivorship
+LCOC-1
+Less common ovarian cancers (LCOC), any stageo,u
+Complete
+Response
+(CR)x/Partial
+Response (PR)
+Stable disease
+or progression
+Therapy for Persistent
+Disease or Recurrence
+(OV-7)
+Imaginga
+as clinically
+indicated:
+eg, C/A/P CT, chest
+CT, A/P MRI, PET/
+MRI, PET/CT (skull
+base to mid-thigh)
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 12/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Epithelial Ovarian Cancer/Fallopian Tube Cancer/
+Primary Peritoneal Cancer
+NCCN Guidelines Index
+Table of Contents
+Discussion
+CRx/PR
+OV-5
+STAGE II, III, IVw
+POST PRIMARY TREATMENT
+HR
+deficient
+Homologous
+recombination (HR)
+proficient or status
+unknown
+Olaparib (category 1)
+or
+Niraparib (category 1)
+or
+Rucaparib
+or
+Observe for select stage II disease with CR
+Observe (if CR)
+or
+Niraparib (HR deficient)
+or
+Rucaparib
+or
+Olaparib (HR deficient) (category 2B)
+or
+Therapy for Persistent Disease or Recurrence (OV-7)
+Monitoring/
+Follow-up (OV-6)
+Monitoring/
+Follow-Up (OV-6)
+MAINTENANCE THERAPYh,n,y
+Bevacizumab
+used as part
+of primary
+therapy
+No
+bevacizumab
+used during
+primary
+therapy
+Germline
+or somatic
+BRCA1/2
+mutation
+BRCA1/2
+wild-type or
+unknownh
+Germline
+or somatic
+BRCA1/2
+mutation
+BRCA1/2
+wild-type or
+unknownh
+Bevacizumab + olaparib (category 1)
+or
+Bevacizumab + niraparib (if unable to tolerate olaparib)
+or
+Bevacizumab
+or
+Olaparib (category 2B)
+Bevacizumab + olaparib (category 1)
+or
+Bevacizumab + niraparib (if unable to tolerate
+olaparib)
+or
+Olaparibz
+or
+Niraparibz
+or
+Rucaparibz
+h In the absence of a BRCA1/2 mutation, HRD status may provide information on the
+magnitude of benefit of PARPi therapy. For PARPi therapy in advanced stage disease,
+include measure of HR (OV-B).
+n See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).
+w Post primary treatment recommendations for stage II–IV high-grade serous or grade 2/3
+endometrioid carcinoma; consider for clear cell carcinoma or carcinosarcoma with a BRCA1/2
+mutation.
+x No definitive evidence of disease.
+y Data are limited for maintenance therapy with a PARPi for patients with stage II disease.
+z After first-line therapy with bevacizumab, data are limited on maintenance therapy with a
+single-agent PARPi (olaparib, niraparib, or rucaparib) for patients with a germline or somatic
+BRCA1/2 mutation. However, based on the magnitude of benefit of PARPi maintenance
+therapy for other subgroups, single-agent PARPi can be considered.
+Bevacizumab
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 13/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Epithelial Ovarian Cancer/Fallopian Tube Cancer/
+Primary Peritoneal Cancer
+NCCN Guidelines Index
+Table of Contents
+Discussion
+OV-6
+MONITORING/FOLLOW-UP FOR
+PATIENTS NOT RECEIVING
+TREATMENT
+RECURRENT DISEASEbb
+Stage I, II,
+III, and
+IV after
+primary
+treatment
+a CT is performed with oral and iodinated IV contrast (unless contraindicated due to
+anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI is
+performed with gadolinium-based contrast agents (unless contraindicated due to
+anaphylaxis) and is preferred in select patients with renal dysfunction over CT. Chest
+CT can be done with or without iodinated IV contrast.
+f See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian,
+Pancreatic, and Prostate and NCCN Guidelines for Genetic/Familial High-Risk
+Assessment: Colorectal, Endometrial, and Gastric.
+n See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-
+D).
+aa There are data regarding the utility of CA-125 for monitoring of ovarian cancer after
+completion of primary therapy. See The Society of Gynecologic Oncology (SGO)
+position statement and Discussion.
+• Imaging studies as
+clinically indicateda,cc:
+C/A/P CT, MRI, PET/CT, or
+PET
+• Tumor molecular testingdd
+if not previously done
+• Imaging studies as
+clinically indicateda,cc:
+C/A/P CT, MRI, PET/CT, or
+PET
+• Tumor molecular testingdd
+if not previously done
+• Imaging studies as
+clinically indicateda,cc:
+C/A/P CT, MRI, PET/CT, or
+PET
+• Tumor molecular testingdd
+if not previously done
+Rising CA-125,
+no previous
+chemotherapy
+or
+Clinical relapse,
+no previous
+chemotherapy
+Clinical relapse,
+previous
+chemotherapy
+Serially rising
+CA-125, previous
+chemotherapy
+• Visits every 2–4 mo for 2 y, then
+3–6 mo for 3 y, then annually after
+5 y
+• Physical exam including pelvis
+exam as clinically indicated
+• Imaging as clinically indicateda
+(eg, C/A/P CT, chest CT, A/P MRI,
+PET/MRI, PET/CT) (skull base to
+mid-thigh)
+• CBC and chemistry profile as
+indicated
+• CA-125aa or other tumor markers
+if initially elevated
+• Refer for genetic risk evaluation, if
+not previously donef
+• Long-term wellness care
+(See NCCN Guidelines for
+Survivorship)
+Primary Treatment
+(OV-1)
+Delay treatment until
+clinical relapse
+or
+Immediate treatment
+for recurrent disease
+(category 2B)n
+Therapy for Persistent
+Disease or Recurrence
+(OV-7)
+bb Consider symptom management and best supportive care. See NCCN Guidelines
+for Palliative Care. Refer for palliative care assessment, if appropriate.
+cc Surveillance imaging may be indicated when tumor markers are considered
+unreliable, the physical exam is unreliable, and/or there is a high risk of recurrence.
+dd Validated molecular testing should be performed in a CLIA-approved facility using
+the most recent available tumor tissue. Tumor molecular analysis is recommended
+to include, at a minimum, tests to identify potential benefit from targeted therapeutics
+that have tumor-specific or tumor-agnostic benefit including, but not limited to, HER2
+status (by IHC), BRCA1/2, HRD status, microsatellite instability (MSI), mismatch
+repair (MMR), tumor mutational burden (TMB), BRAF, FRα (FOLR1), RET, and NTRK
+if prior testing did not include these markers. More comprehensive testing may be
+particularly important in LCOC with limited approved therapeutic options (OV-B).
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 14/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Epithelial Ovarian Cancer/Fallopian Tube Cancer/
+Primary Peritoneal Cancer
+NCCN Guidelines Index
+Table of Contents
+Discussion
+OV-7
+DISEASE STATUSf,dd,ee
+Platinum-resistant diseaseff:
+Progression on primary,
+maintenance or recurrence therapy
+or
+Stable or persistent disease
+(if not on maintenance therapy)
+or
+Complete remission and relapse <6
+mo after completing chemotherapy
+Platinum-sensitive diseaseff:
+Complete remission
+and relapse ≥6 mo
+after completing prior
+chemotherapy
+f See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian,
+Pancreatic, and Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment:
+Colorectal, Endometrial, and Gastric.
+n See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).
+dd Validated molecular testing should be performed in a CLIA-approved facility using
+the most recent available tumor tissue. Tumor molecular analysis is recommended to
+include, at a minimum, tests to identify potential benefit from targeted therapeutics that
+have tumor-specific or tumor-agnostic benefit including, but not limited to, HER2 status
+(by IHC), BRCA1/2, HRD status, MSI, MMR, TMB, BRAF, FRα (FOLR1), RET, and
+NTRK if prior testing did not include these markers. More comprehensive testing may be
+particularly important in LCOC with limited approved therapeutic options (OV-B).
+ee Tumor molecular testing prior to initiation of therapy for persistent/recurrent disease, if
+not previously done.
+Best supportive care (See NCCN Guidelines for Palliative Care)
+and/or
+Recurrence therapy (OV-C, 9 of 12)n,jj,kk
+THERAPY FOR PERSISTENT DISEASE OR RECURRENCEn,gg,hh,ii
+ff Definitions of platinum-sensitive and platinum-resistant disease
+represent a spectrum of disease; clinical judgment and flexibility should
+be utilized in determining treatment options.
+gg Data are limited on primary and maintenance therapy for recurrent/
+persistent LCOC.
+hh During and after treatment for recurrence, patients should be evaluated
+as indicated with tumor markers and repeat imaging (with modalities
+previously used) to document response and/or disease status.
+ii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).
+jj Patients who do not respond and progress on two consecutive regimens
+without evidence of clinical benefits have diminished likelihood of
+benefitting from additional therapy (Griffiths RW, et al. Int J Gynecol
+Cancer 2011;21:58-65). Decisions to offer clinical trials, supportive care,
+or additional therapy should be made on an individual basis.
+kk Localized radiation therapy (RT) can be considered to palliate
+symptoms and/or for oligometastatic disease.
+OV-8
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 15/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Epithelial Ovarian Cancer/Fallopian Tube Cancer/
+Primary Peritoneal Cancer
+NCCN Guidelines Index
+Table of Contents
+Discussion
+OV-8
+DISEASE STATUSf,dd,ee
+Platinum-
+sensitive
+diseaseff:
+Complete
+remission and
+relapse ≥6 mo
+after completing
+prior
+chemotherapy
+Radiographic
+and/or clinical
+relapse
+Biochemical
+relapse (rising
+CA-125 and no
+radiographic
+evidence of
+disease)
+f See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian, Pancreatic,
+and Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment: Colorectal,
+Endometrial, and Gastric.
+j Principles of Surgery (OV-A).
+k Principles of Pathology (OV-B).
+n See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).
+dd Validated molecular testing should be performed in a CLIA-approved facility using the
+most recent available tumor tissue. Tumor molecular analysis is recommended to include,
+at a minimum, tests to identify potential benefit from targeted therapeutics that have tumor-
+specific or tumor-agnostic benefit including, but not limited to, HER2 status (by IHC),
+BRCA1/2, HRD status, MSI, MMR, TMB, BRAF, FRα (FOLR1), RET, and NTRK if prior
+testing did not include these markers. More comprehensive testing may be particularly
+important in LCOC with limited approved therapeutic options (OV-B).
+ee Tumor molecular testing prior to initiation of therapy for persistent/recurrent disease, if not
+previously done.
+ff Definitions of platinum-sensitive and platinum-resistant disease represent a spectrum of
+disease; clinical judgment and flexibility should be utilized in determining treatment options.
+Combination platinum-
+based chemotherapy,n
+preferred for first
+recurrence (category 1)
+or
+Recurrence therapyn,kk
+and/or
+Best supportive care
+(See NCCN Guidelines
+for Palliative Care)
+Consider
+secondary
+cytoreductive
+surgeryj,k
+Immediate platinum-based
+recurrence therapyn (category 2B)
+and/or
+Best supportive care (See NCCN
+Guidelines for Palliative Care)
+RECURRENCE THERAPY FOR PLATINUM-SENSITIVE DISEASEn,gg,hh,ii
+Maintenance therapy (if PR or CR)
+• Useful in certain circumstances:
+Continue bevacizumab if previously
+treated with chemotherapy +
+bevacizumab;
+or
+PARPi therapy (for those with BRCA
+1/2 mutation)ll:
+ ◊If not previously used (category 1)
+ ◊If disease has not progressed
+during prior PARPi treatment
+or
+Observe
+gg Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.
+hh During and after treatment for recurrence, patients should be evaluated as indicated with
+tumor markers and repeat imaging (with modalities previously used) to document response
+and/or disease status.
+ii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).
+kk Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.
+ll PARPi options include niraparib, olaparib, or rucaparib in patients with BRCA-mutated
+platinum-sensitive disease who have completed two or more lines of platinum-based
+therapy. Based on FDA indication, niraparib is limited to those with a deleterious or
+suspected deleterious germline BRCA mutation. Based on FDA indications, olaparib and
+rucaparib are limited to those with a deleterious or suspected deleterious BRCA mutation
+(germline or somatic). Caution should be used when using maintenance PARPi for longer
+than 24 months. There are limited data on the use of a maintenance PARPi in patients who
+previously received a PARPi. Combination bevacizumab/PARPi is not recommended for
+maintenance after recurrence therapy.
+Monitoring/
+Follow-up
+(OV-6)
+Delay treatment until
+radiographic and/or clinical
+relapse
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 16/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Less Common Ovarian Cancers
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-1
+a WHO Histologic Classification (OV-E).
+b Due to emerging therapeutics for LCOC, there is value in identifying potential pathways for rare cancers and it may be useful for clinical trial recruitment. Tumor
+molecular testing can be considered, if not previously done, as it may help guide treatment. There are limited data in these cancers given their infrequency and it will
+be difficult to acquire prospective data. Individualized treatment may be the best treatment for these rare tumors. [Committee on the State of the Science in Ovarian
+Cancer, et al. Ovarian Cancers: Evolving Paradigms in Research and Care. Washington (DC): National Academies Press (US) Copyright 2016 by the National
+Academy of Sciences. All rights reserved; 2016.]
+c Principles of Surgery (OV-A).
+d Principles of Pathology (OV-B).
+e LCOC are typically diagnosed after surgery. See Workup (OV-1).
+DIAGNOSISa,b
+Surgeryc,d and histologic diagnosisb,e
+Malignant germ cell tumors
+LCOC-12 to
+LCOC-14
+Ovarian serous borderline epithelial
+tumors (low malignant potential [LMP])
+LCOC-8 to
+LCOC-10
+Malignant sex cord-stromal tumors
+LCOC-11
+Carcinosarcoma
+(malignant mixed Müllerian tumor [MMMT])
+LCOC-2
+Clear cell carcinoma of the ovary
+LCOC-3
+Mucinous neoplasms of the ovary
+LCOC-4
+Low-grade serous carcinoma
+LCOC-6
+LCOC-5
+Grade 1 endometrioid carcinoma
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 17/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Carcinosarcoma (Malignant Mixed Müllerian Tumors)
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-2
+PATHOLOGIC DIAGNOSISa
+ADJUVANT TREATMENTf
+Carcinosarcoma (MMMTs)
+of the ovaryg,h,i
+Stage I
+Stage
+II–IV
+IV paclitaxel/carboplatin every
+3 weeks (preferred)f
+or
+Other systemic therapy
+• Stage I (OV-C, 5 of 12)
+• Stage II–IV (OV-C, 6 of 12)
+a WHO Histologic Classification (OV-E).
+f See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).
+g If not previously done, consider surgical staging and resection of residual disease (OV-3).
+h If not previously done, consider germline and somatic testing (OV-B).
+i Germline and somatic BRCA1/2 status informs maintenance therapy. In the absence of a BRCA1/2 mutation, HRD status may provide information on the magnitude of
+benefit of PARPi therapy. For PARPi therapy in advanced stage disease, include measure of HR (OV-B).
+j Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.
+MONITORING/
+FOLLOW-UP
+Monitoring/
+Follow-up
+(including
+tumor testing)
+and
+Recurrence
+therapyj
+(OV-6)
+If known BRCA1/2
+mutation, consider
+maintenance therapy
+(post-primary
+therapy) (OV-5)
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 18/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Clear Cell Carcinoma of the Ovary
+NCCN Guidelines Index
+Table of Contents
+Discussion
+Clear cell carcinoma
+of the ovaryg,h,i
+Stage
+IC2– IC3
+Stage IA
+IB, IC1
+Stage II–IV
+IV platinum-based therapy
+(see primary regimens for stage I disease
+[OV-C, 5 of 12])
+IV platinum-based therapy
+(see primary regimens for stage I disease
+[OV-C, 5 of 12])
+or
+Observeg
+Systemic therapy
+(OV-C, 6 of 12)
+LCOC-3
+PATHOLOGIC
+DIAGNOSISa
+ADJUVANT TREATMENTf
+MONITORING/
+FOLLOW-UP
+Monitoring/Follow-up
+(including tumor testing)
+and
+Recurrence therapyj
+(OV-6)
+If known BRCA1/2
+mutation, consider
+maintenance therapy
+(post-primary therapy)
+(OV-5)
+a WHO Histologic Classification (OV-E).
+f See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).
+g If not previously done, consider surgical staging and resection of residual disease (OV-3).
+h If not previously done, consider germline and somatic testing (OV-B).
+i Germline and somatic BRCA1/2 status informs maintenance therapy. In the absence of a BRCA1/2 mutation, HRD status may provide information on the magnitude
+of benefit of PARPi therapy. For PARPi therapy in advanced stage disease, include measure of HR (OV-B).
+j Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 19/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Mucinous Neoplasms of the Ovary
+NCCN Guidelines Index
+Table of Contents
+Discussion
+Stage IA
+carcinoma
+Stage IC
+carcinoma
+Stage II–IV
+carcinoma
+Mucinous
+neoplasms of
+the ovaryd,g,h
+If not previously done:
+• GI evaluationk
+• Carcinoembryonic
+antigen (CEA)
+• CA 19-9
+Observe
+Systemic therapy (OV-C, 6 of 12)f
+a WHO Histologic Classification (OV-E).
+d Principles of Pathology (OV-B).
+f See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).
+g If not previously done, consider surgical staging and resection of residual disease (OV-3).
+h If not previously done, consider germline and somatic testing (OV-B).
+j Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.
+k Consider additional testing, including but not limited to upper and lower endoscopic evaluation, to aid in the identification of metastatic GI malignancies versus primary
+mucinous ovarian cancer.
+ADDITIONAL WORKUP
+LCOC-4
+PATHOLOGIC
+DIAGNOSISa
+Borderline
+Observe
+ADJUVANT TREATMENTf
+Monitoring/
+Follow-up
+(including
+tumor testing)
+and
+Recurrence
+therapyj
+(OV-6)
+MONITORING/
+FOLLOW-UP
+Stage IB
+carcinoma
+Expansile
+Infiltrative
+Observe
+or
+Systemic therapy
+(OV-C, 5 of 12)f
+Observe
+Expansile
+Infiltrative
+Systemic therapy
+(OV-C, 5 of 12)f
+Expansile
+Infiltrative
+Observe
+or
+Systemic therapy
+(OV-C, 5 of 12)f
+Systemic therapy
+(OV-C, 5 of 12)f
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 20/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Grade 1 Endometrioid Carcinoma
+NCCN Guidelines Index
+Table of Contents
+Discussion
+a WHO Histologic Classification (OV-E).
+f See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions
+(OV-D).
+g If not previously done, consider surgical staging and resection of residual disease
+(OV-3).
+h If not previously done, consider germline and somatic testing (OV-B).
+j Data are limited on primary and maintenance therapy for recurrent/persistent
+LCOC.
+l MSI/MMR testing is recommended for all patients with endometrioid carcinoma.
+m Other hormonal therapy options include: aromatase inhibitors (ie, anastrozole,
+exemestane), leuprolide acetate, goserelin acetate, and tamoxifen.
+LCOC-5
+Grade 1
+endometrioid
+carcinomag,h,l
+Stage IA–IB
+Stage IC
+Stage II–IV
+Observeg
+Observeg (category 2B)
+or
+Systemic therapy (OV-C, 5 of 12)f
+• Chemotherapyf
+  or
+• Hormonal therapyf
+(category 2B)
+Systemic therapy (OV-C, 6 of 12)f
+• Chemotherapyf
+  or
+• Hormonal therapyf
+(category 2B)
+Observe
+or
+Maintenance letrozole
+(category 2B) or other
+hormonal therapy
+(category 2B)m
+Observe
+or
+Maintenance letrozole
+(category 2B) or other
+hormonal therapy
+(category 2B)m
+PATHOLOGIC
+DIAGNOSISa
+MONITORING/
+FOLLOW-UP
+ADJUVANT TREATMENT
+Monitoring/Follow-up
+(including tumor testing)
+and
+Recurrence therapyj
+(OV-6)
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 21/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Low-Grade Serous Carcinoma
+NCCN Guidelines Index
+Table of Contents
+Discussion
+a WHO Histologic Classification (OV-E).
+f See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).
+g If not previously done, consider surgical staging and resection of residual disease (OV-3).
+h If not previously done, consider germline and somatic testing (OV-B).
+n Other hormonal therapy options include: aromatase inhibitors (ie, anastrozole, exemestane), leuprolide acetate, and goserelin acetate.
+ADJUVANT TREATMENT
+LCOC-6
+Low-grade
+serous
+carcinomag,h
+Stage
+IA–IB
+Stage IC
+Stage
+II–IV
+Observeg
+Maintenance letrozole
+or
+Other hormonal therapy
+(category 2B)n
+PATHOLOGIC
+DIAGNOSISa
+MONITORING/
+FOLLOW-UP
+Systemic therapy (OV-C, 6 of 12)f
+• Chemotherapyf
+  or
+• Hormonal therapyf
+(category 2B)
+Observeg (category 2B)
+or
+Systemic therapy (OV-C, 5 of 12)f
+• Chemotherapyf
+  or
+• Hormonal therapyf
+(category 2B)
+Observe
+or
+Maintenance letrozole
+or
+Other hormonal therapy
+(category 2B)n
+Monitoring/
+Follow-
+up for
+Recurrent
+Disease
+(LCOC-7)
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 22/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Low-Grade Serous Carcinoma
+NCCN Guidelines Index
+Table of Contents
+Discussion
+MONITORING/FOLLOW-
+UP FOR RECURRENCE
+RECURRENCE THERAPYs
+• Visits every 2–4 mo for 2 y, then 3–6 mo for 3 y, then
+annually after 5 y
+• Physical exam including pelvic exam as clinically
+indicated
+• Tumor molecular testing if not previously doneo
+• Imaging as clinically indicatedp (eg, C/A/P CT, chest
+CT, A/P MRI, PET/CT, or PET/MRI) (skull base to mid-
+thigh)
+• CBC and chemistry profile as indicated
+• CA-125q or other tumor markers if initially elevated
+• Refer for genetic risk evaluation, if not previously
+doner
+• Long-term wellness care (See NCCN Guidelines for
+Survivorship)
+Recurrent
+diseaset
+Hormonal therapyu
+or
+Chemotherapy (if not previously used), see OV-C (6 of 12)
+or
+Systemic therapyf,v
+• For platinum-sensitive disease, see OV-C (8 of 12)
+• For platinum-resistant disease, see OV-C (9 of 12)
+or
+Observation
+f See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions
+(OV-D).
+o Validated molecular testing should be performed in a CLIA-approved facility
+using the most recent available tumor tissue. Tumor molecular analysis is
+recommended to include, at a minimum, tests to identify potential benefit from
+targeted therapeutics that have tumor-specific or tumor-agnostic benefit including,
+but not limited to, HER2 status (by IHC), BRCA1/2, HRD status, MSI, MMR,
+TMB, BRAF, FRα (FOLR1), RET, and NTRK if prior testing did not include these
+markers. More comprehensive testing may be particularly important in LCOC with
+limited approved therapeutic options (OV-B).
+p CT is performed with oral and iodinated IV contrast (unless contraindicated due
+to anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI
+is performed with gadolinium-based contrast agents (unless contraindicated due
+to anaphylaxis) and is preferred in select patients with renal dysfunction over CT.
+Chest CT can be done with or without iodinated IV contrast.
+q There are data regarding the utility of CA-125 for monitoring of ovarian cancer
+after completion of primary therapy. See The Society of Gynecologic Oncology
+(SGO) position statement and Discussion.
+r See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian,
+Pancreatic, and Prostate and NCCN Guidelines for Genetic/Familial High-Risk
+Assessment: Colorectal, Endometrial, and Gastric.
+s There is no standard sequencing of drugs for recurrent disease. Considerations
+include prior therapies, disease burden, relative efficacy, and relative toxicity
+profile.
+t Consider secondary cytoreduction in patients with long disease-free interval,
+isolated masses rather than diffuse carcinomatosis on imaging, and/or bowel
+obstruction.
+u An aromatase inhibitor (ie, letrozole, anastrozole, exemestane) is preferred
+if not used previously. Fulvestrant, leuprolide acetate, or goserelin acetate is
+recommended if an aromatase inhibitor was given previously.
+v Data are limited on maintenance therapy for recurrent/resistant LCOC. See OV-8
+for maintenance options after platinum-based therapy, and patient selection
+criteria.
+LCOC-7
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 23/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Ovarian Serous Borderline Epithelial Tumors
+(Low Malignant Potential)
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-8
+PATHOLOGIC
+DIAGNOSISa
+a WHO Histologic Classification (OV-E).
+c Principles of Surgery (OV-A).
+d Principles of Pathology (OV-B).
+w Chemotherapy (IV or IP) has not been shown to be beneficial in ovarian borderline epithelial tumors (LMP).
+x Standard recommendation includes a patient evaluation by a gynecologic oncologist.
+Observe
+See adjuvant
+options (LCOC-6)
+Ovarian serous borderline
+epithelial tumors (LMP)a
+ADJUVANT TREATMENTx
+Prior complete
+surgical resectionc,d
+No low-grade
+serous carcinoma
+Prior incomplete
+surgical resectionc,d
+Low-grade serous
+carcinomaw
+Monitoring/
+Follow-up
+(LCOC-10)
+LCOC-9
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 24/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Ovarian Serous Borderline Epithelial Tumors
+(Low Malignant Potential)
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-9
+PATHOLOGIC
+DIAGNOSISa
+a WHO Histologic Classification (OV-E).
+c Principles of Surgery (OV-A).
+d Principles of Pathology (OV-B).
+p CT is performed with oral and iodinated IV contrast (unless contraindicated due
+to anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI
+is performed with gadolinium-based contrast agents (unless contraindicated due
+to anaphylaxis) and is preferred in select patients with renal dysfunction over CT.
+Chest CT can be done with or without iodinated IV contrast.
+w Chemotherapy (IV or IP) has not been shown to be beneficial in ovarian
+borderline epithelial tumors (LMP).
+x Standard recommendation includes a patient evaluation by a gynecologic
+oncologist.
+y For pathologically proven ovarian borderline epithelial tumors, lymph node
+evaluation may be considered on a case-by-case basis.
+z In patients who underwent USO, consider completion surgery (eg, contralateral
+USO, hysterectomy) after completion of childbearing (category 2B).
+aa If patient is medically unfit, or for those with unresectable residual disease.
+Residual
+disease
+suspected after
+first procedure
+and/or on
+imaging
+No residual disease
+remaining after first
+procedure and/or on imaging
+Ovarian
+serous
+borderline
+epithelial
+tumor (LMP),
+incomplete
+surgical
+staging,a
+or tumor
+reductive
+surgery
+Imagingp
+if not
+previously
+done
+• eg, C/A/P
+CT, chest
+CT, A/P
+MRI, PET/
+CT, PET/
+MRI
+Observez
+Monitoring/
+Follow-up
+(LCOC-10)
+LCOC-6
+OV-4
+ADJUVANT TREATMENTx
+Completion surgery (contralateral
+USO, hysterectomy) and resection of
+residual diseasey
+or
+Fertility-sparing surgery (if fertility
+desired)c,d and resection of residual
+diseasey,z
+or
+Consider no surgical intervention for
+select patientsaa
+Borderline on
+final pathology
+Low-grade
+serous
+carcinoma on
+final pathologyw
+High-grade
+serous on final
+pathologyw
+Monitoring/
+Follow-up
+(LCOC-10)
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 25/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Ovarian Serous Borderline Epithelial Tumors
+(Low Malignant Potential)
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-10
+MONITORING/FOLLOW-UP
+p CT is performed with oral and iodinated IV contrast (unless contraindicated due
+to anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI
+is performed with gadolinium-based contrast agents (unless contraindicated due
+to anaphylaxis) and is preferred in select patients with renal dysfunction over CT.
+Chest CT can be done with or without iodinated IV contrast.
+q There are data regarding the utility of CA-125 for monitoring of ovarian cancer
+after completion of primary therapy. See The Society of Gynecologic Oncology
+(SGO) position statement and Discussion.
+w Chemotherapy (IV or IP) has not been shown to be beneficial in ovarian
+borderline epithelial tumors (LMP).
+Surgical
+evaluation
++ debulking
+if appropriate
+• Visits every 3–12 mo for up to 5 y,
+then as clinically indicated
+• Physical exam including pelvic exam
+as clinically indicated
+• CA-125q or other tumor markers every
+visit if initially elevated
+• CBC, chemistry profile as indicated
+• Imagingp as clinically indicated: eg
+C/A/P CT, chest CT, A/P MRI, PET/CT,
+or PET/MRI (skull base to mid-thigh)
+• Ultrasound as indicated for patients
+with fertility-sparing surgery
+Treatment as epithelial
+ovarian cancerw (OV-4)
+Observe
+High-grade invasive
+carcinoma
+Low-grade invasive
+carcinoma
+Noninvasive disease
+Clinical
+relapse
+RECURRENCE THERAPY
+RECURRENT DISEASE
+See appropriate
+LCOC page based on
+histologyw (LCOC-1)
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 26/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Malignant Sex Cord-Stromal Tumors
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-11
+CLINICAL PRESENTATION/
+DIAGNOSIS
+ADJUVANT
+TREATMENT
+RECURRENCE
+THERAPY
+Malignant sex
+cord-stromal
+tumorsa
+Disease
+clinically
+confined
+to ovary,
+fertility
+desired
+All others
+Stage I
+Low risk
+Stage II–IV
+Fertility-
+sparing
+surgery with
+complete
+stagingc,d,bb
+Stage I, high risk
+(eg, ruptured
+stage IC or poorly
+differentiated stage I)
+or
+Intermediate risk
+(eg, heterologous
+elements)
+Observecc (category 2B)
+or
+Consider platinum-based
+chemotherapydd,ee
+(category 2B)
+Platinum-based
+chemotherapydd,ee
+or
+RT for limited
+disease (category 2B)
+If clinical relapse:
+Consider
+secondary
+cytoreductive
+surgery
+or
+Recurrence
+therapyee,ff
+Complete
+stagingc,d,bb
+Surveillance
+(LCOC-B)
+Observecc
+a WHO Histologic Classification (OV-E).
+c Principles of Surgery (OV-A).
+d Principles of Pathology (OV-B).
+bb Lymphadenectomy may be omitted.
+cc Inhibin levels can be followed for granulosa cell tumors.
+Surveillance
+(LCOC-B)
+dd Acceptable options include paclitaxel/carboplatin (preferred), EP (etoposide, cisplatin), or BEP
+(bleomycin, etoposide, cisplatin) (category 2B).
+ee See Principles of Systemic Therapy (OV-C) and Systemic Therapy Regimens for Malignant Germ
+Cell/Sex Cord-Stromal Tumors (LCOC-A).
+ff Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 27/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Malignant Germ Cell Tumors
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-12
+TREATMENTx
+Malignant
+germ cell
+tumors
+Initial
+surgerygg
+Prior
+surgerygg
+Fertility-sparing surgery and
+comprehensive staging (OV-A)
+Complete staging surgery
+(OV-A)
+Fertility desired, then fertility-sparing
+surgery and comprehensive staging;
+fertility not desired, then completion
+staging surgery (OV-A)
+Consider observation (category 2B) with close
+monitoring of tumor markers until normalization
+(LCOC-B)hh
+Consider observation (category 2B) (LCOC-B)
+Dysgerminoma
+or
+Grade 1 immature
+teratoma
+Embryonal,
+endodermal sinus
+tumor (yolk sac
+tumor), grade 2–3
+immature teratoma,
+nongestational
+choriocarcinoma, or
+mixed histology
+Positive imaging
+and positive
+tumor markers
+Positive
+imaging and
+positive tumor
+markers
+Negative imaging
+and positive
+tumor markers
+Negative imaging and
+positive or negative
+tumor markers
+Negative imaging
+and negative
+tumor markers
+Fertility desired
+Fertility not desired
+Incompletely
+staged:
+Imaging if not
+previously
+donep (eg,
+C/A/P CT, chest
+CT, A/P MRI,
+PET/CT, or
+PET/MRI)
+Treatment
+(LCOC-13)
+Treatment
+(LCOC-13)
+Treatment
+(LCOC-13)
+Fertility desired, then fertility-sparing
+surgery and comprehensive staging;
+fertility not desired, then completion
+staging surgery with possible tumor
+reductive surgery (OV-A)
+or
+Chemotherapy (LCOC-13)
+p CT is performed with oral and iodinated IV contrast (unless contraindicated due to
+anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI is
+performed with gadolinium based contrast agents (unless contraindicated due to
+anaphylaxis) and is preferred in select patients with renal dysfunction over CT. Chest
+CT can be done with or without iodinated IV contrast.
+x Standard recommendation includes a patient evaluation by a gynecologic oncologist.
+gg Surgical principles for pediatric/young adult patients may differ from those for adult
+patients. See Principles of Surgery (OV-A).
+hh Repeat imaging if tumor markers plateau at significant abnormal level or rise. If
+imaging positive, follow pathway above for positive imaging and positive tumor
+markers.
+CLINICAL PRESENTATION/
+DIAGNOSIS
+Completely staged
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 28/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Malignant Germ Cell Tumors
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-13
+ADJUVANT TREATMENT
+MONITORING/
+FOLLOW-UP
+THERAPY FOR RECURRENT/
+PERSISTENT DISEASEff
+PATHOLOGIC
+DIAGNOSISa
+Any stage
+embryonal
+tumorii
+or
+Any stage
+endodermal
+sinus tumor (yolk
+sac tumor)ii
+or
+Stage II–IV
+dysgerminoma
+or
+Stage I, grade
+2 or 3 or Stage
+II–IV immature
+teratoma
+or
+Any stage
+nongestational
+choriocarcinoma
+Stage I
+dysgerminomaii
+or
+Stage I, grade 1
+immature
+teratomaii
+Chemotherapyjj
+LCOC-14
+C/A/P CTp or MRI as
+clinically indicated
+Residual
+tumor on
+radiographic
+imaging;
+markers
+normalkk
+Persistently
+elevated markerskk
+with definitive
+residual disease
+Biopsy
+or
+Consider
+surgical
+resection
+or
+Observe
+(Surveillance
+[LCOC-B])
+Necrotic
+tissue
+Benign
+teratoma
+Residual
+malignancy
+Observe
+Surveillance (LCOC-B)
+Complete
+clinical
+response
+TIP (paclitaxel/ifosfamide/
+cisplatin)
+or
+High-dose chemotherapyll +
+hematopoietic cell transplant
+(HCT) (strongly recommend
+referral to tertiary care center for
+potentially curative regimen)
+a WHO Histologic Classification (OV-E).
+p CT is performed with oral and iodinated IV contrast (unless contraindicated due to anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI is performed with
+gadolinium-based contrast agents (unless contraindicated due to anaphylaxis) and is preferred in select patients with renal dysfunction over CT. Chest CT can be done with or without
+iodinated IV contrast.
+ff Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.
+ii Pediatric/adolescent patients with the following clinical presentations may consider observation or chemotherapy as treatment options: stage IA, IB dysgerminoma; stage IA, grade 1
+immature teratoma; stage IA embryonal carcinomas; or stage IA yolk sac tumors. Consultation with a pediatric oncologist for pediatric/adolescent patients is recommended.
+jj Primary Systemic Therapy Regimens for Malignant Germ Cell Tumors (LCOC-A).
+kk See OV-1 for markers.
+ll High-dose chemotherapy regimens vary among institutions. Some patients are potentially curable with HCT. Patients with potentially curable recurrent germ cell disease should be
+referred to a tertiary care institution for HCT consultation and potentially curative therapy.
+Imagingp
+as clinically
+indicated:
+eg, C/A/P
+CT, chest
+CT, A/P
+MRI, PET/
+CT, or PET/
+MRI (skull
+base to
+mid-thigh)
+Surveillance
+(LCOC-B)
+Follow path for complete
+clinical response (LCOC-14)
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 29/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Malignant Germ Cell Tumors
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-14
+MONITORING/FOLLOW-UP
+AFTER ADJUVANT TREATMENT
+THERAPY FOR RECURRENT/
+PERSISTENT DISEASEff
+PATHOLOGIC
+DIAGNOSISa
+Any stage
+embryonal tumorii
+or
+Any stage
+endodermal sinus
+tumor (yolk sac
+tumor)ii
+or
+Stage II–IV
+dysgerminoma
+or
+Stage I, grade 2
+or 3 or Stage II–IV
+immature teratoma
+or
+Any stage
+nongestational
+choriocarcinoma
+Abnormal
+markers,
+definitive
+recurrent
+disease
+Second-line
+chemotherapyee (category 2B)
+or
+High-dose chemotherapyll + HCT
+(category 2B)
+or
+Consider surgery for select patients
+Observe
+(LCOC-B)
+Complete clinical
+response
+LCOC-A
+Complete
+clinical
+response
+Incomplete
+clinical
+response
+a WHO Histologic Classification (OV-E).
+ee See Principles of Systemic Therapy (OV-C) and Systemic Therapy Regimens for Malignant Germ Cell/Sex Cord-Stromal Tumors (LCOC-A).
+ff Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.
+ii Pediatric/adolescent patients with the following clinical presentations may consider observation or chemotherapy as treatment options: stage IA, IB dysgerminoma;
+stage IA, grade 1 immature teratoma; stage IA embryonal carcinomas; or stage IA yolk sac tumors. Consultation with a pediatric oncologist for pediatric/adolescent
+patients is recommended.
+ll High-dose chemotherapy regimens vary among institutions. Some patients are potentially curable with HCT. Patients with potentially curable recurrent germ cell
+disease should be referred to a tertiary care institution for HCT consultation and potentially curative therapy.
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 30/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Malignant Germ Cell/Sex Cord-Stromal Tumors
+NCCN Guidelines Index
+Table of Contents
+Discussion
+LCOC-A
+SYSTEMIC THERAPY REGIMENSa
+MALIGNANT GERM CELL/SEX CORD-STROMAL TUMORS
+a See Principles of Systemic Therapy (OV-C) and see Discussion for references.
+b High-dose chemotherapy regimens vary among institutions. Some patients are
+potentially curable with HCT. Patients with potentially curable recurrent germ cell
+disease should be referred to a tertiary care institution for HCT consultation and
+potentially curative therapy.
+c WHO Histologic Classification (OV-E).
+d Recommend pulmonary function test if considering bleomycin.
+e Consultation with a pediatric oncologist for pediatric/adolescent patients is
+recommended.
+MALIGNANT SEX CORD-STROMAL TUMORSa,c
+Primary
+Therapy
+Preferred Regimens
+• Paclitaxel/carboplatin
+Other Recommended Regimens
+• Etoposide/cisplatin (EP)
+Useful in Certain Circumstances
+• BEP (category 2B)d
+Recurrence
+Therapy
+Preferred Regimens
+• Paclitaxel/carboplatin
+Other Recommended Regimens
+• EP, if not previously used
+• Paclitaxel/ifosfamide
+• Docetaxel
+• Paclitaxel
+• Supportive care only (See NCCN Supportive Care Guidelines)
+• Targeted therapy: Bevacizumab (single agent)
+Useful in Certain Circumstances
+• Aromatase inhibitors (ie, anastrozole, exemestane,
+letrozole)
+• Leuprolide acetate or goserelin acetate (for granulosa cell
+tumors)
+• Tamoxifen
+• BEP (category 2B),d if not previously used
+• VAC (category 2B)
+MALIGNANT GERM CELL TUMORSa,b,c
+Primary
+Therapy
+Preferred Regimens
+• BEP (bleomycin, etoposide, cisplatin)d
+Bleomycin 30 units IV per week plus
+etoposide 100 mg/m2 IV daily on days
+1–5 plus cisplatin 20 mg/m2 IV daily on
+days 1–5; repeat every 21 days for 3
+cycles for good risk (category 2B), or 4
+cycles for poor risk.
+Other Recommended Regimens
+• None
+Useful in Certain Circumstances
+• Etoposide/carboplatina,e (for select patients with stage II–III resected dysgerminoma for whom minimizing
+toxicity is critical)
+Carboplatin 400 mg/m2 IV on day 1 plus etoposide 120 mg/m2 IV on days 1, 2, and 3 every 28 days for 3
+cycles.
+Recurrence
+Therapy
+Preferred Regimens
+(Potentially curative)
+• High-dose chemotherapyb
+• TIP (paclitaxel, ifosfamide, cisplatin)
+Other Recommended Regimens
+(Palliative only)
+• Etoposide/cisplatin (EP), if not
+previously used
+• Docetaxel
+• Docetaxel/carboplatin
+• Etoposide (oral)
+• Etoposide/ifosfamide/cisplatin (VIP)
+• Gemcitabine/paclitaxel/oxaliplatin
+• Gemcitabine/oxaliplatin
+• Paclitaxel
+• Paclitaxel/carboplatin
+• Paclitaxel/gemcitabine
+• Paclitaxel/ifosfamide
+• Pembrolizumab (if microsatellite
+instability-high [MSI-H]/mismatch
+repair deficient [dMMR] or tumor
+mutational burden-high [TMB-H])
+• VeIP (vinblastine, ifosfamide,
+cisplatin)
+• VAC (vincristine,
+dactinomycin,
+cyclophosphamide)
+• Supportive care (See NCCN
+Supportive Care Guidelines)
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 31/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Version 3.2025
+Malignant Germ Cell/Sex Cord-Stromal Tumors
+NCCN Guidelines Index
+Table of Contents
+Discussion
+Malignant Sex Cord-Stromal Tumorsc
+0–2 Years
+After 2 Years
+Physical exam
+As clinically indicated based on stage
+(ie, 6–12 mo if early-stage, low-risk disease; 4–6 mo if
+high-risk disease)
+As clinically indicated based on stage
+(ie, 6–12 mo if early-stage, low-risk disease; 4–6 mo if
+high-risk disease)
+Serum tumor markersb
+• Testing as clinically indicated, if applicable
+• If done, frequency based on stage (ie, 6–12 mo if
+early-stage, low-risk disease; 4–6 mo if high-risk disease)
+• Testing as clinically indicated, if applicable
+• If done, frequency based on stage (ie, 6–12 mo if
+early-stage, low-risk disease; 4–6 mo if high-risk disease)
+Imagingd
+Reserved for patients with symptoms, elevated biomarkers,
+or suspicious findings on physical exam
+Reserved for patients with symptoms, elevated biomarkers,
+or suspicious findings on physical exam
+a Only for those patients who have a residual ovary.
+b See OV-1 for markers.
+c Salani R, Khanna N, Frimer M, et al. An update on post-treatment surveillance and diagnosis of recurrence in women with gynecologic malignancies: Society of
+Gynecologic Oncology (SGO) recommendations. Gynecol Oncol 2017;146:3-10.
+d Chest x-ray, C/A/P CT, MRI, PET/CT, or PET; with contrast unless contraindicated.
+Malignant Germ Cell Tumors
+Year 1
+Year 2
+Year 3
+Years 4–5
+After 5 Years
+Clinical evaluation
+Every 3 mo
+Every 3 mo
+Every 6 mo
+Every 12 mo
+Every 12 mo
+Pelvic USa
+Every 3 mo
+Every 3 mo
+Every 6 mo
+--
+--
+Tumor markersb
+Every 2 mo
+Every 3 mo
+Every 6 mo
+Every 12 mo
+Every 12 mo
+up to 10 y
+Chest x-ray
+--
+--
+--
+Every 6 mo
+As clinically indicated
+C/A/P CT
+Every 3 mo
+Every 3 mo
+Every 6–12 mo
+As clinically indicated
+As clinically indicated
+SURVEILLANCE
+MALIGNANT GERM CELL/SEX CORD-STROMAL TUMORS
+LCOC-B
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 32/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Version 3.2025
+Ovarian Cancer/Fallopian Tube Cancer/Primary
+Peritoneal Cancer
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+OV-A
+1 OF 4
+PRINCIPLES OF SURGERY1
+General Considerations
+• It is recommended that a gynecologic oncologist perform the appropriate surgery.
+• An open laparotomy including a vertical midline abdominal incision should be used in most patients with a suspected malignant ovarian/
+fallopian tube/primary peritoneal neoplasm in whom a surgical staging procedure, a primary debulking procedure, an interval debulking
+procedure, or secondary cytoreduction is planned.
+For select patients, a minimally invasive surgical approach may be used by an experienced surgeon to manage early-stage disease.
+Laparoscopy may be useful to evaluate whether optimal cytoreduction can be achieved in patients with newly diagnosed advanced-stage
+or recurrent disease.
+Minimally invasive techniques can be used for select patients for interval debulking procedures. Patients who are unable to be optimally
+debulked using minimally invasive techniques should be converted to an open procedure.
+• Intraoperative pathologic evaluation with frozen sections may assist in management.
+• Prior to surgery for ovarian cancer, counsel patients about port placement if intraperitoneal (IP) chemotherapy is being considered.
+Operative Reports
+• Surgeons should describe the following in the operative report:
+Extent of initial disease before debulking pelvis, mid-abdomen, or upper abdomen (cutoffs: pelvic brim to lower ribs).
+Amount of residual disease in the same areas after debulking.
+Complete or incomplete resection; if incomplete, indicate the size of the major lesion and total number of lesions. Indicate if miliary or
+small lesions.
+Continued
+1 Fleming GF, Seidman J, Yemelyanova A, and Lengyl E. Epithelial Ovarian Cancer. In: Chi DS, Berchuck A, Dizon D, et al (eds). Principles and Practice of Gynecologic
+Oncology, 7th ed, Philadelphia, Lippincott Williams & Wilkins, 2017:611-705.
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 33/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Version 3.2025
+Ovarian Cancer/Fallopian Tube Cancer/Primary
+Peritoneal Cancer
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+Newly Diagnosed Invasive Epithelial Ovarian Cancer Apparently Confined to the Ovaries, Fallopian Tubes, and Uterus (apparent stage IA–IIA)
+In general, every effort should be made during a primary cytoreduction procedure to achieve maximum cytoreduction of all pelvic disease and
+to evaluate for occult disease in the upper abdomen or retroperitoneum.
+• On entering the abdomen, aspiration of ascites or peritoneal lavage should be performed for peritoneal cytologic examinations.
+• All peritoneal surfaces should be visualized, and any peritoneal surface or adhesion suspicious for harboring metastasis should be
+selectively excised or biopsied. In the absence of any suspicious areas, random peritoneal biopsies should be taken from the pelvis,
+paracolic gutters, and undersurfaces of the diaphragm (diaphragm scraping for Papanicolaou stain is an acceptable alternative).
+• BSO and hysterectomy should be performed with every effort to keep an encapsulated mass intact during removal.
+• For selected patients desiring to preserve fertility, USO or BSO with uterine preservation may be considered. Uterine preservation allows for
+potential future assisted reproductive approaches.
+• Omentectomy should be performed.
+• Para-aortic lymph node dissection should be performed by stripping the nodal tissue from the vena cava and the aorta bilaterally to at least
+the level of the inferior mesenteric artery and preferably to the level of the renal vessels.
+• The preferred method of dissecting pelvic lymph nodes is bilateral removal of lymph nodes overlying and anterolateral to the common iliac
+vessel, overlying and medial to the external iliac vessel, overlying and medial to the hypogastric vessels, and from the obturator fossa at a
+minimum anterior to the obturator nerve.2
+Newly Diagnosed Invasive Epithelial Ovarian Cancer Involving the Pelvis and Upper Abdomen (stage >IIB)
+In general, every effort should be made during a primary cytoreduction procedure to achieve maximum cytoreduction of all abdominal, pelvic,
+and retroperitoneal disease. Residual disease <1 cm defines optimal cytoreduction; however, maximal effort should be made to remove all
+gross disease since this offers superior survival outcomes.3
+• Aspiration of ascites (if present) should be performed for peritoneal cytologic examinations. All involved omentum should be removed.
+• Suspicious and/or enlarged nodes, identified on preoperative imaging or during surgical exploration, should be resected, if possible.
+Resection of clinically negative nodes is not required.4
+• Procedures that may be considered for optimal surgical cytoreduction (in all stages) include bowel resection and/or appendectomy, stripping
+of the diaphragm or other peritoneal surfaces, splenectomy, partial cystectomy and/or ureteroneocystostomy, partial hepatectomy, partial
+gastrectomy, cholecystectomy, and/or distal pancreatectomy.
+• Select patients with low-volume residual disease after surgical cytoreduction for invasive epithelial ovarian or peritoneal cancer are potential
+candidates for IP therapy. In these patients, consideration should be given to placement of IP catheter with initial surgery.
+OV-A
+2 OF 4
+PRINCIPLES OF SURGERY1
+1 Fleming GF, Seidman J, Yemelyanova A, and Lengyl E. Epithelial Ovarian Cancer. In: Chi DS, Berchuck A, Dizon D, et al (eds). Principles and Practice of Gynecologic
+Oncology, 7th ed, Philadelphia, Lippincott Williams & Wilkins, 2017:611-705.
+2 Whitney CW, Spirtos N. Gynecologic Oncology Group Surgical Procedures Manual. Philadelphia: Gynecologic Oncology Group; 2010.
+3 Chi DS, Eisenhauer EL, Zivanovic O, et al. Improved progression-free and overall survival in advanced ovarian cancer as a result of a change in surgical paradigm.
+Gynecol Oncol 2009;114:26-31.
+4 Harter P, Sehouli J, Lorusso D, et al. A randomized trial of lymphadenectomy in patients with advanced ovarian neoplasms. N Engl J Med 2019;380:822-832.
+Continued
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 34/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Version 3.2025
+Ovarian Cancer/Fallopian Tube Cancer/Primary
+Peritoneal Cancer
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+Interval Debulking Surgery After Neoadjuvant Chemotherapy of
+Invasive Epithelial Ovarian Cancer
+As with a primary debulking procedure, every effort should be made
+to achieve maximum cytoreduction during an interval debulking
+procedure. Maximal effort should be made to remove all gross
+disease in the abdomen, pelvis, and retroperitoneum. Consultation
+with a gynecologic oncologist is recommended.
+• IDS, including completion hysterectomy and BSO with staging,
+should be performed after 3–4 cycles of neoadjuvant chemotherapy
+for patients with a response to chemotherapy or stable disease.
+Alternate timing of surgery has not been prospectively evaluated but
+may be considered based on individual patient-centered factors.
+• HIPEC with cisplatin (100 mg/m2) can be considered at the time of
+IDS for stage III disease. HIPEC can also be considered for suitable
+stage IV patients (category 2B) who have had a favorable response
+to neoadjuvant therapy both intraperitoneally and extraperitoneally,
+or in whom stage IV disease sites have completely resolved (eg,
+resolution of malignant pleural effusion) or are now deemed
+resectable. Sodium thiosulfate may be administered at the start
+of perfusion, followed by a continuous infusion, to allow for renal
+protection during HIPEC.
+• All peritoneal surfaces should be visualized, and any peritoneal
+surface or adhesion suspicious for harboring metastasis should be
+selectively excised or biopsied.
+• An omentectomy should be performed.
+• While systematic lymphadenectomy of clinical-negative nodes is
+not recommended, suspicious and/or enlarged nodes should be
+resected, if possible.
+• Procedures that may be considered for optimal surgical debulking
+include bowel resection and/or appendectomy, stripping of the
+diaphragm or other peritoneal surfaces, splenectomy, partial
+cystectomy and/or ureteroneocystostomy, partial hepatectomy,
+partial gastrectomy, cholecystectomy, and/or distal pancreatectomy.
+Risk-Reducing Salpingo-Oophorectomy (RRSO) Protocol
+• For information on when RRSO is indicated, see NCCN Guidelines
+for Genetic/Familial High-Risk Assessment: Breast, Ovarian,
+Pancreatic, and Prostate.
+• Perform minimally invasive laparoscopic surgery.
+• Survey upper abdomen, bowel surfaces, omentum, appendix (if
+present), and pelvic organs.
+• Biopsy any abnormal peritoneal findings.
+• Obtain pelvic washing for cytology (50 cc normal saline instilled and
+aspirated immediately).
+• Perform total BSO, removing 2 cm of proximal ovarian vasculature/
+IP ligament, all tube up to the cornua, and all peritoneum
+surrounding the ovaries and tubes, especially peritoneum
+underlying areas of adhesion between tube and/or ovary and the
+pelvic sidewall.5
+• Engage in minimal instrument handling of the tubes and ovaries to
+avoid traumatic exfoliation of cells.5
+• Both ovaries and tubes should be placed in an endobag for retrieval
+from the pelvis.
+• Both ovaries and tubes should be processed by sectioning and
+extensively examining the fimbriated end (SEE-FIM) protocol.6
+• If occult malignancy or serous tubal intraepithelial carcinoma (STIC)
+is identified, provide referral to a gynecologic oncologist.
+• The prevention benefits of salpingectomy alone are not yet proven.
+If considered, the fallopian tube from the fimbria to its insertion into
+the uterus should be removed. In addition, the fallopian tube should
+be processed and assessed as described above. The concern for
+risk-reducing salpingectomy alone is that patients are still at risk for
+developing ovarian cancer. In addition, in premenopausal patients,
+oophorectomy reduces the risk of developing breast cancer but the
+magnitude is uncertain. See NCCN Guidelines for Genetic/Familial
+High-Risk Assessment: Breast, Ovarian, Pancreatic, and Prostate.
+PRINCIPLES OF SURGERY1
+1 Fleming GF, Seidman J, Yemelyanova A, and Lengyl E. Epithelial Ovarian Cancer. In: Chi DS, Berchuck A, Dizon D, et al (eds). Principles and Practice of Gynecologic
+Oncology, 7th ed, Philadelphia, Lippincott Williams & Wilkins, 2017:611-705.
+5 Powell CB, Chen LM, McLennan J, et al. Risk-reducing salpingo-oophorectomy (RRSO) in BRCA mutation carriers: experience with a consecutive series of 111 patients using
+a standardized surgical-pathological protocol. Int J Gynecol Cancer 2011;21:846-851.
+6 Mingels MJ, van Ham MA, de Kievit IM, et al. Müllerian precursor lesions in serous ovarian cancer patients: using the SEE-Fim and SEE-End protocol. Mod Pathol
+2014;27:1002-1013.
+OV-A
+3 OF 4
+Continued
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 35/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Version 3.2025
+Ovarian Cancer/Fallopian Tube Cancer/Primary
+Peritoneal Cancer
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+Special Circumstances
+• Fertility-sparing surgery:
+Fertility-sparing surgery with USO (preserving the uterus and contralateral ovary) or BSO (preserving the uterus) can be considered for
+patients with apparent early-stage disease and/or low-risk tumors (early-stage invasive epithelial tumors, LMP lesions, malignant germ cell
+tumors, mucinous tumors, or malignant sex cord-stromal tumors) who wish to preserve fertility. Consider endometrial sampling to exclude
+synchronous primary or hyperplasia. Refer to reproductive endocrinologist for evaluation and REI consultation as clinically indicated.
+Comprehensive surgical staging should still be performed to rule out occult higher stage disease but may be omitted in pediatric,
+adolescent, and young adult patients with clinically apparent early-stage malignant germ cell tumors based on the pediatric surgical
+literature.7
+• Mucinous tumors: Primary invasive mucinous tumors of the ovary are uncommon. Thus, the upper and lower GI tract should be carefully
+evaluated to rule out an occult GI primary with ovarian metastases, and an appendectomy need only be performed in patients with a
+suspected or confirmed mucinous ovarian neoplasm if it appears to be abnormal. A normal appendix does not require surgical resection in
+this setting. If mucinous histology is confirmed by intraoperative frozen section analysis and there are no suspicious lymph nodes, consider
+omitting lymphadenectomy.
+• Ovarian borderline epithelial (LMP) tumors: Although data show upstaging with lymphadenectomy, other data show that lymphadenectomy
+does not affect overall survival. However, omentectomy and multiple biopsies of peritoneum (the most common sites of peritoneal implants)
+may upstage patients in approximately 30% of cases and may affect prognosis.
+• Secondary cytoreduction: A secondary cytoreduction procedure can be considered in patients with recurrent ovarian cancer who develop
+a recurrence more than 6 months since completion of initial chemotherapy, have a good performance status, have no ascites, and have
+an isolated focus or limited foci of disease amenable to complete resection. In addition to preoperative imaging, laparoscopy may be used
+to determine if complete resection can be achieved. Secondary cytoreduction can be performed with either open or minimally invasive
+approaches. Consider using validated scoring methods to assess suitability for secondary cytoreduction.
+Ancillary Palliative Surgical Procedures8
+These procedures may be appropriate in select patients:
+• Paracentesis/indwelling peritoneal catheter
+• Thoracentesis/pleurodesis/video-assisted thoracoscopy/indwelling pleural catheter
+• Ureteral stents/nephrostomy
+• Gastrostomy tube/intestinal stents/surgical relief of intestinal obstruction
+PRINCIPLES OF SURGERY1
+1 Fleming GF, Seidman J, Yemelyanova A, and Lengyl E. Epithelial Ovarian Cancer. In: Chi DS, Berchuck A, Dizon D, et al (eds). Principles and Practice of Gynecologic
+Oncology, 7th ed, Philadelphia, Lippincott Williams & Wilkins, 2017:611-705.
+7 Billmire D, Vinocur C, Rescorla F, et al. Outcome and staging evaluation in malignant germ cell tumors of the ovary in children and adolescents: an intergroup study.
+J Pediatr Surg 2004;39:424-429.
+8 Decisions on the use of ancillary procedures should be made in conjunction with a gynecologic oncology surgeon or a practitioner familiar with ovarian cancer patterns
+of recurrence.
+OV-A
+4 OF 4
+PLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.
+Printed by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.
+
+
+
+---
+[PAGE 36/240]
+
+Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.
+NCCN Guidelines Version 3.2025
+Ovarian Cancer/Fallopian Tube Cancer/Primary
+Peritoneal Cancer
+Note: All recommendations are category 2A unless otherwise indicated.
+NCCN Guidelines Index
+Table of Contents
+Discussion
+OV-B
+1 OF 3
+PRINCIPLES OF PATHOLOGY
+Continued
+General
+• The complete histologic classification from the WHO is included in
+the NCCN Guidelines (WHO Histologic Classification on OV-E).1 The
+WHO pathology manual is also a useful resource.1
+• Most ovarian cancers, including the LCOC, are diagnosed after
+pathologic analysis of a biopsy or surgical specimen. Fine-needle
+aspiration (FNA) should be avoided for diagnosis of ovarian cancer
+in patients with presumed early-stage disease to prevent rupturing
+the cyst and spilling malignant cells into the peritoneal cavity.
+However, FNA may be necessary in patients with bulky disease who
+are not candidates for primary debulking.2,3
+• Both primary peritoneal and fallopian tube cancers are usually
+diagnosed postoperatively (if there is no major involvement of the
+ovary) or preoperatively (if there is a biopsy and the patient has
+already had a bilateral salpingo-oophorectomy). Primary peritoneal
+and fallopian tube cancers are treated in the same manner as
+epithelial ovarian cancer.
+• The CAP protocol is a useful tool for pathology reports.4
+Pathologic assessment should include:
+Elements from CAP protocol4:
+ ◊Tumor site(s) (eg, ovary, fallopian tube, or primary peritoneum)
+ ◊Tumor size(s)
+ ◊Other tissue/organ involvement
+ ◊Ovarian/fallopian tumors: surface involvement (present/absent/
+cannot determine), specimen integrity (capsule/serosa intact/
+fractured/fragmented)
+ ◊Histologic type and grade
+ ◊Extension and/or implants (if sampled/identified)
+ ◊Cytology: peritoneal or ascitic fluid or washings/pleural fluid
+ ◊Lymph nodes: number and location of nodes examined, size of
+largest metastatic deposits
+ ◊STIC, endometriosis (particularly if in continuity with
+endometrioid or clear cell carcinoma), and/or endosalpingiosis
+ ◊Staging information (FIGO and TNM)
+• Tumor molecular analyses
+In the upfront setting, choice of somatic testing should, at a
+minimum, optimize identification of molecular alterations that
+can inform use of interventions that have demonstrated benefit in
+this setting, including BRCA1/2, loss of heterozygosity (LOH), or
+homologous recombination deficiency (HRD) status in the absence
+of a germline BRCA mutation.
+In the recurrence setting, tumor molecular analysis is
+recommended to include, as appropriate, tests to identify potential
+benefit from targeted therapeutics that have tumor-specific or
+tumor-agnostic benefit including, but not limited to, HER2 status
+(by IHC), BRCA1/2, HRD status, microsatellite instability (MSI),
+mismatch repair (MMR), tumor mutational burden (TMB), BRAF,
+FRα (FOLR1), RET, and NTRK if prior testing did not include
+these markers. More comprehensive testing may be particularly
+important in less common histologies with limited approved
+therapeutic options. It is recommended that such testing be
+performed on the most recent available tumor tissue.
+Molecular analyses may be performed on circulating tumor
+DNA (ctDNA or liquid biopsy) when tissue-based analysis is not
+clinically feasible.
+Validated molecular testing should be performed in a CLIA-
+approved facility.

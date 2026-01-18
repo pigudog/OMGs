@@ -1,5 +1,6 @@
-# ============ RAG Core (PersistentClient)
-# =======================================
+# =========================================================
+# RAG Core (PersistentClient)
+# =========================================================
 import os
 from chromadb import PersistentClient
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -182,20 +183,104 @@ def summarize_rag_evidence(agent, rag_pack: str) -> str:
     return agent.run_selection(prompt)
 
 ###############################################################################
-# 3. LOAD SPECIALTY-SPECIFIC GUIDELINE RAG
-# Note: This interface is preserved but currently not called per-role
+# 3. RAG CONFIG HELPERS
+###############################################################################
+def get_rag_config():
+    """Get RAG configuration from paths config."""
+    from .core import get_paths_config
+    return get_paths_config()["rag_store"]
+
+
+def get_rag_index_for_role(role: str):
+    """
+    Get RAG index_dir and collection_name for a specific role.
+    
+    If use_per_role_rag is False, returns the default role's RAG (chair).
+    If use_per_role_rag is True, returns the role-specific RAG.
+    
+    Args:
+        role: MDT role name (chair, oncologist, radiologist, pathologist, nuclear)
+    
+    Returns:
+        Tuple of (index_dir, collection_name, embedding_model)
+    """
+    rag_config = get_rag_config()
+    
+    use_per_role = rag_config.get("use_per_role_rag", False)
+    available_roles = rag_config.get("available_roles", ["chair"])
+    default_role = rag_config.get("default_role", "chair")
+    
+    # Determine which role's RAG to use
+    if use_per_role and role in available_roles:
+        target_role = role
+    else:
+        target_role = default_role
+    
+    index_dir = rag_config["index_dir_template"].format(role=target_role)
+    collection_name = rag_config.get("collection_name_template", "{role}_chunks").format(role=target_role)
+    embedding_model = rag_config.get("embedding_model", "BAAI/bge-m3")
+    
+    return index_dir, collection_name, embedding_model
+
+
+###############################################################################
+# 4. LOAD SPECIALTY-SPECIFIC GUIDELINE RAG
+# Supports both global (chair-only) and per-role RAG modes via config
 ###############################################################################
 def get_guideline_rag(role, question, device="auto", topk=5):
-    gl_role = ROLE_PERMISSIONS[role]["guideline"]
-    index_dir = f"rag_store/{gl_role}/index/chroma"
-    collection_name = f"{gl_role}_chunks"
+    """
+    Load guideline RAG for a given role.
+    
+    Behavior controlled by config/paths.json:
+    - use_per_role_rag: false -> All roles use chair's RAG (current default)
+    - use_per_role_rag: true  -> Each role uses its own specialty RAG
+    
+    Args:
+        role: MDT role name (chair, oncologist, radiologist, pathologist, nuclear)
+        question: Query string for RAG search
+        device: Device for embedding model ("auto", "cuda", "cpu")
+        topk: Number of top results to return
+    
+    Returns:
+        Formatted RAG evidence string for the role
+    """
+    index_dir, collection_name, embedding_model = get_rag_index_for_role(role)
 
     rag_pack, _ = rag_search_pack(
         query=question,
         index_dir=index_dir,
-        model_name="BAAI/bge-m3",
+        model_name=embedding_model,
         device=device,
         topk=topk,
         collection_name=collection_name,
     )
     return f"# GUIDELINE RAG for {role}\n{rag_pack}\n"
+
+
+def get_global_guideline_rag(question, device="auto", topk=5):
+    """
+    Load global guideline RAG (always uses default_role from config, typically chair).
+    
+    This is the main entry point used by the MDT pipeline for global guideline retrieval.
+    
+    Args:
+        question: Query string for RAG search
+        device: Device for embedding model
+        topk: Number of top results to return
+    
+    Returns:
+        Tuple of (rag_pack, rag_raw) - formatted evidence string and raw results
+    """
+    rag_config = get_rag_config()
+    default_role = rag_config.get("default_role", "chair")
+    
+    index_dir, collection_name, embedding_model = get_rag_index_for_role(default_role)
+    
+    return rag_search_pack(
+        query=question,
+        index_dir=index_dir,
+        model_name=embedding_model,
+        device=device,
+        topk=topk,
+        collection_name=collection_name,
+    )

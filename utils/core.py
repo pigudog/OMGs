@@ -44,7 +44,11 @@ def load_paths_config(config_path: str = "config/paths.json") -> Dict[str, Any]:
         "rag_store": {
             "base_dir": "rag_store",
             "index_dir_template": "rag_store/{role}/index/chroma",
-            "embedding_model": "BAAI/bge-m3"
+            "collection_name_template": "{role}_chunks",
+            "embedding_model": "BAAI/bge-m3",
+            "use_per_role_rag": False,
+            "default_role": "chair",
+            "available_roles": ["chair", "oncologist", "radiologist", "pathologist", "nuclear"]
         },
         "output_dirs": {
             "output_answer": "output_answer",

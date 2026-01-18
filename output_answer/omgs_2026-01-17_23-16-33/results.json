@@ -1,0 +1,620 @@
+[
+    {
+        "scene": null,
+        "question": {
+            "CASE_CORE": {
+                "VISIT_DATE": "2025-06-10",
+                "last_platinum_end_date": "2025-05-14",
+                "first_relapse_date": "2024-08-13",
+                "PFI_days": "23",
+                "PLATINUM_STATUS": "Refractory",
+                "PLATINUM_STATUS_CURRENT": "Refractory",
+                "PLATINUM_PFI_CURRENT": "23",
+                "PLATINUM_HISTORY": [
+                    {
+                        "line": "1L",
+                        "start_date": "2024-06-27",
+                        "end_date": "2024-08-09",
+                        "first_relapse_date": "2024-08-13",
+                        "PFI_days": "4",
+                        "status": "Refractory",
+                        "evidence_type": "Radiologic",
+                        "evidence": "2024-08-13 pelvic MRI: mesenteric and peritoneal nodules, consider metastases"
+                    },
+                    {
+                        "line": "2L",
+                        "start_date": "2024-08-29",
+                        "end_date": "2024-10-11",
+                        "first_relapse_date": "2025-02-01",
+                        "PFI_days": "113",
+                        "status": "Resistant",
+                        "evidence_type": "Radiologic",
+                        "evidence": "2025-02-01 CT/scan: multiple retroperitoneal metastatic lesions; left ureter/left kidney involvement possible"
+                    },
+                    {
+                        "line": "4L+",
+                        "start_date": "2025-02-06",
+                        "end_date": "2025-05-14",
+                        "first_relapse_date": "2025-06-06",
+                        "PFI_days": "23",
+                        "status": "Refractory",
+                        "evidence_type": "Radiologic",
+                        "evidence": "2025-06-06 CT enhanced: retroperitoneal mass increased vs 2025-05; lesion 7.3cm, involving left renal vein/ureter, encasing aorta"
+                    }
+                ],
+                "DIAGNOSIS": {
+                    "primary": "Ovarian cancer",
+                    "histology": "高钙血症型小细胞癌",
+                    "site": "Ovary/pelvis",
+                    "laterality": "Left",
+                    "components": [
+                        "小圆细胞恶性肿瘤"
+                    ]
+                },
+                "STAGE": {
+                    "stage_text": "Unknown",
+                    "stage_system": "Unknown",
+                    "stage_basis": "Pathology"
+                },
+                "INITIAL_TREATMENT": "Yes",
+                "SURGERY_DONE": {
+                    "performed": "Yes",
+                    "date": "2024-05-22",
+                    "procedure": "Total abdominal hysterectomy with bilateral salpingo-oophorectomy + omentectomy + appendectomy + para-aortic lymph node dissection + pelvic mass resection + adhesiolysis + cytoreductive surgery"
+                },
+                "NEOADJUVANT": "No",
+                "ADJUVANT_TREATMENT": {
+                    "given": "Yes",
+                    "regimens": [
+                        "依托泊苷0.16g d1-3+顺铂 40mg d1-3 ivgtt，q3w（EP）",
+                        "贝伐珠单抗400mg+奥沙利铂200mg d1+白蛋白结合型紫杉醇400mg d1，q3w",
+                        "贝伐珠单抗400mg+奥沙利铂160mg d1+白蛋白结合型紫杉醇320mg d1，q3w",
+                        "BEV+AK-104",
+                        "德曲+奥铂+贝伐",
+                        "德曲+帕博利珠单抗+奥沙利铂",
+                        "德曲+帕博利珠单抗"
+                    ],
+                    "cycles_or_courses": "Multiple cycles across regimens as documented (see timeline)"
+                },
+                "LINE_OF_THERAPY": [
+                    {
+                        "line": "1L",
+                        "intent": "Adjuvant",
+                        "regimen": "依托泊苷0.16g d1-3+顺铂 40mg d1-3 ivgtt，q3w（EP）；C3开始加用贝伐珠单抗400mg d1",
+                        "start_date": "2024-06-27",
+                        "end_date": "2024-08-09",
+                        "cycles": "C1-C3"
+                    },
+                    {
+                        "line": "2L",
+                        "intent": "Salvage",
+                        "regimen": "贝伐珠单抗400mg+奥沙利铂200mg d1+白蛋白结合型紫杉醇400mg d1，q3w (dose modifications later to 160mg/320mg)",
+                        "start_date": "2024-08-29",
+                        "end_date": "2024-10-11",
+                        "cycles": "Multiple (documented through 2024-10-11)"
+                    },
+                    {
+                        "line": "3L",
+                        "intent": "Salvage",
+                        "regimen": "BEV+AK-104 (外院加用AK-104 2 cycles; BEV+AK104 x4 documented)",
+                        "start_date": "2024-12-03",
+                        "end_date": "2024-12-15",
+                        "cycles": "4 (dates approximate as documented)"
+                    },
+                    {
+                        "line": "4L+",
+                        "intent": "Palliative",
+                        "regimen": "德曲+奥铂+贝伐 (2025.02.06 start; third cycle omitted oxaliplatin); later 德曲+奥沙利铂+贝伐; 德曲+帕博利珠单抗+奥沙利铂; 德曲+帕博利珠单抗",
+                        "start_date": "2025-02-06",
+                        "end_date": "2025-06-07",
+                        "cycles": "Multiple (documented through 2025-06-07)"
+                    }
+                ],
+                "MAINTENANCE": "Unknown",
+                "MAINTENANCE_DETAIL": {
+                    "given": "Unknown",
+                    "regimens": [],
+                    "start_date": "Unknown",
+                    "end_date": "Unknown"
+                },
+                "RELAPSE": "Yes",
+                "RELAPSE_DATE": {
+                    "date": "2025-06-06",
+                    "type": "Radiologic",
+                    "evidence": "2025-06-06 CT enhanced: retroperitoneal mass increased vs 2025-05; lesion 7.3cm, involving left renal vein/ureter, encasing aorta"
+                },
+                "HRD": "Unknown",
+                "BRCA1": "Unknown",
+                "BRCA2": "Unknown",
+                "BIOMARKERS": {
+                    "TMB": "Unknown",
+                    "MSI": "Unknown",
+                    "PDL1_CPS": "Unknown",
+                    "HER2": "1+ (2024-05-10)",
+                    "AFP": "Unknown",
+                    "CA125": "7.14 U/ml (2024-10-11)",
+                    "HE4": "267 pmol/L (2025-06-07)"
+                },
+                "CURRENT_STATUS": "Postoperative ovarian small cell carcinoma (hypercalcemic type); receiving systemic therapy with recent radiologic progression (2025-06-06)."
+            },
+            "TIMELINE": {
+                "events": [
+                    {
+                        "date": "2024-05-10",
+                        "event_type": "Imaging",
+                        "description": "Pelvic MRI showed large irregular solid mass 101*95*140mm with central multicystic change; pelvic mass, sarcoma possible",
+                        "regimen_or_test": "Pelvic MRI",
+                        "key_result": "101*95*140mm mass, central multicystic, heterogeneous enhancement"
+                    },
+                    {
+                        "date": "2024-05-22",
+                        "event_type": "Surgery",
+                        "description": "Extensive cytoreductive surgery including total hysterectomy, bilateral salpingo-oophorectomy, omentectomy, appendectomy, para-aortic lymph node dissection, pelvic mass resection",
+                        "regimen_or_test": "Surgery",
+                        "key_result": "Specimens: left adnexa and pelvic mass; nodes negative (0/14 para-aortic, 0/6 left common iliac)"
+                    },
+                    {
+                        "date": "2024-05-22",
+                        "event_type": "Other",
+                        "description": "Pathology preliminary: small round cell malignant tumor; with IHC consistent with high‑calcemia small cell carcinoma; tumor size 16.5*13.5*8 cm",
+                        "regimen_or_test": "Pathology/IHC",
+                        "key_result": "Diagnosis: 符合高钙血症型小细胞癌; Ki-67 80%; WT1+, ER-, PR-"
+                    },
+                    {
+                        "date": "2024-06-27",
+                        "event_type": "Chemo",
+                        "description": "Started EP regimen (etoposide + cisplatin); consented to clinical trial",
+                        "regimen_or_test": "依托泊苷0.16g d1-3+顺铂 40mg d1-3 ivgtt，q3w",
+                        "key_result": "C1 start"
+                    },
+                    {
+                        "date": "2024-08-13",
+                        "event_type": "Imaging",
+                        "description": "Pelvic MRI after surgery/chemo: mesenteric and peritoneal nodules, consider metastases",
+                        "regimen_or_test": "Pelvic MRI",
+                        "key_result": "Mesenteric/peritoneal nodules suggesting metastases"
+                    },
+                    {
+                        "date": "2024-08-29",
+                        "event_type": "Chemo",
+                        "description": "Started regimen with bevacizumab + oxaliplatin + nab‑paclitaxel",
+                        "regimen_or_test": "贝伐珠单抗400mg+奥沙利铂200mg d1+白蛋白结合型紫杉醇400mg d1，q3w",
+                        "key_result": "C1 started"
+                    },
+                    {
+                        "date": "2024-10-11",
+                        "event_type": "Lab",
+                        "description": "Post-chemo labs",
+                        "regimen_or_test": "CA125, HE4, ROMA and tumor markers",
+                        "key_result": "CA125 7.14 U/ml; HE4 71.80 pmol/L ↑; ROMA premenopausal 15.38% ↑"
+                    },
+                    {
+                        "date": "2024-12-09",
+                        "event_type": "Imaging",
+                        "description": "CT: multiple enlarged retroperitoneal lymph nodes, some slightly smaller; left ureter upper involvement possible with hydronephrosis; small ascites",
+                        "regimen_or_test": "CT abdomen",
+                        "key_result": "Retroperitoneal nodes; possible left ureter involvement"
+                    },
+                    {
+                        "date": "2025-02-01",
+                        "event_type": "Imaging",
+                        "description": "Report: multiple retroperitoneal metastatic lesions, some involving left ureter, left kidney perirenal change; multiple pelvic/inguinal nodes",
+                        "regimen_or_test": "CT/assessment",
+                        "key_result": "Progression with retroperitoneal metastases"
+                    },
+                    {
+                        "date": "2025-02-06",
+                        "event_type": "Chemo",
+                        "description": "Started docetaxel + oxaliplatin + bevacizumab (third cycle omitted oxaliplatin)",
+                        "regimen_or_test": "德曲+奥铂+贝伐",
+                        "key_result": "Platinum-containing regimen restarted"
+                    },
+                    {
+                        "date": "2025-04-14",
+                        "event_type": "Chemo",
+                        "description": "Docetaxel + oxaliplatin + bevacizumab given; HE4 increased",
+                        "regimen_or_test": "德曲+奥沙利铂+贝伐",
+                        "key_result": "HE4 304"
+                    },
+                    {
+                        "date": "2025-05-06",
+                        "event_type": "Imaging",
+                        "description": "CT: lesion measured 4.6*4.2 cm; HE4 250",
+                        "regimen_or_test": "CT",
+                        "key_result": "Lesion 4.6*4.2 cm"
+                    },
+                    {
+                        "date": "2025-05-14",
+                        "event_type": "Chemo",
+                        "description": "Regimen changed to include pembrolizumab with docetaxel and oxaliplatin",
+                        "regimen_or_test": "德曲+帕博利珠单抗+奥沙利铂",
+                        "key_result": "Treatment modification"
+                    },
+                    {
+                        "date": "2025-06-06",
+                        "event_type": "Imaging",
+                        "description": "CT enhancement: retroperitoneal mass larger vs 2025-05; lesion 7.3 cm, increased; involvement of left renal vein, ureter, psoas, encasing aorta",
+                        "regimen_or_test": "CT enhanced",
+                        "key_result": "Radiologic progression"
+                    },
+                    {
+                        "date": "2025-06-07",
+                        "event_type": "Chemo",
+                        "description": "Most recent documented systemic therapy: docetaxel + pembrolizumab (no oxaliplatin documented on this date)",
+                        "regimen_or_test": "德曲+帕博利珠单抗",
+                        "key_result": "Last documented administration 2025-06-07"
+                    }
+                ],
+                "constraints": {
+                    "min_events": 3,
+                    "max_events": 30,
+                    "must_include": [
+                        "first diagnostic imaging or pathology confirmation (if available)"
+                    ],
+                    "ordering_rules": {
+                        "prioritize_last_event": true
+                    }
+                }
+            },
+            "MED_ONC": {
+                "current_regimen": {
+                    "name": "德曲+帕博利珠单抗",
+                    "last_admin_date": "2025-06-07",
+                    "cycle_info": "Recent cycle given without oxaliplatin"
+                },
+                "planned_next_regimen": "Unknown",
+                "prior_systemic_therapies": [
+                    "依托泊苷0.16g d1-3+顺铂 40mg d1-3 ivgtt，q3w（EP）",
+                    "贝伐珠单抗400mg+奥沙利铂200mg d1+白蛋白结合型紫杉醇400mg d1，q3w",
+                    "贝伐珠单抗400mg+奥沙利铂160mg d1+白蛋白结合型紫杉醇320mg d1，q3w",
+                    "BEV+AK-104",
+                    "德曲+奥铂+贝伐",
+                    "德曲+帕博利珠单抗+奥沙利铂",
+                    "德曲+帕博利珠单抗"
+                ],
+                "genetic_testing": {
+                    "somatic": [],
+                    "germline": []
+                },
+                "monitoring_points": []
+            },
+            "RADIOLOGY": {
+                "studies": [
+                    {
+                        "date": "2024-05-10",
+                        "modality": "MRI",
+                        "anatomic_sites": [
+                            "Pelvis"
+                        ],
+                        "findings": [
+                            "Large irregular solid pelvic mass 101*95*140mm with central multicystic area; mass abutting anterior uterine wall; heterogeneous enhancement"
+                        ],
+                        "impression": "Pelvic mass, sarcoma possible",
+                        "trend_vs_prior": "Unknown"
+                    },
+                    {
+                        "date": "2024-08-13",
+                        "modality": "MRI",
+                        "anatomic_sites": [
+                            "Pelvis"
+                        ],
+                        "findings": [
+                            "Postoperative changes; mesenteric and peritoneal scattered nodules"
+                        ],
+                        "impression": "Consider metastatic disease",
+                        "trend_vs_prior": "Worse"
+                    },
+                    {
+                        "date": "2024-09-02",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Abdomen/retroperitoneum"
+                        ],
+                        "findings": [
+                            "New multiple enlarged retroperitoneal lymph nodes"
+                        ],
+                        "impression": "Possible metastases",
+                        "trend_vs_prior": "Unknown"
+                    },
+                    {
+                        "date": "2024-12-09",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Abdomen/retroperitoneum"
+                        ],
+                        "findings": [
+                            "Multiple enlarged retroperitoneal lymph nodes, some slightly smaller than before; possible involvement of left ureter upper segment with left hydronephrosis; small ascites"
+                        ],
+                        "impression": "Retroperitoneal lymphadenopathy; consider clinical correlation",
+                        "trend_vs_prior": "Mixed"
+                    },
+                    {
+                        "date": "2025-02-01",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Retroperitoneum, pelvis, inguinal regions"
+                        ],
+                        "findings": [
+                            "Multiple retroperitoneal metastatic lesions, some may involve left ureter and kidney; multiple pelvic and bilateral inguinal lymph nodes"
+                        ],
+                        "impression": "Metastatic disease in retroperitoneum and pelvis",
+                        "trend_vs_prior": "Worse"
+                    },
+                    {
+                        "date": "2025-05-06",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Retroperitoneum"
+                        ],
+                        "findings": [
+                            "Lesion measured 4.6*4.2 cm"
+                        ],
+                        "impression": "Residual/metastatic lesion",
+                        "trend_vs_prior": "Unknown"
+                    },
+                    {
+                        "date": "2025-06-06",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Retroperitoneum, left kidney region"
+                        ],
+                        "findings": [
+                            "Retroperitoneal mass larger vs 2025-05; lesion 7.3 cm, involving left renal vein and ureter, psoas muscle, encasing abdominal aorta; hepatic left lobe hemangioma"
+                        ],
+                        "impression": "Progression of retroperitoneal metastatic disease",
+                        "trend_vs_prior": "Worse"
+                    }
+                ],
+                "next_imaging_plan": {
+                    "modality": "Unknown",
+                    "timing": "Unknown"
+                }
+            },
+            "PATHOLOGY": {
+                "specimens": [
+                    {
+                        "date": "2024-05-22",
+                        "site": "Left adnexa and pelvic mass; uterus; right adnexa; appendix; para-aortic and left common iliac lymph nodes",
+                        "diagnosis": "符合高钙血症型小细胞癌",
+                        "components": [
+                            "小圆细胞恶性肿瘤"
+                        ],
+                        "grade": "Ki-67 80%",
+                        "tumor_size": "16.5*13.5*8 cm",
+                        "laterality": "Left",
+                        "sample_type": "Surgical specimen",
+                        "involvement_sites": [
+                            "Para-aortic lymph nodes 0/14 negative",
+                            "Left common iliac lymph nodes 0/6 negative",
+                            "Right adnexa: no special abnormality"
+                        ],
+                        "ihc": [
+                            {
+                                "marker": "AE1/AE3",
+                                "result": "少+"
+                            },
+                            {
+                                "marker": "CK",
+                                "result": "少+"
+                            },
+                            {
+                                "marker": "CD20",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "CD3",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "CD99",
+                                "result": "+"
+                            },
+                            {
+                                "marker": "SMARCA4 BRG1",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "SMARCA2(BRM)",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "SMARCB1(INI-1)",
+                                "result": "+"
+                            },
+                            {
+                                "marker": "CD10",
+                                "result": "少+"
+                            },
+                            {
+                                "marker": "Desmin",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "MyoD1",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "Myogenin",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "P53",
+                                "result": "少+"
+                            },
+                            {
+                                "marker": "PAX8",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "Ki-67",
+                                "result": "+80%"
+                            },
+                            {
+                                "marker": "WT1",
+                                "result": "+"
+                            },
+                            {
+                                "marker": "ER",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "PR",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "Syn",
+                                "result": "少+"
+                            },
+                            {
+                                "marker": "CgA",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "INSM1",
+                                "result": "-"
+                            },
+                            {
+                                "marker": "LCA",
+                                "result": "-"
+                            }
+                        ],
+                        "molecular": [],
+                        "raw_text": "卵巢恶性肿瘤：（左附件及盆腔巨大肿块）小圆细胞恶性肿瘤，正在行免疫组化检查辅助诊断。补充诊断1：初步报告: （左附件及盆腔巨大肿块）小圆细胞恶性肿瘤，结合免疫组化结果，符合高钙血症型小细胞癌，大小16.5*13.5*8 cm。免疫组化结果（HI24-22759）：AE1/AE3（少+），CK（少+），CD20（-），CD3（-），CD99（+），SMARCA4 BRG1（-），SMARCA2(BRM)（-），SMARCB1(INI-1)（+），CD10（少+），Desmin（-），MyoD1（-），Myogenin（-），P53（少+），PAX8（-），Ki-67（+80%），WT1（+），ER（-），PR（-），Syn（少+），CgA（-），INSM1（-），LCA（-） ;（全子宫）内膜呈分泌改变；宫颈慢性炎。（右附件）未见特殊异常。（左卵巢血管）纤维血管组织。（阑尾）慢性炎。（腹主动脉旁）淋巴结（0/14）未见肿瘤转移。（左髂总）淋巴结（0/6）未见肿瘤转移。",
+                        "uncertainty_or_missing": [
+                            "No molecular/genetic testing results reported in pathology",
+                            "Staging not provided"
+                        ]
+                    }
+                ]
+            },
+            "NUC_MED": {
+                "studies": []
+            },
+            "LAB_TRENDS": {
+                "labs": [
+                    {
+                        "analyte": "HE4",
+                        "unit": "pmol/L",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-06-07",
+                            "value": "267",
+                            "flag": "↑"
+                        },
+                        "history": [
+                            {
+                                "date": "2024-10-11",
+                                "value": "71.80",
+                                "flag": "↑"
+                            },
+                            {
+                                "date": "2024-12-15",
+                                "value": "93",
+                                "flag": "↑"
+                            },
+                            {
+                                "date": "2025-03-28",
+                                "value": "117",
+                                "flag": "↑"
+                            },
+                            {
+                                "date": "2025-04-14",
+                                "value": "304",
+                                "flag": "↑"
+                            },
+                            {
+                                "date": "2025-05-06",
+                                "value": "250",
+                                "flag": "↑"
+                            },
+                            {
+                                "date": "2025-06-07",
+                                "value": "267",
+                                "flag": "↑"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "CA125",
+                        "unit": "U/ml",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2024-10-11",
+                            "value": "7.14",
+                            "flag": "Unknown"
+                        },
+                        "history": [
+                            {
+                                "date": "2024-10-11",
+                                "value": "7.14",
+                                "flag": "Unknown"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "CA19-9",
+                        "unit": "U/ml",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-06-06",
+                            "value": "56",
+                            "flag": "↓"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-06-06",
+                                "value": "56",
+                                "flag": "↓"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "Other",
+                        "unit": "ng/ml",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2024-10-11",
+                            "value": "PROGRP 60.20 pg/mL; CYFRA21-1 2.26 ng/ml; NSE 12.80 ng/ml",
+                            "flag": "Unknown"
+                        },
+                        "history": [
+                            {
+                                "date": "2024-10-11",
+                                "value": "PROGRP 60.20 pg/mL; CYFRA21-1 2.26 ng/ml; NSE 12.80 ng/ml",
+                                "flag": "Unknown"
+                            }
+                        ]
+                    }
+                ],
+                "milestones": [
+                    {
+                        "date": "2024-05-22",
+                        "type": "Surgery",
+                        "description": "Extensive cytoreductive surgery performed"
+                    },
+                    {
+                        "date": "2024-06-27",
+                        "type": "ChemoStart",
+                        "description": "Start EP chemotherapy (etoposide + cisplatin)"
+                    },
+                    {
+                        "date": "2025-02-06",
+                        "type": "ChemoStart",
+                        "description": "Start docetaxel + oxaliplatin + bevacizumab"
+                    },
+                    {
+                        "date": "2025-06-06",
+                        "type": "Progression",
+                        "description": "Radiologic progression with enlarged retroperitoneal mass"
+                    }
+                ]
+            }
+        },
+        "response": null,
+        "error": "get_global_guideline_rag() got an unexpected keyword argument 'query'",
+        "gold_plan": "建议芦康沙妥珠单抗5mg/kg+K药 q2w",
+        "question_raw": "卵巢癌术后化疗中：HER2（1+）2024.05.10宁波市妇女儿童医院盆腔MR：盆腔子宫前方可见一较大实性病灶，形态不规则，大小101*95*140mm，中心见多囊状，肿块紧贴子宫前壁，增强后肿块明显不均匀强化；右侧卵巢见显示，左侧卵巢显示不明确；盆腔内未见淋巴结增大，盆腔少量积液；盆腔占位，肉瘤可能。2024.05.22全麻下开腹全子宫双附件+大网膜+阑尾切除术+腹主动脉旁淋巴结清扫术+盆腔肿块切除术（女性）+肠粘连松解术+瘤体减灭术卵巢恶性肿瘤：（左附件及盆腔巨大肿块）小圆细胞恶性肿瘤，正在行免疫组化检查辅助诊断。补充诊断1：初步报告: （左附件及盆腔巨大肿块）小圆细胞恶性肿瘤，结合免疫组化结果，符合高钙血症型小细胞癌，大小16.5*13.5*8 cm。免疫组化结果（HI24-22759）：AE1/AE3（少+），CK（少+），CD20（-），CD3（-），CD99（+），SMARCA4 BRG1（-），SMARCA2(BRM)（-），SMARCB1(INI-1)（+），CD10（少+），Desmin（-），MyoD1（-），Myogenin（-），P53（少+），PAX8（-），Ki-67（+80%），WT1（+），ER（-），PR（-），Syn（少+），CgA（-），INSM1（-），LCA（-） ;（全子宫）内膜呈分泌改变；宫颈慢性炎。（右附件）未见特殊异常。（左卵巢血管）纤维血管组织。（阑尾）慢性炎。（腹主动脉旁）淋巴结（0/14）未见肿瘤转移。（左髂总）淋巴结（0/6）未见肿瘤转移。2024.06.27患者签署“奈妥匹坦/帕洛诺司琼复方联合奥氮平基础上减免地塞米松对于高致吐方案止吐效果的影响：一项III期非劣效性随机试验”的知情同意书（版本号：V1.1，版本日期：2024.02.29），中心：01，组别：组3，筛选号：01-047，随机号：114。2024.06.27-2024.08.09行C1-C3程EP方案治疗，具体：【依托泊苷0.16g d1-3+顺铂 40mg d1-3 ivgtt，q3w。C3开始加用贝伐珠单抗400mg d1。】8.13 盆腔MRI：卵巢癌术后改变，系膜、腹膜散在结节，考虑转移，请结合临床。2024.08.29起行C1程【贝伐珠单抗400mg+奥沙利铂200mg d1+白蛋白结合型紫杉醇400mg d1，q3w】 9.2 腹部CT：腹膜后新见多发肿大淋巴结，M可能，请结合临床。肝内多发血管瘤可能同前相仿，请结合MRI检查。腹腔少量积液。【依托泊甙+顺铂*3，第三次加用贝伐，第四次换成白紫+奥博+贝伐*3】，末次化疗10.11 10.11CA125:7.14U/ml,CYFRA21-1:2.26ng/ml,NSE:12.80ng/ml,PROGRP:60.20pg/mL,HE4:71.80pmol/L↑,ROMA:15.38%(绝经前)↑,ROMA.:9.92%(绝经后) 10.23外院MRI： 卵巢肿瘤术后改变，两侧腹股沟数个淋巴结。 MRI复片：卵巢肿瘤术后改变，两侧腹股沟小淋巴结。腹部检查未做，无法评估腹膜后淋巴结情况。于2024.9.20-2024.10.11起行C2-C3程减量化疗：【贝伐珠单抗400mg+奥沙利铂160mg d1+白蛋白结合型紫杉醇320mg d1，q3w，C3后外院加用AK-104治疗2程】一共四周期； 24.12.15 HE4 93 24.12.03 总钙：2.46后【BEV+AK104】4次。CT（2024.12.09）：腹膜后多发肿大淋巴结，部分较前略缩小；左输尿管上段受累可能，伴左肾积水；请结合临床。肝内多发血管瘤可能同前相仿，请结合MRI检查。腹腔少量积液。2025.2.1 后腹膜区多发转移瘤，部分累及左侧输尿管可能，肝脏中叶稍低密度灶，左肾包膜下征象，转移可能，腹腔盆腔、腹膜后、双腹股沟多发淋巴结显示25.1 HE4 300+25.2 HE4 224.8发热 持续10余天，布洛芬控制复片：腹膜后多发肿大淋巴结，较前增大；左输尿管上段及左肾受累可能，左肾周渗出；肝内多发血管瘤同前。双侧腹股沟多发稍大淋巴结。2025.02.06 德曲+奥铂+贝伐 3程，第3程未用奥铂2025.03.28 HE4 117 较前增高2025.03.28 AKP 218 PLT 632025.02.27 US示病灶10cm较前相仿2025.03.15 US：后腹膜低回声10.6cm，较前相仿2025.04.14 德曲+奥沙利铂+贝伐，HE4 3042025.05.14 德曲+帕博利珠单抗+奥沙利铂2025.05.06 CT：病灶4.6*4.2cm，HE4 2502025.06.07 德曲+帕博利珠单抗，HE4　267诉CA199上升，2025.06.06 56，下降趋势2025.06.06 CT增强：病灶7.3cm诉肿瘤增大，咨询药物CT复片：腹膜后肿块，较2025.5增大，累及左肾静脉、输尿管、腰大肌，包绕腹主动脉；肝左叶血管瘤。",
+        "Time": "2025-06-10 15:38:50.183000",
+        "meta_info": "220422198808154721"
+    }
+]

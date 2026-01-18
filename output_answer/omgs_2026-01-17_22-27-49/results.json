@@ -1,0 +1,610 @@
+[
+    {
+        "scene": null,
+        "question": {
+            "CASE_CORE": {
+                "VISIT_DATE": "2025-09-22",
+                "last_platinum_end_date": "2025-07-17",
+                "first_relapse_date": "Unknown",
+                "PFI_days": "Unknown",
+                "PLATINUM_STATUS": "Unknown",
+                "PLATINUM_STATUS_CURRENT": "Unknown",
+                "PLATINUM_PFI_CURRENT": "Unknown",
+                "PLATINUM_HISTORY": [
+                    {
+                        "line": "1L",
+                        "start_date": "2025-06-24",
+                        "end_date": "2025-07-17",
+                        "first_relapse_date": "Unknown",
+                        "PFI_days": "Unknown",
+                        "status": "Unknown",
+                        "evidence_type": "Unknown",
+                        "evidence": ""
+                    }
+                ],
+                "DIAGNOSIS": {
+                    "primary": "Ovarian malignant tumor",
+                    "histology": "高级别腺癌，倾向高级别内膜样腺癌",
+                    "site": "Pelvis / ovary",
+                    "laterality": "Bilateral",
+                    "components": [
+                        "peritoneum",
+                        "omentum",
+                        "left ovary",
+                        "right ovary",
+                        "uterus",
+                        "left fallopian tube",
+                        "right fallopian tube",
+                        "appendix",
+                        "distal stomach",
+                        "hepatic ligament"
+                    ]
+                },
+                "STAGE": {
+                    "stage_text": "Unknown",
+                    "stage_system": "Unknown",
+                    "stage_basis": "Unknown"
+                },
+                "INITIAL_TREATMENT": "Yes",
+                "SURGERY_DONE": {
+                    "performed": "Yes",
+                    "date": "2025-08-26",
+                    "procedure": "Radical gastrectomy + total hysterectomy with bilateral adnexectomy + omentectomy + appendectomy + pelvic peritonectomy (abdominal)"
+                },
+                "NEOADJUVANT": "Unknown",
+                "ADJUVANT_TREATMENT": {
+                    "given": "Unknown",
+                    "regimens": [],
+                    "cycles_or_courses": "Unknown"
+                },
+                "LINE_OF_THERAPY": [
+                    {
+                        "line": "1L",
+                        "intent": "Unknown",
+                        "regimen": "紫杉醇+卡铂",
+                        "start_date": "2025-06-24",
+                        "end_date": "2025-07-17",
+                        "cycles": "2"
+                    }
+                ],
+                "MAINTENANCE": "Unknown",
+                "MAINTENANCE_DETAIL": {
+                    "given": "Unknown",
+                    "regimens": [],
+                    "start_date": "Unknown",
+                    "end_date": "Unknown"
+                },
+                "RELAPSE": "Unknown",
+                "RELAPSE_DATE": {
+                    "date": "Unknown",
+                    "type": "Unknown",
+                    "evidence": ""
+                },
+                "HRD": "Unknown",
+                "BRCA1": "Unknown",
+                "BRCA2": "Unknown",
+                "BIOMARKERS": {
+                    "TMB": "Unknown",
+                    "MSI": "MMR proteins intact (MLH1+, MSH2+, MSH6+, PMS2+)",
+                    "PDL1_CPS": "Unknown",
+                    "HER2": "0 (IHC)",
+                    "AFP": "Unknown",
+                    "CA125": "68 (2025-07-13)"
+                },
+                "CURRENT_STATUS": "Postoperative follow-up"
+            },
+            "TIMELINE": {
+                "events": [
+                    {
+                        "date": "2025-05-27",
+                        "event_type": "Imaging",
+                        "description": "FDG-PET/CT showing bilateral adnexal masses and widespread metastases",
+                        "regimen_or_test": "PET/CT",
+                        "key_result": "Bilateral adnexal masses; liver, hepatic subcapsular, cardiophrenic angle, porta hepatis, retroperitoneal nodes, peritoneal and omental metastases; ascites"
+                    },
+                    {
+                        "date": "2025-06-05",
+                        "event_type": "Surgery",
+                        "description": "Laparoscopic exploration and pelvic mass biopsy and omental biopsy",
+                        "regimen_or_test": "Laparoscopy with biopsies",
+                        "key_result": "Biopsies obtained for pathology"
+                    },
+                    {
+                        "date": "2025-06-07",
+                        "event_type": "Other",
+                        "description": "Gastric biopsy pathology",
+                        "regimen_or_test": "Gastroscopy biopsy",
+                        "key_result": "Low-differentiated adenocarcinoma (loss of adhesion)"
+                    },
+                    {
+                        "date": "2025-06-18",
+                        "event_type": "Pathology",
+                        "description": "Peritoneal and omental tumor pathology",
+                        "regimen_or_test": "Pathology with IHC",
+                        "key_result": "Adenocarcinoma; combined IHC favors female genital tract origin, favors high-grade endometrioid adenocarcinoma"
+                    },
+                    {
+                        "date": "2025-06-24",
+                        "event_type": "Chemo",
+                        "description": "First cycle paclitaxel + carboplatin",
+                        "regimen_or_test": "紫杉醇+卡铂",
+                        "key_result": "Cycle 1 administered"
+                    },
+                    {
+                        "date": "2025-07-13",
+                        "event_type": "Lab",
+                        "description": "Outside lab tests",
+                        "regimen_or_test": "CBC and tumor markers",
+                        "key_result": "WBC 3.17↓; Hb 103↓; Platelets 222; CA125 68↑"
+                    },
+                    {
+                        "date": "2025-07-17",
+                        "event_type": "Chemo",
+                        "description": "Second cycle paclitaxel + carboplatin",
+                        "regimen_or_test": "紫杉醇+卡铂",
+                        "key_result": "Cycle 2 administered"
+                    },
+                    {
+                        "date": "2025-08-04",
+                        "event_type": "Lab",
+                        "description": "Outside CBC",
+                        "regimen_or_test": "CBC",
+                        "key_result": "WBC 2.31↓; Hb 102↓; Platelets 124"
+                    },
+                    {
+                        "date": "2025-08-26",
+                        "event_type": "Surgery",
+                        "description": "Radical gastrectomy + total hysterectomy with bilateral adnexectomy + omentectomy + appendectomy + pelvic peritonectomy",
+                        "regimen_or_test": "Abdominal surgery",
+                        "key_result": "Resection performed; multiple specimens sent"
+                    },
+                    {
+                        "date": "2025-09-01",
+                        "event_type": "Pathology",
+                        "description": "Surgical specimen pathology reports",
+                        "regimen_or_test": "Surgical pathology with IHC",
+                        "key_result": "High-grade adenocarcinoma involving adnexa and pelvic peritoneum; distal stomach low-differentiated adenocarcinoma; lymph node metastases (3/25)"
+                    },
+                    {
+                        "date": "2025-09-22",
+                        "event_type": "Other",
+                        "description": "Postoperative review visit",
+                        "regimen_or_test": "Clinic visit",
+                        "key_result": "Postoperative follow-up"
+                    }
+                ],
+                "constraints": {
+                    "min_events": 3,
+                    "max_events": 30,
+                    "must_include": [
+                        "first diagnostic imaging or pathology confirmation (if available)"
+                    ],
+                    "ordering_rules": {
+                        "prioritize_last_event": true
+                    }
+                }
+            },
+            "MED_ONC": {
+                "current_regimen": {
+                    "name": "Unknown",
+                    "last_admin_date": "Unknown",
+                    "cycle_info": "Unknown"
+                },
+                "planned_next_regimen": "Unknown",
+                "prior_systemic_therapies": [
+                    "紫杉醇+卡铂"
+                ],
+                "genetic_testing": {
+                    "somatic": [],
+                    "germline": []
+                },
+                "monitoring_points": []
+            },
+            "RADIOLOGY": {
+                "studies": [
+                    {
+                        "date": "2025-05-27",
+                        "modality": "Other",
+                        "anatomic_sites": [
+                            "bilateral adnexa",
+                            "liver",
+                            "hepatic subcapsular",
+                            "cardiophrenic angle",
+                            "porta hepatis",
+                            "retroperitoneal lymph nodes",
+                            "peritoneum",
+                            "omentum",
+                            "ascites"
+                        ],
+                        "findings": [
+                            "Bilateral adnexal masses suspicious for ovarian cancer",
+                            "Metastases to liver, hepatic subcapsular area, cardiophrenic angle, porta hepatis, retroperitoneal nodes",
+                            "Peritoneal and omental metastases",
+                            "Abdominal and pelvic ascites"
+                        ],
+                        "impression": "Bilateral adnexal masses suspicious for ovarian cancer with multifocal metastatic disease including liver, nodes, peritoneum, omentum; ascites",
+                        "trend_vs_prior": "Unknown"
+                    }
+                ],
+                "next_imaging_plan": {
+                    "modality": "Unknown",
+                    "timing": "Unknown"
+                }
+            },
+            "PATHOLOGY": {
+                "specimens": [
+                    {
+                        "date": "2025-06-07",
+                        "site": "gastric antrum (biopsy)",
+                        "diagnosis": "Low-differentiated adenocarcinoma (loss of adhesion)",
+                        "components": [
+                            "gastric mucosa biopsy"
+                        ],
+                        "grade": "Low-differentiated",
+                        "tumor_size": "Unknown",
+                        "laterality": "Unknown",
+                        "sample_type": "Biopsy",
+                        "involvement_sites": [],
+                        "ihc": [
+                            {
+                                "marker": "MLH1",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "MSH6",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "MSH2",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "PMS2",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "PAX8",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "ER",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "PR",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "WT1",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "Claudin 18 (43-14A)",
+                                "result": "≥75%;2/3+"
+                            }
+                        ],
+                        "molecular": [],
+                        "raw_text": "Gastric antrum biopsy pathology: low-differentiated adenocarcinoma (loss of adhesion). IHC from original unit: MLH1(ES05)(+), MSH6(+), MSH2(+), PMS2(+). Supplementary: combined IHC favors gastric primary adenocarcinoma.",
+                        "uncertainty_or_missing": [
+                            "Further diagnostic correlation with IHC"
+                        ]
+                    },
+                    {
+                        "date": "2025-06-18",
+                        "site": "peritoneum and omentum (biopsy)",
+                        "diagnosis": "Adenocarcinoma; combined IHC favors female genital tract origin, favors high-grade endometrioid adenocarcinoma",
+                        "components": [
+                            "peritoneal tumor",
+                            "omental tumor"
+                        ],
+                        "grade": "High-grade",
+                        "tumor_size": "Unknown",
+                        "laterality": "Unknown",
+                        "sample_type": "Biopsy",
+                        "involvement_sites": [
+                            "peritoneum",
+                            "omentum"
+                        ],
+                        "ihc": [
+                            {
+                                "marker": "ER",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "PR",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "P53",
+                                "result": "部分+"
+                            },
+                            {
+                                "marker": "WT1",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "HNF1B",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "NapsinA",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "P16",
+                                "result": "强+"
+                            },
+                            {
+                                "marker": "PAX8",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "CDX-2",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "CK7",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "CK20",
+                                "result": "(-)"
+                            }
+                        ],
+                        "molecular": [],
+                        "raw_text": "Peritoneal and omental tumor pathology (2025-06-18): adenocarcinoma. Combined with IHC, consider female genital tract origin, favors high-grade endometrioid adenocarcinoma. IHC: ER(+), PR(-), P53(部分+), WT1(+), HNF1B(-), NapsinA(-), P16(强+), PAX8(+), CDX-2(-), SATB2(-), CK7(+), CK20(-).",
+                        "uncertainty_or_missing": [
+                            "Further IHC confirmation performed"
+                        ]
+                    },
+                    {
+                        "date": "2025-08-26",
+                        "site": "whole surgical specimen: uterus + bilateral adnexa + pelvic peritoneum + hepatic ligament + distal stomach + omentum + appendix",
+                        "diagnosis": "High-grade adenocarcinoma involving adnexa and pelvic peritoneum; distal stomach: low-differentiated adenocarcinoma",
+                        "components": [
+                            "uterus",
+                            "bilateral adnexa",
+                            "pelvic peritoneum",
+                            "hepatic ligament",
+                            "distal stomach",
+                            "omentum",
+                            "appendix"
+                        ],
+                        "grade": "High-grade",
+                        "tumor_size": "Left:4.8×3.5×2.5 cm; Right:3.5×1.5×0.7 cm; distal stomach tumor 2×1.5×1.5 cm",
+                        "laterality": "Bilateral",
+                        "sample_type": "Surgical resection",
+                        "involvement_sites": [
+                            "left fallopian tube: tumor present",
+                            "right fallopian tube: tumor present",
+                            "uterine endometrium: atrophic",
+                            "pelvic peritoneum: tumor present",
+                            "omentum: tumor present",
+                            "lymph nodes: metastasis 3/25"
+                        ],
+                        "ihc": [
+                            {
+                                "marker": "HER2",
+                                "result": "0"
+                            },
+                            {
+                                "marker": "EBER",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "MLH1(ES05)",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "MSH2",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "MSH6",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "PMS2",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "CDX-2",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "CK20",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "CK7",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "PAX8",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "ER",
+                                "result": "部分+ / (+20% reported)"
+                            },
+                            {
+                                "marker": "PR",
+                                "result": "个别+ / (- in some reports)"
+                            },
+                            {
+                                "marker": "P53",
+                                "result": "部分+"
+                            },
+                            {
+                                "marker": "WT1",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "Ki-67",
+                                "result": "+20% (report) / +60% (distal stomach)"
+                            },
+                            {
+                                "marker": "HNF1B",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "NapsinA",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "P16",
+                                "result": "弥漫+"
+                            },
+                            {
+                                "marker": "IMP3",
+                                "result": "(+)"
+                            },
+                            {
+                                "marker": "TTF-1",
+                                "result": "(-)"
+                            },
+                            {
+                                "marker": "GATA3",
+                                "result": "(-)"
+                            }
+                        ],
+                        "molecular": [],
+                        "raw_text": "Surgical specimen (2025-08-26) pathology: specimens: uterus+bilateral adnexa+pelvic peritoneum+hepatic ligament+distal stomach+omentum+appendix. Bilateral adnexal tumors: left 4.8×3.5×2.5 cm; right 3.5×1.5×0.7 cm. Pathology: high-grade adenocarcinoma; distal stomach: low-differentiated adenocarcinoma 2×1.5×1.5 cm invading submucosa (SM1). Lymph nodes 3/25 positive. IHC summarized in report(s) with PAX8(+), ER(partial+), WT1(+), HER2(0), MMR proteins intact. Diagnostic comment: high-grade adenocarcinoma with therapy-related changes; need to consider high-grade endometrioid vs high-grade serous; molecular testing may be added.",
+                        "uncertainty_or_missing": [
+                            "Distinction between high-grade endometrioid and high-grade serous not definitive; molecular testing suggested"
+                        ]
+                    }
+                ]
+            },
+            "NUC_MED": {
+                "studies": [
+                    {
+                        "date": "2025-05-27",
+                        "type": "FDG-PET/CT",
+                        "avid_lesions": [
+                            "bilateral adnexal masses",
+                            "liver lesions",
+                            "hepatic subcapsular lesions",
+                            "cardiophrenic angle lesion",
+                            "porta hepatis nodes",
+                            "retroperitoneal lymph nodes",
+                            "peritoneal and omental lesions"
+                        ],
+                        "non_avid_notes": [],
+                        "confidence": "Moderate"
+                    }
+                ]
+            },
+            "LAB_TRENDS": {
+                "labs": [
+                    {
+                        "analyte": "CA125",
+                        "unit": "U/mL",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-07-13",
+                            "value": "68",
+                            "flag": "↑"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-07-13",
+                                "value": "68",
+                                "flag": "↑"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "Hb",
+                        "unit": "g/L",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-08-04",
+                            "value": "102",
+                            "flag": "↓"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-07-13",
+                                "value": "103",
+                                "flag": "↓"
+                            },
+                            {
+                                "date": "2025-08-04",
+                                "value": "102",
+                                "flag": "↓"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "Other",
+                        "unit": "10^9/L",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-08-04",
+                            "value": "WBC 2.31",
+                            "flag": "↓"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-07-13",
+                                "value": "WBC 3.17",
+                                "flag": "↓"
+                            },
+                            {
+                                "date": "2025-08-04",
+                                "value": "WBC 2.31",
+                                "flag": "↓"
+                            }
+                        ]
+                    },
+                    {
+                        "analyte": "Other",
+                        "unit": "10^9/L",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2025-08-04",
+                            "value": "Platelets 124",
+                            "flag": "↓"
+                        },
+                        "history": [
+                            {
+                                "date": "2025-07-13",
+                                "value": "Platelets 222",
+                                "flag": "Unknown"
+                            },
+                            {
+                                "date": "2025-08-04",
+                                "value": "Platelets 124",
+                                "flag": "↓"
+                            }
+                        ]
+                    }
+                ],
+                "milestones": [
+                    {
+                        "date": "2025-06-24",
+                        "type": "ChemoStart",
+                        "description": "First cycle paclitaxel + carboplatin"
+                    },
+                    {
+                        "date": "2025-07-17",
+                        "type": "ChemoEnd",
+                        "description": "Second cycle paclitaxel + carboplatin administered (last documented)"
+                    },
+                    {
+                        "date": "2025-08-26",
+                        "type": "Surgery",
+                        "description": "Radical gastrectomy + hysterectomy + bilateral adnexectomy + omentectomy + appendectomy + pelvic peritonectomy"
+                    }
+                ]
+            }
+        },
+        "response": null,
+        "error": "Request timed out.",
+        "gold_plan": "每周化验血常规\n西药及中成药方：[基][甲]地塞米松磷酸钠注射液　5mg*1支×1支/静推　1支/st　d1[基][甲]异丙嗪针(非那更针)　25mg*1ml×1支/肌肉　1支/qd　d1[基][甲]氯化钠注射液(辰欣)　0.9%*100ml×1袋/静滴　1袋/qd　d1西咪替丁注射液　0.2g:2ml*10支×2支/静滴　2支/qd　d1　经解释患者已经同意自费使用该药品[基][甲]葡萄糖注射液(双鹤)　5%*500ml×1袋/静滴　1袋/qd　d1※[乙0%]注射用紫杉醇脂质体(力朴素)　30mg/瓶×8瓶/静滴　8支/qd　d1【医保限定支付范围:1.卵巢癌的一线化疗及以后卵巢转移性癌的治疗、作为一线化疗，也可与顺铂联合应用。】[基][甲]葡萄糖注射液(双鹤)　5%*500ml×1袋/静滴　1袋/qd　d1[甲]卡铂注射液(波贝)　100mg:10ml/支×5支/静滴　5支/qd　d1[基][甲]葡萄糖注射液(双鹤)　5%*500ml×1袋/静滴　1袋/qd　d1。本科处置：静脉输液×1次　抗肿瘤化学药物配置×7次　BD10ml预充式导管冲洗器×1个　静脉注射×1次　24G一次性使用静脉留置针(商品名×1支　肌肉注射×1次　一次性使用精密过滤输液器带针J×1支西药及中成药方：[乙10%]替吉奥胶囊(艾奕)　20mg*42粒×2盒/口服　3粒/bid　D1-14。西药及中成药方：国[乙10%]奈妥匹坦帕洛诺司琼胶囊（奥康泽）(奥康泽)　每粒硬胶囊含奈妥匹坦×2盒/口服　1粒/qd　d1,2。检验科申请：肝功能(急诊)　肾功能(急诊)　血常规新(五分类)　癌胚抗原测定(CEA)　甲胎蛋白　CA19-9(肿瘤抗原CA19-9)　SCCA(鳞癌相关抗原)　CA125(肿瘤抗原CA125)　HE4（卵巢癌）　CA15-3(肿瘤抗原CA15-3)检查地点：徐汇院区：东安路270号1号楼3楼检验科 （90天内有效）。西药及中成药方：※[甲]瑞白针(人粒细胞刺激因子注射液)　100ug*0.6ml×2支/皮下　2支/qd　d1。本科处置：皮下注射×1次检验科申请：血常规新(五分类)检查地点：徐汇院区：东安路270号1号楼3楼检验科 （90天内有效）。",
+        "question_raw": "卵巢恶性肿瘤：子宫内膜样腺瘤：盆腔肿瘤：2025.5.27 petct：1. 双附件占位，考虑卵巢 癌，肝脏、肝包膜下及 心膈角区、肝 门部、腹膜后淋巴结 转移，腹膜、网膜转移，腹盆腔积液。2.　 头颅 显像未见异常3.双侧颈部 、颌下稍大淋巴结 ，考虑炎症 改变4.慢性阑尾炎5. 腰椎间 膨出。结核感染T细胞检查 ：阴性。胃镜：胃窦病变（待病理）。肠镜： 大致正常。病理诊断： 病理会诊咨询意见:（胃窦，活检）低分化腺癌（失粘附性癌）。原单位免疫组化：MLH1(ES05)（+），MSH6（+），MSH2（+），PMS2（+）补充诊断1：结合免疫组化结果，倾向胃原发腺癌。免疫组化结果（HI25-28648）：PAX8（-），ER（-），PR（-），WT1（-），Claudin 18 (43-14A)（≥75%；2/3+）; 补充报告医生：黄丹;　复诊医生：黄丹;　补充报告日期：2025-06-27 ;报告医生： 毛璐宁 报告日期： 2025/06/07　2025.6.5在全麻下行腹腔镜探查术+女性盆腔肿物活检术+大网膜活检术。2025.6.18.（腹膜肿瘤、大网膜肿瘤）腺癌，正在加做免疫组化进一步辅助诊断。补充诊断1：【补充报告】（腹膜肿瘤、大网膜肿瘤）腺癌，结合免疫组化结果考虑为女生殖系统来源的高级别腺癌，倾向高级别内膜样腺癌。免疫组化结果（HI25-26021）：ER（+），PR（-），P53（部分+），WT1（+），HNF1B（-），NapsinA（-），P16（强+），PAX8（+），CDX-2（-），SATB2（-），CK7（+），CK20（-）; 补充报告医生：张丽;　复诊医生：翁微微;　补充报告日期：2025-06-18 ;下腹部饭后疼痛2025.6.24.予紫杉醇+卡铂行第1次化疗2025.7.13.外院血常规：白细胞：3.17↓　血红蛋白：103↓　血小板：2222025.7.13.外院肿标：CA125:68↑2025.7.13.外院肝肾功能：GLB：36.8↑　A/G:1.10↓2025.6.24.、2025.7.17. 予紫杉醇+卡铂 行2次化疗2025.8.4.外院血常规：白细胞：2.31↓ 血红蛋白：102 ↓ 血小板：124其他未见异常2025.08.26 胃癌根治术+全子宫切除伴双附件（腹式）+大网膜切除术+阑尾切除术+盆底腹膜切除术病理诊断：标本类型:全子宫+双附件+盆底腹膜+肝圆韧带+远端胃+大网膜+阑尾肿瘤大小:左侧：4.8×3.5 ×2.5 cm；右侧：3.5×1.5×0.7cm肿瘤侧别:双侧附件病理类型:高级别腺癌，正在行免疫组化进一步诊断其他部位情况:左输卵管:见癌累及右输卵管:见癌累及子宫内膜:萎缩改变宫颈:见癌累及子宫肌层:未见特殊盆腹腔多部位病灶:（盆底腹膜、大网膜）见癌累及。（肝圆韧带）未见癌累及。其他:（远端胃）低分化腺癌，肿瘤大小2*1.5*1.5cm，浸润至黏膜下层（SM1，浸润深度＜500μm），未见肯定的脉管癌栓及神经侵犯，标本上、下切缘均（-）。Lauren分型：倾向弥漫型。另送（上切缘、下切缘）均阴性。淋巴结（3/25）见癌转移，正在行免疫组化明确类型，其中：小弯淋巴结（3/5），大弯淋巴结（0/8）、幽门上淋巴结（0/6）（第6组）淋巴结（0/1），（第12A组）淋巴结（0/5）。（阑尾）慢性炎。补充诊断1：补充报告：标本类型:全子宫+双附件+盆底腹膜+肝圆韧带+远端胃+大网膜+阑尾肿瘤大小:左侧：4.8×3.5 ×2.5 cm；右侧：3.5×1.5×0.7cm肿瘤侧别:双侧附件病理类型:高级别腺癌伴肿瘤细胞退变，结合临床病史，符合治疗后改变，诊断需考虑高级别内膜样腺癌与高级别浆液性癌，免疫表型不典型（I2025-10475)，必要时可加做分子检测（需来病理科缴费）。其他部位情况:左输卵管:见癌累及右输卵管:见癌累及子宫内膜:萎缩改变宫颈:见癌累及子宫肌层:未见特殊盆腹腔多部位病灶:（盆底腹膜、大网膜）见癌累及。（肝圆韧带）未见癌累及。其他:（远端胃）低分化腺癌，肿瘤大小2*1.5*1.5cm，浸润至黏膜下层（SM1，浸润深度＜500μm），未见肯定的脉管癌栓及神经侵犯，标本上、下切缘均（-）。Lauren分型：倾向弥漫型。另送（上切缘、下切缘）均阴性。淋巴结（3/25）见癌转移，结合免疫组化结果，符合卵巢癌转移，其中：小弯淋巴结（3/5），大弯淋巴结（0/8）、幽门上淋巴结（0/6）（第6组）淋巴结（0/1），（第12A组）淋巴结（0/5）。（阑尾）慢性炎。免疫组化结果（HI25-42710）：远端胃：瘤细胞HER2（0），EBER（-），MLH1(ES05)（+），MSH2（+），MSH6（+），PMS2（+），CDX-2（+），CK20（+），CK7（+），PAX8（-），Ki-67（+60%），E-Cadherin（+），Claudin 18 (43-14A)（-），ER（-）淋巴结：瘤细胞PAX8（+），CDX-2（-），ER（+），WT1（+）; 补充报告医生：曹龄丹;　复诊医生：张萌;　补充报告日期：2025-09-16 ;报告医生： 曹龄丹 报告日期： 2025/09/01病理诊断： 瘤细胞示：ER（部分+），PR（个别+），P53（部分+），WT1（+），Ki-67（+20％），HER2（0），HNF1B（-），NapsinA（-），P16（弥漫+），PAX8（+），IMP3（+），TTF-1（-），GATA3（-）报告医生： 张肖艳 报告日期： 2025/09/04今为术后复查",
+        "Time": "2025-09-22 14:14:50.183000",
+        "meta_info": "341621197711091961"
+    }
+]

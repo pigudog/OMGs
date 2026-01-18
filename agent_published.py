@@ -17,7 +17,7 @@ from utils import build_lab_timeline,build_imaging_timeline,build_pathology_time
 from utils import VisualConfig, TraceLogger,print_selected_reports_table,print_section,print_rag_hits_table
 from aoai import OpenAIWrapper
 from utils import load_patient_labs,load_patient_imaging,load_patient_pathology,load_patient_mutations,read_jsonl,parse_ids,parse_date_any,summarize_selected_reports
-from utils.rag_utils import rag_search_pack,build_rag_query_for_mdt,summarize_rag_evidence
+from utils.rag_utils import build_rag_query_for_mdt,summarize_rag_evidence
 from utils.role_utils import ROLES,ROLE_PERMISSIONS,ROLE_PROMPTS,safe_load_case_json,expert_select_reports,init_expert_agent
 from utils.core import init_client,Agent,load_data,create_question,setup_model,load_paths_config,get_paths_config
 # Public API of `utils`
@@ -239,7 +239,7 @@ def run_mdt_discussion(
 
 
 ###############################################################################
-# 7. INTERACTION DIRECTION MATRIX（PrettyTable）
+# INTERACTION DIRECTION MATRIX（PrettyTable）
 ###############################################################################
 def _count_interactions(interaction_log, src, dst):
     c = 0
@@ -285,7 +285,7 @@ def print_interaction_matrix(interaction_log, roles_order=ROLES):
 
 
 ###############################################################################
-# 9. MAIN ENTRY
+#  MAIN ENTRY
 ###############################################################################
 def process_omgs_multi_expert_query(
     question,
@@ -471,20 +471,13 @@ def process_omgs_multi_expert_query(
     )
     
     rag_query = build_rag_query_for_mdt(rag_query_builder, question_str)
-    print("rag_query",rag_query)
-    
-    # Use RAG config from paths config
-    rag_config = paths_config["rag_store"]
-    index_dir = rag_config["index_dir_template"].format(role="chair")
-    embedding_model = rag_config.get("embedding_model", "BAAI/bge-m3")
-    
-    rag_pack, rag_raw = rag_search_pack(
-        query=rag_query,
-        index_dir=index_dir,
-        model_name=embedding_model,
+
+    # Use global guideline RAG (respects config: use_per_role_rag / default_role)
+    from utils.rag_utils import get_global_guideline_rag
+    rag_pack, rag_raw = get_global_guideline_rag(
+        question=rag_query,
         device=device,
         topk=topk,
-        collection_name="chair_chunks",
     )
     
     trace.emit("rag_query", {"query": rag_query})

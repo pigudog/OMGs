@@ -1,0 +1,1120 @@
+# ESGO_OvarianCancer_PocketGuidelines_2025
+
+
+---
+[PAGE 1/24]
+
+PUBLISHED IN 2024
+OVARIAN
+CANCER
+POCKET
+GUIDELINES
+
+
+
+---
+[PAGE 2/24]
+
+2
+
+
+
+---
+[PAGE 3/24]
+
+3
+POCKET GUIDELINES
+Based on
+ESGO-ESMO-ESP consensus conference
+recommendations on ovarian cancer:
+pathology and molecular biology and early,
+advanced and recurrent disease
+Ledermann, J. Matias-Guiu, X., … Fagotti, A. (2024). ESGO-ESMO-ESP consensus
+conference recommendations on ovarian cancer: pathology and molecular biology and,
+early, advanced and recurrent disease. Annals of Oncology. Mar;35(3):248-266.
+doi: 10.1016/j.annonc.2023.11.015
+
+
+
+---
+[PAGE 4/24]
+
+4
+The development of guidelines is one of the core activities of both the European
+Society of Gynaecological Oncology (ESGO) and the European Society for Medical
+Oncology (ESMO), as part of their mission to improve the quality of care for pati-
+ents with cancer across Europe. The European Society of Pathology (ESP) promotes
+high-quality pathology diagnosis for all patients. Following the 2018 ESMO-ESGO
+consensus conference (CC) on ovarian cancer, another CC took place on 15-16
+June 2022 in Valencia, Spain. Pathology expertise was added by including ESP. Fo-
+llowing the ESMO Standard Operating Procedures (SOPs) for CC, the aim was to
+discuss new or contentious topics and develop recommendations to improve and
+harmonise the management of patients with ovarian cancer.
+The need for a CC was identified by the ESGO and ESMO Guidelines Committees.
+A. Fagotti (ESGO), J. Ledermann (ESMO) and X. Matias-Guiu (ESP) were designated
+as CC Chairs. The CC Chairs defined four broad topics and assigned 41 additional
+experts from Europe with representation from Asia and the United States of Ameri-
+ca to four working groups (WGs) based on their expertise, ensuring good represen-
+tation across the three societies. An ESMO scientific advisor and a methodologist
+(ESGO) were also included in the CC panel. Two WG Chairs for each WG were
+nominated by the CC Chairs as follows:
+1.	 Pathology and molecular biology (Chairs: B. Davidson and A. Leary);
+2.	 Early-stage disease and pelvic mass in pregnancy (Chairs: F. Amant and C. Gourley);
+3.	 Advanced stage (including older/frail patients) (Chairs: N. Concin and D. Lorusso);
+4.	 Recurrent disease (Chairs: C. Fotopoulou and A. González-Martín).
+Literature search was conducted by the ESGO methodologist using the Medline®
+database to ensure that the recommendations were evidence-based. Prior the CC,
+the WGs discussed published data and clinical experience and drafted recommen-
+dations. Organisation of the pre-consensus process and onsite conference was ma-
+naged by the ESMO Guidelines staff.
+During the CC, the four WGs further discussed and agreed on the draft recommen-
+dations in parallel sessions. These were presented to the entire panel before voting,
+where they were discussed and modified as required. Forty individuals were eligible
+to vote on recommendations (3 CC Chairs, 8 WG Chairs and 29 WG members). Four
+WG members were unable to attend/vote in person but participated in post-CC vo-
+ting. The ESGO methodologist and the ESMO scientific advisor did not participate in
+the voting of recommendations. Voting was anonymous. Members could abstain from
+voting if they perceived that they had insufficient expertise or a conflict of interest.
+
+
+
+---
+[PAGE 5/24]
+
+5
+I
+Evidence from at least one large randomised, controlled trial of good methodologi-
+cal quality (low potential for bias) or meta-analyses of well conducted, randomised
+trials without heterogeneity
+II	 Small randomised trials or large randomised trials with a suspicion of bias (lower
+methodological quality) or meta-analyses of such trials or of trials with demonstra-
+ted heterogeneity
+III	 Prospective cohort studies
+IV	 Retrospective cohort studies or case-control studies
+V	 Studies without control group, case reports, expert opinions
+LEVELS OF EVIDENCE
+A	 Strong evidence for efﬁcacy with a substantial clinical beneﬁt, strongly recommended
+B	 Strong or moderate evidence for efﬁcacy but with a limited clinical beneﬁt, gene-
+rally recommended
+C	 Insufﬁcient evidence for efﬁcacy or beneﬁt does not outweigh the risk or the dis-
+advantages (adverse events, costs…), optional
+D	 Moderate evidence against efﬁcacy or for adverse outcome, generally not recom-
+mended
+E	 Strong evidence against efﬁcacy or for adverse outcome, never recommended
+GRADES OF RECOMMENDATIONS
+For recommendations that did not reach consensus onsite after two rounds of voting,
+a post-CC exploration of disagreements was conducted using a modified Grading
+of Recommendations, Assessment, Developmentand Evaluation (GRADE) methodo-
+logy, described in the ESMO SOPs. The aim was to provide further insight into the
+division of opinions to illustrate the extent to which consensus was/was not likely.
+An adapted version of the ‘Infectious Diseases Society of America-United States Pu-
+blic Health Service Grading System’ was used to define the level of evidence and
+grade of recommendation for each recommendation proposed, based on the data
+available up to the time of the CC:
+These ESGO-ESMO-ESP CC recommendations are intended for use by all health pro-
+fessionals involved in the management of patients with ovarian cancer across all
+allied disciplines. They do not include any economic analysis of the strategies. Any
+clinician seeking to apply or consult these CC recommendations is expected to use
+independent medical judgment in the context of individual clinical circumstances to
+determine any patient’s care or treatment.
+
+
+
+---
+[PAGE 6/24]
+
+6
+NAME
+SPECIALTY
+AFFILIATION
+Anna Fagotti
+Gynaecologic oncologist
+Fondazione Policlinico Universitario A. Gemelli
+
+(CC chair)
+ IRCCS, Rome (Italy), Child and Public Health, Catholic
+
+University of Sacred Heart, Rome (Italy)
+Jonathan Ledermann
+Medical oncologist (CC chair)
+UCL Cancer Institute, University College London,
+
+London (United Kingdom)
+Xavier Matias-Guiu
+Pathologist (CC chair)
+Hospital Universitari Arnau de Vilanova, IRBLLEIDA,
+
+University of Lleida, Lleida (Spain), Hospital Universitari de
+
+Bellvitge, IDIBELL, University of Barcelona, Barcelona (Spain)
+François Planchamp
+Methodologist
+Institut Bergonié, Bordeaux, (France)
+Frédéric Amant
+Gynaecologic oncologist
+KU Leuven, Leuven (Belgium), Antoni van Leeuwenhoek
+
+Nederlands Kanker Instituut, Amsterdam
+
+(The Netherlands)
+Susana Banerjee
+Medical oncologist
+The Royal Marsden NHS Foundation Trust and Institute
+
+of Cancer Research, London (United Kingdom)
+Luis Chiva
+Gynaecologic oncologist
+Cancer Center Clínica Universidad de Navarra,
+
+Navarra (Spain)
+
+David Cibula
+Gynaecologic oncologist
+First Faculty of Medicine, Charles University and General
+
+University Hospital in Prague, Prague (Czech Republic)
+Nicoletta Colombo
+Obstetrician & gynaecologist
+Istituto Europeo di Oncologia IRCCS, Milan (Italy)
+
+University of Milano-Bicocca, Milan (Italy)
+Nicole Concin
+Gynaecologic oncologist
+Medical University of Innsbruck, Innsbruck (Austria)
+Sabrina Croce
+Pathologist
+Institut Bergonié, Bordeaux (France)
+Ben Davidson
+Pathologist
+The Norwegian Radium Hospital, Oslo University
+
+Hospital, Oslo (Norway)
+
+Institute of Clinical Medicine, Faculty of Medicine,
+
+University of Oslo, Oslo, (Norway)
+
+Claire Falandry
+Medical oncologist
+Institute of Aging, Hospices Civils de Lyon, Lyon (France),
+
+CarMeN Laboratory, INSERM U1060/Université Lyon 1/
+
+INRAE U1397/Hospices Civils Lyon, Pierre-Bénite (France)
+Daniela Fischerová
+Gynaecologic oncologist
+First Faculty of Medicine, Charles University and General
+
+University Hospital in Prague, Prague (Czech Republic)
+Christina Fotopoulou
+Gynaecologic oncologist
+Faculty of Medicine, Imperial College London,
+
+London (United Kingdom)
+Ane Gerda Zahl Eriksson
+Gynaecologic oncologist
+The Norwegian Radium Hospital, Oslo University
+
+Hospital, Oslo (Norway), Institute of Clinical Medicine,
+
+Faculty of Medicine, University of Oslo, Oslo, (Norway)
+Antonio González-Martín
+Medical oncologist
+Cancer Center Clínica Universidad de Navarra,
+
+Madrid (Spain)
+
+Charlie Gourley
+Medical oncologist
+Cancer Research UK Scotland Centre, Institute
+
+of Genetics and Cancer, University of Edinburgh,
+
+Edinburgh (United Kingdom)
+
+Philipp Harter
+Gynaecologic oncologist
+Evang. Kliniken Essen-Mitte, Essen (Germany)
+Florence Joly
+Medical oncologist
+Centre François-Baclesse, University of Caen
+
+Normandy, Caen (France)
+Conxi Lazaro
+Molecular geneticist
+Catalan Institute of Oncology (ICO–IDIBELL–CIBERONC),
+
+L’Hospitalet de Llobregat, Barcelona (Spain)
+Alexandra Leary
+Medical oncologist
+Institut Gustave Roussy, Villejuif (France)
+ESGO would like to thank all the participants of the ESGO-ESMO-ESP CC for their constant
+availability, work, and for making possible the development of these CC recommendations
+on ovarian cancer (see below).
+
+
+
+---
+[PAGE 7/24]
+
+7
+Domenica Lorusso
+Obstetrician & gynaecologist
+Fondazione Policlinico Universitario A. Gemelli IRCCS,
+
+Rome (Italy), Catholic University of Sacred Heart,
+
+Rome (Italy)
+Christianne Lok
+Gynaecologic oncologist
+Center for Gynecological Oncology Amsterdam,
+
+ Netherlands Cancer Institute, Amsterdam
+
+(The Netherlands)
+
+Sven Mahner
+Gynaecologic oncologist
+University Hospital, LMU Munich, Munich (Germany)
+Frederik Marmé
+Gynaecologic oncologist
+University Hospital Mannheim, Mannheim (Germany)
+
+Medical Faculty Mannheim, Heidelberg University,
+
+Mannheim (Germany)
+
+Christian Marth
+Gynaecologic oncologist
+Medical University of Innsbruck, Innsbruck (Austria)
+Glenn McCluggage
+Pathologist
+Belfast Health and Social Care Trust, Belfast (United Kingdom)
+Ian McNeish
+Medical oncologist
+Faculty of Medicine, Imperial College London,
+
+London (United Kingdom)
+Philippe Morice
+Gynaecologic oncologist
+Gustave Roussy Cancer Campus, Villejuif (France)
+Shibani Nicum
+Medical oncologist
+UCL Cancer Institute, University College London,
+
+London (United Kingdom)
+Ana Oaknin
+Medical oncologist
+Vall d’Hebron Institute of Oncology (VHIO), Hospital
+
+Universitari Vall d’Hebron, Vall d’Hebron Barcelona Hospital
+
+Campus, Barcelona (Spain)
+Jose Alejandro Pérez-Fidalgo
+Medical oncologist
+Hospital Clínico Universitario – INCLIVA, CIBERONC,
+
+Valencia (Spain)
+
+Sandro Pignata
+Medical oncologist
+Istituto Nazionale Tumori di Napoli, IRCCS Fondazione
+
+Pascale, Napoli (Italy)
+
+Pedro Ramirez
+Obstetrician & gynaecologist
+Houston Methodist Hospital, Houston
+
+(United States of America)
+Isabelle Ray-Coquard
+Medical oncologist
+Centre Léon Bérard, Lyon (France)
+
+Ignacio Romero
+Medical oncologist
+Instituto Valenciano Oncologia, Valencia (Spain)
+Giovanni Scambia
+Endoscopist, surgeon
+Fondazione Policlinico Universitario A. Gemelli IRCCS,
+
+Rome (Italy), Catholic University of Sacred Heart,
+
+Rome (Italy)
+Ronnie Shapira-Frommer
+Medical oncologist
+Sheba Medical Center, Ramat Gan (Israel)
+Jalid Sehouli
+Gynaecologic oncologist
+Charité-Universitätsmedizin, Berlin (Germany)
+Cristiana Sessa
+Medical oncologist
+Oncology Institute of Southern Switzerland (IOSI),
+
+(scientific advisor)
+ Bellinzona (Switzerland)
+Sudha Sundar
+Gynaecologic oncologist
+Institute of Cancer and Genomic Sciences, University
+
+of Birmingham, Birmingham (United Kingdom)
+
+Pan Birmingham Gynaecological Cancer Centre,
+
+City Hospital, Birmingham (United Kingdom)
+David Tan
+Medical oncologist
+Yong Loo Lin School of Medicine, National University
+
+of Singapore (Singapore), National University of Singapore
+
+(NUS) Centre for Cancer Research, Yong Loo Lin School
+
+of Medicine, National University of Singapore (Singapore)
+
+Cancer Science Institute, National University of Singapore
+
+(Singapore), National University Cancer Institute Singapore,
+
+National University Hospital, Singapore (Singapore)
+Cagatay Taskiran
+Gynaecologic oncologist
+School of Medicine, Koç University, Istanbul (Turkey)
+Willemien Van Driel
+Gynaecologic oncologist
+Center for Gynecological Oncology Amsterdam,
+
+Netherlands Cancer Institute, Amsterdam (The Netherlands)
+Ignace Vergote
+Gynaecologic oncologist
+Leuven Cancer Institute, University Hospitals Leuven,
+
+Leuven (Belgium)
+NAME
+SPECIALTY
+AFFILIATION
+
+
+
+---
+[PAGE 8/24]
+
+8
+TABLE OF CONTENTS
+Pathology and molecular biology ...................................................................... 10
+1. 	 Which molecular and genomic tests should be carried out
+
+at diagnosis as prognostic or predictive markers for high-grade
+
+tubo-ovarian carcinoma?.............................................................................. 10
+2. 	 What is the role of circulating and tissue biomarkers during treatment
+
+and follow-up?............................................................................................. 10
+3. 	 How should low-grade serous carcinoma (LGSC) and high-grade serous
+
+carcinoma (HGSC) be diagnosed?................................................................. 11
+4. 	 What is the role of molecular classification in ovarian endometrioid
+
+carcinoma (EC) and clear-cell carcinoma (CCC)?............................................ 12
+Early-stage disease and pelvic mass in pregnancy ........................................... 12
+5. 	 How should an adnexal mass be managed in pregnant women?.................. 12
+6. 	 How should an adnexal mass be managed for women who want to retain
+
+their fertility?................................................................................................ 12
+7. 	 How should high-grade EC, CCC and high-risk mucinous stage I-II
+
+tubo-ovarian carcinomas be managed?......................................................... 13
+8. 	 How should ovarian serous borderline tumours with peritoneal implants
+
+be managed?............................................................................................... 14
+9. 	 How should early-stage LGSC with non-invasive peritoneal implants
+
+be managed? .............................................................................................. 14
+10. 	How should incidental serous tubal intraepithelial carcinoma (STIC)
+
+or microscopic HGSC be managed?.............................................................. 14
+Advanced stage (including older/frail patients)................................................ 15
+11. 	How should patients with advanced tubo-ovarian carcinoma
+
+be selected for primary cytoreductive surgery?.............................................. 15
+12. 	What is the role of hyperthermic intraperitoneal chemotherapy (HIPEC)
+
+in newly diagnosed tubo-ovarian carcinoma?................................................ 16
+
+
+
+---
+[PAGE 9/24]
+
+9
+13. 	Which patients should receive bevacizumab, maintenance therapy
+
+with PARPis or the combination of PARPis with bevacizumab
+
+and for how long?.......................................................................................  17
+14. 	How should older/frail patients with tubo-ovarian carcinoma
+
+be investigated and treated?......................................................................... 18
+Recurrent disease ................................................................................................ 19
+15. 	What is the role of surgery in recurrent tubo-ovarian carcinoma?.................. 19
+16. 	What is the role of molecularly targeted therapy in recurrent disease?.......... 20
+17. 	What is the role of non-platinum drugs and supportive care options?........... 21
+18. 	What is recommended regarding evaluation of QoL/survivorship issues
+
+and follow-up after treatment?....................................................................  21
+
+
+
+---
+[PAGE 10/24]
+
+10
+1. 	Which molecular and genomic tests should be carried out
+
+at diagnosis as prognostic or predictive markers for high-grade
+     tubo-ovarian carcinoma?
+Pathology and molecular biology
+An adequate surgical specimen or image-guided biopsy of treatment-naive
+tumour is the preferred sample for diagnosis and molecular testing.
+In all cases, the sample should contain a sufficient number of tumour cells
+(preferably ≥30%). A cell block from peritoneal or pleural effusions may be
+used for molecular analysis.
+BRCA-mut (germline and/or somatic) testing is recommended at diagnosis
+for patients with high-grade non-mucinous tubo-ovarian carcinoma regard-
+less of stage.
+Routine tumour testing for non-BRCA homologous recombination gene
+mutations is not required; however, it should be encouraged in the research
+setting.
+Genomic instability tests are recommended in patients with BRCA wild-type
+(wt) high-grade non-mucinous International Federation of Gynecology and
+Obstetrics stage III-IV tubo-ovarian carcinoma at diagnosis as this provides
+useful predictive information for first-line maintenance therapy decisions.
+A genomic instability test that has been clinically validated in large cohorts
+or, preferably, phase III trials should be used.
+There are no validated predictive markers of primary resistance to platinum
+or poly (ADP-ribose) polymerase inhibitors (PARPis) at diagnosis and none
+can be recommended at present.
+General population screening for tubo-ovarian carcinoma cannot be recom-
+mended because screening does not reduce cancer deaths.
+CA-125 with or without HE4 should not be used alone to differentiate bet-
+ween benign, borderline and malignant ovarian tumours.
+A
+B
+2.	 What is the role of circulating and tissue biomarkers during
+
+treatment and follow-up?
+Routine monitoring of CA-125 after completion of first-line chemotherapy
+is an option that should be discussed with the patient.
+The CA-125 ELIMination rate constant K calculated using longitudinal CA-
+125 over the first 100 days of treatment provides prognostic information,
+and testing for this dynamic circulating marker can be considered.
+A
+B
+A
+E
+D
+A
+A
+B
+B
+A
+
+
+
+---
+[PAGE 11/24]
+
+11
+Routine monitoring for circulating tumour DNA (ctDNA) and circulating
+tumour cells is not recommended but should be encouraged within the
+context of research projects.
+Testing ctDNA for reversion mutations can be considered in patients with
+BRCA-mutated tubo-ovarian carcinoma treated with at least one line of
+platinum and eligible for PARPi treatment.
+Chemotherapy response score at interval cytoreductive surgery on an
+omental (preferred) or adnexal specimen provides prognostic information
+and is recommended.
+Testing for a reversion mutation in tumour samples at relapse can be consi-
+dered in BRCA-mutated tumours.
+A
+C
+3.	 How should low-grade serous carcinoma (LGSC) and high-grade
+
+serous carcinoma (HGSC) be diagnosed?
+LGSC and HGSC should be regarded as two distinct neoplasms with diffe-
+rent morphology, underlying molecular events and behaviour and do not
+represent different grades of the same tumour type.
+The distinction between LGSC and HGSC is based on a combination of
+morphology and p53 immunohistochemistry (IHC); in diagnostically chal-
+lenging cases, referral for a specialist opinion and/or molecular testing is
+recommended.
+In cases with morphology suggestive of LGSC but aberrant p53 protein
+expression and/or TP53 mutation, it is recommended that the tumour be
+classified as HGSC.
+In designating the primary site of extrauterine HGSC, the recommendations
+of the International Collaboration on Cancer Reporting should be followed.
+Staining for Wilms tumour protein (WT-1) is recommended when the pri-
+mary origin of HGSC (adnexal versus uterine) is unclear.
+Results of p53 IHC should be reported as ‘wt or normal’ or ‘mutation-type
+or aberrant’ rather than positive or negative.
+As a minimum, paired box 8, oestrogen receptor, WT-1 and p53 IHC should
+be carried out on diagnostic biopsies with a morphological suspicion of
+LGSC or HGSC.
+Testing for HER2 status in mucinous carcinoma can be considered to identi-
+fy patients who may benefit from HER2-targeted strategies.
+Testing for KRAS and BRAF mutational status in LGSC can be considered to
+identify patients who may benefit from targeted strategies.
+B
+C
+A
+A
+A
+A
+A
+A
+A
+C
+C
+
+
+
+---
+[PAGE 12/24]
+
+12
+4.	 What is the role of molecular classification in ovarian endometrioid
+
+carcinoma (EC) and clear-cell carcinoma (CCC)?
+A TCGA-based molecular classification as used for endometrial carcinomas
+can be considered to stratify ovarian EC.
+Molecular markers are not recommended for prognostication in ovarian
+CCC.
+DNA mismatch repair IHC and/or microsatellite instability testing is recom-
+mended in ovarian EC and CCC.
+5.	 How should an adnexal mass be managed in pregnant women?
+Early-stage disease and pelvic mass in pregnancy
+It is recommended to evaluate all patients with suspicious adnexal masses
+during pregnancy at a specialist referral centre.
+Ultrasound by an expert is the recommended first-line imaging procedure
+when an adnexal mass is diagnosed during pregnancy.
+Magnetic resonance imaging (MRI) is recommended as a second stage test
+for the characterisation of indeterminate ovarian masses.
+The routine use of beta-human chorionic gonadotropin and alpha-fetopro-
+tein is not recommended during pregnancy.
+A proactive surgical approach depending upon gestational age is reco-
+mmended in cases of high risk for malignancy during pregnancy.
+Where needed, platinum-based chemotherapy at the same dosage as in
+non-pregnant women is recommended as standard chemotherapy after the
+first trimester of pregnancy.
+Paclitaxel can also be administered to pregnant women.
+Pregnant patients who receive chemotherapy for ovarian carcinoma need
+follow-up in high-risk obstetric units.
+6.	 How should an adnexal mass be managed for women who want to
+
+retain their fertility?
+The option of fertility-sparing surgery should be discussed in young patients
+with early-stage ovarian carcinoma.
+B
+D
+A
+A
+A
+A
+A
+A
+E
+A
+B
+A
+
+
+
+---
+[PAGE 13/24]
+
+13
+Women with ovarian carcinoma who want to preserve their fertility need to
+be managed in an oncofertility clinic.
+Subjective assessment of the adnexal mass by an ultrasound expert is recom-
+mended. If not available, the IOTA Assessment of Different NEoplasias in
+the adneXa model (ADNEX) in combination with CA-125 is recommended
+to differentiate between benign, borderline, early- or advanced-stage ova-
+rian carcinoma and secondary carcinomas in young women who want to
+preserve their fertility.
+Unilateral salpingo-oophorectomy with surgical staging is recommended
+in young patients with a malignancy apparently confined to the ovary and
+who want to preserve their fertility.
+Minimally invasive surgery avoiding tumour rupture is an acceptable approach
+for women who wish to preserve their fertility.
+It is not recommended to biopsy the unaffected ovary unless there is suspi-
+cion of involvement.
+In patients who wish to retain their fertility, cryopreservation of gametes
+rather than ovarian tissue is recommended.
+7.	 How should high-grade EC, CCC and high-risk mucinous stage I-II
+
+tubo-ovarian carcinomas be managed?
+Complete surgical resection including total abdominal hysterectomy, bilate-
+ral-salpingo oophorectomy, omentectomy, systematic pelvic and para-aortic
+lymph node dissection, peritoneal biopsies and cytological analysis should
+be the standard surgical procedure in stage I-II high-grade EC, CCC and
+high-risk mucinous ovarian carcinoma.
+Patients with stage I-II high-grade EC should be offered adjuvant platinum-
+-based chemotherapy.
+Adjuvant chemotherapy may be omitted for adequately staged IA or IB
+CCC.
+Adjuvant chemotherapy may be considered for stage IC1 CCC.
+Adjuvant chemotherapy is recommended for stages IC2, IC3 and II CCC.
+Patients with high-risk stage I-II mucinous ovarian carcinoma should be
+offered adjuvant platinum-based chemotherapy.
+A
+E
+A
+A
+C
+A
+A
+C
+A
+A
+A
+A
+
+
+
+---
+[PAGE 14/24]
+
+14
+8.	 How should ovarian serous borderline tumours with peritoneal
+
+implants be managed?
+Since the pathological analysis of implants is complex, it is recommended
+that the histological review of specimens is carried out by an expert patho-
+logist.
+It is recommended to manage women with stage II-III ovarian serous bor-
+derline tumours at a specialist centre.
+It is recommended to keep the distinction between invasive and non-inva-
+sive implants for subsequent management.
+It is recommended to surgically resect peritoneal and omental disease to
+differentiate invasive from non-invasive implants.
+9.	 How should early-stage LGSC with non-invasive peritoneal implants
+
+be managed?
+It is recommended to completely remove all peritoneal implants combined
+with peritoneal staging as a standard treatment procedure.
+Removal of enlarged or suspicious lymph nodes is recommended without
+routine systematic lymphadenectomy.
+Adjuvant chemotherapy could be considered for stage II LGSC.
+Endocrine treatment following chemotherapy could be considered for
+stage II LGSC.
+10.	 How should incidental serous tubal intraepithelial carcinoma
+
+ (STIC) or microscopic HGSC be managed?
+It is recommended that microscopic HGSC be managed as HGSC.
+Sectioning and Extensively Examining the FIMbriated end (SEE-FIM) is recom-
+mended in risk-reducing bilateral salpingo-oophorectomy.
+SEE-FIM is recommended when there is doubt regarding the origin of the
+carcinoma (endometrial, tubal, ovarian, peritoneal).
+It is suggested that the pathologist examines microscopically the whole fim-
+briae in benign conditions.
+In STIC, staging of the peritoneum is recommended.
+A
+A
+A
+C
+A
+A
+A
+C
+A
+B
+A
+B
+A
+
+
+
+---
+[PAGE 15/24]
+
+15
+In STIC, it is recommended that (re)-staging is carried out, preferably by
+a minimally invasive procedure.
+In STIC, hysterectomy should be considered, particularly in patients with
+a germline BRCA1 mutation (gBRCA1-mut).
+In STIC, if the uterus is preserved, endometrial sampling in patients with
+a gBRCA1-mut is recommended.
+In STIC, lymphadenectomy is not recommended.
+Adjuvant chemotherapy is not recommended in surgically staged STIC.
+In cases of STIC, testing for gBRCA1/2-muts and other high-penetrance
+hereditary genes is mandatory.
+11.	 How should patients with advanced tubo-ovarian carcinoma
+
+be selected for primary cytoreductive surgery?
+Advanced stage (including older/frail patients)
+The selection of patients for primary cytoreductive surgery or neoadjuvant
+chemotherapy (NACT) must be carried out in an accredited ovarian cancer
+centre (according to the ESGO quality indicators for ovarian cancer surgery
+2016/2020) in a multidisciplinary setting.
+Primary cytoreductive surgery is the preferred option and should be offered
+if a complete resection seems achievable.
+Primary cytoreductive surgery is the preferred option in patients with LGSC
+if residual disease <1 cm can be achieved.
+NACT with interval cytoreductive surgery is a valid alternative for patients
+with a low likelihood of initial complete resection and with chemosensitive
+histological types or for those who are poor surgical candidates due to
+medical conditions.
+Patients should be medically assessed for surgery, and this should be based
+on clearly defined criteria requiring a thorough evaluation by a specialist
+in gynaecological oncology. Medically unfit patients should additionally re-
+ceive an internal medicine and/or anaesthesiology evaluation. Eastern
+Cooperative Oncology Group and American Society of Anesthesiology
+scores must be documented.
+Candidates for surgery based on a multidisciplinary team (MDT) report
+should proceed to a laparotomy with the intent of complete cytoreduction.
+B
+A
+B
+E
+D
+A
+B
+A
+B
+A
+A
+A
+
+
+
+---
+[PAGE 16/24]
+
+16
+Contrast-enhanced computed tomography, MRI and positron emission
+tomography-computed tomography with a structured radiology report are
+considered as options for the initial evaluation of patients with advanced
+ovarian carcinoma.
+Ultrasound by an expert sonographer may be used to assess tumour extent
+and resectability in the pelvis and abdominal cavity
+Patients must be counselled for cytoreductive surgery by providing an
+extensive discussion about the risk and benefits of the procedure specifi-
+cally for that patient and outlining a comprehensive list of potential peri-
+operative major and minor complications.
+Patients for whom there is concern for incomplete cytoreductive surgery
+based on a structured radiology report may undergo a laparoscopic evalua-
+tion by a gynaecological oncologist to assess the extent of intra-abdominal
+disease.
+Scoring systems may play a role in guiding the evaluation and ultimately
+triage patients for primary management. There is currently no universally
+accepted scoring system that could be recommended.
+Currently, there are no specific validated biomarkers that are predictive of
+the success of surgical resection.
+Systematic pelvic and para-aortic lymphadenectomy should not be carried
+out in patients with advanced disease who have undergone intra-abdo-
+minal macroscopically complete resection and have non-suspicious lymph
+nodes both on preoperative imaging and intraoperative clinical evaluation.
+Enlarged or suspicious lymph nodes should be removed to achieve comple-
+te resection.
+The impact of resection of suspicious or enlarged extra-abdominal lymph
+nodes remains unclear but should be considered if complete macroscopic
+resection can be achieved intra-abdominally.
+Resection of isolated parenchymal liver metastases should be considered to
+achieve a complete cytoreduction.
+12.	 What is the role of hyperthermic intraperitoneal chemotherapy
+
+(HIPEC) in newly diagnosed tubo-ovarian carcinoma?
+No consensus on the role of HIPEC and interval cytoreductive surgery was reached, which
+reflects the current difference in opinion among the participants.
+C
+C
+A
+C
+A
+B
+E
+C
+A
+B
+
+
+
+---
+[PAGE 17/24]
+
+17
+13.	 Which patients should receive bevacizumab, maintenance therapy
+
+with PARPis or the combination of PARPis with bevacizumab
+
+and for how long?
+Molecular characteristics of tumour, patients and disease-related factors
+should be considered in the decision-making process for maintenance
+options.
+The use of bevacizumab in combination with chemotherapy and as main-
+tenance is recommended independently from any biomarker.
+Bevacizumab should be administered in combination with platinum-pac-
+litaxel chemotherapy and as maintenance for a maximum of 15 months.
+Carcinosarcoma should be treated as HGSC.
+LGSC should be treated with paclitaxel-carboplatin chemotherapy with or
+without bevacizumab.
+Chemotherapy followed by maintenance with endocrine therapy is an
+option in stage III and IV tumours.
+Patients with HGSC/high-grade EC and BRCA-muts or genomic instability
+score (GIS)-positive (with a validated test) in complete response (CR)/partial
+response (PR)/no evidence of disease (NED) after platinum-based chemo-
+therapy with or without bevacizumab should receive PARPis with or without
+bevacizumab.
+Patients with HGSC/high-grade EC without a BRCA-mut and who are GIS-
+-negative (with a validated test) may receive platinum-based chemotherapy
+in combination with bevacizumab followed by bevacizumab maintenance
+or platinum-based chemotherapy followed by niraparib or rucaparib if in
+CR/PR/NED. No maintenance treatment might be an option.
+Patients with HGSC/high grade EC without a BRCA-mut and GIS unknown
+could receive platinum-based chemotherapy in combination with bevacizu-
+mab followed by bevacizumab maintenance or platinum-based chemothe-
+rapy followed by niraparib or rucaparib if in CR/PR/NED.
+When used as maintenance in patients in CR/PR/NED to platinum-based
+chemotherapy, olaparib (alone or in combination with bevacizumab) and
+rucaparib are recommended for 2 years, and niraparib is recommended for
+3 years.
+A
+B
+A
+A
+A
+B
+B
+B
+A
+A
+C
+
+
+
+---
+[PAGE 18/24]
+
+18
+14.	 How should older/frail patients with tubo-ovarian carcinoma
+
+be investigated and treated?
+Patients should not be excluded from diagnostic procedures, clinical trials
+and specific treatments for tubo-ovarian carcinoma based only on chrono-
+logical age.
+Vulnerability should be assessed in patients 70 years or any age with at
+least two comorbidities, if possible, with the support of a geriatric specialist.
+This assessment should focus on patient functions (activities of daily living/
+instrumental activities of daily living), nutrition, psychological well-being,
+comorbidities and concomitant medications and should not delay the start
+of therapy.
+Whenever possible, considering vulnerability, complexity of surgery and pa-
+tient motivation, primary complete surgery is recommended.
+NACT can be considered as an alternative in patients with vulnerability and
+extensive disease.
+The surgery should be carried out in expert centres involving scheduled
+surgery, prehabilitation, intensive post-operative management, enhanced
+recovery and home care.
+The standard chemotherapy regimen is paclitaxel-carboplatin every 3 weeks.
+The continuous weekly paclitaxel 60 mg/m²-carboplatin area under the cur-
+ve (AUC) 2 schedule may provide better tolerability and quality of life (QoL)
+and can be considered as an alternative option.
+When indicated, PARPis and/or bevacizumab should be offered to older
+patients carefully monitoring toxicity and concomitant medications.
+A
+D
+A
+B
+B
+A
+A
+
+
+
+---
+[PAGE 19/24]
+
+19
+15.	 What is the role of surgery in recurrent tubo-ovarian carcinoma?
+Recurrent disease
+Patients with tubo-ovarian carcinoma in first relapse >6 months since the
+end of first-line platinum-based chemotherapy should be assessed for se-
+condary cytoreductive surgery in a gynaecological oncology centre expe-
+rienced in surgery for ovarian cancer.
+Prospectively validated algorithms should be used as a guide to identify
+optimal candidates for secondary cytoreductive surgery with complete
+tumour resection.
+NACT before cytoreductive surgery at relapse cannot be recommended
+outside of clinical trials.
+HIPEC is not recommended in cytoreductive surgery for relapsed disease.
+Cytoreductive surgery could be offered to patients with subsequent relapses
+in whom complete resection appears feasible.
+In selected patients, palliative surgery to relieve mechanical obstruction may
+be indicated after failure of conservative measures, either to remove the
+tumour obstructing the bowel or to carry out a diversion procedure such as
+a stoma. These patients should be managed within an MDT.
+Palliative surgery should be offered only after careful consideration in pa-
+tients with unfavourable conditions, such as rapidly progressing disease
+without further systemic options, gastric outlet/upper gastrointestinal ob-
+struction and multilevel sites of obstruction.
+For oligometastatic recurrence, several treatment modalities such as surge-
+ry, infield radiotherapy and thermal ablation should be considered within
+an MDT.
+The following factors should be considered to decide treatment modali-
+ty for oligometastatic recurrence: site of recurrence, time to recurrence,
+number of lesions, treatment-related morbidity, patient performance sta-
+tus, type of maintenance treatments and patient preferences, regardless of
+their BRCA status.
+After local ablative/surgical tumour management, continuation of main-
+tenance treatment with the same regimen could be considered.
+C
+B
+B
+B
+B
+D
+D
+B
+A
+A
+A
+
+
+
+---
+[PAGE 20/24]
+
+20
+16.	 What is the role of molecularly targeted therapy in recurrent disease?
+For patients with BRCA-mutated tumours, eligible for platinum and no prior
+PARPis and no prior bevacizumab use, a platinum-based combination fo-
+llowed by PARPis is recommended after CR/PR/NED. Bevacizumab may still
+be considered depending on patient’s symptoms and response to chemo-
+therapy.
+For patients with BRCA-wt or unknown tumours eligible for platinum and
+no prior PARPis and no prior bevacizumab, maintenance therapy is recom-
+mended with PARPis (after CR/PR/NED) or bevacizumab. Bevacizumab
+added to chemotherapy followed by maintenance should be prioritised for
+patients in need of rapid symptom control.
+For patients eligible for platinum and no prior PARPis but prior bevacizu-
+mab, platinum-based chemotherapy followed by PARPi maintenance is
+preferred as long as CR/PR/NED is achieved, regardless of their BRCA and
+HRD status.
+For patients eligible for platinum and prior PARPis but no prior bevacizu-
+mab, a platinum-based combination with bevacizumab followed by main-
+tenance should be recommended. The preferred chemotherapy partner for
+bevacizumab in the recurrent setting is carboplatin-pegylated liposomal
+doxorubicin (PLD).
+For patients eligible for platinum and prior use of bevacizumab and PARPis,
+a platinum-based chemotherapy should still be recommended and rechal-
+lenge options of maintenance agents could be considered.
+Monitoring of safety should be carried out according to drug-specific recom-
+mendations, with special focus on late safety issues.
+Routine oncological follow-up is recommended including imaging and/or
+CA-125 according to local practice and after discussion with the patient.
+In the recurrent setting, the duration of PARPis as maintenance should be
+until progressive disease or unacceptable toxicity.
+Bevacizumab rechallenge in combination with platinum should be conside-
+red in patients already pre-treated with bevacizumab in the first line.
+The preferred chemotherapy partner for bevacizumab (rechallenge) in the
+recurrent setting is carboplatin-PLD.
+Patients in response to platinum-based chemotherapy after prior PARPi
+maintenance therapy may be considered for a PARPi-maintenance rechal-
+lenge given a duration of prior PARPi exposure of 18 months in the first
+line and 12 months in further lines or 12 months and 6 months for patients
+with a BRCA-mut or BRCA-wt status, respectively.
+A
+A
+A
+C
+A
+A
+B
+B
+A
+A
+A
+B
+
+
+
+---
+[PAGE 21/24]
+
+21
+17.	 What is the role of non-platinum drugs and supportive care options?
+For patients progressing on platinum-based therapy or after a short treat-
+ment-free interval or for those who are intolerant of platinum and not
+eligible for platinum rechallenge, various management options should be
+considered, ranging from non-platinum single-agent systemic therapy to
+supportive care alone.
+Patients should be included in clinical trials, when possible, as there is
+a significant need for improved treatment options in this setting.
+For patients who have not received prior bevacizumab, the addition of this
+agent to weekly paclitaxel, PLD or topotecan should be considered. The
+combination of weekly paclitaxel and bevacizumab is the preferred option
+based on trial subset analysis.
+The combination of trabectedin and PLD could be considered in those pati-
+ents who are intolerant to platinum who have relapsed after 6 months from
+the last platinum dose.
+Patients with LGSC relapse should be considered for treatment with trame-
+tinib after platinum failure or for endocrine therapy.
+Supportive care alone should be considered when expected benefit of che-
+motherapy is limited.
+Systematic assessment of QoL and symptoms during treatment is recom-
+mended to start early supportive care and prevent or improve symptoms,
+QoL and survival.
+18.	 What is recommended regarding evaluation of QoL/survivorship
+
+issues and follow-up after treatment?
+QoL and symptom assessment via validated tools could be considered as
+part of the routine follow-up in all patients with ovarian carcinoma.
+Long-term follow-up is recommended for all patients with tubo-ovarian
+carcinoma by a physician experienced in the treatment and follow-up of
+patients with gynaecological cancer.
+A
+A
+A
+C
+A
+A
+A
+C
+A
+
+
+
+---
+[PAGE 22/24]
+
+22
+NOTES
+
+
+
+---
+[PAGE 23/24]
+
+23
+Access full ESGO Guidelines: www.esgo.org/explore/guidelines
+© 2025 European Society of Gynaecological Oncology
+All rights reserved. No part of this book can be reprinted, reproduced, transmitted or utilised in any
+form by any electronic, mechanical, or other means, now known or hereafter invented, including
+photocopying, microfilming, and recording, or any information storage or retrieval system, without
+written permissions of ESGO. Reasonable efforts have been made to publish reliable data and
+information, but the authors and publisher cannot assume responsibility for the validity of all mate-
+rials or for the consequences of their use, and the ultimate responsibility rests with the prescribing
+physician.
+
+
+
+---
+[PAGE 24/24]
+
+© 2025 European Society of Gynaecological Oncology. All rights reserved.
+European Society of Gynaecological Oncology
+Avenue Emmanuel Mounier, 83/11
+1200 Brussels, Belgium
+Email: adminoffice@esgomail.org
+www.esgo.org
+

@@ -1,0 +1,339 @@
+====================
+QUESTION:
+{
+  "CASE_CORE": {
+    "VISIT_DATE": "2025-04-03",
+    "last_platinum_end_date": "Unknown",
+    "first_relapse_date": "2025-01-20",
+    "PFI_days": "Unknown",
+    "PLATINUM_STATUS": "Unknown",
+    "PLATINUM_STATUS_CURRENT": "Unknown",
+    "PLATINUM_PFI_CURRENT": "Unknown",
+    "PLATINUM_HISTORY": [],
+    "DIAGNOSIS": {
+      "primary": "Ovarian Krukenberg tumor",
+      "histology": "粘液腺癌，部分为高-中分化，相当一部分为低分化伴印戒细胞癌分化",
+      "site": "Ovary",
+      "laterality": "Left",
+      "components": [
+        "Krukenberg tumor",
+        "粘液腺癌",
+        "印戒细胞癌分化"
+      ]
+    },
+    "STAGE": {
+      "stage_text": "Unknown",
+      "stage_system": "Unknown",
+      "stage_basis": "Unknown"
+    },
+    "INITIAL_TREATMENT": "Yes",
+    "SURGERY_DONE": {
+      "performed": "Yes",
+      "date": "2024-12-20",
+      "procedure": "Laparoscopy converted to laparotomy: uterus with bilateral adnexa resection, omentectomy, para-aortic LN dissection, diaphragm lesion resection, left ureter and peri-tumor resection, left ureteral stent, ureteroneocystostomy"
+    },
+    "NEOADJUVANT": "Unknown",
+    "ADJUVANT_TREATMENT": {
+      "given": "Unknown",
+      "regimens": [],
+      "cycles_or_courses": "Unknown"
+    },
+    "LINE_OF_THERAPY": [],
+    "MAINTENANCE": "Unknown",
+    "MAINTENANCE_DETAIL": {
+      "given": "Unknown",
+      "regimens": [],
+      "start_date": "Unknown",
+      "end_date": "Unknown"
+    },
+    "RELAPSE": "Yes",
+    "RELAPSE_DATE": {
+      "date": "2025-01-20",
+      "type": "Radiologic",
+      "evidence": "Head MRI showing a metastasis in a cerebral sulcus"
+    },
+    "HRD": "Negative",
+    "BRCA1": "Wildtype",
+    "BRCA2": "Wildtype",
+    "BIOMARKERS": {
+      "TMB": "TMB-L",
+      "MSI": "MSS",
+      "PDL1_CPS": "Unknown",
+      "HER2": "ERBB2-",
+      "AFP": "Unknown",
+      "CA125": "Unknown"
+    },
+    "CURRENT_STATUS": "Condition stable"
+  },
+  "TIMELINE": {
+    "events": [
+      {
+        "date": "2024-12-20",
+        "event_type": "Surgery",
+        "description": "Laparoscopy converted to laparotomy with uterus and bilateral adnexa resection and additional procedures",
+        "regimen_or_test": "Surgery",
+        "key_result": "Specimen: left adnexal Krukenberg tumor, mucinous adenocarcinoma with signet-ring differentiation"
+      },
+      {
+        "date": "2025-01-20",
+        "event_type": "Imaging",
+        "description": "Head MRI",
+        "regimen_or_test": "MRI",
+        "key_result": "Metastasis in cerebral sulcus"
+      },
+      {
+        "date": "2025-01-28",
+        "event_type": "Other",
+        "description": "Abdominal distension, left leg edema, pleural and peritoneal small effusions on ultrasound and CT",
+        "regimen_or_test": "Chest and abdominal CT/US",
+        "key_result": "Peritoneal thickening, ascites, multiple enlarged lymph nodes"
+      },
+      {
+        "date": "2025-02-10",
+        "event_type": "Imaging",
+        "description": "Lower abdomen CT",
+        "regimen_or_test": "CT",
+        "key_result": "Peritoneal thickening, omental/mesenteric haziness with nodules, retroperitoneal and pelvic lymphadenopathy, ascites"
+      },
+      {
+        "date": "2025-02-10",
+        "event_type": "Lab",
+        "description": "Acute kidney injury with elevated creatinine and dizziness/hypertension",
+        "regimen_or_test": "Serum creatinine",
+        "key_result": "Cr 258.9 umol/L"
+      },
+      {
+        "date": "2025-02-12",
+        "event_type": "Other",
+        "description": "Ureteroscopy with bilateral stent placement",
+        "regimen_or_test": "Ureteroscopy and stent",
+        "key_result": "Postop creatinine decreased to 170 umol/L"
+      },
+      {
+        "date": "2025-02-14",
+        "event_type": "Other",
+        "description": "Admission to Shanghai hospital for further treatment; episode of oliguria",
+        "regimen_or_test": "Inpatient care",
+        "key_result": "Urine output 100 ml"
+      },
+      {
+        "date": "2025-02-15",
+        "event_type": "Other",
+        "description": "Transfer to nephrology and left percutaneous nephrostomy",
+        "regimen_or_test": "Left nephrostomy",
+        "key_result": "Condition stable after procedure"
+      },
+      {
+        "date": "2025-02-17",
+        "event_type": "Other",
+        "description": "External genomic testing results reported",
+        "regimen_or_test": "Genomic testing",
+        "key_result": "TMB-L, MSS, FBXW7 R505C; KNB-, BRCA-, ERBB2-, NTRK-, FGFR2-"
+      },
+      {
+        "date": "2025-04-03",
+        "event_type": "Other",
+        "description": "Document time of report",
+        "regimen_or_test": "Document",
+        "key_result": "Clinical summary recorded"
+      }
+    ],
+    "constraints": {
+      "min_events": 3,
+      "max_events": 30,
+      "must_include": [
+        "first diagnostic imaging or pathology confirmation (if available)"
+      ],
+      "ordering_rules": {
+        "prioritize_last_event": true
+      }
+    }
+  },
+  "MED_ONC": {
+    "current_regimen": {
+      "name": "Unknown",
+      "last_admin_date": "Unknown",
+      "cycle_info": "Unknown"
+    },
+    "planned_next_regimen": "Unknown",
+    "prior_systemic_therapies": [],
+    "genetic_testing": {
+      "somatic": [
+        "HRD: Negative",
+        "BRCA1: Wildtype",
+        "BRCA2: Wildtype"
+      ],
+      "germline": [
+        "HRD: Negative",
+        "BRCA1: Wildtype",
+        "BRCA2: Wildtype"
+      ]
+    },
+    "monitoring_points": []
+  },
+  "RADIOLOGY": {
+    "studies": [
+      {
+        "date": "Unknown",
+        "modality": "Other",
+        "anatomic_sites": [
+          "Abdomen",
+          "Pelvis"
+        ],
+        "findings": [
+          "Postoperative PETCT: multiple abdominal and pelvic metastases"
+        ],
+        "impression": "Multiple abdominal and pelvic metastases on PETCT",
+        "trend_vs_prior": "Unknown"
+      },
+      {
+        "date": "2025-01-20",
+        "modality": "MRI",
+        "anatomic_sites": [
+          "Brain (cerebral sulcus)"
+        ],
+        "findings": [
+          "Lesion in cerebral sulcus consistent with metastasis"
+        ],
+        "impression": "Metastasis in cerebral sulcus",
+        "trend_vs_prior": "Unknown"
+      },
+      {
+        "date": "2025-01-28",
+        "modality": "CT",
+        "anatomic_sites": [
+          "Chest",
+          "Abdomen",
+          "Pelvis"
+        ],
+        "findings": [
+          "Peritoneal thickening, abdominal and pelvic ascites; small pleural and peritoneal effusions; multiple enlarged lymph nodes"
+        ],
+        "impression": "Peritoneal disease with nodal metastases and effusions",
+        "trend_vs_prior": "Unknown"
+      },
+      {
+        "date": "2025-02-10",
+        "modality": "CT",
+        "anatomic_sites": [
+          "Lower abdomen",
+          "Pelvis"
+        ],
+        "findings": [
+          "Peritoneal thickening, omental/mesenteric haziness with small nodules, retroperitoneal and pelvic lymphadenopathy, ascites; bilateral ureteral thickening"
+        ],
+        "impression": "Widespread peritoneal and nodal disease with ascites",
+        "trend_vs_prior": "Worse"
+      }
+    ],
+    "next_imaging_plan": {
+      "modality": "Unknown",
+      "timing": "Unknown"
+    }
+  },
+  "PATHOLOGY": {
+    "specimens": [
+      {
+        "date": "2024-12-20",
+        "site": "Left adnexa",
+        "diagnosis": "左附件krukenberg瘤，粘液腺癌，部分为高-中分化，相当一部分为低分化伴印戒细胞癌分化。子宫肌壁全层见癌组织浸润，输尿管见癌组织浸润，膈肌转移结节阳性，送检淋巴结见癌转移。IHC:ER/PR-",
+        "components": [
+          "粘液腺癌",
+          "印戒细胞癌分化"
+        ],
+        "grade": "Mixed high-intermediate and low differentiation",
+        "tumor_size": "Unknown",
+        "laterality": "Left",
+        "sample_type": "Surgical resection",
+        "involvement_sites": [
+          "Uterine myometrium full-thickness",
+          "Ureter",
+          "Diaphragm",
+          "Lymph nodes"
+        ],
+        "ihc": [
+          {
+            "marker": "ER/PR",
+            "result": "-"
+          }
+        ],
+        "molecular": [
+          {
+            "test": "Genomic panel",
+            "result": "TMB-L, MSS, FBXW7 R505C; KNB-, BRCA-, ERBB2-, NTRK-, FGFR2-"
+          }
+        ],
+        "raw_text": "左附件krukenberg瘤，粘液腺癌，部分为高-中分化，相当一部分为低分化伴印戒细胞癌分化。子宫肌壁全层见癌组织浸润，输尿管见癌组织浸润，膈肌转移结节阳性，送检淋巴结见癌转移。IHC:ER/PR-。外院基因检测：TMB-L,MSS，FBXW7 R505C；KNB-,BRCA-,ERBB2-,NTRK -，FGFR2-",
+        "uncertainty_or_missing": [
+          "Primary site unknown; recommended GI evaluation (gastroscopy negative)"
+        ]
+      }
+    ]
+  },
+  "NUC_MED": {
+    "studies": []
+  },
+  "LAB_TRENDS": {
+    "labs": [
+      {
+        "analyte": "Cr",
+        "unit": "umol/L",
+        "reference_range": "Unknown",
+        "latest": {
+          "date": "Unknown",
+          "value": "110",
+          "flag": "↓"
+        },
+        "history": [
+          {
+            "date": "2025-02-10",
+            "value": "258.9",
+            "flag": "↑"
+          },
+          {
+            "date": "2025-02-12",
+            "value": "170",
+            "flag": "↓"
+          },
+          {
+            "date": "Unknown",
+            "value": "110",
+            "flag": "↓"
+          }
+        ]
+      }
+    ],
+    "milestones": [
+      {
+        "date": "2024-12-20",
+        "type": "Surgery",
+        "description": "Primary cytoreductive surgery with multiple resections"
+      },
+      {
+        "date": "2025-02-12",
+        "type": "Other",
+        "description": "Ureteroscopy and bilateral stent placement (postop Cr decreased)"
+      },
+      {
+        "date": "2025-02-15",
+        "type": "Other",
+        "description": "Left nephrostomy performed"
+      }
+    ]
+  }
+}
+
+RESPONSE:
+Final Assessment:
+Metastatic Krukenberg-type mucinous/signet carcinoma with brain and extensive peritoneal/ureteral involvement is in a palliative, systemically untreated state, with primary site, fitness for further therapy, and current renal function still uncertain [@HISTOLOGY_AND_IHC|2024-12-20; @IMAGING_TRENDS|2025-02-10; @IMAGING_STUDIES|2025-01-20].
+
+Core Treatment Strategy:
+- Conduct structured goals-of-care visit documenting ECOG, symptom burden, and preferences for further active versus comfort-focused care (currently unknown).  
+- Obtain updated labs including creatinine/eGFR and urine output assessment, with nephrology/urology review to define ongoing obstruction and treatment feasibility (unknown).  
+- Arrange contrast-enhanced CT/MRI abdomen–pelvis and repeat brain MRI to reassess peritoneal, nodal, ureteral, and CNS disease before systemic decisions [@IMAGING_TRENDS|2025-02-10; @IMAGING_STUDIES|2025-01-20].  
+- Confirm paraffin block availability and perform extended IHC only if primary-site clarification would realistically modify systemic regimen category (availability/status unknown).  
+
+Change Triggers:
+- If ECOG ≤2, renal function acceptable, and patient desires treatment, shift from evaluation-only to offering palliative systemic and CNS-directed therapy.  
+- If ECOG ≥3, progressive renal failure, or patient prefers comfort-focused care, pivot from active oncologic interventions to best supportive and hospice care.
+

@@ -1,0 +1,1594 @@
+# ICCR-Ovary-2nd-edn-v1-bookmark
+
+
+---
+[PAGE 1/40]
+
+Ovary, Fallopian Tube and
+Primary Peritoneal Carcinoma
+Histopathology Reporting Guide
+Sponsored by
+
+Version 2.0 Published September 2021                                       ISBN: 978-1-922324-25-2
+       Page 1 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+CLINICAL INFORMATION (select all that apply) (Note 1)
+Information not provided
+Known gene predisposition (e.g., BRCA1, BRCA2, Lynch
+syndrome), specify
+Prior neoadjuvant therapy, specify
+SPECIMEN(S) SUBMITTED (select all that apply) (Note 2)
+SPECIMEN INTEGRITY (select all that apply) (Note 3)
+
+(Required only if ovary(ies)/fallopian tube(s) are submitted)
+Left fallopian tube
+Ovary
+Fallopian tube
+TUMOUR SITE (select all that apply) (Note 4)
+TUMOUR DIMENSIONS (Note 5)
+
+(If separate tumours specify dimensions for each site)
+x
+              mm
+              mm
+x
+             mm
+MACROSCOPIC DESCRIPTION OF OMENTUM (Note 6)
+(Required only if omentum submitted)
+x
+              mm
+               mm
+x
+              mm
+Omental involvement
+	               mm
+Other, specify
+Right fallopian tube
+Right ovary
+Right
+Peritoneum
+Other, specify
+Fimbrial
+Non-fimbrial
+Not involved
+Involved
+Serosa intact
+Serosa ruptured
+     Information not provided
+     Preoperatively
+     Intraoperatively
+Tumour on serosal surface
+Fragmented specimen
+Other, specify
+Serosa intact
+Serosa ruptured
+     Information not provided
+     Preoperatively
+     Intraoperatively
+Tumour on serosal surface
+Fragmented specimen
+Other, specify
+Indeterminate
+No macroscopically visible tumour
+Other, specify
+Left
+Right
+Laterality not specified
+Left
+Right
+Laterality not specified
+Left
+Fimbrial
+Non-fimbrial
+Laterality not specified
+Left
+Right
+Laterality not specified
+Left
+Right
+Laterality not specified
+Left ovary
+Omentum dimensions
+Maximum dimension of
+largest tumour deposit
+Not specified
+Ovary
+Ovarian cystectomy
+Fallopian tube
+Uterus
+Cervix
+Omentum
+Peritoneal biopsies
+Peritoneal washings/peritoneal fluid
+Lymph nodes, specify site(s)
+Ovarian capsule intact
+Ovarian capsule ruptured
+     Information not provided
+     Preoperatively
+     Intraoperatively
+Tumour on surface
+Fragmented specimen
+Other, specify
+Ovarian capsule intact
+Ovarian capsule ruptured
+    Information not provided
+    Preoperatively
+    Intraoperatively
+Tumour on surface
+Fragmented specimen
+Other, specify
+Family/Last name
+Given name(s)
+Patient identifiers
+Date of request
+Accession/Laboratory number
+Elements in black text are CORE. Elements in grey text are NON-CORE.
+Date of birth
+DD – MM – YYYY
+DD – MM – YYYY
+SCOPE OF THIS DATASET
+indicates single select values
+indicates multi-select values
+
+
+
+---
+[PAGE 2/40]
+
+Ovary, Fallopian Tube and Primary Peritoneal Carcinoma
+Version 2.0 Published September 2021                                       ISBN: 978-1-922324-25-2
+       Page 2 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+CARCINOSARCOMA COMPONENTS (select all that apply)
+(Note 10)
+Epithelial
+
+    %
+
+%
+Expansile
+Infiltrative/destructive
+HISTOLOGICAL TUMOUR GRADE (Note 11)
+BORDERLINE TUMOUR - SPECIAL FEATURES (Note 12)
+(Applicable only if borderline tumour is identified)
+Micropapillary architecture for serous borderline
+tumour (at least 5 mm in one dimension)
+Microinvasion (upper limit 5 mm)
+Intraepithelial carcinoma for mucinous borderline
+tumour
+Implants for serous and seromucinous borderline
+tumour (select all that apply)
+Epithelial
+Desmoplastic
+Site(s)
+Pelvic
+Abdominal
+Endometrioid carcinomas
+BLOCK IDENTIFICATION KEY (Note 7)
+
+(List overleaf or separately with an indication of the nature
+
+and origin of all tissue blocks)
+List components
+Percentage
+Type
+List components
+Homologous
+Heterologous
+Percentage
+Sarcomatous
+Not identified
+Present
+Non-invasive implants
+Not identified
+Present
+Invasive implants/Extra-ovarian low grade serous
+carcinoma
+Not identified
+Present
+Indeterminate
+Not identified
+Present
+Site(s)
+Pelvic
+Abdominal
+Pelvic
+Abdominal
+SEROUS TUBAL INTRAEPITHELIAL CARCINOMA (STIC)
+
+(Required only if fallopian tube(s) are submitted) (Note 13)
+Left fallopian tube
+Cannot be assessed
+Not identified
+Present (select all that apply)
+Right fallopian tube
+Fimbrial
+Non-fimbrial
+Cannot be assessed
+Not identified
+Present (select all that apply)
+Fimbrial
+Non-fimbrial
+GX: Cannot be assessed
+G1: Well differentiated
+G2: Moderately differentiated
+G3: Poorly differentiated
+Site(s)
+PATTERN OF INVASION (Note 9)
+
+(Applicable for mucinous carcinomas only)
+Mucinous carcinomas
+Serous borderline tumour
+Low grade serous carcinoma
+High grade serous carcinoma
+Mucinous borderline tumour
+Mucinous carcinoma
+Endometrioid borderline tumour
+Endometrioid carcinoma
+Clear cell borderline tumour
+Clear cell carcinoma
+Seromucinous borderline tumour
+Borderline Brenner tumour
+Malignant Brenner tumour
+Mesonephric-like adenocarcinoma
+Carcinoma, undifferentiated
+Dedifferentiated carcinoma
+Carcinosarcoma
+Mixed carcinoma
+Other, specify
+Not identified
+Present
+GX: Cannot be assessed
+G1: Well differentiated
+G2: Moderately differentiated
+G3: Poorly differentiated
+Not identified
+Present
+HISTOLOGICAL TUMOUR TYPE (select all that apply) (Note 8)
+(Value list based on the World Health Organization
+Classification of Female Genital Tumours (2020))
+
+
+
+---
+[PAGE 3/40]
+
+Ovary, Fallopian Tube and Primary Peritoneal Carcinoma
+Version 2.0 Published September 2021                                       ISBN: 978-1-922324-25-2
+       Page 3 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+Omentum
+Level of involvement
+Macroscopic
+Other involved organs(s)/sites(s), specify
+LYMPH NODE STATUS (Note 16)
+Regional
+Left pelvic
+
+Number of nodes examined
+a
+
+Number of positive nodes
+a
+Right pelvic
+
+Number of positive nodes
+a
+Para-aortic
+
+Number of positive nodes
+a
+	               mm
+Maximum dimension of largest
+deposit in regional node
+Right fallopian tube
+HISTOLOGICAL SITES OF TUMOUR INVOLVEMENT (Note 4)
+Left ovary
+Right ovary
+Left fallopian tube
+PERITONEAL CYTOLOGY (Note 14)
+Not submitted
+Indeterminate
+Positive
+Negative
+Not applicable
+Cannot be assessed
+Not involved
+Involved (select all that apply)
+Not applicable
+Cannot be assessed
+Not involved
+Involved
+Peritoneum (including uterine serosa)
+Site(s)
+Pelvis, specify site(s)
+Abdomen, specify site(s)
+a In some cases it may not be possible to record the actual number of
+	 nodes due to fragmentation of the specimen.
+Non-regional
+Site 1
+
+Number of positive nodes
+a
+
+Site 2
+
+Number of positive nodes
+a
+
+Microscopic
+RESPONSE TO NEOADJUVANT THERAPY (Note 15)
+COEXISTENT PATHOLOGY/PRECURSOR LESIONS (Note 17)
+Present, specify
+ANCILLARY STUDIES (Note 18)
+Immunohistochemistry, specify test(s) and result(s)
+
+Molecular findings, specify test(s) and result(s)
+Not performed
+Performed (select all that apply)
+
+Other, specify test(s) and result(s)
+Number of nodes examined
+a
+Uterus
+Number of nodes examined
+a
+Number of nodes examined
+a
+Cannot be assessed
+No prior treatment
+No definite or minimal response identified (chemotherapy
+response score (CRS 1))
+Moderate response identified (CRS 2)
+Marked response with no or minimal residual cancer
+(CRS 3)
+None identified
+Number of nodes examined
+a
+Not applicable
+Cannot be assessed
+Not involved
+Involved (select all that apply)
+Site(s)
+Myometrium
+Endometrium
+Cervix
+Not applicable
+Cannot be assessed
+Not involved
+Involved
+Not applicable
+Cannot be assessed
+Not involved
+Involved
+Not applicable
+Cannot be assessed
+Not involved
+Involved
+Cannot be assessed
+No nodes submitted or found
+Not involved
+Involved (select all that apply)
+Not applicable
+Cannot be assessed
+Not involved
+Involved
+
+
+
+---
+[PAGE 4/40]
+
+Ovary, Fallopian Tube and Primary Peritoneal Carcinoma
+Version 2.0 Published September 2021                                       ISBN: 978-1-922324-25-2
+       Page 4 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+PROVISIONAL PATHOLOGICAL STAGING (Note 19)
+TNM Staging (UICC TNM 8th edition 2016)
+c
+m 	 - 	 multiple primary tumours
+r   	 - 	 recurrent
+y  	 - 	 post-therapy
+Primary tumour (pT)
+N1
+	 Retroperitoneal lymph node metastasis only
+	 N1a	 Lymph node metastasis not more than 10 mm in
+
+	 greatest dimension
+	 N1b	 Lymph node metastasis more than 10 mm in greatest
+	 dimension
+ 	 T3a any N
+
+	 Microscopic extrapelvic (above the pelvic brim)
+
+	 peritoneal involvement with or without retroperitoneal
+	 lymph node, including bowel involvement
+ 	 T3b any N
+
+Macroscopic peritoneal metastasis beyond pelvic
+brim 2 cm, or less in greatest dimension, including
+bowel involvement outside the pelvis with or without
+retroperitoneal nodes
+ 	 T3c any N
+
+Peritoneal metastasis beyond pelvic brim more than
+2 cm in greatest dimension and/or retroperitoneal
+lymph node metastasis (includes extension of tumour
+to capsule of liver and spleen without parenchymal
+involvement of either organ)
+Regional lymph nodes (pN)
+c	 Reproduced with permission. Source: UICC TNM Classification of
+	 Malignant Tumours, 8th Edition, eds by James D. Brierley, Mary K.
+
+	 Gospodarowicz, Christian Wittekind. 2016, Publisher Wiley
+	 (incorporating any errata published up until 6th October 2020).
+FIGO (2014 edition)
+b
+Site of primary tumour
+b	Reprinted from Int J Gynaecol Obstet., Volume 124, Prat J and FIGO
+	 Committee on Gynecologic Oncology, Staging classification for cancer
+	 of the ovary, fallopian tube, and peritoneum, pages 1-5, 2014, with
+	 permission from Wiley.
+Representative blocks for ancillary studies, specify
+those blocks best representing tumour and/or normal tissue
+for further study
+
+ANCILLARY STUDIES (Cont.) (Note 18)
+TNM Descriptors (only if applicable) (select all that apply)
+Primary tumour, ovary (OV)
+Primary tumour, fallopian tube (FT)
+	Primary tumour, peritoneum (P)
+
+Undesignated: site of primary tumour cannot be
+assessed (X)
+I
+Tumour is confined to ovaries or fallopian tube(s)
+	 IA
+Tumour limited to 1 ovary (capsule intact) or
+
+fallopian tube; no tumor on ovarian or fallopian
+
+tube surface; no malignant cells in the ascites or
+
+peritoneal washings
+	 IB
+Tumour limited to both ovaries (capsules intact) or
+
+fallopian tubes; no tumour on ovarian or fallopian
+
+tube surface; no malignant cells in the ascites or
+
+peritoneal washings
+	 IC
+Tumour limited to 1 or both ovaries or fallopian
+
+tubes,with any of the following:
+
+IC1 Surgical spill
+
+IC2	 Capsule ruptured before surgery or tumour on
+                 ovarian or fallopian tube surface
+
+IC3	 Malignant cells in the ascites or peritoneal
+                 washings
+II
+Tumour involves 1 or both ovaries or fallopian tubes
+
+with pelvic extension (below pelvic brim) or primary
+
+peritoneal cancer
+	 IIA 	 Extension and/or implants on uterus and/or fallopian
+
+tubes and/or ovaries
+	 IIB 	 Extension to other pelvic intraperitoneal tissues
+III
+Tumour involves 1 or both ovaries or fallopian tubes,
+
+or primary peritoneal cancer, with cytologically or
+
+histologically confirmed spread to the peritoneum
+
+outside the pelvis and/or metastasis to the
+
+retroperitoneal lymph nodes
+
+IIIA1		Positive retroperitoneal lymph nodes only
+
+	(cytologically or histologically proven):
+
+	 IIIA1(i)  Metastasis up to 10 mm in greatest
+	              dimension
+
+	 IIIA1(ii)	 Metastasis more than 10 mm in
+
+        greatest dimension
+
+	IIIA2	 Microscopic extrapelvic (above the pelvic brim)
+
+	peritoneal involvement with or without positive
+
+	retroperitoneal lymph nodes
+	 IIIB 	Macroscopic peritoneal metastasis beyond the pelvis
+
+up to 2 cm in greatest dimension, with or without
+
+metastasis to the retroperitoneal lymph nodes
+	 IIIC 	Macroscopic peritoneal metastasis beyond the pelvis
+
+more than 2 cm in greatest dimension, with or
+
+without metastasis to the retroperitoneal lymph
+
+nodes (includes extension of tumor to capsule of
+
+liver and spleen without parenchymal involvement of
+
+either organ)
+IV
+Distant metastasis excluding peritoneal metastases
+	 IVA	 Pleural effusion with positive cytology
+	 IVB	 Parenchymal metastases and metastases to extra
+
+abdominal organs (including inguinal lymph nodes
+
+and lymph nodes outside of the abdominal cavity)
+TX
+Primary tumour can not be assessed
+T0
+No evidence of primary tumour
+T1
+Tumour limited to the ovaries (one or both) or
+fallopian tube(s)
+	 T1a	 Tumour limited to one ovary (capsule intact) or
+fallopian tube; capsule intact, no tumor on ovarian
+surface or fallopian tube surface; no malignant cells
+in ascites or peritoneal washings
+	 T1b 	 Tumour limited to both ovaries or fallopian tubes;
+casule intact, no tumour on ovarian or fallopian tube
+surface; no malignant cells in ascites or peritoneal
+washings
+	 T1c
+Tumour limited to one or both ovaries or fallopian
+tubes with any of the following:
+
+T1c1 Surgical spill
+
+T1c2 Capsule ruptured before surgery or tumour on
+ovarian or fallopian tube surface
+
+T1c3	 Malignant cells in ascites or peritoneal washings
+T2
+Tumour involves one or both ovaries or fallopian
+tubes with pelvic extension (below pelvic brim) or
+primary peritoneal cancer
+	 T2a 	 Extension and/or implants on uterus and/or fallopian
+tube(s) and/or ovary(ies)
+	 T2b 	 Extension to other pelvic tissues, including bowel
+within the pelvis
+T3 and/or N1
+
+Tumour involves one or both ovaries or fallopian
+tubes or primary peritoneal carcinoma with
+cytologically or histologically confirmed spread to the
+peritoneum outside the pelvis and/or metastasis to
+the retroperitoneal lymph nodes
+
+
+
+---
+[PAGE 5/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 5 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Definitions
+
+CORE elements
+CORE elements are those which are essential for the clinical management, staging or prognosis
+of the cancer. These elements will either have evidentiary support at Level III-2 or above
+(based on prognostic factors in the National Health and Medical Research Council levels of
+evidence1). In rare circumstances, where level III-2 evidence is not available an element may be
+made a CORE element where there is unanimous agreement in the expert committee. An
+appropriate staging system e.g., Pathological TNM staging would normally be included as a
+CORE element.
+
+The summation of all CORE elements is considered to be the minimum reporting standard for a
+specific cancer.
+
+NON-CORE elements
+
+NON-CORE elements are those which are unanimously agreed should be included in the
+dataset but are not supported by level III-2 evidence. These elements may be clinically
+important and recommended as good practice but are not yet validated or regularly used in
+patient management.
+
+Key information other than that which is essential for clinical management, staging or
+prognosis of the cancer such as macroscopic observations and interpretation, which are
+fundamental to the histological diagnosis and conclusion e.g., macroscopic tumour details,
+may be included as either CORE or NON-CORE elements by consensus of the Dataset Authoring
+Committee.
+       Back
+
+Scope
+
+The dataset has been developed for the pathology reporting of resection specimens of primary borderline and
+malignant epithelial tumours of the ovary, fallopian tubes and peritoneum. It does not include non-epithelial
+ovarian neoplasms such as germ cell or sex cord stromal tumours or other primary peritoneal neoplasms such
+as mesothelioma.2 In those rare cases where more than one primary tumour of different morphological types
+is present, separate datasets should be completed for each neoplasm. These should include all the elements in
+this dataset, except for lymph node status which does not need to be documented separately for each tumour.
+
+The 2nd edition of this dataset includes changes to align the dataset with the World Health Organization (WHO)
+Classification of Tumours, Female Genital Tumours, 5th edition, 2020.3 The International Collaboration on
+Cancer Reporting (ICCR) dataset includes 5th edition Corrigenda, June 2021.4
+The authors of this dataset can be accessed here.
+       Back
+
+
+
+
+---
+[PAGE 6/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 6 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Note 1 – Clinical information (Non-core)
+
+It is estimated that approximately 10% of primary tubo-ovarian and peritoneal carcinomas have a genetic
+basis,5 and this figure may be as high as 17% for high grade serous carcinomas (HGSCs).6 Germline mutations in
+BRCA1 and BRCA2 account for the majority of genetically related cases while up to 10% of patients with Lynch
+syndrome (LS) will develop ovarian carcinoma.
+
+It is acknowledged that definitive genetic status is often not known or information about genetic status is not
+provided to the pathologist at the time of biopsy/surgery. Moreover, this information is not essential for the
+histological assessment and routine reporting of these tumours. Nevertheless, it is recommended that
+available information on genetic status be recorded for the following reasons:
+1. High grade serous carcinomas (HGSCs) associated with BRCA mutations (germline or somatic) more
+commonly show certain morphological features such as solid, pseudoendometrioid or transitional-like
+(‘SET’) architectural patterns, very marked nuclear atypia, and tumour-infiltrating lymphocytes.5,7,8
+Thus, pathologists may be able to correlate the histological findings with any genetic data provided,
+better chemotherapy response, and consideration of specific therapeutic regimes such as those
+including poly ADP ribose polymerase inhibitors (PARPi).5,6,9 Patients with suspected germline BRCA
+mutations and their relatives, may also be referred for genetic testing and counselling in regard to
+appropriate screening for BRCA-related neoplasia, although in many places this is done for all HGSCs
+irrespective of the tumour morphology.
+2. Knowledge of proven or potential hereditary gynaecological cancer predisposition will affect
+pathological sampling of macroscopically normal tissues. This is most evident in the setting of
+prophylactic ‘risk reduction surgery’, especially in patients with known BRCA1 or BRCA2 mutation,
+where complete examination of tubal and ovarian tissues is essential.5 Small, macroscopically occult
+tubal carcinomas, and their in situ precursor - serous tubal intraepithelial carcinoma (STIC) - is much
+more likely to be identified in this setting.
+
+Approximately 1-2% of all ovarian carcinomas are associated with LS due to a germline mutation in one of the
+genes encoding the DNA mismatch repair (MMR) proteins.10 In approximately 60% of women with LS, a
+gynaecological tumour (endometrial or ovarian) will represent the sentinel cancer.11 Endometrioid and clear
+cell and endometriosis-associated carcinomas occur more frequently in LS and, therefore,
+immunohistochemical analysis of MMR proteins or molecular testing for microsatellite instability may be
+considered in these tumour types, or if there is relevant personal or family history of additional LS-related
+neoplasia.
+
+Preoperative chemotherapy may significantly alter the gross and microscopic appearance of the tumour and
+result in difficulties in tumour typing and tumour down-staging. If neoadjuvant chemotherapy is being
+administered, a pretreatment tissue biopsy is recommended for tumour typing. If this is not possible then the
+diagnosis of malignancy can be made on cytological examination of ascitic fluid, preferably with
+immunohistochemistry (IHC) performed on a cell block preparation; however, there are limitations to the
+interpretation of immunohistochemical markers on cell blocks.12 Markers of value in tumour typing are
+discussed in Note 18 ANCILLARY STUDIES.
+       Back
+
+Note 2 – Specimen(s) submitted (Core)
+
+Providing information about the specimen type is regarded as an integral part of the reporting of primary
+ovarian, tubal and peritoneal cancers. While the nature of the specimens submitted for pathological
+assessment may be deduced from the surgical procedure, specifying the nature of the specimen received
+provides complementary information and confirmation that entire organs have been resected and submitted.
+       Back
+
+
+
+---
+[PAGE 7/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 7 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Note 3 – Specimen integrity (Core)
+
+Assessment of the integrity of the specimen (ovary or tube) is important, particularly for substaging of organ-
+confined disease (Stage I). Core information should include whether the ovarian capsule or tubal serosa is
+intact or ruptured, and also if there is tumour on the surface, or whether the tumour was received fragmented
+or intact. In case of capsule rupture, it is recommended to try to ascertain if rupture occurred before or during
+surgery (this is important in substaging International Federation of Gynaecology and Obstetrics (FIGO) Stage IC
+disease).13 Note that if the specimen ruptures within a bag during laparoscopic removal, or is cut into in the
+operating room, after removal from the patient, such that the peritoneal cavity is not exposed to the contents
+of the mass, it should be considered to be not ruptured i.e., ’intact’, for surgical pathology reporting purposes.
+
+According to the 2014 FIGO Staging System for ovarian, tubal and primary peritoneal cancer,13 ovarian
+capsular or tubal serosal rupture before surgery is considered Stage IC2 while intraoperative rupture is Stage
+IC1. There is some controversy as to whether rupture during surgery worsens the prognosis in the absence of
+surface excrescences, ascites or positive washings. Some studies showed a higher risk of recurrence in
+association with intraoperative ovarian capsular rupture,14,15 while others did not.16-18
+
+A 2014 meta-analysis assessed the impact of intraoperative rupture on prognosis, after analysing nine eligible
+studies which included 2,382 patients.13 Patients with preoperative capsular rupture showed poorer
+progression-free survival (PFS) than those with no rupture or intraoperative rupture. In sub-analyses,
+preoperative rupture was associated with a worse prognosis, and intraoperative rupture had a poorer PFS
+than no rupture. However, no difference in PFS was found between intraoperative rupture and no rupture in
+patients who underwent a complete surgical staging operation, with or without adjuvant platinum-based
+chemotherapy. In a recent large study, the risk associated with intra-operative rupture/Stage IC1 ovarian
+carcinoma was histotype dependent and greatest for patients with clear cell carcinoma.19
+
+There is some evidence to suggest that clear cell carcinomas exhibit a higher risk of rupture,20 probably related
+to adhesions to the surrounding tissues, associated with tumour invasion or endometriosis.21 Capsular rupture
+has also been associated with pregnancy.22
+       Back
+
+Note 4 – Tumour site/Histological sites of tumour involvement (Core)
+
+Sites of tumour involvement should be recorded as this is necessary for tumour staging. Although site
+assignment (tube versus ovary versus peritoneum) for clear cell, endometrioid, low grade serous and
+mucinous carcinomas is generally not problematic since almost all arise in the ovary, except for occasional
+cases arising in extraovarian endometriosis, the same is not true for HGSCs.
+
+It was first recognised in 2001, that a high percentage of so-called ovarian HGSC in women with germline
+BRCA1 mutations arise in the fimbrial end of the fallopian tube.23,24 This was initially reported in risk reducing
+salpingo-oophorectomy specimens where early pre-invasive HGSCs were much more likely to be present in the
+fallopian tube than ovary. These STICs harbour identical p53 mutations to the extratubal tumour, establishing
+that they are clonal.25 Comparison of telomere length and centrosome amplification in matched STIC and
+ovarian HGSC suggests that the STICs develop before the ovarian tumours and are in fact a precursor and not a
+metastatic focus.26,27 Finally, although numbers are small, early, incidental non-BRCA1/2 associated (sporadic)
+HGSCs are predominantly detected in the fallopian tube mucosa, especially the fimbria, rather than the
+ovary.28 In summary, there is compelling evidence that the precursors of HGSC originate in the fallopian tube
+in patients with germline BRCA1 mutations, and there is accumulating and convincing evidence that this is also
+true for sporadic HGSC. Assignment of primary site should therefore reflect our current understanding of
+where HGSCs originate, based on data from the study of early incidental or pre-invasive HGSC. However, some
+cases of ovarian and primary peritoneal HGSCs do not show STIC lesions or tubal mucosal HGSC despite entire
+submission of the grossly normal fallopian tubes for histological evaluation. In a consecutive series of non-
+
+
+
+---
+[PAGE 8/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 8 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+uterine HGSCs classified as ovarian or peritoneal based on pre-FIGO 2014 criteria in which the fallopian tubes
+were examined in their entirety, STICs were identified in 59% of cases, and invasive HGSC of the mucosa of the
+fallopian tube in an additional 15% of cases.13,29 In other cases, the fimbrial end of the fallopian tube was
+obliterated by a tubo-ovarian mass.
+
+According to the 2014 FIGO Staging System, the primary site of non-uterine HGSC is designated as ovarian,
+tubal or primary peritoneal.13 In some cases it may not be possible to ascertain the primary site of origin, and
+these should be categorised as ‘undesignated’ in the new staging system.13 The descriptor ‘tubo-ovarian HGSC’
+can also be used in practice for those cases of advanced stage HGSC where there is uncertainty about primary
+site, e.g., pre-treatment biopsy from the omentum. The problems in ascertaining the primary site and the
+variation in practice amongst pathologists have significant implications for epidemiological studies,
+determination of tumour incidence and mortality, data collection by cancer registries and entry into clinical
+trials. Based on the 2020 WHO Classification,3 recommendations for assigning the site of origin of extra-uterine
+HGSC are provided in the following section. Using these criteria, assignment of primary site is no longer based
+on the site of greatest volume/size of tumour but the presence of STIC or tubal mucosa involvement by HGSC
+indicates a fallopian tube origin, as does partial or total obliteration of one or both fallopian tubes by a tumour
+mass. Application of these criteria will be important in ensuring consistency between different pathologists in
+assigning the site of origin of HGSC with obvious important implications for cancer registration and other
+parameters.30
+
+Suggestions for assigning site of origin
+The following suggestions are not intended to be an exhaustive list nor are they intended to be binding, and
+assignment of origin in an individual case (Figure 1) is left to the discretion of the pathologist and the clinical
+team, ideally in the setting of a multidisciplinary team meeting. Undoubtedly, there will be evolution over time
+in our ability to accurately assign the primary tumour site, but the following are intended as practical
+guidelines for handling cases at the present time:30
+1. The fallopian tubes, or at least their fimbrial ends, should be well sampled – whenever possible - in all
+cases of HGSC by a sectioning and extensively examining the fimbriated end (SEE-FIM)-like protocol25
+to avoid missing this important site of disease, which probably represents the tumour origin in the
+large majority of cases.
+2. The presence of STIC, in the absence of invasive HGSC involving the fallopian tube, should be
+considered as tubal primary for staging purposes, e.g., points 4 and 7.
+3. The presence of STIC without invasion or extratubal spread should be staged as FIGO Stage IA tubal
+carcinoma (although these have a favourable prognosis, based on limited experience to date31) but
+with an annotation that there is no ‘invasive’ carcinoma.
+4. Cases with only STIC in the fallopian tube, ovarian surface involvement or parenchymal involvement
+not exceeding 5 millimetres (mm) and widespread peritoneal involvement, which would traditionally
+be categorised as primary peritoneal carcinoma,32 should be classified as tubal primaries.
+5. Cases with HGSC located within the mucosa of the fallopian tube, including its fimbrial end, with or
+without STIC in any portion of the fallopian tube and with no, minimal or even substantial ovarian
+involvement should be categorised as tubal primaries. Note that the distinction between STIC and
+intramucosal HGSC of the fallopian tube is subjective, with the latter showing a greater degree of
+stratification and architectural complexity.
+6. Cases in which the fallopian tube is not identifiable, having presumably been overgrown by the
+ipsilateral adnexal mass, or the distal end of the fallopian tube is incorporated into a large tubo-
+ovarian mass should also, based on current understanding, be diagnosed as tubal primaries. It is
+emphasised that a careful effort must be made to identify the tube in all cases.
+7. Cases with a dominant ovarian mass(es) and identifiable fallopian tubes with STIC should be classified
+as tubal primaries.
+8. Cases with a dominant ovarian mass(es) and identifiable fallopian tubes without STIC or mucosal
+involvement by HGSC, after SEE-FIM, should be classified as ovarian primaries.
+
+
+
+---
+[PAGE 9/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 9 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+9. Cases should be categorised as primary peritoneal carcinoma by the conventional criteria below3 and
+only after complete histological examination of the fallopian tubes (including the non-fimbrial
+portions) has excluded the presence of STIC or a small tubal HGSC or ovarian involvement by HGSC.
+10. All cases classified as ‘undesignated’ for FIGO staging purposes should be further described as ‘tubo-
+ovarian’ or ‘tubal/ovarian’ to distinguish them from serous carcinoma originating in the uterus. Using
+the suggestions presented here, these should represent a small proportion of HGSC.
+11. Cases with unilateral or bilateral HGSC in the ovary and/or STIC or HGSC in the tube but with an
+endometrial serous intraepithelial or invasive carcinoma should be carefully evaluated for an
+endometrial versus a tubo-ovarian primary (WT1 may be of value in such cases - see Note 18
+ANCILLARY STUDIES, to distinguish between ovarian and uterine carcinoma). The majority of such
+cases will represent adnexal metastases from an endometrial serous carcinoma.33
+
+Figure 1: High grade serous carcinoma: determining the primary site of origin. Serous tubal intraepithelial
+carcinoma (STIC).
+a Failure to detect the tubal fimbria implies overgrowth by tumour.
+b Apply criteria as specified in the commentary.
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+       Back
+
+Note 5 – Tumour dimensions (Non-core)
+
+There is little or no published evidence to suggest that size of the primary tumour is of prognostic significance,
+and size is not important for staging or management. The principal reason for recording the tumour
+dimensions, especially the maximum diameter, is to provide evidence that the tumour has been adequately
+sampled for histology. There are no evidence-based guidelines as to the optimal sampling of solid or cystic
+ovarian tumours. By convention, however, most pathologists sample one block per 10 mm of maximum
+tumour diameter in solid tumours. These same recommendations appear in cancer datasets for tumours at a
+range of other anatomical sites.
+High grade serous carcinoma:
+Determining the primary site of origin
+
+
+
+---
+[PAGE 10/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 10 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Adequate sampling of ovarian tumours is important for a number of reasons; for example, to identify foci of
+microinvasion or invasion in borderline tumours, foci of sarcoma in an ovarian carcinoma (carcinosarcoma), or
+foci of undifferentiated carcinoma in an endometrioid carcinoma (dedifferentiated carcinoma).
+
+It is recognised that ovarian mucinous neoplasms may exhibit considerable intratumoural heterogeneity with
+an admixture of benign, borderline and malignant areas. One study which assessed the ‘adequacy’ of sampling
+in epithelial ovarian neoplasms,34 confirmed mucinous carcinomas to display more histological variation than
+serous carcinomas. The authors concluded that more extensive sampling was required in borderline tumours
+to exclude foci of invasion. According to the recommendations of the 2004 Bethesda Workshop for borderline
+ovarian tumours,35 all borderline tumours should be well sampled – at least two sections per 10 mm (excluding
+smooth-walled cystic foci) with the exception that borderline tumours of less than 100 mm should be sampled
+with one block per 10 mm of maximum tumour diameter. The recommendation that there should be more
+extensive sampling of larger tumours, especially those of mucinous type, reflects their greater likelihood of
+harbouring foci of invasive carcinoma. Additional sampling of mucinous borderline tumours is also
+recommended when histological features such as intraepithelial carcinoma or microinvasion are identified in
+the original sections. Similarly, additional sampling in serous borderline tumours is recommended when
+micropapillary areas or microinvasion are present in initial sections since such neoplasms are more likely to
+harbour invasive foci.
+
+In mucinous ovarian tumours, tumour size may be helpful in determining whether the ovarian neoplasm is
+primary or metastatic. Unilateral mucinous carcinomas ≥100 mm in diameter are more likely to be primary
+than metastatic.36,37
+       Back
+
+Note 6 – Macroscopic description of omentum (Core)
+
+Three dimensions of the omentum should be provided in the pathology report to document the size of the
+specimen received for pathological examination. This may be useful in certain scenarios to direct the need for
+further surgery. For example, if initially only an omental biopsy was performed, further surgery may be
+undertaken to remove the remainder of the omentum. The size of the specimen is also helpful to determine
+the extent of sampling for histologic examination. No standardised guidelines have been developed for
+sampling omental specimens in cases of ovarian carcinoma or borderline tumours. However, in the setting of a
+grossly involved omentum, submitting one block for histologic examination is probably sufficient.38,39 In
+patients who have received neoadjuvant chemotherapy, where histological assessment of tumour response to
+therapy is recommended (see Note 15 RESPONSE TO NEOADJUVANT THERAPY), examination of 4-6 blocks of
+omentum is suggested. For grossly negative omental specimens the sampling recommendations are variable –
+sampling of 3-5 blocks is recommended in one study,39 other studies suggest at least one block for every 20
+mm of maximum omental dimension.40 Taking this information into account, 4-6 blocks in cases where the
+omentum is grossly negative in patients with an ovarian carcinoma or borderline tumour is recommended.
+
+The size of the largest omental tumour deposit should be recorded in the pathology report. This is critical for
+determining the pathological stage.3,13 Microscopic tumour which is not grossly evident, macroscopically
+evident tumour ≤20 mm, and macroscopically evident tumour >20 mm, correspond to FIGO Stages IIIA2, IIIB,
+and IIIC, respectively.13
+       Back
+
+
+
+
+---
+[PAGE 11/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 11 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Note 7 – Block identification key (Non-core)
+
+The origin/designation of all tissue blocks should be recorded, and it is preferable to document this
+information in the final pathology report. This is particularly important should the need for internal or external
+review arise. The reviewer needs to be clear about the origin of each block in order to provide an informed
+specialist opinion. If this information is not included in the final pathology report, it should be available on the
+laboratory computer system and relayed to the reviewing pathologist. It may be useful to have a digital image
+of the specimen and record of the origin of the tumour blocks in some cases.
+
+Recording the origin/designation of tissue blocks also facilitates retrieval of blocks for further
+immunohistochemical or molecular analysis, research studies or clinical trials.
+       Back
+
+Note 8 – Histological tumour type (Core)
+
+All tubo-ovarian epithelial malignancies and borderline tumours should be typed according to the 2020 WHO
+Classification of Tumours, Female Genital Tumours, 5th edition (Tables 1-3).3 There are five major histotypes of
+primary ovarian carcinoma: low grade serous, high grade serous, clear cell, endometrioid and mucinous.41-44
+There are also other uncommon minor types listed in the 2020 WHO Classification including malignant Brenner
+tumour, mesonephric-like and undifferentiated carcinoma.3 As seromucinous carcinoma is considered a
+morphologic variant of endometrioid carcinoma, it has thus been removed from the updated 2020 WHO
+Classification.3 Carcinomas formerly diagnosed as seromucinous carcinoma are now included in the
+endometrioid category. Carcinosarcoma is a mixed epithelial and mesenchymal malignancy but is included in
+the category of epithelial malignancies in this dataset and in the 2020 WHO Classification since most are of
+epithelial origin and histogenesis (epithelial mesenchymal transition).3,45
+
+Although management of ovarian carcinoma is, at present, largely dependent on tumour stage and grade,
+accurate typing will almost certainly become more important in the future with the introduction of targeted
+therapies and specific treatments for different tumour types. This is in part because, although clinically often
+considered as one disease, there is an increasing realisation that the different histotypes of ovarian carcinoma
+have different origins, pathogenesis, are associated with distinct molecular alterations, and have a different
+natural history, response to traditional chemotherapy, and prognosis.41-44 Tumour typing may also be
+important in identifying or initiating testing for an underlying genetic predisposition. For example, HGSC may
+be associated with underlying BRCA1/2 mutation while endometrioid carcinomas can occur in patients with
+LS.46 The most common ovarian carcinoma is HGSC (approximately 70%) followed by clear cell and
+endometrioid.47,48 Mucinous and low grade serous are less common. Approximately 90% of advanced stage
+ovarian carcinomas (Stage III/IV) are high grade serous in type.47,48 Most primary tubal carcinomas are high
+grade serous type.
+
+Mixed ovarian carcinomas are now considered to be uncommon. It is recommended that all distinct
+morphological types in an ovarian carcinoma are documented, even if they comprise less than 10% of the
+neoplasm. As stated, mixed carcinomas in the ovary are uncommon, the most prevalent combination being
+clear cell and endometrioid (both of these tumour types often arise in endometriosis). Most neoplasms which
+were previously classified as mixed serous and endometrioid, and mixed serous and clear cell, represent
+HGSCs with pseudoendometrioid areas and areas of cytoplasmic clearing respectively. In such cases,
+immunohistochemical markers, especially WT1, may be useful (see Note 18 ANCILLARY STUDIES).
+
+Borderline tumours should also be typed according to 2020 WHO Classification criteria.3 The most common
+types are serous and mucinous. Seromucinous, endometrioid and Brenner types also occur. Clear cell
+borderline tumour should only be diagnosed with the greatest caution, being certain to exclude carcinoma.
+
+
+
+
+---
+[PAGE 12/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 12 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Table 1: World Health Organization classification of tumours of the ovary.3
+
+ a These morphology codes are from the International Classification of Diseases for Oncology, third edition, second
+revision (ICD-O-3.2).49 Behaviour is coded /0 for benign tumours; /1 for unspecified, borderline, or uncertain behaviour;
+/2 for carcinoma in situ and grade III intraepithelial neoplasia; and /3 for malignant tumours, primary site; and /6 for
+malignant tumours, metastatic site. This classification is modified from the previous WHO classification, taking into
+account changes in our understanding of these lesions. Incorporates all relevant changes from the 5th edition Corrigenda
+June 2021.
+© World Health Organization/International Agency for Research on Cancer. Reproduced with permission.
+
+Table 2: World Health Organization classification of tumours of the fallopian tube.3
+
+ a These morphology codes are from the International Classification of Diseases for Oncology, third edition, second
+revision (ICD-O-3.2).49 Behaviour is coded /0 for benign tumours; /1 for unspecified, borderline, or uncertain behaviour;
+/2 for carcinoma in situ and grade III intraepithelial neoplasia; and /3 for malignant tumours, primary site; and /6 for
+malignant tumours, metastatic site. This classification is modified from the previous WHO classification, taking into
+account changes in our understanding of these lesions. Incorporates all relevant changes from the 5th edition Corrigenda
+June 2021.
+© World Health Organization/International Agency for Research on Cancer. Reproduced with permission.
+Descriptor
+ICD-O codesa
+Epithelial tumours
+
+Serous tumours
+Borderline
+Serous borderline tumour NOS
+8442/1
+
+Malignant
+Low grade serous carcinoma
+8460/3
+
+Malignant
+High grade serous carcinoma
+8461/3
+Mucinous tumours
+Borderline
+Mucinous borderline tumour
+8472/1
+
+Malignant
+Mucinous adenocarcinoma
+8480/3
+Endometrioid tumours
+Borderline
+Endometrioid tumour, borderline
+8380/1
+
+Malignant
+Endometrioid adenocarcinoma NOS
+8380/3
+Clear cell tumours
+Borderline
+Clear cell borderline tumour
+8313/1
+
+Malignant
+Clear cell adenocarcinoma NOS
+8310/3
+Seromucinous tumours
+Borderline
+Seromucinous borderline tumour
+8474/1
+Brenner tumours
+Borderline
+Brenner tumour, borderline malignancy 9000/1
+
+Malignant
+Brenner tumour, malignant
+9000/3
+Other carcinomas
+Malignant
+Mesonephric-like adenocarcinoma
+9111/3
+
+Malignant
+Carcinoma, undifferentiated, NOS
+8020/3
+
+Malignant
+Dedifferentiated carcinoma
+8020/3
+
+Malignant
+Carcinosarcoma NOS
+8980/3
+
+Malignant
+Mixed cell adenocarcinoma
+8323/3
+Descriptor
+ICD-O codesa
+Epithelial tumours
+
+Epithelial precursor lesion
+Serous adenofibroma NOS
+9014/0
+Epithelial borderline tumour
+Serous borderline tumour NOS
+8442/1
+Malignant epithelial tumours
+High grade serous carcinoma
+8461/3
+
+Endometrioid adenocarcinoma NOS
+8380/3
+
+Carcinosarcoma NOS
+8980/3
+
+
+
+---
+[PAGE 13/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 13 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Table 3: World Health Organization classification of tumours of the peritoneum.3
+
+a These morphology codes are from the International Classification of Diseases for Oncology, third edition, second
+revision (ICD-O-3.2).49 Behaviour is coded /0 for benign tumours; /1 for unspecified, borderline, or uncertain behaviour;
+/2 for carcinoma in situ and grade III intraepithelial neoplasia; and /3 for malignant tumours, primary site; and /6 for
+malignant tumours, metastatic site. This classification is modified from the previous WHO classification, taking into
+account changes in our understanding of these lesions. Incorporates all relevant changes from the 5th edition Corrigenda
+June 2021.
+© World Health Organization/International Agency for Research on Cancer. Reproduced with permission.
+       Back
+
+Note 9 – Pattern of invasion (Non-core)
+
+It is controversial as to whether the pattern of invasion in Stage I mucinous ovarian carcinoma has prognostic
+significance; therefore this is a non-core element.50-55 The expansile/confluent/non-destructive pattern of
+invasion is characterised by architecturally complex glands, cysts or papillae lined by atypical epithelium with
+minimal to no intervening stroma. The destructive/infiltrative pattern is characterised by haphazardly
+arranged glands, tubules, nests and cords of malignant cells infiltrating stroma with an associated
+oedematous, inflammatory or desmoplastic response. While several studies have shown the expansile pattern
+heralds a better prognosis,50-52,54-57 a population-based registry study of mucinous ovarian carcinomas was not
+able to prognosticate utilising the distinction between the two patterns of invasion.53 It is recommended that
+the pattern of invasion in mucinous ovarian carcinomas be recorded. The focus of invasion should measure >5
+mm in greatest linear extent; otherwise, this should be considered microinvasion or microinvasive carcinoma.
+       Back
+
+Note 10 – Carcinosarcoma components (Non-core)
+
+There is little published evidence suggesting any prognostic significance of the different morphological
+components within ovarian carcinosarcomas (although some prognostic evidence exists for uterine
+carcinosarcomas).58-60 In view of the paucity of studies, the ICCR Ovary Carcinoma Dataset Authoring
+Committee (DAC) recommends that it would be useful to record the percentage of the epithelial and
+mesenchymal elements as well as the components of the epithelial and mesenchymal (homologous or
+heterologous) elements. This is a recommendation rather than a requirement as collection of these data may
+be informative for the future prognosis and management of these neoplasms.58-60
+       Back
+
+Descriptor
+ICD-O codesa
+Epithelial tumours (of Müllerian type)
+
+Serous borderline tumour NOS
+8442/1
+Low grade serous carcinoma
+8460/3
+High grade serous carcinoma
+8461/3
+
+
+
+---
+[PAGE 14/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 14 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Note 11 – Histological tumour grade (Core and Non-core)
+
+Histological grade is part of current European Society for Medical Oncology (ESMO)-European Society of
+Gynaecological Oncology (ESGO) management guidelines for endometrioid and mucinous carcinomas.61 Serous
+carcinomas are now classified as low grade serous or high grade serous,3 and despite the names including the
+term grade, these are two different histotypes rather than low grade and high grade variants of the same
+tumour type. Hence, grading does not apply to serous carcinomas. Clear cell carcinomas, un-/dedifferentiated
+carcinomas, anaplastic carcinomas, carcinosarcomas and mesonephric-like carcinomas are aggressive tumours
+and grading does not apply. There is no grading system for malignant Brenner tumours. If chemotherapy has
+been administered, tumour grading (and typing) may need to be based on the pre-chemotherapy biopsy.
+
+The independent prognostic significance of grade for ovarian endometrioid carcinomas has only recently been
+validated.62 The 1988 FIGO grading system is widely used for grading endometrioid carcinomas of ovarian and
+endometrial origin.13 The FIGO grading system is based on architecture; tumours with <5% non-squamous solid
+component are grade 1, those with 5-50% solid areas are grade 2, and tumours with >50% of solid architecture
+are classified as grade 3.13 When grade 1 and 2 tumours show severe nuclear atypia in the majority of the
+tumour cells (grade 3 nuclei), the histological grade is increased by one.13,63
+
+Dedifferentiation in endometrioid carcinoma, sometimes with Switch/Sucrose non-fermenting (SWI/SNF)
+alterations, results in highly aggressive behaviour and such tumours are high grade by definition.64 A significant
+majority of ovarian endometrioid carcinomas are grade 1 and 2. However, there is a subset of grade 3
+endometrioid carcinomas which should be diagnosed with caution, since a significant proportion of such
+tumours are in fact HGSC with so called SET features (solid, pseudoendometrioid, transitional cell). IHC is
+useful in this regard (see Note 18 ANCILLARY STUDIES). The interobserver reproducibility of grading is limited
+and several studies have attempted to improve on it.65-70 There are shortcomings of a primarily architecturally
+based grading system. Certain growth patterns of endometrioid carcinoma such as spindled with bland nuclear
+features may be over-graded. On the contrary, tumours with non-solid architecture but high grade nuclear
+atypia may be under-graded. For example, in a recent study a number of p53 abnormal (p53abn) ovarian
+endometrioid carcinomas with aggressive course were graded as 1.62
+
+As compared to the FIGO grading system,13 the Silverberg grading system71 was found to correlate better with
+survival in a multivariate analysis, although outcome in ovarian endometrioid carcinoma is mostly dictated by
+stage.63 The Silverberg system (Table 4) takes into account nuclear atypia and mitotic activity in addition to
+architecture. Thus, the scores for architecture (majority glandular=1, papillary=2, solid=3), nuclear atypia
+(mild=1, moderate=2, severe=3), mitotic activity per mm2 of tumour area or in 10 high power fields (HPF)
+(based on each HPF being 0.345 mm2 in area, as per the original study;71 0-3 mitotic figures/mm2 (or 0 to 9
+mitotic figures per 10 HPF) =1, 3-7 mitotic figures/mm2 (or 10 to 24 mitotic figures per 10 HPF) =2, and >7
+mitotic figures/mm2 (or ≥25 mitotic figures per 10 HPF) =3) are added to obtain a score for determining the
+final grade (G1: 3 to 5, G2: 6 to 7, G3: 8 to 9). The better performance of the Silverberg system was attributed
+to the better separation of grade 2 from the grade 3 tumours, which had a poor outcome.63
+
+
+
+
+---
+[PAGE 15/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 15 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Table 4: The Silverberg grading system.71
+Criterion
+Score
+Architecture (majority pattern)
+
+  Glandular
+1
+  Papillary
+2
+  Solid
+3
+Nuclear atypia
+
+  Mild
+1
+  Moderate
+2
+  Severe
+3
+Mitotic count per mm2
+
+  <3 mitotic figures/mm2
+1
+  3-7 mitotic figures/mm2
+2
+  >7 mitotic figures/mm2
+3
+Final Grade
+Total Score
+  Grade 1
+3-5
+  Grade 2
+6-7
+  Grade 3
+8-9
+
+The DAC panel agrees that there is insufficient evidence for a change in the grading system of endometrioid
+carcinomas and continues to recommend the FIGO grading system.13
+
+In addition to grading, molecular subtype assignment may further improve outcome prediction in the same
+way as for endometrioid carcinoma of the uterus; this is done with IHC for MMR proteins and p53 and by
+sequencing for exonuclease domain mutations (EDM) of Polymerase epsilon (POLE).62,72
+
+Some management guidelines for mucinous carcinomas require grading.61 The DAC previously suggest that if
+grading of mucinous carcinomas is undertaken (a non-core element rather than a core element), the same
+grading system for endometrioid carcinomas should be used. However, a recent study showed no prognostic
+significance of the FIGO grading system and reemphasised that mucinous carcinomas only rarely show a solid
+growth pattern.73 In this study, the Silverberg grade was significantly associated with survival, although all
+mucinous carcinomas were graded as grade 1 or 2 by the Silverberg system, and none as grade 3.73 The DAC
+now recommends the Silverberg grading system71 for mucinous carcinomas as a non-core reporting element.
+
+The same study also proposed a growth-based grading system based on the pattern of invasion.73
+Expansile/confluent invasion or infiltrative invasion ≤10% of the tumour is graded as 1 while infiltrative
+invasion >10% is graded as 2.73 This was significantly associated with survival in univariable analysis in this
+relatively small study of 46 cases.74 This corroborates earlier studies showing that while infiltrative invasion is
+associated with higher stage, it also predicts higher risk of recurrence at Stage I.53,57,74,75 It is important to note,
+however, that an infiltrative pattern of invasion is a characteristic feature of metastatic mucinous carcinoma.
+In one study, the infiltrative pattern of invasion lost its significant association with survival after metastatic
+carcinomas to the ovary were excluded.76 If an infiltrative/destructive pattern is present, metastatic carcinoma
+should carefully be ruled out. The quantification of the infiltrative component as focal (≤10%) or diffuse (>10%)
+may be recorded to allow more data to be gathered for future studies.
+       Back
+
+
+
+
+---
+[PAGE 16/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 16 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Note 12 – Borderline tumour - special features (Core and Non-core)
+
+Terminology for ovarian borderline tumours has evolved over several years.40,77 The preferred terminology is
+borderline tumour, for example serous or mucinous borderline tumour, and this has been endorsed in the
+2020 WHO Classification.3 Serous borderline tumours can be of typical or micropapillary subtypes, as per the
+latest WHO Classification.3 For mucinous, endometrioid, clear cell, Brenner, and seromucinous tumours, the
+designation ‘borderline tumour’ is also used in the 2020 WHO Classification.3 The terms ‘low malignant
+potential’ or ‘atypical proliferative’ are not recommended.3 Synonyms formerly used for seromucinous
+borderline tumours include endocervical-type mucinous borderline tumour, Müllerian mucinous borderline
+tumour, and atypical proliferative (borderline) Müllerian tumour.78
+
+Determining the lowest threshold for the diagnosis of a borderline tumour in the setting of a
+cystadenoma/cystadenofibroma with minimal epithelial proliferation can be subjective and quantitative
+criteria have been suggested: cystadenomas/cystadenofibromas with qualitatively sufficient epithelial
+stratification/complexity involving ≥10% of the epithelial volume are designated as borderline tumours arising
+within a cystadenoma/cystadenofibroma.40 A borderline tumour in which the epithelial
+stratification/complexity involves <10% of the epithelial volume should be diagnosed as cystadenoma/
+cystadenofibroma with focal epithelial proliferation.
+
+As serous borderline tumour can exhibit variable degrees of micropapillary or cribriform architecture, a
+diagnosis of micropapillary subtype of serous borderline tumour is based on the presence of ≥5 mm of
+confluent micropapillary (defined as micropapillae five times as long as they are wide) or cribriform growth.3
+
+A standardised quantitative criterion for distinguishing microinvasion from frankly invasive carcinoma within a
+borderline tumour has not been established, with varying definitions used in different studies, including 1, 2, 3,
+5 and 10 mm2 as the upper limits of microinvasion.40,77,79 The 2020 WHO Classification uses 5 mm2 as a cut-off.3
+Some groups distinguish two patterns of stromal invasion in serous tumours which quantitatively falls short of
+frankly invasive carcinoma (<5 mm) - conventional ‘microinvasion’ (isolated and/or small clusters of
+eosinophilic cells and/ or small papillae cytologically similar to the non-invasive component within clear
+lacunar spaces) and ‘microinvasive carcinoma’ (glandular or micropapillary patterns qualitatively analogous to
+low grade serous carcinoma (LGSC)).40,77 However, other investigators do not advocate this distinction. Due to
+insufficient numbers of cases in the literature, definitive conclusions regarding the clinical significance of this
+distinction cannot be drawn.77,80 Analogous to the situation for serous tumours, some investigators advocate
+the separation of ‘microinvasion’ from ‘microinvasive carcinoma’ in mucinous borderline tumours while others
+use these two terms interchangeably.79
+
+In mucinous borderline tumours, intraepithelial carcinoma is diagnosed in non-invasive foci with marked
+nuclear atypia, and is often associated with mitotic activity.40,79 However, the reproducibility of this diagnosis
+has not been formally analysed. It has recently been suggested that p53 IHC could be used instead or in
+support of a diagnosis of intraepithelial carcinoma but this remains to be proven.81 Intraepithelial carcinoma
+for mucinous borderline tumours is a non-core item for reporting and the term intraepithelial carcinoma is not
+applied to other types of borderline tumour. Mucinous borderline tumours can be associated with mural
+nodules, which are classified as reactive sarcoma-like, anaplastic carcinoma, or sarcoma.
+
+Sarcoma-like nodules are composed of a variable mixture of spindled/round mononucleated cells, often
+associated with marked inflammation.
+
+Extra-ovarian implants occur in approximately 20% of serous borderline tumours and are more common with
+exophytic neoplasms. The most important adverse prognostic factor for ovarian serous borderline tumours in
+which there is extra-ovarian disease, is the presence of invasive implants, i.e., LGSC, in extra-ovarian tissues as
+this portends an adverse prognosis, with non-invasive implants having a favourable prognosis. Specifying the
+location and size of implants is important for determining the FIGO stage.13 Non-invasive and invasive
+implants/LGSC may co-exist in the same specimen. Non-invasive implants are subclassified as epithelial or
+desmoplastic types.40 Epithelial-type non-invasive implants resemble detached fragments of a serous
+
+
+
+---
+[PAGE 17/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 17 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+borderline tumour involving extra-ovarian tissues. They do not exhibit infiltration of underlying tissue, and
+they are often present within mesothelial or epithelial-lined spaces although they may be adherent to the
+serosal surface. Desmoplastic non-invasive implants are composed of glands or papillary clusters within
+fibroblastic or granulation tissue-like stroma, but they do not exhibit infiltration of adjacent tissue. Often these
+are located on serosal surfaces or within septa in the omentum. Note that the presence of isolated individual
+or small clusters of eosinophilic epithelial cells within the stroma is generally considered to be within the
+spectrum of desmoplastic non-invasive implants rather than representing an invasive implant/LGSC.77
+
+The most widely used criterion for diagnosing extra-ovarian LGSC/invasive implants in a patient with an
+ovarian serous borderline tumour is destructive invasion of underlying tissue.82 Invasive implants often feature
+markedly crowded epithelial nests, glands or micropapillary clusters with a haphazard arrangement. The nests,
+glands and papillae are sometimes surrounded by clefts.40,77
+
+In occasional cases, it may not be possible to definitively distinguish non-invasive from invasive implants/LGSC
+and the recommendation is to designate such implants as being of indeterminate type.83 This terminology
+should only be used sparingly, and obtaining a specialist gynaecological pathology opinion and submitting
+additional sections for histological examination (if an omentectomy specimen), may be useful.
+
+When invasive implants are present this should be diagnosed in the final pathology report as extra-ovarian
+LGSC;40,77,84 this has been endorsed in the 2020 WHO Classification.3 It is unclear whether invasive implants
+involving extra-ovarian sites in association with an ovarian serous borderline tumour represent metastases
+from the serous borderline tumour or an independent primary peritoneal tumour. A number of molecular
+studies analysing primary ovarian tumours with their associated implants have yielded varying results.77
+However, Ardighieri et al (2014) showed in a large population-based cohort has shown that the vast majority
+of implants are clonally related to the primary ovarian tumour.85 Most of the cases from this study were non-
+invasive implants; however, all 10 invasive implants had the same mutational status (KRAS mutation, BRAF
+mutation, or wild-type KRAS/BRAF) as the corresponding serous borderline tumour, suggesting that invasive
+implants are clonally related to the primary ovarian tumour as opposed to representing independent primary
+peritoneal lesions.85 Nevertheless, the number of invasive implants evaluated by molecular methods in the
+entire literature is limited. Carcinoma developing in patients with a previous diagnosis of serous borderline
+tumour are mostly LGSCs and most are clonally related to the serous borderline tumour i.e., represent tumour
+progression.86 From a practical point of view, for cases of invasive implants in association with an ovarian
+tumour diagnosed as serous borderline tumour, it is recommended to consider additional sampling of ovarian
+tissue to demonstrate LGSC or micropapillary serous borderline tumour.87
+
+Implants may also be encountered in the setting of seromucinous borderline tumours, and the same issues for
+serous tumours pertain. In general implants do not occur in the setting of mucinous, endometrioid, clear cell
+or Brenner borderline tumours.
+       Back
+
+Note 13 – Serous tubal intraepithelial carcinoma (STIC) (Core)
+
+Recently, STIC has been implicated in the pathogenesis of extra-uterine HGSC. The evidence indicating that
+STIC is a precursor of most HGSCs that were formerly considered to be of tubal, ovarian or primary peritoneal
+origin, as well as guidelines for assigning primary site in cases of advanced stage non-uterine, HGSC, have
+already been provided (see Note 4 HISTOLOGICAL SITES OF TUMOUR INVOLVEMENT). STIC comprises a
+population of cytologically malignant epithelial cells replacing the normal tubal mucosa, most commonly
+involving the fimbria, and characterised by increased nuclear to cytoplasmic ratio with rounded nuclei, loss of
+cell polarity, coarsely clumped chromatin, prominent nucleoli and absence of ciliated cells. Additional features
+that may be present include epithelial stratification, small fracture lines in the epithelium and tufting and
+exfoliation from the tubal surface of small epithelial cell clusters.
+
+
+
+
+---
+[PAGE 18/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 18 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+The diagnostic criteria for STIC have evolved and guidelines for diagnosis, which include the use of p53 and Ki-
+67 (MIB1) immunostaining, have been published.88-90 Use of these criteria results in a high degree of inter-
+observer diagnostic agreement. In discrete fallopian tube mucosal lesions (usually, but not always, located in
+the fimbria) with high grade atypia in non-ciliated epithelium, the presence of abnormal p53 immunostaining
+(three mutation-type patterns: overexpression, complete absence and cytoplasmic) and high Ki-67
+proliferation index (≥10%) support a diagnosis of STIC. Although immunostains are a valuable adjunct in the
+diagnosis of isolated lesions of the fallopian tube, they are usually not needed to diagnosis STIC in the context
+of advanced stage HGSC, where comparison between the tubal mucosal lesion and HGSC elsewhere reveals
+identical cytological features, with high grade atypia and numerous mitotic figures. Fallopian tube epithelial
+lesions with atypia that do not meet all the criteria for STIC (e.g., tubal intraepithelial lesion in
+transition/serous tubal intraepithelial lesion, synonymous terms for lesions that have some but not all features
+of STIC) are of uncertain significance at present with poor reproducibility and these are not reportable
+diagnoses and should generally not be used in routine practice; additional research is required to determine
+the clinical significance, if any, of such lesions. Similarly, p53 signatures should not be reported as a diagnosis.
+
+Fallopian tube mucosal involvement by uterine or non-gynaecological primary tumours can occur and mimic
+STIC.91-93 Most cases with unilateral or bilateral HGSC in the ovary and/or STIC or HGSC in the tube but with an
+endometrial serous intraepithelial or invasive carcinoma will represent adnexal metastases from an
+endometrial serous carcinoma (see Note 18 ANCILLARY STUDIES).94 A diagnosis of STIC always requires
+consideration of clinical and pathological findings and the exclusion of secondary involvement of the fallopian
+tube.
+       Back
+
+Note 14 – Peritoneal cytology (Core)
+
+The results of peritoneal cytology (peritoneal washings or peritoneal fluid) are important for the substaging of
+Stage I ovarian tumours (borderline and malignant). Positive peritoneal washings in a Stage I tumour signify
+Stage IC3 in the 2014 FIGO Staging System.13 In the previous 2006 FIGO Staging System,95 the results of
+peritoneal cytology were used for the substaging of Stage II neoplasms, but this is no longer the case. Positive
+peritoneal cytology in a Stage I carcinoma may indicate the need for adjuvant therapy in certain cases. Cells of
+LGSC and serous borderline tumour cannot be reliably distinguished in a cytology specimen; in such cases, the
+cytology findings should be correlated with the histopathological findings.
+       Back
+
+Note 15 – Response to neoadjuvant therapy (Non-core)
+
+Histological assessment of chemotherapy response is only applicable to HGSC at this time. An initial study has
+tested and validated the prognostic significance of chemotherapy response criteria, and assessed
+reproducibility in two independent series of tubo-ovarian HGSC.96,97 This three-tier scoring system (the
+Chemotherapy Response Score (CRS)) is reproducible, simple to apply in practice, and has been validated in an
+international multicentre study.98 This is the grading system currently recommended by the DAC. The method
+is as follows:
+1. Scoring should be carried out on a single haematoxylin and eosin (H&E)-stained section (refer to
+discussion of omental sampling in Note 6 Macroscopic description of omentum).
+2. A single block of involved omental tissue that shows the least response to chemotherapy should be
+selected (if there is no residual omental tumour a CRS score of 3 is given - see Table 5).
+3. The amount of viable tumour should be assessed; this may or may not show degenerative changes in
+the form of nuclear atypia, smudging of the nuclear chromatin and cytoplasmic clearing.
+
+
+
+
+---
+[PAGE 19/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 19 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+4. The presence of fibrosis may be helpful in marking the site of previous tumour infiltration:
+a.
+When found in the absence of tumour, fibrosis is likely to indicate regression.
+b.
+If fibrosis occurs in association with tumour, this may simply reflect tumour-associated
+desmoplasia rather than regression.
+c.
+However, when fibrosis in association with tumour is accompanied by an inflammatory response
+(so-called ‘fibro-inflammatory’ response – fibrosis with associated macrophages and a mixed
+population of inflammatory cells), this indicates regression.
+d.
+Psammoma bodies may mark the site of previous tumour and can sometimes appear more
+numerous because their density increases in areas where tumour has disappeared.
+5. As a guide, >95% of tumour should be viable for a score of 1, and <5% for a score of 3.
+6. In studies to date using this system or a closely related system, a difference in prognosis was shown
+only when tumours with a CRS score of 1 or 2 were compared with those having a CRS score of 3.96,97
+However, the DAC recommends use of the three-tier system to gather more data for future studies.
+7. Note that this system has only been applied to HGSCs to date.
+8. If the omental tissue appears normal, with neither tumour cells nor fibrosis, it is important to
+ascertain that there was omental involvement prior to the start of chemotherapy, that has completely
+regressed, by review of the clinical and radiological findings, before assigning a CRS score of 3. If there
+was no omental involvement prior to starting chemotherapy, then a CRS score cannot be applied.
+
+Table 5: Chemotherapy response score (CRS).96
+Score
+Criterion
+Tumour regression
+1
+Mainly viable tumour with no or minimal
+regression-associated fibro-inflammatory
+changesa limited to a few foci
+No definite or minimal tumour
+response identified
+2
+Multifocal or diffuse regression-associated
+fibro-inflammatory changes, a with viable
+tumour ranging from diffuse sheets, streaks
+or nodules, to extensive regression with
+multifocal but easily identifiable residual
+tumour.
+Moderate response identified
+3
+Mainly regression, with few irregularly
+scattered individual tumour cells or cell
+groups (all measuring less than 2 mm), or no
+residual tumour identified.
+Marked response with no or
+minimal residual cancer
+a Regression associated fibro-inflammatory changes: fibrosis associated with macrophages, including foam cells, mixed
+inflammatory cells and psammoma bodies; to be distinguished from tumour-related inflammation or desmoplasia.
+       Back
+
+Note 16 – Lymph node status (Core)
+
+In the revised 2014 FIGO Staging System, metastases involving retroperitoneal lymph nodes, in the absence of
+peritoneal spread above the pelvic brim or distant metastases, represent Stage IIIA1 disease.13 This stage is
+further subdivided into Stages IIIA1(i) and IIIA1(ii) for nodal metastases ≤10 mm and >10 mm, respectively.
+Formerly, regional node metastases were a criterion for Stage IIIC disease and this amendment is based upon
+evidence that patients with only nodal metastases (in the absence of peritoneal disease) have a relatively
+favourable outcome - although it should be noted that the data are based mainly on cases of HGSC.99,100
+Positive extra-abdominal lymph nodes including inguinal metastases represent Stage IVB disease.
+
+
+
+
+---
+[PAGE 20/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 20 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+International Federation of Gynaecology and Obstetrics (FIGO) specifically restricts the definition of Stage IIIA1
+disease to retroperitoneal lymph nodes (pelvic and para-aortic) but does not indicate how tumour spread to
+intraperitoneal nodes (such as those in the mesentery or omentum) should be interpreted, although it would
+be very unusual to have isolated nodal metastases at these sites.13 According to FIGO (personal
+communication), this should be regarded as intra-abdominal disease, i.e., Stage IIIC.101,102 At present there are
+also limited data to justify the subdivision of Stage IIIA1 according to the size of the nodal metastases.13 It is
+also not clear how the extent of nodal involvement (≤10 mm or >10 mm) should be measured if the diagnosis
+is based only upon cytological sampling. According to FIGO (personal communication), this should be regarded
+as Stage IIIA(i) disease.
+
+Data on lymph node involvement in borderline ovarian tumours is largely restricted to tumours of serous
+subtype where approximately 25% of fully staged cases will show positive nodes.103,104 While this finding does
+not appear to influence overall survival, cases with nodular epithelial tumour aggregates >1 mm in extent may
+show decreased disease-free survival.105 Rarely, LGSC appears to develop within the lymph nodes of patients
+with ovarian serous borderline tumours.106
+
+According to TNM8,107 nodal involvement should be recorded as the presence of isolated tumour cells (ITC,
+<0.2 mm), micrometastases (MIC, 0.2-2 mm) or macrometastases (MAC, >2 mm).
+       Back
+
+Note 17 – Coexistent pathology/Precursor lesions (Non-core)
+
+Borderline and malignant endometrioid, clear cell and seromucinous ovarian tumours may arise from
+endometriosis. Thus, the presence of endometriosis, although not of prognostic or therapeutic significance,
+particularly if contiguous with the tumour, may assist in determining the histotype in problematic cases.108,109
+       Back
+
+Note 18 – Ancillary studies (Non-core)
+
+Morphology remains the mainstay in ovarian carcinoma diagnosis. Diagnostic ancillary testing is currently
+based primarily on IHC. Diagnostic immunohistochemical markers may assist in establishing a diagnosis of a
+primary ovarian carcinoma or aid in histotyping. It is beyond the scope of this dataset to present a detailed
+analysis (sensitivity, specificity, cut-off interpretation) but the most commonly used first-line
+immunohistochemical panels are discussed. In general, panels of markers are better than reliance on
+individual markers and it should be remembered that no marker is totally specific or sensitive for any tumour
+type. Unexpected positive and negative staining reactions may occur. Therefore, the results of
+immunohistochemical studies should always be interpreted in conjunction with the clinical, gross and
+microscopic features.109,110
+
+The choice of ancillary tests for the distinction of a primary ovarian carcinoma from a metastatic malignancy
+(Table 6) depends on its morphological context and can be problematic particularly on small or cytological
+specimens.
+
+
+
+
+---
+[PAGE 21/40]
+
+
+Version 2.0 Published September 2021                                 ISBN: 978-1-922324-25-2                                                       Page 21 of 40
+© 2021 International Collaboration on Cancer Reporting Limited (ICCR).
+
+Table 6: Ancillary tests to distinguish primary ovarian carcinoma from a metastasis.
+Comparator #1
+Comparator #2
+Expressed/abnormal
+in comparator #1
+Expressed/abnormal
+in comparator #2
