@@ -27,6 +27,23 @@ from typing import Dict, Any, Optional, Tuple, List
 from datetime import datetime
 from tqdm import tqdm
 
+# ===========================
+# Simple ANSI colors for CLI
+# ===========================
+_CLR_RED = "\033[91m"
+_CLR_YELLOW = "\033[93m"
+_CLR_BLUE = "\033[94m"
+_CLR_RESET = "\033[0m"
+
+
+def _sev_color(sev: str) -> str:
+    s = (sev or "").lower()
+    if s == "critical":
+        return _CLR_RED
+    if s == "major":
+        return _CLR_YELLOW
+    return _CLR_BLUE
+
 PROJECT_ROOT = Path(__file__).resolve().parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
@@ -481,7 +498,8 @@ def process_file(
     if txt_dir:
         Path(txt_dir).mkdir(parents=True, exist_ok=True)
 
-    with open(output_path, "w", encoding="utf-8") as fw, open(input_path, "r", encoding="utf-8") as fr:
+    review_output_path = str(output_path) + ".review.jsonl"
+    with open(output_path, "w", encoding="utf-8") as fw, open(review_output_path, "w", encoding="utf-8") as fw_review, open(input_path, "r", encoding="utf-8") as fr:
         pbar = tqdm(total=total, ncols=120, desc="Processing")
 
         for idx, line in enumerate(fr, start=1):
@@ -533,6 +551,7 @@ def process_file(
             src_for_llm = prepend_document_time(src, Time_val)
 
             pbar.set_description(f"{idx}/{total} | {patient_id_safe}")
+            pbar.set_postfix_str("step=extract")
             record_t0 = time.time()
 
             # -------------------------------
@@ -551,6 +570,7 @@ def process_file(
                 verbose=verbose,
             )
             print(f"[step] extract_ehr done | finish={finish} tokens={tokens} err={err} elapsed={time.time()-t0:.2f}s")
+            pbar.set_postfix_str("step=review_self")
 
             parsed, status = try_parse_json(ehr_content)
 
@@ -582,7 +602,16 @@ def process_file(
                 )
                 issues_self = (review_self.get("parsed") or {}).get("issues") or []
                 print(f"[step] review_self done | parse_status={review_self.get('parse_status')} issues={len(issues_self)} elapsed={time.time()-t0:.2f}s")
+                if issues_self:
+                    print("  [review_self issues]")
+                    for it in issues_self[:5]:
+                        sev = it.get("severity", "unknown")
+                        path = it.get("field_path", "")
+                        desc = it.get("description", "")
+                        color = _sev_color(sev)
+                        print(f"   - {color}({sev}){_CLR_RESET} {path} :: {desc[:120]}")
                 print("[step] review_validator start")
+                pbar.set_postfix_str("step=review_validator")
                 t0 = time.time()
                 review_validator = run_ehr_review(
                     client=client,
@@ -594,12 +623,28 @@ def process_file(
                 )
                 issues_validator = (review_validator.get("parsed") or {}).get("issues") or []
                 print(f"[step] review_validator done | parse_status={review_validator.get('parse_status')} issues={len(issues_validator)} elapsed={time.time()-t0:.2f}s")
+                if issues_validator:
+                    print("  [review_validator issues]")
+                    for it in issues_validator[:5]:
+                        sev = it.get("severity", "unknown")
+                        path = it.get("field_path", "")
+                        desc = it.get("description", "")
+                        color = _sev_color(sev)
+                        print(f"   - {color}({sev}){_CLR_RESET} {path} :: {desc[:120]}")
                 print("[step] auto_fix start")
+                pbar.set_postfix_str("step=auto_fix")
                 t0 = time.time()
                 parsed, review_fixes = apply_auto_fixes(parsed)
                 print(f"[step] auto_fix done | fixes={len(review_fixes)} elapsed={time.time()-t0:.2f}s")
+                if review_fixes:
+                    print("  [auto_fix changes]")
+                    for fx in review_fixes[:5]:
+                        path = fx.get("path", "")
+                        reason = fx.get("reason", "")
+                        print(f"   - {path} :: {reason}")
             else:
                 print("[step] review skipped | reason=extract_parse_failed")
+                pbar.set_postfix_str("step=write_output")
 
             # Attempt repair if JSON broken
             if parsed is None and enable_json_repair and (ehr_content or "").strip():
@@ -648,7 +693,7 @@ def process_file(
             # Optional: keep legacy keys OFF by default to avoid duplication.
             # If you need back-compat later, you can add flags to include them.
 
-            out["audit_ehr"] = {
+            audit_ehr = {
                 "tokens": tokens,
                 "finish": finish,
                 "parse_status": status,
@@ -660,6 +705,13 @@ def process_file(
                 "repair_used": repair_used,
                 "repair_parse_status": repair_parse_status,
                 "repair_raw": repair_raw,
+            }
+            review_record = {
+                "patient_id": patient_id,
+                "Time": Time_val,
+                "req_id": req_id,
+                "parse_status": status,
+                "audit_core": audit_ehr,
                 "review": {
                     "self": review_self,
                     "validator": review_validator,
@@ -669,7 +721,10 @@ def process_file(
 
             print("[step] write_output")
             fw.write(compact_json_line(out) + "\n")
+            if review_self or review_validator or review_fixes or audit_ehr:
+                fw_review.write(compact_json_line(review_record) + "\n")
             print(f"[step] record_done | elapsed={time.time()-record_t0:.2f}s")
+            pbar.set_postfix_str("step=done")
 
             # -------------------------------
             # Optional: TXT preview output
@@ -707,6 +762,7 @@ def process_file(
         pbar.close()
 
     print(f"✅ 已写入 {output_path}")
+    print(f"✅ Review sidecar: {review_output_path}")
 
 
 

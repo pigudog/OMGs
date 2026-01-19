@@ -285,6 +285,37 @@ Notes:
 - `--txt-dir` is optional; when set, a per-patient TXT preview is saved.
 - `--disable-json-repair` can be used to skip automatic JSON repair.
 
+### EHR review & auto-fix pipeline
+
+The extractor now runs two review passes and a deterministic auto-fix layer. The **final JSON output keeps the original schema**, while review data is written to a **sidecar JSONL** file.
+
+**Outputs**
+- Main: `output_ehr/<file>.jsonl` (unchanged schema)
+- Review sidecar: `output_ehr/<file>.jsonl.review.jsonl`
+
+**Flow**
+```mermaid
+flowchart TD
+  SourceText[SourceText] --> Extract[ExtractEHR_JSON]
+  Extract --> SelfReview[SelfReview_SameModel]
+  Extract --> Validator[Validator_SecondAgent]
+  SelfReview --> AutoFix[AutoFix_Rules]
+  Validator --> AutoFix
+  AutoFix --> FinalJSON[FinalJSON_OriginalSchema]
+  AutoFix --> ReviewSidecar[ReviewSidecar_JSONL]
+```
+
+**Auto-fix rules (initial)**
+- Recompute PFI days and platinum status from `last_platinum_end_date` and `first_relapse_date` when both are valid.
+- Align platinum history status with the latest platinum line.
+- For biochemical relapse, fill evidence text when CA125 is available.
+- Sort timeline events by date (unknown dates at the end).
+
+**Sidecar contents (review only)**
+- `review.self` (self-reflection issues)
+- `review.validator` (second-agent issues)
+- `review.auto_fixes` (deterministic fix log)
+
 ### Build / index / search RAG guidelines
 
 ```bash
