@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MDT Report</title>
+  <style>
+    :root {
+      --border: #e5e7eb;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --card: #ffffff;
+      --soft: #f7f7f8;
+      --accent: #2563eb;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; background: var(--bg); }
+    h1 { font-size: 20px; margin: 0 0 12px 0; }
+    h2 { font-size: 16px; margin: 0 0 10px 0; }
+    h3 { font-size: 14px; margin: 10px 0 6px 0; }
+    .meta { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .card { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: var(--card); }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; background: var(--card); }
+    summary { cursor: pointer; font-weight: 600; }
+    pre { white-space: pre-wrap; word-wrap: break-word; background: var(--soft); padding: 12px; border-radius: 10px; overflow-x: auto; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .mt { margin-top: 12px; }
+    .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+    .warn { color: #b45309; font-weight: 600; }
+    table.grid { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.grid th, table.grid td { border: 1px solid var(--border); padding: 8px; vertical-align: top; }
+    table.grid th { background: #f3f4f6; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>OMGs / MDT Report</h1>
+  <div class="meta">
+    <div><b>Timestamp</b>: 2026-01-18_21-22-05</div>
+  </div>
+
+  <div class="cols mt">
+    <div class="card">
+      <h2>Final MDT Output</h2>
+      <pre>Final Assessment:
+Systemic recurrent pelvic malignancy with hepatic and osseous metastases and severe anemia, but tumor origin, prior therapy, and current extent remain insufficiently defined for safe systemic treatment decisions. [@2022-12-29|MR] [@2022-12-29|CT] [@20230103|5600862]
+
+Core Treatment Strategy:
+- Defer new systemic regimen and trial enrollment until full pathology, prior oncologic treatments, and performance status are clarified. [@guideline:nccn_ovariancancer_v3_2025__v00000000|11]  
+- Obtain and review complete pathology (primary and any metastases, including IHC, grade, stage) to define tumor origin and subtype. unknown/needs update  
+- Arrange updated CT/MR and consider PET/CT to restage, assess obstruction/neurologic risk, and confirm current metastatic burden. [@2022-12-29|MR] [@2022-12-29|CT] [@pubmed:35296733]  
+- Urgently evaluate and manage anemia/lymphopenia (workup, transfusion as indicated) before any myelosuppressive therapy. [@20230103|5600862]
+
+Change Triggers:
+- If pathology confirms epithelial ovarian origin, align with epithelial ovarian systemic pathways, considering limited PARP role in HRD-/BRCA‑wt disease. [@guideline:nccn_ovariancancer_v3_2025__v00000000|11] [@OH2203828|2022-04-18]  
+- If updated imaging or symptoms reveal obstruction, neurologic compromise, or fracture risk, prioritize urgent local/palliative interventions before systemic therapy. [@2022-12-29|MR] [@2022-12-29|CT]</pre>
+    </div>
+    <div class="card">
+      <h2>Question (raw)</h2>
+      <div class="hint">Original user question for observability (passed from main via args.question_raw).</div>
+      <pre></pre>
+
+      <details class="mt">
+        <summary>Case (Structured JSON)</summary>
+        <pre>{}</pre>
+      </details>
+    </div>
+  </div>
+
+  <details class="mt" open>
+    <summary>Clinical Trial Recommendation</summary>
+    <pre>None</pre>
+    <div class="hint">Shown only when the trial matcher produced a recommendation.</div>
+  </details>
+
+  <details class="mt" open>
+    <summary>Expert Debate (Round × Turn)</summary>
+    <table class='grid'><tr><th>Round</th><th>Turn</th><th>From</th><th>To</th><th>Message</th></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>chair</td><td class='mono'>oncologist</td><td>Before choosing further systemic therapy, we must clarify full prior treatment history, performance status, and correct the marked anemia (including transfusion need) to avoid unsafe myelosuppressive plans.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>chair</td><td class='mono'>pathologist</td><td>Please urgently provide complete pathology (primary site, histologic subtype, grade, IHC, stage) to resolve current uncertainty over tumor origin and guide systemic strategy.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>oncologist</td><td class='mono'>pathologist</td><td>Primary site and histologic subtype remain unclear; please prioritize review of all available tissue, including IHC and any addenda, to definitively classify origin and grade to guide systemic strategy.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>oncologist</td><td class='mono'>nuclear</td><td>Given multifocal metastases without PET/CT, please advise on urgency and utility of whole-body PET/CT now to better stage disease and assess bone/splenic involvement before systemic regimen decisions.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>radiologist</td><td class='mono'>oncologist</td><td>Imaging shows progressive presacral, hepatic, and probable osseous metastases as of 2022-12; any new scans or symptoms suggesting complications (bowel/bladder obstruction, pathologic fracture, severe pain) since then should be documented.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>radiologist</td><td class='mono'>nuclear</td><td>Last cross-sectional imaging is from 2022-12; given progressive multi-organ metastases, please clarify if a PET/CT has since been done or is planned for updated staging and treatment planning.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>pathologist</td><td class='mono'>chair</td><td>Current MDT plan assumes epithelial ovarian cancer, but no pathology report or IHC confirmation is available; diagnostic basis for this working diagnosis needs explicit clarification and documentation.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>pathologist</td><td class='mono'>oncologist</td><td>Primary histology, grade, FIGO stage, and IHC profile remain entirely undocumented; please obtain and upload full pathology (including any biopsies of recurrent/metastatic sites) before refining diagnosis or systemic strategy.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 1</td><td class='mono'>nuclear</td><td class='mono'>oncologist</td><td>No PET/CT has been performed; metabolic assessment of suspected hepatic, bone, and peritoneal metastases is missing and could meaningfully refine current staging and recurrence evaluation.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 2</td><td class='mono'>chair</td><td class='mono'>oncologist</td><td>Please avoid locking in an epithelial ovarian cancer label until original and metastatic pathology (including IHC) are reviewed and documented; parallelly, address severe anemia and consider PET/CT to refine current staging before committing to a new systemic line.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 2</td><td class='mono'>chair</td><td class='mono'>radiologist</td><td>Given progressive pelvic, hepatic, and bone disease on prior MR/CT, please flag any imaging or clinical signs of impending obstruction, spinal/nerve compromise, or fracture risk that would change urgency or sequence of local versus systemic measures.</td></tr><tr><td class='mono'>Round 1</td><td class='mono'>Turn 2</td><td class='mono'>oncologist</td><td class='mono'>chair</td><td>Systemic regimen choice and trial eligibility are being considered without any pathology report or staging documented; decision-making should be deferred until full histology/IHC, prior treatment history, and updated imaging are available.</td></tr><tr><td class='mono'>Round 2</td><td class='mono'>Turn 1</td><td class='mono'>radiologist</td><td class='mono'>oncologist</td><td>Last MR/CT (2022-12) already showed progressive presacral, hepatic, and bone metastases; without updated imaging, current risks of obstruction or neurologic compromise remain undefined and should be re-imaged before finalizing systemic plans.</td></tr></table>
+    <div class="hint">Only includes messages that were actually emitted (non-empty).</div>
+  </details>
+
+  <details class="mt">
+    <summary>Initial Expert Opinions (raw)</summary>
+    <pre>{
+  &quot;chair&quot;: &quot;- Advanced recurrent pelvic malignancy with liver and bone metastases; urgent MDT to clarify histology, prior treatments, performance status, and goals. [@2022-12-29|MR] [@2022-12-29|CT]  \n\n- Severe anemia and relative lymphopenia require immediate evaluation (reticulocytes, iron/B12/folate, stool/bleeding review) and optimization before systemic therapy. [@20230103|5600862]  \n\n- HRD-negative, BRCA-wildtype status suggests limited PARP benefit; consider standard systemic and trial options per epithelial ovarian cancer paradigms. [@guideline:nccn_ovariancancer_v3_2025__v00000000|11] [@2022-04-18|OH2203828]&quot;,
+  &quot;oncologist&quot;: &quot;- Primary cancer diagnosis, staging, prior systemic therapy, and treatment intent are unknown/needs update to define line and goals of care.\n\n- Germline ATM variant with HRD-, BRCA1/2-, and other tested genes negative; implications for PARP-based maintenance limited [@OH2203828|2022-04-18] [@guideline:nccn_ovariancancer_v3_2025__v00000000|11].\n\n- Significant anemia (Hgb 74 g/L) with preserved renal and near-normal liver function; optimize counts before myelosuppressive regimens [@20230103|2023-01-03] [@20221229|2022-12-29].&quot;,
+  &quot;radiologist&quot;: &quot;- Pelvic MRI: enlarging 53×44 mm presacral mass involving adjacent peritoneum, sacrum, plus pelvic mesenteric nodules—progressive recurrence/metastases. [@2022-12-29|MR]\n\n- Pelvic MRI: right iliac bone enhancing nodule suggests new osseous metastasis; rectal wall thickening may indicate local invasion or inflammation. [@2022-12-29|MR]\n\n- CT: multiple hepatic metastases increasing in number/size, with stable hepatic cysts; splenic low-density focus possibly infarct—requires imaging follow‑up. [@2022-12-29|CT]&quot;,
+  &quot;pathologist&quot;: &quot;- Only molecular finding: germline ATM p.Y316C with HRD negative; BRCA1/2, TP53, others tested negative [@OH2203828|2022-04-18].  \n\n- Histologic diagnosis, grade, FIGO stage, and IHC profile are completely missing; primary pathology report and addenda need upload/update.  \n\n- For epithelial ovarian cancer, early HRD/BRCA testing is standard; here HRD negative and BRCA1/2 wild-type [@guideline:nccn_ovariancancer_v3_2025__v00000000|11].&quot;,
+  &quot;nuclear&quot;: &quot;- No PET/CT or FDG-PET reports available; metabolic characterization of pelvic, hepatic, and bony lesions is unknown/needs update.  \n\n- CT/MR show progressive pelvic mass with possible sacral, peritoneal, hepatic, and iliac bone metastases, concerning for systemic recurrence [@2022-12-29|MR] [@2022-12-29|CT].  \n\n- FDG-PET could refine staging, detect additional metastases, and better assess recurrence extent in ovarian/pelvic malignancy workup [@guideline:nccn_ovariancancer_v3_2025__v00000000|11].&quot;
+}</pre>
+  </details>
+
+  <details class="mt">
+    <summary>Final Refined Plans (per round, raw)</summary>
+    <pre>{
+  &quot;Round 1&quot;: {
+    &quot;chair&quot;: &quot;- Defer systemic-regimen decisions until complete pathology, prior treatment history, performance status, and updated staging (including PET/CT if feasible) are obtained. [@2022-12-29|MR] [@2022-12-29|CT]  \n\n- Urgently investigate and correct severe anemia and lymphopenia before any myelosuppressive therapy; evaluate for bleeding, deficiency, and transfusion need. [@20230103|5600862]  \n\n- If epithelial ovarian origin is confirmed, follow standard systemic and trial pathways, recognizing limited PARP role in HRD-/BRCA‑wt disease. [@guideline:nccn_ovariancancer_v3_2025__v00000000|11] [@2022-04-18|OH2203828]&quot;,
+    &quot;oncologist&quot;: &quot;- Defer new systemic regimen until full pathology (primary and metastatic, including IHC) and complete prior treatment history are obtained; diagnosis remains uncertain (ovarian vs other pelvic origin) [@guideline:nccn_ovariancancer_v3_2025__v00000000|11].  \n\n- Urgently investigate and correct severe anemia (Hgb 74 g/L) and lymphopenia before any myelosuppressive therapy [@20230103|2023-01-03].  \n\n- Arrange updated cross‑sectional imaging and consider PET/CT to define current metastatic burden and complications (obstruction, fracture risk, nerve compromise) before selecting systemic versus local priorities [@20221229|2022-12-29].&quot;,
+    &quot;radiologist&quot;: &quot;- Imaging shows progressive presacral, pelvic peritoneal, hepatic, and right iliac bone metastases consistent with systemic recurrent disease; no PET/CT yet. [@2022-12-29|MR] [@2022-12-29|CT]\n\n- No available imaging since 2022-12; updated CT/MRI (and PET/CT if done) are required to reassess extent and complications. unknown/needs update [@pubmed:35296733]\n\n- Current images do not detail bowel/bladder obstruction, spinal canal compromise, or impending fracture; targeted imaging review is needed if symptoms arise. [@2022-12-29|MR]&quot;,
+    &quot;pathologist&quot;: &quot;- Obtain and review all primary and metastatic pathology (histology, grade, FIGO, full IHC) to confirm tumor origin; currently unknown.  \n\n- Integrate existing germline findings (ATM p.Y316C, HRD-/BRCA‑wt) into classification once histology is established [@OH2203828|2022-04-18].  \n\n- Definitive treatment-pathway decisions should await confirmed epithelial ovarian versus alternate pelvic primary, per guideline emphasis on accurate histologic diagnosis [@guideline:nccn_ovariancancer_v3_2025__v00000000|11].&quot;,
+    &quot;nuclear&quot;: &quot;- PET/CT remains indicated to define metabolic extent of pelvic, hepatic, peritoneal, and osseous disease before further staging decisions [@guideline:nccn_ovariancancer_v3_2025__v00000000|11].  \n\n- Pending PET/CT, current staging relies on CT/MR evidence of systemic recurrence with liver, presacral, peritoneal, and right iliac bone involvement [@2022-12-29|CT] [@2022-12-29|MR].  \n\n- If performed, PET/CT should specifically evaluate spinal/sacral involvement for nerve compromise and clarify viability of hepatic and splenic lesions [@2022-12-29|CT] [@2022-12-29|MR].&quot;
+  },
+  &quot;Round 2&quot;: {
+    &quot;chair&quot;: &quot;- Defer systemic-regimen and trial decisions until full pathology, prior treatments, and updated imaging (including PET/CT if feasible) are obtained. [@2022-12-29|MR] [@2022-12-29|CT]  \n\n- Urgently investigate and correct anemia/lymphopenia before any myelosuppressive therapy; assess bleeding, deficiencies, marrow status, and transfusion need. [@20230103|5600862]  \n\n- If epithelial ovarian origin is confirmed, follow standard systemic pathways, recognizing limited PARP benefit in HRD-/BRCA‑wt disease. [@guideline:nccn_ovariancancer_v3_2025__v00000000|11] [@2022-04-18|OH2203828]&quot;,
+    &quot;oncologist&quot;: &quot;- Defer systemic regimen choice and trial planning until full pathology, prior treatment history, and updated staging imaging (including obstruction/neurologic risk) are clarified [@guideline:nccn_ovariancancer_v3_2025__v00000000|11].  \n\n- Urgently evaluate and treat severe anemia and lymphopenia before any myelosuppressive therapy (Hgb 74 g/L, low lymphocytes) [@20230103|2023-01-03].  \n\n- Arrange updated CT/MR and consider PET/CT to define current metastatic burden and complications beyond 2022‑12 imaging [@20221229|2022-12-29].&quot;,
+    &quot;radiologist&quot;: &quot;- Progressive presacral mass with sacral involvement, pelvic mesenteric nodules, and new right iliac bone lesion indicate advancing loco-regional and osseous metastases. [@2022-12-29|MR]\n\n- CT shows increasing number/size of hepatic metastases and possible splenic infarct; no follow-up imaging available, requiring updated staging. [@2022-12-29|CT]\n\n- For systemic recurrent pelvic malignancy, updated cross-sectional imaging (±PET/CT) is recommended to reassess metastatic burden before major treatment decisions. [@pubmed:35296733]&quot;,
+    &quot;pathologist&quot;: &quot;- Primary and metastatic pathology (histology, grade, FIGO, IHC) remain undocumented; obtain and review full reports before confirming tumor origin (currently unknown).  \n\n- Integrate germline ATM p.Y316C, HRD-/BRCA‑wt status into diagnostic framework once histology and primary site are defined [@OH2203828|2022-04-18].  \n\n- Definitive assignment to epithelial ovarian cancer pathways should await confirmed histologic subtype and origin, per guideline emphasis on accurate diagnosis [@guideline:nccn_ovariancancer_v3_2025__v00000000|11].&quot;,
+    &quot;nuclear&quot;: &quot;- PET/CT is still warranted to define current metabolic disease burden and detect complications before finalizing staging and management plans [@guideline:nccn_ovariancancer_v3_2025__v00000000|11].  \n\n- Until PET/CT and updated imaging are available, systemic spread remains inferred from 2022-12 CT/MR only [@2022-12-29|CT] [@2022-12-29|MR].  \n\n- PET/CT should pay particular attention to sacral/iliac bone, liver, and presacral mass to assess neurologic compromise or obstruction risk [@2022-12-29|CT] [@2022-12-29|MR].&quot;
+  }
+}</pre>
+  </details>
+
+  <details class="mt" open>
+    <summary>Selected Clinical Context</summary>
+    <table class='grid'><tr><th>Role</th><th>Lab (n)</th><th>Lab newest</th><th>Imaging (n)</th><th>Imaging newest</th><th>Pathology (n)</th><th>Pathology newest</th><th>Mutation (n)</th><th>Mutation newest</th></tr><tr><td class='mono'>chair</td><td>3</td><td>2023-01-03</td><td>3</td><td>2022-12-29</td><td>0</td><td>-</td><td>1</td><td>2022-04-18</td></tr><tr><td class='mono'>nuclear</td><td>0</td><td>-</td><td>3</td><td>2022-12-29</td><td>0</td><td>-</td><td>0</td><td>-</td></tr><tr><td class='mono'>oncologist</td><td>3</td><td>2023-01-03</td><td>0</td><td>-</td><td>0</td><td>-</td><td>1</td><td>2022-04-18</td></tr><tr><td class='mono'>pathologist</td><td>0</td><td>-</td><td>0</td><td>-</td><td>0</td><td>-</td><td>1</td><td>2022-04-18</td></tr><tr><td class='mono'>radiologist</td><td>0</td><td>-</td><td>3</td><td>2022-12-29</td><td>0</td><td>-</td><td>0</td><td>-</td></tr></table>
+    <div class="hint">Counts and newest dates per role/report type (including mutation).</div>
+    <details class="mt">
+      <summary>Raw Context (JSON)</summary>
+      <pre>{
+  &quot;lab&quot;: {
+    &quot;chair&quot;: [
+      {
+        &quot;report_id&quot;: &quot;20221229|8300002&quot;,
+        &quot;date&quot;: &quot;2022-12-29T00:00:00&quot;,
+        &quot;raw_text&quot;: &quot;天冬氨酸氨基转移酶 43.0 U/L (AST)\n游离脂肪酸 0.09 mmol/L (NEFA)\n谷氨酸脱氢酶 4.1 U/L (GLDH)\n白蛋白 36.7 g/l (ALB)\n总蛋白 67.0 g/l (TP)\n谷草同工酶 12.7 U/L (ASTM)\n球蛋白 30.3 g/l (GELO)\n直接胆红素 3.2 umol/l (DBIL)\n尿酸 146 umol/l (UA)\n总胆红素 5.1 umol/l (TBIL)\n前白蛋白 98 mg/L (PA)\n间接胆红素 1.9 umol/L (IBIL)\n碱性磷酸酶 100.0 U/L (ALP)\n丙氨酸氨基转移酶 40.8 U/l (ALT)\n肌酐 49 umol/l (CRE)\n白球比例 1.21 nan (A/G)\n乳酸脱氢酶 254 U/L (LDH)\n尿素 4.67 mmol/l (UREA)\nγ-谷氨酰基转移酶 38 U/L (GGT)&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;20221229|9703212&quot;,
+        &quot;date&quot;: &quot;2022-12-29T00:00:00&quot;,
+        &quot;raw_text&quot;: &quot;神经元特异烯醇化酶 9.06 ng/ml (NSE)\n卵巢恶性肿瘤风险值. 85.98 %(绝经后) (ROMA.)\n糖链抗原15-3 86.00 U/ml (CA15-3)\n卵巢恶性肿瘤风险值 41.02 %(绝经前) (ROMA)\n人附睾蛋白4 111.00 pmol/L (HE4)\n癌胚抗原 1.49 ng/ml (CEA)\n糖链抗原125 933.00 U/ml (CA125)\n糖链抗原19-9 229.00 U/ml (CA19-9)&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;20230103|5600862&quot;,
+        &quot;date&quot;: &quot;2023-01-03T00:00:00&quot;,
+        &quot;raw_text&quot;: &quot;中性粒细胞% 76.5 % (GRAN)\nPLT分布宽度 12 % (PDW)\n嗜碱性细胞数 0.01 *10^9/L (BASO#)\n嗜碱性细胞% 0.20 % (BASO)\n淋巴细胞数 0.5 *10^9/L (LYM#)\n中性粒细胞数 4.8 *10^9/L (GRAN#)\n红细胞计数 2.84 *10^12/L (RBC)\n血小板计数 259 *10^9/L (PLT)\nRBC分布宽度-CV 18.6 % (RDWCV)\n平均红细胞血红蛋白浓度 305.0 g/l (MCHC)\n血小板压积 0.28 % (PCT)\nRBC分布宽度-SD 57 nan (RDWSD)\n单核细胞数 0.9 *10^9/L (MID#)\n自动审核标志 UNACCEPT nan (VFLAG)\n平均红细胞体积 85.6 fl (MCV)\n白细胞计数 6.2 *10^9/L (WBC)\n血红蛋白量 74 g/l (HGB)\n嗜酸性细胞数 0.00 *10^9/L (EOS#)\n嗜酸性细胞% 0.00 % (EOS)\n淋巴细胞% 8.5 % (LYM)\n单核细胞% 14.8 % (MID)\n平均红细胞血红蛋白量 26.1 pg (MCH)\n红细胞比积 24.3 % (HCT)\n平均PLT容积 10.9 fl (MPV)\n中性淋巴比值 9.60 nan (NL)&quot;
+      }
+    ],
+    &quot;oncologist&quot;: [
+      {
+        &quot;report_id&quot;: &quot;20221229|8300002&quot;,
+        &quot;date&quot;: &quot;2022-12-29T00:00:00&quot;,
+        &quot;raw_text&quot;: &quot;天冬氨酸氨基转移酶 43.0 U/L (AST)\n游离脂肪酸 0.09 mmol/L (NEFA)\n谷氨酸脱氢酶 4.1 U/L (GLDH)\n白蛋白 36.7 g/l (ALB)\n总蛋白 67.0 g/l (TP)\n谷草同工酶 12.7 U/L (ASTM)\n球蛋白 30.3 g/l (GELO)\n直接胆红素 3.2 umol/l (DBIL)\n尿酸 146 umol/l (UA)\n总胆红素 5.1 umol/l (TBIL)\n前白蛋白 98 mg/L (PA)\n间接胆红素 1.9 umol/L (IBIL)\n碱性磷酸酶 100.0 U/L (ALP)\n丙氨酸氨基转移酶 40.8 U/l (ALT)\n肌酐 49 umol/l (CRE)\n白球比例 1.21 nan (A/G)\n乳酸脱氢酶 254 U/L (LDH)\n尿素 4.67 mmol/l (UREA)\nγ-谷氨酰基转移酶 38 U/L (GGT)&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;20221229|9703212&quot;,
+        &quot;date&quot;: &quot;2022-12-29T00:00:00&quot;,
+        &quot;raw_text&quot;: &quot;神经元特异烯醇化酶 9.06 ng/ml (NSE)\n卵巢恶性肿瘤风险值. 85.98 %(绝经后) (ROMA.)\n糖链抗原15-3 86.00 U/ml (CA15-3)\n卵巢恶性肿瘤风险值 41.02 %(绝经前) (ROMA)\n人附睾蛋白4 111.00 pmol/L (HE4)\n癌胚抗原 1.49 ng/ml (CEA)\n糖链抗原125 933.00 U/ml (CA125)\n糖链抗原19-9 229.00 U/ml (CA19-9)&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;20230103|5600862&quot;,
+        &quot;date&quot;: &quot;2023-01-03T00:00:00&quot;,
+        &quot;raw_text&quot;: &quot;中性粒细胞% 76.5 % (GRAN)\nPLT分布宽度 12 % (PDW)\n嗜碱性细胞数 0.01 *10^9/L (BASO#)\n嗜碱性细胞% 0.20 % (BASO)\n淋巴细胞数 0.5 *10^9/L (LYM#)\n中性粒细胞数 4.8 *10^9/L (GRAN#)\n红细胞计数 2.84 *10^12/L (RBC)\n血小板计数 259 *10^9/L (PLT)\nRBC分布宽度-CV 18.6 % (RDWCV)\n平均红细胞血红蛋白浓度 305.0 g/l (MCHC)\n血小板压积 0.28 % (PCT)\nRBC分布宽度-SD 57 nan (RDWSD)\n单核细胞数 0.9 *10^9/L (MID#)\n自动审核标志 UNACCEPT nan (VFLAG)\n平均红细胞体积 85.6 fl (MCV)\n白细胞计数 6.2 *10^9/L (WBC)\n血红蛋白量 74 g/l (HGB)\n嗜酸性细胞数 0.00 *10^9/L (EOS#)\n嗜酸性细胞% 0.00 % (EOS)\n淋巴细胞% 8.5 % (LYM)\n单核细胞% 14.8 % (MID)\n平均红细胞血红蛋白量 26.1 pg (MCH)\n红细胞比积 24.3 % (HCT)\n平均PLT容积 10.9 fl (MPV)\n中性淋巴比值 9.60 nan (NL)&quot;
+      }
+    ],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  },
+  &quot;imaging&quot;: {
+    &quot;chair&quot;: [
+      {
+        &quot;report_id&quot;: &quot;2022-10-24|MR&quot;,
+        &quot;date&quot;: &quot;2022-10-24T15:52:25&quot;,
+        &quot;raw_text&quot;: &quot;对比2022-7-16：盆腔术后，阴道残端略厚，骶前见不规则肿块影，相邻骶骨受累，直肠局部肠壁增厚伴强化。膀胱充盈可，壁未见明显增厚，膀胱内可疑少许积气本次不明显。 盆腔术后，骶前占位，考虑复发伴相邻骶骨受累可能。 盆腔系膜多发强化小结节，转移可能。&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;2022-12-29|MR&quot;,
+        &quot;date&quot;: &quot;2022-12-29T12:39:55&quot;,
+        &quot;raw_text&quot;: &quot;对比前片2022-10-21：盆腔术后，阴道残端略厚，骶前见不规则肿块影，较前增大，目前范围约53×44mm，信号较前不均，相邻腹膜、骶骨受累，右侧髂骨新见强化结节，直肠局部肠壁增厚伴强化。膀胱充盈可，壁未见明显增厚。 盆腔术后，骶前占位范围较前增大、较前强化不均，考虑复发伴相邻腹膜、骶骨受累可能，请结合临床。 右侧髂骨新见强化结节，转移可能。 盆腔系膜多发强化小结节同前相仿，转移可能。 直肠局部肠壁增厚伴强化。&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;2022-12-29|CT&quot;,
+        &quot;date&quot;: &quot;2022-12-29T15:52:40&quot;,
+        &quot;raw_text&quot;: &quot;对比前片2022-10-21：肝内多发低密度结节，较前增多，部分较前增大，大者约17m*14mm，部分较前新见。肝内另见多发囊性无强化结节同前。肝内血管走行正常，肝内外胆管无扩张，脾脏片状低密度影、胆囊、胰腺大小形态及密度正常，双侧肾脏对称，大小及形态正常。腹膜后未见肿大淋巴结，腹腔内未见积液。 肝内多发转移结节，较前增多，部分较前增大。 另见肝囊肿同前。 脾脏片状影，脾脏梗塞？随访。&quot;
+      }
+    ],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [
+      {
+        &quot;report_id&quot;: &quot;2022-10-24|MR&quot;,
+        &quot;date&quot;: &quot;2022-10-24T15:52:25&quot;,
+        &quot;raw_text&quot;: &quot;对比2022-7-16：盆腔术后，阴道残端略厚，骶前见不规则肿块影，相邻骶骨受累，直肠局部肠壁增厚伴强化。膀胱充盈可，壁未见明显增厚，膀胱内可疑少许积气本次不明显。 盆腔术后，骶前占位，考虑复发伴相邻骶骨受累可能。 盆腔系膜多发强化小结节，转移可能。&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;2022-12-29|MR&quot;,
+        &quot;date&quot;: &quot;2022-12-29T12:39:55&quot;,
+        &quot;raw_text&quot;: &quot;对比前片2022-10-21：盆腔术后，阴道残端略厚，骶前见不规则肿块影，较前增大，目前范围约53×44mm，信号较前不均，相邻腹膜、骶骨受累，右侧髂骨新见强化结节，直肠局部肠壁增厚伴强化。膀胱充盈可，壁未见明显增厚。 盆腔术后，骶前占位范围较前增大、较前强化不均，考虑复发伴相邻腹膜、骶骨受累可能，请结合临床。 右侧髂骨新见强化结节，转移可能。 盆腔系膜多发强化小结节同前相仿，转移可能。 直肠局部肠壁增厚伴强化。&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;2022-12-29|CT&quot;,
+        &quot;date&quot;: &quot;2022-12-29T15:52:40&quot;,
+        &quot;raw_text&quot;: &quot;对比前片2022-10-21：肝内多发低密度结节，较前增多，部分较前增大，大者约17m*14mm，部分较前新见。肝内另见多发囊性无强化结节同前。肝内血管走行正常，肝内外胆管无扩张，脾脏片状低密度影、胆囊、胰腺大小形态及密度正常，双侧肾脏对称，大小及形态正常。腹膜后未见肿大淋巴结，腹腔内未见积液。 肝内多发转移结节，较前增多，部分较前增大。 另见肝囊肿同前。 脾脏片状影，脾脏梗塞？随访。&quot;
+      }
+    ],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: [
+      {
+        &quot;report_id&quot;: &quot;2022-10-24|CT&quot;,
+        &quot;date&quot;: &quot;2022-10-24T16:02:31&quot;,
+        &quot;raw_text&quot;: &quot;对比前片2022-4-6：肝内多发低密度结节，边界不清，大者约16mm*14mm，部分较前新见。肝内另见多发囊性无强化结节同前。肝内血管走行正常，肝内外胆管无扩张，脾、胆囊、胰腺大小形态及密度正常，双侧肾脏对称，大小及形态正常，左输尿管内见支架管影。腹膜后未见肿大淋巴结，腹腔内未见积液。 肝内多发结节，部分较前新见，转移可能，请结合MR检查。 另见肝囊肿同前。&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;2022-12-29|MR&quot;,
+        &quot;date&quot;: &quot;2022-12-29T12:39:55&quot;,
+        &quot;raw_text&quot;: &quot;对比前片2022-10-21：盆腔术后，阴道残端略厚，骶前见不规则肿块影，较前增大，目前范围约53×44mm，信号较前不均，相邻腹膜、骶骨受累，右侧髂骨新见强化结节，直肠局部肠壁增厚伴强化。膀胱充盈可，壁未见明显增厚。 盆腔术后，骶前占位范围较前增大、较前强化不均，考虑复发伴相邻腹膜、骶骨受累可能，请结合临床。 右侧髂骨新见强化结节，转移可能。 盆腔系膜多发强化小结节同前相仿，转移可能。 直肠局部肠壁增厚伴强化。&quot;
+      },
+      {
+        &quot;report_id&quot;: &quot;2022-12-29|CT&quot;,
+        &quot;date&quot;: &quot;2022-12-29T15:52:40&quot;,
+        &quot;raw_text&quot;: &quot;对比前片2022-10-21：肝内多发低密度结节，较前增多，部分较前增大，大者约17m*14mm，部分较前新见。肝内另见多发囊性无强化结节同前。肝内血管走行正常，肝内外胆管无扩张，脾脏片状低密度影、胆囊、胰腺大小形态及密度正常，双侧肾脏对称，大小及形态正常。腹膜后未见肿大淋巴结，腹腔内未见积液。 肝内多发转移结节，较前增多，部分较前增大。 另见肝囊肿同前。 脾脏片状影，脾脏梗塞？随访。&quot;
+      }
+    ]
+  },
+  &quot;pathology&quot;: {
+    &quot;chair&quot;: [],
+    &quot;oncologist&quot;: [],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [],
+    &quot;nuclear&quot;: []
+  },
+  &quot;mutation&quot;: {
+    &quot;chair&quot;: [
+      {
+        &quot;report_id&quot;: &quot;OH2203828&quot;,
+        &quot;date&quot;: &quot;2022-04-18T14:11:19&quot;,
+        &quot;raw_text&quot;: &quot;ATM NM_000051:exon8:c.A947G:p.Y316C（胚系）；HRD 阴性；BRCA1 胚系和体系未检出致病突变（视为阴性）；BRCA2 胚系和体系未检出致病突变（视为阴性）；TP53 胚系和体系未检出致病突变（视为阴性）；ARID1A 胚系和体系未检出致病突变（视为阴性）；PTEN 胚系和体系未检出致病突变（视为阴性）；PIK3CA 胚系和体系未检出致病突变（视为阴性）；PALB2 胚系和体系未检出致病突变（视为阴性）；RAD51D 胚系和体系未检出致病突变（视为阴性）；BRIP1 胚系和体系未检出致病突变（视为阴性）；BARD1 胚系和体系未检出致病突变（视为阴性）&quot;
+      }
+    ],
+    &quot;oncologist&quot;: [
+      {
+        &quot;report_id&quot;: &quot;OH2203828&quot;,
+        &quot;date&quot;: &quot;2022-04-18T14:11:19&quot;,
+        &quot;raw_text&quot;: &quot;ATM NM_000051:exon8:c.A947G:p.Y316C（胚系）；HRD 阴性；BRCA1 胚系和体系未检出致病突变（视为阴性）；BRCA2 胚系和体系未检出致病突变（视为阴性）；TP53 胚系和体系未检出致病突变（视为阴性）；ARID1A 胚系和体系未检出致病突变（视为阴性）；PTEN 胚系和体系未检出致病突变（视为阴性）；PIK3CA 胚系和体系未检出致病突变（视为阴性）；PALB2 胚系和体系未检出致病突变（视为阴性）；RAD51D 胚系和体系未检出致病突变（视为阴性）；BRIP1 胚系和体系未检出致病突变（视为阴性）；BARD1 胚系和体系未检出致病突变（视为阴性）&quot;
+      }
+    ],
+    &quot;radiologist&quot;: [],
+    &quot;pathologist&quot;: [
+      {
+        &quot;report_id&quot;: &quot;OH2203828&quot;,
+        &quot;date&quot;: &quot;2022-04-18T14:11:19&quot;,
+        &quot;raw_text&quot;: &quot;ATM NM_000051:exon8:c.A947G:p.Y316C（胚系）；HRD 阴性；BRCA1 胚系和体系未检出致病突变（视为阴性）；BRCA2 胚系和体系未检出致病突变（视为阴性）；TP53 胚系和体系未检出致病突变（视为阴性）；ARID1A 胚系和体系未检出致病突变（视为阴性）；PTEN 胚系和体系未检出致病突变（视为阴性）；PIK3CA 胚系和体系未检出致病突变（视为阴性）；PALB2 胚系和体系未检出致病突变（视为阴性）；RAD51D 胚系和体系未检出致病突变（视为阴性）；BRIP1 胚系和体系未检出致病突变（视为阴性）；BARD1 胚系和体系未检出致病突变（视为阴性）&quot;
+      }
+    ],
+    &quot;nuclear&quot;: []
+  }
+}</pre>
+    </details>
+  </details>
+
+  <details class="mt">
+    <summary>Guideline + PubMed RAG</summary>
+    <h3>RAG Query</h3>
+    <pre>Guidelines for management of platinum-unknown ovarian cancer with unspecified histology and metastatic extent, with no reported BRCA/HRD/MSI/PD-L1 status or major comorbid constraints, including recommendations for systemic therapy and follow‑up.</pre>
+    <h3>Evidence Pack (top-k)</h3>
+    <pre># GUIDELINE RAG
+RAG Evidence Pack (top=5):
+[1] score=0.6796 nccn_ovariancancer_v3_2025__v00000000 [PAGE 18] [@guideline:nccn_ovariancancer_v3_2025__v00000000|18]
+    Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN. Note: All recommendations are category 2A unless otherwise indicated. NCCN Gui…
+[2] score=0.6547 nccn_ovariancancer_v3_2025__v00000000 [PAGE 11] [@guideline:nccn_ovariancancer_v3_2025__v00000000|11]
+    Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN. Note: All recommendations are category 2A unless otherwise indicated. NCCN Gui…
+[3] score=0.6403 nccn_ovariancancer_v3_2025__v00000000 [PAGE 14] [@guideline:nccn_ovariancancer_v3_2025__v00000000|14]
+    Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN. Note: All recommendations are category 2A unless otherwise indicated. NCCN Gui…
+[4] score=0.6395 nccn_ovariancancer_v3_2025__v00000000 [PAGE 19] [@guideline:nccn_ovariancancer_v3_2025__v00000000|19]
+    Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN. Note: All recommendations are category 2A unless otherwise indicated. NCCN Gui…
+[5] score=0.6378 nccn_ovariancancer_v3_2025__v00000000 [PAGE 15] [@guideline:nccn_ovariancancer_v3_2025__v00000000|15]
+    Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN. Note: All recommendations are category 2A unless otherwise indicated. NCCN Gui…
+
+# PUBMED RAG
+PUBMED Evidence Pack (top=5):
+[1] score=0.6782 PMID 33490225 [@pubmed:33490225]
+    Systemic anti-cancer treatment in malignant ovarian germ cell tumours (MOGCTs): current management and promising approaches.
+    Malignant ovarian germ cell tumours (MOGCTs) are rare. Unlike epithelial ovarian cancer, MOGCTs typically occur in girls and young women. Fertility-sparing surgery and platinum-based chemotherapy remain the standard of care, providing high chance of cure at all stages. Given the lack of high-quality…
+[2] score=0.6650 PMID 35296733 [@pubmed:35296733]
+    Significance of platinum distribution to predict platinum resistance in ovarian cancer after platinum treatment in neoadjuvant chemotherapy.
+    Most patients with ovarian cancer experience recurrence and develop resistance to platinum-based agents. The diagnosis of platinum resistance based on the platinum-free interval is not always accurate and timely in clinical settings. Herein, we used laser ablation inductively coupled plasma mass spe…
+[3] score=0.6592 PMID 38525421 [@pubmed:38525421]
+    How BRCA and homologous recombination deficiency change therapeutic strategies in ovarian cancer: a review of literature.
+    About 50% of High Grade Serous Ovarian Cancer exhibit a high degree of genomic instability due to mutation of genes involved in Homologous Recombination (HRD) and such defect accounts for synthetic lethality mechanism of PARP inhibitors (PARP-i). Several clinical trials have shown how BRCA and HRD m…
+[4] score=0.6548 PMID 36643655 [@pubmed:36643655]
+    Disparity in the era of personalized medicine for epithelial ovarian cancer.
+    The treatment of high-grade serous ovarian cancer and high-grade endometrioid ovarian cancer has seen significant improvements in recent years, with BRCA1/2 and homologous recombination status guiding a personalized approach which has resulted in improved patient outcomes. However, for other epithel…
+[5] score=0.6521 PMID 27558151 [@pubmed:27558151]
+    Ovarian cancer.
+    Ovarian cancer is not a single disease and can be subdivided into at least five different histological subtypes that have different identifiable risk factors, cells of origin, molecular compositions, clinical features and treatments. Ovarian cancer is a global problem, is typically diagnosed at a la…</pre>
+    <h3>RAG Raw Hits (JSON)</h3>
+    <pre>[
+  {
+    &quot;rank&quot;: 1,
+    &quot;score&quot;: 0.6796167492866516,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 18,
+    &quot;text&quot;: &quot;Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nClear Cell Carcinoma of the Ovary\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nClear cell carcinoma\nof the ovaryg,h,i\nStage\nIC2– IC3\nStage IA\nIB, IC1\nStage II–IV\nIV platinum-based therapy\n(see primary regimens for stage I disease\n[OV-C, 5 of 12])\nIV platinum-based therapy\n(see primary regimens for stage I disease\n[OV-C, 5 of 12])\nor\nObserveg\nSystemic therapy\n(OV-C, 6 of 12)\nLCOC-3\nPATHOLOGIC\nDIAGNOSISa\nADJUVANT TREATMENTf\nMONITORING/\nFOLLOW-UP\nMonitoring/Follow-up\n(including tumor testing)\nand\nRecurrence therapyj\n(OV-6)\nIf known BRCA1/2\nmutation, consider\nmaintenance therapy\n(post-primary therapy)\n(OV-5)\na WHO Histologic Classification (OV-E).\nf See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).\ng If not previously done, consider surgical staging and resection of residual disease (OV-3).&quot;
+  },
+  {
+    &quot;rank&quot;: 2,
+    &quot;score&quot;: 0.6547415256500244,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 11,
+    &quot;text&quot;: &quot;Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nEpithelial Ovarian Cancer/Fallopian Tube Cancer/\nPrimary Peritoneal Cancer\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nOV-4\nPATHOLOGIC STAGINGt,u\nStage IA or IB\nStage lC\n(High-grade serous or\ngrade 2/3 endometrioid)\nStage II\nStage III\nStage IV\nIV platinum-based therapyn,v\n(see primary regimens for\nstage I disease [OV-C, 5 of 12])\nObserve\nor\nIntravenous (IV) platinum-based\ntherapyn,v (see primary regimens for\nstage I disease [OV-C, 5 of 12])\nMonitoring/\nFollow-up\n(OV-6)\nMaintenance\nTherapy (OV-5)\na CT is performed with oral and iodinated IV contrast (unless contraindicated due\nto anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI\nis performed with gadolinium-based contrast agents (unless contraindicated due\nto anaphylaxis) and is preferred in select patients with renal dysfunction over CT.&quot;
+  },
+  {
+    &quot;rank&quot;: 3,
+    &quot;score&quot;: 0.6402797698974609,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 14,
+    &quot;text&quot;: &quot;Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nEpithelial Ovarian Cancer/Fallopian Tube Cancer/\nPrimary Peritoneal Cancer\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nOV-7\nDISEASE STATUSf,dd,ee\nPlatinum-resistant diseaseff:\nProgression on primary,\nmaintenance or recurrence therapy\nor\nStable or persistent disease\n(if not on maintenance therapy)\nor\nComplete remission and relapse &lt;6\nmo after completing chemotherapy\nPlatinum-sensitive diseaseff:\nComplete remission\nand relapse ≥6 mo\nafter completing prior\nchemotherapy\nf See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian,\nPancreatic, and Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment:\nColorectal, Endometrial, and Gastric.\nn See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).\ndd Validated molecular testing should be performed in a CLIA-approved facility using&quot;
+  },
+  {
+    &quot;rank&quot;: 4,
+    &quot;score&quot;: 0.6395455598831177,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 19,
+    &quot;text&quot;: &quot;Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nMucinous Neoplasms of the Ovary\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nStage IA\ncarcinoma\nStage IC\ncarcinoma\nStage II–IV\ncarcinoma\nMucinous\nneoplasms of\nthe ovaryd,g,h\nIf not previously done:\n• GI evaluationk\n• Carcinoembryonic\nantigen (CEA)\n• CA 19-9\nObserve\nSystemic therapy (OV-C, 6 of 12)f\na WHO Histologic Classification (OV-E).\nd Principles of Pathology (OV-B).\nf See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).\ng If not previously done, consider surgical staging and resection of residual disease (OV-3).\nh If not previously done, consider germline and somatic testing (OV-B).\nj Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.&quot;
+  },
+  {
+    &quot;rank&quot;: 5,
+    &quot;score&quot;: 0.6378410458564758,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 15,
+    &quot;text&quot;: &quot;Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nEpithelial Ovarian Cancer/Fallopian Tube Cancer/\nPrimary Peritoneal Cancer\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nOV-8\nDISEASE STATUSf,dd,ee\nPlatinum-\nsensitive\ndiseaseff:\nComplete\nremission and\nrelapse ≥6 mo\nafter completing\nprior\nchemotherapy\nRadiographic\nand/or clinical\nrelapse\nBiochemical\nrelapse (rising\nCA-125 and no\nradiographic\nevidence of\ndisease)\nf See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian, Pancreatic,\nand Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment: Colorectal,\nEndometrial, and Gastric.\nj Principles of Surgery (OV-A).\nk Principles of Pathology (OV-B).\nn See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).\ndd Validated molecular testing should be performed in a CLIA-approved facility using the&quot;
+  },
+  {
+    &quot;rank&quot;: 1,
+    &quot;score&quot;: 0.6782100090693369,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;33490225&quot;,
+    &quot;title&quot;: &quot;Systemic anti-cancer treatment in malignant ovarian germ cell tumours (MOGCTs): current management and promising approaches.&quot;,
+    &quot;abstract&quot;: &quot;Malignant ovarian germ cell tumours (MOGCTs) are rare. Unlike epithelial ovarian cancer, MOGCTs typically occur in girls and young women. Fertility-sparing surgery and platinum-based chemotherapy remain the standard of care, providing high chance of cure at all stages. Given the lack of high-quality studies in this field, current practice guidelines recommend chemotherapy regimens adopted in testicular germ cell tumours. However, platinum-resistant/refractory MOGCTs retain a worse prognosis in comparison with their male counterpart. Herein, we focus on current systemic anti-cancer treatment options in MOGCTs and promising approaches. Future studies enrolling exclusively female participants or germ cell tumour trials allowing participation of MOGCT patients are strongly recommended in order to improve evidence on existing management and develop novel strategies.&quot;,
+    &quot;journal&quot;: &quot;Ann Transl Med&quot;,
+    &quot;pub_date&quot;: &quot;2020-12-01&quot;,
+    &quot;doi&quot;: &quot;10.21037/atm.2020.04.15&quot;,
+    &quot;impact_factor&quot;: 3.616,
+    &quot;similarity&quot;: 0.6782100090693369
+  },
+  {
+    &quot;rank&quot;: 2,
+    &quot;score&quot;: 0.6649586261035798,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;35296733&quot;,
+    &quot;title&quot;: &quot;Significance of platinum distribution to predict platinum resistance in ovarian cancer after platinum treatment in neoadjuvant chemotherapy.&quot;,
+    &quot;abstract&quot;: &quot;Most patients with ovarian cancer experience recurrence and develop resistance to platinum-based agents. The diagnosis of platinum resistance based on the platinum-free interval is not always accurate and timely in clinical settings. Herein, we used laser ablation inductively coupled plasma mass spectrometry to visualize the platinum distribution in the ovarian cancer tissues at the time of interval debulking surgery after neoadjuvant chemotherapy in 27patients with advanced high-grade serous ovarian cancer. Two distinct patterns of platinum distribution were observed. Type A (n = 16): platinum accumulation at the adjacent stroma but little in the tumor; type B (n = 11): even distribution of platinum throughout the tumor and adjacent stroma. The type A patients treated post-surgery with platinum-based adjuvant chemotherapy showed significantly shorter periods of recurrence after the last platinum-based chemotherapy session (p = 0.020) and were diagnosed with \&quot;platinum-resistant recurrence\&quot;. Moreover, type A was significantly correlated with worse prognosis (p = 0.031). Post-surgery treatment with non-platinum-based chemotherapy could be effective for the patients classified as type A. Our findings indicate that the platinum resistance can be predicted prior to recurrence, based on the platinum distribution; this could contribute to the selection of more appropriate adjuvant chemotherapy, which may lead to improves prognoses.&quot;,
+    &quot;journal&quot;: &quot;Sci Rep&quot;,
+    &quot;pub_date&quot;: &quot;2022-03-16&quot;,
+    &quot;doi&quot;: &quot;10.1038/s41598-022-08503-7&quot;,
+    &quot;impact_factor&quot;: 3.9,
+    &quot;similarity&quot;: 0.6649586261035798
+  },
+  {
+    &quot;rank&quot;: 3,
+    &quot;score&quot;: 0.6591847328874628,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;38525421&quot;,
+    &quot;title&quot;: &quot;How BRCA and homologous recombination deficiency change therapeutic strategies in ovarian cancer: a review of literature.&quot;,
+    &quot;abstract&quot;: &quot;About 50% of High Grade Serous Ovarian Cancer exhibit a high degree of genomic instability due to mutation of genes involved in Homologous Recombination (HRD) and such defect accounts for synthetic lethality mechanism of PARP inhibitors (PARP-i). Several clinical trials have shown how BRCA and HRD mutational status profoundly affect first line chemotherapy as well as response to maintenance therapy with PARP-i, hence Progression Free Survival and Overall Survival. Consequently, there is urgent need for the development of increasingly reliable HRD tests, overcoming present limitations, as they play a key role in the diagnostic and therapeutic process as well as have a prognostic and predictive value. In this review we offer an overview of the state of the art regarding the actual knowledge about BRCA and HRD mutational status, the rationale of PARPi use and HRD testing (current and in development assays) and their implications in clinical practice and in the treatment decision process, in order to optimize and choose the best tailored therapy in patients with ovarian cancer.&quot;,
+    &quot;journal&quot;: &quot;Front Oncol&quot;,
+    &quot;pub_date&quot;: &quot;2024-01-01&quot;,
+    &quot;doi&quot;: &quot;10.3389/fonc.2024.1335196&quot;,
+    &quot;impact_factor&quot;: 3.3,
+    &quot;similarity&quot;: 0.6591847328874628
+  },
+  {
+    &quot;rank&quot;: 4,
+    &quot;score&quot;: 0.6547723055027518,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;36643655&quot;,
+    &quot;title&quot;: &quot;Disparity in the era of personalized medicine for epithelial ovarian cancer.&quot;,
+    &quot;abstract&quot;: &quot;The treatment of high-grade serous ovarian cancer and high-grade endometrioid ovarian cancer has seen significant improvements in recent years, with BRCA1/2 and homologous recombination status guiding a personalized approach which has resulted in improved patient outcomes. However, for other epithelial ovarian cancer subtypes, first-line treatment remains unchanged from the platinum-paclitaxel trials of the early 2000s. In this review, we explore novel therapeutic approaches being adopted in the treatment of clear cell, mucinous, carcinosarcoma and low-grade serous ovarian cancer and the biological rational behind them. We discuss why such disparities exist, the challenges faced in conducting dedicated trials in these rarer histologies and look towards new approaches being adopted to overcome them.&quot;,
+    &quot;journal&quot;: &quot;Ther Adv Med Oncol&quot;,
+    &quot;pub_date&quot;: &quot;2023-01-01&quot;,
+    &quot;doi&quot;: &quot;10.1177/17588359221148024&quot;,
+    &quot;impact_factor&quot;: 4.2,
+    &quot;similarity&quot;: 0.6547723055027518
+  },
+  {
+    &quot;rank&quot;: 5,
+    &quot;score&quot;: 0.6520522231707224,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;27558151&quot;,
+    &quot;title&quot;: &quot;Ovarian cancer.&quot;,
+    &quot;abstract&quot;: &quot;Ovarian cancer is not a single disease and can be subdivided into at least five different histological subtypes that have different identifiable risk factors, cells of origin, molecular compositions, clinical features and treatments. Ovarian cancer is a global problem, is typically diagnosed at a late stage and has no effective screening strategy. Standard treatments for newly diagnosed cancer consist of cytoreductive surgery and platinum-based chemotherapy. In recurrent cancer, chemotherapy, anti-angiogenic agents and poly(ADP-ribose) polymerase inhibitors are used, and immunological therapies are currently being tested. High-grade serous carcinoma (HGSC) is the most commonly diagnosed form of ovarian cancer and at diagnosis is typically very responsive to platinum-based chemotherapy. However, in addition to the other histologies, HGSCs frequently relapse and become increasingly resistant to chemotherapy. Consequently, understanding the mechanisms underlying platinum resistance and finding ways to overcome them are active areas of study in ovarian cancer. Substantial progress has been made in identifying genes that are associated with a high risk of ovarian cancer (such as BRCA1 and BRCA2), as well as a precursor lesion of HGSC called serous tubal intraepithelial carcinoma, which holds promise for identifying individuals at high risk of developing the disease and for developing prevention strategies.&quot;,
+    &quot;journal&quot;: &quot;Nat Rev Dis Primers&quot;,
+    &quot;pub_date&quot;: &quot;2016-08-25&quot;,
+    &quot;doi&quot;: &quot;10.1038/nrdp.2016.61&quot;,
+    &quot;impact_factor&quot;: 60.6,
+    &quot;similarity&quot;: 0.6520522231707224
+  }
+]</pre>
+    <h3>Digest (<=8 bullets)</h3>
+    <pre>- For malignant ovarian germ cell tumors, standard management is fertility-sparing surgery when feasible plus platinum-based chemotherapy, which achieves high cure rates across stages; treatment intensification beyond platinum-based regimens is generally reserved for refractory or relapsed disease. [@pubmed:33490225]
+
+- In epithelial ovarian cancer, most patients eventually recur with platinum resistance; platinum-free interval is an imperfect surrogate, and emerging approaches (e.g., tissue platinum distribution assessment) may better predict resistance and guide timing of non-platinum strategies or trials. [@pubmed:35296733]
+
+- BRCA1/2 mutation and broader homologous recombination deficiency (HRD) status should be obtained early in the treatment course because they are key determinants of benefit from PARP inhibitor maintenance and influence overall therapeutic planning in high-grade serous and related histologies. [@guideline:nccn_ovariancancer_v3_2025__v00000000|11] [@pubmed:38525421]
+
+- Personalized approaches and access to biomarker-driven therapies (e.g., PARP inhibitors for BRCA/HRD-positive disease) are not uniform across populations; MDTs should consider referral pathways and trial enrollment to mitigate disparities in advanced epithelial ovarian cancer care. [@pubmed:36643655]</pre>
+  </details>
+
+  <details class='mt' open><summary>Pipeline Flow (Mermaid)</summary><pre class='mermaid'>flowchart TD
+  A[Load Case + Fingerprint] --&gt; B[Load Reports]
+  B --&gt; C[Report Selection per Role]
+  C --&gt; D[Guideline+PubMed RAG]
+  D --&gt; E[Init Specialist Agents]
+  E --&gt; F[MDT Discussion Engine]
+  F --&gt; G[Trial Matching]
+  G --&gt; H[Final Chair Output]
+  H --&gt; I[Save Logs]
+</pre></details>
+
+  <details class="mt">
+    <summary>Trace Events (JSON)</summary>
+    <pre>[
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:18:06.838331&quot;,
+    &quot;event&quot;: &quot;pipeline_start&quot;,
+    &quot;payload&quot;: {
+      &quot;visit_time&quot;: &quot;2023-01-03 08:53:29.260000&quot;,
+      &quot;meta_info&quot;: &quot;340123197709263626&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:18:06.838517&quot;,
+    &quot;event&quot;: &quot;case_fingerprint&quot;,
+    &quot;payload&quot;: {
+      &quot;case_fingerprint&quot;: &quot;bf21a9e8fbc5&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:18:07.113403&quot;,
+    &quot;event&quot;: &quot;reports_loaded&quot;,
+    &quot;payload&quot;: {
+      &quot;lab_n&quot;: 92,
+      &quot;img_n&quot;: 10,
+      &quot;path_n&quot;: 0,
+      &quot;mut_n&quot;: 1,
+      &quot;cutoff_dt&quot;: &quot;2023-01-04 08:53:29&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:18:20.136440&quot;,
+    &quot;event&quot;: &quot;reports_selected&quot;,
+    &quot;payload&quot;: {
+      &quot;lab&quot;: {
+        &quot;chair&quot;: [
+          &quot;20221229|8300002|2022-12-29&quot;,
+          &quot;20221229|9703212|2022-12-29&quot;,
+          &quot;20230103|5600862|2023-01-03&quot;
+        ],
+        &quot;oncologist&quot;: [
+          &quot;20221229|8300002|2022-12-29&quot;,
+          &quot;20221229|9703212|2022-12-29&quot;,
+          &quot;20230103|5600862|2023-01-03&quot;
+        ],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      },
+      &quot;imaging&quot;: {
+        &quot;chair&quot;: [
+          &quot;2022-10-24|MR|2022-10-24&quot;,
+          &quot;2022-12-29|MR|2022-12-29&quot;,
+          &quot;2022-12-29|CT|2022-12-29&quot;
+        ],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [
+          &quot;2022-10-24|MR|2022-10-24&quot;,
+          &quot;2022-12-29|MR|2022-12-29&quot;,
+          &quot;2022-12-29|CT|2022-12-29&quot;
+        ],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: [
+          &quot;2022-10-24|CT|2022-10-24&quot;,
+          &quot;2022-12-29|MR|2022-12-29&quot;,
+          &quot;2022-12-29|CT|2022-12-29&quot;
+        ]
+      },
+      &quot;pathology&quot;: {
+        &quot;chair&quot;: [],
+        &quot;oncologist&quot;: [],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [],
+        &quot;nuclear&quot;: []
+      },
+      &quot;mutation&quot;: {
+        &quot;chair&quot;: [
+          &quot;OH2203828|2022-04-18&quot;
+        ],
+        &quot;oncologist&quot;: [
+          &quot;OH2203828|2022-04-18&quot;
+        ],
+        &quot;radiologist&quot;: [],
+        &quot;pathologist&quot;: [
+          &quot;OH2203828|2022-04-18&quot;
+        ],
+        &quot;nuclear&quot;: []
+      }
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:18:40.659899&quot;,
+    &quot;event&quot;: &quot;rag_query&quot;,
+    &quot;payload&quot;: {
+      &quot;query&quot;: &quot;Guidelines for management of platinum-unknown ovarian cancer with unspecified histology and metastatic extent, with no reported BRCA/HRD/MSI/PD-L1 status or major comorbid constraints, including recommendations for systemic therapy and follow‑up.&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:18:40.659927&quot;,
+    &quot;event&quot;: &quot;rag_hits&quot;,
+    &quot;payload&quot;: {
+      &quot;source&quot;: &quot;guideline&quot;,
+      &quot;topk&quot;: 5,
+      &quot;n&quot;: 5
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:18:40.659932&quot;,
+    &quot;event&quot;: &quot;rag_hits&quot;,
+    &quot;payload&quot;: {
+      &quot;source&quot;: &quot;pubmed&quot;,
+      &quot;topk&quot;: 5,
+      &quot;n&quot;: 5
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:18:40.659936&quot;,
+    &quot;event&quot;: &quot;rag_hits_merged&quot;,
+    &quot;payload&quot;: {
+      &quot;n&quot;: 10
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:18:48.225667&quot;,
+    &quot;event&quot;: &quot;mdt_discussion_start&quot;,
+    &quot;payload&quot;: {
+      &quot;num_rounds&quot;: 2,
+      &quot;num_turns&quot;: 2
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:21:59.127164&quot;,
+    &quot;event&quot;: &quot;mdt_discussion_end&quot;,
+    &quot;payload&quot;: {
+      &quot;merged_chars&quot;: 2830
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:21:59.128095&quot;,
+    &quot;event&quot;: &quot;final_output_start&quot;,
+    &quot;payload&quot;: {}
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-18T21:22:05.686145&quot;,
+    &quot;event&quot;: &quot;final_output_end&quot;,
+    &quot;payload&quot;: {
+      &quot;final_output_chars&quot;: 1443
+    }
+  }
+]</pre>
+  </details>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+====================
+QUESTION:
+{}
+
+RESPONSE:
+Final Assessment:
+Disseminated recurrent gynecologic malignancy with progressive pelvic, liver, and probable bone involvement in a non‑curative setting; histologic subtype, primary site, performance status, and anemia etiology remain unresolved. [@2022-12-29|MR; @2022-12-29|CT; @20230103|5600862]
+
+Core Treatment Strategy:
+- Maintain non‑curative, symptom‑focused intent and engage palliative care for pain, bowel/bladder, and liver/bone symptom management.  
+- Urgently evaluate severe anemia (iron/B12/folate, bleeding/hemolysis) and provide transfusion/supportive care before systemic therapy decisions. [@20230103|5600862]  
+- Expedite retrieval/review of all pathology (initial and recurrence histology, IHC, staging) and full prior treatment history; currently unknown.  
+- Defer new systemic treatment intensity and any radiotherapy planning until anemia work‑up, ECOG status, pathology clarification, and patient goals are documented.  
+
+Change Triggers:
+- If anemia stabilized and ECOG acceptable, then revisit suitability and goals of systemic therapy versus best supportive care focus.  
+- If pathology/treatment history clarify primary site and subtype, then individualize systemic and radiotherapy strategies per disease biology and prior exposure.
+

@@ -2,6 +2,7 @@
 # RAG Core (PersistentClient)
 # =========================================================
 import os
+import requests
 from chromadb import PersistentClient
 from langchain_huggingface import HuggingFaceEmbeddings
 import torch
@@ -107,6 +108,10 @@ def rag_search_pack(
         doc_id = meta.get("doc_id", "")
         page = meta.get("page_from")
         page_tag = f"[PAGE {page}]" if isinstance(page, int) else ""
+        citation_tag = ""
+        if doc_id:
+            page_str = str(page) if isinstance(page, int) else "NA"
+            citation_tag = f"[@guideline:{doc_id}|{page_str}]"
 
         snippet = text.replace("\n", " ").strip()
         if len(snippet) > 300:
@@ -114,11 +119,12 @@ def rag_search_pack(
 
         score = 1 - float(dist)  # cosine similarity reverse
 
-        lines.append(f"[{i}] score={score:.4f} {doc_id} {page_tag}\n    {snippet}")
+        lines.append(f"[{i}] score={score:.4f} {doc_id} {page_tag} {citation_tag}\n    {snippet}")
 
         raw.append({
             "rank": i,
             "score": score,
+            "source": "guideline",
             "doc_id": doc_id,
             "page": page,
             "text": text,
@@ -126,6 +132,84 @@ def rag_search_pack(
 
     pack = "RAG Evidence Pack (top={}):\n".format(topk) + "\n".join(lines)
     return pack, raw
+
+
+def pubmed_search_pack(
+    query: str,
+    topk: int = 5,
+    endpoint: str = "http://495ga8uy7084.vicp.fun:17088/api/search-paper",
+    timeout: int = 20,
+):
+    """
+    PubMed RAG search via external API.
+    Returns formatted pack + raw hits for logging.
+    """
+    sanitized, _ = sanitize_rag_query(query or "")
+    if not sanitized:
+        return "(PUBMED: empty query)", []
+    try:
+        resp = requests.post(endpoint, json={"query": sanitized, "topk": topk}, timeout=timeout)
+        resp.raise_for_status()
+        payload = resp.json() or {}
+    except Exception as exc:
+        return f"(PUBMED: retrieval failed: {exc})", []
+
+    if payload.get("status") != "success":
+        return "(PUBMED: no evidence found)", []
+
+    hits = payload.get("data") or []
+    if not hits:
+        return "(PUBMED: no evidence found)", []
+    if len(hits) < topk:
+        print(f"[WARNING] PubMed returned {len(hits)} results (< topk={topk}).")
+
+    lines, raw = [], []
+    for i, hit in enumerate(hits[:topk], 1):
+        pmid = str(hit.get("pmid") or "").strip()
+        title = (hit.get("title") or "").strip()
+        abstract = (hit.get("abstract") or "").strip()
+        similarity = hit.get("similarity")
+        score = float(similarity) if similarity is not None else None
+
+        snippet = abstract.replace("\n", " ").strip()
+        if len(snippet) > 300:
+            snippet = snippet[:300] + "…"
+
+        score_text = f"score={score:.4f} " if isinstance(score, (int, float)) else ""
+        citation_tag = f"[@pubmed:{pmid}]" if pmid else ""
+        lines.append(f"[{i}] {score_text}PMID {pmid} {citation_tag}\n    {title}\n    {snippet}")
+
+        raw.append({
+            "rank": i,
+            "score": score,
+            "source": "pubmed",
+            "pmid": pmid,
+            "title": title,
+            "abstract": abstract,
+            "journal": hit.get("journal_iso"),
+            "pub_date": hit.get("pub_date"),
+            "doi": hit.get("doi"),
+            "impact_factor": hit.get("impact_factor"),
+            "similarity": similarity,
+        })
+
+    pack = "PUBMED Evidence Pack (top={}):\n".format(topk) + "\n".join(lines)
+    return pack, raw
+
+
+def merge_rag_packs(guideline_pack: str, pubmed_pack: str) -> str:
+    parts = []
+    if guideline_pack:
+        parts.append("# GUIDELINE RAG\n" + guideline_pack)
+    if pubmed_pack:
+        parts.append("# PUBMED RAG\n" + pubmed_pack)
+    if not parts:
+        return "(RAG: no evidence found)"
+    return "\n\n".join(parts)
+
+
+def merge_rag_raw(guideline_raw, pubmed_raw):
+    return (guideline_raw or []) + (pubmed_raw or [])
 
 ###############################################################################
 # RAG Query Builder for MDT
@@ -155,7 +239,28 @@ def build_rag_query_for_mdt(agent, question: str) -> str:
         "Do NOT mention report_ids, dates, hospital names, or patient identifiers.\n"
         "Output ONLY the query text.\n"
     )
-    return agent.run_selection(prompt)
+    raw_query = agent.run_selection(prompt).strip()
+    sanitized, changed = sanitize_rag_query(raw_query)
+    if changed:
+        print("[WARNING] RAG query contained potential identifiers and was sanitized before logging/search.")
+    return sanitized
+
+
+def sanitize_rag_query(query: str) -> tuple[str, bool]:
+    """Remove obvious identifiers from RAG query (defensive de-id before logging/search)."""
+    if not query:
+        return "", False
+    original = query
+    q = query
+    # Emails
+    q = re.sub(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", "[REDACTED_EMAIL]", q)
+    # Phones / long digit sequences (avoid removing short clinical numbers like CA-125)
+    q = re.sub(r"\b\d{8,}\b", "[REDACTED_ID]", q)
+    # Common identifier labels
+    q = re.sub(r"(?i)\b(meta[_\s-]?info|patient[_\s-]?id|report[_\s-]?id|mrn|住院号|病历号|身份证号)\s*[:=]\s*\S+", "", q)
+    # Collapse extra whitespace
+    q = re.sub(r"\s{2,}", " ", q).strip()
+    return q, (q != original)
 
 
 def summarize_rag_evidence(agent, rag_pack: str) -> str:
@@ -172,12 +277,12 @@ def summarize_rag_evidence(agent, rag_pack: str) -> str:
     prompt = (
         "# RAG CHUNKS\n"
         f"{rag_pack}\n\n"
-        "Summarize into <=8 bullets for MDT decision-making.\n"
+        "Summarize into <=4 bullets for MDT decision-making.\n"
         "Rules:\n"
         "- Each bullet must be actionable evidence (guideline/trial-based).\n"
         "- Do NOT restate patient-specific facts.\n"
         "- Avoid long quotes.\n"
-        "- If sources have ids/metadata, keep them inline.\n"
+        "- Each bullet MUST include at least one evidence tag: [@guideline:doc_id|page] or [@pubmed:PMID].\n"
         "- Output ONLY plain text bullets.\n"
     )
     return agent.run_selection(prompt)

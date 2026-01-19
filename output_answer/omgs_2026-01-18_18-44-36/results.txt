@@ -1,0 +1,18 @@
+====================
+QUESTION:
+{}
+
+RESPONSE:
+Final Assessment:
+Metastatic recurrent malignancy with progressive liver, presacral, bone, and peritoneal disease and severe anemia; primary site, histology, stage, prior treatments, and current performance status remain undefined [@2022-12-29|CT][@2022-12-29|MR][@20230103|5600862].
+
+Core Treatment Strategy:
+- Urgently repeat CBC, full anemia workup, and assess for transfusion/bleeding to stabilize before biopsy/systemic therapy [@20230103|5600862].  
+- Retrieve all prior pathology/IHC and full oncologic treatment records to define primary site, histology, and treatment line (currently unknown).  
+- Arrange whole-body FDG PET/CT coordinated with image-guided biopsy of safest liver lesion for updated pathology and molecular profiling [@2022-12-29|CT].  
+- After pathology and staging clarification, reconvene MDT to choose non‑HRD‑oriented systemic category and symptom‑directed local palliation [@OH2203828|2022-04-18][@guideline:nccn_ovariancancer_v3_2025__v00000000|14].  
+
+Change Triggers:
+- If anemia remains unstable or symptomatic despite optimization, defer invasive biopsy/systemic therapy and prioritize stabilization and supportive care.  
+- If new tissue/IHC shows non‑gynecologic or unexpected primary, shift from gynecologic pathway to site‑specific systemic and palliative strategy.
+

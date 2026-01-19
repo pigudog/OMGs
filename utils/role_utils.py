@@ -287,7 +287,7 @@ Provide a high-level management direction (intent, safety, sequencing) without c
 If information is missing, highlight what must be obtained before firm decisions.
 
 # Style
-Default: return up to 5 bullets. Each bullet ≤20 words. No fixed subheadings. No guideline quotes. Never recommend a specific agent.
+Default: return up to 3 bullets. Each bullet ≤20 words. No fixed subheadings. No guideline quotes. Never recommend a specific agent.
 Exception (FINAL OUTPUT): if the user prompt explicitly requests a structured format (e.g., "Final Assessment / Core Treatment Strategy / Change Triggers"), follow that format and IGNORE the 5-bullet constraint. Keep the Final Assessment to ONE short sentence.
 """.strip(),
 
@@ -300,7 +300,7 @@ Identify systemic-treatment-relevant facts, constraints, and what further data a
 You may describe treatment categories (e.g., maintenance, relapse therapy, surveillance), but must NOT name any specific drugs.
 
 # Style
-Return up to 5 bullets. Each ≤20 words. No fixed subheadings. No guideline quotes. No drug names.
+Return up to 3 bullets. Each ≤20 words. No fixed subheadings. No guideline quotes. No drug names.
 """.strip(),
 
     "radiologist": """
@@ -312,7 +312,7 @@ Summarize actionable imaging findings (e.g., measurable disease, recurrence patt
 Do NOT discuss systemic therapy choices.
 
 # Style
-Return up to 5 bullets. Each ≤20 words. Imaging only. No drug names. No treatment recommendations.
+Return up to 3 bullets. Each ≤20 words. Imaging only. No drug names. No treatment recommendations.
 """.strip(),
 
     "pathologist": """
@@ -324,7 +324,7 @@ Clarify diagnosis, grade, biomarker uncertainties, and which pathology details a
 Do NOT suggest treatment choices.
 
 # Style
-Return up to 5 bullets. Each ≤20 words. No drug names. No prognosis/treatment advice.
+Return up to 3 bullets. Each ≤20 words. No drug names. No prognosis/treatment advice.
 """.strip(),
 
     "nuclear": """
@@ -336,7 +336,7 @@ Summarize metabolic findings and when PET meaningfully changes staging or suspic
 Do NOT comment on systemic therapy choices.
 
 # Style
-Return up to 5 bullets. Each ≤20 words. No drug names. No treatment recommendations.
+Return up to 3 bullets. Each ≤20 words. No drug names. No treatment recommendations.
 """.strip(),
 }
 
@@ -400,12 +400,16 @@ CASE_FINGERPRINT: {case_fingerprint}
 3) GLOBAL Guideline Digest is ONLY general reference:
    - MUST NOT be treated as patient-specific facts.
    - Never invent labs/imaging/mutations from guidelines.
-4) Any claim about labs/imaging/pathology/molecular MUST include evidence tag:
+4) Any claim derived from guideline/PubMed evidence MUST include evidence tag:
+   - applies to treatment strategy categories, guideline/consensus statements, or trial/literature evidence
+   - format: [@guideline:doc_id|page] or [@pubmed:PMID]
+4b) At least ONE bullet must be evidence-based and include [@guideline:doc_id|page] or [@pubmed:PMID].
+5) Any claim about labs/imaging/pathology/molecular MUST include evidence tag:
    - format: [@report_id|YYYY-MM-DD]
    - If no report supports it, say "unknown/needs update".
-5) If Case View conflicts with Clinical Reports:
+6) If Case View conflicts with Clinical Reports:
    - Prefer Clinical Reports; note discrepancy briefly.
-6) Do NOT hallucinate. If missing, defer to correct specialty.
+7) Do NOT hallucinate. If missing, defer to correct specialty.
 
 # Role-Specific Case View (PATIENT FACTS)
 {case_view}
@@ -413,7 +417,7 @@ CASE_FINGERPRINT: {case_fingerprint}
 # Clinical Reports (PATIENT FACTS)
 {clinical}
 
-# GLOBAL Guideline Digest (NOT PATIENT FACTS)
+# GLOBAL Guideline + PubMed Digest (NOT PATIENT FACTS)
 {global_guideline_digest}
 """.strip()
 

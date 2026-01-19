@@ -1,0 +1,18 @@
+====================
+QUESTION:
+{}
+
+RESPONSE:
+Final Assessment:
+Widely metastatic presumed gynecologic malignancy with liver, presacral, bone, and peritoneal disease and severe anemia; primary histology, prior treatments, and current stage/line remain uncertain, so only diagnostic and supportive steps are appropriate today [@2022-12-29|MR; @2022-12-29|CT; @20230103|5600862].
+
+Core Treatment Strategy:
+- Urgently retrieve all prior surgical/biopsy pathology and reports to establish primary site, histologic subtype, grade, and stage; currently unknown.  
+- If prior pathology unobtainable, plan image‑guided biopsy of an accessible metastatic lesion after restaging to secure diagnosis and IHC.  
+- Arrange updated whole‑body staging (contrast CT/MR ± FDG PET/CT) to reassess liver, presacral, bone, peritoneal, and rectal involvement before therapy [@2022-12-29|MR; @2022-12-29|CT; @guideline:nccn_ovariancancer_v3_2025__v00000000|11].  
+- Optimize severe anemia with full work‑up and supportive treatment to ensure future systemic‑therapy fitness; repeat CBC and chemistries for baseline [@20230103|5600862].  
+
+Change Triggers:
+- If pathology confirms epithelial ovarian primary and imaging shows widespread metastatic disease, MDT to define systemic treatment intent and palliative focus [@guideline:nccn_ovariancancer_v3_2025__v00000000|14].  
+- If restaging reveals complications (obstruction, impending fracture, spinal/pelvic instability), prioritize urgent surgical/radiation/palliative interventions before systemic therapy planning.
+

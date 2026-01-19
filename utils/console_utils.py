@@ -188,6 +188,8 @@ Based on PATIENT FACTS + MDT discussion + FINAL refined plans from all experts, 
 
 STRICT RULES:
 - Any factual statement about past tests/treatments must include [@report_id|date] or say unknown.
+- Any statement derived from guideline or PubMed literature must include [@guideline:doc_id|page] or [@pubmed:PMID].
+- If you cite guideline/PubMed evidence in Core Treatment Strategy or Change Triggers, include at least one tag in that bullet.
 - If experts disagree, pick the safest plan and state the key uncertainty.
 
 # FINAL REFINED PLANS (All experts, last round)

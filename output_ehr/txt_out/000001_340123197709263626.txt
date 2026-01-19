@@ -25,22 +25,24 @@ repair_used: False
     "SCENE": "Platinum_resistant_relapse",
     "PLATINUM_HISTORY": [
       {
-        "line": "Unknown",
+        "line": "1L",
         "start_date": "Unknown",
         "end_date": "2022-08-17",
         "first_relapse_date": "2022-10-12",
         "PFI_days": "56",
         "status": "Resistant",
         "evidence_type": "Biochemical",
-        "evidence": "CA125 increased to 89.60 U/ml on 2022-10-12 after last carboplatin-containing chemo ended 2022-08-17"
+        "evidence": "CA125 89.60U/ml on 2022-10-12"
       }
     ],
     "DIAGNOSIS": {
-      "primary": "Recurrent ovarian cancer",
+      "primary": "卵巢癌复发",
       "histology": "透明细胞癌",
       "site": "Ovary",
       "laterality": "Unknown",
-      "components": []
+      "components": [
+        "高级别腺癌"
+      ]
     },
     "STAGE": {
       "stage_text": "Unknown",
@@ -51,21 +53,21 @@ repair_used: False
     "SURGERY_DONE": {
       "performed": "Yes",
       "date": "2022-03-28",
-      "procedure": "Cytoreductive surgery including partial rectosigmoid colectomy, partial vaginectomy, retroperitoneal lesion resection, complex lysis of intestinal adhesions, left ureteral stent placement, bladder repair"
+      "procedure": "Debulking surgery + partial rectosigmoid resection + partial vaginectomy + retroperitoneal lesion resection + complex adhesiolysis + left ureteral stent placement + bladder repair"
     },
     "NEOADJUVANT": "Unknown",
     "ADJUVANT_TREATMENT": {
       "given": "Yes",
       "regimens": [
-        "白紫+卡铂化疗"
+        "白紫+卡铂"
       ],
       "cycles_or_courses": "6"
     },
     "LINE_OF_THERAPY": [
       {
-        "line": "Unknown",
-        "intent": "Adjuvant",
-        "regimen": "白紫+卡铂化疗",
+        "line": "1L",
+        "intent": "Unknown",
+        "regimen": "白紫+卡铂",
         "start_date": "Unknown",
         "end_date": "2022-08-17",
         "cycles": "6"
@@ -82,7 +84,7 @@ repair_used: False
     "RELAPSE_DATE": {
       "date": "2022-10-12",
       "type": "Biochemical",
-      "evidence": "CA125 increased to 89.60 U/ml on 2022-10-12; subsequent imaging 2022-10-24/25 suggested pelvic recurrence and liver metastases"
+      "evidence": "CA125 89.60U/ml on 2022-10-12"
     },
     "HRD": "Unknown",
     "BRCA1": "Unknown",
@@ -92,54 +94,57 @@ repair_used: False
       "MSI": "Unknown",
       "PDL1_CPS": "Unknown",
       "HER2": "Unknown",
-      "AFP": "<0.91 ng/ml (2022-10-12)",
-      "CA125": "933.00 U/ml (2022-12-29)"
+      "AFP": "<0.91ng/ml (2022-10-12)",
+      "CA125": "933.00U/ml (2022-12-29)",
+      "CA19-9": "229.00U/ml (2022-12-29)",
+      "CA15-3": "86.00U/ml (2022-12-29)",
+      "HE4": "111.00pmol/L (2022-12-29)"
     },
-    "CURRENT_STATUS": "Recurrent ovarian cancer with pelvic presacral mass and hepatic metastases (imaging 2022-12-30)"
+    "CURRENT_STATUS": "Recurrent ovarian cancer with pelvic recurrence and multiple liver metastases on imaging"
   },
   "TIMELINE": {
     "events": [
       {
         "date": "2022-03-28",
         "event_type": "Surgery",
-        "description": "Cytoreductive surgery for recurrent ovarian cancer; specimens from partial rectosigmoid, left retroperitoneal tumor, partial vagina",
-        "regimen_or_test": "Surgery",
-        "key_result": "Pathology: intestinal wall full-thickness high-grade adenocarcinoma; considered consistent with ovarian clear cell carcinoma"
+        "description": "Debulking surgery including partial rectosigmoid resection and other procedures",
+        "regimen_or_test": "Debulking surgery",
+        "key_result": ""
+      },
+      {
+        "date": "2022-03-28",
+        "event_type": "Other",
+        "description": "Pathology: full-thickness intestinal high-grade adenocarcinoma, considered clear cell carcinoma; tumor ~7x4x2.5cm; 4/15 nodes positive",
+        "regimen_or_test": "Pathology",
+        "key_result": "Considered 透明细胞癌; tumor size 7*4*2.5cm; lymph nodes 4/15 positive"
       },
       {
         "date": "2022-08-17",
         "event_type": "Chemo",
-        "description": "Completed 6 cycles of 白紫+卡铂 chemotherapy; last administration recorded",
-        "regimen_or_test": "白紫+卡铂化疗",
+        "description": "Completed 6 cycles of 白紫+卡铂 chemotherapy; last administration 2022-08-17",
+        "regimen_or_test": "白紫+卡铂",
         "key_result": "Last chemo date 2022-08-17"
       },
       {
         "date": "2022-10-12",
         "event_type": "Lab",
-        "description": "Biochemical evidence of relapse with rising tumor markers",
+        "description": "Tumor markers rising: CA125 89.60U/ml, CA19-9 77.20U/ml",
         "regimen_or_test": "Tumor markers",
-        "key_result": "CA125 89.60 U/ml; CA19-9 77.20 U/ml; HE4 59.70 pmol/L"
+        "key_result": "CA125 89.60U/ml"
       },
       {
         "date": "2022-10-24",
         "event_type": "Imaging",
-        "description": "Pelvic MR: postoperative presacral mass increased, possible recurrence with adjacent sacral involvement; pelvic mesenteric nodules suspicious for metastasis",
-        "regimen_or_test": "MR pelvis",
-        "key_result": "Right iliac bone new enhancing nodule; presacral mass increased"
+        "description": "MRI: pelvic post-op mass, consider recurrence with possible adjacent sacral involvement",
+        "regimen_or_test": "MRI pelvis",
+        "key_result": "Pelvic recurrence suspected"
       },
       {
-        "date": "2022-10-25",
-        "event_type": "Imaging",
-        "description": "CT: multiple hepatic nodules, some new compared with prior, suggesting metastases",
-        "regimen_or_test": "CT abdomen",
-        "key_result": "Multiple liver metastatic nodules"
-      },
-      {
-        "date": "2022-12-30",
-        "event_type": "Imaging",
-        "description": "MR/CT: pelvic presacral mass larger and more heterogeneously enhancing; increased number and size of hepatic metastases",
-        "regimen_or_test": "MR pelvis and CT abdomen",
-        "key_result": "Progression of pelvic and liver disease"
+        "date": "2022-12-29",
+        "event_type": "Lab",
+        "description": "Marked tumor marker elevation: CA125 933.00U/ml, CA19-9 229.00U/ml, HE4 111.00pmol/L",
+        "regimen_or_test": "Tumor markers",
+        "key_result": "CA125 933.00U/ml"
       }
     ],
     "constraints": {
@@ -156,12 +161,12 @@ repair_used: False
   "MED_ONC": {
     "current_regimen": {
       "name": "Unknown",
-      "last_admin_date": "2022-08-17",
-      "cycle_info": "6 cycles completed (last on 2022-08-17)"
+      "last_admin_date": "Unknown",
+      "cycle_info": "Unknown"
     },
     "planned_next_regimen": "Unknown",
     "prior_systemic_therapies": [
-      "白紫+卡铂化疗6程"
+      "白紫+卡铂"
     ],
     "genetic_testing": {
       "somatic": [],
@@ -172,43 +177,42 @@ repair_used: False
   "RADIOLOGY": {
     "studies": [
       {
-        "date": "2022-10-24",
-        "modality": "MRI",
-        "anatomic_sites": [
-          "Pelvis"
-        ],
-        "findings": [
-          "Postoperative presacral mass increased in size and heterogenous enhancement",
-          "Pelvic mesenteric multiple enhancing small nodules, suspicious for metastasis",
-          "Right iliac bone new enhancing nodule"
-        ],
-        "impression": "Consider recurrence with adjacent sacral involvement and pelvic/peritoneal metastases",
-        "trend_vs_prior": "Worse"
-      },
-      {
         "date": "2022-10-25",
         "modality": "CT",
         "anatomic_sites": [
           "Liver"
         ],
         "findings": [
-          "Multiple hepatic nodules, some new compared with prior, suggest metastases",
-          "Hepatic cysts unchanged"
+          "Multiple liver nodules, some new compared with prior, possible metastases; liver cysts unchanged"
         ],
-        "impression": "Multiple liver metastases",
+        "impression": "Multiple liver metastases suspected",
         "trend_vs_prior": "Worse"
+      },
+      {
+        "date": "2022-10-24",
+        "modality": "MRI",
+        "anatomic_sites": [
+          "Pelvis",
+          "Sacrum"
+        ],
+        "findings": [
+          "Postoperative pelvic mass, presacral mass increased, possible recurrence with adjacent sacral involvement; pelvic mesenteric multiple small enhancing nodules"
+        ],
+        "impression": "Pelvic recurrence with possible sacral and peritoneal involvement; consider metastases",
+        "trend_vs_prior": "Unknown"
       },
       {
         "date": "2022-12-30",
         "modality": "MRI",
         "anatomic_sites": [
-          "Pelvis"
+          "Pelvis",
+          "Sacrum",
+          "Ilium"
         ],
         "findings": [
-          "Postoperative presacral mass larger, more heterogeneous enhancement",
-          "Pelvic mesenteric enhancing nodules increased or similar"
+          "Postoperative pelvic presacral mass larger than before with heterogeneous enhancement; right iliac bone new enhancing nodule; pelvic mesenteric nodules similar"
         ],
-        "impression": "Enlarged presacral recurrent mass with possible adjacent peritoneal and sacral involvement",
+        "impression": "Progression of pelvic recurrence with possible sacral and bony involvement",
         "trend_vs_prior": "Worse"
       },
       {
@@ -219,8 +223,7 @@ repair_used: False
           "Spleen"
         ],
         "findings": [
-          "Multiple intrahepatic metastatic nodules increased in number and size",
-          "Focal splenic abnormality described (possible infarct)"
+          "Multiple liver metastatic nodules increased in number and size versus prior; splenic patchy shadow possibly splenic infarct"
         ],
         "impression": "Progression of hepatic metastases",
         "trend_vs_prior": "Worse"
@@ -235,21 +238,19 @@ repair_used: False
     "specimens": [
       {
         "date": "2022-03-28",
-        "site": "部分直乙结肠; 左侧腹膜后肿瘤; 部分阴道",
-        "diagnosis": "卵巢透明细胞癌累及",
+        "site": "Partial rectosigmoid + left retroperitoneum tumor + partial vagina",
+        "diagnosis": "Consider ovarian clear cell carcinoma involvement (首先考虑为透明细胞癌)",
         "components": [
-          "部分直乙结肠",
-          "左侧腹膜后肿瘤",
-          "部分阴道"
+          "高级别腺癌"
         ],
-        "grade": "高级别腺癌",
+        "grade": "Unknown",
         "tumor_size": "7*4*2.5cm",
         "laterality": "Unknown",
-        "sample_type": "Surgical specimen",
+        "sample_type": "Surgical resection",
         "involvement_sites": [
-          "intestinal wall full-thickness",
-          "left retroperitoneal tumor",
-          "vaginal tissue"
+          "Intestinal wall full thickness",
+          "Lymph nodes 4/15 positive",
+          "Bladder posterior wall nodule noted"
         ],
         "ihc": [
           {
@@ -270,51 +271,51 @@ repair_used: False
           },
           {
             "marker": "ER",
-            "result": "（部分+）"
+            "result": "(部分+)"
           },
           {
             "marker": "PR",
-            "result": "（少弱+）"
+            "result": "(少弱+)"
           },
           {
             "marker": "P53",
-            "result": "（+/-）"
+            "result": "(+/-)"
           },
           {
             "marker": "WT1",
-            "result": "（-）"
+            "result": "(-)"
           },
           {
             "marker": "Ki-67",
-            "result": "（60%+）"
+            "result": "(60%+)"
           },
           {
             "marker": "HNF1B",
-            "result": "（+）"
+            "result": "(+)"
           },
           {
             "marker": "NapsinA",
-            "result": "（灶+）"
+            "result": "(灶+)"
           },
           {
             "marker": "P16",
-            "result": "（+）"
+            "result": "(+)"
           },
           {
             "marker": "PAX8",
-            "result": "（+）"
+            "result": "(+)"
           },
           {
             "marker": "SALL4",
-            "result": "（-）"
+            "result": "(-)"
           },
           {
             "marker": "ZBTB16",
-            "result": "（-）"
+            "result": "(-)"
           }
         ],
         "molecular": [],
-        "raw_text": "卵巢恶性肿瘤：卵巢癌复发：术前CA125 45.7 CA199 161 HE4 562\n2022.03.28在全麻下行“瘤体减灭术+直肠乙状结肠部分切除术+阴道部分切除术+腹膜后病损切除术+复杂肠粘连松解术+左输尿管支架置管术+膀胱修补术。（部分直乙结肠+左侧腹膜后肿瘤+部分阴道）肠壁全层见高级别腺癌，结合T2022-04771首先考虑为透明细胞癌，正在加做免疫组化进一步明确。肿块大小约7*4*2.5cm。双侧切缘阴性，肠周淋巴结（4/15）见癌转移，伴癌结节1枚。（膀胱后壁肿瘤）纤维脂肪组织，局灶纤维组织增生、含铁血黄素沉积、泡沫样组织反应，未见癌累及。补充诊断1：【补充报告】（部分直乙结肠+左侧腹膜后肿瘤+部分阴道）可符合卵巢透明细胞癌累及。免疫组化（HI22-06789）瘤细胞：MLH1(ES05)（+），MSH6（+），MSH2（+），PMS2（+），ER（部分+），PR（少弱+），P53（+/-），WT1（-），Ki-67（60%+），HNF1B（+），NapsinA（灶+），P16（+），PAX8（+），SALL4（-），ZBTB16（-）",
+        "raw_text": "卵巢恶性肿瘤：卵巢癌复发：术前CA125 45.7 CA199 161 HE4 562022.03.28在全麻下行“瘤体减灭术+直肠乙状结肠部分切除术+阴道部分切除术+腹膜后病损切除术+复杂肠粘连松解术+左输尿管支架置管术+膀胱修补术。（部分直乙结肠+左侧腹膜后肿瘤+部分阴道）肠壁全层见高级别腺癌，结合T2022-04771首先考虑为透明细胞癌，正在加做免疫组化进一步明确。肿块大小约7*4*2.5cm。双侧切缘阴性，肠周淋巴结（4/15）见癌转移，伴癌结节1枚。（膀胱后壁肿瘤）纤维脂肪组织，局灶纤维组织增生、含铁血黄素沉积、泡沫样组织反应，未见癌累及。补充诊断1：【补充报告】（部分直乙结肠+左侧腹膜后肿瘤+部分阴道）可符合卵巢透明细胞癌累及。免疫组化（HI22-06789）瘤细胞：MLH1(ES05)（+），MSH6（+），MSH2（+），PMS2（+），ER（部分+），PR（少弱+），P53（+/-），WT1（-），Ki-67（60%+），HNF1B（+），NapsinA（灶+），P16（+），PAX8（+），SALL4（-），ZBTB16（-）",
         "uncertainty_or_missing": []
       }
     ]
@@ -334,11 +335,6 @@ repair_used: False
           "flag": "↑"
         },
         "history": [
-          {
-            "date": "2022-03-28",
-            "value": "45.7",
-            "flag": "Unknown"
-          },
           {
             "date": "2022-08-15",
             "value": "14.90",
@@ -362,38 +358,6 @@ repair_used: False
         ]
       },
       {
-        "analyte": "HE4",
-        "unit": "pmol/L",
-        "reference_range": "Unknown",
-        "latest": {
-          "date": "2022-12-29",
-          "value": "111.00",
-          "flag": "↑"
-        },
-        "history": [
-          {
-            "date": "2022-03-28",
-            "value": "562",
-            "flag": "Unknown"
-          },
-          {
-            "date": "2022-08-15",
-            "value": "87.90",
-            "flag": "↑"
-          },
-          {
-            "date": "2022-10-12",
-            "value": "59.70",
-            "flag": "Unknown"
-          },
-          {
-            "date": "2022-12-29",
-            "value": "111.00",
-            "flag": "↑"
-          }
-        ]
-      },
-      {
         "analyte": "CA19-9",
         "unit": "U/ml",
         "reference_range": "Unknown",
@@ -403,11 +367,6 @@ repair_used: False
           "flag": "↑"
         },
         "history": [
-          {
-            "date": "2022-03-28",
-            "value": "161",
-            "flag": "Unknown"
-          },
           {
             "date": "2022-08-15",
             "value": "7.16",
@@ -421,6 +380,33 @@ repair_used: False
           {
             "date": "2022-12-29",
             "value": "229.00",
+            "flag": "↑"
+          }
+        ]
+      },
+      {
+        "analyte": "HE4",
+        "unit": "pmol/L",
+        "reference_range": "Unknown",
+        "latest": {
+          "date": "2022-12-29",
+          "value": "111.00",
+          "flag": "↑"
+        },
+        "history": [
+          {
+            "date": "2022-08-15",
+            "value": "87.90",
+            "flag": "↑"
+          },
+          {
+            "date": "2022-10-12",
+            "value": "59.70",
+            "flag": "Unknown"
+          },
+          {
+            "date": "2022-12-29",
+            "value": "111.00",
             "flag": "↑"
           }
         ]
@@ -447,17 +433,17 @@ repair_used: False
       {
         "date": "2022-03-28",
         "type": "Surgery",
-        "description": "Cytoreductive surgery performed"
+        "description": "Debulking surgery performed"
       },
       {
         "date": "2022-08-17",
         "type": "ChemoEnd",
-        "description": "Last dose of 白紫+卡铂 chemotherapy (cycle 6)"
+        "description": "Completed 6 cycles of 白紫+卡铂"
       },
       {
         "date": "2022-10-12",
         "type": "Relapse",
-        "description": "Biochemical relapse with CA125 rise"
+        "description": "Biochemical relapse with rising CA125"
       }
     ]
   }

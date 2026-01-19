@@ -34,6 +34,6 @@ __all__ = [
     "make_cutoff","report_range","safe_date10",
     "filter_before","VisualConfig", 
     "build_lab_timeline","build_imaging_timeline","build_pathology_timeline",
-    "TraceLogger","preview_text","print_selected_reports_table","print_section","print_rag_hits_table",
+    "TraceLogger","preview_text","print_selected_reports_table","print_section","print_rag_hits_table","warn_missing_evidence_tags",
     "load_patient_labs","load_patient_imaging","load_patient_pathology","load_patient_mutations","read_jsonl","parse_ids","parse_date_any","summarize_selected_reports"
 ]

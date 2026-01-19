@@ -24,6 +24,7 @@ import random
 import re
 from pathlib import Path
 from typing import Dict, Any, Optional, Tuple, List
+from datetime import datetime
 from tqdm import tqdm
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -118,6 +119,31 @@ def build_system_prompt(cfg: Dict[str, Any], force_english: bool = False) -> str
     return master + "\n\nOUTPUT_SCHEMA_SHAPE:\n" + schema_text + "\n\n" + final_req
 
 
+def build_review_prompt(cfg: Dict[str, Any]) -> Tuple[str, str]:
+    review_instr = (cfg.get("REVIEW_INSTRUCTIONS") or "").strip()
+    if not review_instr:
+        review_instr = (
+            "You are an EHR extraction quality reviewer for gynecologic oncology.\n"
+            "Check the extracted JSON against the source text and identify concrete errors, omissions, or contradictions.\n"
+            "Only cite issues that are clearly supported by the text. Do NOT invent facts.\n"
+            "Return JSON only, matching REVIEW_SCHEMA. No extra text."
+        )
+    review_schema = cfg.get("REVIEW_SCHEMA") or {
+        "issues": [
+            {
+                "severity": "critical|major|minor",
+                "field_path": "string",
+                "description": "string",
+                "evidence_snippet": "string",
+                "suggested_fix": "string",
+            }
+        ]
+    }
+    schema_text = json.dumps(review_schema, ensure_ascii=False)
+    system_prompt = review_instr + "\n\nREVIEW_SCHEMA:\n" + schema_text
+    return system_prompt, schema_text
+
+
 # ===========================
 # API call + retry mechanism
 # ===========================
@@ -201,6 +227,136 @@ def try_parse_json(text: str):
         return obj, "ok"
     except Exception:
         return None, "json_decode_error"
+
+
+def _parse_date_ymd(x: Any):
+    if not x:
+        return None
+    s = str(x).strip()
+    if len(s) >= 10:
+        s = s[:10]
+    try:
+        return datetime.strptime(s, "%Y-%m-%d").date()
+    except Exception:
+        return None
+
+
+def _pfis_to_status(pfi_days: int) -> str:
+    if pfi_days <= 28:
+        return "Refractory"
+    if pfi_days < 180:
+        return "Resistant"
+    return "Sensitive"
+
+
+def apply_auto_fixes(parsed: Dict[str, Any]) -> Tuple[Dict[str, Any], List[Dict[str, Any]]]:
+    fixes: List[Dict[str, Any]] = []
+    if not isinstance(parsed, dict):
+        return parsed, fixes
+
+    def record_fix(path: str, before: Any, after: Any, reason: str):
+        if before == after:
+            return
+        fixes.append({
+            "path": path,
+            "before": before,
+            "after": after,
+            "reason": reason,
+        })
+
+    case_core = parsed.get("CASE_CORE") or {}
+    timeline = parsed.get("TIMELINE") or {}
+
+    # PFI math + platinum status
+    last_plat = _parse_date_ymd(case_core.get("last_platinum_end_date"))
+    first_relapse = _parse_date_ymd(case_core.get("first_relapse_date"))
+    if last_plat and first_relapse and first_relapse > last_plat:
+        pfi_days = (first_relapse - last_plat).days
+        record_fix("CASE_CORE.PFI_days", case_core.get("PFI_days"), str(pfi_days), "recompute_pfi_days")
+        case_core["PFI_days"] = str(pfi_days)
+        status = _pfis_to_status(pfi_days)
+        record_fix("CASE_CORE.PLATINUM_STATUS", case_core.get("PLATINUM_STATUS"), status, "recompute_platinum_status")
+        record_fix("CASE_CORE.PLATINUM_STATUS_CURRENT", case_core.get("PLATINUM_STATUS_CURRENT"), status, "recompute_platinum_status_current")
+        record_fix("CASE_CORE.PLATINUM_PFI_CURRENT", case_core.get("PLATINUM_PFI_CURRENT"), str(pfi_days), "recompute_platinum_pfi_current")
+        case_core["PLATINUM_STATUS"] = status
+        case_core["PLATINUM_STATUS_CURRENT"] = status
+        case_core["PLATINUM_PFI_CURRENT"] = str(pfi_days)
+
+    # PLATINUM_HISTORY consistency (latest line)
+    platinum_hist = case_core.get("PLATINUM_HISTORY") or []
+    if isinstance(platinum_hist, list) and platinum_hist:
+        dated = []
+        for idx, row in enumerate(platinum_hist):
+            end_dt = _parse_date_ymd(row.get("end_date"))
+            dated.append((end_dt, idx, row))
+        dated.sort(key=lambda x: (x[0] is None, x[0] or datetime.min.date(), x[1]))
+        latest = dated[-1][2] if dated else None
+        if latest and last_plat and first_relapse and first_relapse > last_plat:
+            pfi_days = (first_relapse - last_plat).days
+            status = _pfis_to_status(pfi_days)
+            if latest is not None:
+                record_fix("CASE_CORE.PLATINUM_HISTORY[-1].PFI_days", latest.get("PFI_days"), str(pfi_days), "align_platinum_history_pfi")
+                record_fix("CASE_CORE.PLATINUM_HISTORY[-1].status", latest.get("status"), status, "align_platinum_history_status")
+                latest["PFI_days"] = str(pfi_days)
+                latest["status"] = status
+
+    # Relapse evidence for biochemical relapse
+    relapse = case_core.get("RELAPSE_DATE") or {}
+    if relapse.get("type") == "Biochemical":
+        evidence = relapse.get("evidence") or ""
+        if not evidence:
+            biomarkers = (case_core.get("BIOMARKERS") or {})
+            ca125 = biomarkers.get("CA125")
+            if ca125:
+                new_evidence = f"CA125 {ca125}"
+                record_fix("CASE_CORE.RELAPSE_DATE.evidence", evidence, new_evidence, "fill_relapse_evidence")
+                relapse["evidence"] = new_evidence
+                case_core["RELAPSE_DATE"] = relapse
+
+    # Timeline ordering
+    events = timeline.get("events")
+    if isinstance(events, list) and events:
+        indexed = []
+        for idx, ev in enumerate(events):
+            ev_date = _parse_date_ymd(ev.get("date"))
+            indexed.append((ev_date, idx, ev))
+        indexed.sort(key=lambda x: (x[0] is None, x[0] or datetime.min.date(), x[1]))
+        new_events = [x[2] for x in indexed]
+        if new_events != events:
+            record_fix("TIMELINE.events", f"{len(events)} events", f"{len(new_events)} events (reordered)", "sort_timeline_by_date")
+            timeline["events"] = new_events
+
+    parsed["CASE_CORE"] = case_core
+    parsed["TIMELINE"] = timeline
+    return parsed, fixes
+
+
+def run_ehr_review(
+    client,
+    deployment: str,
+    review_system_prompt: str,
+    source_text: str,
+    extracted_json: Dict[str, Any],
+    *,
+    max_completion_tokens: int,
+) -> Dict[str, Any]:
+    user = (
+        "SOURCE_TEXT:\n" + (source_text or "") +
+        "\n\nEXTRACTED_JSON:\n" + json.dumps(extracted_json, ensure_ascii=False, indent=2)
+    )
+    content, req_id, err, tokens, finish = call_extract_once(
+        client, deployment, review_system_prompt, user, max_completion_tokens=max_completion_tokens
+    )
+    parsed, status = try_parse_json(content)
+    return {
+        "content": content,
+        "parsed": parsed,
+        "parse_status": status,
+        "tokens": tokens,
+        "finish": finish,
+        "req_id": req_id,
+        "err": err,
+    }
 
 
 def repair_json_once(client, deployment, bad_json_text, *, max_completion_tokens):
@@ -312,6 +468,7 @@ def process_file(
     # Load EHR prompt config
     cfg_ehr = load_prompt_config(prompt_path)
     system_ehr = build_system_prompt(cfg_ehr, force_english=True)  # always English for EHR extraction
+    review_system, _ = build_review_prompt(cfg_ehr)
 
     # Count total lines (keep tqdm total, but stream processing)
     with open(input_path, "r", encoding="utf-8") as fr:
@@ -376,10 +533,13 @@ def process_file(
             src_for_llm = prepend_document_time(src, Time_val)
 
             pbar.set_description(f"{idx}/{total} | {patient_id_safe}")
+            record_t0 = time.time()
 
             # -------------------------------
             # 1) MAIN EHR EXTRACTION
             # -------------------------------
+            print(f"[step] extract_ehr start | patient_id={patient_id_safe}")
+            t0 = time.time()
             ehr_content, req_id, err, tokens, finish, errs, attempts = call_with_retry(
                 call_extract_once,
                 client,
@@ -390,6 +550,7 @@ def process_file(
                 max_completion_tokens=max_completion_tokens,
                 verbose=verbose,
             )
+            print(f"[step] extract_ehr done | finish={finish} tokens={tokens} err={err} elapsed={time.time()-t0:.2f}s")
 
             parsed, status = try_parse_json(ehr_content)
 
@@ -401,6 +562,44 @@ def process_file(
             # Remove internal fields if parsed
             if parsed is not None:
                 parsed = strip_internal_fields(parsed)
+
+            # -------------------------------
+            # 1b) Review + auto-fix (if parsed)
+            # -------------------------------
+            review_self = None
+            review_validator = None
+            review_fixes: List[Dict[str, Any]] = []
+            if parsed is not None:
+                print("[step] review_self start")
+                t0 = time.time()
+                review_self = run_ehr_review(
+                    client=client,
+                    deployment=deployment,
+                    review_system_prompt=review_system,
+                    source_text=src_for_llm,
+                    extracted_json=parsed,
+                    max_completion_tokens=min(4000, max_completion_tokens),
+                )
+                issues_self = (review_self.get("parsed") or {}).get("issues") or []
+                print(f"[step] review_self done | parse_status={review_self.get('parse_status')} issues={len(issues_self)} elapsed={time.time()-t0:.2f}s")
+                print("[step] review_validator start")
+                t0 = time.time()
+                review_validator = run_ehr_review(
+                    client=client,
+                    deployment=deployment,
+                    review_system_prompt=review_system,
+                    source_text=src_for_llm,
+                    extracted_json=parsed,
+                    max_completion_tokens=min(4000, max_completion_tokens),
+                )
+                issues_validator = (review_validator.get("parsed") or {}).get("issues") or []
+                print(f"[step] review_validator done | parse_status={review_validator.get('parse_status')} issues={len(issues_validator)} elapsed={time.time()-t0:.2f}s")
+                print("[step] auto_fix start")
+                t0 = time.time()
+                parsed, review_fixes = apply_auto_fixes(parsed)
+                print(f"[step] auto_fix done | fixes={len(review_fixes)} elapsed={time.time()-t0:.2f}s")
+            else:
+                print("[step] review skipped | reason=extract_parse_failed")
 
             # Attempt repair if JSON broken
             if parsed is None and enable_json_repair and (ehr_content or "").strip():
@@ -461,9 +660,16 @@ def process_file(
                 "repair_used": repair_used,
                 "repair_parse_status": repair_parse_status,
                 "repair_raw": repair_raw,
+                "review": {
+                    "self": review_self,
+                    "validator": review_validator,
+                    "auto_fixes": review_fixes,
+                },
             }
 
+            print("[step] write_output")
             fw.write(compact_json_line(out) + "\n")
+            print(f"[step] record_done | elapsed={time.time()-record_t0:.2f}s")
 
             # -------------------------------
             # Optional: TXT preview output

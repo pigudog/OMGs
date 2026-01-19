@@ -1,0 +1,18 @@
+====================
+QUESTION:
+{}
+
+RESPONSE:
+Final Assessment:
+Disseminated metastatic pelvic malignancy with liver, presacral/sacral, mesenteric, rectal, and right iliac bone involvement [@2022-12-29|CT; @2022-12-29|MR], severe anemia [@20230103|5600862], but histologic type, primary site, prior treatments, and performance status remain unknown and prevent evidence-based systemic regimen selection.
+
+Core Treatment Strategy:
+- Urgently obtain and review all surgical/biopsy pathology with IHC; pathologist to issue integrated working diagnosis and origin (currently unknown).  
+- Collect complete treatment history, ECOG, symptom burden, and anemia/bleeding workup; arrange transfusion/supportive care to correct Hgb before therapy [@20230103|5600862].  
+- Request somatic tumor NGS including MSI/TMB and formal clarification of ATM p.Y316C classification with genetics lab [@OH2203828|2022-04-18].  
+- Consider whole-body FDG PET/CT to refine bone/peritoneal mapping and biopsy targeting, without delaying palliative systemic planning justified by CT/MR [@2022-12-29|CT; @2022-12-29|MR].  
+
+Change Triggers:
+- If pathology and history define primary site and prior lines, then finalize palliative systemic regimen and any symptom-directed local therapies.  
+- If ECOG poor, uncontrolled anemia/bleeding, or patient prefers comfort-focused care, then prioritize best supportive care over aggressive systemic treatment.
+

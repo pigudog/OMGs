@@ -158,6 +158,15 @@ class Agent:
 
     def _build_initial_messages(self):
         system_text = self.instruction.strip()
+        # Guard against oversized system prompts (can trigger API errors or truncation)
+        sys_tokens = self._estimate_tokens([{"role": "system", "content": system_text}])
+        if sys_tokens > self.max_prompt_tokens:
+            budget = max(64, int(self.max_prompt_tokens))
+            system_text = self._truncate_text_keep_head_tail(system_text, budget)
+            print(
+                f"[WARNING] System prompt for '{self.role}' exceeded token budget "
+                f"({sys_tokens} > {self.max_prompt_tokens}). Truncated to fit."
+            )
         self.messages = [{"role": "system", "content": system_text}]
 
         for ex in self.examplers:
@@ -194,6 +203,19 @@ class Agent:
         # Keep tail by default (often preserves output template and latest constraints)
         ids = ids[-max_tokens:]
         return self._encoder.decode(ids)
+
+    def _truncate_text_keep_head_tail(self, text: str, max_tokens: int, head_ratio: float = 0.6) -> str:
+        """Truncate by keeping head + tail to preserve rules and latest facts."""
+        if not text or max_tokens <= 0:
+            return ""
+        ids = self._encoder.encode(text)
+        if len(ids) <= max_tokens:
+            return text
+        head_tokens = max(1, int(max_tokens * head_ratio))
+        tail_tokens = max_tokens - head_tokens
+        head_ids = ids[:head_tokens]
+        tail_ids = ids[-tail_tokens:] if tail_tokens > 0 else []
+        return self._encoder.decode(head_ids) + "\n...\n" + self._encoder.decode(tail_ids)
 
     def _trim_messages_to_budget(self, messages: List[Dict[str, str]], max_prompt_tokens: int) -> List[Dict[str, str]]:
         """Keep system + most recent turns within max_prompt_tokens. ALWAYS keep the latest message.

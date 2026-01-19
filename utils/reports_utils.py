@@ -396,7 +396,7 @@ def save_case_html_report(
   </details>
 
   <details class=\"mt\">
-    <summary>Global Guideline RAG</summary>
+    <summary>Guideline + PubMed RAG</summary>
     <h3>RAG Query</h3>
     __RAG_QUERY__
     <h3>Evidence Pack (top-k)</h3>

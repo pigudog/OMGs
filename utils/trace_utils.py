@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
+import re
+import re
 from datetime import datetime, timedelta
 from .console_utils import Color
 from .time_utils import parse_dt
@@ -44,7 +46,7 @@ class TraceLogger:
             "flowchart TD\n"
             "  A[Load Case + Fingerprint] --> B[Load Reports]\n"
             "  B --> C[Report Selection per Role]\n"
-            "  C --> D[Global Guideline RAG]\n"
+            "  C --> D[Guideline+PubMed RAG]\n"
             "  D --> E[Init Specialist Agents]\n"
             "  E --> F[MDT Discussion Engine]\n"
             "  F --> G[Trial Matching]\n"
@@ -69,6 +71,76 @@ def preview_text(x: Any, n: int = 160) -> str:
     s = "" if x is None else str(x)
     s = s.replace("\n", " ").strip()
     return s if len(s) <= n else (s[:n] + "…")
+
+
+_EVIDENCE_TAG_RE = re.compile(r"\[@(?:guideline|pubmed):", re.IGNORECASE)
+_EVIDENCE_CUES = [
+    "guideline",
+    "trial",
+    "nccn",
+    "esmo",
+    "parp",
+]
+
+
+def warn_missing_evidence_tags(
+    text: str,
+    role: str,
+    trace: Optional["TraceLogger"] = None,
+    max_preview: int = 160,
+) -> bool:
+    """Warn when literature-style claims lack guideline/pubmed tags."""
+    if not text:
+        return False
+    if _EVIDENCE_TAG_RE.search(text):
+        return False
+    lower = text.lower()
+    if not any(cue in lower for cue in _EVIDENCE_CUES):
+        return False
+    preview = preview_text(text, max_preview)
+    print(f"{Color.WARNING}⚠ Evidence tags missing in {role}: {preview}{Color.RESET}")
+    if trace is not None:
+        trace.emit("evidence_tag_warning", {"role": role, "preview": preview})
+    return True
+
+
+_EVIDENCE_TAG_RE = re.compile(r"\[@(?:guideline|pubmed):", re.IGNORECASE)
+_EVIDENCE_CUES = [
+    "guideline",
+    "evidence",
+    "trial",
+    "parp",
+    "maintenance",
+    "platinum-sensitive",
+    "platinum resistant",
+    "platinum-resistant",
+    "bevacizumab",
+    "immunotherapy",
+    "study",
+    "meta-analysis",
+    "randomized",
+]
+
+
+def warn_missing_evidence_tags(
+    text: str,
+    role: str,
+    trace: Optional["TraceLogger"] = None,
+    max_preview: int = 160,
+) -> bool:
+    """Warn when literature-style claims lack guideline/pubmed tags."""
+    if not text:
+        return False
+    if _EVIDENCE_TAG_RE.search(text):
+        return False
+    lower = text.lower()
+    if not any(cue in lower for cue in _EVIDENCE_CUES):
+        return False
+    preview = preview_text(text, max_preview)
+    print(f"{Color.WARNING}⚠ Evidence tags missing in {role}: {preview}{Color.RESET}")
+    if trace is not None:
+        trace.emit("evidence_tag_warning", {"role": role, "preview": preview})
+    return True
 
 
 def print_selected_reports_table(context: Dict[str, Dict[str, List[Dict[str, Any]]]], roles: List[str]):
@@ -108,21 +180,30 @@ def print_selected_reports_table(context: Dict[str, Dict[str, List[Dict[str, Any
 
 
 def print_rag_hits_table(rag_raw: List[Dict[str, Any]], max_rows: int = 8):
-    """PrettyTable for RAG hit inspection (doc_id/page/score + snippet preview)."""
+    """PrettyTable for RAG hit inspection (source/doc/page/score + snippet preview)."""
     if not rag_raw:
         print(f"{Color.WARNING}⚠ RAG: no evidence found.{Color.RESET}")
         return
 
-    tbl = PrettyTable(["Rank", "Score", "Doc", "Page", "Preview"])
+    tbl = PrettyTable(["Rank", "Score", "Source", "Doc/PMID", "Page", "Preview"])
     tbl.align = "l"
 
     for r in (rag_raw or [])[:max_rows]:
+        source = r.get("source") or "guideline"
+        doc_label = r.get("doc_id", "")
+        page = r.get("page", "")
+        preview = r.get("text", "")
+        if source == "pubmed":
+            doc_label = r.get("pmid") or doc_label
+            page = ""
+            preview = r.get("abstract", "") or preview
         tbl.add_row([
             r.get("rank"),
             f"{float(r.get('score', 0.0)):.4f}",
-            preview_text(r.get("doc_id", ""), 28),
-            r.get("page", ""),
-            preview_text(r.get("text", ""), 110),
+            source,
+            preview_text(doc_label, 28),
+            page,
+            preview_text(preview, 240),
         ])
 
     print(f"\n{Color.BOLD}{Color.OKBLUE}📚 RAG Hits (Top){Color.RESET}")

@@ -1,4 +1,5 @@
 from typing import Any, Dict, List, Optional, Tuple
+from collections import defaultdict
 from datetime import datetime, timedelta
 from .time_utils import safe_date10,parse_dt
 import re
@@ -7,19 +8,47 @@ import json
 # JSONL IO + id parsing
 # ============================================================
 
-def read_jsonl(path: str) -> List[Dict[str, Any]]:
+_JSONL_CACHE: Dict[str, List[Dict[str, Any]]] = {}
+_JSONL_INDEX_CACHE: Dict[str, Dict[str, List[Dict[str, Any]]]] = {}
+
+
+def read_jsonl(path: str, warn_bad_lines: bool = True, max_warn: int = 5) -> List[Dict[str, Any]]:
     data: List[Dict[str, Any]] = []
+    bad_count = 0
     with open(path, "r", encoding="utf-8") as f:
-        for line in f:
+        for idx, line in enumerate(f, start=1):
             line = line.strip()
             if not line:
                 continue
             try:
                 data.append(json.loads(line))
             except Exception:
-                # skip bad line
+                bad_count += 1
+                if warn_bad_lines and bad_count <= max_warn:
+                    preview = (line[:160] + "...") if len(line) > 160 else line
+                    print(f"[WARNING] Bad JSONL line {idx} in {path}: {preview}")
                 continue
+    if warn_bad_lines and bad_count > max_warn:
+        print(f"[WARNING] Bad JSONL lines in {path}: {bad_count} total (showing first {max_warn})")
     return data
+
+
+def _get_jsonl_index(path: str) -> Dict[str, List[Dict[str, Any]]]:
+    if not path:
+        return {}
+    if path in _JSONL_INDEX_CACHE:
+        return _JSONL_INDEX_CACHE[path]
+    data = _JSONL_CACHE.get(path)
+    if data is None:
+        data = read_jsonl(path)
+        _JSONL_CACHE[path] = data
+    index: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
+    for row in data:
+        key = str(row.get("meta_info") or "")
+        if key:
+            index[key].append(row)
+    _JSONL_INDEX_CACHE[path] = index
+    return index
 
 
 def parse_ids(text: str) -> List[str]:
@@ -45,10 +74,10 @@ def parse_ids(text: str) -> List[str]:
 # ============================================================
 
 def load_patient_labs(meta_info: str, json_path: str) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
-    data = read_jsonl(json_path)
-    # print(data)
-    patient = [d for d in data if d.get("meta_info") == meta_info]
-    # print(patient)
+    if not meta_info or not json_path:
+        return [], []
+    index = _get_jsonl_index(json_path)
+    patient = list(index.get(str(meta_info), []))
     patient.sort(key=lambda r: (parse_dt(r.get("report_date")) or datetime.min))
     timeline = [
         {
@@ -62,8 +91,10 @@ def load_patient_labs(meta_info: str, json_path: str) -> Tuple[List[Dict[str, An
 
 
 def load_patient_imaging(meta_info: str, json_path: str) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
-    data = read_jsonl(json_path)
-    patient = [d for d in data if d.get("meta_info") == meta_info]
+    if not meta_info or not json_path:
+        return [], []
+    index = _get_jsonl_index(json_path)
+    patient = list(index.get(str(meta_info), []))
     patient.sort(key=lambda r: (parse_dt(r.get("report_date")) or datetime.min))
     timeline: List[Dict[str, Any]] = []
     for rpt in patient:
@@ -84,9 +115,9 @@ def load_patient_pathology(meta_info: str, json_path: str) -> Tuple[List[Dict[st
     """Load pathology reports for a patient. Returns (timeline, full_reports)."""
     if not meta_info or not json_path:
         return [], []
-    
-    data = read_jsonl(json_path)
-    patient = [d for d in data if d.get("meta_info") == meta_info]
+
+    index = _get_jsonl_index(json_path)
+    patient = list(index.get(str(meta_info), []))
     patient.sort(key=lambda r: (parse_dt(r.get("report_date")) or datetime.min))
     timeline: List[Dict[str, Any]] = []
     for rpt in patient:
@@ -124,8 +155,8 @@ def load_patient_mutations(meta_info: str, json_path: str = "mutation_reports.js
     if not meta_info or not json_path:
         return []
 
-    data = read_jsonl(json_path)
-    patient = [d for d in data if str(d.get("meta_info")) == str(meta_info)]
+    index = _get_jsonl_index(json_path)
+    patient = list(index.get(str(meta_info), []))
     patient.sort(key=lambda r: (parse_date_any(r.get("report_date")) or datetime.min.date()))
     return patient
 

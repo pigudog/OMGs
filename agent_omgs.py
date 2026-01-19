@@ -14,7 +14,7 @@ from utils.console_utils import Color, normalize_trial_compact,safe_parse_json_b
 from utils.reports_utils import save_mdt_log,save_case_html_report
 from utils import make_cutoff,parse_dt,safe_date10,filter_before,report_range
 from utils import build_lab_timeline,build_imaging_timeline,build_pathology_timeline
-from utils import VisualConfig, TraceLogger,print_selected_reports_table,print_section,print_rag_hits_table
+from utils import VisualConfig, TraceLogger,print_selected_reports_table,print_section,print_rag_hits_table,warn_missing_evidence_tags
 from aoai import OpenAIWrapper
 from utils import load_patient_labs,load_patient_imaging,load_patient_pathology,load_patient_mutations,read_jsonl,parse_ids,parse_date_any,summarize_selected_reports
 from utils.rag_utils import build_rag_query_for_mdt,summarize_rag_evidence
@@ -45,6 +45,7 @@ def run_mdt_discussion(
     max_turn_delta_chars=900,
     max_targets_per_speaker=4,
     visit_time: Optional[str] = None,
+    trace: Optional["TraceLogger"] = None,
 ):
     """
     Run multi-round MDT discussion engine with role-based agents.
@@ -95,10 +96,13 @@ def run_mdt_discussion(
         print(f"{Color.OKGREEN} - {role}:{Color.RESET}")
         op = ag.chat(
             "Give INITIAL opinion (use ONLY your system-provided patient facts).\n"
-            "Return up to 5 bullets, each ≤20 words.\n"
-            "If key data missing, say exactly what needs updating."
+            "Return up to 3 bullets, each ≤20 words.\n"
+            "If key data missing, say exactly what needs updating.\n"
+            "At least ONE bullet must be evidence-based and include [@guideline:doc_id|page] or [@pubmed:PMID].\n"
+            "If you reference treatment strategy categories, guidelines, trials, or literature evidence, include tags [@guideline:doc_id|page] or [@pubmed:PMID]."
         )
         print(f"{Color.OKCYAN}   {role_to_emoji[role]} {op}{Color.RESET}")
+        warn_missing_evidence_tags(op, role=f"{role}/initial", trace=trace)
         initial_ops[role] = op
 
     merged = assistant.chat(
@@ -225,10 +229,13 @@ def run_mdt_discussion(
             final_op = ag.chat(
                 f"Given MDT context:\n{merged}\n\n"
                 "Provide FINAL refined plan.\n"
-                "Up to 5 bullets, each ≤20 words.\n"
-                "Any factual claim must include [@report_id|date] or say unknown."
+                "Up to 3 bullets, each ≤20 words.\n"
+                "Any factual claim must include [@report_id|date] or say unknown.\n"
+                "At least ONE bullet must be evidence-based and include [@guideline:doc_id|page] or [@pubmed:PMID].\n"
+                "If you reference treatment strategy categories, guidelines, trials, or literature evidence, include tags [@guideline:doc_id|page] or [@pubmed:PMID]."
             )
             print(f"{Color.OKGREEN}{final_op}{Color.RESET}\n")
+            warn_missing_evidence_tags(final_op, role=f"{role}/final_round_{r}", trace=trace)
             final_round_ops[round_key][role] = final_op
 
         if MDT_should_stop:
@@ -459,7 +466,7 @@ def process_omgs_multi_expert_query(
     ###########################################################################
     # GLOBAL GUIDELINE RAG
     ###########################################################################
-    print_section("3) Global Guideline RAG")
+    print_section("3) Guideline + PubMed RAG")
     rag_query_builder = Agent(
         instruction="Construct concise English MDT guideline query.",
         role="rag_query_builder",
@@ -472,15 +479,28 @@ def process_omgs_multi_expert_query(
     rag_query = build_rag_query_for_mdt(rag_query_builder, question_str)
     print("rag_query",rag_query)
     # Use global guideline RAG (respects config: use_per_role_rag / default_role)
-    from utils.rag_utils import get_global_guideline_rag
-    rag_pack, rag_raw = get_global_guideline_rag(
+    from utils.rag_utils import (
+        get_global_guideline_rag,
+        pubmed_search_pack,
+        merge_rag_packs,
+        merge_rag_raw,
+    )
+    guideline_pack, guideline_raw = get_global_guideline_rag(
         question=rag_query,
         device=device,
         topk=topk,
     )
+    pubmed_pack, pubmed_raw = pubmed_search_pack(
+        query=rag_query,
+        topk=5,
+    )
+    rag_pack = merge_rag_packs(guideline_pack, pubmed_pack)
+    rag_raw = merge_rag_raw(guideline_raw, pubmed_raw)
     
     trace.emit("rag_query", {"query": rag_query})
-    trace.emit("rag_hits", {"topk": topk, "n": len(rag_raw or [])})
+    trace.emit("rag_hits", {"source": "guideline", "topk": topk, "n": len(guideline_raw or [])})
+    trace.emit("rag_hits", {"source": "pubmed", "topk": 5, "n": len(pubmed_raw or [])})
+    trace.emit("rag_hits_merged", {"n": len(rag_raw or [])})
     if visual.enable and visual.show_tables and visual.show_rag_table:
         print_rag_hits_table(rag_raw)
 
@@ -493,7 +513,7 @@ def process_omgs_multi_expert_query(
         max_prompt_tokens=3500,
     )
     global_guideline_digest = summarize_rag_evidence(guideline_digester, rag_pack)
-    print("rag_query",global_guideline_digest)
+    print("rag_digest", global_guideline_digest)
     ###########################################################################
     # INIT SPECIALIST AGENTS
     ###########################################################################
@@ -534,6 +554,7 @@ def process_omgs_multi_expert_query(
         num_rounds=2,
         num_turns=2,
         visit_time=str(time) if time else None,
+        trace=trace,
     )
     trace.emit("mdt_discussion_end", {"merged_chars": len(merged or "")})
 
@@ -599,6 +620,7 @@ def process_omgs_multi_expert_query(
         clinic_time=time
     )
     print(final_output)
+    warn_missing_evidence_tags(final_output, role="chair/final_output", trace=trace)
     trace.emit("final_output_end", {"final_output_chars": len(final_output or "")})
 
 
