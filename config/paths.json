@@ -4,7 +4,7 @@
     "imaging_reports": "files/imaging_reports.jsonl",
     "pathology_reports": null,
     "mutation_reports": "files/mutation_reports.jsonl",
-    "trials": "all_trials_filtered.json"
+    "trials": "files/all_trials_filtered.json"
   },
   "rag_store": {
     "base_dir": "rag_store",

@@ -1,6 +1,18 @@
-from typing import Any, Dict, List, Optional
-# utils/tools.py
+"""Console utilities - Pure helper functions for OMGs pipeline.
+
+This module contains:
+- Color: ANSI color codes for terminal output
+- normalize_trial_compact: Normalize trial records to compact schema
+- safe_parse_json_block: Safe JSON parsing from model outputs
+- question_to_text: Normalize question input to stable text
+"""
+
+from typing import Any, Dict
+import json
+
+
 class Color:
+    """ANSI color codes for terminal output."""
     HEADER = "\033[95m"
     OKBLUE = "\033[94m"
     OKCYAN = "\033[96m"
@@ -10,7 +22,7 @@ class Color:
     BOLD = "\033[1m"
     RESET = "\033[0m"
 
-# Helper for trial normalization (bilingual/heterogeneous fields)
+
 def normalize_trial_compact(t: Dict[str, Any]) -> Dict[str, Any]:
     """Normalize heterogeneous trial records (English/Chinese keys) into a compact schema.
 
@@ -145,10 +157,12 @@ def normalize_trial_compact(t: Dict[str, Any]) -> Dict[str, Any]:
         "_raw": t,
     }
 
-###############################################################################
-# 🔧 Helper: safe JSON parsing for model outputs
-###############################################################################
+
 def safe_parse_json_block(text: str) -> dict:
+    """Safe JSON parsing for model outputs.
+    
+    Attempts to extract and parse JSON from potentially malformed model output.
+    """
     text = (text or "").strip()
     if not text:
         return {}
@@ -165,97 +179,14 @@ def safe_parse_json_block(text: str) -> dict:
             return {}
     return {}
 
-# --- Stable JSON/text helpers for case fingerprinting and normalization ---
+
 def _stable_json_dumps(x) -> str:
     """Deterministically serialize dict/list for hashing/logging."""
     return json.dumps(x, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
 
 def question_to_text(question) -> str:
     """Normalize question input (dict/list/str/other) into a stable JSON/text string."""
     if isinstance(question, (dict, list)):
         return _stable_json_dumps(question)
     return str(question)
-
-###############################################################################
-# 8. CHAIR FINAL OUTPUT
-###############################################################################
-def generate_final_output(chair_agent, all_round_ops, clinic_time):
-    expert_final = json.dumps(all_round_ops, ensure_ascii=False, indent=2)
-
-    prompt = f"""
-As the MDT chair for gynecologic oncology, you are seeing the patient at OUTPATIENT TIME: {clinic_time}.
-Based on PATIENT FACTS + MDT discussion + FINAL refined plans from all experts, determine the CURRENT best management plan for this visit.
-
-STRICT RULES:
-- Any factual statement about past tests/treatments must include [@report_id|date] or say unknown.
-- Any statement derived from guideline or PubMed literature must include [@guideline:doc_id|page] or [@pubmed:PMID].
-- If you cite guideline/PubMed evidence in Core Treatment Strategy or Change Triggers, include at least one tag in that bullet.
-- If experts disagree, pick the safest plan and state the key uncertainty.
-
-# FINAL REFINED PLANS (All experts, last round)
-{expert_final}
-
-# Response Format
-Final Assessment:
-<1–3 sentences: summarize histology/biology, current disease status, and key uncertainties>
-
-Core Treatment Strategy:
-- < ≤20 words concrete decision >
-- < ≤20 words concrete decision >
-- < ≤20 words concrete decision >
-- < ≤20 words concrete decision >
-
-Change Triggers:
-- < ≤20 words “if X, then adjust management from A to B” >
-- < ≤20 words “if X, then adjust management from A to B” >
-"""
-    return chair_agent.chat(prompt)
-
-
-
-###############################################################################
-# ⭐ Assistant Trial Suggestion
-###############################################################################
-import json
-
-def assistant_trial_suggestion(agent, case_json_str, trials_list):
-    prompt = f"""
-You are an MDT assistant for gynecologic oncology clinical trial matching.
-
-CRITICAL BEHAVIOR:
-- You MUST NOT ask the user any questions.
-- You MUST NOT request additional information.
-- You MUST NOT output anything except the required template.
-- Use ONLY the provided PATIENT CASE text and AVAILABLE TRIALS list.
-- If eligibility is unclear due to missing key facts, you MUST output None.
-
-PATIENT CASE (facts only; do not infer):
-{case_json_str}
-
-AVAILABLE TRIALS (compact; use id/name exactly as shown):
-{json.dumps([
-    normalize_trial_compact(t)
-    for t in (trials_list or [])[:40]
-], ensure_ascii=False, indent=2)}
-
-DECISION RULE (be conservative):
-Recommend ONE trial ONLY IF ALL are true:
-1) Cancer type / primary site clearly matches.
-2) Disease setting clearly matches (e.g., recurrent/advanced/metastatic and line is not fundamentally unclear).
-3) Required biomarker/subtype is explicitly present in case text (if trial requires it).
-4) No more than 2 critical eligibility confirmations remain.
-
-If ANY of the above is not satisfied -> output None.
-
-OUTPUT TEMPLATE (EXACT; no extra text):
-
-Trial Recommendation:
-- id: <trial id or None>
-- name: <trial name or None>
-- Reason: <1 short sentence>
-- Missing eligibility confirmations (0-2 items):
-  - item1 (or "None")
-  - item2
-""".strip()
-    answer = agent.chat(prompt).strip()
-    return answer

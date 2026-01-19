@@ -25,24 +25,32 @@
 
 ## 🏗️ System Architecture
 
+**Central Host + Agent Servers Architecture:**
+
 ```
 Input case data
     ↓
-[1] Load reports (lab / imaging / pathology / mutation)
+[Central Host: Orchestrator]
     ↓
-[2] Role-based report selection (permissions)
+[Agent Servers]
+    ├── [1] Case Parser: Extract/Structure EHR
+    ├── [2] Reports Selector: Load & filter reports per role
+    ├── [3] Evidence Search: RAG (guideline + PubMed)
+    └── [4] Info Delivery: Build role-specific case views
     ↓
-[3] Global guideline RAG (ChromaDB + embeddings)
+[Central Host: Experts]
+    ├── Initialize 5 expert agents (LLM-powered)
+    └── Each agent receives: case view + selected reports + guideline digest
     ↓
-[4] Initialize expert agents (5 roles)
+[Central Host: Orchestrator]
+    ├── [5] MDT discussion engine (2 rounds × 2 turns)
+    └── [6] Clinical trial matching (optional)
     ↓
-[5] MDT discussion engine (2 rounds × 2 turns)
+[Central Host: Decision]
+    └── [7] Final MDT decision output (Chair synthesis)
     ↓
-[6] Clinical trial matching (optional)
-    ↓
-[7] Final MDT decision output
-    ↓
-Save artifacts (JSON + TXT + HTML)
+[Agent Servers: Trace]
+    └── Save artifacts (JSON + TXT + HTML)
 ```
 
 ### Roles and Permissions
@@ -105,12 +113,23 @@ All data paths can be overridden via `config/paths.json` (see **Advanced Configu
 
 ### 4. Run the system
 
+**Step 1: Extract and structure EHR data**
+```bash
+python ehr_structurer.py \
+  --input ./input_ehr/test_guo.jsonl \
+  --output ./output_ehr/test_guo.jsonl \
+  --deployment gpt-5-mini \
+  --prompts ./config/prompts.json \
+  --txt-dir ./output_ehr/txt_out
+```
+
+**Step 2: Run MDT pipeline**
 ```bash
 python main.py \
-    --input_path input_ehr/test_guo.jsonl \
-    --model gpt-5.1 \
-    --agent omgs \
-    --num_samples 10
+  --input_path ./output_ehr/test_guo.jsonl \
+  --agent omgs \
+  --model gpt-5.1 \
+  --num_samples 10
 ```
 
 ## 📖 Usage
@@ -179,40 +198,55 @@ And to `mdt_logs/`:
 ```
 OMGs/
 ├── main.py                 # entry script (MDT pipeline)
-├── agent_omgs.py           # MDT pipeline core
-├── ehr_structurer.py       # EHR extraction / structuring
+├── ehr_structurer.py       # EHR extraction / structuring (legacy entry point)
 ├── pdf_to_rag.py           # RAG corpus/index builder
 ├── requirements.txt        # dependencies
 ├── README.md               # this file
 │
-├── aoai/                   # Azure OpenAI wrapper
+├── host/                   # Central Host (LLM-powered orchestration layer)
+│   ├── __init__.py
+│   ├── orchestrator.py     # MDT discussion engine + main pipeline
+│   ├── experts.py          # Expert agent definitions (ROLES, ROLE_PROMPTS, init_expert_agent)
+│   └── decision.py         # Final decision-making (generate_final_output)
+│
+├── servers/                # Agent Servers (functional service layer)
+│   ├── __init__.py
+│   ├── case_parser.py      # Case Parser (EHR extraction, same as ehr_structurer.py)
+│   ├── info_delivery.py    # Information Delivery (role-specific case views)
+│   ├── evidence_search.py  # Evidence Search (RAG: guideline + PubMed)
+│   ├── reports_selector.py # Reports Selector (clinical report selection)
+│   └── trace.py            # Trace logs (observability + reporting)
+│
+├── core/                   # Core infrastructure
+│   ├── __init__.py
+│   ├── agent.py            # Agent class (stateful LLM wrapper)
+│   ├── client.py           # Azure OpenAI client initialization
+│   └── config.py           # Configuration loading (paths, prompts, data utils)
+│
+├── aoai/                   # Azure OpenAI wrapper (preserved)
 │   ├── wrapper.py
 │   └── logger.py
 │
-├── utils/                  # utilities
-│   ├── core.py             # Agent class + helpers
-│   ├── role_utils.py       # roles and agent init
-│   ├── rag_utils.py        # RAG retrieval
-│   ├── select_utils.py     # report selection
-│   ├── omgs_reports.py     # HTML/Markdown reporting
-│   ├── console_utils.py    # console formatting
-│   ├── time_utils.py       # timeline utilities
-│   └── trace_utils.py      # observability
+├── utils/                  # Pure utility functions
+│   ├── __init__.py
+│   ├── console_utils.py     # Console formatting (Color, JSON parsing, etc.)
+│   └── time_utils.py       # Timeline utilities (date parsing, filtering)
 │
-├── config/                 # configs
-│   ├── prompts.json
-│   └── paths.json
+├── config/                 # Configuration files
+│   ├── prompts.json        # EHR extraction prompts
+│   ├── mdt_prompts.json    # MDT discussion prompts
+│   └── paths.json          # Data and output paths
 │
-├── files/                  # data files
+├── files/                  # Data files
 │   ├── lab_reports_summary.jsonl
 │   ├── imaging_reports.jsonl
 │   └── mutation_reports.jsonl
 │
-├── input_ehr/              # input cases
+├── input_ehr/              # Input cases
 │   ├── test_guo.jsonl
 │   └── ...
 │
-├── output_answer/          # outputs
+├── output_answer/          # Outputs
 │   └── omgs_YYYY-MM-DD_HH-MM-SS/
 │       ├── results.json
 │       └── results.txt
@@ -244,25 +278,50 @@ Key packages (see `requirements.txt` for details):
 
 ### Basic usage
 
+**Two-step process:**
+
+1. **Extract EHR** (if starting from raw notes):
 ```bash
-python main.py --input_path input_ehr/test_guo.jsonl --num_samples 5
+python ehr_structurer.py \
+  --input ./input_ehr/test_guo.jsonl \
+  --output ./output_ehr/test_guo.jsonl \
+  --deployment gpt-5-mini \
+  --prompts ./config/prompts.json \
+  --txt-dir ./output_ehr/txt_out
+```
+
+2. **Run MDT pipeline**:
+```bash
+python main.py --input_path ./output_ehr/test_guo.jsonl --agent omgs --num_samples 5
 ```
 
 ### Use a different model
 
 ```bash
 python main.py \
-    --input_path input_ehr/test_guo.jsonl \
+    --input_path ./output_ehr/test_guo.jsonl \
     --model gpt-4 \
+    --agent omgs \
     --num_samples 10
 ```
 
 ### Batch processing
 
 ```bash
+# Step 1: Extract all EHR files
 for file in input_ehr/*.jsonl; do
-    python main.py --input_path "$file"
+    python ehr_structurer.py \
+      --input "$file" \
+      --output "output_ehr/$(basename $file)" \
+      --deployment gpt-5-mini \
+      --prompts ./config/prompts.json
 done
+
+# Step 2: Run MDT on all extracted files
+for file in output_ehr/*.jsonl; do
+    python main.py --input_path "$file" --agent omgs
+done
+```
 
 ### EHR extraction / structuring (raw → JSONL)
 

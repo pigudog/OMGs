@@ -1,0 +1,26 @@
+{
+  "mdt_discussion": {
+    "initial_opinion": "Give INITIAL opinion (use ONLY your system-provided patient facts).\nReturn up to 3 bullets, each ≤20 words.\nIf key data missing, say exactly what needs updating.\nAt least ONE bullet must be evidence-based and include [@guideline:doc_id|page] or [@pubmed:PMID].\nIf you reference treatment strategy categories, guidelines, trials, or literature evidence, include tags [@guideline:doc_id|page] or [@pubmed:PMID].",
+
+    "summarize_initial_template": "Summarize expert opinions concisely for MDT.\n{opinions}\n\nOutput:\nKey Knowledge:\n- ...\nControversies:\n- ...\nMissing Info:\n- ...\nWorking Plan:\n- ...",
+
+    "round_summary_template": "MDT global knowledge:\n{merged}\n\nRe-summarize concisely. Must include:\nKey Knowledge:\n- ...\nControversies:\n- ...\nMissing Info:\n- ...\nWorking Plan:\n- ...",
+
+    "speak_prompt_template": "ROLE: {role}. VISIT: {visit_time}\nDefault is NOT to speak. Speak ONLY if: conflict | safety | missing-critical | new-critical.\n\nCONTEXT (latest):\n{context}\n\nAllowed targets: [{allowed_targets}]\nReturn ONE-LINE JSON only:{{\"speak\":\"yes/no\",\"messages\":[{{\"target\":\"<role>\",\"message\":\"<1-2 sentences>\",\"why\":\"conflict|safety|missing|new\"}}]}}",
+
+    "final_plan_template": "Given MDT context:\n{merged}\n\nDISCUSSION HISTORY (this round):\n{discussion_history}\n\nProvide FINAL refined plan based on the above context and discussions.\nUp to 3 bullets, each ≤20 words.\nAny factual claim must include [@report_id|date] or say unknown.\nAt least ONE bullet must be evidence-based and include [@guideline:doc_id|page] or [@pubmed:PMID].\nIf you reference treatment strategy categories, guidelines, trials, or literature evidence, include tags [@guideline:doc_id|page] or [@pubmed:PMID].\nIf discussions mentioned specific evidence, you may reference it with appropriate tags."
+  },
+
+  "rag": {
+    "query_builder": "You are preparing a single concise English query to retrieve guideline/clinical evidence for this ovarian cancer MDT case.\n\n# STRUCTURED_CASE_TEXT\n{question}\n\nWrite ONE line (<=40 words) focusing on:\n- tumor type/histology and platinum status;\n- key metastases / disease extent;\n- key molecular markers if mentioned (e.g., BRCA/HRD/MSI/PD-L1/ATM);\n- major clinical constraints (e.g., anemia, organ function, performance).\nDo NOT mention report_ids, dates, hospital names, or patient identifiers.\nIf KEY FACTS include histology or platinum/genetic status, you MUST include them.\nDo NOT say 'unknown' if a KEY FACT is provided.\nOutput ONLY the query text.",
+
+    "evidence_summarizer": "# RAG CHUNKS\n{rag_pack}\n\n{count_info}Summarize into evidence bullets for MDT decision-making.\nRules:\n- Each bullet must be actionable evidence (guideline/trial-based).\n- Do NOT restate patient-specific facts.\n- Avoid long quotes.\n- Each bullet MUST include at least one evidence tag: [@guideline:doc_id|page] or [@pubmed:PMID].\n- Output ONLY plain text bullets, one per RAG result, in order."
+  },
+
+  "agents": {
+    "rag_query_builder": "Construct concise English MDT guideline query.",
+    "global_guideline_digester": "Digest guideline chunks into <=8 evidence bullets; no patient facts.",
+    "assistant": "You are MDT assistant. Summarize only. Do not decide treatment.",
+    "trial_selector": "You are an MDT assistant for clinical trial matching in gynecologic oncology. Follow the trial recommendation gate strictly and recommend at most ONE trial."
+  }
+}
