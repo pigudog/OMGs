@@ -4,14 +4,14 @@
     "title": "Updates of Pathogenesis, Diagnostic and Therapeutic Perspectives for Ovarian Clear Cell Carcinoma.",
     "abstract": "Ovarian clear cell carcinoma (OCCC) is a special pathological type of epithelial ovarian carcinoma (EOC) and has a high prevalence in Asia without specific molecular subtype classification. Endometriosis is a recognized precancerous lesion that carries 3-fold increased risk of OCCC. Ovarian endometrioid carcinoma, which also originates from endometriosis, shares several features with OCCC, including platinum resistance and younger age at diagnosis. Patients with OCCC have about a 2.5 to 4 times greater risk of having a venous thromboembolism (VTE) compared with other EOC, and OCCC tends to metastasize through lymphatic vesicular and peritoneal spread as opposed to hematogenous metastasis. There is only mild elevation of the conventional biomarker CA125. Staging surgery or optimal cytoreduction combined with chemotherapy is a common therapeutic strategy for OCCC. However, platinum resistance commonly portends a poor prognosis, so novel treatments are urgently needed. Targeted therapy and immunotherapy are currently being studied, including PARP, EZH2, and ATR inhibitors combined with the synthetic lethality of ARID1A-dificiency, and MAPK/PI3K/HER2, VEGF/bFGF/PDGF, HNF1β, and PD-1/PD-L1 inhibitors. Advanced stage, suboptimal cytoreduction, platinum resistance, lymph node metastasis, and VTE are major prognostic predictors for OCCC. We focus on update pathogenesis, diagnostic methods and therapeutic approaches to provide future directions for clinical diagnosis and treatment of OCCC.",
     "metadata": {
-      "rank": 1,
-      "score": 0.699963030510074,
+      "rank": 2,
+      "score": 0.707230872525785,
       "journal": "J Cancer",
       "pub_date": "2021-01-01",
       "doi": "10.7150/jca.53395",
       "impact_factor": 3.2
     },
-    "cached_at": "2026-01-19T08:37:13.534835"
+    "cached_at": "2026-01-19T08:46:02.364458"
   },
   "35401005": {
     "pmid": "35401005",
@@ -33,27 +33,27 @@
     "abstract": "NUCOLL43 is a novel ovarian clear cell carcinoma (O-CCC) cell line that arose from a primary culture of a patient's malignant ascites. The cells grow reliably in cell culture with a doubling time of approx. 45 hours and form colonies at high efficiency. They have a very high degree of loss of heterozygosity (LOH) affecting approximately 85% of the genome, mostly copy neutral and almost identical to the original tumor. The cells express epithelial (pan-cytokeratin) and mesenchymal (vimentin) characteristics, CA125 and p16, like the original tumor. They also express ARID1A but not HNF-1β and, like the original tumor, and are negative for p53 expression, with no evidence of p53 function. NUCOLL43 cells express all other DNA damage response proteins investigated and have functional homologous recombination DNA repair. They are insensitive to cisplatin, the PARP inhibitor rucaparib, and MDM2 inhibitors but are sensitive to camptothecin, paclitaxel, and NVP-BEZ235. The NUCOLL43 cell line represents a distinct subtype of O-CCC that is p53 and HNF-1β null but expresses ARID1A. Its high degree of similarity with the original tumor genomically and proteomically, as well as the high level of LOH, make this an interesting cell line for O-CCC research. It has been deposited with Ximbio.",
     "metadata": {
       "rank": 4,
-      "score": 0.6784769128270818,
+      "score": 0.6865152330393968,
       "journal": "Cancer Med",
       "pub_date": "2018-09-01",
       "doi": "10.1002/cam4.1724",
       "impact_factor": 3.1
     },
-    "cached_at": "2026-01-19T08:10:38.050607"
+    "cached_at": "2026-01-19T08:46:02.366542"
   },
   "36591227": {
     "pmid": "36591227",
     "title": "Case report: Durable response after pembrolizumab in combination with radiation - induced abscopal effect in platinum - refractory metastatic endometrial clear cell carcinoma.",
     "abstract": "Advanced endometrial clear cell carcinoma (CCC) tends to have poor prognosis owing to aggressive clinical behavior and poor response to conventional chemotherapy. Herein, we report a case of platinum-refractory recurrent ECCC successfully treated with the combination of pembrolizumab, localized radiotherapy and a few cycles of chemotherapy with an extremely durable response even after cessation of immunotherapy for 3 years at the time of publication.",
     "metadata": {
-      "rank": 2,
-      "score": 0.6972808900187843,
+      "rank": 1,
+      "score": 0.7093893442757309,
       "journal": "Front Immunol",
       "pub_date": "2022-01-01",
       "doi": "10.3389/fimmu.2022.1079253",
       "impact_factor": 5.9
     },
-    "cached_at": "2026-01-19T08:37:13.535801"
+    "cached_at": "2026-01-19T08:46:02.363448"
   },
   "34916808": {
     "pmid": "34916808",
@@ -75,13 +75,13 @@
     "abstract": "Endometriosis-associated ovarian cancer (EAOC) is rare, occurring approximately in 1% of women with ovarian endometriosis. The main histological types are endometrioid adenocarcinoma and clear cell carcinoma (CCC), with the latter being the least common.\n          \nIn our hospital, we recently summarized two patients with ovarian clear cell carcinoma with similar characteristics. They all had endometriosis for a long time and had undergone ovarian cyst removal due to a chocolate cyst. Unfortunately, the cyst recurred after surgery, and the histological diagnosis was clear cell carcinoma. In case 1, the expression of P53 was found in the tumor by regular examination, and the stage was IIB. In Case 2, we found it in intraoperative freezing; the stage was IA. Case 1 has been treated with the TP regimen six times, and the survival period has reached one year. Case 2 had a survival period of 6 years after completing six TP regimen treatments. Clinicians should pay attention to patients with a long history of endometriosis and postoperative recurrence of ovarian cysts accompanied by serum CA-125 of more than 200U/mL. Imaging examination has a good prospect in diagnosing malignant transformation of endometriosis, especially PET-CT.\n          \nThis case report highlights the risk factors related to the formation of ovarian clear cell carcinoma and suggests that the follow-up of patients with ovarian endometriosis is essential because of its recurrence characteristics. Radical surgery and postoperative platinum-containing chemotherapy are the primary treatment methods at present.",
     "metadata": {
       "rank": 3,
-      "score": 0.6730853434243357,
+      "score": 0.6988134562840226,
       "journal": "Int J Womens Health",
       "pub_date": "2023-01-01",
       "doi": "10.2147/IJWH.S418135",
       "impact_factor": 2.6
     },
-    "cached_at": "2026-01-19T08:37:13.536613"
+    "cached_at": "2026-01-19T08:46:02.365447"
   },
   "36275748": {
     "pmid": "36275748",
@@ -186,14 +186,14 @@
     "title": "Case report: Local cryoablation combined with pembrolizumab to eliminate lung metastases from ovarian clear cell carcinoma.",
     "abstract": "Ovarian clear cell carcinoma has a high recurrence rate with poor prognosis and is generally not sensitive to conventional platinum-based chemotherapy. Its less frequent occurrence of mutations such as BRCA limited the targeted therapies. Immunotherapy is not currently recommended as a first-line agent for ovarian cancer, and most patients are not yet able to benefit from it. Cryoablation can be used to treat solid systemic tumors, including ovarian cancer metastases, and can produce a limited anti-tumor immune response. The anti-tumor effects of cryoablation combined with immunotherapy have not been adequately confirmed. This study reports a case of a patient with ovarian clear cell carcinoma who underwent conventional adjuvant chemotherapy after initially surgical resection of the tumor. Unfortunately, cancer recurred and metastasized to the abdominal wall. After a series of painful chemotherapy and a second surgery, the cancer was still not effectively controlled, and the patient developed extensive metastases in the lung. The patient's PD-L1 expression level also did not support solo immunotherapy. We pioneered the use of cryoablation to first eradicate the most significant lesion in the upper lobe of the left lung and then combined it with the PD-L1 inhibitor pembrolizumab to treat the patient with immunotherapy, which resulted in the complete eradication of the other multiple metastases in the lung and saved the patient's life. Although the precise mechanism of action has not yet been explored, we have reason to believe that the combination of cryoablation and immune checkpoint inhibitor has a powerful synergistic anti-tumor effect, which is yet to be confirmed by more basic research and clinical applications in the next step.",
     "metadata": {
-      "rank": 4,
-      "score": 0.6716572713762173,
+      "rank": 5,
+      "score": 0.6835301174127079,
       "journal": "Front Immunol",
       "pub_date": "2022-01-01",
       "doi": "10.3389/fimmu.2022.1006500",
       "impact_factor": 5.9
     },
-    "cached_at": "2026-01-19T08:37:13.537403"
+    "cached_at": "2026-01-19T08:46:02.367474"
   },
   "33490225": {
     "pmid": "33490225",

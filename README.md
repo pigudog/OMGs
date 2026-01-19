@@ -5,466 +5,607 @@
 
 **OMGs** (Ovarian-cancer Multidisciplinary intelligent aGent System) is a multi-agent clinical decision-support system for ovarian cancer MDT (multidisciplinary team) discussions. It simulates multiple specialist roles (Chair, Medical Oncology, Radiology, Pathology, Nuclear Medicine), runs multi-round deliberation, and produces structured MDT recommendations.
 
+---
+
+## Table of Contents
+
+- [Clinical Significance](#-clinical-significance)
+- [Key Features](#-key-features)
+- [System Architecture](#-system-architecture)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Usage Guide](#-usage-guide)
+- [Project Structure](#-project-structure)
+- [Configuration](#-configuration)
+- [Examples](#-examples)
+- [Troubleshooting](#-troubleshooting)
+- [Development Guide](#-development-guide)
+- [License](#-license)
+
+---
+
 ## 🏥 Clinical Significance
 
-- **MDT-ready decision support**: aligns multi-specialty opinions to reduce fragmented reasoning in complex ovarian cancer care
-- **Evidence with patient facts**: keeps patient facts and guideline evidence side by side for transparent reasoning
-- **Traceable and reviewable**: full discussion logs and report selection enable audit and quality review
-- **Safety boundaries by role**: role permissions and report evidence constrain output to reduce hallucination risk
-- **Real-world clinical uplift**: supports regional hospitals and residents by improving decision quality in resource-limited settings
+### Why MDT Decision Support Matters
+
+Multidisciplinary team (MDT) meetings are the gold standard for complex cancer care, but face challenges:
+
+- **Information overload**: Specialists must synthesize vast amounts of patient data
+- **Time constraints**: Limited meeting time for thorough case review
+- **Regional disparities**: Resource-limited settings lack specialist expertise
+- **Documentation gaps**: Discussion rationale often poorly captured
+
+### How OMGs Addresses These Challenges
+
+| Challenge | OMGs Solution |
+|-----------|---------------|
+| **Fragmented reasoning** | MDT-ready decision support aligns multi-specialty opinions |
+| **Transparency** | Evidence with patient facts side by side for transparent reasoning |
+| **Auditability** | Full discussion logs and report selection enable quality review |
+| **Hallucination risk** | Role permissions and report evidence constrain output |
+| **Resource limitations** | Supports regional hospitals and residents with AI-assisted decisions |
+
+### Clinical Workflow Integration
+
+```mermaid
+flowchart LR
+    subgraph Clinical_Workflow [Clinical Workflow]
+        EHR[EHR System] --> Extract[OMGs: Extract & Structure]
+        Extract --> MDT[OMGs: MDT Discussion]
+        MDT --> Decision[MDT Decision]
+        Decision --> Treatment[Treatment Plan]
+    end
+    
+    subgraph Evidence [Evidence Sources]
+        Guidelines[Clinical Guidelines]
+        PubMed[PubMed Literature]
+        Reports[Patient Reports]
+    end
+    
+    Evidence --> MDT
+```
+
+---
 
 ## ✨ Key Features
 
-- **🤖 Multi-expert agents**: five specialist roles (Chair, Oncologist, Radiologist, Pathologist, Nuclear Medicine)
-- **📊 Smart report selection**: role-specific filtering of labs, imaging, pathology, and mutation reports
-- **🔍 RAG enhancement**: ChromaDB-backed guideline retrieval
-- **💬 Multi-round MDT engine**: structured expert discussion to resolve conflicts and fill gaps
-- **🧪 Clinical trial matching**: optional trial recommendation module
-- **📝 Full observability**: JSONL logs, Markdown transcripts, HTML report, and interaction matrix
-- **🔐 Role-based access control**: each expert only sees relevant report types
+### Multi-Agent Collaboration
+
+- **🤖 Five Specialist Agents**: Chair, Medical Oncologist, Radiologist, Pathologist, Nuclear Medicine Physician
+- **💬 Multi-Round Discussion**: Structured 2-round × 2-turn debate to resolve conflicts
+- **🎯 Role-Based Permissions**: Each expert only accesses relevant report types
+
+### Evidence Integration
+
+- **🔍 RAG Enhancement**: ChromaDB-backed guideline and PubMed retrieval
+- **📊 Smart Report Selection**: LLM-powered filtering of labs, imaging, pathology, mutations
+- **🧪 Clinical Trial Matching**: Optional trial recommendation module
+
+### Observability & Traceability
+
+- **📝 Full Logging**: JSONL logs, Markdown transcripts, HTML reports
+- **📈 Interaction Matrix**: Visual representation of expert discussions
+- **🔐 Evidence Tags**: All claims linked to source reports or guidelines
+
+---
 
 ## 🏗️ System Architecture
 
-**Central Host + Agent Servers Architecture:**
+### High-Level Architecture
 
+```mermaid
+flowchart TB
+    subgraph Input [Input Layer]
+        CaseData[Case Data JSONL]
+        Reports[Clinical Reports]
+        Guidelines[Guideline PDFs]
+    end
+    
+    subgraph Core [Core Infrastructure]
+        Agent[Agent Class]
+        Client[Azure OpenAI Client]
+        Config[Configuration]
+    end
+    
+    subgraph Servers [Agent Servers - Service Layer]
+        CaseParser[Case Parser]
+        InfoDelivery[Info Delivery]
+        EvidenceSearch[Evidence Search]
+        ReportsSelector[Reports Selector]
+        Trace[Trace Logger]
+    end
+    
+    subgraph Host [Central Host - Orchestration Layer]
+        Orchestrator[Orchestrator]
+        Experts[Expert Agents]
+        Decision[Decision Maker]
+    end
+    
+    subgraph Output [Output Layer]
+        JSON[JSON Results]
+        HTML[HTML Report]
+        Logs[MDT Logs]
+    end
+    
+    Input --> Core
+    Core --> Servers
+    Servers --> Host
+    Host --> Output
 ```
-Input case data
-    ↓
-[Central Host: Orchestrator]
-    ↓
-[Agent Servers]
-    ├── [1] Case Parser: Extract/Structure EHR
-    ├── [2] Reports Selector: Load & filter reports per role
-    ├── [3] Evidence Search: RAG (guideline + PubMed)
-    └── [4] Info Delivery: Build role-specific case views
-    ↓
-[Central Host: Experts]
-    ├── Initialize 5 expert agents (LLM-powered)
-    └── Each agent receives: case view + selected reports + guideline digest
-    ↓
-[Central Host: Orchestrator]
-    ├── [5] MDT discussion engine (2 rounds × 2 turns)
-    └── [6] Clinical trial matching (optional)
-    ↓
-[Central Host: Decision]
-    └── [7] Final MDT decision output (Chair synthesis)
-    ↓
-[Agent Servers: Trace]
-    └── Save artifacts (JSON + TXT + HTML)
+
+### Detailed Pipeline Flow
+
+```mermaid
+flowchart TD
+    Start([Input Case]) --> Load[1. Load Case & Reports]
+    
+    Load --> Filter[2. Filter Reports by Visit Time]
+    Filter --> Select[3. Role-Based Report Selection]
+    
+    Select --> RAG[4. Guideline & PubMed RAG]
+    RAG --> Digest[5. Generate Evidence Digest]
+    
+    Digest --> Init[6. Initialize Expert Agents]
+    Init --> Views[7. Build Role-Specific Views]
+    
+    Views --> Discussion{8. MDT Discussion Engine}
+    
+    Discussion --> |Round 1| R1T1[Turn 1: Initial Opinions]
+    R1T1 --> R1T2[Turn 2: Cross-Expert Debate]
+    R1T2 --> R1Final[Round 1 Final Plans]
+    
+    R1Final --> |Round 2| R2T1[Turn 1: Refined Discussion]
+    R2T1 --> R2T2[Turn 2: Consensus Building]
+    R2T2 --> R2Final[Round 2 Final Plans]
+    
+    R2Final --> Trial[9. Clinical Trial Matching]
+    Trial --> Final[10. Chair Final Synthesis]
+    
+    Final --> Save[11. Save Artifacts]
+    Save --> End([Output Results])
 ```
 
-### Roles and Permissions
+### Module Dependency Graph
 
-| Role | Lab Reports | Imaging Reports | Pathology Reports | Mutation Reports | Guideline Type |
-|------|-------------|----------------|-------------------|------------------|----------------|
-| Chair | ✅ | ✅ | ❌ | ✅ | chair |
-| Oncologist | ✅ | ❌ | ❌ | ✅ | oncologist |
-| Radiologist | ❌ | ✅ | ❌ | ❌ | radiologist |
-| Pathologist | ❌ | ❌ | ✅ | ✅ | pathologist |
-| Nuclear Medicine | ❌ | ✅ | ❌ | ❌ | nuclear |
+```mermaid
+flowchart TD
+    subgraph main_entry [Entry Point]
+        MainPy[main.py]
+    end
+    
+    subgraph host_layer [host/ - Orchestration Layer]
+        Orchestrator[orchestrator.py]
+        Experts[experts.py]
+        Decision[decision.py]
+    end
+    
+    subgraph servers_layer [servers/ - Service Layer]
+        CaseParser[case_parser.py]
+        InfoDelivery[info_delivery.py]
+        EvidenceSearch[evidence_search.py]
+        ReportsSelector[reports_selector.py]
+        Trace[trace.py]
+    end
+    
+    subgraph core_layer [core/ - Infrastructure]
+        Agent[agent.py]
+        Client[client.py]
+        Config[config.py]
+    end
+    
+    subgraph utils_layer [utils/ - Pure Utilities]
+        TimeUtils[time_utils.py]
+        ConsoleUtils[console_utils.py]
+    end
+    
+    MainPy --> Orchestrator
+    MainPy --> Config
+    
+    Orchestrator --> Experts
+    Orchestrator --> Decision
+    Orchestrator --> EvidenceSearch
+    Orchestrator --> ReportsSelector
+    Orchestrator --> Trace
+    
+    Experts --> Agent
+    Experts --> InfoDelivery
+    
+    Decision --> Agent
+    
+    ReportsSelector --> TimeUtils
+    EvidenceSearch --> Config
+    
+    Trace --> ConsoleUtils
+    Trace --> TimeUtils
+    
+    Agent --> Client
+    Client --> Config
+```
 
-## 📋 Requirements
+### Roles and Permissions Matrix
 
-- **Python**: 3.10+
-- **OS**: Linux, macOS, Windows
-- **Azure OpenAI**: valid Azure OpenAI account
-- **GPU** (optional): to accelerate local embeddings
+| Role | Lab Reports | Imaging Reports | Pathology Reports | Mutation Reports | Primary Focus |
+|------|:-----------:|:---------------:|:-----------------:|:----------------:|---------------|
+| **Chair** | ✅ | ✅ | ❌ | ✅ | Overall synthesis & safety |
+| **Oncologist** | ✅ | ❌ | ❌ | ✅ | Systemic therapy planning |
+| **Radiologist** | ❌ | ✅ | ❌ | ❌ | Disease distribution & imaging |
+| **Pathologist** | ❌ | ❌ | ✅ | ✅ | Histology & molecular markers |
+| **Nuclear Medicine** | ❌ | ✅ | ❌ | ❌ | PET/metabolic findings |
 
-## 🚀 Quick Start
+---
 
-### 1. Install dependencies
+## 📦 Installation
+
+### System Requirements
+
+| Requirement | Minimum | Recommended |
+|-------------|---------|-------------|
+| **Python** | 3.10 | 3.10+ |
+| **RAM** | 8 GB | 16+ GB |
+| **Storage** | 5 GB | 20+ GB (with RAG index) |
+| **GPU** | Not required | CUDA-compatible (for faster embeddings) |
+| **OS** | Linux, macOS, Windows | Linux/macOS |
+
+### Step 1: Clone Repository
 
 ```bash
-# Clone (if needed)
-git clone <repository-url>
+git clone https://github.com/your-org/OMGs.git
 cd OMGs
-
-# Install Python dependencies
-pip install -r requirements.txt
 ```
 
-### 2. Configure environment variables
+### Step 2: Create Virtual Environment (Recommended)
 
+```bash
+# Using venv
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+# or
+venv\Scripts\activate     # Windows
+
+# Or using conda
+conda create -n omgs python=3.10
+conda activate omgs
+```
+
+### Step 3: Install Dependencies
+
+```bash
+# Install all dependencies
+pip install -r requirements.txt
+
+# Or install with specific versions
+pip install openai>=1.0.0 chromadb>=0.4.0 torch>=2.0.0 tiktoken>=0.5.0
+```
+
+### Step 4: Configure Azure OpenAI
+
+Create environment variables for Azure OpenAI access:
+
+**Linux/macOS:**
 ```bash
 export AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
 export AZURE_OPENAI_API_KEY="your-api-key-here"
+
+# Add to ~/.bashrc or ~/.zshrc for persistence
+echo 'export AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"' >> ~/.bashrc
+echo 'export AZURE_OPENAI_API_KEY="your-api-key-here"' >> ~/.bashrc
 ```
 
-On Windows:
+**Windows (PowerShell):**
+```powershell
+$env:AZURE_OPENAI_ENDPOINT = "https://your-resource.openai.azure.com/"
+$env:AZURE_OPENAI_API_KEY = "your-api-key-here"
 
+# For persistence, add to system environment variables
+[System.Environment]::SetEnvironmentVariable("AZURE_OPENAI_ENDPOINT", "https://your-resource.openai.azure.com/", "User")
+[System.Environment]::SetEnvironmentVariable("AZURE_OPENAI_API_KEY", "your-api-key-here", "User")
+```
+
+**Windows (CMD):**
 ```cmd
 set AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
 set AZURE_OPENAI_API_KEY=your-api-key-here
 ```
 
-### 3. Prepare data files
+### Step 5: Verify Installation
+
+```bash
+# Check Python version
+python --version
+
+# Verify key imports
+python -c "from utils import Color; print('Utils: OK')"
+python -c "import torch; print(f'PyTorch: {torch.__version__}')"
+python -c "import chromadb; print(f'ChromaDB: OK')"
+```
+
+### Dependencies Overview
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| `openai` | ≥1.0.0 | Azure OpenAI API client |
+| `chromadb` | ≥0.4.0 | Vector database for RAG |
+| `langchain-huggingface` | ≥0.0.1 | Embedding model integration |
+| `torch` | ≥2.0.0 | Deep learning framework |
+| `tiktoken` | ≥0.5.0 | Token counting for budget management |
+| `tqdm` | ≥4.65.0 | Progress bars |
+| `prettytable` | ≥3.8.0 | Table rendering |
+| `requests` | ≥2.28.0 | HTTP requests for PubMed API |
+
+---
+
+## 🚀 Quick Start
+
+### Prepare Data Files
 
 Ensure the following files exist:
 
-- **Input cases** (`input_ehr/*.jsonl`): JSONL case data
-- **Lab reports** (`files/lab_reports_summary.jsonl`)
-- **Imaging reports** (`files/imaging_reports.jsonl`)
-- **Mutation reports** (`files/mutation_reports.jsonl`)
-- **Pathology reports** (optional): `files/pathology_reports.jsonl`
-- **RAG index** (`rag_store/chair/index/chroma/`)
-- **Clinical trials** (optional): `all_trials_filtered.json`
+```
+OMGs/
+├── input_ehr/
+│   └── your_cases.jsonl          # Input case data
+├── files/
+│   ├── lab_reports_summary.jsonl # Lab reports
+│   ├── imaging_reports.jsonl     # Imaging reports
+│   └── mutation_reports.jsonl    # Mutation reports
+├── rag_store/
+│   └── chair/
+│       └── index/
+│           └── chroma/           # Pre-built RAG index
+└── all_trials_filtered.json      # Clinical trials (optional)
+```
 
-All data paths can be overridden via `config/paths.json` (see **Advanced Configuration**).
+### Two-Step Process
 
-### 4. Run the system
+**Step 1: Extract and Structure EHR (if starting from raw notes)**
 
-**Step 1: Extract and structure EHR data**
 ```bash
 python ehr_structurer.py \
-  --input ./input_ehr/test_guo.jsonl \
-  --output ./output_ehr/test_guo.jsonl \
+  --input ./input_ehr/raw_notes.jsonl \
+  --output ./output_ehr/structured.jsonl \
   --deployment gpt-5-mini \
   --prompts ./config/prompts.json \
   --txt-dir ./output_ehr/txt_out
 ```
 
-**Step 2: Run MDT pipeline**
+**Step 2: Run MDT Pipeline**
+
 ```bash
 python main.py \
-  --input_path ./output_ehr/test_guo.jsonl \
+  --input_path ./output_ehr/structured.jsonl \
   --agent omgs \
   --model gpt-5.1 \
   --num_samples 10
 ```
 
-## 📖 Usage
+### Single Command (Pre-structured Data)
 
-### CLI arguments
+If your data is already structured:
+
+```bash
+python main.py --input_path ./input_ehr/test_cases.jsonl --agent omgs
+```
+
+### Check Outputs
+
+```bash
+# Results
+ls -la output_answer/omgs_*/
+
+# MDT Logs
+ls -la mdt_logs/
+
+# Open HTML report
+open mdt_logs/mdt_report_*.html  # macOS
+# or
+xdg-open mdt_logs/mdt_report_*.html  # Linux
+```
+
+---
+
+## 📖 Usage Guide
+
+### CLI Arguments
 
 ```bash
 python main.py [OPTIONS]
 ```
 
-**Required:**
-- `--input_path`: path to input JSONL file
+| Argument | Type | Default | Description |
+|----------|------|---------|-------------|
+| `--input_path` | str | **Required** | Path to input JSONL file |
+| `--model` | str | `gpt-5.1` | Azure deployment name |
+| `--agent` | str | `basic_baseline` | Agent type (use `omgs`) |
+| `--num_samples` | int | 999999 | Number of samples to process |
 
-**Optional:**
-- `--model`: Azure deployment name (default: `gpt-5.1`)
-- `--agent`: agent type (default: `basic_baseline`). Choices:
-  `basic_baseline`, `basic_role`, `basic_rag`, `basic_rag_lab`, `basic_rag_lab_full`, `omgs`.
-  Currently only `omgs` is implemented; other values will fallback to `omgs` with a warning.
-- `--num_samples`: number of samples to process (default: 999999)
+### Input Format
 
-**Token parameters:**
-- OpenAI Chat Completions deprecates `max_tokens`; use `max_completion_tokens` for output limits.
-
-### Input format
-
-Each JSONL line should include:
+Each JSONL line should contain:
 
 ```json
 {
-  "meta_info": "patient identifier (for report matching)",
-  "Time": "2024-01-15",
+  "meta_info": "patient_identifier",
+  "Time": "2024-01-15T10:00:00",
   "question": {
     "CASE_CORE": {
-      "DIAGNOSIS": "diagnosis info",
-      "LINE_OF_THERAPY": "line of therapy",
-      "BIOMARKERS": {},
-      "CURRENT_STATUS": "current status"
+      "DIAGNOSIS": {
+        "primary": "High-grade serous ovarian carcinoma",
+        "histology": "Serous",
+        "stage": "IIIC"
+      },
+      "LINE_OF_THERAPY": "2nd line",
+      "BIOMARKERS": {
+        "CA125": "156 U/mL",
+        "HRD": "Positive",
+        "BRCA1": "Pathogenic mutation"
+      },
+      "CURRENT_STATUS": "Recurrent disease"
     },
-    "TIMELINE": {},
+    "TIMELINE": {
+      "events": [
+        {"date": "2023-01-15", "event": "Initial diagnosis"},
+        {"date": "2023-06-01", "event": "Completed chemotherapy"}
+      ]
+    },
     "MED_ONC": {},
     "RADIOLOGY": {},
     "PATHOLOGY": {},
+    "NUC_MED": {},
     "LAB_TRENDS": {}
   },
-  "question_raw": "original question",
-  "scene": "scene tag",
-  "gold_plan": "gold answer (optional)"
+  "question_raw": "Original clinical question text",
+  "scene": "recurrence",
+  "gold_plan": "Reference treatment plan (optional)"
 }
 ```
 
-### Outputs
+### Output Files
 
-System outputs to `output_answer/{agent}_{timestamp}/`:
+**Directory: `output_answer/{agent}_{timestamp}/`**
 
-1. **results.json**: structured results (question, response, metadata)
-2. **results.txt**: human-readable text output
+| File | Description |
+|------|-------------|
+| `results.json` | Structured results with all metadata |
+| `results.txt` | Human-readable text output |
 
-And to `mdt_logs/`:
+**Directory: `mdt_logs/`**
 
-1. **mdt_history_{timestamp}.jsonl**: full MDT log (JSONL)
-2. **mdt_history_{timestamp}.md**: Markdown discussion log
-3. **mdt_report_{timestamp}.html**: interactive HTML report
+| File | Description |
+|------|-------------|
+| `mdt_history_{timestamp}.jsonl` | Complete MDT log in JSONL format |
+| `mdt_history_{timestamp}.md` | Markdown discussion transcript |
+| `mdt_report_{timestamp}.html` | Interactive HTML report |
+
+### Output Schema
+
+```json
+{
+  "scene": "recurrence",
+  "question": { "normalized case object" },
+  "response": "Final Assessment:\n...\n\nCore Treatment Strategy:\n...\n\nChange Triggers:\n...",
+  "gold_plan": "reference answer if provided",
+  "question_raw": "original question text",
+  "Time": "2024-01-15T10:00:00",
+  "meta_info": "patient_identifier"
+}
+```
+
+---
 
 ## 📁 Project Structure
 
 ```
 OMGs/
-├── main.py                 # entry script (MDT pipeline)
-├── ehr_structurer.py       # EHR extraction / structuring (legacy entry point)
-├── pdf_to_rag.py           # RAG corpus/index builder
-├── requirements.txt        # dependencies
-├── README.md               # this file
+├── main.py                     # Entry point - MDT pipeline
+├── ehr_structurer.py           # EHR extraction/structuring
+├── pdf_to_rag.py               # RAG corpus/index builder
+├── requirements.txt            # Python dependencies
+├── README.md                   # This documentation
 │
-├── host/                   # Central Host (LLM-powered orchestration layer)
+├── host/                       # Central Host (Orchestration Layer)
+│   ├── __init__.py             # Package exports
+│   ├── orchestrator.py         # MDT discussion engine + main pipeline
+│   │                           #   - run_mdt_discussion()
+│   │                           #   - process_omgs_multi_expert_query()
+│   ├── experts.py              # Expert agent definitions
+│   │                           #   - ROLES, ROLE_PERMISSIONS, ROLE_PROMPTS
+│   │                           #   - init_expert_agent()
+│   └── decision.py             # Final decision-making
+│                               #   - generate_final_output()
+│                               #   - assistant_trial_suggestion()
+│                               #   - build_enhanced_case_for_trial()
+│
+├── servers/                    # Agent Servers (Service Layer)
+│   ├── __init__.py             # Package exports
+│   ├── case_parser.py          # EHR extraction (standalone entry)
+│   ├── info_delivery.py        # Role-specific case views
+│   │                           #   - build_role_specific_case_view()
+│   │                           #   - safe_load_case_json()
+│   ├── evidence_search.py      # RAG retrieval
+│   │                           #   - get_global_guideline_rag()
+│   │                           #   - pubmed_search_pack()
+│   │                           #   - build_rag_query_for_mdt()
+│   ├── reports_selector.py     # Clinical report selection
+│   │                           #   - load_patient_labs/imaging/pathology/mutations()
+│   │                           #   - select_reports_for_roles()
+│   │                           #   - expert_select_reports()
+│   └── trace.py                # Observability & logging
+│                               #   - TraceLogger, VisualConfig
+│                               #   - save_mdt_log(), save_case_html_report()
+│
+├── core/                       # Core Infrastructure
+│   ├── __init__.py             # Package exports
+│   ├── agent.py                # Stateful LLM Agent wrapper
+│   │                           #   - Agent class with chat(), run_selection()
+│   ├── client.py               # Azure OpenAI client initialization
+│   │                           #   - init_client()
+│   └── config.py               # Configuration loading
+│                               #   - load_paths_config(), get_paths_config()
+│                               #   - load_mdt_prompts(), get_mdt_prompts()
+│                               #   - load_data(), create_question(), setup_model()
+│
+├── aoai/                       # Azure OpenAI Wrapper (preserved)
 │   ├── __init__.py
-│   ├── orchestrator.py     # MDT discussion engine + main pipeline
-│   ├── experts.py          # Expert agent definitions (ROLES, ROLE_PROMPTS, init_expert_agent)
-│   └── decision.py         # Final decision-making (generate_final_output)
+│   ├── wrapper.py              # OpenAIWrapper class
+│   └── logger.py               # API logging
 │
-├── servers/                # Agent Servers (functional service layer)
-│   ├── __init__.py
-│   ├── case_parser.py      # Case Parser (EHR extraction, same as ehr_structurer.py)
-│   ├── info_delivery.py    # Information Delivery (role-specific case views)
-│   ├── evidence_search.py  # Evidence Search (RAG: guideline + PubMed)
-│   ├── reports_selector.py # Reports Selector (clinical report selection)
-│   └── trace.py            # Trace logs (observability + reporting)
+├── utils/                      # Pure Utility Functions
+│   ├── __init__.py             # Package exports
+│   ├── console_utils.py        # Console formatting
+│   │                           #   - Color class
+│   │                           #   - normalize_trial_compact()
+│   │                           #   - safe_parse_json_block()
+│   │                           #   - question_to_text()
+│   ├── time_utils.py           # Date/time utilities
+│   │                           #   - parse_dt(), make_cutoff(), filter_before()
+│   │                           #   - build_lab/imaging/pathology_timeline()
+│   └── reference_cache.py      # Reference caching for RAG results
 │
-├── core/                   # Core infrastructure
-│   ├── __init__.py
-│   ├── agent.py            # Agent class (stateful LLM wrapper)
-│   ├── client.py           # Azure OpenAI client initialization
-│   └── config.py           # Configuration loading (paths, prompts, data utils)
+├── config/                     # Configuration Files
+│   ├── paths.json              # Data and output paths
+│   ├── mdt_prompts.json        # MDT discussion prompts
+│   └── prompts.json            # EHR extraction prompts
 │
-├── aoai/                   # Azure OpenAI wrapper (preserved)
-│   ├── wrapper.py
-│   └── logger.py
-│
-├── utils/                  # Pure utility functions
-│   ├── __init__.py
-│   ├── console_utils.py     # Console formatting (Color, JSON parsing, etc.)
-│   └── time_utils.py       # Timeline utilities (date parsing, filtering)
-│
-├── config/                 # Configuration files
-│   ├── prompts.json        # EHR extraction prompts
-│   ├── mdt_prompts.json    # MDT discussion prompts
-│   └── paths.json          # Data and output paths
-│
-├── files/                  # Data files
+├── files/                      # Data Files
 │   ├── lab_reports_summary.jsonl
 │   ├── imaging_reports.jsonl
 │   └── mutation_reports.jsonl
 │
-├── input_ehr/              # Input cases
-│   ├── test_guo.jsonl
-│   └── ...
+├── input_ehr/                  # Input Case Files
+│   └── *.jsonl
 │
-├── output_answer/          # Outputs
+├── output_answer/              # Pipeline Outputs
 │   └── omgs_YYYY-MM-DD_HH-MM-SS/
 │       ├── results.json
 │       └── results.txt
 │
-├── mdt_logs/               # MDT logs
+├── output_ehr/                 # EHR Extraction Outputs
+│   └── *.jsonl
+│
+├── mdt_logs/                   # MDT Discussion Logs
 │   ├── mdt_history_*.jsonl
 │   ├── mdt_history_*.md
 │   └── mdt_report_*.html
 │
-└── rag_store/              # RAG index
-    └── chair/
-        └── index/
-            └── chroma/
+└── rag_store/                  # RAG Index Storage
+    ├── chair/
+    │   ├── corpus/
+    │   │   ├── chunks/         # Chunked guideline text
+    │   │   ├── meta/           # Document metadata
+    │   │   └── staging_txt/    # Raw text files
+    │   └── index/
+    │       └── chroma/         # ChromaDB index
+    ├── oncologist/
+    ├── radiologist/
+    ├── pathologist/
+    └── nuclear/
 ```
 
-## 🔧 Dependencies
+---
 
-Key packages (see `requirements.txt` for details):
+## ⚙️ Configuration
 
-- **openai** (≥1.0.0): Azure OpenAI client
-- **chromadb** (≥0.4.0): vector database
-- **langchain-huggingface** (≥0.0.1): embedding integration
-- **torch** (≥2.0.0): deep learning framework
-- **tiktoken** (≥0.5.0): token counting
-- **tqdm** (≥4.65.0): progress bar
-- **prettytable** (≥3.8.0): table rendering
-
-## 💡 Examples
-
-### Basic usage
-
-**Two-step process:**
-
-1. **Extract EHR** (if starting from raw notes):
-```bash
-python ehr_structurer.py \
-  --input ./input_ehr/test_guo.jsonl \
-  --output ./output_ehr/test_guo.jsonl \
-  --deployment gpt-5-mini \
-  --prompts ./config/prompts.json \
-  --txt-dir ./output_ehr/txt_out
-```
-
-2. **Run MDT pipeline**:
-```bash
-python main.py --input_path ./output_ehr/test_guo.jsonl --agent omgs --num_samples 5
-```
-
-### Use a different model
-
-```bash
-python main.py \
-    --input_path ./output_ehr/test_guo.jsonl \
-    --model gpt-4 \
-    --agent omgs \
-    --num_samples 10
-```
-
-### Batch processing
-
-```bash
-# Step 1: Extract all EHR files
-for file in input_ehr/*.jsonl; do
-    python ehr_structurer.py \
-      --input "$file" \
-      --output "output_ehr/$(basename $file)" \
-      --deployment gpt-5-mini \
-      --prompts ./config/prompts.json
-done
-
-# Step 2: Run MDT on all extracted files
-for file in output_ehr/*.jsonl; do
-    python main.py --input_path "$file" --agent omgs
-done
-```
-
-### EHR extraction / structuring (raw → JSONL)
-
-Use `ehr_structurer.py` to convert raw notes into structured EHR JSON:
-
-```bash
-python ehr_structurer.py \
-  --input input_ehr/raw_notes.jsonl \
-  --output input_ehr/structured.jsonl \
-  --deployment gpt-5.1 \
-  --prompts config/prompts.json \
-  --field question \
-  --max-completion-tokens 40000 \
-  --retries 4 \
-  --txt-dir output_ehr/txt_out
-```
-
-Notes:
-- `--field` is the input JSONL key that contains raw note text (default: `question`).
-- `--txt-dir` is optional; when set, a per-patient TXT preview is saved.
-- `--disable-json-repair` can be used to skip automatic JSON repair.
-
-### EHR review & auto-fix pipeline
-
-The extractor now runs two review passes and a deterministic auto-fix layer. The **final JSON output keeps the original schema**, while review data is written to a **sidecar JSONL** file.
-
-**Outputs**
-- Main: `output_ehr/<file>.jsonl` (unchanged schema)
-- Review sidecar: `output_ehr/<file>.jsonl.review.jsonl`
-
-**Flow**
-```mermaid
-flowchart TD
-  SourceText[SourceText] --> Extract[ExtractEHR_JSON]
-  Extract --> SelfReview[SelfReview_SameModel]
-  Extract --> Validator[Validator_SecondAgent]
-  SelfReview --> AutoFix[AutoFix_Rules]
-  Validator --> AutoFix
-  AutoFix --> FinalJSON[FinalJSON_OriginalSchema]
-  AutoFix --> ReviewSidecar[ReviewSidecar_JSONL]
-```
-
-**Auto-fix rules (initial)**
-- Recompute PFI days and platinum status from `last_platinum_end_date` and `first_relapse_date` when both are valid.
-- Align platinum history status with the latest platinum line.
-- For biochemical relapse, fill evidence text when CA125 is available.
-- Sort timeline events by date (unknown dates at the end).
-
-**Sidecar contents (review only)**
-- `review.self` (self-reflection issues)
-- `review.validator` (second-agent issues)
-- `review.auto_fixes` (deterministic fix log)
-
-### Build / index / search RAG guidelines
-
-```bash
-# 1) Build TXT + chunks from PDFs
-python pdf_to_rag.py build \
-  --pdf_dir rag_pdf/chair \
-  --out_dir rag_store/chair/corpus \
-  --chunk_size 1200 \
-  --chunk_overlap 200
-
-# 2) Index chunks into Chroma
-python pdf_to_rag.py index \
-  --corpus_dir rag_store/chair/corpus \
-  --index_dir rag_store/chair/index/chroma \
-  --collection_name chair_chunks \
-  --model BAAI/bge-m3 \
-  --device cpu
-
-# 3) Search the index
-python pdf_to_rag.py search \
-  --index_dir rag_store/chair/index/chroma \
-  --collection_name chair_chunks \
-  --model BAAI/bge-m3 \
-  --device cpu \
-  --query "NACT in ovarian cancer"
-```
-```
-
-## 🔍 How It Works
-
-### 1. Report loading and filtering
-
-Reports are loaded by `meta_info`:
-- Lab reports (CBC, LFT, renal, tumor markers)
-- Imaging reports (CT, MRI, PET)
-- Pathology reports (histology, IHC, molecular)
-- Mutation reports
-
-Reports are filtered by visit time and then per-role relevance.
-
-### 2. Role-specific views
-
-Each expert receives:
-- **Role-specific case view** (only relevant fields)
-- **Selected reports** (role permissions + clinical relevance)
-- **Global guideline digest** from RAG
-
-### 3. MDT discussion flow
-
-1. **Initial opinions** per expert
-2. **Multi-round discussion** (Round 1/2, Turn 1/2)
-3. **Final refined plans** per expert
-
-### 4. Final decision output
-
-The Chair synthesizes discussion into the final MDT output:
-- Final assessment
-- Core treatment strategy
-- Change triggers
-- Trial suggestion (if applicable)
-
-## 📊 Output Example
-
-### JSON output schema
-
-```json
-{
-  "scene": "scene tag",
-  "question": "normalized question",
-  "response": "final MDT decision",
-  "gold_plan": "gold answer (if present)",
-  "question_raw": "original question",
-  "Time": "2024-01-15",
-  "meta_info": "patient id"
-}
-```
-
-### HTML report includes
-
-- Interaction matrix across experts
-- Report selection tables
-- RAG hit table and digest
-- Full discussion timeline
-- Final output and trial suggestions
-
-## ⚙️ Advanced Configuration
-
-### Paths configuration (`config/paths.json`)
-
-You can centralize all data and output paths here:
+### Paths Configuration (`config/paths.json`)
 
 ```json
 {
@@ -476,11 +617,13 @@ You can centralize all data and output paths here:
     "trials": "all_trials_filtered.json"
   },
   "rag_store": {
+    "base_dir": "rag_store",
     "index_dir_template": "rag_store/{role}/index/chroma",
     "collection_name_template": "{role}_chunks",
     "embedding_model": "BAAI/bge-m3",
     "use_per_role_rag": false,
-    "default_role": "chair"
+    "default_role": "chair",
+    "available_roles": ["chair", "oncologist", "radiologist", "pathologist", "nuclear"]
   },
   "output_dirs": {
     "output_answer": "output_answer",
@@ -490,85 +633,320 @@ You can centralize all data and output paths here:
 }
 ```
 
-### Custom report paths (function-level override)
+### MDT Prompts Configuration (`config/mdt_prompts.json`)
 
-Configure in `agent_omgs.py`:
+```json
+{
+  "mdt_discussion": {
+    "initial_opinion": "Give INITIAL opinion using ONLY your system-provided patient facts...",
+    "speak_prompt_template": "ROLE: {role}. VISIT: {visit_time}...",
+    "final_plan_template": "Given MDT context: {merged}...",
+    "round_summary_template": "MDT global knowledge: {merged}..."
+  },
+  "agents": {
+    "rag_query_builder": "Construct concise English MDT guideline query.",
+    "global_guideline_digester": "Digest guideline chunks into <=8 evidence bullets...",
+    "assistant": "You are MDT assistant. Summarize only. Do not decide treatment.",
+    "trial_selector": "You are an MDT assistant for clinical trial matching..."
+  },
+  "rag": {
+    "query_builder": "You are preparing a single concise English query...",
+    "evidence_summarizer": "Summarize into evidence bullets for MDT decision-making..."
+  }
+}
+```
+
+### Function-Level Override
 
 ```python
-process_omgs_multi_expert_query(
+from host import process_omgs_multi_expert_query
+
+result = process_omgs_multi_expert_query(
     question=question,
     question_raw=question_raw,
     model=model,
     args=args,
+    # Override default paths
     labs_json="custom/labs.jsonl",
     imaging_json="custom/imaging.jsonl",
     pathology_json="custom/pathology.jsonl",
     mutation_json="custom/mutations.jsonl",
-    trials_json_path="custom/trials.json"
+    trials_json_path="custom/trials.json",
+    # RAG parameters
+    device="cuda",
+    topk=10
 )
 ```
 
-### RAG configuration
+---
 
-- **Index path**: `rag_store/chair/index/chroma/` (or from `config/paths.json`)
-- **Embedding model**: `BAAI/bge-m3` (see `rag_utils.py`)
-- **Top-k**: default `topk=5`
+## 💡 Examples
 
-## 🐛 Troubleshooting
+### Basic Usage
 
-1. **Missing environment variables**
-   ```
-   RuntimeError: Missing AZURE_OPENAI_ENDPOINT or AZURE_OPENAI_API_KEY
-   ```
-   **Fix**: set `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_API_KEY`
+```bash
+# Run with default settings
+python main.py --input_path ./input_ehr/test_cases.jsonl --agent omgs
 
-2. **File not found**
-   ```
-   FileNotFoundError: files/lab_reports_summary.jsonl
-   ```
-   **Fix**: check file paths and existence
+# Specify model and sample count
+python main.py \
+  --input_path ./input_ehr/test_cases.jsonl \
+  --agent omgs \
+  --model gpt-4 \
+  --num_samples 5
+```
 
-3. **RAG index missing**
-   ```
-   Failed to load RAG index
-   ```
-   **Fix**: ensure `rag_store/chair/index/chroma/` exists
+### EHR Extraction
 
-4. **Model deployment name error**
-   ```
-   Azure API error
-   ```
-   **Fix**: ensure `--model` matches Azure deployment name
+```bash
+python ehr_structurer.py \
+  --input input_ehr/raw_notes.jsonl \
+  --output output_ehr/structured.jsonl \
+  --deployment gpt-5.1 \
+  --prompts config/prompts.json \
+  --field question \
+  --max-completion-tokens 40000 \
+  --retries 4 \
+  --txt-dir output_ehr/txt_out
+```
 
-## 📝 Development Notes
+### Build RAG Index
 
-### Add a new specialist role
+```bash
+# Step 1: Build chunks from PDFs
+python pdf_to_rag.py build \
+  --pdf_dir rag_pdf/chair \
+  --out_dir rag_store/chair/corpus \
+  --chunk_size 1200 \
+  --chunk_overlap 200
 
-1. Add role in `utils/role_utils.py` to `ROLES`
-2. Define permissions in `ROLE_PERMISSIONS`
-3. Add role prompt in `ROLE_PROMPTS`
-4. Update `build_role_specific_case_view`
+# Step 2: Index chunks into ChromaDB
+python pdf_to_rag.py index \
+  --corpus_dir rag_store/chair/corpus \
+  --index_dir rag_store/chair/index/chroma \
+  --collection_name chair_chunks \
+  --model BAAI/bge-m3 \
+  --device cpu
 
-### Add a new report type
+# Step 3: Test search
+python pdf_to_rag.py search \
+  --index_dir rag_store/chair/index/chroma \
+  --collection_name chair_chunks \
+  --model BAAI/bge-m3 \
+  --device cpu \
+  --query "NACT in ovarian cancer"
+```
 
-1. Add loader in `utils/select_utils.py`
-2. Extend `ROLE_PERMISSIONS`
-3. Update `expert_select_reports`
+### Batch Processing
 
-## 📄 License
+```bash
+#!/bin/bash
+# batch_process.sh
 
-MIT License. See `LICENSE`.
+# Step 1: Extract all EHR files
+for file in input_ehr/*.jsonl; do
+    echo "Extracting: $file"
+    python ehr_structurer.py \
+      --input "$file" \
+      --output "output_ehr/$(basename $file)" \
+      --deployment gpt-5-mini \
+      --prompts ./config/prompts.json
+done
 
-## 🙏 Acknowledgements
+# Step 2: Run MDT on all extracted files
+for file in output_ehr/*.jsonl; do
+    echo "Processing MDT: $file"
+    python main.py --input_path "$file" --agent omgs
+done
 
-Thanks to all contributors to the OMGs system.
+echo "Batch processing complete!"
+```
 
-## 📧 Contact
+### EHR Review & Auto-Fix Pipeline
 
-For questions or feedback:
-- Open an Issue
-- Email the maintainer
+The extractor runs two review passes and deterministic auto-fix:
+
+```mermaid
+flowchart TD
+    SourceText[Source Text] --> Extract[Extract EHR JSON]
+    Extract --> SelfReview[Self Review - Same Model]
+    Extract --> Validator[Validator - Second Agent]
+    SelfReview --> AutoFix[Auto-Fix Rules]
+    Validator --> AutoFix
+    AutoFix --> FinalJSON[Final JSON - Original Schema]
+    AutoFix --> ReviewSidecar[Review Sidecar JSONL]
+```
+
+**Auto-fix rules:**
+- Recompute PFI days and platinum status from dates
+- Align platinum history status with latest line
+- Fill biochemical relapse evidence from CA125
+- Sort timeline events by date
+
+**Outputs:**
+- Main: `output_ehr/<file>.jsonl` (original schema)
+- Review: `output_ehr/<file>.jsonl.review.jsonl` (issues & fixes)
 
 ---
 
-**⚠️ Medical Disclaimer**: This system is for research and education only. It does not replace professional medical diagnosis or treatment. All clinical decisions must be made by qualified healthcare professionals.
+## 🐛 Troubleshooting
+
+### Common Errors
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `RuntimeError: Missing AZURE_OPENAI_ENDPOINT` | Environment variables not set | Set `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_API_KEY` |
+| `FileNotFoundError: files/lab_reports_summary.jsonl` | Data files missing | Check file paths in `config/paths.json` |
+| `Failed to load RAG index` | RAG index not built | Run `pdf_to_rag.py build` and `index` commands |
+| `Azure API error` | Invalid deployment name | Verify `--model` matches Azure deployment |
+| `ModuleNotFoundError: No module named 'torch'` | Dependencies not installed | Run `pip install -r requirements.txt` |
+
+### Debug Mode
+
+Enable verbose logging:
+
+```python
+# In host/orchestrator.py
+visual = VisualConfig(
+    enable=True,
+    show_tables=True,
+    show_rag_table=True,
+    show_token_budget=True,  # Enable token budget display
+)
+```
+
+### Check API Trace
+
+```python
+import sqlite3
+
+conn = sqlite3.connect('api_trace.db')
+cursor = conn.cursor()
+cursor.execute("SELECT * FROM api_calls ORDER BY timestamp DESC LIMIT 10")
+for row in cursor.fetchall():
+    print(row)
+conn.close()
+```
+
+---
+
+## 🔧 Development Guide
+
+### Adding a New Specialist Role
+
+1. **Define role in `host/experts.py`:**
+
+```python
+# Add to ROLES list
+ROLES = ["chair", "oncologist", "radiologist", "pathologist", "nuclear", "surgeon"]
+
+# Add permissions
+ROLE_PERMISSIONS["surgeon"] = {
+    "lab": True,
+    "imaging": True,
+    "pathology": True,
+    "mutation": False,
+    "guideline": "surgeon"
+}
+
+# Add role prompt
+ROLE_PROMPTS["surgeon"] = """
+# Context
+You are the surgical oncologist. You evaluate surgical candidacy and operative findings.
+
+# Objective
+Assess resectability, surgical history, and operative recommendations.
+
+# Style
+Return up to 3 bullets. Each ≤20 words. No drug names.
+""".strip()
+```
+
+2. **Update `servers/info_delivery.py`:**
+
+```python
+def build_role_specific_case_view(role: str, case_json: Dict[str, Any]) -> str:
+    # ... existing code ...
+    
+    if role == "surgeon":
+        return json.dumps({
+            "SURGICAL_HISTORY": case_json.get("SURGICAL_HISTORY", {}),
+            "IMAGING_FOR_RESECTABILITY": radiology.get("studies", []),
+            "PATHOLOGY": pathology
+        }, ensure_ascii=False, indent=2)
+```
+
+3. **Build RAG index for new role:**
+
+```bash
+python pdf_to_rag.py build --pdf_dir rag_pdf/surgeon --out_dir rag_store/surgeon/corpus
+python pdf_to_rag.py index --corpus_dir rag_store/surgeon/corpus --index_dir rag_store/surgeon/index/chroma
+```
+
+### Adding a New Report Type
+
+1. **Add loader in `servers/reports_selector.py`:**
+
+```python
+def load_patient_genetics(meta_info: str, json_path: str) -> Tuple[List, List]:
+    # Similar to load_patient_labs
+    ...
+```
+
+2. **Extend permissions in `host/experts.py`:**
+
+```python
+ROLE_PERMISSIONS["oncologist"]["genetics"] = True
+```
+
+3. **Update `select_reports_for_roles()` to include new type.**
+
+### Running Tests
+
+```bash
+# Syntax check all modules
+python -m py_compile main.py
+python -m py_compile host/orchestrator.py
+python -m py_compile host/decision.py
+
+# Import test
+python -c "from host import process_omgs_multi_expert_query; print('OK')"
+```
+
+---
+
+## 📄 License
+
+MIT License. See `LICENSE` file for details.
+
+---
+
+## 🙏 Acknowledgements
+
+- Azure OpenAI for language model capabilities
+- ChromaDB for vector storage
+- HuggingFace for embedding models
+- All contributors to the OMGs project
+
+---
+
+## 📧 Contact
+
+For questions, issues, or contributions:
+- Open a GitHub Issue
+- Email the maintainers
+
+---
+
+## ⚠️ Medical Disclaimer
+
+**This system is for research and educational purposes only.**
+
+- It does NOT replace professional medical diagnosis or treatment
+- All clinical decisions MUST be made by qualified healthcare professionals
+- The system outputs are advisory and require expert validation
+- Patient data must be handled according to applicable privacy regulations (HIPAA, GDPR, etc.)
+
+---
+
+*Last updated: January 2026*

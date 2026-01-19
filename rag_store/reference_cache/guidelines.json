@@ -4,50 +4,50 @@
     "page": 18,
     "text": "Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nClear Cell Carcinoma of the Ovary\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nClear cell carcinoma\nof the ovaryg,h,i\nStage\nIC2– IC3\nStage IA\nIB, IC1\nStage II–IV\nIV platinum-based therapy\n(see primary regimens for stage I disease\n[OV-C, 5 of 12])\nIV platinum-based therapy\n(see primary regimens for stage I disease\n[OV-C, 5 of 12])\nor\nObserveg\nSystemic therapy\n(OV-C, 6 of 12)\nLCOC-3\nPATHOLOGIC\nDIAGNOSISa\nADJUVANT TREATMENTf\nMONITORING/\nFOLLOW-UP\nMonitoring/Follow-up\n(including tumor testing)\nand\nRecurrence therapyj\n(OV-6)\nIf known BRCA1/2\nmutation, consider\nmaintenance therapy\n(post-primary therapy)\n(OV-5)\na WHO Histologic Classification (OV-E).\nf See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).\ng If not previously done, consider surgical staging and resection of residual disease (OV-3).",
     "metadata": {
-      "rank": 3,
-      "score": 0.639877438545227
+      "rank": 1,
+      "score": 0.6360728740692139
     },
-    "cached_at": "2026-01-19T08:10:38.044491"
+    "cached_at": "2026-01-19T08:46:02.356347"
   },
   "esmo_cpg_epithelialovarian_2023__v00000000|10": {
     "doc_id": "esmo_cpg_epithelialovarian_2023__v00000000",
     "page": 10,
     "text": "with ﬁrst line. This can probably be explained by an accu-\nmulative exposure to platinum.85\nSeveral factors need to be taken into consideration for\nthe selection of PARPis or anti-VEGF therapies in relapse\nincluding histotype, BRCA1/2-mut status, prior therapies\n(PARPi and/or bevacizumab), expected response to plat-\ninum ChT, presence of symptoms (speciﬁcally ascites),\npersistent toxicities from prior therapies, no contraindica-\ntion to bevacizumab and patient preference. Generally, for\nsymptomatic patients requiring a rapid treatment response,\nthe combination of carboplatin with bevacizumab would be\nrecommended (Figure 3).\nFurther information is provided in the Supplementary\nMaterial Section 4, available at https://doi.org/10.1016/j.\nannonc.2023.07.011.\nSystemic therapy when platinum is not an option\nFor some patients with recurrent ovarian cancer, platinum\nrechallenge may not be considered clinically appropriate.\nFor these patients, alternative systemic treatments are\navailable. Patients with good performance status should be\nprioritised for novel therapies within clinical trials. Inte-\ngrating early palliative care is particularly crucial.",
     "metadata": {
-      "rank": 1,
-      "score": 0.6529614329338074
+      "rank": 2,
+      "score": 0.6341652274131775
     },
-    "cached_at": "2026-01-19T08:27:01.042788"
+    "cached_at": "2026-01-19T08:46:02.358256"
   },
   "esmo_cpg_epithelialovarian_2023__v00000000|11": {
     "doc_id": "esmo_cpg_epithelialovarian_2023__v00000000",
     "page": 11,
     "text": "cytoreduction\no Residual ChT toxicity\no The patient’s general condition and preferences\n\u0004 Patients with ﬁrst relapse of ovarian cancer after >6\nmonths of last platinum administration should be evalu-\nated by a gynaecological oncology centre experienced in\nsurgery for ovarian cancer to identify potential candi-\ndates for surgical cytoreduction [I, A].\n\u0004 Patients who have previously responded to platinum\nwithout early symptomatic relapse should be treated\nwith either a platinum-based doublet (PLD, gemcitabine\nor paclitaxel) with bevacizumab [I, A; carboplatine\ngemcitabineebevacizumab ESMO-MCBS v1.1 score: 3]\nor a platinum-based doublet followed by maintenance\nwith PARPi therapy if a response is achieved and the\npatient has not been previously exposed to PARPis\n[I, A; olaparib for BRCA1/2-mutated: ESMO-MCBS v1.1\nscore: 2; niraparib regardless of BRCA1/2-mut status:\nESMO-MCBS v1.1 score: 3; rucaparib regardless of\nBRCA1/2-mut status: ESMO-MCBS v1.1 score: 3].\n\u0004 For patients requiring rapid response, the combination\nof a platinum-based doublet (PLD, gemcitabine or pacli-\ntaxel) with bevacizumab is preferred [V, A; carboplatine\ngemcitabineebevacizumab ESMO-MCBS v1.1 score: 3].",
     "metadata": {
-      "rank": 2,
-      "score": 0.653304398059845
+      "rank": 3,
+      "score": 0.6316000819206238
     },
-    "cached_at": "2026-01-19T08:10:38.043287"
+    "cached_at": "2026-01-19T08:46:02.359722"
   },
   "nccn_ovariancancer_v3_2025__v00000000|15": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 15,
-    "text": "based chemotherapy,n\npreferred for first\nrecurrence (category 1)\nor\nRecurrence therapyn,kk\nand/or\nBest supportive care\n(See NCCN Guidelines\nfor Palliative Care)\nConsider\nsecondary\ncytoreductive\nsurgeryj,k\nImmediate platinum-based\nrecurrence therapyn (category 2B)\nand/or\nBest supportive care (See NCCN\nGuidelines for Palliative Care)\nRECURRENCE THERAPY FOR PLATINUM-SENSITIVE DISEASEn,gg,hh,ii\nMaintenance therapy (if PR or CR)\n• Useful in certain circumstances:\n\u0017Continue bevacizumab if previously\ntreated with chemotherapy +\nbevacizumab;\nor\n\u0017PARPi therapy (for those with BRCA\n1/2 mutation)ll:\n ◊If not previously used (category 1)\n ◊If disease has not progressed\nduring prior PARPi treatment\nor\nObserve\ngg Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.\nhh During and after treatment for recurrence, patients should be evaluated as indicated with\ntumor markers and repeat imaging (with modalities previously used) to document response\nand/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\nkk Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.",
+    "text": "n See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).\ndd Validated molecular testing should be performed in a CLIA-approved facility using the\nmost recent available tumor tissue. Tumor molecular analysis is recommended to include,\nat a minimum, tests to identify potential benefit from targeted therapeutics that have tumor-\nspecific or tumor-agnostic benefit including, but not limited to, HER2 status (by IHC),\nBRCA1/2, HRD status, MSI, MMR, TMB, BRAF, FRα (FOLR1), RET, and NTRK if prior\ntesting did not include these markers. More comprehensive testing may be particularly\nimportant in LCOC with limited approved therapeutic options (OV-B).\nee Tumor molecular testing prior to initiation of therapy for persistent/recurrent disease, if not\npreviously done.\nff Definitions of platinum-sensitive and platinum-resistant disease represent a spectrum of\ndisease; clinical judgment and flexibility should be utilized in determining treatment options.\nCombination platinum-\nbased chemotherapy,n\npreferred for first\nrecurrence (category 1)\nor\nRecurrence therapyn,kk\nand/or\nBest supportive care\n(See NCCN Guidelines\nfor Palliative Care)\nConsider\nsecondary\ncytoreductive",
     "metadata": {
       "rank": 5,
-      "score": 0.650352954864502
+      "score": 0.6245894432067871
     },
-    "cached_at": "2026-01-19T08:37:13.533121"
+    "cached_at": "2026-01-19T08:46:02.362165"
   },
   "nccn_ovariancancer_v3_2025__v00000000|14": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 14,
-    "text": "n See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).\ndd Validated molecular testing should be performed in a CLIA-approved facility using\nthe most recent available tumor tissue. Tumor molecular analysis is recommended to\ninclude, at a minimum, tests to identify potential benefit from targeted therapeutics that\nhave tumor-specific or tumor-agnostic benefit including, but not limited to, HER2 status\n(by IHC), BRCA1/2, HRD status, MSI, MMR, TMB, BRAF, FRα (FOLR1), RET, and\nNTRK if prior testing did not include these markers. More comprehensive testing may be\nparticularly important in LCOC with limited approved therapeutic options (OV-B).\nee Tumor molecular testing prior to initiation of therapy for persistent/recurrent disease, if\nnot previously done.\nBest supportive care (See NCCN Guidelines for Palliative Care)\nand/or\nRecurrence therapy (OV-C, 9 of 12)n,jj,kk\nTHERAPY FOR PERSISTENT DISEASE OR RECURRENCEn,gg,hh,ii\nff Definitions of platinum-sensitive and platinum-resistant disease\nrepresent a spectrum of disease; clinical judgment and flexibility should\nbe utilized in determining treatment options.",
+    "text": "ff Definitions of platinum-sensitive and platinum-resistant disease\nrepresent a spectrum of disease; clinical judgment and flexibility should\nbe utilized in determining treatment options.\ngg Data are limited on primary and maintenance therapy for recurrent/\npersistent LCOC.\nhh During and after treatment for recurrence, patients should be evaluated\nas indicated with tumor markers and repeat imaging (with modalities\npreviously used) to document response and/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\njj Patients who do not respond and progress on two consecutive regimens\nwithout evidence of clinical benefits have diminished likelihood of\nbenefitting from additional therapy (Griffiths RW, et al. Int J Gynecol\nCancer 2011;21:58-65). Decisions to offer clinical trials, supportive care,\nor additional therapy should be made on an individual basis.\nkk Localized radiation therapy (RT) can be considered to palliate\nsymptoms and/or for oligometastatic disease.\nOV-8\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.",
     "metadata": {
-      "rank": 3,
-      "score": 0.6581206917762756
+      "rank": 4,
+      "score": 0.6308409571647644
     },
-    "cached_at": "2026-01-19T08:37:13.531379"
+    "cached_at": "2026-01-19T08:46:02.361002"
   },
   "esmo_cpg_epithelialovarian_2023__v00000000|4": {
     "doc_id": "esmo_cpg_epithelialovarian_2023__v00000000",
