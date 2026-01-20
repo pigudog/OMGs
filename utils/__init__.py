@@ -35,6 +35,11 @@ from .reference_cache import (
     extract_reference_tags,
     build_references_section,
 )
+from .skill_loader import (
+    load_skill,
+    build_skill_digest,
+    get_skill_info,
+)
 
 __all__ = [
     # Console utilities
@@ -59,4 +64,8 @@ __all__ = [
     "get_reference_cache",
     "extract_reference_tags",
     "build_references_section",
+    # SKILL loader
+    "load_skill",
+    "build_skill_digest",
+    "get_skill_info",
 ]

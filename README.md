@@ -17,6 +17,7 @@
 - [Usage Guide](#-usage-guide)
 - [Project Structure](#-project-structure)
 - [Configuration](#-configuration)
+- [SKILL Protocol](#-skill-protocol)
 - [Open Evidence References](#-open-evidence-references)
 - [Examples](#-examples)
 - [Troubleshooting](#-troubleshooting)
@@ -88,6 +89,15 @@ flowchart LR
 - **📈 Interaction Matrix**: Visual representation of expert discussions
 - **🔐 Evidence Tags**: All claims linked to source reports or guidelines
 
+### Error Handling & Resilience
+
+- **🛡️ Graceful Degradation**: Single agent failures don't crash the entire MDT pipeline
+- **⏱️ Timeout Protection**: 10-second timeout for RAG model initialization prevents infinite retries
+- **🔄 Automatic Fallbacks**: Failed operations use sensible defaults (e.g., empty RAG results, error placeholders)
+- **📊 Error Tracking**: All errors logged to trace with detailed context for debugging
+- **🌐 Network Resilience**: Handles HuggingFace model download failures gracefully, skips RAG if network unavailable
+- **📁 Missing Directory Tolerance**: System continues operation even if `files/` or `rag_store/` directories are missing, using empty data or in-memory caches
+
 ### Open Evidence References
 
 - **📋 Structured References**: Auto-generated reference section with 4 categories:
@@ -98,10 +108,18 @@ flowchart LR
 - **🎨 Visual HTML Report**: Color-coded reference cards with Mermaid flowchart
 - **🔗 1:1 Evidence Mapping**: Each RAG result gets a dedicated digest bullet
 
+### SKILL Protocol Integration
+
+- **🧠 Modular Knowledge**: Self-contained skill package in `skills/omgs/` with progressive disclosure
+- **⚡ Runtime Injection**: ~75 tokens per agent enforcing evidence format and role constraints
+- **📖 Reference Guides**: Architecture, expert roles, extension guide, and pipeline ops documentation
+- **🔧 Cursor Integration**: `.cursorrules` for automatic IDE context loading
+
 ---
 
 ## 🏗️ System Architecture
-
+<!-- Added conceptual diagram of the multi-agent architecture -->
+![OMGs Multi-Agent Architecture](draw.png)
 ### High-Level Architecture
 
 ```mermaid
@@ -132,6 +150,11 @@ flowchart TB
         Decision[Decision Maker]
     end
     
+    subgraph Skill [SKILL Protocol]
+        SkillMD[SKILL.md]
+        SkillLoader[skill_loader.py]
+    end
+    
     subgraph Output [Output Layer]
         JSON[JSON Results]
         HTML[HTML Report]
@@ -141,6 +164,7 @@ flowchart TB
     Input --> Core
     Core --> Servers
     Servers --> Host
+    Skill --> Experts
     Host --> Output
 ```
 
@@ -207,6 +231,11 @@ flowchart TD
     subgraph utils_layer [utils/ - Pure Utilities]
         TimeUtils[time_utils.py]
         ConsoleUtils[console_utils.py]
+        SkillLoader[skill_loader.py]
+    end
+    
+    subgraph skills_layer [skills/ - SKILL Protocol]
+        SkillMD[omgs/SKILL.md]
     end
     
     MainPy --> Orchestrator
@@ -220,6 +249,9 @@ flowchart TD
     
     Experts --> Agent
     Experts --> InfoDelivery
+    Experts --> SkillLoader
+    
+    SkillLoader --> SkillMD
     
     Decision --> Agent
     
@@ -349,7 +381,7 @@ python -c "import chromadb; print(f'ChromaDB: OK')"
 
 ### Prepare Data Files
 
-Ensure the following files exist:
+**Note**: The system can run even if some data files or directories are missing. Missing files will result in empty data for that component, but the pipeline will continue. However, for full functionality, ensure the following files exist:
 
 ```
 OMGs/
@@ -512,6 +544,16 @@ OMGs/
 ├── pdf_to_rag.py               # RAG corpus/index builder
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # This documentation
+├── .cursorrules                # Cursor IDE integration rules
+│
+├── skills/                     # SKILL Protocol Package
+│   └── omgs/
+│       ├── SKILL.md            # Core skill definition (~100 lines)
+│       └── references/         # Detailed reference guides
+│           ├── architecture.md     # Three-layer architecture details
+│           ├── expert-roles.md     # Role permissions and prompts
+│           ├── extension-guide.md  # Adding roles/report types
+│           └── pipeline-ops.md     # CLI, config, debugging
 │
 ├── host/                       # Central Host (Orchestration Layer)
 │   ├── __init__.py             # Package exports
@@ -583,11 +625,15 @@ OMGs/
 │   │                           #   - parse_dt(), parse_date()
 │   │                           #   - make_cutoff(), filter_before()
 │   │                           #   - build_lab/imaging/pathology_timeline()
-│   └── reference_cache.py      # Reference caching & Open Evidence system
-│                               #   - ReferenceCache, get_reference_cache()
-│                               #   - extract_reference_tags() - 4 types supported
-│                               #   - build_references_section() - formatted refs
-│                               #   - store_trial(), get_trial() - trial caching
+│   ├── reference_cache.py      # Reference caching & Open Evidence system
+│   │                           #   - ReferenceCache, get_reference_cache()
+│   │                           #   - extract_reference_tags() - 4 types supported
+│   │                           #   - build_references_section() - formatted refs
+│   │                           #   - store_trial(), get_trial() - trial caching
+│   └── skill_loader.py         # SKILL Protocol runtime loader
+│                               #   - load_skill() - parse SKILL.md with caching
+│                               #   - build_skill_digest() - ~75 token digest per role
+│                               #   - get_skill_info() - metadata for tracing
 │
 ├── config/                     # Configuration Files
 │   ├── paths.json              # Data and output paths
@@ -707,6 +753,96 @@ result = process_omgs_multi_expert_query(
     device="cuda",
     topk=10
 )
+```
+
+---
+
+## 🧠 SKILL Protocol
+
+### Overview
+
+OMGs implements a **SKILL Protocol** that injects modular knowledge into Expert Agents at runtime. This ensures consistent evidence tagging, role behavior enforcement, and system awareness across all MDT discussions.
+
+### How It Works
+
+```mermaid
+flowchart LR
+    subgraph skill [skills/omgs/]
+        SkillMD[SKILL.md]
+        Refs[references/]
+    end
+    
+    subgraph loader [utils/skill_loader.py]
+        LoadSkill[load_skill]
+        BuildDigest[build_skill_digest]
+        Cache[Cache]
+    end
+    
+    subgraph runtime [host/experts.py]
+        InitAgent[init_expert_agent]
+        Instruction[Agent Instruction]
+    end
+    
+    SkillMD --> LoadSkill
+    LoadSkill --> Cache
+    Cache --> BuildDigest
+    BuildDigest -->|"~75 tokens"| Instruction
+    InitAgent --> Instruction
+```
+
+### Injected SKILL Digest
+
+Each Expert Agent receives a concise digest (~75 tokens) at the start of their instruction:
+
+```
+# OMGs SKILL PROTOCOL
+System: OMGs (Ovarian-cancer Multidisciplinary aGent System)
+Evidence tags REQUIRED: [@guideline:doc_id|page], [@pubmed:PMID], [@trial:id], [@report_id|date]
+Role constraint: {role-specific constraint}
+```
+
+### Role-Specific Constraints
+
+| Role | Constraint |
+|------|------------|
+| **Chair** | Integrate all specialties; no specific drug names |
+| **Oncologist** | Systemic therapy categories only; no drug names |
+| **Radiologist** | Imaging findings only; no treatment advice |
+| **Pathologist** | Histology/molecular only; no treatment advice |
+| **Nuclear** | Metabolic findings only; no treatment advice |
+
+### Token Impact
+
+| Component | Tokens |
+|-----------|--------|
+| Per agent digest | ~75 |
+| 5 agents total | ~375 |
+| % of typical MDT run (~50k) | <1% |
+
+### Files Involved
+
+| File | Purpose |
+|------|---------|
+| `skills/omgs/SKILL.md` | Core skill definition with architecture overview |
+| `skills/omgs/references/*.md` | Detailed guides (architecture, roles, extension, ops) |
+| `utils/skill_loader.py` | Runtime loader with caching |
+| `host/experts.py` | Injects digest via `build_skill_digest(role)` |
+| `.cursorrules` | Cursor IDE auto-context for development |
+
+### Usage in Code
+
+```python
+from utils.skill_loader import build_skill_digest
+
+# In init_expert_agent():
+skill_digest = build_skill_digest(role)  # Returns ~75 token string
+
+instruction = f"""
+{skill_digest}
+
+OUTPATIENT VISIT TIME: {visit_time_str}
+...
+"""
 ```
 
 ---
@@ -901,13 +1037,68 @@ flowchart TD
 
 ## 🐛 Troubleshooting
 
+### Error Handling System
+
+OMGs implements comprehensive error handling to ensure the pipeline continues even when individual components fail:
+
+**Error Handling Layers:**
+1. **Agent Level** (`core/agent.py`): Catches API errors and raises `AgentError` with context
+2. **MDT Discussion Level** (`host/orchestrator.py`): Handles expert failures with fallback responses
+3. **Pipeline Level** (`host/orchestrator.py`): Handles RAG, report selection, and initialization failures
+4. **RAG Level** (`servers/evidence_search.py`): Prevents infinite retries with timeout and request patching
+
+**Fallback Strategies:**
+
+| Failure Point | Fallback Behavior |
+|---------------|-------------------|
+| Expert initial opinion | Uses error placeholder, continues with other experts |
+| Assistant summary | Uses JSON of initial opinions as merged context |
+| Turn发言 | Skips that expert for the turn, continues discussion |
+| Final plan | Uses error placeholder, included in final output |
+| RAG retrieval | Returns empty results, continues without RAG evidence |
+| RAG summarization | Uses first 3 RAG results as simple digest |
+| Chair final output | Generates simplified output from expert plans |
+| Expert initialization | Skips failed roles, uses first available as chair if needed |
+| Missing `files/` directory | Returns empty lists for reports, continues with available data |
+| Missing report JSONL files | Returns empty lists, prints warning, pipeline continues |
+| Missing `rag_store/` directory | RAG initialization fails gracefully, continues without RAG |
+| Missing `rag_store/reference_cache/` | Reference cache works in-memory only, no disk persistence |
+| ChromaDB directory creation failure | Raises clear error message, RAG retrieval skipped |
+
+**Network Issues with HuggingFace:**
+
+If you see `Connection reset by peer` errors when downloading models:
+- The system will timeout after 10 seconds and skip RAG retrieval
+- Requests are patched to disable retries, preventing infinite background retries
+- The pipeline continues with empty RAG results
+- Check your network connection or pre-download the model locally
+
+**Error Logging:**
+
+All errors are logged to the trace system. Check error summary:
+```python
+from servers.trace import TraceLogger
+
+trace = TraceLogger(enabled=True)
+# ... run pipeline ...
+error_summary = trace.get_error_summary()
+print(f"Total errors: {error_summary['total_errors']}")
+print(f"Errors by role: {error_summary['errors_by_role']}")
+print(f"Errors by stage: {error_summary['errors_by_stage']}")
+```
+
 ### Common Errors
 
 | Error | Cause | Solution |
 |-------|-------|----------|
 | `RuntimeError: Missing AZURE_OPENAI_ENDPOINT` | Environment variables not set | Set `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_API_KEY` |
-| `FileNotFoundError: files/lab_reports_summary.jsonl` | Data files missing | Check file paths in `config/paths.json` |
-| `Failed to load RAG index` | RAG index not built | Run `pdf_to_rag.py build` and `index` commands |
+| `FileNotFoundError: files/lab_reports_summary.jsonl` | Data files missing | **System handles gracefully**: Returns empty lists, prints warning, continues. To fix: Create `files/` directory and add required JSONL files. |
+| `[WARNING] Failed to load lab reports` | Report file missing or unreadable | **System handles gracefully**: Pipeline continues with empty report data. Check file permissions and paths in `config/paths.json`. |
+| `Failed to load RAG index` | RAG index not built | Run `pdf_to_rag.py build` and `index` commands. System continues without RAG if index unavailable. |
+| `RAG initialization failed` | Network issues or model not cached | Check network, or pre-download model. Pipeline continues without RAG. |
+| `Failed to create RAG index directory` | Permission denied or disk full | Check directory permissions. System will skip RAG if directory cannot be created. |
+| `[WARNING] Failed to create reference cache directory` | `rag_store/reference_cache/` cannot be created | **System handles gracefully**: Cache works in-memory only. Check parent directory permissions. |
+| `AgentError: ... failed in chat` | API call failed | Check Azure OpenAI credentials and quota. Agent uses fallback response. |
 | `Azure API error` | Invalid deployment name | Verify `--model` matches Azure deployment |
 | `ModuleNotFoundError: No module named 'torch'` | Dependencies not installed | Run `pip install -r requirements.txt` |
 

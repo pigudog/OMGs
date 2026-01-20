@@ -5,6 +5,7 @@ from utils.time_utils import safe_date10, parse_dt, parse_date
 from utils.console_utils import safe_parse_json_block
 import re
 import json
+import os
 # ============================================================
 # JSONL IO + id parsing
 # ============================================================
@@ -14,42 +15,84 @@ _JSONL_INDEX_CACHE: Dict[str, Dict[str, List[Dict[str, Any]]]] = {}
 
 
 def read_jsonl(path: str, warn_bad_lines: bool = True, max_warn: int = 5) -> List[Dict[str, Any]]:
+    """
+    Read JSONL file and return list of dictionaries.
+    
+    Returns empty list if file doesn't exist or cannot be read.
+    This ensures the pipeline continues even when data files are missing.
+    """
     data: List[Dict[str, Any]] = []
     bad_count = 0
-    with open(path, "r", encoding="utf-8") as f:
-        for idx, line in enumerate(f, start=1):
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                data.append(json.loads(line))
-            except Exception:
-                bad_count += 1
-                if warn_bad_lines and bad_count <= max_warn:
-                    preview = (line[:160] + "...") if len(line) > 160 else line
-                    print(f"[WARNING] Bad JSONL line {idx} in {path}: {preview}")
-                continue
-    if warn_bad_lines and bad_count > max_warn:
-        print(f"[WARNING] Bad JSONL lines in {path}: {bad_count} total (showing first {max_warn})")
+    
+    # Check if file exists
+    if not path:
+        return []
+    
+    if not os.path.exists(path):
+        if warn_bad_lines:
+            print(f"[WARNING] JSONL file not found: {path}. Returning empty list.")
+        return []
+    
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            for idx, line in enumerate(f, start=1):
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    data.append(json.loads(line))
+                except Exception:
+                    bad_count += 1
+                    if warn_bad_lines and bad_count <= max_warn:
+                        preview = (line[:160] + "...") if len(line) > 160 else line
+                        print(f"[WARNING] Bad JSONL line {idx} in {path}: {preview}")
+                    continue
+        if warn_bad_lines and bad_count > max_warn:
+            print(f"[WARNING] Bad JSONL lines in {path}: {bad_count} total (showing first {max_warn})")
+    except FileNotFoundError:
+        if warn_bad_lines:
+            print(f"[WARNING] JSONL file not found: {path}. Returning empty list.")
+        return []
+    except PermissionError:
+        if warn_bad_lines:
+            print(f"[WARNING] Permission denied reading JSONL file: {path}. Returning empty list.")
+        return []
+    except Exception as e:
+        if warn_bad_lines:
+            print(f"[WARNING] Error reading JSONL file {path}: {e}. Returning empty list.")
+        return []
+    
     return data
 
 
 def _get_jsonl_index(path: str) -> Dict[str, List[Dict[str, Any]]]:
+    """
+    Get indexed JSONL data by meta_info.
+    
+    Returns empty dict if file doesn't exist or cannot be read.
+    """
     if not path:
         return {}
     if path in _JSONL_INDEX_CACHE:
         return _JSONL_INDEX_CACHE[path]
-    data = _JSONL_CACHE.get(path)
-    if data is None:
-        data = read_jsonl(path)
-        _JSONL_CACHE[path] = data
-    index: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
-    for row in data:
-        key = str(row.get("meta_info") or "")
-        if key:
-            index[key].append(row)
-    _JSONL_INDEX_CACHE[path] = index
-    return index
+    
+    try:
+        data = _JSONL_CACHE.get(path)
+        if data is None:
+            data = read_jsonl(path)  # Returns [] if file doesn't exist
+            _JSONL_CACHE[path] = data
+        
+        index: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
+        for row in data:
+            key = str(row.get("meta_info") or "")
+            if key:
+                index[key].append(row)
+        _JSONL_INDEX_CACHE[path] = index
+        return index
+    except Exception as e:
+        print(f"[WARNING] Failed to index JSONL file {path}: {e}. Returning empty index.")
+        _JSONL_INDEX_CACHE[path] = {}
+        return {}
 
 
 def parse_ids(text: str) -> List[str]:

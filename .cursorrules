@@ -1,0 +1,17 @@
+# OMGs Project Rules
+
+When working on this project, read skills/omgs/SKILL.md first to understand:
+- Three-layer architecture (host/ servers/ core/)
+- Expert roles and permission matrix
+- MDT discussion flow and evidence tag system
+
+For extension tasks, refer to:
+- Adding roles: skills/omgs/references/extension-guide.md
+- Pipeline ops: skills/omgs/references/pipeline-ops.md
+- Architecture details: skills/omgs/references/architecture.md
+- Expert roles: skills/omgs/references/expert-roles.md
+
+Key conventions:
+- All expert responses must use evidence tags: [@guideline:doc_id|page], [@pubmed:PMID], [@trial:id], [@report_id|date]
+- Do not modify core architecture without explicit request
+- Configuration changes go in config/paths.json or config/mdt_prompts.json

@@ -6,6 +6,7 @@ from core.agent import Agent
 from servers.info_delivery import safe_load_case_json, build_role_specific_case_view
 from servers.reports_selector import expert_select_reports
 from utils.console_utils import Color
+from utils.skill_loader import build_skill_digest
 
 ###############################################################################
 # FIXED ROLES + PERMISSIONS
@@ -133,7 +134,12 @@ def init_expert_agent(
 
     visit_time_str = visit_time or "Unknown visit date"
 
+    # Inject SKILL protocol for evidence format and role behavior enforcement
+    skill_digest = build_skill_digest(role)
+
     instruction = f"""
+{skill_digest}
+
 OUTPATIENT VISIT TIME (today's clinic decision point): {visit_time_str}
 
 CASE_FINGERPRINT: {case_fingerprint}

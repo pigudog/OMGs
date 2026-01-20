@@ -8,11 +8,15 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from typing import Dict, Any, Optional, Tuple, List
 import torch
 import re
+import threading
+import time
+import json
 def _init_rag(
     index_dir: str,
     model_name: str = "BAAI/bge-m3",
     device: str = "auto",
     collection_name: str = "chair_chunks",
+    timeout_seconds: int = 10,
 ):
     """
     Initialize RAG system using ChromaDB PersistentClient API.
@@ -25,9 +29,13 @@ def _init_rag(
         model_name: Embedding model name (default: "BAAI/bge-m3")
         device: Device for embedding model ("auto", "cuda", or "cpu")
         collection_name: ChromaDB collection name
+        timeout_seconds: Maximum time to wait for model initialization (default: 30)
     
     Returns:
         Tuple of (collection, embedder) for RAG operations
+    
+    Raises:
+        RuntimeError: If model download fails or initialization times out
     """
 
     # ---- device Auto ----
@@ -35,11 +43,209 @@ def _init_rag(
         device = "cuda" if torch.cuda.is_available() else "cpu"
 
     # ---- embedding ----
-    embedder_base = HuggingFaceEmbeddings(
-        model_name=model_name,
-        model_kwargs={"device": device, "trust_remote_code": True},
-        encode_kwargs={"normalize_embeddings": True},
-    )
+    # #region debug log
+    with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+        import json
+        f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"B","location":"evidence_search.py:43","message":"_init_rag entry","data":{"model_name":model_name,"timeout_seconds":timeout_seconds},"timestamp":int(time.time()*1000)})+"\n")
+    # #endregion
+    
+    # Check if model is cached locally first to avoid unnecessary network calls
+    try:
+        from huggingface_hub import snapshot_download, HfFolder
+        cache_dir = os.environ.get("HF_HOME") or os.path.expanduser("~/.cache/huggingface")
+        model_cache_path = os.path.join(cache_dir, "hub", f"models--{model_name.replace('/', '--')}")
+        model_is_cached = os.path.exists(model_cache_path) and os.path.isdir(model_cache_path)
+        # #region debug log
+        with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+            f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"B","location":"evidence_search.py:50","message":"model cache check","data":{"model_is_cached":model_is_cached,"cache_path":model_cache_path},"timestamp":int(time.time()*1000)})+"\n")
+        # #endregion
+    except ImportError:
+        # If huggingface_hub is not available, assume model is not cached
+        model_is_cached = False
+        # #region debug log
+        with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+            f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"B","location":"evidence_search.py:52","message":"huggingface_hub import failed","data":{},"timestamp":int(time.time()*1000)})+"\n")
+        # #endregion
+    
+    # Set environment variables to reduce HuggingFace retries and timeout
+    # This helps prevent infinite retries when network is unavailable
+    original_timeout = os.environ.get("HF_HUB_DOWNLOAD_TIMEOUT")
+    original_offline = os.environ.get("HF_HUB_OFFLINE")
+    
+    try:
+        # Set aggressive timeout and FORCE offline mode if network check fails
+        os.environ["HF_HUB_DOWNLOAD_TIMEOUT"] = str(timeout_seconds)
+        os.environ["HF_HUB_DISABLE_EXPERIMENTAL_WARNING"] = "1"
+        # #region debug log
+        with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+            f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"E","location":"evidence_search.py:61","message":"env vars set","data":{"HF_HUB_DOWNLOAD_TIMEOUT":str(timeout_seconds)},"timestamp":int(time.time()*1000)})+"\n")
+        # #endregion
+        
+        # If model is not cached, try a quick network check before attempting download
+        network_available = True
+        if not model_is_cached:
+            # Quick network connectivity check
+            try:
+                test_response = requests.get("https://huggingface.co", timeout=2)
+                network_available = test_response.status_code == 200
+                # #region debug log
+                with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+                    f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"A","location":"evidence_search.py:68","message":"network check result","data":{"network_available":network_available,"status_code":test_response.status_code},"timestamp":int(time.time()*1000)})+"\n")
+                # #endregion
+                if not network_available:
+                    raise RuntimeError(
+                        f"Model '{model_name}' is not cached locally and HuggingFace is not accessible. "
+                        f"RAG retrieval will be skipped. Please check your network connection or pre-download the model."
+                    )
+            except (requests.exceptions.RequestException, ConnectionError, OSError) as e:
+                network_available = False
+                # #region debug log
+                with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+                    f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"A","location":"evidence_search.py:74","message":"network check failed","data":{"error":str(e)},"timestamp":int(time.time()*1000)})+"\n")
+                # #endregion
+                # FORCE offline mode to prevent any download attempts
+                os.environ["HF_HUB_OFFLINE"] = "1"
+                raise RuntimeError(
+                    f"Model '{model_name}' is not cached locally and network is unavailable. "
+                    f"RAG retrieval will be skipped. Original error: {e}"
+                ) from e
+        
+        # CRITICAL: Monkey patch requests to disable retries BEFORE starting thread
+        # This prevents HuggingFace from retrying in background threads
+        # Save original implementations
+        original_HTTPAdapter_init = requests.adapters.HTTPAdapter.__init__
+        original_Session_init = requests.Session.__init__
+        
+        def patched_HTTPAdapter_init(self, *args, **kwargs):
+            # Force max_retries=0 to disable all retries
+            kwargs['max_retries'] = 0
+            return original_HTTPAdapter_init(self, *args, **kwargs)
+        
+        def patched_Session_init(self, *args, **kwargs):
+            original_Session_init(self, *args, **kwargs)
+            # Mount no-retry adapters
+            no_retry_adapter = requests.adapters.HTTPAdapter(max_retries=0)
+            self.mount('http://', no_retry_adapter)
+            self.mount('https://', no_retry_adapter)
+        
+        # Apply patches globally (affects all requests in this process)
+        requests.adapters.HTTPAdapter.__init__ = patched_HTTPAdapter_init
+        requests.Session.__init__ = patched_Session_init
+        
+        # #region debug log
+        with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+            f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"D","location":"evidence_search.py:120","message":"requests patched globally","data":{},"timestamp":int(time.time()*1000)})+"\n")
+        # #endregion
+        
+        # Use threading with timeout to prevent hanging
+        # Store patch state for cleanup
+        result_container = {"embedder": None, "error": None, "completed": False, "patch_applied": True}
+        
+        def init_embedder():
+            try:
+                # #region debug log
+                with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+                    f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"C","location":"evidence_search.py:130","message":"init_embedder thread started","data":{},"timestamp":int(time.time()*1000)})+"\n")
+                # #endregion
+                
+                embedder_base = HuggingFaceEmbeddings(
+                    model_name=model_name,
+                    model_kwargs={"device": device, "trust_remote_code": True},
+                    encode_kwargs={"normalize_embeddings": True},
+                )
+                
+                result_container["embedder"] = embedder_base
+                result_container["completed"] = True
+                # #region debug log
+                with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+                    f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"C","location":"evidence_search.py:142","message":"init_embedder completed","data":{},"timestamp":int(time.time()*1000)})+"\n")
+                # #endregion
+            except Exception as e:
+                result_container["error"] = e
+                result_container["completed"] = True
+                # #region debug log
+                with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+                    f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"C","location":"evidence_search.py:148","message":"init_embedder error","data":{"error":str(e),"error_type":type(e).__name__},"timestamp":int(time.time()*1000)})+"\n")
+                # #endregion
+        
+        # Start initialization in a separate thread with timeout
+        init_thread = threading.Thread(target=init_embedder, daemon=True)
+        # #region debug log
+        with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+            f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"C","location":"evidence_search.py:152","message":"thread start","data":{"timeout_seconds":timeout_seconds},"timestamp":int(time.time()*1000)})+"\n")
+        # #endregion
+        init_thread.start()
+        init_thread.join(timeout=timeout_seconds)
+        
+        # Check if initialization completed or timed out
+        if not result_container["completed"]:
+            # Timeout occurred - FORCE offline mode to stop any ongoing downloads
+            os.environ["HF_HUB_OFFLINE"] = "1"
+            # #region debug log
+            with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+                f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"C","location":"evidence_search.py:180","message":"timeout occurred","data":{"thread_alive":init_thread.is_alive()},"timestamp":int(time.time()*1000)})+"\n")
+            # #endregion
+            # DO NOT restore requests behavior here - keep patch active so daemon thread
+            # continues with no-retry behavior. It will fail quickly instead of retrying 5 times.
+            raise RuntimeError(
+                f"Embedding model '{model_name}' initialization timed out after {timeout_seconds} seconds. "
+                f"This is likely due to network issues accessing HuggingFace. "
+                f"RAG retrieval will be skipped."
+            )
+        
+        if result_container["error"] is not None:
+            # Initialization failed - FORCE offline mode
+            os.environ["HF_HUB_OFFLINE"] = "1"
+            # #region debug log
+            with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+                f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"C","location":"evidence_search.py:193","message":"init error handling","data":{"error":str(result_container["error"])},"timestamp":int(time.time()*1000)})+"\n")
+            # #endregion
+            # DO NOT restore requests behavior here - keep patch active
+            error = result_container["error"]
+            if isinstance(error, (requests.exceptions.RequestException, ConnectionError, OSError)):
+                raise RuntimeError(
+                    f"Failed to download/initialize embedding model '{model_name}' due to network issues. "
+                    f"RAG retrieval will be skipped. Original error: {error}"
+                ) from error
+            else:
+                raise RuntimeError(
+                    f"Failed to initialize embedding model '{model_name}'. "
+                    f"Original error: {error}"
+                ) from error
+        
+        # Success case: restore original requests behavior
+        # Only restore on success since daemon thread is done
+        try:
+            requests.adapters.HTTPAdapter.__init__ = original_HTTPAdapter_init
+            requests.Session.__init__ = original_Session_init
+        except:
+            pass  # Ignore errors during restoration
+        
+        embedder_base = result_container["embedder"]
+        # #region debug log
+        with open("/Users/pigudogzyy/Documents/PythonProject/OMGs/.cursor/debug.log", "a") as f:
+            f.write(json.dumps({"sessionId":"debug-session","runId":"run1","hypothesisId":"C","location":"evidence_search.py:191","message":"_init_rag success","data":{},"timestamp":int(time.time()*1000)})+"\n")
+        # #endregion
+    finally:
+        # Restore original environment variables
+        # But keep HF_HUB_OFFLINE=1 if we had an error to prevent background retries
+        if original_timeout is not None:
+            os.environ["HF_HUB_DOWNLOAD_TIMEOUT"] = original_timeout
+        elif "HF_HUB_DOWNLOAD_TIMEOUT" in os.environ:
+            del os.environ["HF_HUB_DOWNLOAD_TIMEOUT"]
+        
+        # Only restore HF_HUB_OFFLINE if we didn't set it due to an error
+        # This prevents HuggingFace from continuing retries in background
+        if "HF_HUB_OFFLINE" not in os.environ or os.environ.get("HF_HUB_OFFLINE") != "1":
+            if original_offline is not None:
+                os.environ["HF_HUB_OFFLINE"] = original_offline
+            elif "HF_HUB_OFFLINE" in os.environ:
+                del os.environ["HF_HUB_OFFLINE"]
+        
+        # Note: We intentionally do NOT restore requests behavior in error/timeout cases
+        # This ensures the daemon thread (if still running) continues with no-retry behavior
+        # The patch will remain active until the process exits or the daemon thread completes
+        # This prevents HuggingFace from retrying 5 times in the background
 
     # ---- BGE prefix ----
     class InstructionEmbedder:
@@ -57,13 +263,26 @@ def _init_rag(
     embedder = InstructionEmbedder(embedder_base) if re.search("BAAI/bge", model_name) else embedder_base
 
     # ---- Chroma new API: PersistentClient ----
-    os.makedirs(index_dir, exist_ok=True)
-    client = PersistentClient(path=index_dir)
-
-    collection = client.get_or_create_collection(
-        name=collection_name,
-        metadata={"hnsw:space": "cosine"}
-    )
+    # Create directory if it doesn't exist, handle errors gracefully
+    try:
+        os.makedirs(index_dir, exist_ok=True)
+    except (OSError, PermissionError) as e:
+        raise RuntimeError(
+            f"Failed to create RAG index directory '{index_dir}': {e}. "
+            f"Please check permissions or create the directory manually."
+        ) from e
+    
+    try:
+        client = PersistentClient(path=index_dir)
+        collection = client.get_or_create_collection(
+            name=collection_name,
+            metadata={"hnsw:space": "cosine"}
+        )
+    except Exception as e:
+        raise RuntimeError(
+            f"Failed to initialize ChromaDB at '{index_dir}': {e}. "
+            f"RAG retrieval will be skipped."
+        ) from e
 
     return collection, embedder
 
@@ -78,23 +297,48 @@ def rag_search_pack(
 ):
     """
     NEW RAG search using PersistentClient
+    
+    Returns:
+        Tuple of (pack_string, raw_results_list)
+        If initialization fails, returns ("(RAG: initialization failed)", [])
     """
-    collection, embedder = _init_rag(
-        index_dir=index_dir,
-        model_name=model_name,
-        device=device,
-        collection_name=collection_name
-    )
+    try:
+        collection, embedder = _init_rag(
+            index_dir=index_dir,
+            model_name=model_name,
+            device=device,
+            collection_name=collection_name
+        )
+    except RuntimeError as e:
+        # Network or initialization failure: return empty results immediately
+        error_msg = str(e)
+        if "network" in error_msg.lower() or "connection" in error_msg.lower():
+            print(f"[WARNING] RAG initialization failed due to network issues. Skipping RAG retrieval.")
+        else:
+            print(f"[WARNING] RAG initialization failed: {e}")
+        return "(RAG: initialization failed)", []
+    except Exception as e:
+        # Any other unexpected error: also fail fast
+        print(f"[WARNING] RAG initialization failed: {e}")
+        return "(RAG: initialization failed)", []
 
     # ---- embed query ----
-    qvec = embedder.embed_query(query)
+    try:
+        qvec = embedder.embed_query(query)
+    except Exception as e:
+        print(f"[WARNING] RAG query embedding failed: {e}")
+        return "(RAG: embedding failed)", []
 
     # ---- perform search ----
-    results = collection.query(
-        query_embeddings=[qvec],
-        n_results=topk,
-        include=["metadatas", "documents", "distances"]
-    )
+    try:
+        results = collection.query(
+            query_embeddings=[qvec],
+            n_results=topk,
+            include=["metadatas", "documents", "distances"]
+        )
+    except Exception as e:
+        print(f"[WARNING] RAG search failed: {e}")
+        return "(RAG: search failed)", []
 
     if not results["documents"] or len(results["documents"][0]) == 0:
         return "(RAG: no evidence found)", []
@@ -300,7 +544,26 @@ def build_rag_query_for_mdt(agent, question: str, key_facts: str | None = None) 
         "Output ONLY the query text."
     )
     prompt = facts_block + query_builder_template.format(question=question)
-    raw_query = agent.run_selection(prompt).strip()
+    try:
+        raw_query = agent.run_selection(prompt).strip()
+    except Exception as e:
+        # Fallback: construct simple query from key facts
+        print(f"[WARNING] RAG query builder failed: {e}")
+        if key_facts:
+            # Extract basic info from key_facts
+            hist_match = re.search(r"histology=([^;\n]+)", key_facts, re.IGNORECASE)
+            plat_match = re.search(r"PLATINUM:\s*status=([^;]+)", key_facts, re.IGNORECASE)
+            parts = []
+            if hist_match:
+                hist = _clean_histology_for_query(hist_match.group(1).strip())
+                if hist:
+                    parts.append(hist)
+            if plat_match:
+                parts.append(f"platinum {plat_match.group(1).strip().lower()}")
+            raw_query = "ovarian cancer " + " ".join(parts) if parts else "ovarian cancer treatment"
+        else:
+            raw_query = "ovarian cancer treatment guidelines"
+    
     sanitized, changed = sanitize_rag_query(raw_query)
     if changed:
         print("[WARNING] RAG query contained potential identifiers and was sanitized before logging/search.")
@@ -408,7 +671,37 @@ Each bullet MUST use the corresponding tag from the list above.
         count_info=count_info,
         total_count=total_count,
     )
-    return agent.run_selection(prompt)
+    try:
+        return agent.run_selection(prompt)
+    except Exception as e:
+        # Fallback: create simple digest from RAG raw results
+        print(f"[WARNING] RAG evidence summarization failed: {e}")
+        if not rag_raw:
+            return "# No RAG evidence available"
+        
+        digest_lines = []
+        for i, r in enumerate(rag_raw[:min(total_count, 8)], 1):  # Limit to 8 bullets
+            source = r.get("source", "")
+            if source == "guideline":
+                doc_id = r.get("doc_id", "")
+                page = r.get("page", "NA")
+                tag = f"[@guideline:{doc_id}|{page}]"
+                text = r.get("text", "")
+            elif source == "pubmed":
+                pmid = r.get("pmid", "")
+                tag = f"[@pubmed:{pmid}]"
+                text = r.get("abstract", "") or r.get("title", "")
+            else:
+                tag = f"[unknown source {i}]"
+                text = r.get("text", "") or ""
+            
+            # Create a simple bullet from the text
+            preview = text[:150].strip() if text else "Evidence available"
+            if len(text) > 150:
+                preview += "..."
+            digest_lines.append(f"- {preview} {tag}")
+        
+        return "\n".join(digest_lines) if digest_lines else "# No RAG evidence available"
 
 ###############################################################################
 # 3. RAG CONFIG HELPERS

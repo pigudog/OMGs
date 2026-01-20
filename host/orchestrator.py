@@ -12,6 +12,8 @@ from chromadb import PersistentClient
 from langchain_huggingface import HuggingFaceEmbeddings
 from utils.console_utils import Color, normalize_trial_compact, safe_parse_json_block, question_to_text, preview_text, print_prompt_budget
 from servers.trace import VisualConfig, TraceLogger, print_selected_reports_table, print_section, print_rag_hits_table, warn_missing_evidence_tags
+from core.agent import AgentError
+from utils.error_handling import safe_agent_call, get_fallback_response
 from servers.reporters import save_mdt_log, save_case_html_report
 from utils.time_utils import make_cutoff, parse_dt, safe_date10, filter_before, report_range
 from utils.time_utils import build_lab_timeline, build_imaging_timeline, build_pathology_timeline
@@ -140,12 +142,40 @@ def run_mdt_discussion(
         if trace:
             trace.emit("mdt_initial_opinion_role_start", {"role": role, "order": i})
         print_prompt_budget(f"{role}/initial", initial_opinion_prompt) # print the token budget of the initial opinion prompt
-        op = ag.chat(initial_opinion_prompt) # get the initial opinion of the expert
-        if trace:
-            trace.emit("mdt_initial_opinion_role_end", {"role": role, "chars": len(op or '')})
-        print(f"{Color.OKCYAN}   {role_to_emoji[role]} {op}{Color.RESET}")
-        warn_missing_evidence_tags(op, role=f"{role}/initial", trace=trace) # warn the missing evidence tags in the initial opinion
-        initial_ops[role] = op # store the initial opinion of the expert in the initial_ops dictionary
+        
+        # Use safe_agent_call for error handling
+        try:
+            op = ag.chat(initial_opinion_prompt) # get the initial opinion of the expert
+            if trace:
+                trace.emit("mdt_initial_opinion_role_end", {"role": role, "chars": len(op or '')})
+            print(f"{Color.OKCYAN}   {role_to_emoji[role]} {op}{Color.RESET}")
+            warn_missing_evidence_tags(op, role=f"{role}/initial", trace=trace) # warn the missing evidence tags in the initial opinion
+            initial_ops[role] = op # store the initial opinion of the expert in the initial_ops dictionary
+        except AgentError as e:
+            error_msg = get_fallback_response(role, "initial_opinion")
+            print(f"{Color.WARNING}[WARNING] {role} failed: {e.original_error}{Color.RESET}")
+            print(f"{Color.OKCYAN}   {role_to_emoji[role]} {error_msg}{Color.RESET}")
+            initial_ops[role] = error_msg
+            if trace:
+                trace.emit("agent_error", {
+                    "role": role,
+                    "stage": "initial_opinion",
+                    "error": str(e.original_error),
+                    "error_type": type(e.original_error).__name__
+                })
+        except Exception as e:
+            # Catch any unexpected exceptions
+            error_msg = get_fallback_response(role, "initial_opinion")
+            print(f"{Color.FAIL}[ERROR] {role} unexpected error: {e}{Color.RESET}")
+            print(f"{Color.OKCYAN}   {role_to_emoji[role]} {error_msg}{Color.RESET}")
+            initial_ops[role] = error_msg
+            if trace:
+                trace.emit("agent_error", {
+                    "role": role,
+                    "stage": "initial_opinion",
+                    "error": str(e),
+                    "error_type": "UnexpectedException"
+                })
 
     summarize_template = mdt_prompts.get("summarize_initial_template",
         "Summarize expert opinions concisely for MDT.\n{opinions}\n\n"
@@ -153,9 +183,33 @@ def run_mdt_discussion(
     )
     # summarize the initial opinions of the experts
     # merged is the structured memory of the MDT
-    merged = assistant.chat(
-        summarize_template.format(opinions=json.dumps(initial_ops, ensure_ascii=False, separators=(',', ':')))
-    )
+    try:
+        merged = assistant.chat(
+            summarize_template.format(opinions=json.dumps(initial_ops, ensure_ascii=False, separators=(',', ':')))
+        )
+    except AgentError as e:
+        # Fallback: use JSON of initial opinions as merged context
+        print(f"{Color.WARNING}[WARNING] Assistant summary failed: {e.original_error}{Color.RESET}")
+        merged = f"Key Knowledge:\n{json.dumps(initial_ops, ensure_ascii=False, indent=2)}\n\nControversies:\n- To be determined\n\nMissing Info:\n- To be determined\n\nWorking Plan:\n- To be determined"
+        if trace:
+            trace.emit("agent_error", {
+                "role": "assistant",
+                "stage": "initial_summary",
+                "error": str(e.original_error),
+                "error_type": type(e.original_error).__name__,
+                "fallback_used": True
+            })
+    except Exception as e:
+        print(f"{Color.FAIL}[ERROR] Assistant summary unexpected error: {e}{Color.RESET}")
+        merged = f"Key Knowledge:\n{json.dumps(initial_ops, ensure_ascii=False, indent=2)}\n\nControversies:\n- To be determined\n\nMissing Info:\n- To be determined\n\nWorking Plan:\n- To be determined"
+        if trace:
+            trace.emit("agent_error", {
+                "role": "assistant",
+                "stage": "initial_summary",
+                "error": str(e),
+                "error_type": "UnexpectedException",
+                "fallback_used": True
+            })
     # Structured MDT memory (always kept at the front)
     memory_state = _clip_head(merged, max_merged_chars)
     # Rolling discussion deltas (kept as a tail window)
@@ -198,10 +252,34 @@ def run_mdt_discussion(
         # otherwise, we use the assistant to summarize the memory_state
         if r == 1:
             summary = memory_state
-        else:   
-            summary = assistant.chat(
-                round_summary_template.format(merged=memory_state)
-            )
+        else:
+            try:
+                summary = assistant.chat(
+                    round_summary_template.format(merged=memory_state)
+                )
+            except AgentError as e:
+                # Fallback: keep existing memory_state
+                print(f"{Color.WARNING}[WARNING] Round {r} summary failed: {e.original_error}{Color.RESET}")
+                summary = memory_state
+                if trace:
+                    trace.emit("agent_error", {
+                        "role": "assistant",
+                        "stage": f"round_{r}_summary",
+                        "error": str(e.original_error),
+                        "error_type": type(e.original_error).__name__,
+                        "fallback_used": True
+                    })
+            except Exception as e:
+                print(f"{Color.FAIL}[ERROR] Round {r} summary unexpected error: {e}{Color.RESET}")
+                summary = memory_state
+                if trace:
+                    trace.emit("agent_error", {
+                        "role": "assistant",
+                        "stage": f"round_{r}_summary",
+                        "error": str(e),
+                        "error_type": "UnexpectedException",
+                        "fallback_used": True
+                    })
         memory_state = _clip_head(f"[MDT_GLOBAL_KNOWLEDGE]\n{summary}", max_merged_chars)
         merged = _pack_context(memory_state, delta_state, max_merged_chars)
 
@@ -226,8 +304,30 @@ def run_mdt_discussion(
                     allowed_targets=allowed_targets_str
                 )
 
-                resp = ag.chat(speak_prompt)
-                data = safe_parse_json_block(resp)
+                try:
+                    resp = ag.chat(speak_prompt)
+                    data = safe_parse_json_block(resp)
+                except AgentError as e:
+                    # Skip this agent's turn if it fails
+                    if trace:
+                        trace.emit("agent_error", {
+                            "role": role,
+                            "stage": f"turn_{t}",
+                            "error": str(e.original_error),
+                            "error_type": type(e.original_error).__name__
+                        })
+                    continue
+                except Exception as e:
+                    # Skip this agent's turn for unexpected errors
+                    print(f"{Color.WARNING}[WARNING] {role} failed to speak in turn {t}: {e}{Color.RESET}")
+                    if trace:
+                        trace.emit("agent_error", {
+                            "role": role,
+                            "stage": f"turn_{t}",
+                            "error": str(e),
+                            "error_type": "UnexpectedException"
+                        })
+                    continue
 
                 if not data or str(data.get("speak", "no")).lower() != "yes":
                     continue
@@ -331,10 +431,35 @@ def run_mdt_discussion(
         print(f"{Color.BOLD}{Color.OKBLUE}\n📘 Finalizing Expert Plans for ROUND {r} ...{Color.RESET}")
         for role, ag in agents.items():
             print(f"{Color.OKBLUE}{Color.BOLD} - {role}:{Color.RESET}")
-            final_op = ag.chat(final_plan_template.format(merged=merged, discussion_history=discussion_context))
-            print(f"{Color.OKGREEN}{final_op}{Color.RESET}\n")
-            warn_missing_evidence_tags(final_op, role=f"{role}/final_round_{r}", trace=trace)
-            final_round_ops[round_key][role] = final_op
+            try:
+                final_op = ag.chat(final_plan_template.format(merged=merged, discussion_history=discussion_context))
+                print(f"{Color.OKGREEN}{final_op}{Color.RESET}\n")
+                warn_missing_evidence_tags(final_op, role=f"{role}/final_round_{r}", trace=trace)
+                final_round_ops[round_key][role] = final_op
+            except AgentError as e:
+                error_msg = get_fallback_response(role, "final_plan")
+                print(f"{Color.WARNING}[WARNING] {role} final plan failed: {e.original_error}{Color.RESET}")
+                print(f"{Color.OKGREEN}{error_msg}{Color.RESET}\n")
+                final_round_ops[round_key][role] = error_msg
+                if trace:
+                    trace.emit("agent_error", {
+                        "role": role,
+                        "stage": f"final_plan_round_{r}",
+                        "error": str(e.original_error),
+                        "error_type": type(e.original_error).__name__
+                    })
+            except Exception as e:
+                error_msg = get_fallback_response(role, "final_plan")
+                print(f"{Color.FAIL}[ERROR] {role} final plan unexpected error: {e}{Color.RESET}")
+                print(f"{Color.OKGREEN}{error_msg}{Color.RESET}\n")
+                final_round_ops[round_key][role] = error_msg
+                if trace:
+                    trace.emit("agent_error", {
+                        "role": role,
+                        "stage": f"final_plan_round_{r}",
+                        "error": str(e),
+                        "error_type": "UnexpectedException"
+                    })
 
         # IMPORTANT: Round FINAL plans must update the structured memory, not the delta window.
         try:
@@ -346,12 +471,38 @@ def run_mdt_discussion(
                 f"ROUND_{r}_FINAL_PLANS_JSON:\n{round_final_pack}"
             )
             memory_state = _clip_head(memory_update, max_merged_chars)
-        except Exception:
+        except AgentError as e:
             # Fallback: if summarization fails, still preserve the final plans in memory.
+            print(f"{Color.WARNING}[WARNING] Memory update failed for round {r}: {e.original_error}{Color.RESET}")
+            round_final_pack = json.dumps(final_round_ops[round_key], ensure_ascii=False, separators=(',', ':'))
             memory_state = _clip_head(
                 memory_state + "\n\n" + f"[ROUND {r} FINAL_PLANS] {round_final_pack}",
                 max_merged_chars,
             )
+            if trace:
+                trace.emit("agent_error", {
+                    "role": "assistant",
+                    "stage": f"memory_update_round_{r}",
+                    "error": str(e.original_error),
+                    "error_type": type(e.original_error).__name__,
+                    "fallback_used": True
+                })
+        except Exception as e:
+            # Fallback: if summarization fails, still preserve the final plans in memory.
+            print(f"{Color.FAIL}[ERROR] Memory update unexpected error for round {r}: {e}{Color.RESET}")
+            round_final_pack = json.dumps(final_round_ops[round_key], ensure_ascii=False, separators=(',', ':'))
+            memory_state = _clip_head(
+                memory_state + "\n\n" + f"[ROUND {r} FINAL_PLANS] {round_final_pack}",
+                max_merged_chars,
+            )
+            if trace:
+                trace.emit("agent_error", {
+                    "role": "assistant",
+                    "stage": f"memory_update_round_{r}",
+                    "error": str(e),
+                    "error_type": "UnexpectedException",
+                    "fallback_used": True
+                })
 
         # Start next round with a clean delta window
         delta_state = ""
@@ -531,17 +682,36 @@ def process_omgs_multi_expert_query(
     cutoff_dt = make_cutoff(time, days_after=1)
     cutoff_str = cutoff_dt.strftime("%Y-%m-%d %H:%M:%S") if cutoff_dt else "None"
     print(f"{Color.OKBLUE}{Color.BOLD}⏱️  CUTOFF_DT (time + 1d): {cutoff_str}{Color.RESET}")
-    lab_timeline_raw, lab_reports = load_patient_labs(meta_info, labs_json)
     
-    im_timeline_raw, im_reports = load_patient_imaging(meta_info, imaging_json)
+    # Load reports with error handling - each load is independent
+    # If a file is missing, the function returns empty lists, so we can continue
+    try:
+        lab_timeline_raw, lab_reports = load_patient_labs(meta_info, labs_json)
+    except Exception as e:
+        print(f"{Color.WARNING}[WARNING] Failed to load lab reports: {e}. Continuing with empty lab data.{Color.RESET}")
+        lab_timeline_raw, lab_reports = [], []
+    
+    try:
+        im_timeline_raw, im_reports = load_patient_imaging(meta_info, imaging_json)
+    except Exception as e:
+        print(f"{Color.WARNING}[WARNING] Failed to load imaging reports: {e}. Continuing with empty imaging data.{Color.RESET}")
+        im_timeline_raw, im_reports = [], []
 
     path_timeline_raw, path_reports = [], []
     if pathology_json:
-        path_timeline_raw, path_reports = load_patient_pathology(meta_info, pathology_json)
+        try:
+            path_timeline_raw, path_reports = load_patient_pathology(meta_info, pathology_json)
+        except Exception as e:
+            print(f"{Color.WARNING}[WARNING] Failed to load pathology reports: {e}. Continuing with empty pathology data.{Color.RESET}")
+            path_timeline_raw, path_reports = [], []
 
     mut_reports: List[Dict[str, Any]] = []
     if meta_info and mutation_json:
-        mut_reports = load_patient_mutations(meta_info, mutation_json)
+        try:
+            mut_reports = load_patient_mutations(meta_info, mutation_json)
+        except Exception as e:
+            print(f"{Color.WARNING}[WARNING] Failed to load mutation reports: {e}. Continuing with empty mutation data.{Color.RESET}")
+            mut_reports = []
 
     try:
         print(f"{Color.OKCYAN}{Color.BOLD}[LAB] before filter: {report_range(lab_reports, 'report_date')}{Color.RESET}")
@@ -628,8 +798,26 @@ def process_omgs_multi_expert_query(
     
     rag_key_facts = _build_rag_key_facts(case_json, mut_reports)
     trace.emit("rag_key_facts", {"facts": rag_key_facts})
-    rag_query = build_rag_query_for_mdt(rag_query_builder, question_str, key_facts=rag_key_facts)
-    print("rag_query",rag_query)
+    
+    # Build RAG query with error handling
+    try:
+        rag_query = build_rag_query_for_mdt(rag_query_builder, question_str, key_facts=rag_key_facts)
+        print("rag_query",rag_query)
+    except Exception as e:
+        # Fallback: use simplified query from case JSON
+        print(f"{Color.WARNING}[WARNING] RAG query builder failed: {e}{Color.RESET}")
+        case_core = case_json.get("CASE_CORE", {}) or {}
+        diagnosis = case_core.get("DIAGNOSIS", {}) or {}
+        primary = diagnosis.get("primary", "ovarian cancer")
+        rag_query = f"{primary} treatment guidelines"
+        if trace:
+            trace.emit("pipeline_error", {
+                "stage": "rag_query_build",
+                "error": str(e),
+                "error_type": type(e).__name__,
+                "fallback_used": True
+            })
+    
     # Use global guideline RAG (respects config: use_per_role_rag / default_role)
     from servers.evidence_search import (
         get_global_guideline_rag,
@@ -637,15 +825,54 @@ def process_omgs_multi_expert_query(
         merge_rag_packs,
         merge_rag_raw,
     )
-    guideline_pack, guideline_raw = get_global_guideline_rag(
-        question=rag_query,
-        device=device,
-        topk=topk,
-    )
-    pubmed_pack, pubmed_raw = pubmed_search_pack(
-        query=rag_query,
-        topk=5,
-    )
+    
+    # RAG retrieval with error handling
+    # If RAG fails due to network issues, skip it and continue
+    try:
+        guideline_pack, guideline_raw = get_global_guideline_rag(
+            question=rag_query,
+            device=device,
+            topk=topk,
+        )
+        # Check if initialization failed
+        if guideline_pack == "(RAG: initialization failed)":
+            print(f"{Color.WARNING}[WARNING] Guideline RAG initialization failed (likely network issue). Skipping RAG retrieval.{Color.RESET}")
+            guideline_raw = []
+            if trace:
+                trace.emit("pipeline_error", {
+                    "stage": "guideline_rag",
+                    "error": "RAG initialization failed - network issue",
+                    "error_type": "NetworkError",
+                    "fallback_used": True
+                })
+    except Exception as e:
+        print(f"{Color.WARNING}[WARNING] Guideline RAG retrieval failed: {e}. Skipping RAG retrieval.{Color.RESET}")
+        guideline_pack = "(RAG: no evidence found)"
+        guideline_raw = []
+        if trace:
+            trace.emit("pipeline_error", {
+                "stage": "guideline_rag",
+                "error": str(e),
+                "error_type": type(e).__name__,
+                "fallback_used": True
+            })
+    
+    try:
+        pubmed_pack, pubmed_raw = pubmed_search_pack(
+            query=rag_query,
+            topk=5,
+        )
+    except Exception as e:
+        print(f"{Color.WARNING}[WARNING] PubMed RAG retrieval failed: {e}{Color.RESET}")
+        pubmed_pack = "(PUBMED: no evidence found)"
+        pubmed_raw = []
+        if trace:
+            trace.emit("pipeline_error", {
+                "stage": "pubmed_rag",
+                "error": str(e),
+                "error_type": type(e).__name__,
+                "fallback_used": True
+            })
     rag_pack = merge_rag_packs(guideline_pack, pubmed_pack)
     rag_raw = merge_rag_raw(guideline_raw, pubmed_raw)
     
@@ -675,26 +902,84 @@ def process_omgs_multi_expert_query(
         max_tokens=4000,
         max_prompt_tokens=3500,
     )
-    global_guideline_digest = summarize_rag_evidence(guideline_digester, rag_pack, rag_raw=rag_raw)
-    print("rag_digest", global_guideline_digest)
+    
+    # RAG evidence summarization with error handling
+    try:
+        global_guideline_digest = summarize_rag_evidence(guideline_digester, rag_pack, rag_raw=rag_raw)
+        print("rag_digest", global_guideline_digest)
+    except Exception as e:
+        print(f"{Color.WARNING}[WARNING] RAG evidence summarization failed: {e}{Color.RESET}")
+        # Fallback: use first 3 RAG results as digest
+        if rag_raw and len(rag_raw) > 0:
+            digest_lines = []
+            for i, r in enumerate(rag_raw[:3], 1):
+                source = r.get("source", "")
+                if source == "guideline":
+                    doc_id = r.get("doc_id", "")
+                    page = r.get("page", "NA")
+                    tag = f"[@guideline:{doc_id}|{page}]"
+                elif source == "pubmed":
+                    pmid = r.get("pmid", "")
+                    tag = f"[@pubmed:{pmid}]"
+                else:
+                    tag = f"[unknown source {i}]"
+                text = r.get("text", "") or r.get("abstract", "")
+                preview = text[:200] + "..." if len(text) > 200 else text
+                digest_lines.append(f"- {preview} {tag}")
+            global_guideline_digest = "\n".join(digest_lines) if digest_lines else "# No RAG evidence available"
+        else:
+            global_guideline_digest = "# No RAG evidence available"
+        if trace:
+            trace.emit("pipeline_error", {
+                "stage": "rag_summarization",
+                "error": str(e),
+                "error_type": type(e).__name__,
+                "fallback_used": True
+            })
+    
     ###########################################################################
     # INIT SPECIALIST AGENTS
     ###########################################################################
-    agents = {
-        role: init_expert_agent(
-            role=role,
-            question=question_str,
-            model=model,
-            client=client,
-            context=context,
-            case_fingerprint=case_fingerprint,
-            global_guideline_digest=global_guideline_digest,
-            device=device,
-            topk=topk,
-            visit_time=str(time) if time else None,
-        )
-        for role in ROLES
-    }
+    agents = {}
+    failed_roles = []
+    for role in ROLES:
+        try:
+            agents[role] = init_expert_agent(
+                role=role,
+                question=question_str,
+                model=model,
+                client=client,
+                context=context,
+                case_fingerprint=case_fingerprint,
+                global_guideline_digest=global_guideline_digest,
+                device=device,
+                topk=topk,
+                visit_time=str(time) if time else None,
+            )
+        except Exception as e:
+            print(f"{Color.WARNING}[WARNING] Failed to initialize {role} agent: {e}{Color.RESET}")
+            failed_roles.append(role)
+            if trace:
+                trace.emit("pipeline_error", {
+                    "stage": "agent_init",
+                    "role": role,
+                    "error": str(e),
+                    "error_type": type(e).__name__
+                })
+    
+    # If chair failed, use first successfully initialized agent as chair
+    if "chair" in failed_roles and agents:
+        first_role = list(agents.keys())[0]
+        print(f"{Color.WARNING}[WARNING] Chair agent failed. Using {first_role} as fallback chair.{Color.RESET}")
+        agents["chair"] = agents[first_role]
+        failed_roles.remove("chair")
+    
+    # Ensure we have at least one agent
+    if not agents:
+        raise RuntimeError("Failed to initialize any expert agents. Cannot proceed with MDT discussion.")
+    
+    if failed_roles:
+        print(f"{Color.WARNING}[WARNING] Some roles failed to initialize: {failed_roles}. Continuing with available agents.{Color.RESET}")
 
     assistant = Agent(
         instruction=agent_prompts.get("assistant", 
@@ -795,7 +1080,8 @@ def process_omgs_multi_expert_query(
         clinic_time=time,
         merged=merged,
         initial_ops=initial_ops,
-        interaction_log=interaction_log
+        interaction_log=interaction_log,
+        trace=trace
     )
     # Post-process: append References section with evidence details
     final_output = append_references_to_output(

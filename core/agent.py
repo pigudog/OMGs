@@ -6,6 +6,15 @@ import tiktoken
 from aoai import OpenAIWrapper
 
 
+class AgentError(Exception):
+    """Agent操作失败的自定义异常"""
+    def __init__(self, role: str, operation: str, original_error: Exception):
+        self.role = role
+        self.operation = operation
+        self.original_error = original_error
+        super().__init__(f"Agent {role} failed in {operation}: {original_error}")
+
+
 class Agent:
     """
     A stateful agent wrapper around Azure OpenAI (via OpenAIWrapper).
@@ -158,25 +167,44 @@ class Agent:
         """
         Sends a new user message and returns assistant response.
         Also records the interaction into local_log.
+        
+        Raises:
+            AgentError: If the API call fails or response parsing fails
         """
         self.messages.append({"role": "user", "content": message})
 
         # Enforce prompt token budget (keeps system + most recent turns)
         self.messages = self._trim_messages_to_budget(self.messages, self.max_prompt_tokens)
 
-        resp = self.client.chat_completion(
-            model=self.deployment,
-            messages=self.messages,
-            max_completion_tokens=self.max_tokens
-        )
+        try:
+            resp = self.client.chat_completion(
+                model=self.deployment,
+                messages=self.messages,
+                max_completion_tokens=self.max_tokens
+            )
+            
+            # Check if response is valid
+            if not resp or not hasattr(resp, 'choices') or not resp.choices:
+                raise ValueError("Empty or invalid API response")
+            
+            if not resp.choices[0] or not hasattr(resp.choices[0], 'message'):
+                raise ValueError("Response missing message content")
+            
+            reply = resp.choices[0].message.content
+            if reply is None:
+                raise ValueError("Response content is None")
+            
+            self.messages.append({"role": "assistant", "content": reply})
 
-        reply = resp.choices[0].message.content
-        self.messages.append({"role": "assistant", "content": reply})
+            # Automatically record this interaction in local log
+            self._record_local(message, reply)
 
-        # Automatically record this interaction in local log
-        self._record_local(message, reply)
-
-        return reply
+            return reply
+        except Exception as e:
+            # Remove the user message we just added since the call failed
+            if self.messages and self.messages[-1].get("role") == "user":
+                self.messages.pop()
+            raise AgentError(self.role, "chat", e)
 
     def temp_responses(self, message: str):
         reply = self.chat(message)
@@ -189,6 +217,9 @@ class Agent:
         """
         Stateless selection (used for lab / imaging filtering).
         Does not affect the main memory or local log.
+        
+        Raises:
+            AgentError: If the API call fails or response parsing fails
         """
         msgs = [
             {"role": "system", "content": self.instruction},
@@ -196,9 +227,24 @@ class Agent:
         ]
         msgs = self._trim_messages_to_budget(msgs, min(self.max_prompt_tokens, 2500))
 
-        resp = self.client.chat_completion(
-            model=self.deployment,
-            messages=msgs,
-            max_completion_tokens=self.max_tokens
-        )
-        return resp.choices[0].message.content
+        try:
+            resp = self.client.chat_completion(
+                model=self.deployment,
+                messages=msgs,
+                max_completion_tokens=self.max_tokens
+            )
+            
+            # Check if response is valid
+            if not resp or not hasattr(resp, 'choices') or not resp.choices:
+                raise ValueError("Empty or invalid API response")
+            
+            if not resp.choices[0] or not hasattr(resp.choices[0], 'message'):
+                raise ValueError("Response missing message content")
+            
+            content = resp.choices[0].message.content
+            if content is None:
+                raise ValueError("Response content is None")
+            
+            return content
+        except Exception as e:
+            raise AgentError(self.role, "run_selection", e)

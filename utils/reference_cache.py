@@ -21,9 +21,21 @@ class ReferenceCache:
         
         Args:
             cache_dir: Directory to store cache files
+        
+        Note: If directory creation fails, cache will work in-memory only.
         """
         self.cache_dir = Path(cache_dir)
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self._cache_dir_available = False
+        
+        # Try to create cache directory, but don't fail if it doesn't work
+        try:
+            self.cache_dir.mkdir(parents=True, exist_ok=True)
+            self._cache_dir_available = True
+        except (OSError, PermissionError) as e:
+            # Cache directory unavailable - work in-memory only
+            print(f"[WARNING] Failed to create reference cache directory '{cache_dir}': {e}. "
+                  f"Cache will work in-memory only.")
+            self._cache_dir_available = False
         
         # Cache files
         self.guideline_cache_file = self.cache_dir / "guidelines.json"
@@ -34,15 +46,23 @@ class ReferenceCache:
         self._pubmed_cache: Dict[str, Dict[str, Any]] = {}
         self._trial_cache: Dict[str, Dict[str, Any]] = {}  # In-memory only
         
-        # Load existing cache
-        self._load_cache()
+        # Load existing cache (only if directory is available)
+        if self._cache_dir_available:
+            self._load_cache()
     
     def _load_cache(self):
         """Load cache from disk."""
+        # Only load if cache directory is available
+        if not self._cache_dir_available:
+            return
+        
         if self.guideline_cache_file.exists():
             try:
                 with open(self.guideline_cache_file, "r", encoding="utf-8") as f:
                     self._guideline_cache = json.load(f)
+            except (OSError, PermissionError, FileNotFoundError) as e:
+                print(f"[WARNING] Failed to load guideline cache: {e}")
+                self._guideline_cache = {}
             except Exception as e:
                 print(f"[WARNING] Failed to load guideline cache: {e}")
                 self._guideline_cache = {}
@@ -51,21 +71,32 @@ class ReferenceCache:
             try:
                 with open(self.pubmed_cache_file, "r", encoding="utf-8") as f:
                     self._pubmed_cache = json.load(f)
+            except (OSError, PermissionError, FileNotFoundError) as e:
+                print(f"[WARNING] Failed to load PubMed cache: {e}")
+                self._pubmed_cache = {}
             except Exception as e:
                 print(f"[WARNING] Failed to load PubMed cache: {e}")
                 self._pubmed_cache = {}
     
     def _save_cache(self):
         """Save cache to disk."""
+        # Only save if cache directory is available
+        if not self._cache_dir_available:
+            return  # Work in-memory only
+        
         try:
             with open(self.guideline_cache_file, "w", encoding="utf-8") as f:
                 json.dump(self._guideline_cache, f, ensure_ascii=False, indent=2)
+        except (OSError, PermissionError, FileNotFoundError) as e:
+            print(f"[WARNING] Failed to save guideline cache: {e}")
         except Exception as e:
             print(f"[WARNING] Failed to save guideline cache: {e}")
         
         try:
             with open(self.pubmed_cache_file, "w", encoding="utf-8") as f:
                 json.dump(self._pubmed_cache, f, ensure_ascii=False, indent=2)
+        except (OSError, PermissionError, FileNotFoundError) as e:
+            print(f"[WARNING] Failed to save PubMed cache: {e}")
         except Exception as e:
             print(f"[WARNING] Failed to save PubMed cache: {e}")
     
@@ -282,6 +313,12 @@ _global_cache: Optional[ReferenceCache] = None
 
 
 def get_reference_cache(cache_dir: str = "rag_store/reference_cache") -> ReferenceCache:
+    """
+    Get or create the global reference cache instance.
+    
+    If cache directory cannot be created, returns a cache that works in-memory only.
+    This ensures the pipeline continues even when rag_store directory is missing.
+    """
     """
     Get or create the global reference cache instance.
     

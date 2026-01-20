@@ -68,6 +68,46 @@ class TraceLogger:
             "  G --> H[Final Chair Output]\n"
             "  H --> I[Save Logs]\n"
         )
+    
+    def get_error_summary(self) -> Dict[str, Any]:
+        """
+        Get a summary of all errors that occurred during the pipeline.
+        
+        Returns:
+            Dictionary with error statistics:
+            - total_errors: Total number of error events
+            - errors_by_role: Count of errors per role
+            - errors_by_stage: Count of errors per stage
+            - error_details: List of all error events
+        """
+        error_events = [e for e in self.events if e.get("event") in ("agent_error", "pipeline_error")]
+        
+        errors_by_role: Dict[str, int] = {}
+        errors_by_stage: Dict[str, int] = {}
+        
+        for event in error_events:
+            payload = event.get("payload", {})
+            role = payload.get("role", "unknown")
+            stage = payload.get("stage", "unknown")
+            
+            errors_by_role[role] = errors_by_role.get(role, 0) + 1
+            errors_by_stage[stage] = errors_by_stage.get(stage, 0) + 1
+        
+        return {
+            "total_errors": len(error_events),
+            "errors_by_role": errors_by_role,
+            "errors_by_stage": errors_by_stage,
+            "error_details": error_events
+        }
+    
+    def has_errors(self) -> bool:
+        """
+        Check if any errors occurred during the pipeline.
+        
+        Returns:
+            True if any error events were recorded
+        """
+        return any(e.get("event") in ("agent_error", "pipeline_error") for e in self.events)
 
 
 ###############################################################################

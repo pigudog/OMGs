@@ -2,8 +2,8 @@
 
 import json
 from typing import Dict, Any, Optional, List
-from core.agent import Agent
-from utils.console_utils import normalize_trial_compact
+from core.agent import Agent, AgentError
+from utils.console_utils import normalize_trial_compact, Color
 
 
 def _build_discussion_summary(interaction_log: Dict[str, Any], max_rounds: int = 2) -> str:
@@ -34,7 +34,8 @@ def generate_final_output(
     clinic_time: str = None,
     merged: Optional[str] = None,
     initial_ops: Optional[Dict[str, str]] = None,
-    interaction_log: Optional[Dict[str, Any]] = None
+    interaction_log: Optional[Dict[str, Any]] = None,
+    trace: Optional[Any] = None
 ) -> str:
     """Generate final MDT decision output from Chair agent.
     
@@ -45,6 +46,10 @@ def generate_final_output(
         merged: MDT discussion summary (key knowledge, controversies, etc.)
         initial_ops: Initial opinions from all experts
         interaction_log: Full interaction log of MDT discussions
+        trace: Optional TraceLogger for error tracking
+    
+    Returns:
+        Final MDT output string, or fallback output if generation fails
     """
     expert_final = json.dumps(all_round_ops, ensure_ascii=False, indent=2)
     
@@ -91,7 +96,60 @@ Change Triggers:
 - < ≤20 words "if X, then adjust management from A to B" >
 - < ≤20 words "if X, then adjust management from A to B" >
 """
-    return chair_agent.chat(prompt)
+    try:
+        return chair_agent.chat(prompt)
+    except AgentError as e:
+        # Fallback: generate simplified output from final_round_ops
+        print(f"{Color.WARNING}[WARNING] Chair final output generation failed: {e.original_error}{Color.RESET}")
+        if trace:
+            trace.emit("agent_error", {
+                "role": "chair",
+                "stage": "final_output",
+                "error": str(e.original_error),
+                "error_type": type(e.original_error).__name__,
+                "fallback_used": True
+            })
+        
+        # Build fallback output from expert plans
+        fallback_lines = ["Final Assessment:", "Based on MDT discussion, treatment plan needs to be determined."]
+        fallback_lines.append("\nCore Treatment Strategy:")
+        
+        # Extract plans from final_round_ops
+        for round_key, round_ops in all_round_ops.items():
+            if isinstance(round_ops, dict):
+                for role, plan in round_ops.items():
+                    if plan and not plan.startswith("[Error:"):
+                        fallback_lines.append(f"- {role}: {plan[:100]}")
+        
+        if len(fallback_lines) == 3:  # Only header lines
+            fallback_lines.append("- Treatment plan to be determined based on available expert opinions")
+        
+        fallback_lines.append("\nChange Triggers:")
+        fallback_lines.append("- Monitor patient response and adjust as needed")
+        
+        return "\n".join(fallback_lines)
+    except Exception as e:
+        # Unexpected exception
+        print(f"{Color.FAIL}[ERROR] Chair final output unexpected error: {e}{Color.RESET}")
+        if trace:
+            trace.emit("agent_error", {
+                "role": "chair",
+                "stage": "final_output",
+                "error": str(e),
+                "error_type": "UnexpectedException",
+                "fallback_used": True
+            })
+        
+        # Minimal fallback
+        return f"""Final Assessment:
+Unable to generate full assessment due to system error.
+
+Core Treatment Strategy:
+- Review expert opinions in MDT discussion
+- Determine treatment plan based on available evidence
+
+Change Triggers:
+- Monitor patient condition and adjust management as needed"""
 
 
 ###############################################################################
