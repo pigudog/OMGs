@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, date, timedelta
 from typing import Any, Dict, List, Optional
 # ============================================================
 # Time utils (clean + reusable)
@@ -31,6 +31,21 @@ def parse_dt(x: Any) -> Optional[datetime]:
         except Exception:
             pass
     return None
+
+
+def parse_date(x: Any) -> Optional[date]:
+    """
+    Parse date-like strings and return date object (not datetime).
+    Supports formats like:
+    - "2022-12-09"
+    - "2022-12-09T00:00:00"
+    - "2023-06-05T15:12:06"
+    
+    Returns:
+        date object or None if parsing fails
+    """
+    dt = parse_dt(x)
+    return dt.date() if dt is not None else None
 
 
 def make_cutoff(index_time: Optional[str], days_after: int = 1) -> Optional[datetime]:

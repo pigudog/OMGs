@@ -17,6 +17,7 @@
 - [Usage Guide](#-usage-guide)
 - [Project Structure](#-project-structure)
 - [Configuration](#-configuration)
+- [Open Evidence References](#-open-evidence-references)
 - [Examples](#-examples)
 - [Troubleshooting](#-troubleshooting)
 - [Development Guide](#-development-guide)
@@ -86,6 +87,16 @@ flowchart LR
 - **📝 Full Logging**: JSONL logs, Markdown transcripts, HTML reports
 - **📈 Interaction Matrix**: Visual representation of expert discussions
 - **🔐 Evidence Tags**: All claims linked to source reports or guidelines
+
+### Open Evidence References
+
+- **📋 Structured References**: Auto-generated reference section with 4 categories:
+  - Guidelines (`[@guideline:doc_id|page]`)
+  - Literature (`[@pubmed:PMID]`)
+  - Clinical Trials (`[@trial:id]`)
+  - Clinical Reports (`[@report_id|date]`)
+- **🎨 Visual HTML Report**: Color-coded reference cards with Mermaid flowchart
+- **🔗 1:1 Evidence Mapping**: Each RAG result gets a dedicated digest bullet
 
 ---
 
@@ -497,7 +508,7 @@ Each JSONL line should contain:
 ```
 OMGs/
 ├── main.py                     # Entry point - MDT pipeline
-├── ehr_structurer.py           # EHR extraction/structuring
+├── ehr_structurer.py           # EHR extraction entry script (calls servers/case_parser)
 ├── pdf_to_rag.py               # RAG corpus/index builder
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # This documentation
@@ -510,28 +521,39 @@ OMGs/
 │   ├── experts.py              # Expert agent definitions
 │   │                           #   - ROLES, ROLE_PERMISSIONS, ROLE_PROMPTS
 │   │                           #   - init_expert_agent()
-│   └── decision.py             # Final decision-making
+│   └── decision.py             # Final decision-making & post-processing
 │                               #   - generate_final_output()
+│                               #   - append_references_to_output()
+│                               #   - parse_trial_from_note()
 │                               #   - assistant_trial_suggestion()
 │                               #   - build_enhanced_case_for_trial()
 │
 ├── servers/                    # Agent Servers (Service Layer)
 │   ├── __init__.py             # Package exports
-│   ├── case_parser.py          # EHR extraction (standalone entry)
+│   ├── case_parser.py          # EHR extraction (full implementation)
+│   │                           #   - process_file(), apply_auto_fixes()
+│   │                           #   - try_parse_json(), main()
 │   ├── info_delivery.py        # Role-specific case views
 │   │                           #   - build_role_specific_case_view()
 │   │                           #   - safe_load_case_json()
-│   ├── evidence_search.py      # RAG retrieval
+│   ├── evidence_search.py      # RAG retrieval & evidence summarization
 │   │                           #   - get_global_guideline_rag()
 │   │                           #   - pubmed_search_pack()
 │   │                           #   - build_rag_query_for_mdt()
+│   │                           #   - summarize_rag_evidence() → 1:1 digest
 │   ├── reports_selector.py     # Clinical report selection
 │   │                           #   - load_patient_labs/imaging/pathology/mutations()
 │   │                           #   - select_reports_for_roles()
 │   │                           #   - expert_select_reports()
-│   └── trace.py                # Observability & logging
-│                               #   - TraceLogger, VisualConfig
-│                               #   - save_mdt_log(), save_case_html_report()
+│   ├── trace.py                # Observability utilities
+│   │                           #   - TraceLogger, VisualConfig
+│   │                           #   - print_selected_reports_table(), print_rag_hits_table()
+│   │                           #   - warn_missing_evidence_tags()
+│   └── reporters.py            # Report generation & HTML visualization
+│                               #   - save_mdt_log() → JSONL + Markdown
+│                               #   - save_case_html_report() → HTML report
+│                               #   - _render_final_output_html() → References UI
+│                               #   - Mermaid.js flowchart rendering
 │
 ├── core/                       # Core Infrastructure
 │   ├── __init__.py             # Package exports
@@ -553,13 +575,19 @@ OMGs/
 │   ├── __init__.py             # Package exports
 │   ├── console_utils.py        # Console formatting
 │   │                           #   - Color class
+│   │                           #   - preview_text(), print_prompt_budget()
 │   │                           #   - normalize_trial_compact()
 │   │                           #   - safe_parse_json_block()
 │   │                           #   - question_to_text()
 │   ├── time_utils.py           # Date/time utilities
-│   │                           #   - parse_dt(), make_cutoff(), filter_before()
+│   │                           #   - parse_dt(), parse_date()
+│   │                           #   - make_cutoff(), filter_before()
 │   │                           #   - build_lab/imaging/pathology_timeline()
-│   └── reference_cache.py      # Reference caching for RAG results
+│   └── reference_cache.py      # Reference caching & Open Evidence system
+│                               #   - ReferenceCache, get_reference_cache()
+│                               #   - extract_reference_tags() - 4 types supported
+│                               #   - build_references_section() - formatted refs
+│                               #   - store_trial(), get_trial() - trial caching
 │
 ├── config/                     # Configuration Files
 │   ├── paths.json              # Data and output paths
@@ -583,9 +611,12 @@ OMGs/
 │   └── *.jsonl
 │
 ├── mdt_logs/                   # MDT Discussion Logs
-│   ├── mdt_history_*.jsonl
-│   ├── mdt_history_*.md
-│   └── mdt_report_*.html
+│   ├── mdt_history_*.jsonl     # Full pipeline state (machine-readable)
+│   ├── mdt_history_*.md        # Human-readable discussion transcript
+│   └── mdt_report_*.html       # Visual HTML report with:
+│                               #   - Mermaid pipeline flowchart
+│                               #   - Color-coded References section
+│                               #   - Expert debate matrix
 │
 └── rag_store/                  # RAG Index Storage
     ├── chair/
@@ -676,6 +707,85 @@ result = process_omgs_multi_expert_query(
     device="cuda",
     topk=10
 )
+```
+
+---
+
+## 📚 Open Evidence References
+
+### Overview
+
+OMGs implements an **Open Evidence** system that automatically generates a structured References section at the end of each MDT output. This ensures full traceability of clinical recommendations back to their source evidence.
+
+### Evidence Tag Formats
+
+| Type | Format | Example |
+|------|--------|---------|
+| **Guidelines** | `[@guideline:doc_id\|page]` | `[@guideline:nccn_ovarian_v3\|14]` |
+| **Literature** | `[@pubmed:PMID]` | `[@pubmed:33758607]` |
+| **Clinical Trials** | `[@trial:id]` | `[@trial:350]` |
+| **Clinical Reports** | `[@report_id\|date]` | `[@20230103\|2023-01-03]` |
+
+### Output Example
+
+```
+Final Assessment:
+Patient with platinum-resistant recurrent ovarian clear cell carcinoma...
+
+Core Treatment Strategy:
+- Correct anemia before systemic therapy [@20230103|2023-01-03]
+- Consider non-platinum palliative chemotherapy [@guideline:nccn_ov|14]
+- Pursue clinical trial enrollment if eligible [@trial:350]
+
+---
+## References
+
+### Guidelines
+[@guideline:nccn_ov|14]
+  Document: nccn_ov, Page 14
+  Content: For platinum-resistant disease, consider...
+
+### Literature
+[@pubmed:33758607]
+  PMID: 33758607 | J Cancer | 2021
+  Title: Updates of Pathogenesis for Ovarian Clear Cell Carcinoma
+
+### Clinical Trials
+[@trial:350]
+  Trial ID: 350
+  Name: Phase Ib/II study of BL-B01D1 in gynecologic malignancies
+  Rationale: Patient meets eligibility for recurrent disease
+
+### Clinical Reports
+[@20230103|2023-01-03]
+  Lab ID: 20230103 | Date: 2023-01-03
+  Content: Hemoglobin 8.2 g/dL (severe anemia)
+```
+
+### HTML Report Features
+
+The generated HTML report (`mdt_report_*.html`) includes:
+
+- **Mermaid Pipeline Flowchart**: Visual representation of the MDT workflow
+- **Color-coded References**: Each category has distinct styling:
+  - 📋 Guidelines (green)
+  - 📚 Literature (purple)
+  - 🔬 Clinical Trials (red)
+  - 📄 Clinical Reports (orange)
+- **Interactive Details**: Collapsible sections for evidence, RAG hits, and trace events
+
+### Evidence Digest (1:1 Mapping)
+
+The RAG evidence digest maintains a strict 1:1 correspondence with retrieved results:
+
+```python
+# For N RAG results, exactly N digest bullets are generated
+# Each bullet uses the EXACT citation tag from its source
+
+# Example: 3 RAG results → 3 digest bullets
+- Platinum-based chemotherapy is standard first-line... [@guideline:nccn_ov|12]
+- PARP inhibitors improve PFS in BRCA-mutated... [@pubmed:33758607]
+- Anti-VEGF therapy option for platinum-sensitive... [@guideline:esmo_ov|10]
 ```
 
 ---

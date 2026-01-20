@@ -10,9 +10,9 @@ import html as _html
 from typing import Any, Dict, List, Optional
 from chromadb import PersistentClient
 from langchain_huggingface import HuggingFaceEmbeddings
-from utils.console_utils import Color, normalize_trial_compact, safe_parse_json_block, question_to_text
+from utils.console_utils import Color, normalize_trial_compact, safe_parse_json_block, question_to_text, preview_text, print_prompt_budget
 from servers.trace import VisualConfig, TraceLogger, print_selected_reports_table, print_section, print_rag_hits_table, warn_missing_evidence_tags
-from servers.trace import save_mdt_log, save_case_html_report
+from servers.reporters import save_mdt_log, save_case_html_report
 from utils.time_utils import make_cutoff, parse_dt, safe_date10, filter_before, report_range
 from utils.time_utils import build_lab_timeline, build_imaging_timeline, build_pathology_timeline
 from servers.reports_selector import (
@@ -23,7 +23,7 @@ from servers.reports_selector import (
 from servers.evidence_search import build_rag_query_for_mdt, summarize_rag_evidence
 from host.experts import ROLES, ROLE_PERMISSIONS, init_expert_agent
 from servers.info_delivery import safe_load_case_json
-from host.decision import generate_final_output, assistant_trial_suggestion, build_enhanced_case_for_trial
+from host.decision import generate_final_output, assistant_trial_suggestion, build_enhanced_case_for_trial, append_references_to_output
 from core import Agent, init_client, get_paths_config, get_mdt_prompts
 # Public API of `utils`
 import random
@@ -38,19 +38,6 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 ###############################################################################
-# Token Budget Debug Helper
-###############################################################################
-def _print_prompt_budget(label: str, prompt: str):
-    """Debug helper to print prompt token budget (observability only)."""
-    try:
-        enc = tiktoken.get_encoding("cl100k_base")
-        tokens = len(enc.encode(prompt))
-        print(f"{Color.OKCYAN}[TOKEN_BUDGET] {label}: ~{tokens} tokens{Color.RESET}")
-    except Exception:
-        pass
-
-
-###############################################################################
 # 6. MULTI-ROUND MDT DISCUSSION ENGINE
 ###############################################################################
 def run_mdt_discussion(
@@ -58,7 +45,7 @@ def run_mdt_discussion(
     assistant: "Agent",
     num_rounds: int = 2,
     num_turns: int = 2,
-    max_merged_chars: int = 5000,
+    max_merged_chars: int = 10000,
     max_turn_delta_chars: int = 900,
     max_targets_per_speaker: int = 4,
     visit_time: Optional[str] = None,
@@ -100,7 +87,11 @@ def run_mdt_discussion(
         if not s:
             return ""
         return s if len(s) <= max_chars else s[:max_chars]
-
+    
+    # pack the context of the MDT：
+    # (memory……)
+    # [RECENT_DELTAS]
+    # (deltas……)
     def _pack_context(memory: str, deltas: str, max_chars: int, memory_ratio: float = 0.75) -> str:
         """Keep structured memory in the FRONT, and keep only recent deltas in the TAIL."""
         memory = memory or ""
@@ -131,11 +122,11 @@ def run_mdt_discussion(
     role_to_emoji = {r: emoji_pool[i % len(emoji_pool)] for i, r in enumerate(agent_list)}
     chair_role = "chair" if "chair" in agent_list else agent_list[0]
 
-    last_msg_by_pair = {}
+    last_msg_by_pair = {} # record the last message by pair 用来避免同一对发言者/对象重复发相同内容，有利于减少冗余，但在某些场景下可能会抑制必要的重复澄清，这需要根据实际使用情况调整。
 
     # INITIAL OPINIONS
     print(f"{Color.BOLD}{Color.OKBLUE}\n📌 Collecting Initial Opinions...{Color.RESET}")
-    initial_ops = {}
+    initial_ops = {} # we will use this to store the initial opinions of the experts
     initial_opinion_prompt = mdt_prompts.get("initial_opinion", 
         "Give INITIAL opinion (use ONLY your system-provided patient facts).\n"
         "Return up to 3 bullets, each ≤20 words.\n"
@@ -143,22 +134,25 @@ def run_mdt_discussion(
         "At least ONE bullet must be evidence-based and include [@guideline:doc_id|page] or [@pubmed:PMID].\n"
         "If you reference treatment strategy categories, guidelines, trials, or literature evidence, include tags [@guideline:doc_id|page] or [@pubmed:PMID]."
     )
+    # initial_ops is a dictionary that stores the initial opinions of the experts
     for i, (role, ag) in enumerate(agents.items(), start=1):
         print(f"{Color.OKGREEN} [{i}/{len(agents)}] {role}:{Color.RESET}")
         if trace:
             trace.emit("mdt_initial_opinion_role_start", {"role": role, "order": i})
-        _print_prompt_budget(f"{role}/initial", initial_opinion_prompt)
-        op = ag.chat(initial_opinion_prompt)
+        print_prompt_budget(f"{role}/initial", initial_opinion_prompt) # print the token budget of the initial opinion prompt
+        op = ag.chat(initial_opinion_prompt) # get the initial opinion of the expert
         if trace:
             trace.emit("mdt_initial_opinion_role_end", {"role": role, "chars": len(op or '')})
         print(f"{Color.OKCYAN}   {role_to_emoji[role]} {op}{Color.RESET}")
-        warn_missing_evidence_tags(op, role=f"{role}/initial", trace=trace)
-        initial_ops[role] = op
+        warn_missing_evidence_tags(op, role=f"{role}/initial", trace=trace) # warn the missing evidence tags in the initial opinion
+        initial_ops[role] = op # store the initial opinion of the expert in the initial_ops dictionary
 
     summarize_template = mdt_prompts.get("summarize_initial_template",
         "Summarize expert opinions concisely for MDT.\n{opinions}\n\n"
         "Output:\nKey Knowledge:\n- ...\nControversies:\n- ...\nMissing Info:\n- ...\nWorking Plan:\n- ..."
     )
+    # summarize the initial opinions of the experts
+    # merged is the structured memory of the MDT
     merged = assistant.chat(
         summarize_template.format(opinions=json.dumps(initial_ops, ensure_ascii=False, separators=(',', ':')))
     )
@@ -166,10 +160,10 @@ def run_mdt_discussion(
     memory_state = _clip_head(merged, max_merged_chars)
     # Rolling discussion deltas (kept as a tail window)
     delta_state = ""
-    # delta_state这个是turn连续的关键！！
-    # 
+    # delta_state is the key of the turn continuity.
+    # delta_State is continuous, it is the delta of the MDT.
     merged = _pack_context(memory_state, delta_state, max_merged_chars)
-    print("merged", merged)
+    print("merged:\n", merged)
 
     interaction_log = {
         f"Round {r}": {
@@ -200,9 +194,14 @@ def run_mdt_discussion(
         round_key = f"Round {r}"
 
         # Re-summarize ONLY the structured memory. Deltas stay separate.
-        summary = assistant.chat(
-            round_summary_template.format(merged=memory_state)
-        )
+        # if r == 1, we use the memory_state as the summary
+        # otherwise, we use the assistant to summarize the memory_state
+        if r == 1:
+            summary = memory_state
+        else:   
+            summary = assistant.chat(
+                round_summary_template.format(merged=memory_state)
+            )
         memory_state = _clip_head(f"[MDT_GLOBAL_KNOWLEDGE]\n{summary}", max_merged_chars)
         merged = _pack_context(memory_state, delta_state, max_merged_chars)
 
@@ -277,6 +276,11 @@ def run_mdt_discussion(
 
                     interaction_log[round_key][turn_key][role][target] = msg
                     print(f"{Color.OKGREEN}  {role_to_emoji[role]} {role} → {role_to_emoji[target]} {target}:{Color.RESET} [{why}] {msg}")
+                    
+                    # Optional: Warn if message mentions evidence but lacks tags
+                    # (Not enforced, just a helpful reminder)
+                    if trace:
+                        warn_missing_evidence_tags(msg, role=f"{role}->{target}/turn_{t}", trace=trace)
 
                     turn_msgs_compact.append(f"{role}->{target}({why}): {msg}")
 
@@ -356,17 +360,11 @@ def run_mdt_discussion(
         if MDT_should_stop:
             print(f"{Color.WARNING}{Color.BOLD}🚫 MDT stopped early after Round {r}. No further rounds will be executed.{Color.RESET}")
             return initial_ops, merged, final_round_ops, interaction_log
-        print("initial_ops:",initial_ops)
-        print("merged",merged)
-        print("final_round_ops",final_round_ops)
+        print("initial_ops:\n",initial_ops)
+        print("merged:\n",merged)
+        print("final_round_ops:\n",final_round_ops)
         # print(interaction_log)
     return initial_ops, merged, final_round_ops, interaction_log
-
-
-def _preview_text(x: Any, n: int = 200) -> str:
-    s = "" if x is None else str(x)
-    s = s.replace("\n", " ").strip()
-    return s if len(s) <= n else (s[:n] + "…")
 
 
 def _build_rag_key_facts(case_json: Dict[str, Any], mut_reports: List[Dict[str, Any]]) -> str:
@@ -384,7 +382,7 @@ def _build_rag_key_facts(case_json: Dict[str, Any], mut_reports: List[Dict[str, 
     if isinstance(specimens, list) and specimens:
         diag = specimens[0].get("diagnosis") or ""
         if diag:
-            parts.append(f"PATHOLOGY: {_preview_text(diag, 160)}")
+            parts.append(f"PATHOLOGY: {preview_text(diag, 160)}")
     plat = case_core.get("PLATINUM_STATUS_CURRENT") or case_core.get("PLATINUM_STATUS")
     pfi = case_core.get("PLATINUM_PFI_CURRENT") or case_core.get("PFI_days")
     if plat or pfi:
@@ -405,7 +403,7 @@ def _build_rag_key_facts(case_json: Dict[str, Any], mut_reports: List[Dict[str, 
         rid = latest.get("report_id") or "Unknown"
         rdate = latest.get("report_date") or ""
         raw = latest.get("raw_text") or ""
-        parts.append(f"MUTATION_REPORT: id={rid}; date={str(rdate)[:10]}; note={_preview_text(raw, 200)}")
+        parts.append(f"MUTATION_REPORT: id={rid}; date={str(rdate)[:10]}; note={preview_text(raw, 200)}")
     return "\n".join(parts)
 
 
@@ -666,9 +664,11 @@ def process_omgs_multi_expert_query(
     if visual.enable and visual.show_tables and visual.show_rag_table:
         print_rag_hits_table(rag_raw)
 
+    # Count RAG results for dynamic instruction
+    rag_count = len(rag_raw) if rag_raw else 0
     guideline_digester = Agent(
         instruction=agent_prompts.get("global_guideline_digester", 
-            "Digest guideline chunks into <=8 evidence bullets; no patient facts."),
+            f"Digest RAG chunks into exactly {rag_count} evidence bullets (one per RAG result); no patient facts."),
         role="global_guideline_digester",
         model_info=model,
         client=client,
@@ -712,11 +712,12 @@ def process_omgs_multi_expert_query(
     print_section("4) MDT Discussion Engine")
     trace.emit("mdt_discussion_start", {"num_rounds": 2, "num_turns": 2})
 
+    # run the MDT discussion engine
     initial_ops, merged, final_round_ops, interaction_log = run_mdt_discussion(
         agents=agents,
         assistant=assistant,
-        num_rounds=2, # 2
-        num_turns=2,  # 2
+        num_rounds=1, # 2
+        num_turns=1,  # 2
         visit_time=str(time) if time else None,
         trace=trace,
     )
@@ -795,6 +796,12 @@ def process_omgs_multi_expert_query(
         merged=merged,
         initial_ops=initial_ops,
         interaction_log=interaction_log
+    )
+    # Post-process: append References section with evidence details
+    final_output = append_references_to_output(
+        final_output,
+        trial_note=trial_note,
+        report_context=context,
     )
     print(final_output)
     warn_missing_evidence_tags(final_output, role="chair/final_output", trace=trace)

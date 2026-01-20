@@ -351,33 +351,63 @@ def summarize_rag_evidence(agent, rag_pack: str, rag_raw: List[Dict[str, Any]] =
         rag_raw: Optional list of raw RAG results for counting and reference mapping
     
     Returns:
-        Summarized evidence as plain text bullets (one per RAG result)
+        Summarized evidence as plain text bullets (one per RAG result, 1:1 mapping)
     """
     from core.config import get_mdt_prompts
     rag_prompts = get_mdt_prompts().get("rag", {})
     
-    # Count results if rag_raw is provided
-    total_count = len(rag_raw) if rag_raw else None
-    guideline_count = len([r for r in (rag_raw or []) if r.get("source") == "guideline"]) if rag_raw else None
-    pubmed_count = len([r for r in (rag_raw or []) if r.get("source") == "pubmed"]) if rag_raw else None
+    # Build explicit reference mapping for each RAG result
+    total_count = len(rag_raw) if rag_raw else 0
+    guideline_count = len([r for r in (rag_raw or []) if r.get("source") == "guideline"])
+    pubmed_count = len([r for r in (rag_raw or []) if r.get("source") == "pubmed"])
+    
+    # Build reference tags list for explicit mapping
+    ref_tags_list = []
+    for i, r in enumerate(rag_raw or [], 1):
+        source = r.get("source", "")
+        if source == "guideline":
+            doc_id = r.get("doc_id", "")
+            page = r.get("page", "NA")
+            tag = f"[@guideline:{doc_id}|{page}]"
+        elif source == "pubmed":
+            pmid = r.get("pmid", "")
+            tag = f"[@pubmed:{pmid}]"
+        else:
+            tag = f"[unknown source {i}]"
+        ref_tags_list.append(f"  [{i}] {tag}")
+    
+    ref_tags_str = "\n".join(ref_tags_list) if ref_tags_list else ""
     
     count_info = ""
-    if total_count is not None:
-        count_info = f"\nIMPORTANT: There are exactly {total_count} RAG results ({guideline_count} guidelines, {pubmed_count} PubMed). "
-        count_info += f"You MUST output exactly {total_count} bullets, one per result, in the same order as they appear in the RAG CHUNKS above.\n"
+    if total_count > 0:
+        count_info = f"""
+CRITICAL: There are exactly {total_count} RAG results ({guideline_count} guidelines, {pubmed_count} PubMed).
+You MUST output exactly {total_count} bullets, one per result, in order.
+
+REFERENCE TAGS (use these EXACTLY):
+{ref_tags_str}
+
+Each bullet MUST use the corresponding tag from the list above.
+"""
     
     evidence_summarizer_template = rag_prompts.get("evidence_summarizer",
         "# RAG CHUNKS\n{rag_pack}\n\n"
         "{count_info}"
         "Summarize into evidence bullets for MDT decision-making.\n"
         "Rules:\n"
+        "- Output exactly {total_count} bullets, one per RAG result, in order.\n"
+        "- Each bullet summarizes ONE RAG chunk with its corresponding tag.\n"
         "- Each bullet must be actionable evidence (guideline/trial-based).\n"
         "- Do NOT restate patient-specific facts.\n"
-        "- Avoid long quotes.\n"
-        "- Each bullet MUST include at least one evidence tag: [@guideline:doc_id|page] or [@pubmed:PMID].\n"
-        "- Output ONLY plain text bullets, one per RAG result, in order."
+        "- Avoid long quotes; keep each bullet concise (1-2 sentences).\n"
+        "- Each bullet MUST include the exact evidence tag from the REFERENCE TAGS list.\n"
+        "- Output ONLY plain text bullets, no numbering."
     )
-    prompt = evidence_summarizer_template.format(rag_pack=rag_pack, count_info=count_info)
+    prompt = evidence_summarizer_template.format(
+        rag_pack=rag_pack, 
+        count_info=count_info,
+        total_count=total_count,
+    )
     return agent.run_selection(prompt)
 
 ###############################################################################

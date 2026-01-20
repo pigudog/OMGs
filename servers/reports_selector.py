@@ -1,7 +1,7 @@
 from typing import Any, Dict, List, Optional, Tuple
 from collections import defaultdict
 from datetime import datetime, timedelta
-from utils.time_utils import safe_date10, parse_dt
+from utils.time_utils import safe_date10, parse_dt, parse_date
 from utils.console_utils import safe_parse_json_block
 import re
 import json
@@ -158,31 +158,9 @@ def load_patient_mutations(meta_info: str, json_path: str = "mutation_reports.js
 
     index = _get_jsonl_index(json_path)
     patient = list(index.get(str(meta_info), []))
-    patient.sort(key=lambda r: (parse_date_any(r.get("report_date")) or datetime.min.date()))
+    patient.sort(key=lambda r: (parse_date(r.get("report_date")) or datetime.min.date()))
     return patient
 
-
-
-###############################################################################
-# Date Parsing and Report Helpers
-###############################################################################
-def parse_date_any(d: str):
-    """
-    Parse date-like strings:
-    - "2022-12-09"
-    - "2022-12-09T00:00:00"
-    - "2023-06-05T15:12:06"
-    Return datetime.date or None
-    """
-    if not d:
-        return None
-    s = str(d).strip()
-    if len(s) >= 10:
-        s = s[:10]
-    try:
-        return datetime.strptime(s, "%Y-%m-%d").date()
-    except Exception:
-        return None
 
 
 def summarize_selected_reports(context: dict):
@@ -398,7 +376,7 @@ def expert_select_reports(agent, role, reports_timeline, reports_raw, report_typ
             return []
         sorted_reports = sorted(
             reports_raw,
-            key=lambda r: parse_date_any(r.get("report_date") or r.get("date")) or datetime.min.date()
+            key=lambda r: parse_date(r.get("report_date") or r.get("date")) or datetime.min.date()
         )
         latest_reports = sorted_reports[-max_keep:]
         return [
@@ -486,7 +464,7 @@ Return STRICT JSON only:
     if not picked and reports_raw:
         sorted_reports = sorted(
             reports_raw,
-            key=lambda r: parse_date_any(r.get("report_date") or r.get("date")) or datetime.min.date()
+            key=lambda r: parse_date(r.get("report_date") or r.get("date")) or datetime.min.date()
         )
         latest_reports = sorted_reports[-max_keep:]
         picked = [

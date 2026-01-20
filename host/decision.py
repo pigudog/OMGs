@@ -95,6 +95,118 @@ Change Triggers:
 
 
 ###############################################################################
+# Post-processing: Append References Section
+###############################################################################
+
+def parse_trial_from_note(trial_note: str) -> Optional[Dict[str, Any]]:
+    """
+    Parse trial recommendation from trial_note text.
+    
+    Expected format:
+    Trial Recommendation:
+    - id: <trial_id>
+    - name: <trial_name>
+    - Reason: <reason>
+    
+    Returns:
+        Dict with trial_id, name, reason or None if not found/None
+    """
+    if not trial_note or "None" in trial_note.split("id:")[-1].split("\n")[0]:
+        return None
+    
+    import re
+    
+    trial_id_match = re.search(r"-\s*id:\s*(\S+)", trial_note)
+    trial_name_match = re.search(r"-\s*name:\s*(.+?)(?:\n|$)", trial_note)
+    trial_reason_match = re.search(r"-\s*Reason:\s*(.+?)(?:\n|$)", trial_note)
+    
+    if not trial_id_match:
+        return None
+    
+    trial_id = trial_id_match.group(1).strip()
+    if trial_id.lower() == "none":
+        return None
+    
+    return {
+        "trial_id": trial_id,
+        "name": trial_name_match.group(1).strip() if trial_name_match else "",
+        "reason": trial_reason_match.group(1).strip() if trial_reason_match else "",
+    }
+
+
+def append_references_to_output(
+    final_output: str,
+    trial_note: str = "",
+    report_context: Optional[Dict[str, Any]] = None,
+) -> str:
+    """
+    Post-process final MDT output to append a References section.
+    
+    Extracts all evidence tags from the output, looks up their details,
+    and appends a formatted References block organized by type:
+    - Guidelines
+    - Literature (PubMed)
+    - Clinical Trials
+    - Clinical Reports
+    
+    Args:
+        final_output: Raw final MDT output containing inline evidence tags
+        trial_note: Trial recommendation text (to extract trial info)
+        report_context: Dict with report data for lookup
+    
+    Returns:
+        Enhanced output with References section appended
+    """
+    if not final_output:
+        return final_output
+    
+    try:
+        from utils.reference_cache import build_references_section, get_reference_cache
+        
+        # Get the reference cache (should already have RAG results stored)
+        cache = get_reference_cache()
+        
+        # Parse trial info from trial_note and store in cache
+        trial_info = {}
+        if trial_note:
+            parsed_trial = parse_trial_from_note(trial_note)
+            if parsed_trial:
+                trial_id = parsed_trial["trial_id"]
+                trial_info[trial_id] = parsed_trial
+                # Store in cache for References section lookup
+                cache.store_trial(
+                    trial_id=trial_id,
+                    name=parsed_trial.get("name", ""),
+                    reason=parsed_trial.get("reason", ""),
+                )
+                # Silently add trial tag for References (will appear in Clinical Trials section)
+                # Don't add explicit "Recommended Trial:" line - let it be natural
+                trial_tag = f"[@trial:{trial_id}]"
+                if trial_tag.lower() not in final_output.lower():
+                    # Just inject the tag at end so References picks it up
+                    final_output = final_output.strip() + f" {trial_tag}"
+        
+        # Build the references section
+        refs_section = build_references_section(
+            final_output,
+            cache=cache,
+            trial_info=trial_info,
+            report_context=report_context,
+        )
+        
+        if refs_section:
+            return final_output.strip() + "\n" + refs_section
+        
+        return final_output
+    
+    except Exception as e:
+        # If anything fails, return original output without modification
+        # This ensures the pipeline doesn't break due to reference formatting
+        print(f"[WARNING] Failed to append references: {e}")
+        return final_output
+
+
+###############################################################################
 # Build Enhanced Case Information for Trial Matching
 ###############################################################################
 def build_enhanced_case_for_trial(

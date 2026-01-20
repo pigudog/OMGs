@@ -50,6 +50,8 @@ if str(PROJECT_ROOT) not in sys.path:
 
 
 from aoai import OpenAIWrapper
+from core.client import init_client  # Use unified client initialization
+from utils.time_utils import parse_date  # Unified date parsing
 
 
 # ===========================
@@ -82,22 +84,6 @@ def prepend_document_time(src: str, time_val: Any) -> str:
     if not doc_time:
         return src
     return f"DOCUMENT_TIME: {doc_time}\n\n" + src
-
-
-# ===========================
-# Client initialization
-# ===========================
-def init_client(db_path: str = "api_trace.db") -> OpenAIWrapper:
-    endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-    api_key = os.getenv("AZURE_OPENAI_API_KEY")
-
-    if not endpoint or not api_key:
-        raise RuntimeError("缺少 AZURE_OPENAI_ENDPOINT 或 AZURE_OPENAI_API_KEY 环境变量。")
-
-    print(f"[init_client] endpoint: {endpoint}")
-    print(f"[init_client] api_key: {'*'*len(api_key)}")
-
-    return OpenAIWrapper(api_key=api_key, base_url=endpoint, db_path=db_path)
 
 
 # ===========================
@@ -247,15 +233,8 @@ def try_parse_json(text: str):
 
 
 def _parse_date_ymd(x: Any):
-    if not x:
-        return None
-    s = str(x).strip()
-    if len(s) >= 10:
-        s = s[:10]
-    try:
-        return datetime.strptime(s, "%Y-%m-%d").date()
-    except Exception:
-        return None
+    """Parse date string to date object. Uses unified parse_date from time_utils."""
+    return parse_date(x)
 
 
 def _pfis_to_status(pfi_days: int) -> str:

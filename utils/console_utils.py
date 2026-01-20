@@ -2,6 +2,8 @@
 
 This module contains:
 - Color: ANSI color codes for terminal output
+- preview_text: Truncate text for display
+- print_prompt_budget: Debug helper for token budget
 - normalize_trial_compact: Normalize trial records to compact schema
 - safe_parse_json_block: Safe JSON parsing from model outputs
 - question_to_text: Normalize question input to stable text
@@ -21,6 +23,37 @@ class Color:
     FAIL = "\033[91m"
     BOLD = "\033[1m"
     RESET = "\033[0m"
+
+
+def preview_text(x: Any, n: int = 160) -> str:
+    """Truncate text for display, replacing newlines with spaces.
+    
+    Args:
+        x: Input value (will be converted to string)
+        n: Maximum length before truncation (default 160)
+    
+    Returns:
+        Truncated string with ellipsis if needed
+    """
+    s = "" if x is None else str(x)
+    s = s.replace("\n", " ").strip()
+    return s if len(s) <= n else (s[:n] + "…")
+
+
+def print_prompt_budget(label: str, prompt: str) -> None:
+    """Debug helper to print prompt token budget (observability only).
+    
+    Args:
+        label: Label for the prompt (e.g., "role/initial")
+        prompt: The prompt text to count tokens for
+    """
+    try:
+        import tiktoken
+        enc = tiktoken.get_encoding("cl100k_base")
+        tokens = len(enc.encode(prompt))
+        print(f"{Color.OKCYAN}[TOKEN_BUDGET] {label}: ~{tokens} tokens{Color.RESET}")
+    except Exception:
+        pass
 
 
 def normalize_trial_compact(t: Dict[str, Any]) -> Dict[str, Any]:
