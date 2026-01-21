@@ -49,7 +49,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 
-from aoai import OpenAIWrapper
+from clients import OpenAIWrapper
 from core.client import init_client  # Use unified client initialization
 from utils.time_utils import parse_date  # Unified date parsing
 

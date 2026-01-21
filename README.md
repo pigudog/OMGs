@@ -47,6 +47,14 @@ Multidisciplinary team (MDT) meetings are the gold standard for complex cancer c
 | **Hallucination risk** | Role permissions and report evidence constrain output |
 | **Resource limitations** | Supports regional hospitals and residents with AI-assisted decisions |
 
+### Architecture Highlights
+
+- **Modular Multi‑Agent Collaboration**: Five specialized expert agents (Chair, Oncology, Radiology, Pathology and Nuclear Medicine) coordinate through a central orchestrator and conduct two‑round deliberations, with each agent constrained to its role.
+- **Open Evidence System**: Uses a Retrieval‑Augmented Generation (RAG) model combining clinical guidelines and PubMed literature; every conclusion is accompanied by standardized citations to ensure traceability.
+- **Comprehensive Logging and Observability**: Automatically produces JSONL logs, Markdown transcripts and HTML reports; the HTML report includes flowcharts, discussion matrices and reference cards, facilitating audit and debugging.
+- **SKILL Protocol**: Each agent receives a ~75‑token runtime skill digest enforcing citation format and role constraints, ensuring consistent behavior across agents.
+- **Scalable Best‑Practice Design**: The architecture follows multi‑agent best practices and can evolve into a hierarchical model, allowing new roles or tasks to be added as needed.
+
 ### Clinical Workflow Integration
 
 ```mermaid
@@ -601,17 +609,19 @@ OMGs/
 │   ├── __init__.py             # Package exports
 │   ├── agent.py                # Stateful LLM Agent wrapper
 │   │                           #   - Agent class with chat(), run_selection()
-│   ├── client.py               # Azure OpenAI client initialization
-│   │                           #   - init_client()
+│   ├── client.py               # Multi-provider LLM client initialization
+│   │                           #   - init_client(), init_client_from_config()
 │   └── config.py               # Configuration loading
 │                               #   - load_paths_config(), get_paths_config()
 │                               #   - load_mdt_prompts(), get_mdt_prompts()
 │                               #   - load_data(), create_question(), setup_model()
 │
-├── aoai/                       # Azure OpenAI Wrapper (preserved)
+├── clients/                    # Multi-Provider LLM Client Wrapper
 │   ├── __init__.py
 │   ├── wrapper.py              # OpenAIWrapper class
-│   └── logger.py               # API logging
+│   ├── logger.py               # API logging
+│   ├── test_connection.py      # Provider connection tests
+│   └── PROVIDERS.md            # Multi-provider usage guide
 │
 ├── utils/                      # Pure Utility Functions
 │   ├── __init__.py             # Package exports

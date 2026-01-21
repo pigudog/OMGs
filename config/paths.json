@@ -19,5 +19,22 @@
     "output_answer": "output_answer",
     "mdt_logs": "mdt_logs",
     "api_trace_db": "api_trace.db"
+  },
+  "llm": {
+    "default_provider": "azure",
+    "providers": {
+      "azure": {
+        "api_key_env": "AZURE_OPENAI_API_KEY",
+        "endpoint_env": "AZURE_OPENAI_ENDPOINT"
+      },
+      "openai": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": "https://api.openai.com/v1"
+      },
+      "openrouter": {
+        "api_key_env": "OPENROUTER_API_KEY",
+        "base_url": "https://openrouter.ai/api/v1"
+      }
+    }
   }
 }

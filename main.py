@@ -13,7 +13,10 @@ from core import setup_model, load_data, create_question
 # ---------------------------------------------------------
 parser = argparse.ArgumentParser()
 parser.add_argument('--input_path', type=str, required=True, help="Path to input JSONL file")
-parser.add_argument('--model', type=str, default='gpt-5.1', help="Azure Deployment Name")
+parser.add_argument('--model', type=str, default='gpt-5.1', help="Model/deployment name")
+parser.add_argument('--provider', type=str, default='auto',
+                    choices=['azure', 'openai', 'openrouter', 'auto'],
+                    help="LLM provider: 'azure', 'openai', 'openrouter', or 'auto' (auto-detect based on model name)")
 parser.add_argument('--num_samples', type=int, default=999999, help="Number of samples to process")
 parser.add_argument('--agent', type=str, default='basic_baseline',
                     choices=['basic_baseline', 'basic_role','basic_rag','basic_rag_lab','basic_rag_lab_full','omgs'],
@@ -23,8 +26,9 @@ args = parser.parse_args()
 # ---------------------------------------------------------
 # 1) Initialize model and client
 # ---------------------------------------------------------
-model, client = setup_model(args.model)
+model, client = setup_model(args.model, provider=args.provider)
 args.client = client
+print(f"[INFO] Using provider: {client.provider}, model: {model}")
 
 # ---------------------------------------------------------
 # 2) Load data

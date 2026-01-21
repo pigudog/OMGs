@@ -3,7 +3,7 @@
 from typing import Any, Dict, List, Optional
 from datetime import datetime
 import tiktoken
-from aoai import OpenAIWrapper
+from clients import OpenAIWrapper
 
 
 class AgentError(Exception):
@@ -31,7 +31,8 @@ class Agent:
         examplers=None,
         max_tokens=5000,
         max_prompt_tokens: int = 6500,
-        enable_local_log=True
+        enable_local_log=True,
+        enable_reasoning: bool = False
     ):
         self.instruction = instruction
         self.role = role
@@ -39,6 +40,7 @@ class Agent:
         self.client = client
         self.max_tokens = max_tokens
         self.deployment = model_info
+        self.enable_reasoning = enable_reasoning
 
         # Local interaction log for recording all model calls
         self.enable_local_log = enable_local_log
@@ -168,6 +170,9 @@ class Agent:
         Sends a new user message and returns assistant response.
         Also records the interaction into local_log.
         
+        If enable_reasoning is True, supports OpenRouter reasoning mode and preserves
+        reasoning_details in message history for continuation.
+        
         Raises:
             AgentError: If the API call fails or response parsing fails
         """
@@ -177,10 +182,16 @@ class Agent:
         self.messages = self._trim_messages_to_budget(self.messages, self.max_prompt_tokens)
 
         try:
+            # Prepare extra_body for reasoning if enabled
+            extra_body = None
+            if self.enable_reasoning:
+                extra_body = {"reasoning": {"enabled": True}}
+            
             resp = self.client.chat_completion(
                 model=self.deployment,
                 messages=self.messages,
-                max_completion_tokens=self.max_tokens
+                max_completion_tokens=self.max_tokens,
+                extra_body=extra_body
             )
             
             # Check if response is valid
@@ -194,7 +205,14 @@ class Agent:
             if reply is None:
                 raise ValueError("Response content is None")
             
-            self.messages.append({"role": "assistant", "content": reply})
+            # Build assistant message, preserving reasoning_details if present
+            assistant_msg = {"role": "assistant", "content": reply}
+            if self.enable_reasoning and hasattr(resp.choices[0].message, "reasoning_details"):
+                reasoning_details = getattr(resp.choices[0].message, "reasoning_details", None)
+                if reasoning_details is not None:
+                    assistant_msg["reasoning_details"] = reasoning_details
+            
+            self.messages.append(assistant_msg)
 
             # Automatically record this interaction in local log
             self._record_local(message, reply)
@@ -228,10 +246,16 @@ class Agent:
         msgs = self._trim_messages_to_budget(msgs, min(self.max_prompt_tokens, 2500))
 
         try:
+            # Prepare extra_body for reasoning if enabled
+            extra_body = None
+            if self.enable_reasoning:
+                extra_body = {"reasoning": {"enabled": True}}
+            
             resp = self.client.chat_completion(
                 model=self.deployment,
                 messages=msgs,
-                max_completion_tokens=self.max_tokens
+                max_completion_tokens=self.max_tokens,
+                extra_body=extra_body
             )
             
             # Check if response is valid

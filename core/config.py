@@ -221,12 +221,27 @@ def normalize_case_schema(case_json: Any) -> tuple[Dict[str, Any], List[str]]:
     return normalized, warnings
 
 
-def setup_model(model_name: str):
+def setup_model(model_name: str, provider: Optional[str] = None) -> tuple:
     """
-    Adapter for old code:
-    Return (deployment_name, client)
+    Initialize model and client.
+    
+    Parameters:
+    - model_name: Model/deployment name
+    - provider: Optional provider type ("azure", "openai", "openrouter", "auto").
+                If None or "auto", auto-detects based on model name.
+                Otherwise, uses the specified provider.
+    
+    Returns:
+    - Tuple of (model_name, client)
     """
     # Import here to avoid circular dependency
-    from core.client import init_client
-    client = init_client()
+    from core.client import init_client, init_client_from_config
+    
+    if provider is None or provider == "auto":
+        # Auto-detect provider based on model name
+        client = init_client_from_config(model=model_name)
+    else:
+        # Use specified provider
+        client = init_client(provider=provider)
+    
     return model_name, client
