@@ -759,6 +759,9 @@ def main():
     ap.add_argument("--retries", type=int, default=4)
     # Removed log_file argument
     ap.add_argument("--db_path", default="api_trace.db")
+    ap.add_argument("--provider", type=str, default='auto',
+                    choices=['azure', 'openai', 'openrouter', 'auto'],
+                    help="LLM provider: 'azure', 'openai', 'openrouter', or 'auto' (auto-detect based on model name)")
     ap.add_argument("--disable-json-repair", action="store_true")
     ap.add_argument("--txt-dir", default="")
     ap.add_argument("--verbose", action="store_true", help="Enable verbose retry logs")
@@ -766,7 +769,14 @@ def main():
 
     args = ap.parse_args()
 
-    client = init_client(db_path=args.db_path)
+    # Initialize client with provider support
+    if args.provider == 'auto':
+        from core.client import init_client_from_config
+        client = init_client_from_config(model=args.deployment, db_path=args.db_path)
+    else:
+        client = init_client(db_path=args.db_path, provider=args.provider)
+    
+    print(f"[INFO] Using provider: {client.provider}, deployment: {args.deployment}")
 
     process_file(
         client=client,

@@ -140,7 +140,7 @@ flowchart TB
     
     subgraph Core [Core Infrastructure]
         Agent[Agent Class]
-        Client[Azure OpenAI Client]
+        Client[Multi-Provider LLM Client]
         Config[Configuration]
     end
     
@@ -328,9 +328,11 @@ pip install -r requirements.txt
 pip install openai>=1.0.0 chromadb>=0.4.0 torch>=2.0.0 tiktoken>=0.5.0
 ```
 
-### Step 4: Configure Azure OpenAI
+### Step 4: Configure LLM Provider
 
-Create environment variables for Azure OpenAI access:
+Set up environment variables for your chosen LLM provider(s). You can configure multiple providers and switch between them using the `--provider` argument.
+
+#### Azure OpenAI
 
 **Linux/macOS:**
 ```bash
@@ -358,6 +360,52 @@ set AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
 set AZURE_OPENAI_API_KEY=your-api-key-here
 ```
 
+#### OpenAI Official API
+
+**Linux/macOS:**
+```bash
+export OPENAI_API_KEY="your-openai-api-key"
+
+# Add to ~/.bashrc or ~/.zshrc for persistence
+echo 'export OPENAI_API_KEY="your-openai-api-key"' >> ~/.bashrc
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:OPENAI_API_KEY = "your-openai-api-key"
+
+# For persistence
+[System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "your-openai-api-key", "User")
+```
+
+**Windows (CMD):**
+```cmd
+set OPENAI_API_KEY=your-openai-api-key
+```
+
+#### OpenRouter
+
+**Linux/macOS:**
+```bash
+export OPENROUTER_API_KEY="your-openrouter-api-key"
+
+# Add to ~/.bashrc or ~/.zshrc for persistence
+echo 'export OPENROUTER_API_KEY="your-openrouter-api-key"' >> ~/.bashrc
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:OPENROUTER_API_KEY = "your-openrouter-api-key"
+
+# For persistence
+[System.Environment]::SetEnvironmentVariable("OPENROUTER_API_KEY", "your-openrouter-api-key", "User")
+```
+
+**Windows (CMD):**
+```cmd
+set OPENROUTER_API_KEY=your-openrouter-api-key
+```
+
 ### Step 5: Verify Installation
 
 ```bash
@@ -370,11 +418,25 @@ python -c "import torch; print(f'PyTorch: {torch.__version__}')"
 python -c "import chromadb; print(f'ChromaDB: OK')"
 ```
 
+### Step 6: Test LLM Provider Connections
+
+Test your configured LLM providers:
+
+```bash
+# Test all configured providers
+python -m clients.test_connection
+
+# Test specific provider
+python -m clients.test_connection --provider azure
+python -m clients.test_connection --provider openai
+python -m clients.test_connection --provider openrouter
+```
+
 ### Dependencies Overview
 
 | Package | Version | Purpose |
 |---------|---------|---------|
-| `openai` | ≥1.0.0 | Azure OpenAI API client |
+| `openai` | ≥1.0.0 | Multi-provider LLM API client (supports Azure, OpenAI, OpenRouter) |
 | `chromadb` | ≥0.4.0 | Vector database for RAG |
 | `langchain-huggingface` | ≥0.0.1 | Embedding model integration |
 | `torch` | ≥2.0.0 | Deep learning framework |
@@ -411,21 +473,76 @@ OMGs/
 **Step 1: Extract and Structure EHR (if starting from raw notes)**
 
 ```bash
+# Using Azure OpenAI (default)
 python ehr_structurer.py \
   --input ./input_ehr/raw_notes.jsonl \
   --output ./output_ehr/structured.jsonl \
   --deployment gpt-5-mini \
   --prompts ./config/prompts.json \
-  --txt-dir ./output_ehr/txt_out
+  --txt-dir ./output_ehr/txt_out \
+  --provider azure
+
+# Using OpenAI official API
+python ehr_structurer.py \
+  --input ./input_ehr/raw_notes.jsonl \
+  --output ./output_ehr/structured.jsonl \
+  --deployment gpt-4 \
+  --prompts ./config/prompts.json \
+  --txt-dir ./output_ehr/txt_out \
+  --provider openai
+
+# Using OpenRouter
+python ehr_structurer.py \
+  --input ./input_ehr/raw_notes.jsonl \
+  --output ./output_ehr/structured.jsonl \
+  --deployment google/gemini-2.0-flash-exp:free \
+  --prompts ./config/prompts.json \
+  --txt-dir ./output_ehr/txt_out \
+  --provider openrouter
+
+# Auto-detect provider (default)
+python ehr_structurer.py \
+  --input ./input_ehr/raw_notes.jsonl \
+  --output ./output_ehr/structured.jsonl \
+  --deployment gpt-5-mini \
+  --prompts ./config/prompts.json \
+  --txt-dir ./output_ehr/txt_out \
+  --provider auto
 ```
 
 **Step 2: Run MDT Pipeline**
 
 ```bash
+# Using Azure OpenAI (default)
 python main.py \
   --input_path ./output_ehr/structured.jsonl \
   --agent omgs \
   --model gpt-5.1 \
+  --provider azure \
+  --num_samples 10
+
+# Using OpenAI official API
+python main.py \
+  --input_path ./output_ehr/structured.jsonl \
+  --agent omgs \
+  --model gpt-4 \
+  --provider openai \
+  --num_samples 10
+
+# Using OpenRouter
+python main.py \
+  --input_path ./output_ehr/structured.jsonl \
+  --agent omgs \
+  --model google/gemini-3-pro-preview \
+  --provider openrouter \
+  --num_samples 10
+
+# Auto-detect provider (default)
+python main.py \
+  --input_path ./output_ehr/structured.jsonl \
+  --agent omgs \
+  --model gpt-5.1 \
+  --provider auto \
   --num_samples 10
 ```
 
@@ -434,7 +551,11 @@ python main.py \
 If your data is already structured:
 
 ```bash
+# Using auto-detection (default)
 python main.py --input_path ./input_ehr/test_cases.jsonl --agent omgs
+
+# Explicitly specify provider
+python main.py --input_path ./input_ehr/test_cases.jsonl --agent omgs --provider openai
 ```
 
 ### Check Outputs
@@ -456,7 +577,22 @@ xdg-open mdt_logs/mdt_report_*.html  # Linux
 
 ## 📖 Usage Guide
 
+### Multi-Provider LLM Support
+
+OMGs supports multiple LLM providers through the `--provider` argument:
+
+- **`azure`**: Azure OpenAI (default, backward compatible)
+- **`openai`**: OpenAI official API
+- **`openrouter`**: OpenRouter (supports multiple models like Gemini, Claude, etc.)
+- **`auto`**: Auto-detect provider based on model name (default)
+
+You can use different providers for different steps of the pipeline. For example, use Azure for EHR extraction and OpenAI for MDT processing.
+
+See [clients/PROVIDERS.md](clients/PROVIDERS.md) for detailed provider usage guide.
+
 ### CLI Arguments
+
+#### main.py
 
 ```bash
 python main.py [OPTIONS]
@@ -465,9 +601,32 @@ python main.py [OPTIONS]
 | Argument | Type | Default | Description |
 |----------|------|---------|-------------|
 | `--input_path` | str | **Required** | Path to input JSONL file |
-| `--model` | str | `gpt-5.1` | Azure deployment name |
+| `--model` | str | `gpt-5.1` | Model/deployment name |
+| `--provider` | str | `auto` | LLM provider: `azure`, `openai`, `openrouter`, or `auto` (auto-detect based on model name) |
 | `--agent` | str | `basic_baseline` | Agent type (use `omgs`) |
 | `--num_samples` | int | 999999 | Number of samples to process |
+
+#### ehr_structurer.py
+
+```bash
+python ehr_structurer.py [OPTIONS]
+```
+
+| Argument | Type | Default | Description |
+|----------|------|---------|-------------|
+| `--input` | str | **Required** | Path to input JSONL file |
+| `--output` | str | **Required** | Path to output JSONL file |
+| `--deployment` | str | **Required** | Model/deployment name |
+| `--prompts` | str | **Required** | Path to prompts configuration file |
+| `--provider` | str | `auto` | LLM provider: `azure`, `openai`, `openrouter`, or `auto` (auto-detect based on model name) |
+| `--field` | str | `question` | Field name to extract |
+| `--max-completion-tokens` | int | 40000 | Maximum completion tokens |
+| `--retries` | int | 4 | Number of retry attempts |
+| `--txt-dir` | str | `""` | Directory for text output files |
+| `--db_path` | str | `api_trace.db` | Path to API trace database |
+| `--disable-json-repair` | flag | False | Disable automatic JSON repair |
+| `--verbose` | flag | False | Enable verbose retry logs |
+| `--quiet` | flag | False | Suppress retry logs |
 
 ### Input Format
 
@@ -938,28 +1097,156 @@ The RAG evidence digest maintains a strict 1:1 correspondence with retrieved res
 
 ## 💡 Examples
 
+### Complete Workflow Examples
+
+#### Example 1: Using Azure OpenAI (Default)
+
+```bash
+# Step 1: Set environment variables
+export AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
+export AZURE_OPENAI_API_KEY="your-azure-key"
+
+# Step 2: Extract EHR (using Azure)
+python ehr_structurer.py \
+  --input ./input_ehr/test_guo.jsonl \
+  --output ./output_ehr/test_guo.jsonl \
+  --deployment gpt-5-mini \
+  --prompts ./config/prompts.json \
+  --txt-dir ./output_ehr/txt_out \
+  --provider azure
+
+# Step 3: Run MDT pipeline (using Azure)
+python main.py \
+  --input_path ./output_ehr/test_guo.jsonl \
+  --agent omgs \
+  --model gpt-5.1 \
+  --provider azure
+```
+
+#### Example 2: Using OpenAI Official API
+
+```bash
+# Step 1: Set environment variables
+export OPENAI_API_KEY="your-openai-key"
+
+# Step 2: Extract EHR (using OpenAI)
+python ehr_structurer.py \
+  --input ./input_ehr/test_guo.jsonl \
+  --output ./output_ehr/test_guo.jsonl \
+  --deployment gpt-4 \
+  --prompts ./config/prompts.json \
+  --txt-dir ./output_ehr/txt_out \
+  --provider openai
+
+# Step 3: Run MDT pipeline (using OpenAI)
+python main.py \
+  --input_path ./output_ehr/test_guo.jsonl \
+  --agent omgs \
+  --model gpt-4 \
+  --provider openai
+```
+
+#### Example 3: Using OpenRouter
+
+```bash
+# Step 1: Set environment variables
+export OPENROUTER_API_KEY="your-openrouter-key"
+
+# Step 2: Extract EHR (using OpenRouter with Gemini)
+python ehr_structurer.py \
+  --input ./input_ehr/test_guo.jsonl \
+  --output ./output_ehr/test_guo.jsonl \
+  --deployment google/gemini-2.0-flash-exp:free \
+  --prompts ./config/prompts.json \
+  --txt-dir ./output_ehr/txt_out \
+  --provider openrouter
+
+# Step 3: Run MDT pipeline (using OpenRouter with Gemini 3 Pro)
+python main.py \
+  --input_path ./output_ehr/test_guo.jsonl \
+  --agent omgs \
+  --model google/gemini-3-pro-preview \
+  --provider openrouter
+```
+
+#### Example 4: Mixed Providers (EHR extraction with Azure, MDT with OpenAI)
+
+```bash
+# Step 1: Set environment variables for both providers
+export AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
+export AZURE_OPENAI_API_KEY="your-azure-key"
+export OPENAI_API_KEY="your-openai-key"
+
+# Step 2: Extract EHR (using Azure)
+python ehr_structurer.py \
+  --input ./input_ehr/test_guo.jsonl \
+  --output ./output_ehr/test_guo.jsonl \
+  --deployment gpt-5-mini \
+  --prompts ./config/prompts.json \
+  --txt-dir ./output_ehr/txt_out \
+  --provider azure
+
+# Step 3: Run MDT pipeline (using OpenAI)
+python main.py \
+  --input_path ./output_ehr/test_guo.jsonl \
+  --agent omgs \
+  --model gpt-4 \
+  --provider openai
+```
+
 ### Basic Usage
 
 ```bash
-# Run with default settings
+# Run with default settings (auto-detect provider)
 python main.py --input_path ./input_ehr/test_cases.jsonl --agent omgs
 
-# Specify model and sample count
+# Specify model, provider, and sample count
 python main.py \
   --input_path ./input_ehr/test_cases.jsonl \
   --agent omgs \
   --model gpt-4 \
+  --provider openai \
   --num_samples 5
 ```
 
 ### EHR Extraction
 
+**Using Azure OpenAI:**
 ```bash
 python ehr_structurer.py \
   --input input_ehr/raw_notes.jsonl \
   --output output_ehr/structured.jsonl \
   --deployment gpt-5.1 \
   --prompts config/prompts.json \
+  --provider azure \
+  --field question \
+  --max-completion-tokens 40000 \
+  --retries 4 \
+  --txt-dir output_ehr/txt_out
+```
+
+**Using OpenAI official API:**
+```bash
+python ehr_structurer.py \
+  --input input_ehr/raw_notes.jsonl \
+  --output output_ehr/structured.jsonl \
+  --deployment gpt-4 \
+  --prompts config/prompts.json \
+  --provider openai \
+  --field question \
+  --max-completion-tokens 40000 \
+  --retries 4 \
+  --txt-dir output_ehr/txt_out
+```
+
+**Using OpenRouter:**
+```bash
+python ehr_structurer.py \
+  --input input_ehr/raw_notes.jsonl \
+  --output output_ehr/structured.jsonl \
+  --deployment google/gemini-2.0-flash-exp:free \
+  --prompts config/prompts.json \
+  --provider openrouter \
   --field question \
   --max-completion-tokens 40000 \
   --retries 4 \
@@ -999,20 +1286,24 @@ python pdf_to_rag.py search \
 #!/bin/bash
 # batch_process.sh
 
-# Step 1: Extract all EHR files
+# Step 1: Extract all EHR files (using Azure)
 for file in input_ehr/*.jsonl; do
     echo "Extracting: $file"
     python ehr_structurer.py \
       --input "$file" \
       --output "output_ehr/$(basename $file)" \
       --deployment gpt-5-mini \
-      --prompts ./config/prompts.json
+      --prompts ./config/prompts.json \
+      --provider azure
 done
 
-# Step 2: Run MDT on all extracted files
+# Step 2: Run MDT on all extracted files (using OpenAI)
 for file in output_ehr/*.jsonl; do
     echo "Processing MDT: $file"
-    python main.py --input_path "$file" --agent omgs
+    python main.py \
+      --input_path "$file" \
+      --agent omgs \
+      --provider openai
 done
 
 echo "Batch processing complete!"
@@ -1101,15 +1392,20 @@ print(f"Errors by stage: {error_summary['errors_by_stage']}")
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `RuntimeError: Missing AZURE_OPENAI_ENDPOINT` | Environment variables not set | Set `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_API_KEY` |
+| `RuntimeError: Missing AZURE_OPENAI_ENDPOINT` | Azure environment variables not set | Set `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_API_KEY`, or use `--provider openai`/`openrouter` |
+| `RuntimeError: Missing OPENAI_API_KEY` | OpenAI environment variable not set | Set `OPENAI_API_KEY`, or use `--provider azure`/`openrouter` |
+| `RuntimeError: Missing OPENROUTER_API_KEY` | OpenRouter environment variable not set | Set `OPENROUTER_API_KEY`, or use `--provider azure`/`openai` |
 | `FileNotFoundError: files/lab_reports_summary.jsonl` | Data files missing | **System handles gracefully**: Returns empty lists, prints warning, continues. To fix: Create `files/` directory and add required JSONL files. |
 | `[WARNING] Failed to load lab reports` | Report file missing or unreadable | **System handles gracefully**: Pipeline continues with empty report data. Check file permissions and paths in `config/paths.json`. |
 | `Failed to load RAG index` | RAG index not built | Run `pdf_to_rag.py build` and `index` commands. System continues without RAG if index unavailable. |
 | `RAG initialization failed` | Network issues or model not cached | Check network, or pre-download model. Pipeline continues without RAG. |
 | `Failed to create RAG index directory` | Permission denied or disk full | Check directory permissions. System will skip RAG if directory cannot be created. |
 | `[WARNING] Failed to create reference cache directory` | `rag_store/reference_cache/` cannot be created | **System handles gracefully**: Cache works in-memory only. Check parent directory permissions. |
-| `AgentError: ... failed in chat` | API call failed | Check Azure OpenAI credentials and quota. Agent uses fallback response. |
-| `Azure API error` | Invalid deployment name | Verify `--model` matches Azure deployment |
+| `AgentError: ... failed in chat` | API call failed | Check provider credentials and quota. Agent uses fallback response. |
+| `Azure API error` | Invalid deployment name | Verify `--model` matches Azure deployment, or try `--provider openai`/`openrouter` |
+| `OpenAI API error` | Invalid model name or API key | Verify `--model` is valid for OpenAI, check `OPENAI_API_KEY` |
+| `OpenRouter API error` | Invalid model name or API key | Verify `--model` format (e.g., `google/gemini-*`), check `OPENROUTER_API_KEY` |
+| `Provider initialization failed` | Missing environment variables for selected provider | Set required environment variables for the provider, or use `--provider auto` to auto-detect |
 | `ModuleNotFoundError: No module named 'torch'` | Dependencies not installed | Run `pip install -r requirements.txt` |
 
 ### Debug Mode
@@ -1234,7 +1530,7 @@ MIT License. See `LICENSE` file for details.
 
 ## 🙏 Acknowledgements
 
-- Azure OpenAI for language model capabilities
+- Azure OpenAI, OpenAI, and OpenRouter for language model capabilities
 - ChromaDB for vector storage
 - HuggingFace for embedding models
 - All contributors to the OMGs project
