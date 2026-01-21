@@ -137,7 +137,7 @@ def extract_pdf_to_txt(pdf_path: Path, out_txt: Path) -> int:
 
     full_text = "\n".join(buf)
 
-    # Remove references
+    # Remove references section (matches both English "References" and Chinese "参考文献")
     full_text = re.split(r"\n\s*(References|参考文献)\b", full_text, flags=re.I)[0]
 
     out_txt.write_text(full_text, encoding="utf-8")

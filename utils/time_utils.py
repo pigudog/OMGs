@@ -126,3 +126,44 @@ def build_pathology_timeline(path_reports: list) -> list:
             "summary": summ
         })
     return tl
+
+
+def format_duration(seconds: float) -> str:
+    """
+    Convert seconds to human-readable format.
+    
+    Examples:
+        format_duration(45.3) -> "45.3秒"
+        format_duration(85) -> "1分25秒"
+        format_duration(3661) -> "1小时1分1秒"
+    
+    Args:
+        seconds: Duration in seconds (can be float)
+    
+    Returns:
+        Human-readable duration string
+    """
+    if seconds < 0:
+        return "0秒"
+    
+    total_seconds = int(seconds)
+    milliseconds = int((seconds - total_seconds) * 10)  # One decimal place
+    
+    if total_seconds < 60:
+        if milliseconds > 0:
+            return f"{seconds:.1f}秒"
+        return f"{total_seconds}秒"
+    
+    hours = total_seconds // 3600
+    minutes = (total_seconds % 3600) // 60
+    secs = total_seconds % 60
+    
+    parts = []
+    if hours > 0:
+        parts.append(f"{hours}小时")
+    if minutes > 0:
+        parts.append(f"{minutes}分")
+    if secs > 0 or not parts:
+        parts.append(f"{secs}秒")
+    
+    return "".join(parts)

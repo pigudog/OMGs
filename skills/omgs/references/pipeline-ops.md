@@ -1,6 +1,6 @@
 # Pipeline Operations Guide
 
-运行、配置和调试 OMGs MDT pipeline 的完整指南。
+Complete guide for running, configuring, and debugging the OMGs MDT pipeline.
 
 ## Table of Contents
 
@@ -69,7 +69,7 @@ python -c "from host import process_omgs_multi_expert_query; print('OK')"
 
 ### config/paths.json
 
-数据文件路径和输出目录配置。
+Data file paths and output directory configuration.
 
 ```json
 {
@@ -104,7 +104,7 @@ python -c "from host import process_omgs_multi_expert_query; print('OK')"
 
 ### config/mdt_prompts.json
 
-MDT 讨论提示词和 Agent 指令配置。
+MDT discussion prompts and Agent instruction configuration.
 
 ```json
 {
@@ -280,7 +280,7 @@ done
 
 ### Function-Level Override
 
-可以在代码中直接覆盖默认路径：
+You can override default paths directly in code:
 
 ```python
 from host import process_omgs_multi_expert_query

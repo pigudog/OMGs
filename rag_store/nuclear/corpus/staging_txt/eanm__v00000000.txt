@@ -1,0 +1,1234 @@
+# EANM
+
+
+---
+[PAGE 1/17]
+
+https://doi.org/10.1007/s00259-021-05450-9
+GUIDELINES
+EANM guideline on the role of 2‑[18F]FDG PET/CT in diagnosis, staging,
+prognostic value, therapy assessment and restaging of ovarian cancer,
+endorsed by the American College of Nuclear Medicine (ACNM),
+the Society of Nuclear Medicine and Molecular Imaging (SNMMI)
+and the International Atomic Energy Agency (IAEA)
+Roberto C. Delgado Bolton1   · Nicolas Aide2,3   · Patrick M. Colletti4   · Annamaria Ferrero5   · Diana Paez6   ·
+Andrea Skanjeti7   · Francesco Giammarile6,8 
+Received: 5 May 2021 / Accepted: 3 June 2021
+© The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2021
+Abstract
+In most patients with ovarian carcinoma, the diagnosis is reached when the disease is long past the initial stages, presenting already an
+advanced stage, and they usually have a very bad prognosis. Cytoreductive or debulking surgical procedures, platinum-based chemotherapy
+and targeted agents are key therapeutic elements. However, around 7 out of 10 patients present recurrent disease within 36 months from
+the initial diagnosis. The metastatic spread in ovarian cancer follows three pathways: contiguous dissemination across the peritoneum,
+dissemination through the lymphatic drainage and, although less importantly in this case, through the bloodstream. Radiological imaging,
+including ultrasound, CT and MRI, are the main imaging techniques in which management decisions are supported, CT being considered
+the best available technique for presurgical evaluation and staging purposes. Regarding 2-[18F]FDG PET/CT, the evidence available in the
+literature demonstrates efficacy in primary detection, disease staging and establishing the prognosis and especially for relapse detection.
+There is limited evidence when considering the evaluation of therapeutic response. This guideline summarizes the level of evidence and
+grade of recommendation for the clinical indications of 2-[18F]FDG PET/CT in each disease stage of ovarian carcinoma.
+Keywords  Ovarian cancer · Imaging · PET/CT · 18F-FDG · Guideline · Clinical indications
+Abbreviations
+2-[18F]FDG
+2-[18F]Fluoro-2-deoxy-D-glucose
+AOC
+Advanced ovarian cancer
+BOT
+Borderline ovarian tumour
+CEA
+Serum carcinoembryonic antigen
+CT
+Computed tomography
+ceCT
+Contrast-enhanced computed
+tomography
+EOC
+Early-stage ovarian carcinoma
+EORTC​
+European Organisation for Research
+and Treatment of Cancer
+ESMO
+European Society of Medical Oncology
+ESGO
+European Society of Gynaecological
+Oncology
+FIGO
+International Federation of Gynaecol-
+ogy and Obstetrics
+IAEA
+International Atomic Energy Agency
+IOTA
+International Ovarian Tumour Analysis
+group
+LBM
+Lean body mass
+LGSC
+Low-grade serous carcinoma
+PCI
+Peritoneal cancer index
+PET
+Positron emission tomography
+MATV or MTV
+Metabolic active tumour volume
+MRI
+Magnetic resonance imaging
+sBOT(s)
+Serous borderline ovarian tumour(s)
+Participating associations  EANM: Roberto C. Delgado Bolton,
+Nicolas Aide, and Francesco Giammarile
+IAEA: Francesco Giammarile and Diana Paez
+ACNM and SNMMI: Patrick M. Colletti
+Endorsements  IAEA: endorsed 04/2021
+ACNM: endorsed 04/2021
+SNMMI: endorsed 04/2021
+This article is part of the Topical Collection on Oncology -
+Genitourinary
+ *	 Roberto C. Delgado Bolton
+
+rbiolton@gmail.com
+Extended author information available on the last page of the article
+/ Published online: 3 July 2021
+European Journal of Nuclear Medicine and Molecular Imaging (2021) 48:3286–3302
+1 3
+
+
+
+---
+[PAGE 2/17]
+
+SUL
+Standardized uptake value using lean
+body mass (LBM)
+SUV
+Standardized uptake value
+TAUS
+Transabdominal ultrasound
+TLG
+Total lesion glycolysis
+TVUS
+Transvaginal ultrasound
+US
+Ultrasound or echography
+VOI
+Volume of interest
+WHO
+World Health Organization
+Preamble
+The European Association of Nuclear Medicine (EANM)
+is a professional non-profit medical association that facili-
+tates communication worldwide among individuals pursu-
+ing clinical and research excellence in nuclear medicine.
+The EANM was founded in 1985.
+These guidelines are intended to assist practitioners in provid-
+ing appropriate nuclear medicine care for patients. They are not
+inflexible rules or requirements of practice and are not intended,
+nor should they be used, to establish a legal standard of care.
+The ultimate judgement regarding the propriety of any specific pro-
+cedure or course of action must be made by medical professionals tak-
+ing into account the unique circumstances of each case. Thus, there is
+no implication that an approach differing from the guidelines, standing
+alone, is below the standard of care. To the contrary, a conscientious
+practitioner may responsibly adopt a course of action different from that
+set out in the guidelines when, in the reasonable judgement of the prac-
+titioner, such course of action is indicated by the condition of the patient,
+limitations of available resources or advances in knowledge or technol-
+ogy subsequent to publication of the guidelines.
+The practice of medicine involves not only the science
+but also the art of dealing with the prevention, diagnosis,
+alleviation and treatment of disease.
+The variety and complexity of human conditions make it
+impossible to always reach the most appropriate diagnosis or to
+predict with certainty a particular response to treatment. There-
+fore, it should be recognized that adherence to these guidelines
+will not ensure an accurate diagnosis or a successful outcome.
+All that should be expected is that the practitioner will follow a
+reasonable course of action based on current knowledge, avail-
+able resources and the needs of the patient to deliver effective
+and safe medical care. The sole purpose of these guidelines is to
+assist practitioners in achieving this objective.
+Introduction
+In most patients with ovarian carcinoma, the diagnosis is
+reached when the disease is long past the initial stages,
+presenting already an advanced stage, and they usually
+have a very bad prognosis. Radiological imaging, includ-
+ing ultrasound, CT and MRI, are the main imaging tech-
+niques in which management decisions are supported.
+Regarding 2-[18F]FDG PET/CT, the evidence available
+in the literature demonstrates efficacy in primary detec-
+tion, disease staging and establishing the prognosis and
+especially for relapse detection. There is limited evidence
+when considering the evaluation of therapeutic response.
+This guideline summarizes the level of evidence and grade
+of recommendation for the clinical indications of 2-[18F]
+FDG PET/CT in each disease stage of ovarian carcinoma.
+Background
+Epidemiology
+Worldwide data shows that ovarian tumours are among those
+with high incidence (seventh largest) and are responsible
+for a high number of cancer-related deaths (eighth highest)
+[1–3]. Although global incidence rates remain stable over
+time, in some Eastern Europeans countries, its incidence is
+the highest [1], and in South-Central Asia, this tumour is the
+third cause in cancer-related deaths [4]. Globally, 295,400
+estimated new cases and 184,800 cancer-related deaths were
+described in 2018. In the USA, based on the National Can-
+cer Institute’s Surveillance, Epidemiology, and End Results
+(SEER) program statistics for 2017 [4], there were 11.7 new
+ovarian cancer cases per 100,000 women per year, and there
+were 7.4 ovarian cancer-related deaths per 100,000 women
+per year. The European Cancer Information System esti-
+mated 45,694 new cases with 32,250 deaths from ovarian
+cancer in 40 European countries for the year 2018 [5].
+Moreover, the survival of the patients is highly impacted
+by the staging. A recent study based on SEER’s database
+showed a dramatic difference in the 5-year survival of
+patients with localized disease in comparison to patients
+with distant dissemination (88.5% versus 37.4%, respec-
+tively) for those diagnosed in 2010–2014, being even more
+impressive in women diagnosed in the 1990s [6].
+Pathology
+An epithelial origin is present in over 90% of malignant
+ovarian tumours. This pathologic type includes different
+histologic non-homogeneous types. Traditionally, patholo-
+gists have classified ovarian carcinoma into the following
+subtypes:
+•	 Serous: it represents the most frequent type of advanced
+ovarian cancers (70–80%).
+3287
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+123456789)
+1 3
+
+
+
+---
+[PAGE 3/17]
+
+•	 Endometrioid: account for around 10–20% of ovarian
+cancers.
+•	 Clear-cell: account for around 5–10% of ovarian cancers.
+•	 Mucinous.
+•	 Transitional cell.
+•	 Mixed epithelial tumours.
+•	 Undifferentiated tumours.
+Borderline tumours represent a grey area, neither benign
+nor malignant, and account for 10–15% of ovarian tumours.
+Regarding the frequency of the mentioned subtypes, there
+are huge differences when comparing early-stage tumours
+(clear predominance of non-serous subtypes) and advanced
+stage tumours (predominance of serous subtype) [7].
+When analysing together the histopathology and molecu-
+lar genetics, ovarian tumours are currently classified in 5
+categories: high-grade serous (70%), endometrioid (20%),
+clear-cell (10%), mucinous (3%) and low-grade serous car-
+cinomas (< 5%). The 5 categories represent clearly different
+tumours, with different genetic risk factors, epidemiological
+differences, differences in premalignant or precursor lesions,
+different spreading patterns, response to chemotherapy and
+prognosis. Moreover, a relevant proportion of tumours that
+were classified as primary ovarian carcinomas (especially
+serous, endometrioid and clear-cell carcinomas) were in fact
+primary tumours of the fallopian tube and the endometrium,
+affecting in a second stage the ovary [8].
+The last revision of the ovarian cancer World Health Organi-
+zation (WHO) classification dates back 2014. Both the WHO
+classification (categorizing histopathologic and molecular
+tumour types) and the International Federation of Gynaecol-
+ogy and Obstetrics (FIGO) classification (classifying different
+tumour stages) are the basis of the therapeutic management
+decisions and the most precise when evaluating prognosis.
+Regarding molecular genetics, BRCA1 and BRCA2
+(abbreviation for BReast CAncer gene) are tumour sup-
+pressor genes that impact the chances of developing can-
+cer, helping repair DNA disruptions that can lead to cancer
+and the uncontrolled growth of tumours. TP53 mutations
+are identified in most (96%) high-grade serous carcinomas.
+Early p53 loss followed by BRCA loss generates deficiency
+in homologous recombination repair, which in turn sets off
+chromosomal instability and extensive somatic copy number
+changes. This is an example of recent advances in molecular
+pathology, which have greatly improved the understanding
+of the biology of ovarian carcinomas and evolved patient
+management [9].
+Patterns of spread
+Metastatic spread in ovarian cancer typically follows
+three different routes: (a) by contiguity to the peritoneum,
+(b) lymphatic dissemination and (c) haematogenous
+dissemination.
+•	 Dissemination by contiguity in ovarian cancer makes the
+peritoneum the most affected tissue because in normal
+conditions the circulation of peritoneal fluid carries ovar-
+ian cells. In the first step, the primary ovarian tumour lib-
+erates malignant cells into the peritoneum, where these
+cells are incorporated into the peritoneal fluid normal
+flow inside the peritoneal cavity that takes them towards
+the upper abdominal quadrants. The normal physiology
+of the peritoneal fluid flow is based on the changes in
+the subphrenic pressures generated due to the respiratory
+movements, oscillating between the negative and positive
+values. These pressure oscillations drive the peritoneal
+fluid from the paracolic channels cranially to the right
+subhepatic area and the right subdiaphragmatic area
+[10]. Ovarian cancer typically disseminates by contigu-
+ity to the greater omentum, paracolic channels, Douglas’
+pouch, perihepatic region (particularly affecting the glis-
+sonian capsule), diaphragmatic and bowel surface and,
+less frequently, mesentery, splenic surface, porta hepatis
+and gastrosplenic ligament. Macroscopically, peritoneal
+involvement usually presents as nodules, fusiform lesions
+or plaques consisting of soft tissue and affecting the peri-
+toneal (parietal or visceral) walls. In the case of serous
+tumours, they appear as very small calcified lesions.
+•	 Lymphatic dissemination may circulate through three
+alternative pathways: (a) following the ovarian lym-
+phatic vessels, which is the most frequent pathway, until
+it arrives at the upper common iliac and paraaortic lymph
+nodes; (b) following the broad ligament and parame-
+trium, until it arrives at the external iliac and obturator
+lymph nodes; and (c) very scarcely, following the round
+ligaments, in the direction of the external iliac and ingui-
+nal lymph nodes [11–14].
+•	 Haematogenous dissemination is not as frequent, target-
+ing the liver, lung, spleen, central nervous system and, in
+few cases, bone [13].
+Over 66% of cases are detected when the disease is
+already advanced due to malignant cells having already
+reached extrapelvic structures, such as FIGO stages III and
+IV. The late diagnosis is caused, on one hand, by the typi-
+cally vague presenting symptoms and, on the other hand, the
+lack of an effective screening program.
+Staging systems of ovarian cancer: FIGO
+and AJCC‑TNM
+At present, the most frequent worldwide staging system
+adopted for this primary tumour is the FIGO classification
+3288
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+1 3
+
+
+
+---
+[PAGE 4/17]
+
+[15, 16]. Initially established in 1973, the last revision dates
+back to 2014. It defines the features, extent and prognosis of
+the tumour, in order to achieve the best possible outcome fol-
+lowing an optimized and personalized therapeutic approach.
+The comparison between the American Joint Committee on
+Cancer (AJCC) tumour–node–metastasis (TNM) and FIGO
+staging systems is presented in Table 1 [8, 15–17].
+It is frequently discussed in the literature the heterogene-
+ity of ovarian cancer, overarching different diseases that have
+dissimilar aetiology, pathogenesis, pathology and prognosis
+and that can initially appear affecting the ovaries, the fal-
+lopian tubes or the peritoneum. FIGO’s 2014 classification
+includes as a single diagnostic category the tumours affect-
+ing ovaries, fallopian tube and primary peritoneal tumours.
+Laboratory
+After a complete anamnesis and physical exploration, serum
+CA-125 is commonly studied in the initial evaluation [7].
+In early disease (FIGO stage I), its utility is controversial
+because it is increased only in around half of the patients. In
+advanced disease (FIGO stage II or greater), CA-125 pre-
+sents increased values in around 85% of cases. However,
+an important issue is the lack of specificity as CA-125 is
+increased in non-ovarian malignancies (e.g. breast, lung,
+colon and pancreatic tumours), pregnancy and benign dis-
+eases (e.g. cirrhosis, endometriosis, pelvic inflammatory dis-
+ease and ovarian cysts). Serum carcinoembryonic antigen
+(CEA) and CA 19–9 values occasionally may help in clari-
+fying the origin of the ovarian tumour, whether if the origin
+is gastrointestinal or a primary mucinous ovarian cancer.
+In this regard, endoscopic procedures, such as colonoscopy
+and/or gastroscopy, may be useful, especially if CA-125/
+CEA ratio is ≤ 25 [18], although this is controversial. On the
+other hand, CA-125 is considered a good marker of tumour
+recurrence. The correlation between CA-125 levels and the
+clinical evolution during chemotherapy is very strong. In
+clinically tumour-free patients, CA-125 values have a prog-
+nostic value and can be useful for predicting relapse [19].
+Radiological imaging in ovarian cancer
+Randomized clinical trials did not show benefits from
+screening procedures in ovarian cancer. The only settings
+where they may be appropriate are high-risk patients both
+pre- and postmenopausal and especially BRCA-mutated
+patients. Transvaginal and transabdominal ultrasound are
+the imaging procedures of choice [19].
+Studying ovarian or adnexal masses with the medical
+imaging methods (ultrasound, US; computed tomography,
+CT; and magnetic resonance imaging, MRI) is frequent
+in post- and premenopausal women [20]. Ovarian masses
+can be either benign or malignant, although they are more
+frequently benign lesions, such as endometriomas (deep
+ovarian endometriosis), or corpus luteum cysts (both mainly
+premenopausal), thecomas, dermoid cysts and serous cys-
+tadenomas. Therefore, the impact on the subsequent man-
+agement decisions of these imaging findings defining the
+malignancy or not of these masses is very high.
+Transvaginal US (TVUS) combined with power Doppler
+is the initial imaging test (sometimes in combination with
+transabdominal US, TAUS). There is consensus that it is
+the imaging procedure of choice in patients with adnexal
+masses for studying the original location and its benign or
+malignant features. Characteristics of the masses that are
+considered as suspicious of malignancy are thick irregular
+walls or with papillary projections and solid echogenic foci,
+moreover if appearing associated with ascites or peritoneal
+nodules [21–24]. In this regard, power Doppler tests may
+add information to detect tumour neovascularity within solid
+masses [24].
+The International Ovarian Tumour Analysis group
+(IOTA) has addressed the absence of uniform and standard
+guidelines in gynaecological ultrasonography as the limiting
+factor in the early diagnosis. The IOTA rules have introduced
+a standardized examination technique to define morphologi-
+cal features of ovarian masses. The IOTA simple ultrasound
+rules categorize ovarian tumours as benign or malignant and
+establish their application for the early detection of ovarian
+cancer. The IOTA published both simple rules and complex
+mathematical models based on logistic regression, allowing
+reproducible studies, simple to train and apply clinically for
+estimating the risk of malignancy [25].
+However, up to one-fifth (5–20%) of these lesions are
+classified as indeterminate with ultrasonography. Here, MRI
+can provide an added value with complementary information
+[26]. Also, contrast-enhanced CT (ceCT) can be helpful as
+it can evidence solid enhancing components within adnexal
+masses and detect peritoneal tumour spread [19].
+Regarding MRI, taking into account its main features
+when analysing T1- and T2-weighted images, indeterminate
+adnexal masses may be classified in three groups: (a) T1
+highly intense masses, (b) solid masses with high or inter-
+mediate T2 signal and (c) complex cystic or cystic-solid
+masses. The first group, based on the loss or absence of
+signal in fat-suppressed T1-weighted imaging, can lead to
+mature teratoma and haemorrhagic masses, respectively. In
+the second group, based on the relationship or not with the
+uterus, a distinction can be done between uterine leiomyoma
+and ovarian fibroma, while the gadolinium enhancement can
+be useful for characterizing solid masses with inhomoge-
+neous low or intermediate T2 signal. Lastly, in the third
+group and, anyway, in cases of solid components inside the
+mass, gadolinium enhancement T1-weighted sequences are
+required in order to establish or refute tumour enhancement
+3289
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+123456789)
+1 3
+
+
+
+---
+[PAGE 5/17]
+
+[13, 26, 27]. Other MRI sequences may also be useful for
+the characterization of these masses [26, 27].
+CT from the thoracic apex to the pelvis is considered the
+preferred imaging procedure for presurgical evaluation and
+staging. There are publications focusing on which are the
+crucial imaging findings and diagnostic criteria as well as
+for generating a structured report for preoperative staging
+[13, 28].
+Table 1   Comparison between AJCC and FIGO staging systems
+AJCC stage FIGO stage Stage grouping
+Stage description
+I
+I
+T1
+The cancer is in the ovaries or fallopian tubes without any other spread
+N0
+M0
+IA
+IA
+T1a
+Lesion localized inside to one ovary or to one fallopian tube without cancer cells in the fluid or
+washings from the abdomen and pelvis
+N0
+M0
+IB
+IB
+T1b
+Lesions localized inside both ovaries or fallopian tubes without cancer cells in the fluid or washings
+from the abdomen and pelvis
+N0
+M0
+IC
+IC
+Lesion in one or both ovaries or fallopian tubes with:
+T1c
+T1c1 Broken capsule during surgery
+T1c2 Lesion in the surface of at least one organ or broken capsule before surgery
+T1c3 Cancer cells in the fluid or washings from the abdomen and pelvis
+N0
+M0
+II
+II
+T2
+Lesion in one or both ovaries/fallopian tubes with spread to other pelvic organs or primary perito-
+neal cancer
+N0
+M0
+IIA
+IIA
+T2a
+Tumoural extension to the uterus or the fallopian tubes
+N0
+M0
+IIB
+IIB
+T2b
+Tumoural extension to the bladder, sigmoid colon or rectum
+N0
+M0
+IIIA1
+IIIA1
+T1 or T2
+Tumoural extension as described
+N1
+Spread to the retroperitoneal (pelvic and/or paraaortic) lymph nodes
+M0
+IIIA2
+IIIA2
+T3a
+Tumoural extension as described with microscopic extrapelvic peritoneal deposits
+N0 or N1
+Spread or not to retroperitoneal lymph nodes
+M0
+IIIB
+IIIB
+T3b
+Tumoural extension as described with macroscopic (< 2 cm) extrapelvic peritoneal deposits
+N0 or N1
+Spread or not to retroperitoneal lymph nodes
+M0
+IIIC
+IIIC
+T3c
+Tumoural extension as described with macroscopic (> 2 cm) extrapelvic peritoneal deposits
+N0 or N1
+Spread or not to retroperitoneal lymph nodes
+M0
+IVA
+IVA
+Any T
+Pleural effusion with confirmed metastatic cells
+Any N
+M1a
+IVB
+IVB
+Any T
+Spread in extraperitoneal organs or inside the spleen or liver, as well as to lymph nodes different
+from retroperitoneal lymph nodes
+Any N
+M1b
+3290
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+1 3
+
+
+
+---
+[PAGE 6/17]
+
+Treatment
+Cytoreductive (also called debulking) surgical procedures
+and chemotherapy (platinum-based) are the cornerstones of
+ovarian cancer therapeutical management.
+Cytoreductive surgery
+Primary cytoreductive surgery is aimed to remove com-
+pletely the tumour before subsequent chemotherapy is
+administered, while interval cytoreductive surgery is done
+following neoadjuvant chemotherapy, usually three cycles.
+Complete cytoreduction, or R0, is defined as the result
+of a surgical procedure that has cleared all macroscopic
+tumour, leaving no macroscopic residual disease. There is
+evidence that complete cytoreduction is the best independent
+prognostic factor in advanced ovarian cancer. Thus, a pre-
+cise presurgical staging is key for defining the management
+plan. If complete cytoreduction is feasible with an accept-
+able surgical morbidity, primary debulking surgery should
+be offered [29–31].
+According to the European Society for Medical Oncol-
+ogy (ESMO)-European Society of Gynaecological Oncol-
+ogy (ESGO) recommendations [29, 30], a multidisciplinary
+team working in a centre specialized in ovarian cancer must
+be in charge of patient selection for either primary debulking
+surgery or neoadjuvant chemotherapy. Radiological imaging
+or diagnostic laparoscopy must be part of the standard diag-
+nostic and staging algorithm. Exclusion criteria from pri-
+mary surgery, based on ESGO guidelines on ovarian cancer
+surgery [31], when the tumour has spread with the following
+findings, among other factors, in the diagnostic work-up are
+extensive and profound invasion of the root of small intes-
+tine mesentery; diffuse carcinomatosis of the small intestine
+with such an extensive dissemination that surgical clearance
+would produce a short bowel syndrome (the intestine left
+measuring less than 1.5 m); gastric/duodenal, head or mid-
+dle part of the pancreas diffuse disease/profound invasion;
+tumour affecting coeliac trunk, hepatic arteries, left gastric
+artery; central or multisegmental hepatic secondary lesions;
+multiple lung secondary lesions (preferably pathologically
+confirmed); non-resectable lymphadenopathies; and central
+nervous system secondary lesions.
+Nodal staging
+With regard to nodal staging, there has been a paradigm
+change in the last few years. In early-stage ovarian carcinoma
+(EOC), ESMO-ESGO guidelines indicate that the required
+management includes nodal staging surgery. In presurgical
+stage I patients, this surgical procedure must encompass a
+bilateral pelvic and paraaortic lymphadenectomy up to the
+left renal vein (independently of the surgical approach). In
+any case, given the low prevalence of lymphatic infiltration
+in certain pathology subtypes (e.g. mucinous carcinoma of
+expansile subtype or low-grade serous carcinoma, LGSC),
+there are doubts and discussion regarding the indication for
+staging surgery in these patients (ESMO-ESGO recommen-
+dation, level of evidence, IV; strength of the recommenda-
+tion, A) [29, 30]. When referring to lymph node dissection
+with the aim of restaging, the procedure can be eluded when
+nodal status will not change clinical or therapeutic deci-
+sions (ESMO-ESGO recommendation, level of evidence, V;
+strength of the recommendation, B) [29, 30]. In the case of
+serous borderline ovarian tumours (sBOTs) with peritoneal
+implants, there is evidence that residual disease has a prog-
+nostic value. In this situation, both from a staging point of
+view and a therapeutical objective, it is of utmost importance
+to aim at an entire removal of peritoneal implants. In the
+case of stage II/III sBOTs, there is no evidence of improved
+evolution following lymphadenectomy (level of evidence,
+IV; strength of the recommendation, B) [29, 30]. Finally,
+regarding the cases with advanced ovarian cancer (AOC), the
+recently published lymphadenectomy in ovarian neoplasms
+(LION) trial [32] provided evidence on the limitations of
+lymphadenectomy. Available first-level evidence, coming
+from randomized clinical trials, is limited regarding the util-
+ity of systematic pelvic and paraaortic lymphadenectomy that
+has, however, been broadly applied in the surgical treatment
+of patients with advanced ovarian cancer. The LION trial
+demonstrated that, in advanced ovarian cancer cases with
+intraabdominal macroscopically complete resection and nor-
+mal lymph nodes both before and during surgery, system-
+atic pelvic and paraaortic lymphadenectomy in cases with
+advanced ovarian cancer was not associated with improved
+survival (overall or progression-free) compared to no lym-
+phadenectomy but was associated with more postsurgical
+complications [32].
+Systemic treatment
+The first-line ovarian cancer treatment and standard-of-
+care chemotherapy is the carboplatin/paclitaxel combina-
+tion. Bevacizumab and poly(adenosine diphosphate-ribose)
+polymerase (PARP) inhibitors are now incorporated in the
+management guidelines. In addition to standard chemo-
+therapy, some patients may be treated with molecularly
+targeted therapies. The addition of bevacizumab, an antian-
+giogenic drug, should be considered in patients with stage
+III–IV ovarian cancer. The use of maintenance therapy with
+olaparib, an oral PARP inhibitor, demonstrated significant
+advantages regarding progression-free survival especially
+in patients with initially diagnosed advanced ovarian cancer
+with BRCA1/2 mutation, as shown in the SOLO1 trial [29,
+30, 33].
+3291
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+123456789)
+1 3
+
+
+
+---
+[PAGE 7/17]
+
+Around 70% of cases will recur in the first 3 years. In
+these patients, the progression-free interval after finishing
+the preceding line of chemotherapy is strongly associated
+with the prognosis and probability of response to second-
+line chemotherapy and subsequent chemotherapy lines.
+Traditionally, patients that present disease progression
+in the first 6 months after finishing platinum-based chemo-
+therapy are considered to be platinum-resistant and are
+unlikely to benefit from a re-challenge by platinum-based
+chemotherapy, while patients presenting progressive dis-
+ease in the time interval of more than 6 or even 12 months
+are considered platinum-sensitive and likely to respond to
+platinum therapy. This concept, developed when alternatives
+to platinum re-treatment were scarce, presents limitations
+and was discontinued at the fifth Ovarian Cancer Consensus
+Conference of the Gynecologic Cancer InterGroup (GCIG)
+[34]. Bevacizumab could be recommended both combined
+with platinum-based therapy and, after, as maintenance ther-
+apy in those cases presenting a platinum-free interval (PFI)
+over 6 months and in combination with second- or third-
+line non-platinum chemotherapy (weekly paclitaxel, PLD,
+topotecan) in patients with shorter PFI. PARP inhibitors
+(olaparib, niraparib and rucaparib) could be recommended
+as maintenance therapy after a response to platinum-based
+second or higher line of treatment. Their benefit is highest in
+patients presenting BRCA mutation, although those without
+BRCA mutation also benefit of the therapy. Furthermore, in
+selected cases presenting a first relapse, complete cytore-
+ductive surgery followed by chemotherapy achieves better
+progression-free survival (PFS) and makes the beneficial
+effect extensive to the next chemotherapy line [29, 30].
+In the era of precision medicine, research focuses on
+looking for targeted therapies for the different histological
+subtypes with their specific molecular features and different
+chemosensitivity and also variable CA-125 expression and
+positron emission tomography (PET) imaging semiology
+with dedicated radiopharmaceuticals. The targeted treat-
+ments being investigated are immune checkpoint inhibitors,
+PARP inhibitors, hormone receptor modulators and antian-
+giogenic agents [29, 30].
+Follow‑up
+Clinical evaluation and CA-125 are the standard in the fol-
+low-up of ovarian cancer after primary treatment [28]. The
+indications and application of imaging procedures (ultra-
+sound, chest–abdomen–pelvis CT, whole-body MRI or PET/
+CT) have to be based on sound clinical indications, deriving
+either from symptoms, signs or increasing CA-125 values
+[29, 30]. In patients in which there is suspicion of relapse,
+CT is the preferred technique, although PET/CT can be a
+valid alternative if performed with contrast enhancement, as
+the contrast-enhanced CT component is mandatory in this
+setting to accurately evaluate peritoneal carcinomatosis.
+PET/CT procedure
+2‑[18F]FDG PET/CT acquisition
+The 2-[18F]FDG PET/CT procedure has been described in
+the EANM guideline [35]. In ovarian cancer it is important
+to effectively search for cancer deposits in the regions where
+this tumour spreads more frequently, namely, the perito-
+neum, the lymphatic system and the bloodstream.
+If ceCT can be done as part of the 2-[18F]FDG PET/CT,
+it may be evaluated by the multidisciplinary tumour board
+to avoid performing an additional separate diagnostic CT.
+It is generally considered helpful to obtain multiphase
+contrast-enhanced CT imaging in patients with known/sus-
+pected ovarian cancer, especially for the evaluation of the
+liver, lymph nodes, mesentery, omentum, pleura and lungs.
+All available patient CT dose reduction methods should be
+considered, including automatic exposure control and itera-
+tive reconstruction.
+Data extraction and analysis
+Qualitative PET/CT categorizes the findings into malignant,
+indeterminate or benignant. 2-[18F]FDG uptake is visually
+compared with the background and with other structures,
+such as the mediastinum and the liver. Based on the degree
+of 2-[18F]FDG uptake and the particular context of the study
+(clinical indication, previous treatments and concomitant
+processes), the findings are categorized into the aforemen-
+tioned qualitative values.
+Quantitative PET/CT may be applied as a diagnostic or
+prognostic tool (i.e. single measurement) or for therapy
+response assessment (i.e. longitudinal studies). Metrics
+include standardized uptake values (SUV, general acro-
+nym) computed either using the body weight (SUV) or the
+lean body mass (SUL), metabolic active tumour volume
+(MATV or MTV) and total lesion glycolysis (TLG), defined
+as MATV × SUVmean. In fact, MATV is the volume inside a
+user- or algorithm-defined volume of interest (VOI) used to
+circumscribe the metabolically active tumour. Several tech-
+niques have been proposed to determine the limits of the
+VOI, threshold-based or algorithm-based [36], while TLG
+calculated by multiplying MATV by the mean SUV of all
+voxels in the MATV incorporates both 2-[18F]FDG uptake
+and size of the tumour, also known as whole metabolic bur-
+den of the tumour [37].
+The use of quantitative 2-[18F]FDG PET/CT parameters
+as imaging biomarkers in centres that have several PET/
+CT systems or in trials involving different PET/CT systems
+3292
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+1 3
+
+
+
+---
+[PAGE 8/17]
+
+requires a minimum standardization to make these parame-
+ters comparable between patients, independently of the PET/
+CT scanner acquiring the images.
+Delineation of MATVs may be affected by similar errors
+as occur when calculating SUVs, leading to one of the main
+causes of variability, which is variations in the delineation
+methodology of lesions [38]. MATVs also allow extraction
+of heterogeneity features. However, radiomic features are
+greatly affected and sensitive to a few confounding factors,
+being image reconstruction settings an example, and this
+translates into challenges when aiming at its clinical imple-
+mentation [39, 40].
+It is therefore recommended to comply with harmoniz-
+ing standards such as the EANM/EARL program, one of
+the international harmonization programs aiming at using
+2-[18F]FDG PET/CT as a quantitative imaging biomarker
+[41]. Radiomics should also follow the definitions of the
+image biomarker standardization initiative (IBSI).
+In addition to harmonization issues, attention should be
+paid to avoid including ureters or bladder when computing
+MATV in patients with bulky disease (Fig. 1).
+Therapy assessment should be performed according to
+either the European Organisation for Research and Treat-
+ment of Cancer (EORTC) PET response criteria or PER-
+CIST [42–44]. In addition to the use of the area harbouring
+the highest uptake, it is recommended to explore peritoneal
+index-adapted PERCIST classification where the 5 target
+lesions would be based on one of the scores that have been
+developed for assessing the extension of peritoneal carci-
+nomatosis. Several scores for laparotomic assessment of
+tumour/carcinomatosis extension have been described: the
+Sugarbaker score or the peritoneal cancer index (PCI) and
+the Aletti, Fagotti and Eisenkop scores, which attribute a
+score to several anatomical regions of the abdomen [45, 46].
+2‑[18F]FDG PET/CT indications
+•	 Initial diagnosis and staging
+•	 Prognostic value
+•	 Treatment planning
+–	 Evaluation of tumour resectability
+–	 Predictive value before upfront debulking surgery or
+interval debulking surgery
+–	 Predictive value before chemotherapy
+•	 Therapy assessment
+–	 Chemotherapy
+•	 Relapse detection
+–	 Non-conclusive radiological imaging
+–	 Negative radiological imaging with increased tumour
+markers
+•	 Follow-up
+Fig. 1   Example of metabolic
+active tumour volume (MATV)
+delineation in a patient with
+stage IIIc FIGO ovarian cancer
+enrolled in the CHIVA trial
+[95] in the chemotherapy plus
+placebo arm. Attention should
+be paid to avoid including the
+ureters or bladder in the tumour
+burden when drawing MATV.
+Early therapy assessment
+2-[18F]FDG PET/CT (b) was
+performed 20 days after base-
+line scan (a), after the first cycle
+of treatment. This patient was
+classified as stable metabolic
+disease as per PERCIST therapy
+response criteria. Maximum
+intensity projections (MIP) of
+2-[18F]FDG PET are presented
+3293
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+123456789)
+1 3
+
+
+
+---
+[PAGE 9/17]
+
+Each indication has been reviewed, assigning a level of
+evidence and a recommendation grade (Table 2) following
+the National Institute for Health and Clinical Excellence
+(NICE) adaptation, as previously used [47, 48], as follows:
+Levels of evidence
+The level of evidence is a rating of the literature data on
+which the recommendations formulated are based. The level
+depends on the type and quality of studies available and
+degree of consistency across their results. Details of the lev-
+els of evidence used are presented below:
+•	 Level I: There are good-quality meta-analyses or good-
+quality randomized trials with cross-consistent results.
+New data will most likely not change confidence in the
+estimated effect.
+•	 Level II: There is good-quality evidence (randomized tri-
+als (B1) or prospective or retrospective studies (B2) with
+overall cross-consistent results. New data may impact
+confidence in the estimate of effect or may change the
+estimate.
+•	 Level III: The studies available carry methodological
+weaknesses, and/or the results of the studies are not
+always cross-consistent. New data will most likely impact
+confidence in the estimate of effect and will likely change
+the estimate.
+•	 Level IV: There are no data or only case series. There is
+a great deal of uncertainty as to the estimated effect.
+Grades of recommendation
+•	 A: At least one meta-analysis, systematic review or rand-
+omized controlled trials (RCT) directly applicable to the
+target population and demonstrating overall consistency
+of results
+•	 B: A body of evidence including high-quality systematic
+reviews of case–control or cohort studies, directly appli-
+cable to the target population, and demonstrating overall
+consistency of results
+•	 C: A body of evidence including well-conducted case–
+control or cohort studies with a low risk of confounding
+or bias, directly applicable to the target population and
+demonstrating overall consistency of results
+•	 D: Non-analytic studies, e.g. case reports, case series and
+expert opinion
+Initial diagnosis and staging in patients presenting
+with a pelvic mass
+Level of evidence: III
+Recommendation: grade C
+Many publications have focused on the diagnostic effi-
+cacy of 2-[18F]FDG PET/CT for ovarian cancer in patients
+presenting with a pelvic mass, aiming at ameliorating man-
+agement decisions identifying patients in whom surgical
+intervention is indicated (positive PET). With the aim of
+detecting ovarian tumours in fifty consecutive patients pre-
+senting a pelvic mass and had a surgical intervention sched-
+uled, Castellucci et al. [49] reported comparable sensitivity
+for 2-[18F]FDG PET/CT and TVUS (around 87–90%), but
+2-[18F]FDG PET/CT presented better specificity. In another
+prospective study of 97 patients presenting pelvic masses,
+Risum et al. reported high specificity of 2-[18F]FDG PET/
+CT for detecting malignant disease related to ovarian cancer
+as well as high sensitivity (92.5% and 100%, respectively)
+[50]. Nam et al. [51] in 133 women obtained 2-[18F]FDG
+PET/CT accuracy (92%), better than pelvic power Doppler
+US (83%) and CT/MR (74%) in differentiating benign vs
+borderline/malignant adnexal masses.
+The pathophysiologic bases of the aforementioned
+observations include glucose transporter 1 (GLUT-1) over-
+expression and microvessel density/tumour proliferation,
+both being indicators of tumour aggressiveness and worse
+prognosis. Therefore, researchers indicate that 2-[18F]FDG
+PET/CT helps ameliorate patient selection for surgery and
+as guidance for cytoreductive surgery [52, 53]. Moreover,
+staging with 2-[18F]FDG PET/CT coincided with surgical
+staging in 78% of cases, indicating 2-[18F]FDG PET/CT may
+be applied in the presurgical staging of patients in which
+ovarian cancer is suspected [51]. Thus, even if Yamamoto
+et al. and Kitajima et al. [54, 55] confirmed high 2-[18F]
+FDG PET/CT sensitivity and specificity in differentiating
+malignant from benign ovarian masses, their reports present
+low diagnostic efficacy when discriminating between bor-
+derline–malignant and benign lesions. Furthermore, even
+after positive findings when analysing the diagnostic value
+of 2-[18F]FDG PET/CT in ovarian cancer, Fenchel et al.
+[56] and Tanizaki et al. [57] described false-negative and
+false-positive results. The false-negative patients appeared
+because of the absent or low 2-[18F]FDG accumulation
+Table 2   Clinical indications, levels of evidence and grade of recom-
+mendation for 2-[18F]FDG PET/CT in ovarian cancer
+Clinical indication of 2-[18F]FDG
+PET/CT in ovarian cancer
+Level of evidence
+Grade of
+recommen-
+dation
+Initial diagnosis and staging
+in patients presenting with a
+pelvic mass
+III
+Grade C
+Prognostic value
+I
+Grade B
+Treatment planning
+IV
+Grade C
+Therapy assessment
+II
+Grade B
+Relapse detection
+I
+Grade A
+3294
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+1 3
+
+
+
+---
+[PAGE 10/17]
+
+in early tumours and clear-cell, mucinous and cystic car-
+cinomas (compared with serous carcinoma and epithelial
+carcinoma) [58–60]. The false-positive results commonly
+appeared associated to 2-[18F]FDG accumulation in benign
+conditions, such as cystadenomas, endometriomas and acute
+inflammatory processes, or in premenopausal ovaries deriv-
+ing from cyclic functional activity changes.
+As in other fields of oncology, it is a well-known fact
+that there is an overlap between the degree of 2-[18F]FDG
+uptake in malignant, borderline–malignant and benign
+lesions. Thus, 2-[18F]FDG PET/CT has a good diagnos-
+tic accuracy in discriminating ovarian cancer from benign
+tumours, this not being the case when trying to differentiate
+borderline–malignant from benign tumours because of its
+comparatively lower diagnostic accuracy in this context [57].
+A meta-analysis including 8 studies and 594 patients
+reported an joint sensitivity and specificity for metastasis of
+0.72 (95% confidence interval [CI] = 0.61–0.81) and 0.93
+(95% CI = 0.85–0.97), respectively [61]. Heterogeneity
+analysis showed high values both for sensitivity (97.57%)
+and specificity (96.74%). In sensitivity analyses, studies
+using laparotomy as the gold standard evidenced better
+sensitivity and specificity (0.77, 95% CI = 0.67–0.87, and
+0.96, 95% CI = 0.92–0.99, respectively) than those includ-
+ing diagnostic laparoscopy (0.62, 95% CI = 0.46–0.77, and
+0.84, 95% CI = 0.69–0.99, respectively). Better specificity
+was demonstrated in studies that confirmed surgical find-
+ings using pathology (0.95, 95% CI = 0.90–0.99) than in
+a study not applying pathology confirmation (0.69, 95%
+CI = 0.24–1.00). Studies with a lower prevalence of the
+2-[18F]FDG-avid subtype showed better specificity (0.97,
+95% CI = 0.94–1.00) than those with a higher prevalence
+(0.89, 95% CI = 0.80–0.97).
+Prognostic value
+Level of evidence: I
+Recommendation: grade B
+The assessment of the prognosis is key for patient man-
+agement planning. There is broad evidence confirming the
+prognostic value of 2-[18F]FDG PET/CT in ovarian cancer,
+with many meta-analyses published in the last years [58,
+62–73]. MTV and TLG from 2-[18F]FDG PET/CT were sig-
+nificant prognostic factors in these patients. Although there
+was clinical heterogeneity and methodological differences
+between studies, patients with a high MTV or TLG present
+more risk of disease progression or death [61].
+2-[18F]FDG PET/CT is a diagnostic procedure useful for
+the accurate detection of not previously known metastases.
+Moreover, it gives an insight into tumour biology and behav-
+iour and, thus, the potential influence of these aspects on
+the prognosis. Several studies have evidenced significant
+associations between primary tumour SUVmax and FIGO
+stage, pathology (serous/non-serous carcinoma), metastatic
+lymphadenopathies and a bad prognosis with a significantly
+worse overall survival rate between cases with high and low
+primary tumour SUVmax [63, 74, 75]. Mucinous and clear-
+cell ovarian cancer shows a significantly lower SUVmax
+than in serous carcinomas [63]. The explanation for this can
+be found in the pathophysiology, based on different glucose
+transporter concentrations in the different tumour subtypes.
+Cho et al. [52] described a strong association between mem-
+brane GLUT-1 overexpression in the primary tumour and
+bad overall survival and also ovarian cancer aggressiveness.
+Other prognostic factors prior to treatment are volumetric
+metabolic PET parameters, such as MTV and TLG [64].
+Chung et al. [76] observed that MTV and TLG were
+statistically significant independent prognostic factors in
+ovarian cancer associated with progression-free interval.
+Lee et al. [64] showed that TLG was an independent prog-
+nostic factor for disease progression following cytoreduc-
+tive surgery. Gallicchio et al. reported similar data for MTV
+[77]. Risum et al. [70] showed that stage IIIC/IV disease
+on 2-[18F]FDG PET/CT was associated with worse overall
+survival and proposed using 2-[18F]FDG PET/CT criteria
+for referring ovarian cancer patients to neoadjuvant chemo-
+therapy before surgery. Therefore, 2-[18F]FDG PET/CT
+helps finding previously unknown metastatic lesions but also
+helps evaluating the risk of residual cancer following surgi-
+cal treatment, in summary, improving patient management.
+Treatment planning
+–	 Evaluation of tumour resectability
+–	 Predictive value before upfront debulking surgery or
+interval debulking surgery
+–	 Predictive value before chemotherapy
+Level of evidence: IV
+Recommendation: grade C
+In these clinical situations, the available evidence is lim-
+ited [78–85], including retrospective studies. In women with
+advanced stage ovarian cancer, no firm conclusions can be
+drawn regarding the replacement of diagnostic CT by 2-[18F]
+FDG PET/CT or contrast-enhanced or diffusion-weighted
+(DW) MRI to assess incomplete debulking surgery. 2-[18F]
+FDG PET/CT and MRI are commonly available in hospitals,
+and they suggested there was a high specificity and moderate
+sensitivity to assess incomplete debulking. Potential advan-
+tages included the ability of 2-[18F]FDG PET/CT to detect
+extra-abdominal (distant) disease and the soft tissue contrast
+of MRI for (small) lesion detection. Importantly, the level of
+evidence is insufficient to advise routine addition of 2-[18F]
+FDG PET/CT or MRI to clinical practice [84].
+As mentioned above in the “Treatment” section, there
+has been a paradigm change with regard to nodal staging.
+3295
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+123456789)
+1 3
+
+
+
+---
+[PAGE 11/17]
+
+First, in early-stage ovarian carcinoma, the indication for
+staging surgery may be questioned, whereas when referring
+to lymph node dissection for restaging purposes, the proce-
+dure may be avoided if the nodal status does not alter patient
+management [29, 30]. Second, in the case of serous bor-
+derline ovarian tumours (sBOTs) with peritoneal implants,
+there is no proven benefit of lymphadenectomy in stage II/
+III sBOTs [29, 30]. Third, in patients with advanced ovarian
+cancer (AOC), after intraabdominal macroscopically com-
+plete resection and presenting normal lymph nodes both
+before and during surgery, systematic pelvic and paraaortic
+lymphadenectomy did not correlate with better overall or
+progression-free survival than no lymphadenectomy but was
+associated with an increased incidence rate of postsurgical
+morbidity and complications [32], as well as increased costs.
+Because of this, to ameliorate patient selection for those who
+will benefit from lymphadenectomy, a presurgical imaging
+test providing an accurate nodal staging was proposed [86].
+Many studies have shown 2-[18F]FDG PET/CT has a bet-
+ter diagnostic performance in detecting metastatic lymph
+nodes compared with ceCT only [87]. A meta-analysis by
+Yuan et al. [88] (including 882 patients from 18 studies)
+showed that 2-[18F]FDG PET/CT had better accuracy than
+both ceCT and MR in detecting metastatic lymphadenopa-
+thies, with sensitivity and specificity values of 73% and 96%
+for 2-[18F]FDG PET/CT, 42% and 95% for ceCT and 54%
+and 88% for MRI, respectively, with significant differences
+reached only in sensitivity. Signorelli et al. [86] confirmed
+the previous results. These studies evidence that 2-[18F]FDG
+PET/CT may be a precise imaging test for selecting patients
+could benefit from systematic lymphadenectomy. Thus, the
+high negative predictive value (NPV) may avoid lymphad-
+enectomy in many cases, reducing to a minimum the surgical
+complications.
+It is known that 2-[18F]FDG PET/CT can ameliorate pre-
+surgical staging by detecting extra-abdominal spread not
+detected by radiological procedures [51, 89, 90] including
+lymphadenopathies situated outside the abdominopelvic area
+as well as unsuspected extraovarian tumours [49, 51]. Loca-
+tions of metastatic lesions found by 2-[18F]FDG PET/CT
+were predominantly supradiaphragmatic [90]. Moreover, the
+presurgical staging of advanced disease with PET has evi-
+denced that up-staging from stage III to IV happens in a high
+proportion of cases [91]. In addition, 2-[18F]FDG PET/CT
+improves the identification of stage III/IV patients for whom
+complete debulking is not possible. There is evidence that
+stage IV cases with diverse volumes of residual disease may
+have similar evolutions; thus, an early detection of stage IV
+can be useful for changing the therapeutic approach.
+With regard to 2-[18F]FDG PET/CT and its indication
+or not for assessing peritoneal carcinomatosis when stag-
+ing ovarian cancer, there is certain controversy, but several
+studies have reported promising results. ceCT is the most
+accurate. 2-[18F]FDG PET/CT seems to have an acceptable
+diagnostic accuracy for tumour implants greater than 5 mm,
+although in any case a detailed review of the CT images of
+the 2-[18F]FDG PET/CT should be done, comparing with
+previous CT images, for an adequately evaluation of the sta-
+tus of the disease in the peritoneum. In cases with peritoneal
+carcinomatosis with evident 2-[18F]FDG uptake, an apron
+sign or shield sign can be detected, appearing as 2-[18F]FDG
+uptake along the anterior abdomen (on occasions related to
+increased peritoneal thickening or omental fat stranding on
+ceCT) [92].
+Therapy assessment
+Level of evidence: II
+Recommendation: grade B
+There are few clinical trials evaluating the role of 2-[18F]
+FDG PET/CT in the assessment of therapy response. Chun-
+dury and colleagues [80] explored the role of 2-[18F]FDG
+PET/CT in order to evaluate the efficacy of intensity-modu-
+lated radiation therapy (IMRT) in women treated for recur-
+rent ovarian cancer. Among 17 patients, 11 showed a par-
+tial metabolic response, while in six a complete metabolic
+response was observed. Furthermore, among 11 patients
+with partial metabolic response, in only two cases recurrence
+was observed at the site of IMRT, while of the 6 patients
+with complete metabolic response recurrence was found in
+only one woman at the site of IMRT.
+In three studies, 2-[18F]FDG PET/CT was used to assess
+neoadjuvant chemotherapy response [85, 93, 94]. Vallius
+et al. [85] reported that patients with normalization of
+SUVmax after 3 courses had higher probabilities to benefit
+from additional 3 courses. The study from Hynninen et al.
+[93] did not confirm the ability of 2-[18F]FDG PET/CT to
+distinguish responders from non-responders compared to
+morphological imaging, due to residual 2-[18F]FDG activ-
+ity. In fact although 2-[18F]FDG uptake at the end of the
+treatment tended to be confirmed in case of relapse, this
+residual activity was observed even in RECIST complete
+responders. In another study, Vallius et al. [94] described
+that a decrease in MATV < 85% permitted identifying cases
+with stable or progressive disease (as per RECIST 1.1) after
+neoadjuvant chemotherapy for inoperable EOC with a sen-
+sitivity and specificity of 70% and 78%, respectively, and
+that MTV decrease was associated with PFS. More recently,
+an ancillary PET study from the CHIVA trial [95] demon-
+strated that 2-[18F]FDG PET/CT using EORTC or PER-
+CIST criteria was useful to evaluate early tumour response
+and predict second-look surgery outcome, PFS and OS. In
+this study, neither MATV nor TLG was useful in predict-
+ing survival.
+3296
+European Journal of Nuclear Medicine and Molecular Imaging  (2021) 48:3286–3302
+1 3
+
+
+
+---
+[PAGE 12/17]
+
+Relapse detection
+•	 Non-conclusive radiological imaging
+•	 Negative radiological imaging with increased tumour
+markers
+Level of evidence: I
+Recommendation: grade A
+There is broad evidence regarding this indication
+[96–100]. Several meta-analyses have reported the high
+performance of 2-[18F]FDG PET/CT in suspected recurrent
+disease with a better diagnostic accuracy than radiological
+imaging, especially in the context of increasing CA-125
+serum levels [26, 88, 101]. Furthermore, ESMO guidelines
+on ovarian cancer indicate that 2-[18F]FDG PET/CT may
+indicate locations of disease not detected on CT. The main
+role of 2-[18F]FDG PET/CT is to contribute in selecting
+patients for secondary debulking surgery, by excluding cases
+with additional sites of disease not detected on CT and not
+treatable with cytoreduction [7].
+Increased serum CA-125 is very accurate for indicating
+that there is active recurrent disease. Nevertheless, normal
+serum CA-125 does not permit excluding a relapse. Thus,
+there is evidence that in ovarian cancer patients in com-
+plete clinical remission, a progressive low-level elevation in
+serum CA-125 (staying under the upper normal threshold) is
+highly predictive of relapse [102]. The role of 2-[18F]FDG
+PET/CT in these cases with a low-level elevation of serum
+CA-125 has been studied with promising results [103–106].
+The available studies confirm the utility of 2-[18F]FDG
+PET/CT to change treatment management, on one hand
+guiding the indications to otherwise unplanned therapies
+and, on the other hand, saving from performing previously
+planned diagnostic procedures, with values ranging between
+30 and 57% [107–110]. The available reports coincide with
+findings from the US National Oncology PET Registry,
+showing that changes in management were done in 38% to
+45% of cases who were restaged with 2-[18F]FDG PET/CT
+[111, 112].
+Follow‑up
+Follow-up is not indicated unless there is suspicion of
+relapse and negative radiological imaging [29, 30].
+Conclusion
+2-[18F]FDG PET/CT is an established imaging technique
+in oncology in general and in gynaecological cancer in
+particular. Given the high incidence and aggressiveness
+of ovarian cancer, a guideline focusing on the role of
+2-[18F]FDG PET/CT in this tumour was developed. The
+evidence available in the literature was reviewed for each
+clinical indication, assigning a level of evidence and a
+recommendation grade following the NICE adaptation. In
+conclusion, 2-[18F]FDG PET/CT is most useful in relapse
+detection (level of evidence I, grade of recommendation
+A), followed by its prognostic value (level of evidence I,
+grade of recommendation B). There is less evidence for
+therapy assessment (level of evidence II, grade of recom-
+mendation B) and very scarce or low quality evidence for
+initial diagnosis and staging in patients presenting with a
+pelvic mass (level of evidence III, grade of recommenda-
+tion C) and treatment planning (level of evidence IV, grade
+of recommendation C). Finally, multidisciplinary collabo-
+ration is especially important to obtain the best possible
+outcome, as well as weighting the need for personalizing
+diagnosis and therapy to the individual patient.
+Acknowledgements  The authors are grateful to the International
+Atomic Energy Agency (IAEA) for scientific and logistic support. They
+also appreciate the contribution of the EANM National Societies of
+Nuclear Medicine and EANM committees who reviewed the guideline.
+Declarations 
+Ethics approval  This article does not contain any studies with human
+participants performed by any of the authors.
+Conflict of interest  The authors declare no competing interests.

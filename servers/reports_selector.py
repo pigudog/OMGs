@@ -439,6 +439,12 @@ REPORT_TYPE: {report_type}
 TIMELINE (choose ONLY from these report_ids):
 {json.dumps(reports_timeline, ensure_ascii=False)}
 
+IMPORTANT: Use the EXACT report_id values from the TIMELINE above. 
+Report IDs may contain pipes (|), e.g., "20220407|17300673". 
+When referencing reports in evidence tags, use format: [@actual_report_id | LAB/Genomics/MR/CT]
+Always use spaces around | for consistency: [@xxx | yyy]
+Examples: [@20220407|17300673 | LAB] for lab reports, [@OH2203828|2022-04-18 | Genomics] for genomics reports, [@2022-12-29 | MR] and [@2022-12-29 | CT] for imaging reports.
+
 SELECTION RULE (must follow):
 - {rule}
 - Keep at most {max_keep} report_ids.

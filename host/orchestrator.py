@@ -17,6 +17,7 @@ from utils.error_handling import safe_agent_call, get_fallback_response
 from servers.reporters import save_mdt_log, save_case_html_report
 from utils.time_utils import make_cutoff, parse_dt, safe_date10, filter_before, report_range
 from utils.time_utils import build_lab_timeline, build_imaging_timeline, build_pathology_timeline
+from utils.stats_collector import collect_pipeline_stats
 from servers.reports_selector import (
     load_patient_labs, load_patient_imaging, load_patient_pathology, 
     load_patient_mutations, summarize_selected_reports, select_reports_for_roles,
@@ -124,7 +125,7 @@ def run_mdt_discussion(
     role_to_emoji = {r: emoji_pool[i % len(emoji_pool)] for i, r in enumerate(agent_list)}
     chair_role = "chair" if "chair" in agent_list else agent_list[0]
 
-    last_msg_by_pair = {} # record the last message by pair 用来避免同一对发言者/对象重复发相同内容，有利于减少冗余，但在某些场景下可能会抑制必要的重复澄清，这需要根据实际使用情况调整。
+    last_msg_by_pair = {} # record the last message by pair to avoid duplicate messages from the same speaker-target pair, which helps reduce redundancy but may suppress necessary repeated clarifications in some scenarios; adjust based on actual usage.
 
     # INITIAL OPINIONS
     print(f"{Color.BOLD}{Color.OKBLUE}\n📌 Collecting Initial Opinions...{Color.RESET}")
@@ -133,8 +134,8 @@ def run_mdt_discussion(
         "Give INITIAL opinion (use ONLY your system-provided patient facts).\n"
         "Return up to 3 bullets, each ≤20 words.\n"
         "If key data missing, say exactly what needs updating.\n"
-        "At least ONE bullet must be evidence-based and include [@guideline:doc_id|page] or [@pubmed:PMID].\n"
-        "If you reference treatment strategy categories, guidelines, trials, or literature evidence, include tags [@guideline:doc_id|page] or [@pubmed:PMID]."
+        "At least ONE bullet must be evidence-based and include [@guideline:doc_id | Page xx] or [@pubmed | PMID].\n"
+        "If you reference treatment strategy categories, guidelines, trials, or literature evidence, include tags [@guideline:doc_id | Page xx] or [@pubmed | PMID]."
     )
     # initial_ops is a dictionary that stores the initial opinions of the experts
     for i, (role, ag) in enumerate(agents.items(), start=1):
@@ -183,33 +184,17 @@ def run_mdt_discussion(
     )
     # summarize the initial opinions of the experts
     # merged is the structured memory of the MDT
-    try:
-        merged = assistant.chat(
-            summarize_template.format(opinions=json.dumps(initial_ops, ensure_ascii=False, separators=(',', ':')))
-        )
-    except AgentError as e:
-        # Fallback: use JSON of initial opinions as merged context
-        print(f"{Color.WARNING}[WARNING] Assistant summary failed: {e.original_error}{Color.RESET}")
-        merged = f"Key Knowledge:\n{json.dumps(initial_ops, ensure_ascii=False, indent=2)}\n\nControversies:\n- To be determined\n\nMissing Info:\n- To be determined\n\nWorking Plan:\n- To be determined"
-        if trace:
-            trace.emit("agent_error", {
-                "role": "assistant",
-                "stage": "initial_summary",
-                "error": str(e.original_error),
-                "error_type": type(e.original_error).__name__,
-                "fallback_used": True
-            })
-    except Exception as e:
-        print(f"{Color.FAIL}[ERROR] Assistant summary unexpected error: {e}{Color.RESET}")
-        merged = f"Key Knowledge:\n{json.dumps(initial_ops, ensure_ascii=False, indent=2)}\n\nControversies:\n- To be determined\n\nMissing Info:\n- To be determined\n\nWorking Plan:\n- To be determined"
-        if trace:
-            trace.emit("agent_error", {
-                "role": "assistant",
-                "stage": "initial_summary",
-                "error": str(e),
-                "error_type": "UnexpectedException",
-                "fallback_used": True
-            })
+    fallback_merged = f"Key Knowledge:\n{json.dumps(initial_ops, ensure_ascii=False, indent=2)}\n\nControversies:\n- To be determined\n\nMissing Info:\n- To be determined\n\nWorking Plan:\n- To be determined"
+    
+    merged = safe_agent_call(
+        agent=assistant,
+        prompt=summarize_template.format(opinions=json.dumps(initial_ops, ensure_ascii=False, separators=(',', ':'))),
+        role="assistant",
+        stage="initial_summary",
+        fallback=fallback_merged,
+        trace=trace,
+        max_retries=3  # Retry up to 3 times for rate limits (429 errors) with exponential backoff
+    )
     # Structured MDT memory (always kept at the front)
     memory_state = _clip_head(merged, max_merged_chars)
     # Rolling discussion deltas (kept as a tail window)
@@ -253,33 +238,15 @@ def run_mdt_discussion(
         if r == 1:
             summary = memory_state
         else:
-            try:
-                summary = assistant.chat(
-                    round_summary_template.format(merged=memory_state)
-                )
-            except AgentError as e:
-                # Fallback: keep existing memory_state
-                print(f"{Color.WARNING}[WARNING] Round {r} summary failed: {e.original_error}{Color.RESET}")
-                summary = memory_state
-                if trace:
-                    trace.emit("agent_error", {
-                        "role": "assistant",
-                        "stage": f"round_{r}_summary",
-                        "error": str(e.original_error),
-                        "error_type": type(e.original_error).__name__,
-                        "fallback_used": True
-                    })
-            except Exception as e:
-                print(f"{Color.FAIL}[ERROR] Round {r} summary unexpected error: {e}{Color.RESET}")
-                summary = memory_state
-                if trace:
-                    trace.emit("agent_error", {
-                        "role": "assistant",
-                        "stage": f"round_{r}_summary",
-                        "error": str(e),
-                        "error_type": "UnexpectedException",
-                        "fallback_used": True
-                    })
+            summary = safe_agent_call(
+                agent=assistant,
+                prompt=round_summary_template.format(merged=memory_state),
+                role="assistant",
+                stage=f"round_{r}_summary",
+                fallback=memory_state,  # Fallback: keep existing memory_state
+                trace=trace,
+                max_retries=3  # Retry up to 3 times for rate limits (429 errors)
+            )
         memory_state = _clip_head(f"[MDT_GLOBAL_KNOWLEDGE]\n{summary}", max_merged_chars)
         merged = _pack_context(memory_state, delta_state, max_merged_chars)
 
@@ -423,9 +390,9 @@ def run_mdt_discussion(
             "DISCUSSION HISTORY (this round):\n{discussion_history}\n\n"
             "Provide FINAL refined plan based on the above context and discussions.\n"
             "Up to 3 bullets, each ≤20 words.\n"
-            "Any factual claim must include [@report_id|date] or say unknown.\n"
-            "At least ONE bullet must be evidence-based and include [@guideline:doc_id|page] or [@pubmed:PMID].\n"
-            "If you reference treatment strategy categories, guidelines, trials, or literature evidence, include tags [@guideline:doc_id|page] or [@pubmed:PMID].\n"
+            "Any factual claim must include [@actual_report_id | LAB/Genomics/MR/CT] using actual report_id from report data or say unknown.\n"
+            "At least ONE bullet must be evidence-based and include [@guideline:doc_id | Page xx] or [@pubmed | PMID].\n"
+            "If you reference treatment strategy categories, guidelines, trials, or literature evidence, include tags [@guideline:doc_id | Page xx] or [@pubmed | PMID].\n"
             "If discussions mentioned specific evidence, you may reference it with appropriate tags."
         )
         print(f"{Color.BOLD}{Color.OKBLUE}\n📘 Finalizing Expert Plans for ROUND {r} ...{Color.RESET}")
@@ -462,47 +429,27 @@ def run_mdt_discussion(
                     })
 
         # IMPORTANT: Round FINAL plans must update the structured memory, not the delta window.
-        try:
-            round_final_pack = json.dumps(final_round_ops[round_key], ensure_ascii=False, separators=(',', ':'))
-            memory_update = assistant.chat(
+        round_final_pack = json.dumps(final_round_ops[round_key], ensure_ascii=False, separators=(',', ':'))
+        fallback_memory = _clip_head(
+            memory_state + "\n\n" + f"[ROUND {r} FINAL_PLANS] {round_final_pack}",
+            max_merged_chars,
+        )
+        
+        memory_update = safe_agent_call(
+            agent=assistant,
+            prompt=(
                 "You are MDT assistant. Update MDT GLOBAL structured memory by integrating ROUND FINAL plans. "
                 "Keep the same output format with: Key Knowledge / Controversies / Missing Info / Working Plan.\n\n"
                 f"CURRENT_MDT_GLOBAL_KNOWLEDGE:\n{memory_state}\n\n"
                 f"ROUND_{r}_FINAL_PLANS_JSON:\n{round_final_pack}"
-            )
-            memory_state = _clip_head(memory_update, max_merged_chars)
-        except AgentError as e:
-            # Fallback: if summarization fails, still preserve the final plans in memory.
-            print(f"{Color.WARNING}[WARNING] Memory update failed for round {r}: {e.original_error}{Color.RESET}")
-            round_final_pack = json.dumps(final_round_ops[round_key], ensure_ascii=False, separators=(',', ':'))
-            memory_state = _clip_head(
-                memory_state + "\n\n" + f"[ROUND {r} FINAL_PLANS] {round_final_pack}",
-                max_merged_chars,
-            )
-            if trace:
-                trace.emit("agent_error", {
-                    "role": "assistant",
-                    "stage": f"memory_update_round_{r}",
-                    "error": str(e.original_error),
-                    "error_type": type(e.original_error).__name__,
-                    "fallback_used": True
-                })
-        except Exception as e:
-            # Fallback: if summarization fails, still preserve the final plans in memory.
-            print(f"{Color.FAIL}[ERROR] Memory update unexpected error for round {r}: {e}{Color.RESET}")
-            round_final_pack = json.dumps(final_round_ops[round_key], ensure_ascii=False, separators=(',', ':'))
-            memory_state = _clip_head(
-                memory_state + "\n\n" + f"[ROUND {r} FINAL_PLANS] {round_final_pack}",
-                max_merged_chars,
-            )
-            if trace:
-                trace.emit("agent_error", {
-                    "role": "assistant",
-                    "stage": f"memory_update_round_{r}",
-                    "error": str(e),
-                    "error_type": "UnexpectedException",
-                    "fallback_used": True
-                })
+            ),
+            role="assistant",
+            stage=f"memory_update_round_{r}",
+            fallback=fallback_memory,  # Fallback: preserve final plans in memory
+            trace=trace,
+            max_retries=3  # Retry up to 3 times for rate limits (429 errors)
+        )
+        memory_state = _clip_head(memory_update, max_merged_chars)
 
         # Start next round with a clean delta window
         delta_state = ""
@@ -517,8 +464,12 @@ def run_mdt_discussion(
         # print(interaction_log)
     return initial_ops, merged, final_round_ops, interaction_log
 
-
+# important for evidence search!!!!
 def _build_rag_key_facts(case_json: Dict[str, Any], mut_reports: List[Dict[str, Any]]) -> str:
+    """Build KEY FACTS string for RAG query from case data.
+    
+    Simply includes raw mutation report text directly - let LLM parse it.
+    """
     parts: List[str] = []
     case_core = case_json.get("CASE_CORE") or {}
     diagnosis = case_core.get("DIAGNOSIS") or {}
@@ -538,23 +489,37 @@ def _build_rag_key_facts(case_json: Dict[str, Any], mut_reports: List[Dict[str, 
     pfi = case_core.get("PLATINUM_PFI_CURRENT") or case_core.get("PFI_days")
     if plat or pfi:
         parts.append(f"PLATINUM: status={plat or 'Unknown'}; pfi_days={pfi or 'Unknown'}")
-    hrd = case_core.get("HRD")
-    brca1 = case_core.get("BRCA1")
-    brca2 = case_core.get("BRCA2")
-    if any([hrd, brca1, brca2]):
-        parts.append(f"GENETICS: HRD={hrd or 'Unknown'}; BRCA1={brca1 or 'Unknown'}; BRCA2={brca2 or 'Unknown'}")
+    
+    # Only use GENETICS from case_core if NO mutation reports are available
+    # If mutation reports exist, they are the source of truth - don't use case_core values
+    # This prevents using "not reported" or "Unknown" from case_core when actual reports exist
+    # important for evidence search!!!! must be before mutation reports are included
+    if not mut_reports:
+        hrd = case_core.get("HRD")
+        brca1 = case_core.get("BRCA1")
+        brca2 = case_core.get("BRCA2")
+        if any([hrd, brca1, brca2]):
+            parts.append(f"GENETICS: HRD={hrd or 'Unknown'}; BRCA1={brca1 or 'Unknown'}; BRCA2={brca2 or 'Unknown'}")
+    
     biomarkers = case_core.get("BIOMARKERS") or {}
     if biomarkers:
         keys = ["CA125", "HE4", "CA19-9", "CA15-3", "AFP", "CEA", "TMB", "MSI", "PDL1_CPS"]
         items = [f"{k}={biomarkers.get(k)}" for k in keys if biomarkers.get(k)]
         if items:
             parts.append("BIOMARKERS: " + "; ".join(items[:6]))
+    
+    # Include full mutation report raw_text directly - let LLM parse it
+    # This takes precedence over case_core GENETICS values
+    # !!!!important; mut_reports is gold criteria for evidence search!!!!
     if mut_reports:
         latest = mut_reports[-1]
         rid = latest.get("report_id") or "Unknown"
         rdate = latest.get("report_date") or ""
         raw = latest.get("raw_text") or ""
-        parts.append(f"MUTATION_REPORT: id={rid}; date={str(rdate)[:10]}; note={preview_text(raw, 200)}")
+        # Include full text (up to 3000 chars to avoid token bloat, but should cover most reports)
+        raw_text = preview_text(raw, 3000) if raw else ""
+        parts.append(f"MUTATION_REPORT: id={rid}; date={str(rdate)[:10]}; full_text={raw_text}")
+    
     return "\n".join(parts)
 
 
@@ -611,9 +576,10 @@ def print_interaction_matrix(
     print(tbl)
 
 
-
+###############################################################################
 ###############################################################################
 #  MAIN ENTRY
+###############################################################################
 ###############################################################################
 def process_omgs_multi_expert_query(
     question: Any,
@@ -633,6 +599,9 @@ def process_omgs_multi_expert_query(
     trials_json_path: Optional[str] = None
 ) -> str:
     print(f"{Color.BOLD}{Color.OKGREEN}\n=== MDT Multi-Expert Pipeline Start ==={Color.RESET}")
+    
+    # Record pipeline start time for statistics
+    pipeline_start_time = datetime.now()
     
     # Load paths configuration
     paths_config = get_paths_config()
@@ -792,16 +761,46 @@ def process_omgs_multi_expert_query(
         role="rag_query_builder",
         model_info=model,
         client=client,
-        max_tokens=120,
-        max_prompt_tokens=2000,
+        max_tokens=5000,
+        max_prompt_tokens=20000,
     )
     
     rag_key_facts = _build_rag_key_facts(case_json, mut_reports)
     trace.emit("rag_key_facts", {"facts": rag_key_facts})
     
     # Build RAG query with error handling
+    # IMPORTANT: If mutation reports exist, inject HRD/BRCA values into case_json
+    # to override "Unknown" values that confuse the LLM
+    rag_question_str = question_str  # Default to original
+    if mut_reports:
+        import copy
+        import re
+        rag_case_json = copy.deepcopy(case_json)
+        latest_mut = mut_reports[-1]
+        raw_text = latest_mut.get("raw_text", "")
+        if raw_text:
+            # Extract HRD status
+            if "HRD" in raw_text:
+                if "阴性" in raw_text or "negative" in raw_text.lower():
+                    rag_case_json.setdefault("CASE_CORE", {})["HRD"] = "Negative"
+                elif "阳性" in raw_text or "positive" in raw_text.lower():
+                    rag_case_json.setdefault("CASE_CORE", {})["HRD"] = "Positive"
+            # Extract BRCA1 status
+            if "BRCA1" in raw_text:
+                if any(x in raw_text for x in ["未检出", "阴性", "视为阴性"]):
+                    rag_case_json.setdefault("CASE_CORE", {})["BRCA1"] = "Negative"
+                elif "突变" in raw_text and "致病" in raw_text:
+                    rag_case_json.setdefault("CASE_CORE", {})["BRCA1"] = "Positive"
+            # Extract BRCA2 status
+            if "BRCA2" in raw_text:
+                if any(x in raw_text for x in ["未检出", "阴性", "视为阴性"]):
+                    rag_case_json.setdefault("CASE_CORE", {})["BRCA2"] = "Negative"
+                elif "突变" in raw_text and "致病" in raw_text:
+                    rag_case_json.setdefault("CASE_CORE", {})["BRCA2"] = "Positive"
+        rag_question_str = json.dumps(rag_case_json, ensure_ascii=False)
+    
     try:
-        rag_query = build_rag_query_for_mdt(rag_query_builder, question_str, key_facts=rag_key_facts)
+        rag_query = build_rag_query_for_mdt(rag_query_builder, rag_question_str, key_facts=rag_key_facts)
         print("rag_query",rag_query)
     except Exception as e:
         # Fallback: use simplified query from case JSON
@@ -891,11 +890,11 @@ def process_omgs_multi_expert_query(
     if visual.enable and visual.show_tables and visual.show_rag_table:
         print_rag_hits_table(rag_raw)
 
-    # Count RAG results for dynamic instruction
+    # Count RAG results for dynamic instruction (1:1 mapping: each RAG result gets one bullet)
     rag_count = len(rag_raw) if rag_raw else 0
+    # Always use dynamic instruction to ensure 1:1 evidence mapping (ignore config static value)
     guideline_digester = Agent(
-        instruction=agent_prompts.get("global_guideline_digester", 
-            f"Digest RAG chunks into exactly {rag_count} evidence bullets (one per RAG result); no patient facts."),
+        instruction=f"Digest RAG chunks into exactly {rag_count} evidence bullets (one per RAG result); no patient facts.",
         role="global_guideline_digester",
         model_info=model,
         client=client,
@@ -917,10 +916,10 @@ def process_omgs_multi_expert_query(
                 if source == "guideline":
                     doc_id = r.get("doc_id", "")
                     page = r.get("page", "NA")
-                    tag = f"[@guideline:{doc_id}|{page}]"
+                    tag = f"[@guideline:{doc_id} | Page {page}]"
                 elif source == "pubmed":
                     pmid = r.get("pmid", "")
-                    tag = f"[@pubmed:{pmid}]"
+                    tag = f"[@pubmed | {pmid}]"
                 else:
                     tag = f"[unknown source {i}]"
                 text = r.get("text", "") or r.get("abstract", "")
@@ -1001,7 +1000,7 @@ def process_omgs_multi_expert_query(
     initial_ops, merged, final_round_ops, interaction_log = run_mdt_discussion(
         agents=agents,
         assistant=assistant,
-        num_rounds=1, # 2
+        num_rounds=1, # 2 for formal； 1 for test
         num_turns=1,  # 2
         visit_time=str(time) if time else None,
         trace=trace,
@@ -1063,11 +1062,6 @@ def process_omgs_multi_expert_query(
     ###########################################################################
     # FINAL OUTPUT
     ###########################################################################
-    # Inject clinical trial suggestion if available
-    if trial_note:
-        agents["chair"].inject_assistant(
-            f"[Assistant Clinical Trial Suggestion]\n{trial_note.strip()}"
-        )
     print_section("5) Final Chair Output")
     trace.emit("final_output_start", {})
     print(f"{Color.BOLD}{Color.OKBLUE}\n📘 Generating final MDT output...{Color.RESET}")
@@ -1081,6 +1075,7 @@ def process_omgs_multi_expert_query(
         merged=merged,
         initial_ops=initial_ops,
         interaction_log=interaction_log,
+        trial_note=trial_note,
         trace=trace
     )
     # Post-process: append References section with evidence details
@@ -1093,6 +1088,13 @@ def process_omgs_multi_expert_query(
     warn_missing_evidence_tags(final_output, role="chair/final_output", trace=trace)
     trace.emit("final_output_end", {"final_output_chars": len(final_output or "")})
 
+    # Record pipeline end time and collect statistics
+    pipeline_end_time = datetime.now()
+    db_path = paths_config["output_dirs"]["api_trace_db"]
+    pipeline_stats = collect_pipeline_stats(pipeline_start_time, pipeline_end_time, db_path)
+    # Add provider information if available
+    if hasattr(args, 'client') and hasattr(args.client, 'provider'):
+        pipeline_stats["provider"] = args.client.provider
 
     # Optionally append trial note to log or final output storage if needed
     agent_logs = {role: ag.local_log for role, ag in agents.items()}
@@ -1133,6 +1135,7 @@ def process_omgs_multi_expert_query(
             trace_events=trace.events,
             trace_mermaid=trace.to_mermaid_flow() if trace.enabled else "",
             roles_order=ROLES,
+            pipeline_stats=pipeline_stats,
         )
     except Exception as e:
         print(f"{Color.WARNING}⚠ HTML report generation failed: {e}{Color.RESET}")

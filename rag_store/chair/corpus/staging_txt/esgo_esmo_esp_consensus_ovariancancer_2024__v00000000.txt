@@ -1,0 +1,2045 @@
+# ESGO_ESMO_ESP_Consensus_OvarianCancer_2024
+
+
+---
+[PAGE 1/19]
+
+SPECIAL ARTICLE
+ESGOeESMOeESP consensus conference recommendations on ovarian
+cancer: pathology and molecular biology and early, advanced and recurrent
+disease5
+J. A. Ledermann1y, X. Matias-Guiu2,3,4y, F. Amant5,6, N. Concin7,8, B. Davidson9,10, C. Fotopoulou11,
+A. González-Martin12, C. Gourley13, A. Leary14, D. Lorusso15,16, S. Banerjee17, L. Chiva18, D. Cibula19, N. Colombo20,21,
+S. Croce22, A. G. Eriksson10,23, C. Falandry24,25, D. Fischerova19, P. Harter8,26, F. Joly27, C. Lazaro28, C. Lok6, S. Mahner26,29,
+F. Marmé26,30,31, C. Marth7, W. G. McCluggage32, I. A. McNeish11, P. Morice33, S. Nicum1, A. Oaknin34, J. A. Pérez-Fidalgo35,
+S. Pignata36, P. T. Ramirez37, I. Ray-Coquard38, I. Romero39, G. Scambia15,16, J. Sehouli40,41, R. Shapira-Frommer42,
+S. Sundar43,44, D. S. P. Tan45,46,47,48, C. Taskiran49, W. J. van Driel6, I. Vergote5, F. Planchamp50, C. Sessa51 & A. Fagotti15,16
+1Department of Oncology, UCL Cancer Institute, University College London, London, UK; 2CIBERONC, Madrid; 3Department of Pathology, Hospital Universitari Arnau de
+Vilanova, IRBLLEIDA, University of Lleida, Lleida; 4Department of Pathology, Hospital Universitari de Bellvitge, IDIBELL, University of Barcelona, Barcelona, Spain;
+5Department of Gynaecologic Oncology, Leuven Cancer Institute, University Hospitals Leuven, Leuven, Belgium; 6Department of Gynecology, Center for Gynecological
+Oncology Amsterdam, Netherlands Cancer Institute, Amsterdam, The Netherlands; 7Department of Obstetrics and Gynaecology, Medical University of Innsbruck,
+Innsbruck, Austria; 8Department of Gynaecology and Gynaecologic Oncology, Evang. Kliniken Essen-Mitte, Essen, Germany; 9Department of Pathology, Norwegian
+Radium Hospital, Oslo University Hospital, Oslo; 10Institute of Clinical Medicine, Faculty of Medicine, University of Oslo, Oslo, Norway; 11Department of Surgery and
+Cancer, Faculty of Medicine, Imperial College London, London, UK; 12Department of Medical Oncology and Program in Solid Tumours-Cima, Cancer Center Clínica
+Universidad de Navarra, Madrid, Spain; 13Cancer Research UK Scotland Centre, Institute of Genetics and Cancer, University of Edinburgh, Edinburgh, UK; 14Department
+of Medicine, Institut Gustave Roussy, Villejuif, France; 15Division of Gynecologic Oncology, Fondazione Policlinico Universitario A. Gemelli IRCCS, Rome; 16Department
+of Woman, Child and Public Health, Catholic University of Sacred Heart, Rome, Italy; 17The Royal Marsden NHS Foundation Trust and Institute of Cancer Research,
+London, UK; 18Department of Gynaecology and Obstetrics, Cancer Center Clínica Universidad de Navarra, Navarra, Spain; 19Department of Gynecology, Obstetrics and
+Neonatology, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague, Czech Republic; 20Department of Gynecologic Oncology,
+Istituto Europeo di Oncologia IRCCS, Milan; 21Department of Medicine and Surgery, University of Milano-Bicocca, Milan, Italy; 22Department of Biopathology, Bergonié
+Institut, Bordeaux, France; 23Department of Gynecologic Oncology, Division of Cancer Medicine, The Norwegian Radium Hospital, Oslo University Hospital, Oslo,
+Norway; 24Institute of Aging, Hospices Civils de Lyon, Lyon; 25CarMeN Laboratory, INSERM U1060/Université Lyon 1/INRAE U1397/Hospices Civils Lyon, Pierre-Bénite,
+France; 26Arbeitsgemeinschaft Gynäkologische Onkologie (AGO) Study Group, Germany; 27GINECO Group, Department of Medical Oncology, Centre François-Baclesse,
+University of Caen Normandy, Caen, France; 28Hereditary Cancer Program, Catalan Institute of Oncology (ICOeIDIBELLeCIBERONC), L’Hospitalet de Llobregat,
+Barcelona, Spain; 29Department of Obstetrics and Gynecology, University Hospital, LMU Munich, Munich; 30Department of Obstetrics and Gynecology, University
+Hospital Mannheim, Mannheim; 31Medical Faculty Mannheim, Heidelberg University, Mannheim, Germany; 32Department of Pathology, Belfast Health and Social Care
+Trust, Belfast, UK; 33Department of Gynecologic Surgery, Gustave Roussy Cancer Campus, Villejuif, France; 34Gynaecologic Cancer Programme, Vall d’Hebron Institute
+of Oncology (VHIO), Hospital Universitari Vall d’Hebron, Vall d’Hebron Barcelona Hospital Campus, Barcelona; 35Department of Medical Oncology, Hospital Clínico
+Universitario e INCLIVA, CIBERONC, Valencia, Spain; 36Department of Urology and Gynecology, Istituto Nazionale Tumori di Napoli, IRCCS Fondazione Pascale, Napoli,
+Italy; 37Department of Obstetrics and Gynecology, Houston Methodist Hospital, Houston, USA; 38Department of Medical Oncology, Centre Léon Bérard, University
+Claude Bernard, Lyon, France; 39Department of Medical Oncology, Instituto Valenciano Oncologia, Valencia, Spain; 40North-Eastern German Society of Gynecological
+Oncology (NOGGO), Berlin; 41Department of Gynecology with Center for Oncological Surgery, Charité Berlin University of Medicine, Berlin, Germany; 42Sheba Medical
+Center, Ramat Gan, Israel; 43Institute of Cancer and Genomic Sciences, University of Birmingham, Birmingham; 44Pan Birmingham Gynaecological Cancer Centre, City
+Hospital, Birmingham, UK; 45Department of Medicine, Yong Loo Lin School of Medicine, National University of Singapore, Singapore; 46National University of Singapore
+(NUS) Centre for Cancer Research, Yong Loo Lin School of Medicine, National University of Singapore, Singapore; 47Cancer Science Institute, National University of
+Singapore, Singapore; 48Department of Haematology-Oncology, National University Cancer Institute Singapore, National University Hospital, Singapore, Singapore;
+49Department of Gynecologic Oncology, School of Medicine, Koç University, Istanbul, Turkey; 50Institut Bergonié, Bordeaux, France; 51Oncology Institute of Southern
+Switzerland (IOSI), Bellinzona, Switzerland
+Available online 1 February 2024
+*Correspondence to:
+ESGO Guidelines Committee, rue François-Versonnex 7, CH-1207 Genève, Switzerland
+E-mail: guidelines@esgo.org (ESGO Guidelines Committee).
+ESMO Guidelines Committee, ESMO Head Ofﬁce, Via Ginevra 4, CH-6900 Lugano, Switzerland
+E-mail: clinicalguidelines@esmo.org (ESMO Guidelines Committee).
+ESP, Rue Bara 6, 1070 Anderlecht, Belgium
+E-mail: admin@esp-pathology.org
+yCo-primary authors.
+5Note: These consensus statements were developed by ESMO, ESGO and ESP and are published in Annals of Oncology. The three scoieties nominated participants
+who attended the consensus conference and co-authored the ﬁnal manuscript. Please see appendix for members of the ESGO-ESMO-ESP Ovarian Cancer Consensus
+Conference Working Group.
+0923-7534/© 2024 European Society for Medical Oncology, European Society of Gynecological Oncology and European Society of Pathology. Published by
+Elsevier Ltd. All rights reserved.
+248
+https://doi.org/10.1016/j.annonc.2023.11.015
+Volume 35
+- Issue 3
+- 2024
+
+
+
+---
+[PAGE 2/19]
+
+The European Society of Gynaecological Oncology, the European Society for Medical Oncology (ESMO) and the
+European Society of Pathology held a consensus conference (CC) on ovarian cancer on 15-16 June 2022 in Valencia,
+Spain. The CC panel included 44 experts in the management of ovarian cancer and pathology, an ESMO scientiﬁc
+advisor and a methodologist. The aim was to discuss new or contentious topics and develop recommendations to
+improve and harmonise the management of patients with ovarian cancer. Eighteen questions were identiﬁed for
+discussion under four main topics: (i) pathology and molecular biology, (ii) early-stage disease and pelvic mass in
+pregnancy, (iii) advanced stage (including older/frail patients) and (iv) recurrent disease. The panel was divided into
+four working groups (WGs) to each address questions relating to one of the four topics outlined above, based on
+their expertise. Relevant scientiﬁc literature was reviewed in advance. Recommendations were developed by the
+WGs and then presented to the entire panel for further discussion and amendment before voting. This manuscript
+focuses on the recommendation statements that reached a consensus, their voting results and a summary of
+evidence supporting each recommendation.
+Key words: chemotherapy, maintenance treatment, molecular biology, ovarian cancer, pathology, surgery
+INTRODUCTION
+Ovarian cancer is the second-highest cause of death among
+all gynaecological cancers.1 The estimated number of new
+cases in Europe in 2020 was 66 693 with 44 053 deaths.2
+More than two-thirds of patients are diagnosed at an
+advanced stage. Ovarian cancer diagnosed in young women
+raises concerns about their fertility. When diagnosed during
+pregnancy,
+maternal
+and
+fetal
+factors
+need
+to
+be
+considered.
+More than 90% of malignant ovarian tumours are
+designated tubo-ovarian carcinoma (also referred to as
+epithelial ovarian cancer). The most common and most le-
+thal tubo-ovarian carcinoma is high-grade serous carcinoma
+(HGSC).3 Less frequent epithelial subtypes with distinct
+morphological and molecular characteristics include high-
+grade endometrioid carcinoma (EC), low-grade serous car-
+cinoma (LGSC) and clear-cell carcinoma (CCC).
+The development of guideline recommendations is one
+of the core activities of both the European Society of
+Gynaecological Oncology (ESGO) and the European Society
+for Medical Oncology (ESMO), as part of their mission to
+improve the quality of care for patients with cancer across
+Europe. The European Society of Pathology (ESP) promotes
+high-quality pathology diagnosis for all patients. Following
+the 2018 ESMOeESGO consensus conference (CC) on
+ovarian cancer,4 another CC took place on 15-16 June 2022
+in Valencia, Spain, to discuss new or contentious topics.
+Pathology expertise was added by including ESP. The aim
+was to improve and harmonise the management of patients
+with ovarian cancer. Published evidence was evaluated
+incorporating clinical experience to arrive at consensus
+recommendations
+through
+an
+anonymous
+voting
+procedure.
+This manuscript focuses on the recommendation state-
+ments that reached a consensus and their voting results.
+The summary of evidence supporting each recommendation
+is available in the Supplementary Material, available at
+https://doi.org/10.1016/j.annonc.2023.11.015. For topics
+not covered in this article, please refer to the 2018
+ESMOeESGO CC recommendations on ovarian cancer,4 the
+ESMO Clinical Practice Guidelines (CPGs) for diagnosis,
+treatment and follow-up of patients with epithelial ovarian
+cancer5 and non-epithelial ovarian cancer6 and the ESGO/
+International Society of Ultrasound in Obstetrics and Gy-
+necology (ISUOG)/International Ovarian Tumor Analysis
+(IOTA)/European Society for Gynaecological Endoscopy
+(ESGE) consensus statement on preoperative diagnosis of
+ovarian tumours.7
+METHODOLOGY
+The CC followed the ESMO Standard Operating Procedures
+(SOPs) for CCs, available here: https://www.esmo.org/
+guidelines/esmo-guidelines-methodology.
+Collection
+and
+review of author declarations of interest (DOIs) followed
+the ESMO DOI policy, available here: https://www.esmo.
+org/about-esmo/how-we-work/declaration-of-interest.
+The need for a CC was identiﬁed by the ESGO and ESMO
+Guidelines Committees. Anna Fagotti (ESGO), Jonathan
+Ledermann (ESMO) and Xavier Matias-Guiu (ESP) were
+designated as CC Chairs. The CC Chairs deﬁned four broad
+topics and assigned 41 additional experts from Europe with
+representation from Asia and the USA to four working
+groups (WGs) based on their expertise, ensuring good
+representation across the three societies. Two WG Chairs
+for each WG were nominated by the CC Chairs as follows
+(see Supplementary Table S1, available at https://doi.org/
+10.1016/j.annonc.2023.11.015, for all participants):
+1. Pathology and molecular biology (Chairs: B. Davidson
+and A. Leary)
+2. Early-stage disease and pelvic mass in pregnancy
+(Chairs: F. Amant and C. Gourley)
+3. Advanced stage (including older/frail patients) (Chairs:
+N. Concin and D. Lorusso)
+4. Recurrent disease (Chairs: C. Fotopoulou and A. Gonzá-
+lez-Martin)
+Literature searches were conducted by a methodologist
+(F. Planchamp) using the Medline® database to ensure that
+J. A. Ledermann et al.
+Annals of Oncology
+Volume 35
+- Issue 3
+- 2024
+https://doi.org/10.1016/j.annonc.2023.11.015
+249
+
+
+
+---
+[PAGE 3/19]
+
+the recommendations were evidence-based. The search
+terms for each WG topic are provided in Supplementary
+Table S2, available at https://doi.org/10.1016/j.annonc.
+2023.11.015. The reference list of each identiﬁed article
+was reviewed for other potentially relevant papers. WG
+members were allowed to consider other publications not
+identiﬁed in the literature search.
+The WGs discussed published data and clinical experience
+and drafted recommendation statements. These were
+reviewed by the CC Chairs.
+During the CC, 40 individuals were eligible to vote on
+recommendation statements (3 CC Chairs, 8 WG Chairs and 29
+WGmembers).FourWGmemberswereunabletoattend/vote
+in person but participated in post-CC voting and authorship of
+the ﬁnal manuscript. F. Planchamp and C. Sessa (ESMO sci-
+entiﬁc advisor) did not participate in the voting of consensus
+recommendations but authored the ﬁnal manuscript.
+In parallel sessions, the four WGs further discussed and
+agreed on the draft statements. These were presented to
+the entire panel before voting, where they were discussed
+and modiﬁed as required. An adapted version of the ‘In-
+fectious Diseases Society of America-United States Public
+Health Service Grading System’8 was used to deﬁne the
+level of evidence (LoE) and grade of recommendation (GoR)
+for each recommendation proposed, based on the data
+available up to the time of the CC (i.e. as of 14 June 2022)
+(see Supplementary Table S3, available at https://doi.org/
+10.1016/j.annonc.2023.11.015).
+Voting was anonymous. Members could abstain from
+voting if they perceived that they had insufﬁcient expertise
+or a conﬂict of interest. Results of 75% agreement and
+20% disagreement were considered a consensus. Results
+of <75% agreement or >20% disagreement were not
+considered a consensus.
+Recommendation statements that reached a consensus are
+detailed in the manuscript. The statements that did not reach
+consensus are reported in the Supplementary Material, avail-
+able at https://doi.org/10.1016/j.annonc.2023.11.015. For
+recommendation statements that did not reach consensus
+onsite after two rounds of voting, a post-CC exploration of
+disagreements was conducted using a modiﬁed Grading of
+Recommendations, Assessment, Development and Evaluation
+(GRADE) methodology, described in the ESMO SOPs.9,10 The
+aim was to provide further insight into the division of opinions
+to illustrate the extent to which consensus was/was not likely.
+All LoEs and GoRs were reviewed post-CC by F. Planchamp
+to verify that they could be fully supported by available
+evidence. If an LoE could not be conﬁrmed by existing evi-
+dence, an alternative LoE was proposed. Similarly, if any in-
+consistencies were found between the strength of evidence
+and the assigned GoR, an alternative GoR was proposed.
+All authors were asked to vote again anonymously online
+on recommendation statements with updated LoEs and/or
+GoRs. The voting results for these revised statements were
+considered as ﬁnal and are included in the manuscript. All
+participants approved the ﬁnal manuscript.
+RESULTS
+Percentages might not add up to 100% due to rounding.
+Pathology and molecular biology
+See Supplementary Material Section 1, available at https://
+doi.org/10.1016/j.annonc.2023.11.015, for detailed sup-
+porting evidence for these recommendations.
+1. Which molecular and genomic tests should be carried
+out at diagnosis as prognostic or predictive markers
+for high-grade tubo-ovarian carcinoma?
+Adequate tissue or a cell block from a cytology specimen
+is needed for molecular testing, which can identify mutations
+and/or inform treatment decisions [e.g. poly (ADP-ribose)
+polymerase inhibitors (PARPis) when BRCA1/2 pathogenic
+variant mutations (BRCA1/2-muts) are present]. Adequate
+DNA is required for BRCA1/2 genetic testing. Germline
+BRCA1/2 mutations (gBRCA1/2-muts), conﬁrmed on testing
+normal cellular material, are present in 13%-15% of HGSCs
+and somatic BRCA1/2-muts in 5%-7% of tumours.11 Genomic
+instability tests should be carried out in newly diagnosed
+high-grade non-mucinous tubo-ovarian carcinoma. These
+tests identify functional disturbance in homologous recom-
+bination repair of DNA damage that can be present due to
+BRCA mutations and other factors, such as mutations in
+homologous recombination repair genes.12-14 Cancer antigen
+125 (CA-125) and human epididymis protein 4 (HE4) are two
+serological markers used to assist in the diagnosis of tubo-
+ovarian carcinoma.15
+Recommendation 1.1: An adequate surgical specimen or
+image-guided biopsy of treatment-naive tumour is the
+preferred sample for diagnosis and molecular testing [IV, A].
+Consensus: 100% (41) yes, 0% (0) no, 0% (0) abstain (41
+voters)
+Recommendation 1.2: In all cases, the sample should
+contain a sufﬁcient number of tumour cells (preferably
+30%). A cell block from peritoneal or pleural effusions
+may be used for molecular analysis [IV, B].
+Consensus: 97.6% (40) yes, 2.4% (1) no, 0% (0) abstain
+(41 voters)
+Recommendation 1.3: BRCA-mut (germline and/or so-
+matic) testing is recommended at diagnosis for patients
+with high-grade non-mucinous tubo-ovarian carcinoma
+regardless of stage [I, A].
+Consensus: 98% (39) yes, 3% (1) no, 0% (0) abstain (40
+voters)
+Recommendation 1.4: Routine tumour testing for non-
+BRCA homologous recombination gene mutations is not
+required; however, it should be encouraged in the research
+setting [IV, B].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 1.5: Genomic instability tests are rec-
+ommended in patients with BRCA wild-type (wt) high-grade
+Annals of Oncology
+J. A. Ledermann et al.
+250
+https://doi.org/10.1016/j.annonc.2023.11.015
+Volume 35
+- Issue 3
+- 2024
+
+
+
+---
+[PAGE 4/19]
+
+non-mucinousa International Federation of Gynecology and
+Obstetrics (FIGO) stage III-IV tubo-ovarian carcinoma at
+diagnosis as this provides useful predictive information for
+ﬁrst-line maintenance therapy decisions [I, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 1.6: A genomic instability test that has
+been clinically validated in large cohorts [III, B] or, prefer-
+ably, phase III trials should be used [I, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 1.7: There are no validated predictive
+markers of primary resistance to platinum or PARPis at
+diagnosis and none can be recommended at present [IV, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 1.8: General population screening for
+tubo-ovarian carcinoma cannot be recommended because
+screening does not reduce cancer deaths [I, E].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 1.9: CA-125 with or without HE4
+should not be used alone to differentiate between benign,
+borderline and malignant ovarian tumours [IV, D].
+Consensus: 97.6% (40) yes, 0% (0) no, 2.4% (1) abstain
+(41 voters)
+2. What is the role of circulating and tissue biomarkers
+during treatment and follow-up?
+CA-125 is frequently used to monitor the response to
+chemotherapy (ChT), but there is less certainty about its use
+for follow-up. In the neoadjuvant setting, modelled CA-125
+ELIMination rate constant K (KELIM) predicts the likelihood
+of complete interval cytoreductive surgery (ICS) and the risk
+of subsequent platinum-resistant relapse.16-18 Histopatho-
+logical examination of omental specimens is used to
+determine the ChT response score (CRS) and is a repro-
+ducible prognostic tool to assess the response to neo-
+adjuvant ChT (NACT).19-22 Reversion BRCA-muts in tumour
+or in circulating tumour DNA (ctDNA) are markers for
+resistance to PARPis.23 Further investigation is needed to
+evaluate the utility of ctDNA outside of research.
+Recommendation 2.1: Routine monitoring of CA-125
+after completion of ﬁrst-line ChT is an option that should
+be discussed with the patient [IV, A].
+Consensus: 88% (35) yes, 8% (3) no, 5% (2) abstain (40
+voters)
+Recommendation 2.2: The CA-125 KELIM calculated us-
+ing longitudinal CA-125 over the ﬁrst 100 days of treatment
+provides prognostic information, and testing for this dy-
+namic circulating marker can be considered [III, B].
+Consensus: 78% (31) yes, 13% (5) no, 10% (4) abstain (40
+voters)
+Recommendation 2.3: Routine monitoring for ctDNA and
+circulating tumour cells is not recommended but should be
+encouraged within the context of research projects [IV, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 2.4: Testing ctDNA for reversion mu-
+tations can be considered in patients with BRCA-mutated
+tubo-ovarian carcinoma treated with at least one line of
+platinum and eligible for PARPi treatment [III, C].
+Consensus: 95% (38) yes, 0% (0) no, 5% (2) abstain (40
+voters)
+Recommendation 2.5: CRS at ICS on an omental
+(preferred) or adnexal specimen provides prognostic infor-
+mation and is recommended [III, B].
+Consensus: 75% (30) yes, 20% (8) no, 5% (2) abstain (40
+voters)
+Recommendation 2.6: Testing for a reversion mutation in
+tumour samples at relapse can be considered in BRCA-
+mutated tumours [III, C].
+Consensus: 93% (37) yes, 5% (2) no, 3% (1) abstain (40
+voters)
+3. How should LGSC and HGSC be diagnosed?
+Most LGSCs arise in the ovary24 and develop from
+benign serous tumours and serous borderline tumours
+(SBTs), while most HGSCs develop from serous tubal
+intraepithelial carcinoma (STIC) at the ﬁmbrial end of the
+fallopian tube.
+The distinction between LGSC and HGSC is based on a
+combination of morphology and p53 immunohistochem-
+istry (IHC). Mutations in KRAS or BRAF are common in LGSC
+and TP53 mutations are ubiquitous in HGSC.
+Recommendation 3.1: LGSC and HGSC should be
+regarded
+as
+two
+distinct
+neoplasms
+with
+different
+morphology, underlying molecular events and behaviour
+and do not represent different grades of the same tumour
+type [IV, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 3.2: The distinction between LGSC and
+HGSC is based on a combination of morphology and p53 IHC;
+in diagnostically challenging cases, referral for a specialist
+opinion and/or molecular testing is recommended [IV, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 3.3: In cases with morphology sug-
+gestive of LGSC but aberrant p53 protein expression and/or
+TP53 mutation, it is recommended that the tumour be
+classiﬁed as HGSC [IV, A].
+Consensus: 93% (37) yes, 0% (0) no, 8% (3) abstain (40
+voters)
+Recommendation 3.4: In designating the primary site of
+extrauterine HGSC, the recommendations of the Interna-
+a(HGSC and EC)
+J. A. Ledermann et al.
+Annals of Oncology
+Volume 35
+- Issue 3
+- 2024
+https://doi.org/10.1016/j.annonc.2023.11.015
+251
+
+
+
+---
+[PAGE 5/19]
+
+tional Collaboration on Cancer Reporting should be fol-
+lowed [III, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 3.5: Staining for Wilms tumour protein
+(WT-1) is recommended when the primary origin of HGSC
+(adnexal versus uterine) is unclear [IV, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 3.6: Results of p53 IHC should be re-
+ported as ‘wt or normal’ or ‘mutation-type or aberrant’
+rather than positive or negative [IV, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation 3.7: As a minimum, paired box 8, es-
+trogen receptor, WT-1 and p53 IHC should be carried out on
+diagnostic biopsies with a morphological suspicion of LGSC
+or HGSC [IV, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Recommendation
+3.8:
+Testing
+for
+HER2
+status
+in
+mucinous carcinoma can be considered to identify patients
+who may beneﬁt from HER2-targeted strategies [IV, C].
+Consensus: 95% (38) yes, 3% (1) no, 3% (1) abstain (40
+voters)
+Recommendation 3.9: Testing for KRAS and BRAF
+mutational status in LGSC can be considered to identify
+patients who may beneﬁt from targeted strategies [IV, C].
+Consensus: 95% (38) yes, 5% (2) no, 0% (0) abstain (40
+voters)
+4. What is the role of molecular classiﬁcation in ovarian
+EC and CCC?
+EC and CCC are endometriosis-associated neoplasms25
+and the endometriosis can be completely overgrown.
+The Cancer Genome Atlas (TCGA)-based molecular clas-
+siﬁcation used for endometrial carcinomas has been applied
+to ovarian EC, as it is prognostically useful. Data regarding
+the role of the TCGA classiﬁcation in ovarian CCC are less
+robust. DNA mismatch repair (MMR) IHC and/or microsat-
+ellite instability (MSI) testing is recommended in all cases to
+help
+identify
+Lynch-syndrome-related
+ovarian
+EC
+and
+CCC.26-28
+Recommendation 4.1: A TCGA-based molecular classiﬁ-
+cation as used for endometrial carcinomas can be consid-
+ered to stratify ovarian EC [IV, B].
+Consensus: 95% (38) yes, 5% (2) no, 0% (0) abstain (40
+voters)
+Recommendation 4.2: Molecular markers are not rec-
+ommended for prognostication in ovarian CCC [IV, D].
+Consensus: 90.2% (37) yes, 0% (0) no, 9.8% (4) abstain
+(41 voters)
+Recommendation 4.3: DNA MMR IHC and/or MSI testing
+is recommended in ovarian EC and CCC [II, A].
+Consensus: 100% (40) yes, 0% (0) no, 0% (0) abstain (40
+voters)
+Early-stage disease and pelvic mass in pregnancy
+See Supplementary Material Section 2, available at https://
+doi.org/10.1016/j.annonc.2023.11.015, for detailed sup-
+porting evidence for these recommendations.
+5. How should an adnexal mass be managed in pregnant
+women?
+Ultrasound (US) and magnetic resonance imaging (MRI)
+are ﬁrst-line imaging modalities for detailed locoregional
+disease assessment (depending on availability of expertise).
+The role of serum tumour markers is still unclear.
+Most functional cysts undergo spontaneous resolution
+before 16 weeks of gestation and expectant management is
+reasonable. Surgery can be carried out safely during preg-
+nancy, preferably within 22 weeks of gestation.29 If
+advanced-stage tubo-ovarian carcinoma is diagnosed during
+the ﬁrst half of pregnancy, termination should be consid-
+ered. In patients wishing to preserve their pregnancy,
+platinum-based
+ChT
+including
+paclitaxel
+can
+be
+considered.29
+Prenatal exposure to maternal ChT does not impair organ
+function or child development.30,31
+Recommendation 5.1: It is recommended to evaluate all
+patients with suspicious adnexal masses during pregnancy
+at a specialist referral centre [V, A].
+Consensus: 95.1% (39) yes, 0% (0) no, 4.9% (2) abstain
+(41 voters)
+Recommendation 5.2: US by an expert is the recom-
+mended ﬁrst-line imaging procedure when an adnexal mass
+is diagnosed during pregnancy [III, A].
+Consensus: 95.1% (39) yes, 2.4% (1) no, 2.4% (1) abstain
+(41 voters)
+Recommendation 5.3: MRI is recommended as a second-
+stage test for the characterisation of indeterminate ovarian
+masses [IV, A].
+Consensus: 92.7% (38) yes, 0% (0) no, 7.3% (3) abstain
+(41 voters)
+Recommendation 5.4: The routine use of beta-human
+chorionic gonadotropin and alpha-fetoprotein is not rec-
+ommended during pregnancy [IV, E].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 5.5: A proactive surgical approach
+depending upon gestational age is recommended in cases
+of high risk for malignancy during pregnancy [IV, A].
+Consensus: 92.7% (38) yes, 0% (0) no, 7.3% (3) abstain
+(41 voters)
+Recommendation 5.6: Where needed, platinum-based
+ChT at the same dosage as in non-pregnant women is
+recommended as standard ChT after the ﬁrst trimester of
+pregnancy [IV, A].
+Consensus: 97% (38) yes, 0% (0) no, 3% (1) abstain (39
+voters)
+Recommendation 5.7: Paclitaxel can also be adminis-
+tered to pregnant women [IV, B].
+Annals of Oncology
+J. A. Ledermann et al.
+252
+https://doi.org/10.1016/j.annonc.2023.11.015
+Volume 35
+- Issue 3
+- 2024
+
+
+
+---
+[PAGE 6/19]
+
+Consensus: 95% (37) yes, 0% (0) no, 5% (2) abstain (39
+voters)
+Recommendation 5.8: Pregnant patients who receive
+ChT for ovarian carcinoma need follow-up in high-risk ob-
+stetric units [IV, A].
+Consensus: 97.6% (40) yes, 0% (0) no, 2.4% (1) abstain
+(41 voters)
+6. How should an adnexal mass be managed for women
+who want to retain their fertility?
+Fertility-sparing surgery appears safe in patients with
+borderline tumours, non-epithelial tumours, low-grade
+stage IA (serous, endometrioid or mucinous expansile sub-
+type) and selected IC1 stages.32
+Oncofertility clinics are best positioned to provide a
+model of care for patients eligible for fertility preservation
+using a checklist for a high-quality fertility-preservation
+programme.33
+Recommendation 6.1: The option of fertility-sparing
+surgery should be discussed in young patients with early-
+stage ovarian carcinoma [IV, A].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 6.2: Women with ovarian carcinoma
+who want to preserve their fertility need to be managed in
+an oncofertility clinic [V, A].
+Consensus: 97% (38) yes, 3% (1) no, 0% (0) abstain (39
+voters)
+Recommendation 6.3: Subjective assessment of the
+adnexal mass by a US expert is recommended. If not
+available, the IOTA Assessment of Different NEoplasias in
+the adneXa model (ADNEX) in combination with CA-125 is
+recommended to differentiate between benign, borderline,
+early- or advanced-stage ovarian carcinoma and secondary
+carcinomas in young women who want to preserve their
+fertility [III, A].
+Consensus: 90% (35) yes, 8% (3) no, 3% (1) abstain (39
+voters)
+Recommendation 6.4: Unilateral salpingo-oophorectomy
+with surgical staging is recommended in young patients
+with a malignancy apparently conﬁned to the ovary and
+who want to preserve their fertility [III, A].
+Consensus: 95% (37) yes, 3% (1) no, 3% (1) abstain (39
+voters)
+Recommendation 6.5: Minimally invasive surgery avoid-
+ing tumour rupture is an acceptable approach for women
+who wish to preserve their fertility [IV, A].
+Consensus: 95% (37) yes, 5% (2) no, 0% (0) abstain (39
+voters)
+Recommendation 6.6: It is not recommended to biopsy
+the unaffected ovary unless there is suspicion of involve-
+ment [V, E].
+Consensus: 97% (38) yes, 0% (0) no, 3% (1) abstain (39
+voters)
+Recommendation 6.7: In patients who wish to retain
+their fertility, cryopreservation of gametes rather than
+ovarian tissue is recommended [V, A].
+Consensus: 97% (38) yes, 0% (0) no, 3% (1) abstain (39
+voters)
+7. How should high-grade EC, CCC and high-risk mucinous
+stage I-II tubo-ovarian carcinomas be managed?
+In these histological subtypes, the debate relates to
+lymph node resection. Data are retrospective; in general,
+the risk of lymph node metastases is 20% in stage I and 40%
+in stage II34 but can vary according to grade and histology in
+different series (17.4% for early-stage, high-grade EC, 7%-
+12% in early-stage CCC and 30% in inﬁltrative mucinous
+ovarian cancer).35-37
+Randomised trials in patients with stage I-II tubo-ovarian
+carcinoma demonstrated that adjuvant platinum-based ChT
+prolonged survival, but did not prospectively evaluate his-
+tological subtypes.38,39 High-grade EC has a similar prog-
+nosis to HGSC and is worse than low-grade EC. It is not clear
+whether there is any survival beneﬁt for adjuvant ChT in
+stage IA or IB CCC.40,41
+Recommendation
+7.1:
+Complete
+surgical
+resection
+including total abdominal hysterectomy, bilateral salpingo-
+oophorectomy, omentectomy, systematic pelvic and para-
+aortic lymph node dissection, peritoneal biopsies and
+cytological analysis should be the standard surgical pro-
+cedure in stage I-II high-grade EC, CCC and high-risk
+mucinous ovarian carcinoma [IV, A].
+Consensus: 97% (38) yes, 3% (1) no, 0% (0) abstain (39
+voters)
+Recommendation 7.2: Patients with stage I-II high-grade
+EC should be offered adjuvant platinum-based ChT [IV, A].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 7.3: Adjuvant ChT may be omitted for
+adequately staged IA or IB CCC [IV, C].
+Consensus: 90% (35) yes, 5% (2) no, 5% (2) abstain (39
+voters)
+Recommendation 7.4: Adjuvant ChT may be considered
+for stage IC1 CCC [IV, C].
+Consensus: 92% (36) yes, 8% (3) no, 0% (0) abstain (39
+voters)
+Recommendation 7.5: Adjuvant ChT is recommended for
+stages IC2, IC3 and II CCC [IV, A].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 7.6: Patients with high-risk stage I-II
+mucinous ovarian carcinoma should be offered adjuvant
+platinum-based ChT [IV, A].
+Consensus: 97% (38) yes, 0% (0) no, 3% (1) abstain (39
+voters)
+8. How should ovarian SBTs with peritoneal implants be
+managed?
+Ovarian SBT is deﬁned as a non-invasive, low-grade,
+proliferative serous epithelial neoplasm.42 In 14%-30% of
+SBTs, extraovarian peritoneal implants are present.43-46 The
+2020 World Health Organization classiﬁcation distinguishes
+J. A. Ledermann et al.
+Annals of Oncology
+Volume 35
+- Issue 3
+- 2024
+https://doi.org/10.1016/j.annonc.2023.11.015
+253
+
+
+
+---
+[PAGE 7/19]
+
+between non-invasive and invasive implants. Invasive im-
+plants are deﬁned as “in most cases the epithelial compo-
+nent
+predominates,
+especially
+with
+a
+micropapillary/
+cribriform pattern associated with retraction artefact, and
+there is destructive invasion of underlying structures or
+obliteration of normal omental architecture by invasive
+tumour”.42 The prognosis is worse in patients with invasive
+implants.44,45
+Recommendation 8.1: Since the pathological analysis of
+implants is complex, it is recommended that the histological
+review of specimens is carried out by an expert pathologist
+[V, A].
+Consensus: 100% (41) yes, 0% (0) no, 0% (0) abstain (41
+voters)
+Recommendation 8.2: It is recommended to manage
+women with stage II-III ovarian SBTs at a specialist centre
+[V, A].
+Consensus: 95.1% (39) yes, 2.4% (1) no, 2.4% (1) abstain
+(41 voters)
+Recommendation 8.3: It is recommended to keep the
+distinction between invasive and non-invasive implants for
+subsequent management [IV, A].
+Consensus: 92% (36) yes, 5% (2) no, 3% (1) abstain (39
+voters)
+Recommendation 8.4: It is recommended to surgically
+resect peritoneal and omental disease to differentiate
+invasive from non-invasive implants [V, A].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+9. How should early-stage LGSC with non-invasive perito-
+neal implants be managed?
+Randomised data on ChT or hormone treatment are
+absent, but LGSC is far less chemosensitive than HGSC
+(although most reports are from the relapsed setting).47-50
+In a meta-analysis of retrospective studies investigating
+apparent early-stage, low-grade tubo-ovarian carcinoma,
+the incidence of occult lymph node metastases was 2.9%.51
+Recommendation 9.1: It is recommended to completely
+remove all peritoneal implants combined with peritoneal
+staging as a standard treatment procedure [IV, A].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 9.2: Removal of enlarged or suspicious
+lymph nodes is recommended without routine systematic
+lymphadenectomy [IV, A].
+Consensus: 85% (33) yes, 15% (6) no, 0% (0) abstain (39
+voters)
+Recommendation 9.3: Adjuvant ChT could be considered
+for stage II LGSC [IV, C].
+Consensus: 92% (36) yes, 5% (2) no, 3% (1) abstain (39
+voters)
+Recommendation 9.4: Endocrine treatment following
+ChT could be considered for stage II LGSC [V, C].
+Consensus: 90% (35) yes, 8% (3) no, 3% (1) abstain (39
+voters)
+10. How should incidental STIC or microscopic HGSC be
+managed?
+The frequency of STIC detected in risk-reducing bilateral
+salpingo-oophorectomies (RRBSOs) in high-risk populations
+(patients with a BRCA-muts) is quite variable (0.4%-8.5%)
+but w10-fold higher than in low-risk populations.52-55 There
+is no precise deﬁnition for ‘microinvasive’ tubal HGSC, but
+STICs associated with ‘microscopic’ invasive HGSC may be
+the source of peritoneal HGSC and, therefore, should be
+managed as HGSC.56
+The accurate sampling of the tuba by Sectioning and
+Extensively Examining the FIMbriated end (SEE-FIM) proto-
+coldrecommended both in women with a BRCA-mut and
+those with an unknown genetic predispositiondand the
+improved diagnostic criteria, including the use of p53 and ki-67
+immunostainings, has identiﬁed occult lesions, which were
+previously missed in classical grossing procedures, as STIC.57-59
+There is an increased risk of peritoneal carcinoma
+developing with follow-up after RRBSO if a STIC is present,
+which supports staging of the peritoneum.60
+Recommendation 10.1: It is recommended that micro-
+scopic HGSC be managed as HGSC [V, B].
+Consensus: 97% (38) yes, 3% (1) no, 0% (0) abstain (39
+voters)
+Recommendation 10.2: SEE-FIM is recommended in
+RRBSO [IV, A].
+Consensus: 85.4% (35) yes, 0% (0) no, 14.6% (6) abstain
+(41 voters)
+Recommendation 10.3: SEE-FIM is recommended when
+there is doubt regarding the origin of the carcinoma
+(endometrial, tubal, ovarian, peritoneal) [IV, A].
+Consensus: 97% (38) yes, 0% (0) no, 3% (1) abstain (39
+voters)
+Recommendation 10.4: It is suggested that the pathol-
+ogist examines microscopically the whole ﬁmbriae in benign
+conditions [V, B].
+Consensus: 87% (34) yes, 3% (1) no, 10% (4) abstain (39
+voters)
+Recommendation 10.5: In STIC, staging of the perito-
+neum is recommended [II, A].
+Consensus: 97% (38) yes, 3% (1) no, 0% (0) abstain (39
+voters)
+Recommendation 10.6: In STIC, it is recommended that
+(re)-staging is carried out, preferably by a minimally invasive
+procedure [III, B].
+Consensus: 92% (36) yes, 5% (2) no, 3% (1) abstain (39
+voters)
+Recommendation 10.7: In STIC, hysterectomy should be
+considered, particularly in patients with a gBRCA1-mut [IV, A].
+Consensus: 82% (32) yes, 10% (4) no, 8% (3) abstain (39
+voters)
+Annals of Oncology
+J. A. Ledermann et al.
+254
+https://doi.org/10.1016/j.annonc.2023.11.015
+Volume 35
+- Issue 3
+- 2024
+
+
+
+---
+[PAGE 8/19]
+
+Recommendation 10.8: In STIC, if the uterus is pre-
+served, endometrial sampling in patients with a gBRCA1-
+mut is recommended [IV, B].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 10.9: In STIC, lymphadenectomy is not
+recommended [V, E].
+Consensus: 95% (37) yes, 0% (0) no, 5% (2) abstain (39
+voters)
+Recommendation 10.10: Adjuvant ChT is not recom-
+mended in surgically staged STIC [IV, D].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 10.11: In cases of STIC, testing for
+gBRCA1/2-muts
+and
+other
+high-penetrance
+hereditary
+genes is mandatory [II, A].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Advanced stage (including older/frail patients)
+See Supplementary Material Section 3, available at https://
+doi.org/10.1016/j.annonc.2023.11.015, for detailed sup-
+porting evidence for these recommendations.
+11. How should patients with advanced tubo-ovarian car-
+cinoma
+be
+selected
+for
+primary
+cytoreductive
+surgery?
+Evaluation for surgery.The standard treatment for the initial
+management of advanced tubo-ovarian carcinoma is primary
+cytoreductive surgery (PCS) or, in those not considered suit-
+able for upfront surgery, NACT followed by ICS. Randomised
+trials have shown, although with some limitations, that in
+advanced-stage tubo-ovarian carcinoma, NACT had similar
+long-term survival to PCS and improved perioperative out-
+comes.61-64 The outcome of patients undergoing PCS in these
+trials, however, was unfavourable compared with other
+studies.
+Structured computed tomography (CT) imaging reports
+or diffusion-weighted MRI have been used to predict
+tumour load, localisation and the feasibility of complete
+resection.65-67 Positron emission tomography (PET)eCT
+seems as accurate as CT in detecting disease spread, with a
+possible small advantage in detecting lymph node and
+distant metastases. PETeCT, however, seems to be less
+reliable than diffusion-weighted MRI for the detection of
+intraperitoneal metastases.68,69
+Centres complying with ESGO quality indicators for
+advanced ovarian cancer surgery and perioperative man-
+agement ensure that patients receive the appropriate
+treatment for their disease.70,71 PCS is the preferred
+approach if a complete resection seems achievable with
+acceptable morbidity. These criteria are different for pa-
+tients with LGSC. NACT is less effective in LGSC than in
+HGSC and cytoreduction to <1 cm (or optimal) is preferable
+to no surgery; a residual tumour 1 cm showed a signiﬁ-
+cant advantage in progression-free survival (PFS) and overall
+survival (OS).72
+Role of lymphadenectomy. The therapeutic value has been
+debated for a long time, but recent evidence from a large
+phase III randomised trial failed to show therapeutic beneﬁt
+of systematic lymphadenectomy for patients with complete
+gross resection of peritoneal disease and non-suspicious
+lymph nodes both on preoperative imaging and intra-
+operative clinical evaluation.73 Additional data have also
+shown that a comprehensive lymphadenectomy is of no
+beneﬁt in patients with advanced ovarian cancer with rare
+histological subtypes.74 The presence of cardiophrenic
+lymph nodes in advanced ovarian cancer is a negative
+prognostic factor, but the impact of resection of these
+lymph nodes on survival remains unknown.75,76
+Recommendation 11.1: The selection of patients for PCS or
+NACT must be carried out in an accredited ovarian cancer
+centre (according to the ESGO quality indicators for ovarian
+cancer surgery 2016/2020)in a multidisciplinary setting [IV, A].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 11.2: PCS is the preferred option and
+should be offered if a complete resection seems achievable
+[I, A].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 11.3: PCS is the preferred option in
+patients with LGSC if residual disease <1 cm can be ach-
+ieved [IV, B].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 11.4: NACT with ICS is a valid alter-
+native for patients with a low likelihood of initial complete
+resection and with chemosensitive histological types or for
+those who are poor surgical candidates due to medical
+conditions [I, A].
+Consensus: 92% (36) yes, 5% (2) no, 3% (1) abstain (39
+voters)
+Recommendation 11.5: Patients should be medically
+assessed for surgery, and this should be based on clearly
+deﬁned criteria requiring a thorough evaluation by a
+specialist in gynaecological oncology. Medically unﬁt pa-
+tients should additionally receive an internal medicine and/
+or
+anaesthesiology
+evaluation.
+Eastern
+Cooperative
+Oncology Group and American Society of Anesthesiology
+scores must be documented [IV, A].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 11.6: Candidates for surgery based on
+a multidisciplinary team (MDT) report should proceed to a
+laparotomy with the intent of complete cytoreduction
+[III, B].
+Consensus: 97% (34) yes, 0% (0) no, 3% (1) abstain (35
+voters)
+Recommendation 11.7: Contrast-enhanced CT, MRI and
+PETeCT with a structured radiology report are considered
+as options for the initial evaluation of patients with
+advanced ovarian carcinoma [III, A]. US by an expert so-
+nographer may be used to assess tumour extent and
+resectability in the pelvis and abdominal cavity [III, C].
+J. A. Ledermann et al.
+Annals of Oncology
+Volume 35
+- Issue 3
+- 2024
+https://doi.org/10.1016/j.annonc.2023.11.015
+255
+
+
+
+---
+[PAGE 9/19]
+
+Consensus: 100% (35) yes, 0% (0) no, 0% (0) abstain (35
+voters)
+Recommendation 11.8: Patients must be counselled for
+cytoreductive surgery by providing an extensive discussion
+about the risk and beneﬁts of the procedure speciﬁcally for
+that patient and outlining a comprehensive list of potential
+perioperative major and minor complications [IV, A].
+Consensus: 95% (37) yes, 3% (1) no, 3% (1) abstain (39
+voters)
+Recommendation 11.9: Patients for whom there is
+concern for incomplete cytoreductive surgery based on a
+structured radiology report may undergo a laparoscopic
+evaluation by a gynaecological oncologist to assess the
+extent of intra-abdominal disease [III, B].
+Consensus: 92% (36) yes, 5% (2) no, 3% (1) abstain (39
+voters)
+Recommendation 11.10: Scoring systems may play a role
+in guiding the evaluation and ultimately triage patients for
+primary management. There is currently no universally
+accepted scoring system that could be recommended [III, C].
+Consensus: 90% (35) yes, 10% (4) no, 0% (0) abstain (39
+voters)
+Recommendation 11.11: Currently, there are no speciﬁc
+validated biomarkers that are predictive of the success of
+surgical resection [IV, C].
+Consensus: 97% (38) yes, 3% (1) no, 0% (0) abstain (39
+voters)
+Recommendation 11.12: Systematic pelvic and para-
+aortic lymphadenectomy should not be carried out in pa-
+tients with advanced disease who have undergone intra-
+abdominal macroscopically complete resection and have
+non-suspicious lymph nodes both on preoperative imaging
+and intraoperative clinical evaluation [I, E].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+Recommendation 11.13: Enlarged or suspicious lymph
+nodesshouldberemoved toachievecompleteresection [IV,A].
+Consensus: 100% (38) yes, 0% (0) no, 0% (0) abstain (38
+voters)
+Recommendation 11.14: The impact of resection of
+suspicious or enlarged extra-abdominal lymph nodes re-
+mains unclear but should be considered if complete
+macroscopic resection can be achieved intra-abdominally
+[IV, C].
+Consensus: 95% (37) yes, 3% (1) no, 3% (1) abstain (39
+voters)
+Recommendation 11.15: Resection of isolated paren-
+chymal liver metastases should be considered to achieve a
+complete cytoreduction [IV, B].
+Consensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39
+voters)
+12. What is the role of hyperthermic intraperitoneal ChT
+in newly diagnosed tubo-ovarian carcinoma?
+One prospective trial of hyperthermic intraperitoneal ChT
+(HIPEC) demonstrated an improvement in recurrence-free
+survival and OS for patients with FIGO stage III tubo-ovarian
+carcinoma who received HIPEC at ICS.77 The results of this
+trial have led to considerable discussion.77-80 No consensus on
+the role of HIPEC and ICS was reached, which reﬂects the
+current difference in opinion among the participants.
+13. Which patients should receive bevacizumab, mainte-
+nance therapy with PARPis or the combination of
+PARPis with bevacizumab and for how long?
+In two randomised clinical trials, a statistically signiﬁcant
+increase in PFS was seen when bevacizumab was added to
+paclitaxelecarboplatin ﬁrst-line therapy followed by bev-
+acizumab maintenance compared with ChT alone.81,82
+Bevacizumab has shown activity in all tubo-ovarian carci-
+noma histotypes, including LGSC, and can be considered as a
+maintenance option in less-chemosensitive tumours.83 The
+majority of LGSCs present elevated estrogen and progester-
+one receptor expression, and retrospective studies suggest
+that hormone therapy could have therapeutic value in the
+maintenance setting of newly diagnosed advanced LGSC.84
+Up
+to
+50%
+of
+HGSC
+cases
+are
+associated
+with
+homologous recombination deﬁciency (HRD).85 Trials have
+shown a signiﬁcant prolongation of PFS, greatest among
+patients with a tumour BRCA-mut, followed by patients
+with BRCA-wt HRD-positive tumours.86 The PFS results in
+BRCA-wt HRD-negative tumours are less conclusive with
+some trials reporting a beneﬁt12,87 (niraparib is FDA and
+EMA approved as maintenance monotherapy; rucaparib is
+EMA approved as maintenance monotherapy) and others
+showing no improvement.13
+Recommendation
+13.1:
+Molecular
+characteristics
+of
+tumour, patients and disease-related factors should be
+considered in the decision-making process for maintenance
+options [II, B].
+Consensus: 100% (36) yes, 0% (0) no, 0% (0) abstain (36
+voters)
+Recommendation 13.2: The use of bevacizumab in
+combination with ChT and as maintenance is recommended
+independently from any biomarker [I, A].
+Consensus: 89% (33) yes, 8% (3) no, 3% (1) abstain (37
+voters)
+Recommendation 13.3: Bevacizumab should be admin-
+istered in combination with platinumepaclitaxel ChT and as
+maintenance for a maximum of 15 months [I, A].
+Consensus: 97% (33) yes, 0% (0) no, 3% (1) abstain (34
+voters)
+Recommendation
+13.4:
+Carcinosarcoma
+should
+be
+treated as HGSC [IV, A].
+Consensus: 100% (36) yes, 0% (0) no, 0% (0) abstain (36
+voters)
+Recommendation 13.5: LGSC should be treated with
+paclitaxelecarboplatin ChT with or without bevacizumab
+[II, A]. ChT followed by maintenance with endocrine therapy
+is an option in stage III and IV tumours [IV, B].
+Consensus: 85.4% (35) yes, 12.2% (5) no, 2.4% (1) abstain
+(41 voters)
+Annals of Oncology
+J. A. Ledermann et al.
+256
+https://doi.org/10.1016/j.annonc.2023.11.015
+Volume 35
+- Issue 3
+- 2024
+
+
+
+---
+[PAGE 10/19]
+
+Recommendation 13.6: Patients with HGSC/high-grade
+EC and BRCA-muts or genomic instability score (GIS)-posi-
+tive (with a validated test) in complete response (CR)/par-
+tial response (PR)/no evidence of disease (NED) after
+platinum-based ChT with or without bevacizumab should
+receive PARPis with or without bevacizumab [I, A].
+Consensus: 100% (37) yes, 0% (0) no, 0% (0) abstain (37
+voters)
+Recommendation 13.7: Patients with HGSC/high-grade
+EC without a BRCA-mut and who are GIS-negative (with a
+validated test) may receive platinum-based ChT in combi-
+nation with bevacizumab followed by bevacizumab main-
+tenance or platinum-based ChT followed by niraparib or
+rucaparib if in CR/PR/NED [I, B]. No maintenance treatment
+might be an option [I, C].
+Consensus: 97% (36) yes, 0% (0) no, 3% (1) abstain (37
+voters)
+Recommendation
+13.8:
+Patients
+with
+HGSC/high-
+grade EC without a BRCA-mut and GIS unknown could
+receive platinum-based ChT in combination with bev-
+acizumab followed by bevacizumab maintenance or
+platinum-based ChT followed by niraparib or rucaparib if
+in CR/PR/NED [I, B].
+Consensus: 97% (35) yes, 0% (0) no, 3% (1) abstain (36
+voters)
+Recommendation 13.9: When used as maintenance in
+patients in CR/PR/NED to platinum-based ChT, olaparib
+(alone or in combination with bevacizumab) and rucaparib
+are recommended for 2 years, and niraparib is recom-
+mended for 3 years [I, A].
+Consensus: 97% (34) yes, 0% (0) no, 3% (1) abstain (35
+voters)
+14. How should older/frail patients with tubo-ovarian
+carcinoma be investigated and treated?
+Older patients are under-represented in clinical trials due
+to their poor performance status (PS) and comorbidities,88
+and their outcomes are poorer.89 Geriatric assessment
+gathers information on functional, mental and nutritional
+status, emotional conditions and social support.90 Vulner-
+ability scores have been validated in clinical trials.90,91
+Surgery, frequently carried out in an emergency context
+and in unspecialised centres, is often incomplete, with
+higher
+post-operative
+complications.92
+ChT
+may
+be
+underutilised.93,94
+Recommendation 14.1: Patients should not be excluded
+from diagnostic procedures, clinical trials and speciﬁc
+treatments for tubo-ovarian carcinoma based only on
+chronological age [IV, D].
+Consensus: 100% (35) yes, 0% (0) no, 0% (0) abstain (35
+voters)
+Recommendation 14.2: Vulnerability should be assessed
+in patients 70 years or any age with at least two comor-
+bidities, if possible, with the support of a geriatric specialist
+[IV, A]. This assessment should focus on patient functions
+(activities of daily living/instrumental activities of daily
+living), nutrition, psychological well-being, comorbidities
+and concomitant medications [II, A] and should not delay
+the start of therapy [IV, A].
+Consensus: 97% (35) yes, 0% (0) no, 3% (1) abstain (36
+voters)
+Recommendation 14.3: Whenever possible, considering
+vulnerability, complexity of surgery and patient motivation,
+primary complete surgery is recommended [III, B].
+Consensus: 100% (36) yes, 0% (0) no, 0% (0) abstain (36
+voters)
+Recommendation 14.4: NACT can be considered as an
+alternative in patients with vulnerability and extensive dis-
+ease [III, B].
+Consensus: 97% (34) yes, 0% (0) no, 3% (1) abstain (35
+voters)
+Recommendation 14.5: The surgery should be carried
+out
+in
+expert
+centres
+involving
+scheduled
+surgery,
+pre-habilitation,
+intensive
+post-operative
+management,
+enhanced recovery and home care [IV, A].
+Consensus: 97% (34) yes, 3% (1) no, 0% (0) abstain (35
+voters)
+Recommendation 14.6: The standard ChT regimen is
+paclitaxelecarboplatin every 3 weeks [I, A]. The continuous
+weekly paclitaxel 60 mg/m2ecarboplatin area under the
+curve (AUC) 2 schedule may provide better tolerability and
+quality of life (QoL) and can be considered as an alternative
+option [II, A].
+Consensus: 92% (33) yes, 6% (2) no, 3% (1) abstain (36
+voters)
+Recommendation 14.7: When indicated, PARPis and/
+or bevacizumab should be offered to older patients
+carefully monitoring toxicity and concomitant medica-
+tions [II, A].
+Consensus: 97% (35) yes, 3% (1) no, 0% (0) abstain (36
+voters)
+Recurrent disease
+See Supplementary Material Section 4, available at https://
+doi.org/10.1016/j.annonc.2023.11.015, for detailed sup-
+porting evidence for these recommendations.
+15. What is the role of surgery in recurrent tubo-ovarian
+carcinoma?
+The aims of surgery are either therapeutic cytoreduction
+or palliation. Two of three randomised trials of cytoreduc-
+tive surgery at ﬁrst relapse have shown an improvement in
+PFS, and one has shown an OS beneﬁt in operated versus
+non-operated patients.95-97
+No prospective randomised evidence exists regarding the
+evaluation of the beneﬁt of cytoreductive surgery for sub-
+sequent relapses. Data are based on a multicentre retro-
+spective series for tertiary and quaternary cytoreductive
+surgery.98
+Palliative surgical intervention for bowel obstruction in
+peritoneally disseminated tubo-ovarian carcinoma is chal-
+lenging. Surgical bypass or stoma formation and non-
+surgical
+therapies,
+such
+as
+bowel
+decompression,
+J. A. Ledermann et al.
+Annals of Oncology
+Volume 35
+- Issue 3
+- 2024
+https://doi.org/10.1016/j.annonc.2023.11.015
+257
+
+
+
+---
+[PAGE 11/19]
+
+endoscopic stent placements and percutaneous endoscopic
+gastrostomies, can be considered if conservative pharma-
+cological management is not working. Surgical morbidity is
+high99 and an MDT expert approach is crucial.
+Oligometastatic disease (OMD) deﬁnitions vary according
+to tumour type and diagnostic method. The most frequent
+sites of OMD include lymph nodes, liver, spleen, lung, bone
+and brain.100,101 The site of the disease is an important
+independent prognostic factor.100 Surgery, inﬁeld radio-
+therapy (RT) and thermal ablation are all used for OMD.
+Recommendation 15.1: Patients with tubo-ovarian car-
+cinoma in ﬁrst relapse >6 months since the end of ﬁrst-line
+platinum-based ChT should be assessed for secondary
+cytoreductive surgery in a gynaecological oncology centre
+experienced in surgery for ovarian cancer [I, A].
+Consensus: 100% (35) yes, 0% (0) no, 0% (0) abstain (35
+voters)
+Recommendation 15.2: Prospectively validated algo-
+rithms should be used as a guide to identify optimal can-
+didates for secondary cytoreductive surgery with complete
+tumour resection [I, A].
+Consensus: 100% (35) yes, 0% (0) no, 0% (0) abstain (35
+voters)
+Recommendation 15.3: NACT before cytoreductive sur-
+gery at relapse cannot be recommended outside of clinical
+trials [IV, D].
+Consensus: 75.6% (31) yes, 9.8% (4) no, 14.6% (6) abstain
+(41 voters)
+Recommendation 15.4: HIPEC is not recommended in
+cytoreductive surgery for relapsed disease [II, D].
+Consensus: 97% (33) yes, 3% (1) no, 0% (0) abstain (34
+voters)
+Recommendation 15.5: Cytoreductive surgery could be
+offered to patients with subsequent relapses in whom
+complete resection appears feasible [III, B].
+Consensus: 81% (29) yes, 8% (3) no, 11% (4) abstain (36
+voters)
+Recommendation 15.6: In selected patients, palliative
+surgery to relieve mechanical obstruction may be indicated
+after failure of conservative measures, either to remove the
+tumour obstructing the bowel or to carry out a diversion
+procedure such as a stoma [IV, B]. These patients should be
+managed within an MDT [IV, A].
+Consensus: 97.6% (40) yes, 0% (0) no, 2.4% (1) abstain
+(41 voters)
+Recommendation 15.7: Palliative surgery should be offered
+only after careful consideration in patients with unfavourable
+conditions, such as rapidly progressing disease without
+further systemic options, gastric outlet/upper gastrointestinal
+obstruction and multilevel sites of obstruction [IV, B].
+Consensus: 92.7% (38) yes, 4.9% (2) no, 2.4% (1) abstain
+(41 voters)
+Recommendation 15.8: For oligometastatic recurrence,
+several treatment modalities such as surgery, inﬁeld RT
+and thermal ablation should be considered within an MDT
+[IV, B].
+Consensus: 97% (34) yes, 0% (0) no, 3% (1) abstain (35
+voters)
+Recommendation 15.9: The following factors should be
+considered to decide treatment modality for oligometa-
+static recurrence: site of recurrence, time to recurrence,
+number of lesions, treatment-related morbidity, patient PS,
+type of maintenance treatments and patient preferences,
+regardless of their BRCA status [IV, B].
+Consensus: 100% (34) yes, 0% (0) no, 0% (0) abstain (34
+voters)
+Recommendation 15.10: After local ablative/surgical
+tumour
+management,
+continuation
+of
+maintenance
+treatment with the same regimen could be considered
+[IV, C].
+Consensus: 94% (32) yes, 3% (1) no, 3% (1) abstain (34
+voters)
+16. What is the role of molecularly targeted therapy in
+recurrent disease?
+The selection of molecularly targeted therapy with
+platinum-based
+therapydcurrently
+bevacizumab
+or
+PARPisdis driven by biological factors, prior use of
+molecularly targeted therapy and regulatory approvals.
+Bevacizumab added to platinum-based ChT and continued
+as maintenance increases the tumour response rate and PFS
+without an OS beneﬁt.
+In randomised trials, PARPis signiﬁcantly prolonged PFS in
+the recurrent setting, when given as maintenance after
+response to platinum until progression or unacceptable
+toxicity. This beneﬁt was more pronounced in patients with
+a BRCA-mut but still relevant in patients with BRCA-wt tu-
+mours regardless of HRD status. Their use in recurrent dis-
+ease is currently diminishing as they are now often used
+after ﬁrst-line ChT (see Question 13). Second-line molecu-
+larly targeted therapy needs to take account of ﬁrst-line
+treatment. Rechallenge with the same molecularly tar-
+geted drug is currently experimental and does not have
+regulatory approval. It is an area where more research is
+needed.
+Patients on maintenance treatment should be monitored
+proactively to manage potential side-effects102 and ensure a
+continued optimal clinical beneﬁt.103-106
+Recommendation 16.1: For patients with BRCA-mutated
+tumours, eligible for platinum and no prior PARPis and no
+prior bevacizumab use, a platinum-based combination fol-
+lowed by PARPis is recommended after CR/PR/NED [I, A].
+Bevacizumab may still be considered depending on pa-
+tient’s symptoms and response to ChT [II, B].
+Consensus: 94% (32) yes, 3% (1) no, 3% (1) abstain (34
+voters)
+Recommendation 16.2: For patients with BRCA-wt or
+unknown tumours eligible for platinum and no prior
+PARPis and no prior bevacizumab, maintenance therapy is
+recommended with PARPis (after CR/PR/NED) or bev-
+acizumab. Bevacizumab added to ChT followed by main-
+tenance should be prioritised for patients in need of rapid
+symptom control [I, A].
+Consensus: 97% (34) yes, 0% (0) no, 3% (1) abstain (35
+voters)
+Annals of Oncology
+J. A. Ledermann et al.
+258
+https://doi.org/10.1016/j.annonc.2023.11.015
+Volume 35
+- Issue 3
+- 2024
+
+
+
+---
+[PAGE 12/19]
+
+Recommendation 16.3: For patients eligible for platinum
+and no prior PARPis but prior bevacizumab, platinum-based
+ChT followed by PARPi maintenance is preferred as long as
+CR/PR/NED is achieved, regardless of their BRCA and HRD
+status [I, A].
+Consensus: 97% (30) yes, 0% (0) no, 3% (1) abstain (31
+voters)
+Recommendation 16.4: For patients eligible for platinum
+and prior PARPis but no prior bevacizumab, a platinum-
+based combination with bevacizumab followed by mainte-
+nance should be recommended [I, A]. The preferred ChT
+partner for
+bevacizumab
+in the
+recurrent setting is
+carboplatinepegylated liposomal doxorubicin (PLD) [I, A].
+Consensus: 90% (27) yes, 3% (1) no, 7% (2) abstain (30
+voters)
+Recommendation 16.5: For patients eligible for platinum
+and prior use of bevacizumab and PARPis, a platinum-based
+ChT should still be recommended [I, B] and rechallenge
+options of maintenance agents could be considered (see
+recommendations 16.9, 16.11).
+Consensus: 97% (29) yes, 0% (0) no, 3% (1) abstain (30
+voters)
+Recommendation 16.6: Monitoring of safety should be
+carried out according to drug-speciﬁc recommendations,
+with special focus on late safety issues [I, A].
+Consensus: 100% (30) yes, 0% (0) no, 0% (0) abstain (30
+voters)
+Recommendation 16.7: Routine oncological follow-up is
+recommended including imaging and/or CA-125 according
+to local practice and after discussion with the patient [III, C].
+Consensus: 97% (30) yes, 0% (0) no, 3% (1) abstain (31
+voters)
+Recommendation 16.8: In the recurrent setting, the
+duration of PARPis as maintenance should be until pro-
+gressive disease or unacceptable toxicity [I, A].
+Consensus: 100% (32) yes, 0% (0) no, 0% (0) abstain (32
+voters)
+Recommendation
+16.9:
+Bevacizumab
+rechallenge
+in
+combination with platinum should be considered in pa-
+tients already pre-treated with bevacizumab in the ﬁrst line
+[I, A].
+Consensus: 91% (29) yes, 6% (2) no, 3% (1) abstain (32
+voters)
+Recommendation 16.10: The preferred ChT partner for
+bevacizumab (rechallenge) in the recurrent setting is
+carboplatinePLD [I, A].
+Consensus: 97% (29) yes, 0% (0) no, 3% (1) abstain (30
+voters)
+Recommendation
+16.11:
+Patients
+in
+response
+to
+platinum-based ChT after prior PARPi maintenance therapy
+may be considered for a PARPi-maintenance rechallenge
+given a duration of prior PARPi exposure of 18 months in
+the ﬁrst line and 12 months in further lines or 12 months
+and 6 months for patients with a BRCA-mut or BRCA-wt
+status, respectively [II, B].
+Consensus: 94% (29) yes, 0% (0) no, 6% (2) abstain (31
+voters)
+17. What is the role of non-platinum drugs and support-
+ive care options?
+Non-platinum drugs and supportive care options are
+mainly used in patients not eligible for platinum rechallenge
+due to progression on platinum-based therapy or after a
+short treatment-free interval (TFI). The prognosis of these
+patients is poor and the main treatment objectives are
+symptom palliation and maintenance of QoL. Non-platinum
+ChT is given alone or with bevacizumab.107,108 In LGSC,
+endocrine therapy or trametinib is used.50 The efﬁcacy of
+available therapies is limited and patients should be offered
+participation in new clinical trials when possible.109
+There are no validated predictive factors to identify pa-
+tients who may beneﬁt from palliative ChT. Low baseline
+global health status, poor physical function and the pres-
+ence of abdominal/gastrointestinal symptoms are pre-
+dictors of early discontinuation.
+Recommendation 17.1: For patients progressing on
+platinum-based therapy or after a short TFI or for those
+who are intolerant of platinum and not eligible for platinum
+rechallenge,
+various
+management
+options
+should
+be
+considered, ranging from non-platinum single-agent sys-
+temic therapy to supportive care alone [I, A].
+Consensus: 97% (30) yes, 0% (0) no, 3% (1) abstain (31
+voters)
+Recommendation 17.2: Patients should be included in
+clinical trials, when possible, as there is a signiﬁcant need
+for improved treatment options in this setting [IV, A].
+Consensus: 100% (41) yes, 0% (0) no, 0% (0) abstain (41
+voters)
+Recommendation 17.3: For patients who have not
+received prior bevacizumab, the addition of this agent to
+weekly paclitaxel, PLD or topotecan should be considered
+[I, A]. The combination of weekly paclitaxel and bev-
+acizumab is the preferred option based on trial subset
+analysis [II, A].
+Consensus: 87% (26) yes, 3% (1) no, 10% (3) abstain (30
+voters)
+Recommendation 17.4: The combination of trabectedin
+and PLD could be considered in those patients who are
+intolerant to platinum who have relapsed after 6 months
+from the last platinum dose [II, C].
+Consensus: 77% (24) yes, 16% (5) no, 6% (2) abstain (31
+voters)
+Recommendation 17.5: Patients with LGSC relapse
+should be considered for treatment with trametinib after
+platinum failure [I, A] or for endocrine therapy [II, A].
+Consensus: 97% (30) yes, 0% (0) no, 3% (1) abstain (31
+voters)
+Recommendation 17.6: Supportive care alone should be
+considered when expected beneﬁt of ChT is limited [III, A].
+J. A. Ledermann et al.
+Annals of Oncology
+Volume 35
+- Issue 3
+- 2024
+https://doi.org/10.1016/j.annonc.2023.11.015
+259
+
+
+
+---
+[PAGE 13/19]
+
+Consensus: 100% (30) yes, 0% (0) no, 0% (0) abstain (30
+voters)
+Recommendation 17.7: Systematic assessment of QoL
+and symptoms during treatment is recommended to start
+early supportive care and prevent or improve symptoms,
+QoL and survival [III, A].
+Consensus: 88% (28) yes, 9% (3) no, 3% (1) abstain (32
+voters)
+18. What is recommended regarding evaluation of QoL/
+survivorship issues and follow-up after treatment?
+Treatment and tumour-related symptoms are often
+underestimated and can be present during treatment and
+follow-up. Symptoms and QoL should be assessed as early
+as possible and patients should have access to early sup-
+portive care which may improve symptoms, QoL and sur-
+vival.
+This
+includes
+psycho-oncology,
+social
+care,
+physiotherapy and patient support groups.
+Oncological follow-up aims to detect recurrence and/or
+secondary cancers, monitor QoL, manage iatrogenic toxicity
+and provide holistic supportive care.
+There is no standard protocol or frequency for follow-up.
+A reasonable approach involves patient assessment every 3-
+4 months for the ﬁrst 2 years and every 6 months during
+years 3-5. Follow-up may be individualised according to
+prognostic factors and treatment modalities, e.g. mainte-
+nance therapy. Follow-up beyond 5 years should be dis-
+cussed individually.110,111
+Recommendation 18.1: QoL and symptom assessment via
+validated tools could be considered as part of the routine
+follow-up in all patients with ovarian carcinoma [IV, C].
+Consensus: 96% (26) yes, 0% (0) no, 4% (1) abstain (27
+voters)
+Recommendation 18.2: Long-term follow-up is recom-
+mended for all patients with tubo-ovarian carcinoma by a
+physician experienced in the treatment and follow-up of
+patients with gynaecological cancer [III, A].
+Consensus: 90% (27) yes, 10% (3) no, 0% (0) abstain (30
+voters)
+ACKNOWLEDGEMENTS
+The authors thank patient advocate Birthe Lemley for her
+review of the manuscript. Organisation of the pre-consensus
+process and onsite conference was primarily managed by
+Ioanna Ntai (ESMO Guidelines staff), with support from
+Catherine Evans, Jennifer Lamarre and Fraser Simpson (ESMO
+Guidelines staff). Eden Damti, CTI Meeting Technology, pro-
+vided onsite voting technology and assistance. Manuscript
+medical writing was provided by Ioanna Ntai, with support
+from Catherine Evans and Guy Atchison, and manuscript
+editing support was provided by Jennifer Lamarre (ESMO
+Guidelines staff); all support was funded by ESMO.
+FUNDING
+All costs relating to the consensus conference were covered
+from ESGO, ESMO and ESP funds. There was no external
+funding of the event or manuscript production.
+DISCLOSURE
+JAL reports personal fees for advisory board membership
+from Artios Pharma, AstraZeneca, Bristol Myers Squibb
+(BMS), Clovis Oncology, Eisai, Ellipses, GSK, Immagene,
+ImmunoGen, Merck/MSD, Miltenyi, Novocure, Nuvation
+and VBL Therapeutics; personal fees as an invited speaker
+from AstraZeneca, Clovis Oncology, GSK and Neopharm;
+personal fees as an Independent Data Monitoring Com-
+mittee (IDMC) member from Mersana and Sutro Bio; a
+remunerated leadership role as an Associate Editor of
+Therapeutic Advances in Medical Oncology (Sage Publish-
+ing); institutional research grants from AstraZeneca and
+MSD/Merck; non-remunerated roles at ESMO (Ofﬁcer and
+Subject
+Editor
+for
+the
+Gynaecological
+CPGs);
+and
+a
+non-remunerated leadership role as Vice-President of ESGO
+(2019-2021). XMG reports personal fees for advisory board
+membership from Amgen, AstraZeneca, GSK, Janssen and
+Lilly; personal fees as an invited speaker from AstraZeneca,
+Clovis and GSK; and non-renumerated consultancy for
+AstraZeneca. FA reports personal fees for advisory board
+membership from MiMARK Diagnostics; and institutional
+funding from Estée Lauder. NCon reports personal fees for
+advisory board membership from AkesoBio, AstraZeneca,
+Eisai, eTheRNA Immunotherapies, GSK, ImmunoGen, Kartos,
+Mersana, Seagen and Seattle Genetics; personal fees as an
+invited speaker from Eickeler, Medconcept, Mediseminar,
+the Nordic Society Of Gynaecologic Oncology - Clinical Trial
+Unit (NSGO-CTU) and the North-Eastern German Society of
+Gynecological Oncology (NOGGO); travel compensation
+from Amgen, Genmab and Roche; compensation for
+educational activities from Kartos, Medscape Oncology,
+MSD and TouchIME; non-renumerated role as the Co-Chair
+of the Early Drug Development Network of European
+Network
+for
+Gynaecological
+Oncological
+Trial
+groups
+(ENGOT); non-renumerated role as the President of ESGO;
+and a non-renumerated role as a clinical trial principal
+investigator (PI) for Aldeyra, Clovis, Kartos, Mersana and
+Seagen. BD reports personal fees as an invited speaker from
+MSD. CFo reports personal fees as an invited speaker from
+Roche, AstraZeneca, MSD, Clovis, Sequana, GSK, Tesaro and
+Ethicon; and institutional fees as a member of the Board of
+Directors of the King Edward VII Hospital. AGM reports
+personal
+fees
+for
+advisory
+board
+membership
+from
+Alkermes, Amgen, AstraZeneca, Clovis Oncology, Eisai,
+Genmab, GSK, HederaDx, Illumina, ImmunoGen, Macro-
+Genics, Mersana, MSD, Novartis, Oncoinvent, PharmaMar,
+Regeneron, Roche, SOTIO, Sutro Biopharma and Tubulis;
+personal fees as an invited speaker from AstraZeneca, Clovis
+Oncology, GSK, MSD, Novocure, Roche, Takeda and Zai Lab;
+institutional funding as coordinating PI from Aravive, GSK,
+Novartis and Roche; and non-remunerated membership of
+a Steering Committee for MSD. CG reports personal and
+institutional fees for advisory board membership from
+AstraZeneca, GlaxoSmithKline and MSD; personal and
+institutional fees as an invited speaker from AstraZeneca,
+Chugai, Clovis, Eisai, GSK, MSD, Roche and Takeda; personal
+fees for a writing engagement from Cor2Ed and PeerVoice;
+Annals of Oncology
+J. A. Ledermann et al.
+260
+https://doi.org/10.1016/j.annonc.2023.11.015
+Volume 35
+- Issue 3
+- 2024
+
+
+
+---
+[PAGE 14/19]
+
+institutional research grants from Aprea, AstraZeneca,
+Medannex, Novartis and Nucana; institutional research
+grants as a local PI from BerGenBio, Clovis, GlaxoSmithKline,
+MSD, Roche and Verastem; and non-renumerated mem-
+bership of the Cancer Research UK Clinical Research Com-
+mittee, the German Cancer Aid Scientiﬁc Review Committee
+and the International Clinical Cancer Research Committee.
+AL reports personal fees for advisory board membership
+from Zentalis Pharmaceuticals; personal fees as an invited
+speaker from GSK and Medscape; personal fees for con-
+sultancy from GLG; personal fees for a writing engagement
+from Onkoþ; institutional fees for advisory board mem-
+bership from Ability Pharma, Apmonia, AstraZeneca, Blue-
+print, Clovis Oncology, GSK, Merck Serono and MSD;
+institutional fees as an invited speaker from AstraZeneca,
+Clovis Oncology and Kephren Publishing; institutional fees
+for consultancy from Orion and Owkin; institutional fees for
+Steering Committee membership for MSD; institutional
+funding as a PI in clinical trials from Agenus, AstraZeneca,
+BMS, GSK, Iovance; MSD and Roche; institutional funding as
+a Chief Investigator in clinical trials from AstraZeneca and
+OSE Immunotherapeutics; institutional research grants as a
+PI in translational research from Association de Recherche
+sur les CAncers dont GYnécologiques (ARCAGY)-Groupe
+d’Investigateurs Nationaux pour les Etudes des Cancers de
+l’Ovaire
+(GINECO),
+AstraZeneca
+and
+Sanoﬁ;
+a
+non-
+remunerated
+role
+as
+an
+IDMC
+member
+for
+Clovis
+Oncology, as an IDMC Chair for Pﬁzer (proprietary infor-
+mation) and as a member of the Gynecologic Cancer
+InterGroup
+(GCIG);
+and
+non-remunerated
+academic
+research projects for LXRepair and Owkin. DL reports per-
+sonal fees for advisory board membership from AstraZe-
+neca, Clovis Oncology, Corcept, Genmab, GSK, ImmunoGen,
+MSD, Oncoinvest, PharmaMar, Seagen and Sutro Bio-
+pharma; personal fees as an invited speaker from AstraZe-
+neca, Clovis Oncology, Genmab, GSK, ImmunoGen, MSD,
+PharmaMar and Seagen; personal fees for consultancy from
+AstraZeneca, Clovis Oncology, Genmab, GSK, ImmunoGen,
+MSD, Novartis, PharmaMar and Seagen; travel grants from
+AstraZeneca, Clovis Oncology and GSK; institutional funding
+as coordinating PI from Clovis Oncology, Genmab and MSD;
+institutional funding for a clinical trial/contracted research
+from AstraZeneca, Clovis Oncology, Genmab, GSK, Immu-
+noGen, Incyte, MSD, Novartis, Roche and Seagen; institu-
+tional funding for founding an academic trial from Clovis
+Oncology, GSK, MSD and PharmaMar; a non-remunerated
+role as a PI in clinical trials for AstraZeneca, Clovis
+Oncology,
+Genmab,
+GSK,
+ImmunoGen,
+Incyte,
+MSD,
+Novartis, PharmaMar, Roche and Seagen; and a non-
+remunerated role as a member of the Board of Directors
+of GCIG. SB reports personal fees for advisory board
+membership from Amgen, AstraZeneca, Eisai, Epsilogen,
+GSK, ImmunoGen, Mersana, MSD, Novartis, Oncxerna,
+Regeneron, Roche, Seagen, Shattuck Labs and Verastem;
+personal fees as an invited speaker from Amgen, AstraZe-
+neca, Clovis, GSK, Medscape, Novacure, Peerview, Pﬁzer,
+Research to Practice and Takeda; ownership of stocks/
+shares of PerciHealth; institutional research grants from
+AstraZeneca and GSK; a non-remunerated role as a PI for
+AstraZeneca
+(academic-sponsored
+ENGOT-GYN1/ATARI
+phase II international trial), GSK (academic-sponsored
+MONITOR-UK trial) and Verastem (ENGOTov60/GOG3052/
+RAMP201 phase II clinical trial - global lead); a non-
+renumerated leadership role as Board member of the In-
+ternational Cancer Foundation; and a non-renumerated
+advisory role as a medical advisor of Ovacome Charity. LC
+reports personal fees as an invited speaker from AstraZe-
+neca and Corza Medical; and institutional fees as an invited
+speaker from GSK and Roche. DC reports personal fees for
+advisory board membership from Akesobio, GSK, MSD,
+Novocure, Roche, Seagen and SOTIO; and personal fees as
+an invited speaker from AstraZeneca. NCol reports personal
+fees for advisory board membership from AstraZeneca,
+Clovis Oncology, Eisai, GSK, ImmunoGen, Mersana, MSD/
+Merck, Nuvation Bio, Onxerna, Pﬁzer, PharmaMar, Pieris
+and Roche; personal fees as an invited speaker from
+AstraZeneca and Novartis; institutional research grants from
+AstraZeneca, PharmaMar and Roche; a non-renumerated
+membership of the ESMO Guidelines Steering Committee;
+and a non-renumerated leadership role as Chair of the
+Alleanza Contro il Tumore Ovarico (ACTO) Scientiﬁc Com-
+mittee. SC declares no conﬂicts of interest. AGE reports
+personal fees for advisory board membership from Astra-
+Zeneca; personal fees as an invited speaker from GSK and
+Intuitive Surgical; personal fees as the social media editor of
+the International Journal of Gynecologic Cancer; and a non-
+remunerated role as PI of the SENTICOL III trial in Norway
+for GINECO/NSGO. CFa reports personal fees for advisory
+board membership from Baxter, Chugai Pharma, Clovis
+Oncology, Eisai, GSK and Teva; personal fees as an invited
+speaker from Astellas Pharma, AstraZeneca, Biogaran, BMS,
+GSK, Janssen Oncology, Leo Pharma, Lilly, MSD Oncology,
+Novartis, Pﬁzer Seagen and Viatris; institutional funding as
+coordinating PI from Astellas Pharma, Chugai Pharma, Pﬁzer
+and Pierre Fabre; institutional funding as local PI from
+Pﬁzer; non-renumerated congress participation for Astra-
+Zeneca, Janssen Oncology, Leo Pharma and Pierre Fabre;
+and non-renumerated membership of the European Union
+of Geriatric Medicine Society, the French Society of Geri-
+atrics and Gerontology, the International Society of Geriatric
+Oncology and the French Society of Geriatric Oncology. DF
+declares no conﬂicts of interest. PH reports personal fees
+for advisory board membership from AstraZeneca, Clovis
+Oncology, GSK, ImmunoGen, Mersana, Miltenyi, MSD,
+Novartis and Roche; personal fees as an invited speaker
+from Amgen, Eisai, Stryker and Zai Lab; personal fees for
+lectures from AstraZeneca, GSK, MSD and Roche; personal
+fees as an IDMC member from SOTIO; institutional funding
+as Trial Chair from AstraZeneca, GSK, ImmunoGen and
+Roche; institutional funding as local PI from Genmab;
+institutional funding from Clovis Oncology and Seagen; and
+a non-remunerated role as PI for AstraZeneca. FJ reports
+personal fees for advisory board membership from Astra-
+Zeneca, Bayer, BMS, Eisai, GSK, Ipsen, Janssen, MSD,
+Novocure and Seagen; personal fees as an invited speaker
+from Amgen, Astellas, AstraZeneca, Eisai, GSK, Ipsen,
+J. A. Ledermann et al.
+Annals of Oncology
+Volume 35
+- Issue 3
+- 2024
+https://doi.org/10.1016/j.annonc.2023.11.015
+261
+
+
+
+---
+[PAGE 15/19]
+
+Janssen, MSD and Novartis/3A; institutional funding as
+coordinating PI from AstraZeneca and GSK; an institutional
+research grant from BMS; non-renumerated membership of
+GCIG; and travel compensation from Eisai, GSK, Ipsen and
+MSD. CLa personal fees for advisory board membership
+from AstraZeneca and Illumina; and institutional funding
+from AstraZeneca. CLo declares no conﬂicts of interest. SM
+reports personal fees and reimbursement for advisory
+board membership from AbbVie, AstraZeneca, Clovis, Eisai
+and Novartis; personal fees and reimbursement as an
+invited speaker from GSK, Hubro, MSD, Nykode, Pﬁzer,
+Roche and Tesaro; and institutional research grants from
+AstraZeneca, Eisai, Roche and Tesaro. FM reports personal
+fees for advisory board membership from AstraZeneca,
+Eisai, GenomicHealth, Gilead/Immunomedics, MSD, Myriad,
+Novartis, PharmaMar, Roche and Seagen; personal fees as
+an invited speaker from AstraZeneca, Clovis, GSK/Tesaro,
+Lilly and Pﬁzer; institutional fees for advisory board mem-
+bership from Immunicom and Roche; institutional fees as an
+invited speaker from AstraZeneca, Daiichi Sankyo, GSK and
+Seagen; institutional funding as coordinating PI from AGO
+Research GmbH, AstraZeneca, the German Breast Group,
+Gilead/Immunomedics and Roche; institutional funding as
+local PI from Eisai, GSK, MSD, Novartis, Roche and Vacci-
+body; and institutional funding from AstraZeneca, Lilly and
+Seagen. CM reports personal fees for advisory board
+membership from Amgen, AstraZeneca, GlaxoSmithKline,
+MSD, Novartis, PharmaMar, Roche Austria and Seagen; and
+personal fees as an invited speaker from Amgen, AstraZe-
+neca, GlaxoSmithKline, MSD, Novartis, PharmaMar, Roche
+and Seagen. WGM reports personal fees as an invited
+speaker from GSK. IAM reports personal fees for advisory
+board membership from Alkermes, AstraZeneca, Clovis
+Oncology, Duke Street Bio, GSK, OncoC4, Roche and Theo-
+lytics; personal fees for consultancy from Duke Street Bio;
+personal fees for travel from AstraZeneca and GSK; insti-
+tutional funding from AstraZeneca; and a non-remunerated
+role as a member of the Board of Directors (Trustee) of
+Worldwide Cancer Research. PM reports personal fees for
+advisory board membership from AstraZeneca, GSK and
+ImmunoGen. SN reports personal fees for advisory board
+membership from AstraZeneca and GSK; personal fees as an
+invited speaker from AstraZeneca, Clovis and GSK; personal
+fees for Scientiﬁc Committee membership from GSK;
+ownership of stocks/shares of GSK; and institutional funding
+from AstraZeneca. AO reports personal fees for advisory
+board
+membership
+from
+Agenus,
+AstraZeneca,
+Clovis
+Oncology, Corcept Therapeutics, Deciphera Pharmaceuti-
+cals, Eisai, Exelisis, EMD Serono, F. Hoffmann-La Roche,
+Genmab, GSK, ImmunoGen, Itheos, Merck Sharps & Dohme
+de España, SA, Mersana Therapeutics, Novocure, OneXerna
+Therapeutics, Inc., PharmaMar, Regeneron, Sattucklabs,
+Seagen and Sutro Biopharma; personal fees for travel/ac-
+commodation from AstraZeneca, PharmaMar and Roche;
+institutional funding from Abbvie Deutschland, Advaxis Inc.,
+Aeterna Zentaris, Amgen, Aprea Therapeutics AB, BMS,
+Clovis Oncology Inc., Eisai Ltd., F. Hoffmann-La Roche Ltd.,
+ImmunoGen Inc., Merck, Sharp & Dohme de España SA,
+Millennium Pharmaceuticals Inc., PharmaMar SA, Regen-
+eron Pharmaceuticals and Tesaro Inc.; non-remunerated
+roles at ESMO (member, Ofﬁcer, Co-Chair of the ESMO
+Gynaecological Cancers Congress 2023-2025, Chair of the
+Gynaecological Track ESMO 2019, Scientiﬁc Track Member
+Gynaecological Cancers ESMO 2018, ESMO 2020, ESMO
+2022, member of the Gynaecological Cancers Faculty and
+Subject
+Editor
+for
+the
+Gynaecological
+CPGs);
+non-
+remunerated roles at GCIG [member and Cervix Cancer
+Chair on behalf of the Spanish Ovarian Cancer Research
+Group (GEICO)]; and memberships of the American Society
+of Clinical Oncology, the Gynecologic Oncology Group and
+the Spanish Association of Medical Oncology (SEOM). JAPF
+reports personal fees for advisory board membership from
+Abilify Pharma, AstraZeneca, Clovis, GSK, PharmaMar and
+Roche; personal fees as an invited speaker from AstraZe-
+neca, Clovis, GSK and PharmaMar; employment as Associate
+Professor at the University of Valencia; institutional funding
+as coordinating PI from AstraZeneca; institutional funding
+from Novartis and GSK; institutional research grants from
+GSK and PharmaMar; personal fees as a member of a
+Steering Committee for Artios Pharma and AstraZeneca; a
+non-renumerated role as coordinating PI of a phase III trial
+for Novartis; non-renumerated membership of BIG, the
+Early Drug Development working group at ENGOT and the
+Adolescent and Young Adults working group at SEOM; a
+non-renumerated role as Co-chair of the Phase 2 group at
+GCIG; non-renumerated roles as member of the Executive
+Committee and Head of the Scientiﬁc Committee at GEICO;
+and non-renumerated roles as member of the Executive
+Committee and co-coordinator of Uterine Sarcoma Group at
+the Spanish Sarcoma Research Group. SP reports personal
+fees for advisory board membership from AstraZeneca,
+Clovis, GSK, MSD, PharmaMar and Roche; and institutional
+funding from AstraZeneca, MSD, Pﬁzer and Roche. PTR
+declares no conﬂicts of interest. IRC reports personal fees
+for
+advisory
+board
+membership
+from
+Adaptimmune,
+Agenus, Amgen, AstraZeneca, BMS, Clovis Oncology, Daiichi
+Sankyo, Deciphera, EQRX, Eisai, GSK, MacroGenics, Merck
+Sereno, Mersana, Novartis, Oxnea, Roche and Sutro Bio-
+pharma; institutional fees for advisory board membership
+from MSD; institutional fees for translational research from
+BMS; a non-remunerated role as President of GINECO; and
+a non-remunerated role as PI for PAOLA-1. IR reports per-
+sonal fees for advisory board membership and as an invited
+speaker from AstraZeneca, Clovis, GSK, PharmaMar and
+Roche; institutional funding from AstraZeneca; an institu-
+tional research grant from GSK; a non-renumerated advi-
+sory role at GEICO; and non-renumerated membership of
+SEOM. GS reports personal fees as an invited speaker from
+AstraZeneca/MSD,
+Baxter
+Healthcare,
+GlaxoSmithKline,
+Intuitive Surgical Inc., Johnson & Johnson and Olympus
+Europa; personal fees for expert testimony from Covidien
+AG (a Medtronic company); institutional funding as coor-
+dinating PI from AstraZeneca, Bayer AG, Clovis Oncology,
+Kiromic, Merck, Novocure Ltd. and Oncoquest Pharmaceu-
+ticals Inc. JS reports personal fees for advisory board
+membership from AstraZeneca, GSK, Immunogene, Incyte,
+Annals of Oncology
+J. A. Ledermann et al.
+262
+https://doi.org/10.1016/j.annonc.2023.11.015
+Volume 35
+- Issue 3
+- 2024
+
+
+
+---
+[PAGE 16/19]
+
+MSD, Novocure, Roche, Tesaro and Tubulis; personal fees
+as an invited speaker from Eisai; institutional funding
+from
+AstraZeneca,
+GSK
+and
+Roche;
+non-renumerated
+ENGOT/NOGGO proprietary information; non-renumerated
+leadership roles at AGO (Arbeitsgemeinschaft für Gynäko-
+logische Onkologie), NOGGO and PARSGO (Pan-Arabian
+Research Society of Gynecological Oncology); and non-
+renumerated membership of the ESGO Council. RSF reports
+personal fees for advisory board membership from MSD
+and Neopharm; personal fees as an invited speaker from
+AstraZeneca, BMS, Medison, MSD, Novartis and Roche;
+personal fees for consultancy from Medison; personal fees
+as a member of a Steering Committee for MSD and VBL;
+non-renumerated membership of a Steering Committee for
+AstraZeneca; and an institutional research grant from MSD.
+SS reports personal fees as an invited speaker from Astra-
+Zeneca, GSK and MSD; an institutional research grant from
+AOA Dx; and a leadership role for the National Ovarian
+Cancer Audit (UK). DSPT reports personal fees for advisory
+board membership from AstraZeneca, Bayer, Boehringer
+Ingelheim, Eisai, Genmab, GSK, MSD and Roche; personal
+fees as an invited speaker from AstraZeneca, Eisai, GSK,
+Merck Serono, MSD, Roche and Takeda; ownership of
+stocks/shares of Asian Microbiome Library (AMiLi); institu-
+tional research grants from AstraZeneca, Bayer, Karyopharm
+Therapeutics and Roche; institutional funding as coordi-
+nating PI from AstraZeneca and Bergen Bio; institutional
+funding as local PI from Bayer, Byondis B.V. and Zeria
+Pharmaceutical Co Ltd.; a previous non-renumerated role as
+Chair of the Asia-Paciﬁc Gynecologic Oncology Trials Group
+(APGOT); a previous non-renumerated role as the Society
+President of the Gynecologic Cancer Group Singapore; non-
+renumerated membership of the Board of Directors of the
+GCIG; and product samples from AstraZeneca, Cyclacel
+Pharmaceuticals, Eisai and MSD (non-ﬁnancial interest). CT
+declares no conﬂicts of interest. WJvD declares no conﬂicts
+of interest. IV reports past personal fees for advisory board
+consultancy from Agenus, Aksebio China, AstraZeneca, BMS,
+Deciphera Pharmaceuticals, Eisai, F. Hoffmann-La Roche
+Ltd., Genmab, GSK, ImmunoGen Inc., Jazzpharma, Kar-
+yopharm, Molecular Partners, MSD, Novartis, Novocure,
+Oncoinvent AS, Regeneron, Seagen and SOTIO a.s.; past
+institutional fees for advisory board consultancy from
+Amgen (Europe), AstraZeneca, Carrick Therapeutics, Clovis
+Oncology Inc., Deciphera Pharmaceuticals, Elevar Thera-
+peutics, F. Hoffmann-La Roche Ltd., Genmab, GSK, Mersana,
+Millennium Pharmaceuticals, MSD, Oncoinvent AS, SOTIO
+a.s., Verastem Oncology and Zentalis; and institutional
+research grants from Amgen, Genmab, Oncoinvent AS and
+Roche. FP declares no conﬂicts of interest. CS reports per-
+sonal fees as a Gynaeco-oncology Certiﬁcate of Advanced
+Studies Coordinator for the European School of Oncology;
+personal fees as a DMC member from Merck; non-
+renumerated advisory roles for ESMO as a member of the
+Compliance Committee and an ESMO extended member of
+the
+Women
+for
+Oncology
+Committee;
+and
+a
+non-
+renumerated role as an advisor for the ESMO Living
+Guidelines. AF reports personal fees for advisory board
+membership from AstraZeneca and MSD; personal fees as
+an
+invited
+speaker
+from
+Fondazione
+Internazionale
+Menarini, GSK, Johnson & Johnson and PharmaMar; and
+institutional funding as coordinating PI from AstraZeneca,
+Johnson & Johnson and Roche.

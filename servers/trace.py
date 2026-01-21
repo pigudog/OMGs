@@ -131,7 +131,21 @@ def print_section(title: str, subtitle: str = ""):
 # Evidence Tag Validation
 ###############################################################################
 
-_EVIDENCE_TAG_RE = re.compile(r"\[@(?:guideline|pubmed):", re.IGNORECASE)
+# Comprehensive regex to match all evidence tag formats (aligned with extract_reference_tags in reference_cache.py):
+# - New format with spaces: [@guideline:doc_id | Page xx], [@pubmed | PMID], [@trial | id], [@report_id | LAB/Genomics/MR/CT]
+# - Legacy format: [@guideline:doc_id|page], [@pubmed:PMID], [@trial:id], [@report_id|date]
+# - Report IDs may contain pipes: [@20230103|5600862 | LAB]
+_EVIDENCE_TAG_RE = re.compile(
+    r"\[@guideline:[a-zA-Z0-9_\-]+\s*\|\s*Page\s+[^\]]+\]|"  # guideline new format: [@guideline:doc_id | Page xx]
+    r"\[@guideline:[a-zA-Z0-9_\-]+\|[^\]]+\]|"  # guideline legacy format: [@guideline:doc_id|page]
+    r"\[@pubmed\s*\|\s*\d+\]|"  # pubmed new format: [@pubmed | PMID]
+    r"\[@pubmed:\d+\]|"  # pubmed legacy format: [@pubmed:PMID]
+    r"\[@trial\s*\|\s*[^\]]+\]|"  # trial new format: [@trial | id]
+    r"\[@trial:[^\]]+\]|"  # trial legacy format: [@trial:id]
+    r"\[@[a-zA-Z0-9_\-|]+\s+\|\s+(?:LAB|Genomics|MR|CT|Imaging|Pathology)\s*\]|"  # report new format: [@report_id | LAB/Genomics/MR/CT]
+    r"\[@[a-zA-Z0-9_\-|]+\|[^\]]+\]",  # report legacy format: [@report_id|date] (catch-all for any [@...|...] pattern)
+    re.IGNORECASE
+)
 _EVIDENCE_CUES = [
     "guideline",
     "evidence",

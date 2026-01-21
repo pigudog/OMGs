@@ -16,7 +16,7 @@ from datetime import datetime
 from typing import Any, Dict, List, Optional
 
 from utils.console_utils import Color
-from utils.time_utils import parse_dt
+from utils.time_utils import parse_dt, format_duration
 
 
 ###############################################################################
@@ -243,6 +243,80 @@ def _render_interaction_table(interaction_log: Dict[str, Any]) -> str:
     return "<table class='grid'>" + header + "".join(rows) + "</table>"
 
 
+def _render_pipeline_stats_html(stats: Optional[Dict[str, Any]]) -> str:
+    """
+    Render pipeline execution statistics as HTML.
+    
+    Args:
+        stats: Dictionary containing pipeline statistics (from collect_pipeline_stats)
+    
+    Returns:
+        HTML string for statistics card, or empty string if stats unavailable
+    """
+    if not stats:
+        return ""
+    
+    html_parts = []
+    html_parts.append("<div class='card stats-card' style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #0ea5e9; margin-bottom: 16px;'>")
+    html_parts.append("<h2 style='margin-top: 0; color: #0369a1;'>📊 Pipeline Execution Statistics</h2>")
+    
+    # Total execution time
+    total_seconds = stats.get("total_seconds", 0)
+    if total_seconds > 0:
+        human_readable = format_duration(total_seconds)
+        html_parts.append("<div style='margin-bottom: 12px;'>")
+        html_parts.append(f"<strong>⏱️ Total Execution Time:</strong> {total_seconds:.1f} seconds ({human_readable})")
+        html_parts.append("</div>")
+    
+    # Total tokens
+    total_input = stats.get("total_input_tokens", 0)
+    total_output = stats.get("total_output_tokens", 0)
+    total_tokens = stats.get("total_tokens", 0)
+    
+    if total_tokens > 0:
+        html_parts.append("<div style='margin-bottom: 12px;'>")
+        html_parts.append("<strong>🔢 Total Tokens:</strong>")
+        html_parts.append("<ul style='margin: 6px 0 0 20px; padding: 0;'>")
+        html_parts.append(f"<li>Input: {total_input:,}</li>")
+        html_parts.append(f"<li>Output: {total_output:,}</li>")
+        html_parts.append(f"<li>Total: {total_tokens:,}</li>")
+        html_parts.append("</ul>")
+        html_parts.append("</div>")
+    
+    # Models used
+    model_stats = stats.get("model_stats", [])
+    provider = stats.get("provider", "")
+    if model_stats:
+        html_parts.append("<div style='margin-bottom: 8px;'>")
+        html_parts.append("<strong>🤖 Models Used:</strong>")
+        html_parts.append("<ul style='margin: 6px 0 0 20px; padding: 0;'>")
+        for model_stat in model_stats:
+            model = model_stat.get("model", "unknown")
+            call_count = model_stat.get("call_count", 0)
+            input_tokens = model_stat.get("input_tokens", 0)
+            output_tokens = model_stat.get("output_tokens", 0)
+            model_total = model_stat.get("total_tokens", 0)
+            
+            # Format model name with provider if available
+            model_display = _html_escape(model)
+            if provider:
+                provider_capitalized = provider.capitalize()
+                model_display = f"{model_display} ({provider_capitalized})"
+            
+            html_parts.append("<li style='margin-bottom: 6px;'>")
+            html_parts.append(f"<strong>{model_display}</strong>: ")
+            html_parts.append(f"{call_count} call{'s' if call_count != 1 else ''}, ")
+            html_parts.append(f"{model_total:,} tokens ")
+            html_parts.append(f"({input_tokens:,} in / {output_tokens:,} out)")
+            html_parts.append("</li>")
+        html_parts.append("</ul>")
+        html_parts.append("</div>")
+    
+    html_parts.append("</div>")
+    
+    return "\n".join(html_parts)
+
+
 ###############################################################################
 # SAVE FULL MDT LOG TO DISK
 ###############################################################################
@@ -383,6 +457,7 @@ def save_case_html_report(
     trace_mermaid: Optional[str] = None,
     # Reserved for future: role ordering in the HTML layout (currently unused).
     roles_order: Optional[List[str]] = None,
+    pipeline_stats: Optional[Dict[str, Any]] = None,
 ) -> str:
     """Write a standalone per-case HTML report.
 
@@ -439,6 +514,7 @@ def save_case_html_report(
 
     interaction_block = _render_interaction_table(interaction_log or {})
     selected_reports_table = _render_selected_reports_table(context or {})
+    pipeline_stats_html = _render_pipeline_stats_html(pipeline_stats)
 
     # NOTE: Do NOT use f-string here.
     template = """<!doctype html>
@@ -500,6 +576,7 @@ def save_case_html_report(
 </head>
 <body>
   <h1>OMGs / MDT Report</h1>
+  __PIPELINE_STATS__
   <div class=\"meta\">
     <div><b>Timestamp</b>: __TS__</div>
   </div>
@@ -598,6 +675,7 @@ def save_case_html_report(
 """
 
     html_page = template
+    html_page = html_page.replace("__PIPELINE_STATS__", pipeline_stats_html)
     html_page = html_page.replace("__TS__", _html_escape(ts))
     html_page = html_page.replace("__FINAL_OUTPUT__", _render_final_output_html(final_output))
     html_page = html_page.replace("__QUESTION_RAW__", _html_pre(question_raw))

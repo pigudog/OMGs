@@ -81,10 +81,12 @@ flowchart TB
 
 ## Evidence Tag System
 
-- `[@guideline:doc_id|page]` - Guideline reference
-- `[@pubmed:PMID]` - PubMed literature
-- `[@trial:id]` - Clinical trial
-- `[@report_id|date]` - Clinical report (lab/imaging/pathology)
+- `[@guideline:doc_id | Page xx]` - Guideline reference (note spaces around |)
+- `[@pubmed | PMID]` - PubMed literature
+- `[@trial | id]` - Clinical trial
+- `[@actual_report_id | LAB]` - Lab report (use actual report_id from data, e.g., `[@20220407|17300673 | LAB]`)
+- `[@actual_report_id | Genomics]` - Genomics/mutation report (e.g., `[@OH2203828|2022-04-18 | Genomics]`)
+- `[@actual_report_id | MR]` or `[@actual_report_id | CT]` - Imaging report (e.g., `[@2022-12-29 | MR]`)
 
 ## Configuration Files
 

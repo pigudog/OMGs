@@ -1,0 +1,1323 @@
+# FDG
+
+
+---
+[PAGE 1/12]
+
+[18F]FDG PET/CT: EANM procedure guidelines for tumour imaging:
+version 3.0
+Ronald Boellaard a,b,*, Ken Herrmann c,d, Sally F. Barrington e, Iain Cranston f,
+Felix M. Mottaghy g,h, Corneline J. Hoekstra i, Thomas Beyer j, Lucy C. Pike k,
+Antoon TM. Willemsen b, Michael M. Graham l, Jos´ee M. Zijlstra m, Fred Verzijlbergen n,
+Bernd J. Krause o, Albert J. Arends p, Wolfgang A. Weber q, Otto S. Hoekstra a,1,
+Roberto C. Delgado Bolton r,s, Giorgio Testanera e, Sigrid Stroobants t,u, Arturo Chiti v,w,
+Francesco Giammarille x, Christophe Deroose y, Wim JG. Oyen z,aa,ab
+a Radiology and Nuclear Medicine, Amsterdam University Medical Centers, Location VUMC, Amsterdam, the Netherlands
+b Nuclear Medicine and Molecular Imaging, University Medical Center Groningen, Groningen, the Netherlands
+c Department of Nuclear Medicine, West German Cancer Center, University Hospital Essen, Essen, Germany
+d German Cancer Consortium, Partner Site Essen, A Partnership Between DKFZ and University Hospital Essen, Essen, Germany
+e King’s College London and Guy’s and St Thomas’ PET Centre, School of Biomedical Engineering and Imaging Sciences, King’s College London, United Kingdom
+f Department of Diabetes & Endocrinology, Portsmouth Hospitals University NHS Trust, Portsmouth, United Kingdom
+g Department of Nuclear Medicine, RWTH Aachen University Hospital, Germany
+h Department of Radiology and Nuclear Medicine, Maastricht University Medical Center (MUMC+), Maastricht, the Netherlands
+i Jeroen Bosch Hospital ’s-Hertogenbosch, the Netherlands
+j QIMP Team, Medical University Vienna, Vienna, Austria
+k Nuclear Medicine, Mid and South Essex NHS Foundation Trust, Essex, United Kingdom
+l Department of Radiology, University of Iowa, Iowa City, USA
+m Department of Hematology, Amsterdam University Medical Centers, Location VUMC, Amsterdam, the Netherlands
+n Department of Radiology and Nuclear Medicine, Radboud University Medical Centre, Nijmegen, the Netherlands
+o Rostock University Medical Center, Rostock, Germany
+p Medical Physics Dept, Catharina Hospital, Eindhoven, the Netherlands
+q Department of Nuclear Medicine, TUM University Hospital, Bavarian Cancer Research Center, Munich, Germany
+r Department of Diagnostic Imaging (Radiology) and Nuclear Medicine, University Hospital San Pedro and Centre for Biomedical Research of La Rioja (CIBIR), Logro˜no,
+La Rioja, Spain
+s Servicio C´antabro de Salud, Santander, Spain
+t Department of Nuclear Medicine, Antwerp University Hospital, Antwerp, Belgium
+u Molecular Imaging and Radiology, Faculty of Medicine and Health Sciences, University of Antwerp, Wilrijk, Belgium
+v Vita-Salute San Raffaele University, Milan, Italy
+w IRCCS Ospedale San Raffaele, Milan, Italy
+x Nuclear Medicine and Diagnostic Imaging Section, Division of Human Health, Department of Nuclear Sciences and Applications, International Atomic Energy Agency,
+Vienna, Austria
+y Nuclear Medicine, University Hospitals Leuven, Leuven, Flanders, Belgium
+z Department of Radiology & Nuclear Medicine, Rijnstate Hospital, Arnhem, the Netherlands
+aa Humanitas University, Department of Biomedical Sciences and Humanitas Clinical and Research Centre, Department of Nuclear Medicine, Milan, Italy
+ab Radboud University Medical Centre, Department of Radiology & Nuclear Medicine, Nijmegen, the Netherlands
+* Corresponding author. Radiology and Nuclear Medicine, Amsterdam University Medical Centers, Location VUMC, Amsterdam, the Netherlands.
+E-mail addresses: r.boellaard@amsterdamumc.nl (R. Boellaard), ken.herrmann@uk-essen.de (K. Herrmann), sally.barrington@kcl.ac.uk (S.F. Barrington), iain.
+cranston@porthosp.nhs.uk
+(I. Cranston), felix.mottaghy@mumc.nl
+(F.M. Mottaghy), c.hoekstra@jbz.nl
+(C.J. Hoekstra), thomas.beyer@meduniwien.ac.at
+(T. Beyer), lucy.pike3@nhs.net (L.C. Pike), a.t.m.willemsen@umcg.nl (A.TM. Willemsen), michael-graham@uiowa.edu (M.M. Graham), j.zijlstra@amsterdamumc.
+nl (J.M. Zijlstra), fred.verzijlbergen@gmail.com (F. Verzijlbergen), dekan@med.uni-rostock.de (B.J. Krause), arends.bertjan@gmail.com (A.J. Arends), w.weber@
+tum.de (W.A. Weber), os.hoekstra@amsterdamumc.nl (O.S. Hoekstra), rbiolton@gmail.com (R.C. Delgado Bolton), arcivampiro@gmail.com (G. Testanera),
+sigrid.stroobants@uza.be (S. Stroobants), chiti.arturo@hsr.it (A. Chiti), francesco.giammarile@gmail.com (F. Giammarille), christophe.deroose@uzleuven.be
+(C. Deroose), woyen@rijnstate.nl, wim.oyen@hunimed.eu (W.JG. Oyen).
+1 Deceased 23 June 2025.
+Contents lists available at ScienceDirect
+The EANM Journal
+journal homepage: www.sciencedirect.com/journal/the-eanm-journal
+https://doi.org/10.1016/j.eanmj.2025.100006
+Received 12 August 2025; Received in revised form 9 September 2025; Accepted 11 September 2025
+1 (2025) 100006
+Available online 23 September 2025
+3051-2921/Crown Copyright © 2025 Published by Elsevier B.V. on behalf of European Association of Nuclear Medicine (EANM). This is an open access article under
+the CC BY license ( http://creativecommons.org/licenses/by/4.0/ ).
+
+
+
+---
+[PAGE 2/12]
+
+A R T I C L E  I N F O
+Keywords
+[18F]FDG
+PET/CT
+Imaging procedure
+Tumour
+Oncology
+Quantification
+A B S T R A C T
+The purpose of these guidelines is to assist physicians in recommending, performing, interpreting and reporting
+the results of [18F]FDG PET/CT for oncological imaging of adult and paediatric patients. PET is a quantitative
+imaging technique and therefore requires a common quality control (QC)/quality assurance (QA) procedure to
+maintain the accuracy and precision of quantitation. Repeatability and reproducibility are two essential re­
+quirements for any quantitative measurement and/or imaging biomarker. Repeatability relates to the uncertainty
+in obtaining the same result in the same patient when they are examined more than once on the same system.
+However, imaging biomarkers should also have adequate reproducibility, i.e. the ability to yield the same result
+in the same patient when that patient is examined on different systems and at different imaging sites. Adequate
+repeatability and reproducibility are essential for the clinical management of patients and the use of [18F]FDG
+PET/CT within multicentre trials. A common standardised imaging procedure will help promote the appropriate
+use of [18F]FDG PET/CT imaging and increase the value of publications and, therefore, their contribution to
+evidence-based medicine. Moreover, consistency in numerical values between platforms and imaging centres
+that acquire the data will potentially enhance the role of semi-quantitative and quantitative image interpretation.
+Precision and accuracy are additionally important as [18F]FDG PET/CT is used to evaluate tumour response as
+well as for diagnosis, prognosis and staging. Therefore, both the previous and these new guidelines specifically
+aim to achieve standardised uptake value harmonisation in multicentre settings.
+1. Preamble
+The European Association of Nuclear Medicine (EANM) is a profes­
+sional nonprofit medical association that facilitates communication
+worldwide among individuals pursuing clinical and research excellence
+in nuclear medicine. The EANM was founded in 1985.
+These guidelines are intended to assist practitioners in providing
+appropriate nuclear medicine care for patients. They are not inflexible
+rules or requirements of practice and are not intended, nor should they
+be used, to establish a legal standard of care.
+The ultimate judgment regarding the propriety of any specific pro­
+cedure or course of action must be made by medical professionals taking
+into account the unique circumstances of each case. Thus, there is no
+implication that an approach differing from the guidelines, standing
+alone, is below the standard of care. To the contrary, a conscientious
+practitioner may responsibly adopt a course of action different from that
+set out in the guidelines when, in the reasonable judgment of the prac­
+titioner, such course of action is indicated by the condition of the pa­
+tient, limitations of available resources or advances in knowledge or
+technology subsequent to publication of the guidelines.
+The practice of medicine involves not only the science but also the art
+of dealing with the prevention, diagnosis, alleviation and treatment of
+disease. The variety and complexity of human conditions make it
+impossible to always reach the most appropriate diagnosis or to predict
+with certainty a particular response to treatment. Therefore, it should be
+recognised that adherence to these guidelines will not ensure an accu­
+rate diagnosis or a successful outcome. All that should be expected is
+that the practitioner will follow a reasonable course of action based on
+current knowledge, available resources and the needs of the patient to
+deliver effective and safe medical care. The sole purpose of these
+guidelines is to assist practitioners in achieving this objective.
+2. Introduction
+18Fluorine-fluorodeoxyglucose ([18F]FDG) PET imaging is a non-
+invasive diagnostic tool that provides tomographic images represent­
+ing the three-dimensional distribution of positron-emitting labelled ra­
+diotracers. PET allows non-invasive quantitative assessment of
+biochemical and functional processes. The most commonly used radio­
+tracer, at present, is the 18F-labelled glucose analogue [18F]FDG which
+can be used to obtain quantitative parameters concerning the metabolic
+activity of target tissues. 18F is a cyclotron-produced radioisotope of
+fluorine that emits positrons and has a short half-life (109.7 min). It
+allows labelling of numerous molecular tracers that can be imaged
+within a few hours (typically <3 h) after injection. [18F]FDG is an
+analogue of glucose and is taken up by living cells via cell membrane
+glucose transporters and subsequently incorporated into the first step of
+the normal glycolytic pathway.
+[18F]FDG accumulation in tissue is proportional to the amount of
+glucose utilisation. Increased consumption of glucose is characteristic of
+most cancers and is in part related to overexpression of the GLUT glucose
+transporters and increased hexokinase activity. [18F]FDG PET has been
+proven to be a sensitive imaging modality for detection, staging,
+restaging and therapy response assessment in oncology [1–15]. [18F]
+FDG PET/CT provides essential information for radiation treatment
+planning, helping with critical decisions when delineating tumour vol­
+umes [16–18].
+CT uses a combined X-ray transmission source and detector system
+rotating around the patient to generate tomographic images represent­
+ing linear attenuation coefficients or ‘tissue density’. CT allows not only
+attenuation correction of the PET data but also the visualisation of
+morphological and anatomical structures with a high spatial resolution.
+Anatomical and morphological information derived from CT can be used
+to improve the localisation, extent and characterisation of lesions
+detected by [18F]FDG PET.
+These guidelines focus on the use of [18F]FDG PET/CT whole body
+imaging in oncology, where PET/CT has become an indispensable im­
+aging modality in many cancer types for staging and restaging, assess­
+ment of response to therapy and follow-up. Other indications for [18F]
+FDG PET/CT (e.g. its use in infection and inflammation, cardiac and
+brain imaging, etc.) are the subject of other, specific guidelines on these
+topics [19,20]. However, aspects relating to reproducibility and
+repeatability as well as PET/CT system performance harmonisation are
+valid for non-onocological whole body [18F]FDG PET/CT as well. Whole
+body imaging with other radiopharmaceuticals, whether radiolabelled
+with 18F or other PET-isotopes (e.g. PSMA-based labelled with 68Ga,
+64Cu, 89Zr or 18F) are also subject of other pertinent guidelines [21,22].
+This guideline does not include recommendations for quantitative per­
+formance of combined or integrated PET and MRI systems (PET/MRI),
+which are also addressed elsewhere [23]. Yet, many aspects are appli­
+cable to PET/MRI studies as well, including adherence to EARL stan­
+dards when PET/MR is used for oncology examinations.
+3. Goals
+The purpose of these guidelines is to assist physicians in recom­
+mending, performing, interpreting and reporting the results of [18F]FDG
+PET/CT for oncological imaging of adult and paediatric patients. PET is
+a quantitative imaging technique and therefore requires a common
+quality control (QC)/quality assurance (QA) procedure to maintain the
+accuracy and precision of quantitation [24]. Repeatability and repro­
+ducibility are two essential requirements for any quantitative
+R. Boellaard et al.
+The EANM Journal 1 (2025) 100006
+2
+
+
+
+---
+[PAGE 3/12]
+
+measurement and/or imaging biomarker. Repeatability relates to the
+uncertainty in obtaining the same result in the same patient when they
+are examined more than once on the same system (e.g. using 2 different
+injections on 2 different days within a short interval of 1–7 days).
+However, imaging biomarkers should also have adequate reproduc­
+ibility, i.e. the ability to yield the same result in the same patient when
+that patient is examined on different systems and at different imaging
+sites. Adequate repeatability and reproducibility are essential for the
+clinical management of patients and the use of [18F]FDG PET/CT within
+multicentre trials. A common standardised imaging procedure will help
+promote the appropriate use of [18F]FDG PET/CT imaging and increase
+the value of publications and, therefore, their contribution to
+evidence-based medicine. Moreover, consistency in numerical values
+between platforms and institutions that acquire the data will potentially
+enhance the role of semi-quantitative and quantitative image interpre­
+tation. Precision and accuracy are additionally important as [18F]FDG
+PET/CT is used to evaluate tumour response as well as for diagnosis,
+prognosis and staging/restaging. While vendor-specific settings for
+image processing of (high-end) systems are recommended for visual
+assessment of the procedures, both the previous and these new guide­
+lines specifically aim to achieve standardised uptake value (SUV) har­
+monisation in multicentre settings, allowing direct comparison of
+quantitative PET data across PET centres. In addition, use of diagnostic,
+prognostic and/or predictive models that rely on quantitative PET data
+require that [18F]FDG uptake measures are repeatable and reproducible
+[25]. Therefore, standardization and harmonisation is not only impor­
+tant in multicentre studies, but also required to allow clinical in­
+vestigators to use these quantitative data for decision-making or patient
+stratification when based on quantitative PET information.
+These guidelines address general information about [18F]FDG PET/
+CT and are provided to help the physician, physicist and technologist
+perform, interpret and document quantitative [18F]FDG PET/CT exam­
+inations, but concentrate on harmonisation/standardisation of diag­
+nostic quality and quantitative information in oncology imaging of adult
+patients. These guidelines present a standardised imaging procedure for
+static [18F]FDG PET/CT data acquisition, QC and QA. Quantification of
+[18F]FDG PET/CT is defined as quantification using SUVs [26] because
+the SUV represents the most commonly used semi-quantitative param­
+eter for analysis of tracer uptake. Furthermore, this new version of the
+guidelines only addresses combined or integrated whole-body 3D
+PET/CT systems.
+These guidelines build upon the earlier published European pro­
+cedure guidelines for quantitative [18F]FDG PET and PET/CT for tumour
+imaging [27,28] and the SNMMI procedure guidelines for tumour im­
+aging with [18F]FDG PET/CT [29]. For a detailed history of the docu­
+ment, refer to section History of the document. For [18F]FDG PET/CT
+studies in paediatric patients, refer to the specific guidelines [30].
+4. Definitions
+• An integrated or multimodality PET/CT system is a combination of a
+PET and a CT system with a single, conjoined patient handling
+system.
+• PET/CT allows sequential acquisition of PET and CT portions of the
+examination with the patient in the same position for both exami­
+nations. Both datasets are intrinsically coregistered.
+• An [18F]FDG PET/CT examination may cover various coaxial imag­
+ing ranges; these ranges are described as follows, with different de­
+nominations depending on European standard (GL 1.0/2.0) or US
+standard (defined in Current Procedural Terminology 2005):
+o Whole-body imaging: From the top of the head to the feet.
+o Torso imaging: Base of the skull (or top of the head) to mid-thigh.
+Covers most of the relevant portions of the body in many onco­
+logical diseases.
+o Limited-area tumour imaging: For the evaluation of tumour-
+related changes in a limited portion of the body.
+o Whole-body or torso imaging combined with additional imaging of
+dedicated areas (e.g. brain, head/neck, pelvis): Dedicated area
+imaging combined with whole-body or torso imaging.
+• In PET/CT studies attenuation correction and scatter correction are
+performed using the CT data.
+• A PET/CT examination can include different types of CT scan
+depending on the CT characteristics, the dose and the use (or not) of
+oral and/or intravenous contrast agents:
+o Low-dose CT scan: CT scan that is performed only for attenuation
+correction (CT-AC) and anatomical correlation of PET findings
+(with reduced voltage and/or current of the X-ray tube settings), i.
+e. a low-dose CT is not intended a priori for state-of-the-art
+radiological interpretation.
+o Diagnostic CT scan: CT scan with or without intravenous and/or
+oral contrast agents, commonly using higher X-ray doses than low-
+dose scans. Moreover, depending on the clinical application,
+breath hold procedures are used for thoracic/lung imaging.
+Diagnostic CT scan should be performed according to applicable
+local or national radiological protocols and guidelines.
+5. Common clinical indications
+Although for many cancer types [18F]FDG PET/CT has become an
+indispensable imaging modality at both the national and the interna­
+tional levels, some striking differences between individual countries
+remain (number of PET/CT scanners, accessibility, reimbursement).
+Indications for [18F]FDG PET/CT include [28,31], but are not limited
+to, the following:
+• Differentiation of benign from malignant lesions.
+• Identification of an unknown primary tumour when metastatic dis­
+ease is discovered as the first manifestation of cancer or when the
+patient presents with a paraneoplastic syndrome.
+• Staging and restaging patients with known malignancies.
+• (Early) monitoring of the effects of therapy on known malignancies.
+• Determining whether residual abnormalities detected on physical
+examination or on other imaging studies following treatment
+represent tumour or post-treatment fibrosis or necrosis.
+• Detecting tumour recurrence, especially in the presence of elevated
+tumour markers.
+• Selection of the region of tumour most likely to yield the most
+optimal diagnostic information for biopsy.
+• Prognosis and/or tumor treatment response prediction.
+• Facilitating and guiding radiation therapy planning.
+The evidence underpinning the clinical utility, impact on patient
+management, (cost) effectiveness, etc. of [18F]FDG PET/CT imaging
+continues to expand in the field of oncology and beyond. Therefore, an
+exhaustive list of indications would not be possible and would not be an
+appropriate reflection of the rapidly expanding state-of-the-art.
+Specific elements for [18F]FDG PET/CT in inflammation and infec­
+tion imaging, cardiology and neurology are not addressed in this
+guideline, but described elsewhere [20,32].
+6. Regulatory issues
+There is consistent progress in the field, with regular new literature
+and registration of [18F]FDG for several indications by the European
+Medicines Agency. In the United States, [18F]FDG is approved by the
+Food and Drug Administration for all oncological indications.
+7. Qualifications and responsibilities of personnel
+In most countries in Europe, the certified nuclear medicine physician
+who supervises the examination, writes and signs the report is respon­
+sible for the procedure, according to national laws and rules. In other
+R. Boellaard et al.
+The EANM Journal 1 (2025) 100006
+3
+
+
+
+---
+[PAGE 4/12]
+
+European countries, the referring physician or a practitioner has distinct
+responsibilities for the requested diagnostic procedures. In the United
+States, see the SNMMI Guideline for General Imaging [29] and the [18F]
+FDG PET/CT Quantitative Imaging Biomarker Alliance (QIBA) profile
+[33].
+8. Procedure/specification of the examination
+8.1. Request
+The request for the examination should include sufficient and
+adequate medical information to justify the PET/CT examination and
+should at least include the diagnosis and clinical questions to be
+answered.
+8.2. Review of the medical history
+The medical record should be reviewed with a special focus on the
+diagnosis (type of cancer and known sites), oncological history and
+relevant comorbidities, which may result in artefacts or interfere with
+image quality and/or may decrease sensitivity and specificity (e.g.
+concurrent infection/inflammation, diabetes mellitus, pertinent medi­
+cations). A short interview with the patient and/or family can help
+clarify some of these issues. Relevant laboratory tests should be
+considered. The results of prior imaging studies should be available for
+review, including planar radiography, CT, MRI, bone scanning and
+previous other PET/CTs or PET/MRI, with [18F]FDG or other tracers (e.
+g. for somatostatin receptor or prostate specific membrane antigen).
+Relevant prior studies should be directly compared with current imaging
+findings when possible. The following list shows all aspects that should
+be considered in the review:
+• Tumour type (if known) and known tumour sites.
+• Oncological history and relevant comorbidities (especially infection/
+inflammation and diabetes mellitus).
+• Neurological or psychiatric clinical presentations, including sus­
+pected neurological paraneoplastic syndromes.
+• Height and body weight (these must be determined precisely in the
+case of SUV measurements, see below). Weight must be measured
+directly prior to each [18F]FDG PET/CT examination (also in the case
+of longitudinal studies) because body weight often changes during
+the course of disease.
+• Serum glucose with date and time measured.
+• Full overview of current and recently used medication, especially
+(but not limited to) antidiabetic medication, corticosteroids, growth
+factors and sedatives. In the case of therapy evaluation: type and date
+of last relevant treatment including surgery, chemotherapy, radio­
+therapy and supportive care, such as e.g. administration of growth
+factors).
+• Results of other imaging tests (especially CT, MRI and previous PET/
+CT), including dates of acquisition, full reports and access to these
+images on a picture archiving and communication system (PACS)
+server of the referred studies and ideally the ability to view the im­
+ages directly for comparison.
+• Allergy to contrast agents. If an [18F]FDG PET/CT examination with
+intravenous CT contrast agent is strictly necessary the referring
+physician must indicate the premedication protocol to prepare the
+patient.
+• Renal function. Creatinine and/or glomerular filtration should be
+evaluated. It is recommended to follow the recommendations by
+European Society of Urogenital Radiology (ESUR, see e.g. https
+://www.esur.org/esur-guidelines-on-contrast-agents/).
+If
+renal
+function is suboptimal and an [18F]FDG PET/CT examination with
+intravenous CT contrast agent is necessary, then the referring
+physician can initiate the protocol for prevention of nephrotoxicity.
+9. Patient preparation and precautions
+The main purpose of patient preparation is to reduce tracer uptake in
+normal tissue (kidneys, bladder, skeletal muscle, myocardium, brown
+fat) while maintaining and optimising tracer uptake in the target
+structures (tumour tissue) and keeping patient radiation exposure levels
+as low as reasonably achievable (ALARA). A generally applicable pro­
+tocol is outlined below.
+9.1. Pregnancy (suspected or confirmed)
+For any diagnostic procedure in a female patient known or suspected
+to be pregnant, a clinical decision is necessary in which the benefits are
+weighed against the possible harm. The International Commission on
+Radiological Protection (ICRP) reports that for an adult patient the
+administration of 259 MBq (7 mCi) of [18F]FDG results in an absorbed
+radiation dose of 4.7 mGy to the nonpregnant uterus (i.e. 1.8 × 10−2
+mGy/MBq) [34]. Direct measurements of [18F]FDG uptake in a case
+study suggested somewhat higher doses than are currently provided in
+standard models [35]. A pregnancy test may help with the decision,
+provided the 10 day postovulation blackout is understood. In the event
+of doubt and in the absence of an emergency, the 10 day rule should be
+adopted. In Europe, national guidelines may apply.
+9.2. Breastfeeding
+The International Commission for Radiation Protection (ICRP) does
+not recommend interruption of breastfeeding after [18F]FDG adminis­
+tration since little [18F]FDG is excreted in the milk [36]. However, as the
+lactating breast accumulates [18F]FDG, it is suggested that contact be­
+tween mother and child is limited for 4 h after injection of [18F]FDG to
+reduce the radiation dose that the infant receives from external exposure
+to radiation emitted by the mother [36]. It is recommended that the
+infant is breastfed just before injection, to maximise the time between
+the injection and the next feed. Breast milk may be expressed and fed to
+the infant via a bottle for 12 h by a carer to help maximise the inter­
+ruption in close, prolonged contact between the infant and the mother.
+9.3. Instructions to patients
+Nondiabetic patients should not consume any food or liquids other
+than plain (unflavoured) water for at least 4 h prior (ideally 6 hours) to
+the start of the [18F]FDG PET/CT study (i.e. with respect to the time of
+injection of [18F]FDG). In practice, this means that patients scheduled to
+undergo the [18F]FDG PET/CT study in the morning should eat nothing
+after midnight and preferably should have only a light meal (no alcohol
+and only a small amount of carbohydrates) on the evening prior to the
+[18F]FDG PET/CT study. Those scheduled for an afternoon [18F]FDG
+PET/CT study may have a light breakfast at least 4 h prior to their PET/
+CT examination appointment. Medication can be taken as prescribed.
+• Adequate prehydration is important to ensure a sufficiently low
+concentration of [18F]FDG in the urine (fewer artefacts) and for ra­
+diation safety. For these reasons, consumption of 1 L of water during
+the 2 h prior to injection is suggested. Where necessary, the volume
+of water in the oral contrast agent if given for a diagnostic CT scan
+can be included in this estimate.
+• Coffee or caffeinated beverages are not recommended because even
+if “sugar-free” they may contain traces of simple carbohydrates and
+have the potential to induce stimulant effects; this may also be the
+case for other “sugar-free” beverages.
+• Parenteral nutrition and intravenous fluids containing glucose
+should be discontinued at least 4 h before the time of [18F]FDG in­
+jection. In addition, any infusion used to administer intravenous
+prehydration should not contain glucose.
+R. Boellaard et al.
+The EANM Journal 1 (2025) 100006
+4
+
+
+
+---
+[PAGE 5/12]
+
+• During the injection of [18F]FDG and the subsequent uptake phase,
+the patient should remain seated or lying down and silent (this is
+particularly important for head and neck cancer patients) to mini­
+mise [18F]FDG uptake in muscles. The patient should be kept warm,
+ideally starting 30–60 min before the injection of [18F]FDG and
+continue to be kept warm throughout the uptake period and scan to
+minimise [18F]FDG accumulation in brown fat (especially relevant in
+winter or if the room is air-conditioned).
+• Patients should avoid strenuous exercise for at least 6 h before the
+[18F]FDG PET/CT study, and preferably for 24 h.
+• Patients should void immediately prior to the PET/CT examination
+to reduce bladder activity.
+• The patient should be able to lie still in the PET/CT camera for the
+whole scan (e.g. typically around 10–45 min). A specific inquiry
+about claustrophobia at the time the patient is scheduled for the
+study may decrease the number of nondiagnostic studies and can­
+cellations, and allow premedication planning.
+• If possible, the patient should put their arms above their head (except
+for dedicated head and neck imaging); proper support devices (e.g.
+foam pallets) provided by the manufacturers should be employed
+whenever feasible.
+• When a diagnostic contrast-enhanced CT examination with intrave­
+nous contrast agent is to be performed, specific instructions must be
+followed (see later in these guidelines).
+9.4. Serum glucose level before [18F]FDG administration
+The main objectives of preparation with fasting are to ensure
+euglycaemia and low insulin levels in the blood, as insulin is directly
+responsible for glucose uptake by non-tumour cells. Although efforts
+should be made to decrease blood glucose to normal levels (typically 4–7
+mmol/L) and insulinaemia to low levels, if the study is indicated in a
+patient with unstable (“brittle”) or poorly controlled diabetes, hyper­
+glycaemia should not represent an absolute contraindication to the
+study, as fasting hyperglycaemia may not hamper the clinical value of
+[18F]FDG PET. Therefore, we suggest recording the blood glucose level
+and any other information that could be relevant for interpretation of
+the examination.
+Blood glucose level must be measured prior to administering [18F]
+FDG. A glucose meter (or glucometer) or a similar bedside device
+capable of performing overall blood glucose measurements can be used
+for this purpose, but a blood glucose test must be performed with a
+calibrated and validated method if plasma glucose level is to be used for
+correction of SUV measurements [37].
+It is good practice to check the blood glucose of the patient on arrival
+at the imaging centre to ensure the level is not too low (not below 4
+mmol/L, about 70 mg/dL) or too high, since this may require
+rescheduling.
+For clinical studies:
+• If the plasma glucose level is lower than 11 mmol/L (about 200 mg/
+dL), the [18F]FDG PET/CT study can be performed.
+• If the plasma glucose level is higher than or equal to 11 mmol/L
+(about 200 mg/dL), the [18F]FDG PET/CT study should ideally be
+rescheduled, but taking into consideration the patient’s circum­
+stances (as above) or the patient excluded if participating in a clinical
+trial according to protocol.
+For studies for which SUV based quantification is required:
+• The recommended upper plasma glucose levels may range between 7
+and 8.3 mmol/L (126 mg/dL and 150 mg/dL) [33]; the upper
+threshold should be specified in the study protocol or as per insti­
+tutional code of practice. Patients who fall outside the specified
+range of serum glucose levels may need to be excluded from the
+study or rescheduled, but reference should be made to the specific
+study protocol or local clinical code of practice to make the decision.
+It should be stated whether the SUV reported is corrected for glucose
+and, if so, values should be given with and without glucose correction
+although this is not common practice in many clinical centres. Glucose
+levels should be recorded and reported, to allow the calculation of
+glucose corrected SUV post hoc. Note that specifically in response
+assessment studies, blood glucose levels may change with therapy.
+There are few studies in the literature using glucose normalised SUVs
+and there is no clear evidence that glucose normalisation improves
+response monitoring or prediction of outcome as compared to uncor­
+rected SUVs. It is also unclear whether the concept of glucose normal­
+isation is valid for malignant tumours. Glucose normalisation implies
+that glucose metabolic rates are tightly regulated. In some malignancies
+with unregulated glucose metabolic rates, uncorrected SUVs can be
+more stable than glucose corrected SUVs [38].
+It is possible to reduce blood glucose in patients just above the cut-off
+threshold by asking them to hydrate while ambulating and recheck the
+blood glucose periodically until an acceptable level has been achieved.
+Insulin should not be given to reduce glucose levels (this leads to
+altered pharmacokinetics and biodistribution, including high muscle
+uptake of [18F]FDG).
+9.4.1. Diabetes
+Performing [18F]FDG PET/CT in patients with diabetes mellitus re­
+quires specific recommendations, as suggested in the Supplemental File
+1 (Preparation of patients with diabetes mellitus). As treatment regi­
+mens for diabetes may vary, it is recommended to consult with the local
+endocrinology team for a tailored approach to achieve optimal patient
+preparation.
+Kidney failure [18F]FDG imaging can be performed in patients with
+kidney failure, although the image quality may be suboptimal and prone
+to interpretation pitfalls [39].
+Recommendations for image optimisation in specific circumstances:
+o There is no reason for routine administration of sedatives (e.g. short-
+acting benzodiazepines) in adult patients. Sedatives may be consid­
+ered for patients with head and neck tumours to reduce muscle up­
+take or for claustrophobic patients. A number of agents have been
+tried reduce brown fat uptake (e.g. 5 mg of intravenous diazepam,
+administered 10 min prior to [18F]FDG [40], or 80 mg of propranolol
+given orally 2 h before [18F]FDG administration [41], but conflicting
+results have been reported [42]. Patients should be instructed not to
+drive and to travel home accompanied after sedation.
+o When patients are referred for evaluation of lesions in the heart or
+very close to the myocardium, additional dietary recommendations
+can be helpful. While there are many options for decreasing normal
+glucose uptake by the myocardium, common recommendations may
+include instructions for the patient to follow a low carbohydrate diet
+for 24 h prior to the PET/CT study, or at least to eat a low carbo­
+hydrate meal before starting the 6 h period of fasting [43,44]. A low
+carbohydrate diet helps switch the myocardium from using glucose
+to fatty acids as an energy source, reducing myocardial glucose
+uptake.
+o If desired, for additional clinical information, a dedicated brain [18F]
+FDG PET/CT scan can be performed using the same injected dose
+prior to or directly after the half- or whole-body [18F]FDG PET/CT
+scan. The brain acquisition procedure and uptake time should be
+chosen following the recent guideline for brain [18F]FDG PET/CT
+imaging [45]. The image quality of a brain scan performed as part of
+a body [18F]FDG PET/CT examination is not sufficiently high for
+detailed diagnostic purposes due to inadequate spatial resolution,
+voxel dimensions, signal to noise ratio, head fixation issues and
+possibly reconstruction algorithms. Dedicated brain scans should be
+performed with arm alongside the body.
+R. Boellaard et al.
+The EANM Journal 1 (2025) 100006
+5
+
+
+
+---
+[PAGE 6/12]
+
+o Clinical experience suggests that proper hydration mitigates urinary
+activity causing problems in the image interpretation of abdominal/
+pelvic tumours. If patients are properly hydrated before imaging,
+delayed imaging or furosemide intervention is rarely necessary. It is
+noted that some centres use transurethral catheterisation for this
+purpose but the possible risk of urinary tract infection may outweigh
+the potential benefits of improved image quality. If the pelvis is a site
+of particular concern, the CT scan may be performed first from the
+head to the pelvis followed by the PET scan in the opposite direction.
+This protocol minimises the time delay between the CT and [18F]FDG
+imaging of the pelvis, and any change in bladder volume between the
+two scans.
+o When a diagnostic CT scan with intravenous contrast agent
+enhancement is to be performed as part of the [18F]FDG PET/CT
+study, indications, contraindications and restrictions have to be
+assessed by a qualified physician.
+o Administration of the intravenous contrast agent should be timed to
+the portovenous phase. If modification of the timing is considered,
+please refer to the applicable guidelines for performing contrast-
+enhanced CT.
+o Medication that interacts with intravenous contrast agent (e.g.
+metformin for the treatment of diabetes) and relevant medical his­
+tory (e.g. compromised renal function) should be taken into
+consideration:
+o As per ESUR guideline on the use of intravenous contrast agents,
+patients with eGFR >30 mL/min/1.73 m2 and no evidence of acute
+kidney injury can continue to take metformin normally. Patients
+with eGFR <30 mL/min/1.73 m2 or with acute kidney injury
+should stop taking metformin from the time of contrast medium
+administration. eGFR should be measured within 48 hours and
+metformin can be restarted if renal function has not changed
+significantly.
+o Renal function should be checked prior to contrast agent admin­
+istration in all patients considered at risk of contrast agent neph­
+rotoxicity. Routine creatinine testing prior to contrast agent
+administration may not be necessary in all patients, depending on
+national and local guidelines for contrast administration; the
+major indications are age over 60 years, history of preexisting
+renal disease or impairment (including dialysis, kidney transplant,
+single kidney, renal cancer and renal surgery), history of diabetes
+mellitus, history of hypertension requiring medical therapy or use
+of metformin/metformin-containing drug combinations. Patients
+who do not have one of the above risk factors may not require a
+baseline serum creatinine determination before intravenous
+iodinated contrast agent administration. Estimated glomerular
+filtration rate is a better predictor of renal dysfunction than
+creatinine level alone. Patients with a high risk of nephrotoxicity
+are those with creatinine >130 μmol/L (1.5 mg/dL) and/or eGFR
+<30 mL/min/1.73 m2. If renal function assessment is required, a
+creatinine level and estimated glomerular filtration rate within the
+preceding 4 weeks is sufficient in most clinical settings, although it
+seems prudent to shorten this interval for inpatients and those with
+a new or heightened risk factor of renal dysfunction [46], see also
+ESUR guideline on the use of intravenous contrast agents.
+o Metformin is an oral hypoglycaemic agent, whose use is governed
+by international guidelines as episodes of acute kidney injury have
+been associated with its use alongside contrast agents. If the risk of
+nephrotoxicity is high, metformin can be reinstituted only after
+renal function has been reevaluated and found to be normal. An
+alternative drug for glycaemic control should be considered during
+this time [46].
+o Under some circumstances SGLT2 inhibitors (eg Dapagliflozin,
+Empagliflozin and Canagliflozin), often used as renal/cardiovas­
+cular protective agents in those at risk, have been associated with
+peri-procedure risk (euglycaemic ketosis/ketoacidosis) – if well-
+hydrated this should not be a prevalent risk, but their use will
+impact renal/bladder uptake – if this is a concern they should be
+omitted 48 hours before and 48 hours after the scan
+o The risk factors for contrast agent-induced nephropathy must be
+considered. The more important ones include: preexisting renal
+insufficiency, diabetes mellitus, dehydration or volume depletion,
+concurrent nephrotoxic drugs, high dose of contrast agent, age
+greater than 70 years and cardiovascular disease. Patients with
+normal renal function are at very low risk of contrast agent-
+induced nephropathy. Recommendations for preventing contrast
+agent-induced nephropathy in patients at risk are given in the
+ESUR guideline.
+o Risk factors for adverse reactions to contrast agent must be
+assessed. A previous reaction to contrast agent is the most
+important of all the risk factors. Adverse reactions are classified as
+either idiosyncratic (anaphylactoid) or non-idiosyncratic. Life-
+threatening reactions are rare. Premedication reduces the risk of
+recurrent anaphylaxis, but in patients with a history of a severe
+reaction, an unenhanced CT examination is preferred [47].
+o For CT imaging of the abdomen or pelvis, an intraluminal
+gastrointestinal contrast agent may be administered to improve
+visualisation of the gastrointestinal tract on CT (unless it is
+considered unnecessary for the clinical indication or it is medically
+contraindicated). Nowadays, water or water-based contrast agents
+are often used as intraluminal contrast agents that provide
+improved image quality with reduced artefacts [48]. Water can be
+an effective contrast agent allowing better or equal distention in
+the bowel and better or equal diagnostic clarity compared with
+routine barium contrast agents.
+o Some patients have difficulties such as claustrophobia, dyspnoea
+or inability to lie still for the duration of the scan. These patients
+should be carefully evaluated and an effort made to solve the
+problem with minimum consequences for the patient and the
+quality of the scan; sometimes, however, a solution cannot be
+found even if the study is repeated or rescheduled for another day.
+Occasionally sedatives can be of help in patients suffering claus­
+trophobia. These issues should be noted in order to avoid potential
+pitfalls and to facilitate interpretation of suboptimal scans.
+• In case of pregnancy where the PET scan is crucial, the scan can be
+performed with an ultra-low injected dose and prolonged scan
+duration and an ultra-low dose CT for attenuation correction, pref­
+erably on a long axial field of view scanner [49–51].
+10. Radiopharmaceutical
+• Product: 18F-fluoro-2-deoxyglucose ([18F]FDG)
+• Nuclide: Fluorine-18
+• Dosage/activity: Dependent on the system, time per bed position and
+the patient weight
+• Administration: Intravenous
+• Synthesis and quality control: as per regional guidelines e.g., Euro­
+pean Pharmacopeia or US Pharmacopeia, using fully automated
+synthesizers and a well-established method [52].
+11. Recommendations for [18F]FDG dose and administered
+activity
+The minimum recommended administered [18F]FDG activity and
+PET acquisition duration for each bed position must be adjusted so that
+the product of the [18F]FDG activity and PET acquisition duration is
+equal to or greater than the specifications given in Supplemental File 2.
+Therefore, a higher activity may be used if it is necessary to reduce the
+duration of the study or, preferably, a reduced activity may be used
+whilst increasing the study duration, in accordance with ALARA
+principles.
+In the previous versions of this guideline two recommendations are
+provided for determining the minimum [18F]FDG administered dose in
+R. Boellaard et al.
+The EANM Journal 1 (2025) 100006
+6
+
+
+
+---
+[PAGE 7/12]
+
+adults, which assume a linear and a quadratic [53] relationship,
+respectively, between PET acquisition time per bed position, patient
+weight and recommended [18F]FDG activity – see Supplemental File 2.
+Compared with linear activity prescription, the quadratic scheme results
+in a slightly higher administered activity for patients >75 kg; this
+compensates for the lower signal to noise ratio (and hence degraded
+image quality) due to excessive attenuation, which occurs when linear
+activity prescription is applied.
+In Supplemental File 2, specifications are given for standard short
+axial field of view (<35 cm) or analogue PET/CT systems. These rec­
+ommended activities are too high for more recent digital and large
+axial field of view systems. For these systems, it is strongly rec­
+ommended to follow the procedure provided by EARL [54,55]. In
+many cases, this procedure has been performed and published [54,
+55].
+For children and adolescents, administered [18F]FDG activity should
+adhere to the EANM or SNMMI recommendations on paediatric radio­
+pharmaceutical administration [56–58] or national activity limits, if
+national limits are lower. Furthermore, there are specific guidelines for
+[18F]FDG PET/CT in paediatric oncology [30]. With the introduction of
+large axial field of view/high sensitivity systems, opportunities to
+further reduce activity to children or fetus and thus radiation dose
+should be considered, but at this time there are insufficient data to
+provide clear recommendations [50,51].
+Supplemental File 3 lists the materials and procedures for prepara­
+tion and administration of [18F]FDG and contrast agents. Supplemental
+File 4 summarizes PET and CT acquisition protocols.
+12. Checking for pitfalls
+• Metal implants can cause severe artefacts in the CT image. Metal
+artefact reduction techniques may be used to minimise these arte­
+facts. When the CT data are used for attenuation correction of the
+PET data, it should be considered that even when using metal arte­
+fact reduction techniques, metal implants will likely result in
+reduced PET image quality and will prevent proper quantification (at
+and near the metal implant). [18F]FDG uptake should be confirmed
+by inspecting the PET images without attenuation correction.
+• In most PET/CT systems today, the measured radial FOV of the CT
+scanner is smaller than that of the PET scanner. Truncating the CT
+images causes reconstruction artefacts and thus inaccurate quanti­
+fication of the PET study. When available, truncation correction al­
+gorithms may be applied during image reconstruction (and/or
+during processing of the CT data used for attenuation correction). As
+the amount of truncation may vary across studies and patients, it will
+be difficult to ensure proper quantification across studies and pa­
+tients. It is, therefore, strongly recommended that any truncation of
+the CT images is avoided. If available, the use of extended CT and
+PET FOVs is recommended. It should be noted that truncation of the
+CT images may occasionally seriously affect scatter correction
+scaling as well, and may lead to inaccurate quantitative results.
+• Make sure that all clocks (including the dose calibrators – the one at
+the hospital and the one at the external laboratory dispensing the
+[18F]FDG – and the PET/CT system) are synchronised and that this is
+regularly checked. Consult the local service engineer when needed.
+Clocks should be synchronised with the official local time to within 1
+min (in the case of studies using 18F).
+13. Image reconstruction
+13.1. PET image reconstruction
+The PET emission data must be corrected for geometrical response
+and detector efficiency (normalisation), system dead time, random co­
+incidences, scatter and attenuation (see also Supplemental File 4 for
+specific recommendations regarding the use of contrast enhanced CT).
+• All the corrections necessary to obtain quantitative image data
+should be applied during the reconstruction process.
+• During image reconstruction, matrix sizes, zoom factors, filters and
+other reconstruction settings should be chosen such that recon­
+structed images comply with EARL2 standards, in particular when
+quantitative tumor uptake assessments are required [59,60]. Addi­
+tional reconstructions may be applied that are optimized for visual
+inspection and/or locally preferred. For lymphoma response to avoid
+a positive bias in Deauville scores that may lead to treatment changes
+(usually escalation) based on clinical trials that established the evi­
+dence base using earlier technology reconstructions compliant with
+EARL1 may be used [61–63].
+• When available, time-of-flight information should be used during
+reconstruction.
+• Resolution modelling during reconstruction or other new recon­
+struction or image processing methods may be applied. In the case of
+multicentre studies or when quantification is required, the use of
+these methods typically entails additional filtering during or after
+image reconstruction in order to meet the EARL 2 standardised/
+harmonised quantitative PET/CT system performance specifications
+[59].
+• Spatial filters applied during or after reconstruction should not
+exceed a full-width at half-maximum of 7 mm, not even to mitigate
+Gibbs artefacts when using resolution modelling. In these cases the
+use of reconstructed images generated without resolution modelling
+should be considered.
+It is good clinical practice to perform reconstructions with and
+without attenuation correction to identify potential reconstruction ar­
+tefacts caused by the CT-AC. Both attenuation-corrected (AC-PET) and
+non-attenuation-corrected PET (NAC-PET) images should be available
+for interpretation and lesions seen on the AC-PET images may need to be
+checked on the NAC-PET images, particularly when adjacent to highly
+attenuating materials, such as contrast agent or metal implants.
+Further standardisation of reconstruction settings is necessary to
+obtain standardised and harmonised SUV recoveries. This requires
+reconstruction settings to be chosen so as to achieve matching conver­
+gence and spatial resolution across various systems and sites, especially
+within a multicentre setting. These reconstruction settings should thus
+be chosen to meet the multicentre QC harmonising specifications for
+both calibration QC and image quality/SUV recovery QC, for example as
+described on the EARL website. Indicative reconstruction settings for
+each system type are provided on request through EARL. At present,
+EARL standards 2 are the preferred performance standards, including for
+new large axial field of view systems [55].
+It may be appropriate to perform multiple PET reconstructions with
+different reconstruction settings. For quantitative assessment of the
+[18F]FDG PET/CT study, the approved reconstruction settings, which
+meet the EARL 2 standardised performance standards, should be used.
+An additional reconstruction designed for optimal visual assessment
+may be performed for qualitative interpretation only. This reconstruc­
+tion may be performed, for example, in order to maximise lesion
+detectability or to meet local preferences for visual interpretation of the
+[18F]FDG PET/CT study, as was suggested and demonstrated by Refs.
+[64,65]. Similar strategies may be applied for different PET/CT systems
+as well, provided quantitative interpretations/analyses are performed
+using the EARL 2 standards approved reconstruction settings.
+13.2. CT image reconstruction
+For diagnostic CT scans, acquisition parameters should be deter­
+mined according to specific or national radiology society guidelines. The
+CT data that are acquired during the PET/CT study are usually recon­
+structed using filtered back projection. Recently introduced iterative
+reconstruction methods for CT data may be applied, if available on the
+PET/CT system. Depending on the CT protocol and the clinical case,
+R. Boellaard et al.
+The EANM Journal 1 (2025) 100006
+7
+
+
+
+---
+[PAGE 8/12]
+
+separate CT reconstructions may be performed for diagnostic purposes
+and CT-AC. The reconstructions will probably differ in their slice
+thickness, slice overlap, filter etc. In addition to the reconstruction
+kernel that modulates the image characteristics within the slices (i.e.
+spatial resolution, edge enhancement and noise texture), a longitudinal
+filter in the z-dimension is often used to optimise the resolution in the
+axial direction and to modify the slice sensitivity profiles. The measured
+attenuation values (μ) are normalised to the density of water (μwater) in
+order to assign a device-independent numerical value in the framework
+of the reconstruction:
+CT value = Hounsfield units = 1, 000 x (μ −μwater)/μwater
+In modern CT systems the spatial resolution in the z-direction is
+almost as high as the transaxial resolution and nearly isotropic, allowing
+high-quality images in the coronal and sagittal views. Additionally,
+postprocessing such as volume rendering or maximum intensity pro­
+jections benefit from using the high-quality reconstructed CT data.
+14. Image analysis and interpretation
+[18F]FDG PET images scaled according to SUV should be provided
+with and without attenuation correction for image analysis/reading.
+The data without attenuation correction are useful to assess attenuation
+correction artefact due to patient motion and/or PET versus CT
+misalignment. On all slices (of the attenuation-corrected data) quanti­
+tative information with respect to size and [18F]FDG uptake should be
+available. Images should be evaluated using software that is able to
+display fused PET and CT data. Monitors used for image viewing should
+be approved for clinical use in radiology and nuclear medicine. Perfor­
+mance and settings for monitors should be in line with published stan­
+dards (e.g. the Medical Electrical Safety Standards, IEC 60601-1/EN
+60601-1; the Medical ECM Standards, IEC 60601-1-2, EN 60601-1-2; or
+national guidelines). Further, viewing conditions (e.g. background light)
+must be appropriate to ensure adequate image inspection. Image data
+should be stored on an approved PACS system and in DICOM format;
+further details and recommendations regarding image data format for
+storage can be found in the QIBA [18F]FDG PET/CT profile [33].
+The presence or absence of abnormal [18F]FDG accumulation on the
+PET images, especially focal accumulation, in combination with the
+intensity of uptake and anatomical size should be evaluated. Absence of
+tracer accumulation in anatomical abnormalities seen on the CT scan or
+other imaging may be particularly significant. When appropriate, the
+report should correlate PET/CT findings with those of other diagnostic
+tests, interpret them in that context and consider them in relation to the
+clinical data. For response assessment, the images should be viewed over
+the same dynamic range, i.e. a fixed scale; for example, from SUV = 0 to
+SUV = 10 using an inverse linear scale for PET images and an appro­
+priate colour scale for fused images.
+Both non attenuation corrected and attenuation-corrected images
+may need to be reviewed to identify artefacts caused by contrast agents,
+metal implants and/or patient motion. In clinical trials, criteria for vi­
+sual and quantitative analysis should be defined a priori within the study
+protocol.
+SUV is increasingly used in clinical studies in addition to visual as­
+sessments. SUV is a measurement of the uptake in a tumour normalised
+on the basis of a distribution volume. Most of the published literature
+relates to SUV (normalised to body weight). SUV normalised to lean
+body mass (LBM) is referred to as SUL [66], and is a recommended
+quantitative measure of [18F]FDG uptake. SUL should preferably be
+calculated alongside SUV, as follows:
+SUL = ActVOI (kBq/mL)/[Actadministered (MBq)/LBM (kg)]
+The following calculation is applied in the case of plasma glucose
+correction:
+SUglu = ActVOI (kBq/mL)
+× Glucplasma (mmol/L)
+/[{
+Actadministered (MBq)
+/
+LBM (kg)
+}
+× 5.0 (mmol/L)
+]
+where ActVOI is the activity concentration measured in the volume of
+interest (VOI) and Actadministered is the net administered activity cor­
+rected for the physical decay of [18F]FDG to the start of acquisition and
+corrected for the residual activity in the syringe and/or administration
+lines and system. LBM is calculated according to the formula of Jan­
+mahasatian et al. [67]:
+LBMM = 9, 270 × weight / (6, 680 + 216 × BMI)
+LBMF = 9, 270 × weight / (8, 780 + 244 × BMI)
+where LBMM and LBMF are the LBM for males and females, and BMI is
+body mass index (weight/height2), and weight and height are in kilo­
+grams and metres, respectively. These formulas are more realistic than
+the previously used James formulas, which fail at weights greater than
+about 120 kg [68]. Patient height, weight and gender should be reported
+to allow other SUV normalisations, such as weight and body surface
+area. In these cases LBM is replaced by body weight and body surface
+area, respectively, in the SUL equations given above.
+The use of SUL may be preferred for response assessment studies
+when large changes in body weight may occur during the course of the
+treatment. As stated above, it is recommended plasma glucose levels be
+measured using validated methodology and that SUL be calculated with
+and without plasma glucose correction in all response monitoring
+studies. Note that the measured glucose content (Glucplasma) is normal­
+ised for an overall population average of 5.0 mmol/L so that the SULs
+with and without correction for glucose content (SULglu and SUL,
+respectively) are numerically practically identical (on average) [69].
+14.1. Physiological [18F]FDG distribution and interpretation criteria
+Accumulation of [18F]FDG can normally be seen in the brain, heart,
+kidneys and urinary tract at 60 min after injection [70]. The brain has a
+high uptake of [18F]FDG (about 7 % of injected activity). The myocar­
+dium in a typical fasting state primarily uses free fatty acids, but after
+glucose load it uses glucose. In the fasting state, [18F]FDG uptake in the
+myocardium should be low, but this is variable. Unlike glucose, [18F]
+FDG is excreted by the kidneys into the urine and accumulates in the
+urinary tract. There is some degree of [18F]FDG accumulation in muscles
+that can be increased following exercise, eating and insulin. Uptake in
+the gastrointestinal tract varies from patient to patient and may be
+increased, for example, in patients taking metformin. Uptake is common
+in lymphoid tissue in Waldeyer’s ring and in the lymphoid tissue of the
+terminal ileum and caecum. Physiological thymic uptake may be pre­
+sent, especially in children and young adults. Uptake in brown fat may
+be observed more commonly in young, thin patients and when the
+ambient temperature is low. No physiological uptake is seen in cortical
+bone (unless free 18F-fluoride is present as a contaminant), but bone
+marrow uptake can be present to a variable degree in patients receiving
+growth factors (granulocyte colony-stimulating factor, G-CSF, and
+granulocyte macrophage CSF, GM-CSF) and patients with marrow pro­
+liferation for other reasons such as infection, inflammation or anaemia,
+and following chemotherapy.
+• Due to the high physiological [18F]FDG uptake in the brain, [18F]
+FDG PET/CT is of limited value for detection of brain metastases.
+Consequently, [18F]FDG PET/CT should not be used for the primary
+detection or exclusion of brain metastases.
+• Increased [18F]FDG uptake is observed in many neoplastic lesions,
+but also in granulation tissue (e.g. wound healing), infections and
+other inflammatory processes.
+R. Boellaard et al.
+The EANM Journal 1 (2025) 100006
+8
+
+
+
+---
+[PAGE 9/12]
+
+• Patterns of [18F]FDG uptake, established CT morphological criteria
+and correlation with patient history, physical examination and other
+imaging modalities may be helpful for differentiation between ma­
+lignant and benign lesions.
+• SUVs and related quantitative measures, such as metabolic tumour
+volume (MTV) and total lesion glycolysis (TLG), have gained
+increasing importance for therapy response monitoring [3,5,8,9,71,
+72] and for prognostic assessment [73,74].
+• There is no single lower limit for the intensity of [18F]FDG uptake
+required for the detection of abnormal uptake within lesions as it
+depends on the degree of contrast between the tumour and its im­
+mediate surroundings. This contrast is related to several patho­
+physiological factors, the most significant of which are histology
+([18F]FDG avidity of the type of tumour), volume of vital tumour
+cells, movement during ‘static’ acquisition (e.g. blurred signals in the
+case of pulmonary foci) and physiological high uptake in adjacent
+background. Furthermore, the sensitivity of [18F]FDG PET/CT may
+be reduced in diabetic patients with elevated glucose levels.
+• Although there are no conclusive data on the optimum interval be­
+tween chemotherapy and [18F]FDG PET/CT, an interval of at least 10
+days between the last treatment and the [18F]FDG PET/CT exami­
+nation is generally considered adequate for measurement of response
+[28]. This is because of the balance between any possible effects on
+tumour metabolism (such as macrophage impairment) and systemic
+effects (such as bone marrow activation following myelosuppression,
+which may or may not be caused by growth factors). If an interval of
+10 days is not possible, [18F]FDG PET/CT should be delayed as long
+as possible after the previous chemotherapy administration (i.e. until
+as close as possible to the next treatment cycle). This is to allow in­
+flammatory effects including infiltration of macrophages which peak
+a few days after chemotherapy to reduce and to image at the time of
+maximum cell regrowth [75,76].
+• The effects of growth factors (G-CSF and GM-CSF) on [18F]FDG
+biodistribution (due to enhanced bone marrow uptake) generally last
+for more than 2 weeks after the final administration, depending on
+the formulation of growth factors used [28].
+• It is assumed that the (side) effects of radiotherapy are longer-lasting;
+investigation of patients with head and neck carcinoma treated with
+radiation have shown that radiation-induced inflammation can be
+seen on the [18F]FDG PET/CT images for up to 2–3 months after the
+end of treatment [77]. Waiting 2 or 3 months following completion
+of radiation therapy before obtaining a PET/CT scan is clinically
+appropriate as patients rarely develop clinical problems requiring
+[18F]FDG PET/CT imaging in the first 3 months after treatment.
+• In patients who have undergone surgery, uptake depends on the
+extent of surgery, the presence of infection/inflammation in the
+wound, and how long after surgery images are acquired. For
+example, there are few visible signs of a mediastinoscopy after 10
+days but sternotomy signs will remain visible for months. Following
+surgery, it is recommended to delay the [18F]FDG PET/CT for at least
+6 weeks due to postsurgical inflammation if the scan is primarily
+being done to assess the region around the surgical field. The delay of
+6 weeks is also important if draining nodal stations, adjacent to the
+surgical field, need to be evaluated.
+Recommendations for documentation and reporting of [18F]FDG
+PET/CT studies are summarized in Supplemental File 5.
+15. Additional notes
+The Royal College of Radiologists (RCR) (UK) provides recommen­
+dations on reporting that include relevant aspects that should be taken
+into account [78]:
+• Limitations of staging: Every diagnostic test has a threshold. The
+threshold used may vary depending on the implications for treatment
+(to optimise diagnostic accuracy or according to treatment intent).
+• Indeterminate lesions and management of uncertainty: Indetermi­
+nate lesions should be the point of clinical–radiological discussion
+and/or multidisciplinary review, if better characterisation of the
+lesion will further affect patient management. The options for
+resolving uncertainties are discussion, further investigation, inter­
+vention and active monitoring (watch and wait).
+• Multidisciplinary team meetings: Multidisciplinary team meetings
+allow a team approach to patient management to take into account
+and evaluate all aspects of the disease prior to individualised therapy
+planning. It should be possible to review all relevant examinations in
+a multidisciplinary meeting, especially when there is discrepancy
+between clinical and imaging findings or other diagnostic uncer­
+tainty. During the meetings, the results of the discussions should be
+recorded, and discrepancies noted and, if necessary, reported as an
+addendum to the imaging report. If additional tests are needed, these
+should be scheduled as soon as possible. The presence of a reporting
+radiologist or nuclear medicine specialist is essential [79].
+• Imaging the treated patient or follow-up studies: The format of the
+report should mirror the one at baseline. Reports of follow-up studies
+must include clear statements regarding the detection of new disease
+as this implies metabolic progression of disease. Also, descriptions on
+the direction of change, indeterminate lesions and mixed responses
+and findings at variance with one another that may reflect different
+pathologies should be stated [33].
+For further reading see also the SNMMI’s reporting guidance for
+oncological [18F]FDG PET/CT imaging [80,81], the Royal College of
+Radiologists’ recommendations on reporting [79] and the SNMMI’s
+Procedure Standard for General Imaging [29].
+16. Definitions of volumes of interest
+Recommended tumour uptake metrics:
+• The maximum as well as the peak SUV or SUL (SUVmax, SULmax and
+SUVpeak, SULpeak) may be required for individual lesions if specified
+in the study protocol and/or the lesion with the maximum uptake as
+considered clinically relevant for routine clinical studies [82]. The
+SUVmax and SULmax are measures of the single whole voxel in a
+particular lesion with highest/maximum uptake. The maximum up­
+take should be defined on original reconstructed PET images, i.e. no
+additional rebinning, resampling, smoothing or any other manipu­
+lation by the user is allowed. SUVpeak and SULpeak are based on a 3D
+peak VOI with 1.0 mL spherical volume (1.2 cm diameter) [33,65]
+positioned such that the average value across all positions within the
+lesion is maximised. Often this coincides with the location (not
+value) of SUVmax and SULmax, but this may not necessarily be the case
+in all situations. SUVpeak and SULpeak are preferred to maximum
+measurements as peak measures are less affected by noise levels and
+variations in image qualities [54,59].
+• The MTV and TLG are of increasing interest and these parameters or
+their change may have prognostic and/or predictive value. These
+parameters should therefore be reported, if available, depending on
+the indication [74,83,84]. These metrics require a 3D delineation or
+segmentation of the [18F]FDG avid lesions. When TLG and MTV are
+used the applied segmentation method should be clearly specified
+and described. An absolute threshold ≥4.0 with a minimum lesion
+size of 3 mL has been agreed for measurement in aggressive lym­
+phomas at baseline and recommended methods and/or benchmarks
+will have recently become available [85].
+• The MTV represents the volume of the given VOI (or sum of VOIs
+sometimes also referred to as total MTV). TLG is the product of the
+R. Boellaard et al.
+The EANM Journal 1 (2025) 100006
+9
+
+
+
+---
+[PAGE 10/12]
+
+VOI average SUV or SUL (SUVmean, SULmean) multiplied by the cor­
+responding MTV.
+17. Some considerations with respect to semiautomated
+percentage threshold-based delineation methods
+The isocontour based on 41 % of SUVmax may correspond best with
+the actual dimensions of the tumour, but only for lesions with high
+tumour-to-background values and with relatively homogeneous tumor
+[18F]FDG uptake distribution and background uptakes. This isocontour
+method, however, does not always result in useful tumour volume def­
+initions because of noise, tracer uptake inhomogeneities in tumour and
+background and sometimes low tumour-to-background ratios. In that
+case, a VOI based on a higher isocontour value or a fixed SUV threshold
+can be chosen. For example, in lymphoma the SUV equal to 4 threshold
+has been proposed as benchmark method [85].
+When VOIs are generated (semi-)automatically, it is not always
+possible to generate a reliable VOI if there is a high background or an
+area of physiological high uptake (bladder, heart) close to/adjacent to
+the lesion, or if there is low uptake in the lesion. Therefore, any (semi-)
+automatically or artificial intelligence generated VOIs must be checked
+visually and manually corrected, if needed.
+Other tumour segmentation methods have been described for MTV
+assessment and/or tumour delineation for radiotherapy planning in the
+literature, such as contrast-oriented methods, gradient-based methods,
+iterative methods and fuzzy clustering/segmentation methods [86] or
+segmentations generated by artificial intelligence based methods
+[87–90]. These, however, are not routinely used and not widely avail­
+able for determining SUVs, although several methods outperform the
+simple percentage threshold-based methods [86].
+The authors realise the importance of using more accurate and
+improved delineation methods and, indeed, the use of more advanced
+methods is encouraged. In particular when [18F]FDG PET/CT-based
+tumour delineations are used for radiotherapy planning, the delinea­
+tion methods used and the tumour segmentation obtained should be
+critically reviewed and supervised. Specific guidelines for the use of
+[18F]FDG PET/CT in radiotherapy have been published elsewhere [91].
+18. Liver uptake assessment
+As suggested by Wahl et al. [66], assessment of liver SUL or SUV may
+be a useful quality index of an [18F]FDG PET/CT study. Liver mea­
+surements may be assessed by placing a spherical VOI of diameter 3 cm
+in the upper right lobe of the liver, avoiding any pathological uptake and
+organ boundaries, as indicated also in the QIBA [18F]FDG PET/CT
+profile [33]. Liver SULs or SUVs should be reported along with lesion
+SUL or SUV data. The study protocol or clinical guidelines should define
+acceptable levels for liver SUL and required actions when specifications
+are not met. For clinical studies that are quantitatively assessed, mean
+liver SULs are expected to be within 1.0 and 2.2 (and mean liver SUVs
+within 1.3 and 3.0). Liver SUVs or SULs outside this range may indicate
+incorrect [18F]FDG administration or technical issues, and the use of
+quantitative analysis of the study should be reconsidered and the un­
+certainties discussed in the study report as appropriate [92].
+19. Mediastinal uptake assessment
+Measurement of the mediastinal blood pool can be very useful for
+assessing what is considered normal or physiological [18F]FDG uptake.
+In recent years, it has been used for the interim evaluation of response to
+therapy in lymphoma and assessment of pulmonary nodules in the
+Herder criteria. For pulmonary nodule assessment, it is calculated by
+drawing several VOIs inside the thoracic aorta and measuring the
+(mean) uptake inside the vessel, taking care not to include in the VOI the
+vessel wall, where uptake can be slightly higher when there is vascular
+inflammation. Blood pool SUL measurements are expected to be around
+1.2 (and blood pool SUVs around 1.6) [66].
+20. Tumor to liver ratio
+Use of tumor to liver ratios (TLR) may be considered to mitigate
+some PET uncertainties. By normalizing lesion uptake to liver, inac­
+curacies in e.g. administered activity, patient weight, synchronization of
+clocks and inaccurate PET/CT system calibration may be mitigated as
+these factors cancel out in the TLR. When calculating TLR it is recom­
+mended to use SUVpeak for lesion uptake and the SUVmean from a 3 cm
+diameter spherical VOI to assess liver uptake, except for Deauville
+scoring, which is currently based on SUVmax of lesion and liver, although
+this may be revised in the near future. The TLR can be calculated as:
+TLR = SUVpeak
+lesion /
+SUVmean
+liver
+By calculating TLR in this way TLR will be least sensitive to noise and
+variations in image quality (among patients and scanners) [54,59,92].
+In all cases reliability of liver SUV should be verified for the specific
+study and/or trial. Many technical and biological factors can affect liver
+uptake and TLR is not necessarily more reproducible than SUVs despite
+mitigating some technical PET uncertainties [92].
+Details on quality control and inter-institution PET/CT system per­
+formance harmonisation are provided in Supplemental File 6.
+21. Radiation exposure to the patient
+The absorbed radiation dose of [18F]FDG PET/CT is the combination
+of the radiation exposure from the radiopharmaceutical and the CT
+study. The radiation dose of diagnostic CT is a matter of concern,
+particularly for paediatric examinations. The mean dose for a CT scan
+depends on applications, protocols and CT systems. Especially in chil­
+dren but also in adults it is important to optimise the radiation exposure
+with respect to the diagnostic question. Recent advances in technology
+have allowed the radiation doses to be significantly reduced relative to a
+conventional CT or PET examination [49].
+The coefficient for effective dose from [18F]FDG in adults is 1.7 ×
+10−2 mSv/MBq [93], i.e. about 3 mSv for an administered activity of
+185 MBq. The radiation exposure related to a CT scan carried out as part
+of an [18F]FDG PET/CT study depends on the intended use of the CT
+study and may differ from patient to patient: the CT scan can be a very
+low-dose scan (with lower tube voltage and current) for attenuation
+correction only, or a low-dose or intermediate-dose scan for attenuation
+correction and localisation of PET lesions, or additionally a diagnostic
+CT scan can be indicated (in most cases with intravenous contrast agent
+administration and deep inspiration for chest CT) for a full diagnostic CT
+examination. The effective CT dose ranges from 1 to 20 mSv and may be
+even higher for a static high-resolution diagnostic CT examination.
+Given the variety of CT systems and protocols, the radiation exposure for
+a [18F]FDG PET/CT study should be estimated specifically for a given
+imaging system and protocol. Guidelines provided by European radio­
+logical societies should be consulted regarding effective dose from the
+CT examination.
+The choice of imaging protocol strongly depends on the clinical
+question and must be considered for every single case. Paediatric studies
+require special attention. For the optimisation of [18F]FDG PET/CT
+studies, dose reduction techniques should be considered.
+22. Summary and key update points compared to the previous
+version
+In this version of the guideline substantial updates were made
+compared with previous versions. These concern all aspects of the
+guideline. Herewith a few most important changes are mentioned.
+Regarding clinical indications and patient preparation, the recommen­
+dations for handling of and controlling diabetic patients has been
+R. Boellaard et al.
+The EANM Journal 1 (2025) 100006
+10
+
+
+
+---
+[PAGE 11/12]
+
+substantially revised. Furthermore, with the ongoing development of
+PET technology, recommendations regarding [18F]FDG activity and
+performance standards have been updated. The optimal and minimal
+recommended [18F]FDG activity should now preferably be based on a
+series of experiments, as suggested by EARL, and image reconstructions
+for quantitative studies should preferably be performed following EARL
+standards 2. Other quantitative metrics have been discussed in more
+detail with literature updates, such as recommendations to measure
+metabolic tumour volume in aggressive lymphoma patients, and rec­
+ommendations for deriving tumour to liver ratio have now been
+provided.
+23. History of the document
+These guidelines provide an update of the previously published [18F]
+FDG PET and PET/CT: EANM Procedure Guidelines for Tumour PET
+Imaging: version 1.0 and version 2.0 [27,28], and the SNMMI Procedure
+Guidelines for Tumour Imaging with 18F-[18F]FDG PET/CT 1.0 [29],
+and address new technologies and developments. There have been
+major changes in some sections, but others may have hardly been
+changed. Indeed, there is similarity with the previous version and
+certain sections have not been altered. Moreover, consideration is given
+to compliance with international initiatives, such as those by the
+Quantitative Imaging Biomarkers Alliance [33].
+CRediT authorship contribution statement
+Ronald Boellaard: Writing – review & editing, Writing – original
+draft. Ken Herrmann: Writing – review & editing, Writing – original
+draft. Sally F. Barrington: Writing – review & editing, Writing – orig­
+inal draft. Iain Cranston: Writing – review & editing, Writing – original
+draft. Felix M. Mottaghy: Writing – review & editing, Writing – original
+draft. Corneline J. Hoekstra: Writing – review & editing, Writing –
+original draft. Thomas Beyer: Writing – review & editing, Writing –
+original draft. Lucy C. Pike: Writing – review & editing, Writing –
+original draft. Antoon TM. Willemsen: Writing – review & editing,
+Writing – original draft. Michael M. Graham: Writing – review &
+editing, Writing – original draft. Jos´ee M. Zijlstra: Writing – review &
+editing, Writing – original draft. Fred Verzijlbergen: Writing – review
+& editing, Writing – original draft. Bernd J. Krause: Writing – review &
+editing, Writing – original draft. Albert J. Arends: Writing – review &
+editing, Writing – original draft. Wolfgang A. Weber: Writing – review
+& editing, Writing – original draft. Otto S. Hoekstra: Writing – original
+draft. Roberto C. Delgado Bolton: Writing – review & editing, Writing
+– original draft. Giorgio Testanera: Writing – review & editing, Writing
+– original draft. Sigrid Stroobants: Writing – review & editing, Writing
+– original draft. Arturo Chiti: Writing – review & editing, Writing –
+original draft. Francesco Giammarille: Writing – review & editing,
+Writing – original draft. Christophe Deroose: Writing – review &
+editing, Writing – original draft. Wim JG. Oyen: Writing – review &
+editing, Writing – original draft.
+Declaration of competing interest
+Ronald Boellaard has a research grant from Siemens Healthineers
+and is the scientific chair of the EARL PET accreditation program. Jos´ee
+Zijlstra has received research grants from Roche, Karyopharm, Gilead
+and AbbVie. Christophe M Deroose is/has been a consultant for (fees
+received by institution): Sirtex, Advanced Accelerator Applications,
+Novartis, Ipsen, Terumo, PSI CRO, Immedica Pharma, Molecular Part­
+ners, Nuclear Research and consultancy, and ITM. His institution has
+received travel fees from: GE Healthcare, Sirtex. Wolfgang Weber has
+received research support from Siemens Healthineers he has also acted
+as a consultant for Siemens Healthineers. TUM University Hospital has a
+license for the production of FDG (FDGTUM). Arturo Chiti is Editor-in-
+Chief of The EANM Journal but had no role or involvement in the
+evaluation or peer review of this manuscript. All other authors declared
+no relevant conflicts of interest.
+Acknowledgments
+We thank the authors of the EANM [18F]FDG PET/CT guidelines
+version 1.0 and 2.0 for their valuable contributions, which in part are
+also incorporated in this new version of the guidelines. We acknowledge
+the (previous and/or current) support of Richard P. Baum, Emile FI
+Comans, Adriaan A. Lammertsma, Markus N. Lonsdale, Paul K. Marsden,
+Mike O’Doherty, Anne M. Paans, Cornelia Schaefer-Prokop. Moreover,
+we thank the EANM committees and national delegates for their critical
+review of the manuscript. Finally, we gratefully acknowledge the
+extensive support of the EANM Office in Vienna during the development
+of these guidelines.
+Appendix A. Supplementary data
+Supplementary data to this article can be found online at https://doi.
+org/10.1016/j.eanmj.2025.100006.
+Data availability
+No data was used for the research described in the article.

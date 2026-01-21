@@ -6,6 +6,8 @@ This module provides:
 - is_retryable_error(): Determine if an error is retryable
 """
 
+import time
+import random
 from typing import Optional, Callable, Any
 from core.agent import Agent, AgentError
 from servers.trace import TraceLogger
@@ -116,13 +118,20 @@ def safe_agent_call(
             
             # Check if retryable and we have retries left
             if is_retryable_error(e.original_error) and attempt < max_retries:
+                # Exponential backoff with jitter for rate limits
+                # For 429 errors, wait longer: 2^attempt seconds (2s, 4s, 8s, ...)
+                delay = (2 ** attempt) + random.uniform(0, 1)
+                print(f"{Color.WARNING}[RETRY] {role}/{stage} attempt {attempt + 1}/{max_retries + 1}, waiting {delay:.1f}s before retry...{Color.RESET}")
+                time.sleep(delay)
+                
                 if trace:
                     trace.emit("agent_retry", {
                         "role": role,
                         "stage": stage,
                         "attempt": attempt + 1,
                         "error": str(e.original_error),
-                        "error_type": type(e.original_error).__name__
+                        "error_type": type(e.original_error).__name__,
+                        "delay_seconds": delay
                     })
                 continue
             

@@ -16,7 +16,7 @@ def _init_rag(
     model_name: str = "BAAI/bge-m3",
     device: str = "auto",
     collection_name: str = "chair_chunks",
-    timeout_seconds: int = 10,
+    timeout_seconds: int = 30,
 ):
     """
     Initialize RAG system using ChromaDB PersistentClient API.
@@ -356,7 +356,7 @@ def rag_search_pack(
         citation_tag = ""
         if doc_id:
             page_str = str(page) if isinstance(page, int) else "NA"
-            citation_tag = f"[@guideline:{doc_id}|{page_str}]"
+            citation_tag = f"[@guideline:{doc_id} | Page {page_str}]"
 
         snippet = text.replace("\n", " ").strip()
         if len(snippet) > 300:
@@ -421,7 +421,7 @@ def pubmed_search_pack(
             snippet = snippet[:300] + "…"
 
         score_text = f"score={score:.4f} " if isinstance(score, (int, float)) else ""
-        citation_tag = f"[@pubmed:{pmid}]" if pmid else ""
+        citation_tag = f"[@pubmed | {pmid}]" if pmid else ""
         lines.append(f"[{i}] {score_text}PMID {pmid} {citation_tag}\n    {title}\n    {snippet}")
 
         raw.append({
@@ -473,16 +473,17 @@ def _clean_histology_for_query(histology: str) -> str:
     if not histology:
         return ""
     
-    # Common histology mappings (Chinese to English)
+    # Common histology mappings (Chinese to English for data compatibility)
+    # Chinese terms are kept for processing bilingual data sources
     histology_map = {
-        "透明细胞癌": "clear cell carcinoma",
-        "浆液性癌": "serous carcinoma",
-        "高级别浆液性癌": "high-grade serous carcinoma",
-        "低级别浆液性癌": "low-grade serous carcinoma",
-        "子宫内膜样癌": "endometrioid carcinoma",
-        "黏液性癌": "mucinous carcinoma",
-        "未分化癌": "undifferentiated carcinoma",
-        "癌肉瘤": "carcinosarcoma",
+        "透明细胞癌": "clear cell carcinoma",  # Chinese: "clear cell carcinoma"
+        "浆液性癌": "serous carcinoma",  # Chinese: "serous carcinoma"
+        "高级别浆液性癌": "high-grade serous carcinoma",  # Chinese: "high-grade serous carcinoma"
+        "低级别浆液性癌": "low-grade serous carcinoma",  # Chinese: "low-grade serous carcinoma"
+        "子宫内膜样癌": "endometrioid carcinoma",  # Chinese: "endometrioid carcinoma"
+        "黏液性癌": "mucinous carcinoma",  # Chinese: "mucinous carcinoma"
+        "未分化癌": "undifferentiated carcinoma",  # Chinese: "undifferentiated carcinoma"
+        "癌肉瘤": "carcinosarcoma",  # Chinese: "carcinosarcoma"
     }
     
     # Remove common Chinese prefixes/suffixes
@@ -513,7 +514,7 @@ def _clean_histology_for_query(histology: str) -> str:
     
     return ""
 
-
+# ！！！ key for evidence search!!!!
 def build_rag_query_for_mdt(agent, question: str, key_facts: str | None = None) -> str:
     """
     Generate a concise English RAG query from structured CASE JSON.
@@ -529,6 +530,54 @@ def build_rag_query_for_mdt(agent, question: str, key_facts: str | None = None) 
     rag_prompts = get_mdt_prompts().get("rag", {})
     
     facts_block = f"# KEY FACTS (from structured case)\n{key_facts}\n\n" if key_facts else ""
+    
+    # IMPORTANT: If MUTATION_REPORT exists, ignore GENETICS section from case_core
+    # Mutation reports are the source of truth - case_core may have "not reported" even when reports exist
+    has_mutation_report = key_facts and "MUTATION_REPORT" in key_facts
+    
+    # Add mutation report interpretation guidance if mutation report is present
+    mutation_guidance = ""
+    if has_mutation_report:
+        # Extract the full raw_text from mutation report
+        mut_report_raw = ""
+        if key_facts:
+            mut_match = re.search(r'MUTATION_REPORT:.*?full_text=([^\n]+)', key_facts, re.DOTALL)
+            if mut_match:
+                mut_report_raw = mut_match.group(1).strip()
+                print(f"mut_report_raw: {mut_report_raw}")
+        
+        # Build comprehensive mutation guidance with raw text and interpretation rules
+        mutation_guidance = "\n⚠️ COMPREHENSIVE NGS GENETIC TEST RESULTS:\n"
+        mutation_guidance += "This is a ~20,000 gene NGS panel report. The raw text is:\n"
+        mutation_guidance += f'"""{mut_report_raw}"""\n\n'
+        mutation_guidance += "INTERPRETATION RULES (CRITICAL):\n"
+        mutation_guidance += "• '未检出' (not detected) = NO pathogenic mutation found\n"
+        mutation_guidance += "• '（视为阴性）' (considered negative) = NO pathogenic mutation found\n"
+        mutation_guidance += "• '阴性' (negative) = negative result\n"
+        mutation_guidance += "• If a gene of interest is NOT mentioned in the report, it means NO pathogenic mutation (comprehensive panel)\n"
+        mutation_guidance += "• Genes with specific variants listed (e.g., 'NM_xxx:exon:c.xxx:p.xxx') = POSITIVE mutation detected\n\n"
+        mutation_guidance += "🚨 Include relevant genetic findings in your query based on the tumor type.\n"
+        mutation_guidance += "🚨 NEVER say 'not tested' or 'not reported' - comprehensive NGS WAS done.\n\n"
+    
+    # Only add GENETICS guidance if NO mutation report exists (mutation report takes precedence)
+    genetics_guidance = ""
+    if not has_mutation_report and key_facts and "GENETICS:" in key_facts:
+        genetics_match = re.search(r'GENETICS:\s*HRD=([^;]+);\s*BRCA1=([^;]+);\s*BRCA2=([^;]+)', key_facts)
+        if genetics_match:
+            hrd_val = genetics_match.group(1).strip()
+            brca1_val = genetics_match.group(2).strip()
+            brca2_val = genetics_match.group(3).strip()
+            genetics_guidance = "\nCRITICAL: In KEY FACTS, you see 'GENETICS: HRD={}; BRCA1={}; BRCA2={}'. ".format(hrd_val, brca1_val, brca2_val)
+            if hrd_val != "Unknown" and hrd_val != "unknown":
+                genetics_guidance += f"HRD test WAS performed, result is {hrd_val.lower()}. You MUST say 'HRD-{hrd_val.lower()}' in your query, NOT 'not reported'. "
+            if brca1_val != "Unknown" and brca1_val != "unknown":
+                genetics_guidance += f"BRCA1 test WAS performed, result is {brca1_val.lower()}. "
+            if brca2_val != "Unknown" and brca2_val != "unknown":
+                genetics_guidance += f"BRCA2 test WAS performed, result is {brca2_val.lower()}. "
+            if (brca1_val != "Unknown" and brca1_val != "unknown") or (brca2_val != "Unknown" and brca2_val != "unknown"):
+                genetics_guidance += "You MUST say 'BRCA-negative' or 'BRCA1/BRCA2-negative' in your query, NOT 'not reported'. "
+            genetics_guidance += "The word 'Negative' or 'Positive' means the test was done. Only 'Unknown' means not tested.\n\n"
+    
     query_builder_template = rag_prompts.get("query_builder",
         "You are preparing a single concise English query to retrieve guideline/clinical evidence "
         "for this ovarian cancer MDT case.\n\n"
@@ -536,14 +585,33 @@ def build_rag_query_for_mdt(agent, question: str, key_facts: str | None = None) 
         "Write ONE line (<=40 words) focusing on:\n"
         "- tumor type/histology and platinum status;\n"
         "- key metastases / disease extent;\n"
-        "- key molecular markers if mentioned (e.g., BRCA/HRD/MSI/PD-L1/ATM);\n"
+        "- key molecular markers if mentioned (e.g., BRCA/HRD/MSI/PD-L1);\n"
         "- major clinical constraints (e.g., anemia, organ function, performance).\n"
         "Do NOT mention report_ids, dates, hospital names, or patient identifiers.\n"
         "If KEY FACTS include histology or platinum/genetic status, you MUST include them.\n"
         "Do NOT say 'unknown' if a KEY FACT is provided.\n"
         "Output ONLY the query text."
     )
-    prompt = facts_block + query_builder_template.format(question=question)
+    # Build prompt with mutation_guidance at the END (right before final output instruction)
+    # This addresses LLM position bias - important instructions should be near the output
+    base_prompt = query_builder_template.format(question=question)
+    
+    # Insert mutation_guidance right before "Output ONLY" for maximum impact
+    if mutation_guidance and "Output ONLY" in base_prompt:
+        parts = base_prompt.rsplit("Output ONLY", 1)
+        base_prompt = parts[0] + mutation_guidance + "Output ONLY" + parts[1]
+    elif mutation_guidance:
+        base_prompt = base_prompt + "\n" + mutation_guidance
+    
+    # Add genetics_guidance if present (no mutation report)
+    if genetics_guidance and "Output ONLY" in base_prompt:
+        parts = base_prompt.rsplit("Output ONLY", 1)
+        base_prompt = parts[0] + genetics_guidance + "Output ONLY" + parts[1]
+    elif genetics_guidance:
+        base_prompt = base_prompt + "\n" + genetics_guidance
+    
+    prompt = facts_block + base_prompt
+    
     try:
         raw_query = agent.run_selection(prompt).strip()
     except Exception as e:
@@ -597,7 +665,7 @@ def sanitize_rag_query(query: str) -> tuple[str, bool]:
     q = re.sub(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", "[REDACTED_EMAIL]", q)
     # Phones / long digit sequences (avoid removing short clinical numbers like CA-125)
     q = re.sub(r"\b\d{8,}\b", "[REDACTED_ID]", q)
-    # Common identifier labels
+    # Common identifier labels (English and Chinese: medical record number, patient ID, ID card number)
     q = re.sub(r"(?i)\b(meta[_\s-]?info|patient[_\s-]?id|report[_\s-]?id|mrn|住院号|病历号|身份证号)\s*[:=]\s*\S+", "", q)
     # Collapse extra whitespace
     q = re.sub(r"\s{2,}", " ", q).strip()
@@ -631,10 +699,10 @@ def summarize_rag_evidence(agent, rag_pack: str, rag_raw: List[Dict[str, Any]] =
         if source == "guideline":
             doc_id = r.get("doc_id", "")
             page = r.get("page", "NA")
-            tag = f"[@guideline:{doc_id}|{page}]"
+            tag = f"[@guideline:{doc_id} | Page {page}]"
         elif source == "pubmed":
             pmid = r.get("pmid", "")
-            tag = f"[@pubmed:{pmid}]"
+            tag = f"[@pubmed | {pmid}]"
         else:
             tag = f"[unknown source {i}]"
         ref_tags_list.append(f"  [{i}] {tag}")
@@ -685,11 +753,11 @@ Each bullet MUST use the corresponding tag from the list above.
             if source == "guideline":
                 doc_id = r.get("doc_id", "")
                 page = r.get("page", "NA")
-                tag = f"[@guideline:{doc_id}|{page}]"
+                tag = f"[@guideline:{doc_id} | Page {page}]"
                 text = r.get("text", "")
             elif source == "pubmed":
                 pmid = r.get("pmid", "")
-                tag = f"[@pubmed:{pmid}]"
+                tag = f"[@pubmed | {pmid}]"
                 text = r.get("abstract", "") or r.get("title", "")
             else:
                 tag = f"[unknown source {i}]"

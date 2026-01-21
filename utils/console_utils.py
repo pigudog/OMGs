@@ -76,20 +76,20 @@ def normalize_trial_compact(t: Dict[str, Any]) -> Dict[str, Any]:
 
     t = t or {}
 
-    # --- Common bilingual key mapping ---
+    # --- Common bilingual key mapping (English and Chinese keys for data compatibility) ---
     name = (
         t.get("name")
         or t.get("trial_name")
-        or t.get("项目名称")
-        or t.get("研究名称")
-        or t.get("标题")
+        or t.get("项目名称")  # Chinese: "project name"
+        or t.get("研究名称")  # Chinese: "study name"
+        or t.get("标题")  # Chinese: "title"
     )
 
     phase = (
         t.get("phase")
         or t.get("trial_phase")
-        or t.get("期别")
-        or t.get("试验分期")
+        or t.get("期别")  # Chinese: "phase"
+        or t.get("试验分期")  # Chinese: "trial phase"
     )
 
     # Some datasets store cancer type/conditions under Chinese keys
@@ -97,25 +97,25 @@ def normalize_trial_compact(t: Dict[str, Any]) -> Dict[str, Any]:
         t.get("conditions")
         or t.get("cancer_type")
         or t.get("disease")
-        or t.get("适应症")
-        or t.get("疾病")
-        or t.get("肿瘤类型")
-        or t.get("病种")
+        or t.get("适应症")  # Chinese: "indication"
+        or t.get("疾病")  # Chinese: "disease"
+        or t.get("肿瘤类型")  # Chinese: "tumor type"
+        or t.get("病种")  # Chinese: "disease type"
     )
 
     line_of_therapy = (
         t.get("line_of_therapy")
         or t.get("treatment_line")
-        or t.get("目标受试者治疗线数")
-        or t.get("治疗线数")
+        or t.get("目标受试者治疗线数")  # Chinese: "target subject treatment line number"
+        or t.get("治疗线数")  # Chinese: "treatment line number"
     )
 
     biomarker = (
         t.get("biomarker")
         or t.get("required_biomarker")
         or t.get("marker")
-        or t.get("生物标志物")
-        or t.get("分子标志物")
+        or t.get("生物标志物")  # Chinese: "biomarker"
+        or t.get("分子标志物")  # Chinese: "molecular marker"
         or t.get("PD-L1")
     )
 
@@ -125,31 +125,31 @@ def normalize_trial_compact(t: Dict[str, Any]) -> Dict[str, Any]:
         or t.get("regimen")
         or t.get("intervention")
         or t.get("arms")
-        or t.get("试验治疗/用药")
-        or t.get("治疗方案")
-        or t.get("用药")
+        or t.get("试验治疗/用药")  # Chinese: "trial treatment/medication"
+        or t.get("治疗方案")  # Chinese: "treatment plan"
+        or t.get("用药")  # Chinese: "medication"
     )
 
-    doctor = t.get("doctor") or t.get("PI") or t.get("医生") or t.get("研究者")
+    doctor = t.get("doctor") or t.get("PI") or t.get("医生") or t.get("研究者")  # Chinese: "doctor", "researcher"
 
     sponsor = (
         t.get("sponsor")
         or t.get("applicant")
-        or t.get("申请单位")
-        or t.get("申办方")
-        or t.get("申办单位")
+        or t.get("申请单位")  # Chinese: "applicant unit"
+        or t.get("申办方")  # Chinese: "sponsor"
+        or t.get("申办单位")  # Chinese: "sponsor unit"
     )
 
     lead_or_participation = (
         t.get("lead_or_participation")
         or t.get("lead")
-        or t.get("牵头/参与")
-        or t.get("牵头")
-        or t.get("参与")
+        or t.get("牵头/参与")  # Chinese: "lead/participate"
+        or t.get("牵头")  # Chinese: "lead"
+        or t.get("参与")  # Chinese: "participate"
     )
 
-    contacts = t.get("contacts") or t.get("联系人") or t.get("contact")
-    phones = t.get("phones") or t.get("联系电话") or t.get("phone")
+    contacts = t.get("contacts") or t.get("联系人") or t.get("contact")  # Chinese: "contact person"
+    phones = t.get("phones") or t.get("联系电话") or t.get("phone")  # Chinese: "contact phone"
 
     if isinstance(contacts, str):
         contacts = [contacts]
@@ -160,15 +160,15 @@ def normalize_trial_compact(t: Dict[str, Any]) -> Dict[str, Any]:
     key_inclusion = (
         t.get("key_inclusion")
         or t.get("inclusion_criteria")
-        or t.get("入组标准")
-        or t.get("入组排除标准")
-        or t.get("纳入标准")
+        or t.get("入组标准")  # Chinese: "enrollment criteria"
+        or t.get("入组排除标准")  # Chinese: "enrollment/exclusion criteria"
+        or t.get("纳入标准")  # Chinese: "inclusion criteria"
     )
 
     key_exclusion = (
         t.get("key_exclusion")
         or t.get("exclusion_criteria")
-        or t.get("排除标准")
+        or t.get("排除标准")  # Chinese: "exclusion criteria"
     )
 
     # keep original raw blocks as well, to avoid any future content loss

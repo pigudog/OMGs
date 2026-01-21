@@ -35,6 +35,7 @@ def generate_final_output(
     merged: Optional[str] = None,
     initial_ops: Optional[Dict[str, str]] = None,
     interaction_log: Optional[Dict[str, Any]] = None,
+    trial_note: Optional[str] = None,
     trace: Optional[Any] = None
 ) -> str:
     """Generate final MDT decision output from Chair agent.
@@ -46,6 +47,7 @@ def generate_final_output(
         merged: MDT discussion summary (key knowledge, controversies, etc.)
         initial_ops: Initial opinions from all experts
         interaction_log: Full interaction log of MDT discussions
+        trial_note: Clinical trial recommendation from assistant (if any)
         trace: Optional TraceLogger for error tracking
     
     Returns:
@@ -65,6 +67,11 @@ def generate_final_output(
     if interaction_log:
         interaction_summary = _build_discussion_summary(interaction_log)
         discussion_summary += f"# DISCUSSION INTERACTIONS\n{interaction_summary}\n\n"
+    
+    # Build trial recommendation section if available
+    trial_section = ""
+    if trial_note and trial_note.strip():
+        trial_section = f"# CLINICAL TRIAL RECOMMENDATION (from assistant)\n{trial_note.strip()}\n\n"
 
     prompt = f"""
 As the MDT chair for gynecologic oncology, you are seeing the patient at OUTPATIENT TIME: {clinic_time}.
@@ -75,10 +82,11 @@ Based on PATIENT FACTS + MDT discussion + FINAL refined plans from all experts, 
 # FINAL REFINED PLANS (All experts, all rounds)
 {expert_final}
 
-STRICT RULES:
-- Any factual statement about past tests/treatments must include [@report_id|date] or say unknown.
-- Any statement derived from guideline or PubMed literature must include [@guideline:doc_id|page] or [@pubmed:PMID].
+{trial_section}STRICT RULES:
+- Any factual statement about past tests/treatments must include [@actual_report_id | LAB/Genomics/MR/CT] using actual report_id from report data (e.g., [@20220407|17300673 | LAB], [@OH2203828|2022-04-18 | Genomics], [@2022-12-29 | MR], [@2022-12-29 | CT]). Note: Always use spaces around | for consistency: [@xxx | yyy]. or say unknown.
+- Any statement derived from guideline or PubMed literature must include [@guideline:doc_id | Page xx] or [@pubmed | PMID].
 - If you cite guideline/PubMed evidence in Core Treatment Strategy or Change Triggers, include at least one tag in that bullet.
+- If a clinical trial has been recommended by the assistant and you judge it appropriate for the patient, mention it naturally within Core Treatment Strategy or Change Triggers and cite it using [@trial | trial_id] format (e.g., [@trial | 350]).
 - If experts disagree, pick the safest plan and state the key uncertainty.
 - You MUST consider the MDT discussion summary and interactions above when making your decision.
 
@@ -237,11 +245,11 @@ def append_references_to_output(
                     name=parsed_trial.get("name", ""),
                     reason=parsed_trial.get("reason", ""),
                 )
-                # Silently add trial tag for References (will appear in Clinical Trials section)
-                # Don't add explicit "Recommended Trial:" line - let it be natural
-                trial_tag = f"[@trial:{trial_id}]"
+                # Check if chair naturally cited the trial; if not, add as fallback
+                trial_tag = f"[@trial | {trial_id}]"
                 if trial_tag.lower() not in final_output.lower():
-                    # Just inject the tag at end so References picks it up
+                    # Fallback: chair should have cited this naturally per prompt instruction
+                    print(f"[INFO] Trial {trial_id} was recommended but not cited by chair - adding tag as fallback")
                     final_output = final_output.strip() + f" {trial_tag}"
         
         # Build the references section
@@ -326,6 +334,13 @@ def build_enhanced_case_for_trial(
     # Add mutation reports information (full raw_text is critical)
     if mut_reports:
         parts.append("# MUTATION / GENETIC REPORTS (Full Text for Trial Matching)")
+        parts.append("⚠️ COMPREHENSIVE NGS PANEL (~20,000 genes) - INTERPRETATION RULES:")
+        parts.append("• '未检出' (not detected) = NO pathogenic mutation found")
+        parts.append("• '（视为阴性）' (considered negative) = NO pathogenic mutation found")
+        parts.append("• '阴性' (negative) = negative result")
+        parts.append("• Genes with specific variants (e.g., 'NM_xxx:exon:c.xxx:p.xxx') = POSITIVE mutation")
+        parts.append("• If a gene is NOT mentioned, it means NO pathogenic mutation (comprehensive panel)")
+        parts.append("")
         for i, mut_rpt in enumerate(mut_reports, 1):
             report_id = mut_rpt.get("report_id", "Unknown")
             report_date = mut_rpt.get("report_date", "")
@@ -410,5 +425,16 @@ Trial Recommendation:
     except Exception:
         pass
     
-    answer = agent.chat(prompt).strip()
+    # Use safe_agent_call with retry for rate limit errors (429)
+    from utils.error_handling import safe_agent_call
+    
+    answer = safe_agent_call(
+        agent=agent,
+        prompt=prompt,
+        role="trial_selector",
+        stage="trial_matching",
+        fallback="Trial Recommendation:\n- id: None\n- name: None\n- Reason: Unable to process trial matching due to API error\n- Missing eligibility confirmations (0-2 items):\n  - None",
+        trace=None,  # Trial matching doesn't use trace logger
+        max_retries=2  # Retry up to 3 times for rate limits (429 errors) with exponential backoff
+    ).strip()
     return answer

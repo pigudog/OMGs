@@ -1,0 +1,2542 @@
+# NICE_NG241_GeneticRisk_Ovarian_2024
+
+
+---
+[PAGE 1/68]
+
+Ovarian cancer: identifying
+and managing familial and
+genetic risk
+NICE guideline
+Published: 21 March 2024
+www.nice.org.uk/guidance/ng241
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+
+
+
+---
+[PAGE 2/68]
+
+Your responsibility
+The recommendations in this guideline represent the view of NICE, arrived at after careful
+consideration of the evidence available. When exercising their judgement, professionals
+and practitioners are expected to take this guideline fully into account, alongside the
+individual needs, preferences and values of their patients or the people using their service.
+It is not mandatory to apply the recommendations, and the guideline does not override the
+responsibility to make decisions appropriate to the circumstances of the individual, in
+consultation with them and their families and carers or guardian.
+All problems (adverse events) related to a medicine or medical device used for treatment
+or in a procedure should be reported to the Medicines and Healthcare products Regulatory
+Agency using the Yellow Card Scheme.
+Local commissioners and providers of healthcare have a responsibility to enable the
+guideline to be applied when individual professionals and people using services wish to
+use it. They should do so in the context of local and national priorities for funding and
+developing services, and in light of their duties to have due regard to the need to eliminate
+unlawful discrimination, to advance equality of opportunity and to reduce health
+inequalities. Nothing in this guideline should be interpreted in a way that would be
+inconsistent with complying with those duties.
+Commissioners and providers have a responsibility to promote an environmentally
+sustainable health and care system and should assess and reduce the environmental
+impact of implementing NICE recommendations wherever possible.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 2 of
+68
+
+
+
+---
+[PAGE 3/68]
+
+Contents
+Overview ...................................................................................................................................... 5
+Who is it for? ..........................................................................................................................................
+5
+Recommendations ....................................................................................................................... 6
+1.1 Organisation of services ..................................................................................................................
+6
+1.2 Information and support ................................................................................................................. 10
+1.3 Assessing the risk of having a pathogenic variant ....................................................................... 18
+1.4 Criteria for genetic counselling and genetic testing (in genetics services or in gynaecology
+oncology multidisciplinary services) ................................................................................................... 20
+1.5 Gene panel testing .......................................................................................................................... 23
+1.6 Assessing the risk of developing ovarian cancer ......................................................................... 24
+1.7 Primary preventive medicines ........................................................................................................ 25
+1.8 Risk-reducing surgery ..................................................................................................................... 26
+1.9 Pathology protocol for handling specimens from risk-reducing surgery ................................... 32
+1.10 Hormone replacement therapy after risk-reducing surgery ...................................................... 33
+Terms used in this guideline ................................................................................................................. 34
+Recommendations for research ................................................................................................. 37
+Key recommendations for research .................................................................................................... 37
+Other recommendations for research ................................................................................................. 39
+Rationale and impact ...................................................................................................................40
+Organisation of services ....................................................................................................................... 40
+Information and support ....................................................................................................................... 43
+Assessing the risk of having a pathogenic variant ............................................................................ 48
+Criteria for genetic testing ................................................................................................................... 50
+Gene panel testing ................................................................................................................................ 53
+Assessing the risk of developing ovarian cancer ............................................................................... 54
+Primary preventive medicines .............................................................................................................. 56
+Risk-reducing surgery ........................................................................................................................... 57
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 3 of
+68
+
+
+
+---
+[PAGE 4/68]
+
+Pathology protocol for handling specimens from risk-reducing surgery ........................................ 63
+Hormone replacement therapy after risk-reducing surgery ............................................................. 64
+Context ......................................................................................................................................... 66
+Finding more information and committee details ..................................................................... 67
+Update information ..................................................................................................................... 68
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 4 of
+68
+
+
+
+---
+[PAGE 5/68]
+
+This guideline is the basis of QS18.
+Overview
+This guideline covers assessing the familial and genetic risk of having a pathogenic variant
+associated with ovarian cancer in adults.
+In women, trans men and non-binary people with female reproductive organs (ovaries,
+fallopian tubes and/or a uterus), having a pathogenic variant increases the risk of
+developing ovarian cancer (familial ovarian cancer). As well as risk assessment, this
+guideline covers risk management and decision-making support for people born with
+female reproductive organs who have, or are at risk of having, a pathogenic variant
+associated with ovarian cancer.
+Men, trans women and non-binary people born with male reproductive organs cannot
+develop ovarian cancer, but if they have a pathogenic variant associated with ovarian
+cancer, they can pass the variant on to their children, and may be at risk of developing
+other cancers. This guideline covers risk assessment, but it does not cover managing risk
+or decision-making support for people born with male reproductive organs.
+NICE has also produced a guideline on the recognition and initial management of ovarian
+cancer.
+Who is it for?
+• Healthcare professionals working in primary, secondary and tertiary care
+• Cancer alliances
+• Commissioners (including clinical commissioning groups and NHS England specialised
+commissioning)
+• Voluntary sector organisations
+• Adults (18 years and older) with a genetic risk of having a pathogenic variant
+associated with ovarian cancer, and their families and carers (where appropriate)
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 5 of
+68
+
+
+
+---
+[PAGE 6/68]
+
+Recommendations
+People have the right to be involved in discussions and make informed decisions
+about their care, as described in NICE's information on making decisions about your
+care.
+Making decisions using NICE guidelines explains how we use words to show the
+strength (or certainty) of our recommendations, and has information about
+prescribing medicines (including off-label use), professional guidelines, standards
+and laws (including on consent and mental capacity), and safeguarding.
+1.1 Organisation of services
+Commissioners and service providers in all settings (primary
+care, genetics services, gynaecology oncology and familial ovarian
+cancer multidisciplinary services)
+1.1.1
+Commissioners and service providers should ensure that there are referral
+pathways to genetics services and gynaecology oncology multidisciplinary
+services for people at risk of having a pathogenic variant associated with ovarian
+cancer. Such pathways can be facilitated by providing, for example:
+• clear referral criteria (see recommendation 1.3.1 in the section on assessing
+the risk of having a pathogenic variant)
+• an online referral form (to be completed by the referring clinician)
+• a family history questionnaire (to be completed by the person) that
+accompanies the referral form
+• information and support (see the section on information and support).
+1.1.2
+Commissioners and service providers should raise awareness of which groups of
+people may be at risk of having a pathogenic variant associated with ovarian
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 6 of
+68
+
+
+
+---
+[PAGE 7/68]
+
+cancer.
+1.1.3
+Commissioners and service providers should ensure that there is training and
+information available for healthcare professionals on equality and inclusiveness
+issues that could improve access to services, for example, for people who:
+• are from under-represented or underserved communities who may need
+more support to access services (for example, people who are physically
+disabled, people with neurodevelopmental conditions or a learning disability,
+people from Black, Asian and ethnic minority backgrounds, and people who
+are LGBTQ+)
+• may not come forward for testing because they do not realise that they may
+be at risk of having a pathogenic variant associated with ovarian cancer (for
+example, men, trans women and non-binary people born with male
+reproductive organs).
+Primary care services
+1.1.4
+Primary care should be responsible for:
+• providing information and support (see the section on information and
+support)
+• referral to genetics services and other specialist services (see
+recommendation 1.1.1 and recommendation 1.3.1 in the section on assessing
+the risk of having a pathogenic variant).
+Genetics services
+1.1.5
+Genetics services should be responsible for:
+• providing information and support (see the section on information and
+support)
+• assessing the risk of having a pathogenic variant for people who do not have
+ovarian cancer
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 7 of
+68
+
+
+
+---
+[PAGE 8/68]
+
+• genetic counselling and genetic testing for people who do not have ovarian
+cancer
+• genetic counselling and genetic testing for people diagnosed with non-
+epithelial ovarian cancer (see recommendation 1.4.6 in the section on people
+with ovarian cancer)
+• arranging cascade testing of relatives, if appropriate
+• assessing the risk of developing ovarian cancer
+• discussing potential management options
+• referral (if needed) to the familial ovarian cancer multidisciplinary team and
+other specialist services.
+Gynaecology oncology multidisciplinary team
+1.1.6
+The gynaecology oncology multidisciplinary team should be responsible for
+mainstream genetic counselling and genetic testing for people with invasive
+epithelial ovarian cancer.
+Familial ovarian cancer multidisciplinary team
+1.1.7
+The familial ovarian cancer multidisciplinary team should be responsible for:
+• clinical care pathways and management protocols
+• the lifelong care of people at risk of familial ovarian cancer (those with a
+pathogenic variant or those above a risk threshold; see the section on criteria
+for genetic counselling and genetic testing)
+• providing information and support (see the section on information and
+support)
+• assessing the risk of developing ovarian cancer
+• discussing potential management options (for example, risk-reducing
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 8 of
+68
+
+
+
+---
+[PAGE 9/68]
+
+surgery)
+• carrying out surveillance and reviews
+• liaising with other services and healthcare professionals, including primary
+care and specialist services (see recommendation 1.1.9)
+• contributing to local and network audits
+• facilitating access to clinical trials.
+1.1.8
+The familial ovarian cancer multidisciplinary team should have a designated lead
+clinician, and include healthcare professionals with expertise in areas including:
+• clinical genetics
+• gynaecology
+• gynaecological oncology.
+1.1.9
+The familial ovarian cancer multidisciplinary team should have established
+relationships with, and agreed referral pathways to, other specialist services such
+as:
+• psychological services
+• menopause services
+• fertility services
+• breast cancer risk management services
+• ovarian cancer services
+• colorectal cancer services.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 9 of
+68
+
+
+
+---
+[PAGE 10/68]
+
+For a short explanation of why the committee made these recommendations and how
+they might affect services, see the rationale and impact section on organisation of
+services.
+Full details of the evidence and the committee's discussion are in evidence review C:
+configuration of services.
+1.2 Information and support
+These recommendations are for anyone who has a familial or genetic risk of having a
+pathogenic variant associated with ovarian cancer. This includes women, men, trans
+people and non-binary people, and their family or carers (as appropriate).
+Information and support about familial ovarian cancer in all
+settings
+1.2.1
+Healthcare professionals in all settings (primary care, genetics services and
+specialist multidisciplinary services) should provide ongoing information and
+support in line with:
+• table 1 on information and support about familial ovarian cancer in all settings
+• NICE's guideline on patient experience in adult NHS services – particularly
+the section on knowing the patient as an individual
+• NICE's guideline on people's experience in adult social care services –
+particularly the section on overarching principles related to enabling people
+to make decisions (for example, in relation to communication)
+• NICE's guideline on shared decision making – particularly the section on
+putting shared decision making into practice.
+Table 1 Information and support about familial ovarian cancer in all settings
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 10 of
+68
+
+
+
+---
+[PAGE 11/68]
+
+• Information about the risk of ovarian cancer from a person's family history.
+• Information about the risk of ovarian cancer for people from Ashkenazi Jewish,
+Sephardi Jewish and Greenlander backgrounds.
+• Information for men, trans women and non-binary people born with male
+reproductive organs who may have a genetic risk of having a pathogenic variant
+associated with ovarian cancer and other cancers.
+• The message that if the person's family history alters (for example, if someone in
+their family develops ovarian cancer), their risk may alter.
+• Advice to return to discuss any implications if there is a change in family history
+or symptoms develop.
+• Ovarian cancer symptom awareness information – bloating, feeling full on eating,
+pelvic or abdominal pain, increased urinary urgency and/or frequency); also see
+the section on awareness of symptoms and signs in the NICE guideline on
+ovarian cancer.
+• Advice about ovarian cancer risk, including information about:
+－ level of ovarian cancer risk in relation to the general population
+－ hormone replacement therapy (HRT) and oral contraceptives
+－ lifestyle factors
+－ family size and timing.
+• Information about referral for genetic counselling and genetic testing.
+• Information about the pathway for risk assessment and management.
+• Information and support about referral to a different service, what the service
+does and why the person is being referred.
+• Information and support about psychological factors such as anxiety, and
+psychological support services.
+• Information about sources of support and information, for example, local and
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 11 of
+68
+
+
+
+---
+[PAGE 12/68]
+
+national support groups and networks, patient organisations and specialist
+services.
+• Reassurance about bringing a family member, friend or carer to appointments.
+1.2.2
+Healthcare professionals should ensure that information and support:
+• supports shared decision making
+• is balanced and accurate
+• is available on an ongoing basis
+• is available when needed
+• is relevant to the person's circumstances
+• is tailored to the person's needs, for example, it is in an accessible format or
+available in a different language.
+1.2.3
+Provide opportunities for people to review decisions, and share any additional
+information on how they can access services for further discussions, for example,
+at:
+• re-referral to specialist services
+• patient-initiated follow-up appointments directly with specialist services
+• self-referral to genetics services.
+1.2.4
+At each appointment:
+• ask the person about their emotional health
+• ask about any psychological or emotional issues that could affect decision
+making, such as anxiety
+• provide information and support (see table 1 on information and support
+about familial ovarian cancer in all settings)
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 12 of
+68
+
+
+
+---
+[PAGE 13/68]
+
+• discuss referral to genetic counselling or psychological services, as
+appropriate.
+1.2.5
+Raise awareness that men, trans women and non-binary people born with male
+reproductive organs can have a genetic risk of having a pathogenic variant
+associated with ovarian cancer and other cancers.
+1.2.6
+Ensure that services are easy to access (for example, by offering online
+appointments) and welcoming for everyone, particularly for people who may have
+additional support needs (also see recommendation 1.1.3).
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on information and
+support about familial ovarian cancer in all settings.
+Full details of the evidence and the committee's discussion are in:
+• evidence review A: information and support
+• evidence review B: support interventions
+• evidence review D: optimal methods of assessing the probability of having a
+pathogenic variant
+• evidence review F: carrier probability – any person
+• evidence review H: populations with high prevalence.
+Information and support about risk assessment and genetic
+testing in genetics services
+1.2.7
+Healthcare professionals in genetics services should provide ongoing information
+and support in line with:
+• table 2 on information and support about risk assessment and genetic testing
+in genetics services and
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 13 of
+68
+
+
+
+---
+[PAGE 14/68]
+
+• table 1 on information and support about familial ovarian cancer in all
+settings.
+Table 2 Information and support about risk assessment and genetic testing in genetics services
+At referral for risk assessment and genetic testing
+• Information about how the risk of having a pathogenic variant is assessed, and
+how to obtain a comprehensive family history (including up to third-degree
+relatives) if needed.
+• Clarification about which family members could be at risk, and advice about
+appropriate ages for testing.
+• Information about genetic testing, including details of what genetic testing
+involves, what the tests mean and how informative they are likely to be, and the
+likely timescale of getting the results.
+• Information and support on the importance of, and how to discuss, the results of
+assessment and testing with relatives, including different methods of contacting
+relatives about cascade testing.
+• Information about potential next steps depending on the risk assessment
+(including referral back to primary care, management within secondary care and/
+or a genetics service, risk-reducing surgery and surveillance).
+• Information and support to aid decision making about topics such as genetic
+testing, risk-reducing surgery, fertility and whether the person wants to have
+children, and menopause and managing symptoms.
+• Details of any trials or studies that may be appropriate.
+If genetic testing has not been offered
+• Information about why genetic testing has not been offered (as applicable).
+• Advice to return to primary care to discuss any implications if there is a change in
+family history or symptoms develop.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 14 of
+68
+
+
+
+---
+[PAGE 15/68]
+
+1.2.8
+In genetics services, a healthcare professional with skills and experience in
+information provision and shared decision making specifically related to genetics
+and cancer risk should offer genetic counselling to people who meet the referral
+criteria for genetic testing. See the sections on assessing the risk of having a
+pathogenic variant and criteria for genetic counselling and genetic testing.
+1.2.9
+Take into account the following factors when deciding whether to offer face-to-
+face or remote (for example, video call, telephone) genetic counselling:
+• the person's preference
+• the decision that needs to be made (for example, genetic testing or risk-
+reducing surgery)
+• accessibility needs (for example, geographic location, digital access,
+language or communication impairment, participation of family members in
+other locations)
+• the need for an interpreter.
+1.2.10
+Consider giving information in a group session before an individual genetic
+counselling session.
+1.2.11
+Consider using a patient decision aid (for example, an app) alongside genetic
+counselling to support shared decision making. See the recommendations on
+patient decision aids in the NICE guideline on shared decision making.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 15 of
+68
+
+
+
+---
+[PAGE 16/68]
+
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on information and
+support about risk assessment and genetic testing in genetics services.
+Full details of the evidence and the committee's discussion are in:
+• evidence review A: information and support
+• evidence review B: support interventions
+• evidence review D: optimal methods of assessing the probability of having a
+pathogenic variant
+• evidence review F: carrier probability – any person.
+Information and support in specialist services if a person has a
+pathogenic variant or a strong family history of ovarian cancer
+1.2.12
+Healthcare professionals in specialist services (genetics services, gynaecology
+oncology multidisciplinary teams and familial ovarian cancer multidisciplinary
+teams) should provide ongoing information and support in line with:
+• table 3 on information and support in specialist services if a person has a
+pathogenic variant or a strong family history of ovarian cancer and
+• table 1 on information and support about familial ovarian cancer in all
+settings.
+Table 3 Information and support in specialist services if a person has a pathogenic variant or a strong family history of
+ovarian cancer
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 16 of
+68
+
+
+
+---
+[PAGE 17/68]
+
+Risk of developing ovarian cancer
+• Information about the person's risk of developing familial ovarian cancer, how the
+risk is assessed, what their personal risk estimate means, and other factors that
+could increase or decrease the risk.
+• Information and support to aid shared decision making.
+Reproductive choices
+• Information about the likelihood of passing down the pathogenic variant to their
+children.
+• Information about the impact of risk-reducing surgery on fertility.
+• Information about the availability of fertility preservation by storing eggs or
+embryos.
+• Information about the availability of pre-implantation genetic testing of embryos
+to avoid passing down the genetic risk to their children.
+Risk-reducing surgery
+• Information about risk-reducing surgery and what it involves.
+• Advice that risk-reducing bilateral salpingo-oophorectomy is the most reliable
+way to substantially reduce the likelihood of developing ovarian cancer and
+therefore improve life expectancy, but that there will still be a small residual risk.
+• Information that, if risk-reducing bilateral salpingo-oophorectomy is appropriate,
+it is because of a pathogenic variant associated with ovarian cancer, or a family
+history that has been shown to increase risk.
+• Information about the timing of risk-reducing surgery and different surgical
+procedures (also see the recommendations on risk-reducing mastectomy in the
+NICE guideline on familial breast cancer).
+• The possible biopsychosocial and sexual consequences of risk-reducing surgery.
+• Information about the possible impact of risk-reducing surgery on other areas of
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 17 of
+68
+
+
+
+---
+[PAGE 18/68]
+
+the person's life, for example, that risk-reducing surgery will lead to early
+menopause (if premenopausal) and the symptoms they may experience, hormone
+replacement therapy (HRT), impact on sex life and body image, and fertility (see
+also the section on people with cancer who wish to preserve fertility in the NICE
+guideline on fertility problems).
+• Information about ovarian cancer surveillance if they choose to delay or not have
+risk-reducing surgery – see recommendation 1.8.6 for details of the information
+that should be given.
+• Information about the risk of other cancers (for example, primary peritoneal,
+breast, pancreas, prostate or bowel cancer).
+For a short explanation of why the committee made this recommendation and how it
+might affect practice, see the rationale and impact section on information and support
+in specialist services if a person has a pathogenic variant or a strong family history of
+ovarian cancer.
+Full details of the evidence and the committee's discussion are in:
+• evidence review E: optimal methods of assessing the absolute risk of having a
+pathogenic variant
+• evidence review K: benefits and risks of surveillance
+• evidence review N: risk-reducing surgery.
+1.3 Assessing the risk of having a pathogenic variant
+These recommendations are for anyone who has a risk of having a pathogenic variant
+associated with ovarian cancer. This includes women, men, trans people and non-binary
+people.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 18 of
+68
+
+
+
+---
+[PAGE 19/68]
+
+1.3.1
+Healthcare professionals in primary care and secondary care should refer people
+for genetic counselling and genetic testing if any of the following apply:
+• they have a first-degree relative with a diagnosis of ovarian cancer
+• they have a maternal or paternal second-degree relative with a diagnosis of
+ovarian cancer (this includes people with an unaffected intervening blood
+relative)
+• they meet the criteria for genetic testing as set out in the section on criteria
+for genetic counselling and genetic testing
+• they are from an at-risk population
+• they have been identified through cascade testing
+• they have a diagnosis of ovarian cancer as outlined in recommendation 1.4.6
+and have not already had mainstream genetic testing.
+1.3.2
+If a person had a direct-to-consumer genetic test and is reported to have a
+pathogenic variant for which NHS testing is offered (for example, BRCA),
+healthcare professionals should liaise with the regional NHS genetics service to
+discuss whether referral is appropriate.
+1.3.3
+Genetics services should assess the probability of having a pathogenic variant
+using a calculation method with demonstrated accuracy, such as the Manchester
+scoring system, CanRisk (BOADICEA), BRCAPRO, or criteria based on specific
+clinical circumstances or a verified family history that are designed for the
+threshold used for testing.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 19 of
+68
+
+
+
+---
+[PAGE 20/68]
+
+For a short explanation of why the committee made these recommendations and how
+they might affect practice and services, see the rationale and impact section on
+assessing the risk of having a pathogenic variant.
+Full details of the evidence and the committee's discussion are in:
+• evidence review B: support interventions
+• evidence review D: optimal methods of assessing the probability of having a
+pathogenic variant
+• evidence review F: carrier probability – any person
+• evidence review H: populations with high prevalence
+• evidence review I: carrier probability – people with ovarian cancer.
+1.4 Criteria for genetic counselling and genetic
+testing (in genetics services or in gynaecology
+oncology multidisciplinary services)
+Family history of ovarian cancer
+These recommendations are for anyone who has a risk of having a pathogenic variant
+associated with ovarian cancer. This includes women, men, trans people and non-binary
+people.
+1.4.1
+Genetics services should offer genetic counselling and genetic testing to anyone
+who:
+• has not had ovarian cancer and
+• has a raised probability of having a pathogenic variant (see table 4 on
+genetic testing criteria) based on a verified family history and
+• has a relative who has had a confirmed diagnosis of breast cancer or ovarian
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 20 of
+68
+
+
+
+---
+[PAGE 21/68]
+
+cancer but genetic testing of the relative (or the tissue) is not possible or
+clinically appropriate (for example, consent is declined).
+Table 4 Criteria for carrying out genetic testing in genetics services
+Age of the person Women, trans men and non-binary people
+registered female at birth.
+Men, trans women and non-binary people
+registered male at birth.
+30 to 39
+years
+2% or higher
+6% or higher
+40 to 49
+years
+2% or higher
+9% or higher
+50 to 59
+years
+3% or higher
+10% or higher
+60 to 69
+years
+6% or higher
+10% or higher
+70 years or
+over
+10% or higher
+10% or higher
+1.4.2
+If a person has not had ovarian cancer, genetics services should offer genetic
+counselling and genetic testing if they are a first-degree relative of a person with
+a known pathogenic variant (cascade testing).
+1.4.3
+If a person has not had ovarian cancer, genetics services should offer genetic
+counselling and genetic testing if:
+• they are a second-degree or more distant blood relative of a person with a
+known pathogenic variant and
+• testing of an intervening blood relative is impossible or not clinically
+appropriate (for example, consent is declined).
+1.4.4
+If a person has a personal or family history of breast cancer, also see the NICE
+guideline on familial breast cancer, in particular the sections on the clinical
+significance of a family history of breast cancer, and referral to a specialist
+genetic clinic.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 21 of
+68
+
+
+
+---
+[PAGE 22/68]
+
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on family history of
+ovarian cancer.
+Full details of the evidence and the committee's discussion are in:
+• evidence review F: carrier probability – any person
+• evidence review G: carrier probability – family history of a syndrome.
+At-risk populations
+This recommendation is for anyone who has a risk of having a pathogenic variant
+associated with ovarian cancer. This includes women, men, trans people and non-binary
+people.
+1.4.5
+Recognise and raise awareness that people from the following populations (with
+at least 1 grandparent from the respective population), have a higher risk of
+having a founder pathogenic variant associated with familial ovarian cancer, so
+should be offered referral for genetic counselling and genetic testing for this
+variant, even if the person has no family or personal history of cancer:
+• Ashkenazi Jewish
+• Sephardi Jewish
+• Greenlander.
+Also see the NHS Jewish BRCA Testing Programme, which offers BRCA
+testing to people with Jewish ancestry.
+For a short explanation of why the committee made this recommendation and how it
+might affect practice, see the rationale and impact section on at-risk populations.
+Full details of the evidence and the committee's discussion are in evidence review H:
+populations with high prevalence.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 22 of
+68
+
+
+
+---
+[PAGE 23/68]
+
+People with ovarian cancer
+This recommendation is for women, trans men and non-binary people born with any
+female reproductive organs (ovaries, fallopian tubes, uterus).
+1.4.6
+Offer pre-test counselling and germline testing to anyone diagnosed with:
+• invasive epithelial ovarian cancer
+• ovarian Sertoli–Leydig cell tumour
+• small cell carcinoma of the ovary hypercalcaemic type
+• ovarian sex cord tumour with annular tubules
+• embryonal rhabdomyosarcoma of the ovary
+• ovarian gynandroblastoma.
+For a short explanation of why the committee made this recommendation and how it
+might affect practice and services, see the rationale and impact section on people
+with ovarian cancer.
+Full details of the evidence and the committee's discussion are in evidence review I:
+carrier probability – people with ovarian cancer.
+1.5 Gene panel testing
+1.5.1
+Select a gene panel from the UK national genomic test directory (see the
+sections on assessing the risk of having a pathogenic variant and criteria for
+genetic counselling and genetic testing) to test for pathogenic variants.
+1.5.2
+Decide which gene panel from the UK national genomic test directory to use in
+relation to each person's family or personal history (for example, ovarian cancer
+alone, breast and ovarian cancer, or Lynch syndrome).
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 23 of
+68
+
+
+
+---
+[PAGE 24/68]
+
+For a short explanation of why the committee made these recommendations and how
+they might affect practice and services, see the rationale and impact section on gene
+panel testing.
+Full details of the evidence and the committee's discussion are in evidence review J:
+which genes to include in gene panel testing.
+1.6 Assessing the risk of developing ovarian cancer
+These recommendations are for women, trans men and non-binary people born with any
+female reproductive organs (ovaries, fallopian tubes, uterus).
+1.6.1
+If a person is under the care of genetics services or a familial ovarian cancer
+multidisciplinary team and has not had genetic testing, the service or team
+should offer to assess their risk of developing ovarian cancer.
+1.6.2
+If a person has a pathogenic variant associated with an increased risk of ovarian
+cancer, the familial ovarian cancer multidisciplinary team should offer to assess
+their risk of developing ovarian cancer.
+1.6.3
+When assessing a person's risk of developing ovarian cancer:
+• use a tool with demonstrated accuracy that includes their age, family history
+of ovarian and other cancers, and their pathogenic variant (such as CanRisk)
+• inform the person that there are other factors that could also increase or
+decrease their risk when using a tool or method that includes only limited
+information (for example, their age and pathogenic variant)
+• take into account factors that may not be accurately assessed by tools, for
+example, parity, use of the combined oral contraceptive pill, endometriosis,
+and whether relatives have only ovarian cancer.
+1.6.4
+When discussing a person's risk of developing ovarian cancer:
+• provide a summary in the person's preferred format that includes their
+personal risk estimate and
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 24 of
+68
+
+
+
+---
+[PAGE 25/68]
+
+• follow the recommendations in the sections on communicating risks, benefits
+and consequences and putting shared decision making into practice in the
+NICE guideline on shared decision making.
+1.6.5
+For information on familial and other risk factors for breast cancer that also
+increase ovarian cancer risk, see the NICE guideline on familial breast cancer.
+For a short explanation of why the committee made these recommendations and how
+they might affect practice and services, see the rationale and impact section on
+assessing the risk of developing ovarian cancer.
+Full details of the evidence and the committee's discussion are in evidence review E:
+optimal methods of assessing the absolute risk of having a pathogenic variant.
+1.7 Primary preventive medicines
+These recommendations are for women, trans men and non-binary people born with any
+female reproductive organs (ovaries, fallopian tubes, uterus), and who are at risk of
+epithelial ovarian cancer.
+Aspirin
+1.7.1
+Do not offer aspirin for the sole purpose of reducing ovarian cancer risk.
+1.7.2
+For recommendations on the use of aspirin for people with Lynch syndrome, see
+the section on reduction in risk of colorectal cancer in people with Lynch
+syndrome in the NICE guideline on colorectal cancer.
+Combined oral contraceptives
+1.7.3
+Only consider the combined oral contraceptive pill to reduce the risk of ovarian
+cancer:
+• if the reduction in the risk of developing ovarian cancer outweighs the
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 25 of
+68
+
+
+
+---
+[PAGE 26/68]
+
+increased risk of developing breast cancer and
+• after taking into account the timing of any risk-reducing surgery (mastectomy
+or salpingo-oophorectomy; see the section on risk-reducing surgery).
+In March 2024, this was an off-label use of combined oral contraceptives.
+See NICE's information on prescribing medicines.
+1.7.4
+Discuss the reduced risk of developing ovarian cancer and the increased risk of
+developing breast cancer when offering a combined oral contraceptive.
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on primary preventive
+medicines.
+Full details of the evidence and the committee's discussion are in evidence review M:
+preventive medicines.
+1.8 Risk-reducing surgery
+These recommendations are for women, trans men and non-binary people born with any
+female reproductive organs (ovaries, fallopian tubes, uterus), and who are at risk of
+epithelial ovarian cancer.
+Factors to take into account when considering risk-reducing
+surgery
+1.8.1
+Only offer risk-reducing surgery to people who have:
+• completed their family or are not planning to conceive naturally (that is, they
+would only conceive using assisted reproduction) and
+• a total lifetime risk of ovarian cancer of 5% or over because they have:
+－ a pathogenic variant associated with familial ovarian cancer or
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 26 of
+68
+
+
+
+---
+[PAGE 27/68]
+
+－ a strong family history of ovarian cancer.
+1.8.2
+When discussing risk-reducing surgery, provide information and support in line
+with:
+• table 3 on information and support in specialist services if a person has a
+pathogenic variant or a strong family history of ovarian cancerand
+• table 1 on information and support about familial ovarian cancer in all
+settings.
+1.8.3
+When discussing risk-reducing surgery, take into account psychological factors
+(such as anxiety) that could influence decision making. Discuss psychological
+support services available and, if needed, refer the person for psychological
+support before surgery.
+1.8.4
+When discussing risk-reducing bilateral salpingo-oophorectomy surgery with
+people who are premenopausal:
+• offer specialist menopause counselling before and after surgery and
+• provide information and support to aid shared decision making (also see the
+section on information and support, in particular table 3 on information and
+support in specialist services if a person has a pathogenic variant or a strong
+family history of ovarian cancer, and the section on hormone replacement
+therapy after risk-reducing surgery).
+1.8.5
+Refer people who have bi-allelic pathogenic variants in mismatch repair genes
+(for example, homozygous PMS2), to a specialist tertiary team for discussions
+about risk-reducing surgery.
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on factors to take into
+account when considering risk-reducing surgery.
+Full details of the evidence and the committee's discussion are in evidence review N:
+risk-reducing surgery.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 27 of
+68
+
+
+
+---
+[PAGE 28/68]
+
+Types of risk-reducing surgery and timing in relation to the
+person's specific pathogenic variant
+The recommendations are for risk-reducing surgery related to ovarian cancer. For people
+who have a pathogenic variant that also increases their risk of breast cancer and are
+considering risk-reducing mastectomy, also see the NICE guideline on familial breast
+cancer.
+1.8.6
+Offer risk-reducing surgery that is appropriate for the person's age, specific
+pathogenic variant and family history (including age of onset of any confirmed
+ovarian cancers in the family), after discussing the person's individual
+circumstances with the familial ovarian cancer multidisciplinary team. See table 5
+on timing and types of risk-reducing surgery for people with a pathogenic variant
+that increases the risk of ovarian cancer.
+Table 5 Timing and types of risk-reducing surgery for people with a pathogenic variant
+that increases the risk of ovarian cancer
+Pathogenic variant
+Procedure
+Age (also see
+recommendation
+1.8.11)
+BRCA1
+Bilateral salpingo-oophorectomy
+No earlier
+than
+35 years
+BRCA2
+Bilateral salpingo-oophorectomy
+No earlier
+than
+40 years
+RAD51C, RAD51D, BRIP1 or PALB2
+pathogenic variant with a total
+lifetime risk of ovarian cancer of
+5% or over
+Bilateral salpingo-oophorectomy
+No earlier
+than
+45 years
+MLH1, MSH2 or MSH6
+Hysterectomy with bilateral salpingo-
+oophorectomy (to reduce the risk of
+endometrial cancer as well as ovarian
+cancer)
+No earlier
+than
+35 years
+1.8.7
+Consider risk-reducing total hysterectomy alone to prevent endometrial cancer
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 28 of
+68
+
+
+
+---
+[PAGE 29/68]
+
+for people (no earlier than 45 years) who have:
+• a heterozygous PMS2 pathogenic variant and
+• no family history of ovarian cancer.
+1.8.8
+If a person with a heterozygous PMS2 pathogenic variant has been offered total
+hysterectomy to prevent endometrial cancer, consider additional bilateral
+salpingo-oophorectomy depending on verified family history of ovarian cancer,
+age and menopausal status.
+1.8.9
+Consider risk-reducing surgery in people younger than the ages in table 5 on
+timing and types of risk-reducing surgery after carrying out an individualised risk
+assessment (including an assessment of menopausal symptoms) and providing
+information and support to aid shared decision making (also see the section on
+information and support).
+1.8.10
+Only offer risk-reducing bilateral salpingectomy with delayed oophorectomy as
+part of a clinical trial.
+1.8.11
+Do not carry out risk-reducing total hysterectomy in people with pathogenic
+variants other than MLH1, MSH2, MSH6 and PMS2, unless a personalised risk
+assessment shows a high risk of endometrial cancer that would necessitate
+hysterectomy or there is another gynaecological indication for hysterectomy.
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on types of risk-
+reducing surgery and timing in relation to the person's specific pathogenic variant.
+Full details of the evidence and the committee's discussion are in evidence review N:
+risk-reducing surgery.
+Tests before risk-reducing surgery
+1.8.12
+Before carrying out risk-reducing bilateral salpingo-oophorectomy, perform a
+transvaginal ultrasound and a serum CA125 test to minimise the risk of missing
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 29 of
+68
+
+
+
+---
+[PAGE 30/68]
+
+asymptomatic ovarian cancer.
+1.8.13
+Before carrying out a risk-reducing hysterectomy, perform an endometrial biopsy
+to minimise the risk of missing asymptomatic endometrial cancer.
+Referral to the gynaecology oncology multidisciplinary team
+1.8.14
+If asymptomatic cancer is identified by preoperative investigation or
+postoperative histopathological or cytopathological analysis, refer the person to
+the gynaecology oncology multidisciplinary team (see the section on the
+gynaecology oncology multidisciplinary team).
+During risk-reducing surgery
+1.8.15
+Carry out risk-reducing minimal access surgery, unless a laparotomy is more
+clinically appropriate.
+1.8.16
+Take peritoneal washings during risk-reducing surgery for cytological examination
+to test for the presence of malignant cells.
+1.8.17
+If any suspicious lesions are found outside the organs being removed, take a
+biopsy if it is feasible and safe to do.
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on tests before risk-
+reducing surgery, referral to the gynaecology oncology multidisciplinary team, and
+what to consider during surgery.
+Full details of the evidence and the committee's discussion are in evidence review N:
+risk-reducing surgery.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 30 of
+68
+
+
+
+---
+[PAGE 31/68]
+
+Ovarian cancer surveillance by the familial ovarian cancer
+multidisciplinary team for people who choose to delay or not
+have risk-reducing surgery
+These recommendations are for women, trans men, non-binary people born with any
+female reproductive organs (ovaries, fallopian tubes, uterus).
+1.8.18
+If a person is at risk of developing ovarian cancer and chooses to delay or not
+have risk-reducing surgery, discuss their reasons and explain that:
+• they have an increased risk of developing ovarian cancer and that the only
+way to reduce their risk is to have risk-reducing surgery
+• delaying risk-reducing surgery should only be seen as a short-term option
+• regular surveillance does not reduce their risk of developing ovarian cancer
+• although regular surveillance means that ovarian cancer may be detected
+earlier, they should not view surveillance as an alternative to risk-reducing
+surgery (because there is little evidence on whether this leads to improved
+outcomes and saves lives)
+• surveillance will involve them having a blood test every 4 months to check
+their level of the protein CA125 (cancer antigen 125), with an algorithm to
+analyse results, and a review at least once a year to discuss the
+recommendation of having risk-reducing surgery
+• there is a possibility of getting a false-positive or false-negative test result.
+1.8.19
+The familial ovarian cancer multidisciplinary team (see the section on familial
+ovarian cancer multidisciplinary teams) should only consider surveillance for
+people in the following groups who are at risk of developing ovarian cancer but
+who choose to delay or not have risk-reducing surgery (see also table 5 on timing
+and types of risk-reducing surgery):
+• over 35 and have a BRCA1 pathogenic variant or
+• over 40 and have a BRCA2 pathogenic variant or
+• over 45 and have RAD51C, RAD51D, BRIP1 and PALB2 pathogenic variants.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 31 of
+68
+
+
+
+---
+[PAGE 32/68]
+
+1.8.20
+If carrying out surveillance (see recommendation 1.8.19), the familial ovarian
+cancer multidisciplinary team should:
+• carry out serial 4-monthly CA125 longitudinal testing using an algorithm with
+demonstrated accuracy (for example, the Risk of Ovarian Cancer Algorithm
+[ROCA] Test)
+• coordinate, audit and interpret CA125 testing using a call and recall system
+• have a review appointment with the person at least once a year to discuss
+the recommendation of having risk-reducing surgery (see the section on risk-
+reducing surgery).
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on ovarian cancer
+surveillance in secondary care for people who choose to delay or not have risk-
+reducing surgery.
+Full details of the evidence and the committee's discussion are in:
+• evidence review K: benefits and risks of surveillance
+• evidence review L: methods of surveillance.
+1.9 Pathology protocol for handling specimens from
+risk-reducing surgery
+1.9.1
+Submit all ovaries and fallopian tubes for histological examination using a
+SEE-FIM (Sectioning and Extensively Examining the FIMbriated End) protocol.
+1.9.2
+Carry out immunohistochemistry (p53 and Ki67/MIB1) only if a premalignant or
+malignant lesion is suspected on morphological examination.
+1.9.3
+Submit the adnexa in separate, appropriately labelled specimen containers so
+that the laterality is available to the pathologist. Include this information in the
+pathology report.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 32 of
+68
+
+
+
+---
+[PAGE 33/68]
+
+1.9.4
+Always perform peritoneal cytology when carrying out risk-reducing surgery.
+1.9.5
+Submit the entire endometrium, including the lower uterine segment, for
+histological examination in risk-reducing hysterectomy specimens in people with
+Lynch syndrome.
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on pathology protocol
+for handling specimens from risk-reducing surgery.
+Full details of the evidence and the committee's discussion are in evidence review O:
+pathology protocol.
+1.10 Hormone replacement therapy after risk-
+reducing surgery
+These recommendations are for women, trans men and non-binary people who have had
+risk-reducing surgery on female reproductive organs.
+1.10.1
+Offer hormone replacement therapy (HRT) until the average age of menopause
+(usually around 51 years) for people who:
+• have not had breast cancer and
+• have had risk-reducing bilateral salpingo-oophorectomy before the average
+age of menopause.
+1.10.2
+Liaise with the person's breast cancer care team before offering HRT to people
+who:
+• have had breast cancer and
+• have had risk-reducing bilateral salpingo-oophorectomy.
+1.10.3
+When offering HRT to people who meet the criteria in recommendation 1.10.1:
+• use combined HRT for people who have a uterus
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 33 of
+68
+
+
+
+---
+[PAGE 34/68]
+
+• use oestrogen-only HRT for people who do not have a uterus
+• start HRT as soon as clinically appropriate after surgery
+• consider the insertion of a levonorgestrel intrauterine system at time of
+surgery
+• discuss the individual risks and benefits of HRT use beyond the average age
+of menopause.
+1.10.4
+Offer vaginal oestrogen to people with genitourinary symptoms associated with
+menopause, who have not had breast cancer.
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on HRT after risk-
+reducing surgery.
+Full details of the evidence and the committee's discussion are in evidence review P:
+HRT after risk-reducing surgery.
+Terms used in this guideline
+This section defines terms that have been used in a particular way for this guideline. For
+other definitions, see the NICE glossary and the Think Local, Act Personal Care and
+Support Jargon Buster.
+Bi-allelic
+Of or relating to both alleles of a single gene (paternal and maternal).
+Bilateral salpingo-oophorectomy
+A surgical procedure to remove both (bilateral) fallopian tubes (salpingectomy) and the
+ovaries (oophorectomy).
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 34 of
+68
+
+
+
+---
+[PAGE 35/68]
+
+Cascade testing
+A systematic process to identify individuals within a family at risk of developing a
+hereditary condition. Cascade testing begins with finding a pathogenic variant through
+testing (such as multigene panel testing) in 1 family member, usually affected by the
+condition. Then, testing just for the specific family variant is extended to blood relatives.
+This process is repeated as more affected individuals or pathogenic variant carriers are
+identified.
+First-degree relative
+Mother, father, daughter, son, sister or brother.
+Founder pathogenic variant
+A genetic alteration observed with high frequency in a group that is or was geographically
+or culturally isolated, in which 1 or more of the ancestors was a carrier of the altered gene.
+Genetic testing
+The study of a person's DNA in order to identify potentially disease-causing differences
+(pathogenic variants) or susceptibility to particular diseases or abnormalities.
+Germline testing
+A type of genetic test that looks for inherited mutations that are present in the DNA of
+every cell of the body and have been present since birth.
+Intervening blood relative
+A relative on the same side of the family who is more closely related to the family member
+with ovarian cancer than the person themselves.
+Mainstream pre-test counselling and genetic testing
+Pre-test counselling, consent and genetic testing being undertaken at the point of care by
+a member of the gynaecology oncology multidisciplinary team rather than genetics
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 35 of
+68
+
+
+
+---
+[PAGE 36/68]
+
+services.
+Mismatch repair genes
+Mismatch repair (MMR) genes code for proteins that are involved in correcting mistakes
+made when DNA is copied in a cell. MMR-deficient cells usually have many DNA
+alterations, which may lead to cancer.
+Pathogenic variant
+A genetic alteration that increases a person's susceptibility or predisposition to a certain
+disease or disorder. If someone has a pathogenic variant, they are sometimes known as a
+'carrier'. This is because they 'carry', and can pass on to their children, a pathogenic
+variant associated with a disease (or trait) that is inherited in an autosomal dominant,
+autosomal recessive manner, even though they do not show symptoms of that disease (or
+features of that trait). The likelihood of having the pathogenic variant is also known as
+their 'carrier probability'.
+In this guideline, the term 'pathogenic variant' refers to the presence of a pathogenic
+variant or 'likely pathogenic variant' (which is a variant with strong evidence that suggests
+it is associated with an increased risk of ovarian cancer).
+Second-degree relative
+Grandparent, grandchild, aunt, uncle, niece, nephew, half-sister or half-brother.
+Strong family history of ovarian cancer
+A person has a strong family history of ovarian cancer if they have 1 or more first-degree
+relatives (for example, a mother, sister or daughter) on the same side of their family (the
+mother's or father's side of the family) with ovarian cancer.
+Third-degree relative
+Great grandparent, great grandchild, great aunt, great uncle, first cousin, grandnephew or
+grandniece.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 36 of
+68
+
+
+
+---
+[PAGE 37/68]
+
+Recommendations for research
+The guideline committee has made the following recommendations for research.
+Key recommendations for research
+1 Interventions to support decision making
+What is the effectiveness of psychological interventions to support decision making by
+people who meet the referral criteria for genetic testing?
+For a short explanation of why the committee made this recommendation for
+research, see the rationale section on information and support about risk assessment
+and genetic testing in genetics services.
+Full details of the evidence and the committee's discussion are in evidence review B:
+support interventions.
+2 Assessing a person's risk of having a pathogenic variant
+associated with familial ovarian cancer
+What are the optimal tools to assess mutation carrier probability for a wider range of
+ovarian cancer susceptibility genes, not limited to BRCA1 and BRCA2?
+For a short explanation of why the committee made this recommendation for
+research, see the rationale section on assessing the risk of having a pathogenic
+variant.
+Full details of the evidence and the committee's discussion are in evidence review D:
+optimal methods of assessing the probability of having a pathogenic variant.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 37 of
+68
+
+
+
+---
+[PAGE 38/68]
+
+3 Assessing the risk of developing ovarian cancer
+What are the performance characteristics of tools or models to assess the absolute risk of
+developing ovarian cancer?
+For a short explanation of why the committee made this recommendation for
+research, see the rationale section on assessing the risk of developing ovarian cancer.
+Full details of the evidence and the committee's discussion are in evidence review E:
+optimal methods of assessing the absolute risk of having a pathogenic variant.
+4 Ovarian cancer surveillance
+What are the long-term benefits and risks of ovarian cancer surveillance for people at
+increased risk of ovarian cancer?
+For a short explanation of why the committee made this recommendation for
+research, see the rationale section on ovarian cancer surveillance by the familial
+ovarian cancer multidisciplinary team for people who choose to delay or not have risk-
+reducing surgery.
+Full details of the evidence and the committee's discussion are in evidence review K:
+benefits and risks of surveillance.
+5 Hormone replacement therapy after risk-reducing surgery
+What is the safety and efficacy of hormone replacement therapy (HRT) after risk-reducing
+salpingo-oophorectomy?
+For a short explanation of why the committee made this recommendation for
+research, see the rationale section on HRT after risk-reducing surgery.
+Full details of the evidence and the committee's discussion are in evidence review P:
+HRT after risk-reducing surgery.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 38 of
+68
+
+
+
+---
+[PAGE 39/68]
+
+Other recommendations for research
+6 Primary preventive medicines
+What is the effectiveness of primary preventive medicines for reducing the incidence of
+ovarian cancer in people at increased risk of familial ovarian cancer?
+For a short explanation of why the committee made this recommendation for
+research, see the rationale section on primary preventive medicines.
+Full details of the evidence and the committee's discussion are in evidence review M:
+preventive medicines.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 39 of
+68
+
+
+
+---
+[PAGE 40/68]
+
+Rationale and impact
+These sections briefly explain why the committee made the recommendations and how
+they might affect practice or services.
+Organisation of services
+Recommendations 1.1.1 to 1.1.9
+Why the committee made the recommendations
+There was limited evidence, with a small number of studies and uncertainties about the
+effect size and the way the studies were conducted, so the committee based the
+recommendations on the evidence and their knowledge and experience.
+Commissioners and service providers in all settings (primary care, genetics
+services, gynaecology oncology and familial ovarian cancer multidisciplinary
+services)
+The committee discussed their experience of variations in how people are referred from
+healthcare professionals, for example, whether people are referred first to specialist
+gynaecological services or directly to genetic specialist services. They decided to
+recommend direct referral to make services more efficient, together with ways of making
+the referral process smoother (including clearer referral criteria).
+The committee discussed their experience of why people who may be at risk of having a
+pathogenic variant associated with ovarian cancer do not access services. They agreed
+that people from under-represented or underserved groups may know that the guideline
+applies to them but may need more support to access services. This could include people
+who are physically disabled, people with neurodevelopmental conditions or a learning
+disability, people from Black, Asian and ethnic minority backgrounds, and people who are
+LGBTQ+. In addition, people may not realise that they may be at risk of having a
+pathogenic variant associated with ovarian cancer because they cannot develop ovarian
+cancer, for example, men, trans women and non-binary people born with male
+reproductive organs. The committee agreed that these groups need encouragement to
+discuss referral to genetics services. The committee further noted that healthcare
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 40 of
+68
+
+
+
+---
+[PAGE 41/68]
+
+professionals are not always aware of the potential barriers, and agreed that training and
+information would help raise awareness.
+The committee also noted that there is an overall lack of awareness, which is a barrier to
+identification of people at risk. They decided, based on their experience, that it should be
+within the remit of commissioners and service providers to raise awareness both among
+healthcare professionals and the general public. A lack of knowledge about who may be
+eligible (for example, people from at-risk populations) could lead to a delay in assessment
+and identification of people at risk, and this has potentially serious consequences, such as
+the risk of developing ovarian cancer. Including this information in continuing education
+programmes and having public awareness initiatives could be ways to help raise
+awareness.
+Primary care services
+The committee discussed that primary care has limited capacity to seek out potential
+index cases. However, if a family history is known (including family history from a
+population with increased risk), a person is known to be from an at-risk population or a
+person has ovarian cancer, GPs can refer people directly to genetics services. The
+committee also noted that information and support should be provided in primary care to
+enable people to make informed decisions.
+Genetics services
+In the committee's experience, there is little variation in the responsibilities of genetics
+services because their services are specified by NHS England commissioning guidance for
+medical genetics services. The committee agreed to list the main responsibilities so that
+people know what to expect when they are being referred.
+The committee discussed whether rarer types of ovarian cancer would be the
+responsibility of genetics services or gynaecology oncology services. It was agreed that
+the care of these types of genetic conditions (see the non-epithelial ovarian cancers listed
+in recommendation 1.4.6) is very specialised and that therefore genetic counselling and
+genetic testing should be within the remit of genetics services.
+Gynaecology oncology multidisciplinary team
+Based on the evidence about mainstream genetic testing and counselling, which showed
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 41 of
+68
+
+
+
+---
+[PAGE 42/68]
+
+services run more efficiently and faster, the committee agreed that mainstream genetic
+counselling and genetic testing of anyone with a histopathological diagnosis of epithelial
+ovarian cancer should be carried out by their gynaecology oncology multidisciplinary
+team.
+Familial ovarian cancer multidisciplinary team
+Having a pathogenic variant or being above a threshold for testing leads to many decisions
+having to be made during the person's life, for example, in relation to fertility and risk-
+reducing surgery. The committee acknowledged that services run more effectively when
+roles and responsibilities are defined so that staff and people using the services know
+what to expect. They noted that the person's care would need to be coordinated because
+different services may become relevant to them at different points in their life (including,
+for example, providing information and support, and carrying out reviews). The committee
+decided that a multidisciplinary approach would be beneficial and that this should
+continue throughout the person's life. They clarified that the person would usually see the
+appropriate person relevant to their circumstances and would not usually see the entire
+team.
+Based on their experience, the committee specified the expertise that is essential for the
+familial ovarian cancer multidisciplinary team (core expertise that is always required) and
+the other services that the multidisciplinary team would need access to, such as
+menopause services.
+How the recommendations might affect services
+The committee discussed that some of these services already exist but that there is
+variation in practice in how referral between them takes place and how they are set up.
+The committee noted that broader eligibility criteria for genetic testing may result in more
+pressure on existing services, such as primary care. However, people are generally
+responsible for the completion of their family history questionnaires and specialist service
+referrals can be completed quickly online, which may help to mitigate some of the
+pressure on primary care services.
+Not all trusts have dedicated familial ovarian cancer multidisciplinary teams, and there is
+variation in practice. The committee noted that similar teams already exist for breast
+cancer, and have improved outcomes. Although the recommendations may incur initial
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 42 of
+68
+
+
+
+---
+[PAGE 43/68]
+
+set-up costs, these will be offset by improved outcomes. The recommendations will also
+standardise service organisation. The committee also noted that, although access to
+specialists is essential and the overall care is coordinated by them, specialists do not need
+to be located in a single clinic, potentially mitigating the resource impact on services.
+Return to recommendations
+Information and support
+Information and support about familial ovarian cancer in all
+settings
+Recommendations 1.2.1 to 1.2.6 and table 1
+Why the committee made the recommendations
+The committee based their recommendations on qualitative evidence.
+There was evidence that although people want information tailored to their individual
+situation, preferences and needs, this does not always happen. In addition, people want
+information at the most appropriate time, as well as several opportunities for discussions.
+There was also evidence that information about risks can be difficult to digest for people
+and varies according to each person's circumstances. There was evidence highlighting
+that people can feel overwhelmed by the volume and complexity of information and feel
+that it is not always sufficiently individualised. There was also evidence about the
+importance of involving families. The committee agreed the importance of providing
+sufficient information on an ongoing basis, tailored to the person's needs, so that people
+can make informed choices.
+The evidence showed that rather than receiving all information at once, which can be
+overwhelming, people appreciate having opportunities to review their decisions at key
+stages in the pathway. The committee noted that people would need to know how they
+can access services to make these discussions possible, and recommended providing
+opportunities to address this.
+There was evidence that the considerable psychological impact is not always sufficiently
+addressed, so the committee recommended that healthcare professionals ask people
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 43 of
+68
+
+
+
+---
+[PAGE 44/68]
+
+about their emotional health and wellbeing at each appointment. This means that onward
+referral to genetic counselling or psychological services can be arranged if needed, for
+example, in situations where there is anxiety around testing or severe emotional distress.
+There was evidence that many people believe that genetic risk only affects women and
+people born with female reproductive organs. The committee agreed that this perpetuates
+a lack of clarity around the risk for men, trans women and non-binary people born with
+male reproductive organs, and discussed the need to raise awareness about the risks.
+Based on their knowledge and experience, and the equality impact assessment for this
+guideline, the committee highlighted that some groups may need additional support to
+access services, for example, by having online rather than in-person appointments.
+To emphasise the need for standard information in all settings and the content of this
+information, the committee highlighted key information that should be given to people.
+How the recommendations might affect practice
+The committee agreed that it is current practice to provide information and support but
+noted that there is variation in when, what and how often it is provided. The
+recommendations should lead to greater consistency. Although this may take up additional
+time, it will allow people to better understand their risk and make informed choices. For
+example, appropriate information and support at the right time may mean a person
+choosing to have risk-reducing surgery, which will substantially reduce their cancer risk
+and associated healthcare costs. Also, existing processes to provide similar information
+and support to those at risk of familial breast cancer should help lessen the resource
+impact.
+Return to recommendations
+Information and support about risk assessment and genetic
+testing in genetics services
+Recommendations 1.2.7 to 1.2.11 and table 2
+Why the committee made the recommendations
+The committee based the recommendations on the evidence and their knowledge and
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 44 of
+68
+
+
+
+---
+[PAGE 45/68]
+
+experience. They discussed that informed choices can only be made if good information is
+provided, and agreed that information and support is needed when people come to
+genetics services, so summarised the information that should be provided as a minimum.
+Evidence showed that, compared with usual care, genetic counselling is associated with a
+higher uptake of the options being considered and higher scores on a knowledge
+questionnaire about ovarian cancer risk (it could be inferred that better knowledge would
+lead to a higher-quality decision). The committee acknowledged that genetic counselling
+would not be needed by everyone but recommended it for people who meet the referral
+criteria for genetic testing.
+Evidence comparing telephone with face-to-face genetic counselling showed no
+differences in outcomes apart from a higher uptake of options with face-to-face
+counselling. Economic evidence also showed telephone counselling to be a cost-effective
+option. The committee noted that the evidence was from 2014 and that online genetic
+counselling has become a lot more common since the COVID-19 pandemic. They agreed
+that online or face-to-face counselling should be offered. They also noted that certain
+factors may influence which option is most preferable. For example, face-to-face
+counselling may be more appropriate if an interpreter is needed, whereas online
+counselling may be more appropriate if family members in a different geographical location
+are attending the session.
+The committee considered clinical and economic evidence that compared a group session
+in which a video was shown before individual genetic counselling sessions, with individual
+sessions alone. The committee noted that there were not many clinical differences but
+that there were cost savings associated with group sessions. The committee agreed that a
+group session before the individual session could be an option. Despite the potential cost
+savings, the committee did not want to be prescriptive about this because circumstances
+can vary widely (for example, level of risk, level of distress or other factors such as
+communication or language difficulties), which may mean that an individual session may
+be preferable for some people.
+Using a decision aid alongside genetic counselling showed benefits compared with
+genetic counselling alone for some outcomes such as higher satisfaction with the support
+received and better decision quality. Adding a decision aid was also associated with a
+higher number of people taking up the option that was considered (which related to
+ovarian cancer screening). However, the evidence was not clear about the components
+used in the decision aid so the committee's recommendation reflected the uncertainty
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 45 of
+68
+
+
+
+---
+[PAGE 46/68]
+
+about whether a decision aid made up of different components would be equivalently
+effective. The committee noted general principles related to decision aids in the NICE
+guideline on shared decision making.
+To emphasise the need for standard information about risk assessment and genetic
+testing in genetics services and the content of this information, the committee highlighted
+key information that should be given to people.
+There was no evidence for any particular type of psychological intervention to support
+decision making so the committee therefore made a recommendation for research on the
+effectiveness of psychological interventions. However, the committee noted that making
+decisions related to cancer risk can be stressful and can cause some people considerable
+distress because it may impact their families' lives as well as their own, so psychological
+support could be beneficial.
+How the recommendations might affect practice
+Genetic counselling is current practice. However, the broader eligibility criteria for genetic
+testing may lead to an increased demand for these services, resulting in additional
+pressure on existing genetics services. Some of this pressure may be reduced by people
+choosing remote counselling or having group counselling sessions before individual
+genetic counselling.
+The provision of group counselling varies in practice and there may be some
+implementation costs for services that do not already provide this. However, providing
+group counselling would result in shorter individual counselling sessions, thereby helping
+to alleviate some of the pressure on genetics services and potentially leading to cost
+savings over time. Remote counselling may be more efficient and it may, for example,
+enable more appointments to take place.
+Patient decision aids (or aids that help the healthcare professional make decisions) are
+already used in some services but there is variation in practice. The recommendation
+would make decision aids more available in practice. Healthcare professionals already
+provide a range of approaches to support decision making so adapting this to the relevant
+decision context would not change current practice.
+It is already current practice to refer someone who is distressed or has difficulties in
+reaching a decision, for psychological support. The recommendation may potentially
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 46 of
+68
+
+
+
+---
+[PAGE 47/68]
+
+increase referrals, but addressing such problems early on could result in significant
+benefits to patients and cost savings to the NHS. For example, a lack of psychological
+support may prevent engagement with care, or delay genetic testing or risk-reducing
+surgery uptake.
+The committee highlighted the limited availability of specialised psychological services in
+some regions, specifically those designed to deal with psychological issues arising due to
+genetic testing and risk management. They noted that all services should have referral
+pathways to psychological services so that people in psychological distress can receive
+the support they need. The committee also recognised that genetic counselling could help
+address certain psychological concerns and that some people may need only
+1 consultation with a psychologist, thus mitigating the potential impact on psychological
+services.
+Return to recommendations
+Information and support in specialist services if a person has a
+pathogenic variant or a strong family history of ovarian cancer
+Recommendation 1.2.12 and table 3
+Why the committee made the recommendation
+The committee based the recommendation on qualitative evidence and evidence about
+other specialist assessment or risk management services or strategies.
+The evidence showed that people want information at the most appropriate time, as well
+as several opportunities for discussions. An important time for this would be when the
+person knows that they have a pathogenic variant or a strong family history of ovarian
+cancer. The committee agreed the importance of providing sufficient information on an
+ongoing basis. They recommended that in specialist services, people should receive
+general as well as more specific information depending on their circumstances. There was
+evidence that women are concerned about reproductive options and how having a
+pathogenic variant affects this. The committee therefore also agreed that people should
+have information about reproductive choices and risk-reduction options.
+To emphasise the need for standard information in specialist services if a person has a
+pathogenic variant and the content of this information, the committee highlighted key
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 47 of
+68
+
+
+
+---
+[PAGE 48/68]
+
+information that should be given to people.
+How the recommendation might affect practice
+The committee agreed that it is current practice to provide information and support, but
+noted that there is variation in when, what and how often it is provided. The
+recommendation should lead to greater consistency. Although this may take up additional
+time, it will allow people to better understand their risk and make informed choices. This
+will improve people's satisfaction with services and may reduce their risk of developing
+ovarian cancer and associated healthcare costs.
+Return to recommendation
+Assessing the risk of having a pathogenic variant
+Recommendations 1.3.1 to 1.3.3
+Why the committee made the recommendations
+The committee based the recommendations on evidence as well as their knowledge and
+experience. The available evidence only focused on tools that identify people at risk of
+carrying a BRCA1 or BRCA2 pathogenic variant.
+The committee agreed that healthcare professionals need a set of simple criteria to know
+when a person should be referred for genetic counselling and genetic testing. They agreed
+that all people should be referred to genetics services who meet the criteria for genetic
+testing to identify people at risk of having a pathogenic variant. They emphasised that this
+would not only include people coming forward for testing but also family members of
+people with a pathogenic variant who would be referred for cascade testing. People who
+are unaffected by ovarian cancer but have a first- or second-degree relative with a
+diagnosis of ovarian cancer may also have concerns about having a genetic risk, so can
+also be referred. The committee clarified that this would apply to any first-degree relative
+of someone with ovarian cancer. They clarified that for people with second-degree
+relatives with ovarian cancer, this applies to the maternal and paternal sides, even if the
+intervening relative is not affected (which would be in line with the thresholds in table 4).
+Other criteria relate to people from at-risk populations and those with a diagnosis of
+ovarian cancer (who may already be under the care of gynaecology oncology services
+responsible for genetic counselling and genetic testing).
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 48 of
+68
+
+
+
+---
+[PAGE 49/68]
+
+The committee noted that genetic tests are now commercially available (known as direct-
+to-consumer testing), and discussed what would happen if a person accesses NHS
+services and presents with a positive genetic test result. They agreed that not all direct-
+to-consumer laboratories produce accurate test results or prepare people for their test
+results. Therefore, positive test results for a pathogenic variant for which NHS testing is
+offered will need to be discussed with an NHS genetics service to decide if referral is
+needed. This is consistent with the joint guidance by the Royal College of GPs and the
+British Society for Genetic Medicine.
+There was evidence that there are a number of tools with good performance statistics
+(sensitivity, specificity and area under the curve) to identify BRCA1 and BRCA2 variants.
+The committee provided examples of tools (those with the largest evidence base) but did
+not want to be too prescriptive because other tools had good accuracy (with less
+evidence) and further calculation methods could be developed. The committee noted that
+some clinical circumstances and the particular family history would impact the tool that is
+used. They also discussed that sometimes people describe family histories which they
+believe to be ovarian cancer even if it was another type of gynaecological cancer, and this
+contributes to potentially inappropriate referral for genetic testing. They therefore
+recommended that family histories should be verified (for example, via the Cancer Registry
+or other medical documents).
+Given the uncertainties about variants other than BRCA1 and BRCA2 and to address the
+gap in the evidence, the committee also made a recommendation for research on optimal
+tools to assess mutation carrier probability for a wider range of ovarian cancer
+susceptibility genes, not limited to BRCA1 and BRCA2.
+How the recommendations might affect practice and services
+The committee noted that once criteria are met, it is current practice to arrange a referral
+to genetics services. The criteria have changed (see the rationale and impact sections for
+section 1.4) and therefore some of the referral criteria have changed in line with these. The
+committee noted that referring people for genetic counselling and genetic testing if they
+have a first-degree relative with ovarian cancer is current practice. However, referring
+people with a second-degree relative who has ovarian cancer if they do not have an
+affected intervening relative is not current practice (particularly on the maternal side), but
+is in line with the thresholds in table 4. This change would be associated with a resource
+impact, however, this will lead to more people being identified and taking up risk
+management.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 49 of
+68
+
+
+
+---
+[PAGE 50/68]
+
+Direct-to-consumer testing is becoming more popular. The recommendation will
+standardise practice and possibly reduce the burden on services having to manage
+unreliable test results. The committee agreed that there are significant NHS costs in
+confirming or refuting direct-to-consumer testing results and these are not warranted
+unless there are clinical indications for testing. By liaising with NHS genetics services, it
+can be ensured that only people at increased risk are referred. This is consistent with the
+joint guidance by the Royal College of GPs and the British Society for Genetic Medicine
+and should be current practice for most services.
+Some tools are already being used but there is variation in practice. Where they are
+currently not used, introducing them will not incur a substantial cost and will lead to better
+identification and risk management.
+Return to recommendations
+Criteria for genetic testing
+Family history of ovarian cancer
+Recommendations 1.4.1 to 1.4.4 and table 4
+Why the committee made the recommendations
+The committee based the thresholds for genetic testing on results from an economic
+model that had been specifically conducted, which showed variation in the cost
+effectiveness of panel genetic testing, where the thresholds differed according to gender
+and age.
+The committee discussed that cascade testing of family members of people with a
+pathogenic variant is already current practice. This helps to identify people who also have
+the same pathogenic variant so that risks can be managed to help prevent cancer. The
+committee also noted that it is important to make recommendations for people in
+situations where it is impossible or not clinically appropriate to test the relative who has
+ovarian or breast cancer (or the tissue), or where people have a distant relative with a
+known pathogenic variant but a closer relative cannot be tested.
+The committee discussed genetic testing for people with a personal or family history
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 50 of
+68
+
+
+
+---
+[PAGE 51/68]
+
+suggestive of a clinically defined syndrome associated with an increased risk of ovarian
+cancer. They did not make any recommendations because people would be tested or
+cascade tested if they or a family member had any of the syndromes specified in the
+protocol. They also decided not to make a research recommendation for this topic
+because these syndromes are very rare, so research would be unlikely or unfeasible.
+How the recommendations might affect practice
+Testing when a person has less than a 10% of having a pathogenic variant is not current
+practice and the recommendations will make testing available to more people. This may
+require service providers to make healthcare professionals and the public aware of this
+change, and to make arrangements for implementation. This could also increase the
+demand for support services such as psychological and menopause services. However,
+this will lead to more people being identified and taking up risk management, and is a
+cost-effective approach. Recommendations related to cascade testing are current
+practice.
+Return to recommendations
+At-risk populations
+Recommendation 1.4.5
+Why the committee made the recommendation
+The committee considered clinical as well as economic evidence. The clinical evidence
+summarised the prevalence of pathogenic variants associated with ovarian cancer.
+The evidence showed that the prevalence of BRCA1 and BRCA2 is higher in people from
+Ashkenazi Jewish families (between 1.2% and 2.2%). The evidence also showed a higher
+prevalence of BRCA1 in Greenlander people (between 1.1% and 11.64%).
+Although the prevalence is lower in people from Sephardi Jewish populations compared
+with Ashkenazi Jewish populations, there was economic evidence that testing of
+Ashkenazi and Sephardi Jewish people is cost effective even if only 1 grandparent is from
+the population. Based on this evidence, the committee used 'at least 1 grandparent' as the
+definition for being from the specified population.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 51 of
+68
+
+
+
+---
+[PAGE 52/68]
+
+The committee agreed that the economic evidence supports genetic counselling and
+genetic testing for people from the at-risk populations specified, even if the family
+background is the only criterion for genetic testing. However, they noted that this would
+not be done through a centrally coordinated national screening programme, but that
+awareness should be raised about the higher risk of having a founder pathogenic variant
+so that people could come forward for testing. Healthcare professionals should then
+recognise that the risk in these populations is higher and offer people referral to genetics
+services.
+How the recommendation might affect practice
+The committee discussed that more people from at-risk populations may come forward for
+genetic counselling and genetic testing, which will have resource implications. However,
+they noted that this would not be full panel testing but only testing for the founder genetic
+variant, which would be less costly.
+The committee noted that the recommendation may initially be difficult to implement if
+more people access genetics services, which are already overstretched. The committee
+agreed that the impact will reduce after the first wave because numbers would become
+naturally smaller. However, the recommendation could also increase the demand on
+existing support services, including psychological and menopause services. Raising
+awareness and increasing access to genetic counselling and genetic testing among at-risk
+populations will, however, identify more people who will participate in risk management,
+which is a cost-effective approach.
+The committee noted that there is an NHS programme offering BRCA testing to those with
+Jewish ancestry (the NHS Jewish BRCA testing programme) as well as a published
+programme model (A collaborative genetic carrier screening model for the British
+Ashkenazi Jewish community), and agreed that linking up with these projects may make
+implementation easier because some of the pathways into the services would already be
+established.
+Return to recommendation
+People with ovarian cancer
+Recommendation 1.4.6
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 52 of
+68
+
+
+
+---
+[PAGE 53/68]
+
+Why the committee made the recommendation
+The committee discussed the evidence that in people with ovarian cancer, the overall
+prevalence of BRCA1 and BRCA2 pathogenic variants is around 17%. When grouped by
+histological type of ovarian cancer, the highest prevalence of BRCA1 and BRCA2
+pathogenic variants is around 22% in those with high-grade serous cancers. One study
+reported a prevalence of around 18% for pathogenic variants of BRCA1, BRCA2, RAD51C,
+RAD51D or BRIP1. There was also economic evidence that testing for pathogenic variants
+in people with ovarian cancer is cost effective. The committee agreed that this supports
+testing people with ovarian cancer to establish whether they carry a pathogenic variant. If
+a pathogenic variant is identified, it will help not only manage the person's ongoing care,
+but will also mean that family members can be tested for the pathogenic variant. Based on
+their expertise, the committee also recommended that people with other ovarian cancer
+histotypes associated with pathogenic variants should also be tested.
+How the recommendation might affect practice and services
+According to current criteria, only people with non-mucinous epithelial ovarian cancer are
+referred for genetic testing. However, the committee also noted that testing of mucinous
+epithelial ovarian cancer is already common practice in many services. They further
+discussed that mucinous ovarian cancer is associated with Lynch syndrome, which is
+within the remit of this guideline and should therefore be included. However, in services
+where people with mucinous epithelial ovarian cancer are not currently being tested, it
+would represent a small change in practice due to the small number of people with
+mucinous ovarian cancer. There may also be more people diagnosed with rarer non-
+epithelial ovarian cancers accessing genetic counselling and genetic testing. However,
+these cancers are very rare and this recommendation is not expected to result in
+additional pressure on services.
+Return to recommendation
+Gene panel testing
+Recommendations 1.5.1 and 1.5.2
+Why the committee made the recommendations
+Overall, the evidence showed that genes associated with an increased risk in ovarian
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 53 of
+68
+
+
+
+---
+[PAGE 54/68]
+
+cancer were consistent with the genes recommended by the UK national genomic test
+directory. Therefore, the committee agreed that BRCA1, BRCA2, MLH1, MSH2, MSH6,
+RAD51C, RAD51D, BRIP1 and PALB2 should be the genes tested for in panel testing. They
+noted that the national genomic test directory has different gene panels for different
+conditions that may increase the risk of ovarian cancer, such as Lynch syndrome, or a
+family history of breast as well as ovarian cancer. Because such panels would contain
+different pathogenic variants to test for, the committee recommended which gene panel to
+use in relation to each person's family or personal history.
+How the recommendations might affect practice and services
+The committee noted that it is already standard practice to use the gene panels
+recommended by the UK national genomic test directory. However, the committee noted
+that the criteria for a gene test are quite different to those in this guideline and that this
+would lead to more people becoming eligible for gene testing. The committee agreed that
+although this would have a cost impact, it would improve outcomes because more people
+would be identified as having a pathogenic variant, and risk-reducing strategies as well as
+cascade testing can be planned.
+Return to recommendations
+Assessing the risk of developing ovarian cancer
+Recommendations 1.6.1 to 1.6.5
+Why the committee made the recommendations
+There was only evidence identified for 1 tool to assess the absolute risk of ovarian cancer
+(CanRisk), so the committee used this evidence as well as their experience and
+knowledge. They noted that the methods for assessing both probability of having a
+pathogenic variant and the risk of developing ovarian cancer are related, and stressed the
+need to take into account the recommendations in the section on assessing the risk of
+having a pathogenic variant (because someone with a high risk of having a pathogenic
+variant would therefore also have a higher likelihood of developing ovarian cancer).
+The committee discussed the different services that may be involved in assessing
+someone's risk of developing ovarian cancer. Once an increased risk is established (as
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 54 of
+68
+
+
+
+---
+[PAGE 55/68]
+
+outlined in the section on criteria for genetic testing) and the person is under the care of
+genetics services or a familial ovarian cancer multidisciplinary team, the service or team
+should offer to assess their risk of developing ovarian cancer. If it has already been
+established that the person has a pathogenic variant, the familial ovarian cancer
+multidisciplinary team would be responsible for the assessment.
+The committee agreed that the evidence showed a reasonable level of accuracy for the
+CanRisk tool. It was also the only tool identified and they acknowledged that it would
+provide some framework for an assessment, so decided to give this as an example of a
+tool to use. They acknowledged that CanRisk is used to assess the risk of developing
+breast and ovarian cancer, and that more specific tools to assess the risk of developing
+ovarian cancer may be developed.
+To use tools such as CanRisk, it is important to have as much information as possible.
+However, with limited information, the person should be asked whether they know of any
+other potential risk factors that may increase their risk of ovarian cancer. Based on their
+experience, the committee discussed the factors that may not be accurately assessed by
+tools, so highlighted some of these for clinicians to take into account when assessing risk.
+The committee agreed that communicating risk and numerical data can be a challenge,
+particularly in light of uncertainties around estimates. They also thought it would be helpful
+to present this information in a variety of ways to make it more understandable. The
+committee referred to the NICE guideline on shared decision making. They also referred to
+the NICE guideline on familial breast cancer for risk factors that increase both breast and
+ovarian cancer.
+The committee also made a recommendation for research about tools or models to assess
+the absolute risk of developing ovarian cancer, to encourage further tools to be
+developed.
+How the recommendations might affect practice and services
+It is standard practice to assess a person's risk of developing ovarian cancer. However, the
+way this is done varies, so the recommendations will improve efficiency and reduce
+variation.
+Return to recommendations
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 55 of
+68
+
+
+
+---
+[PAGE 56/68]
+
+Primary preventive medicines
+Recommendations 1.7.1 to 1.7.4
+Why the committee made the recommendations
+Aspirin
+The evidence on aspirin did not show a protective effect in terms of ovarian cancer
+incidence, so the committee did not recommend it for the sole purpose of reducing ovarian
+cancer risk. However, they noted that there is existing NICE guidance on the use of aspirin
+to reduce the risk of colorectal cancer in people with Lynch syndrome. Because people
+with Lynch syndrome are included in the scope of this guideline, the committee felt it was
+important to link to the NICE guideline on colorectal cancer to ensure that they are aware
+of this recommendation.
+Combined oral contraceptives
+The committee agreed, based on their knowledge and experience, that combined oral
+contraceptives can be associated with a lower risk of ovarian cancer, but long-term use is
+associated with an increase in breast cancer. They therefore decided to only recommend
+oral contraceptives as a preventive medicine in particular circumstances: when the
+reduction in ovarian cancer risk (based on for example age, family history) may outweigh
+an increased breast cancer risk; and after taking into account whether the timing of risk-
+reducing surgery is appropriate or not (for example, it may not be appropriate because of
+age and planned pregnancy).
+In the committee's experience, people are not always fully informed about the potential
+risks (increased risk of developing breast cancer) and benefits (reduced risk of developing
+ovarian cancer) of combined oral contraceptives, which is necessary for informed decision
+making. They therefore recommended that this should be discussed so that people can
+make an informed choice.
+Given that evidence was only identified for 2 types of medicines, the committee decided
+to make a recommendation for research about the effectiveness of primary preventive
+medicines for reducing the incidence of ovarian cancer.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 56 of
+68
+
+
+
+---
+[PAGE 57/68]
+
+How the recommendations might affect practice
+The recommendations will not significantly change practice.
+Return to recommendations
+Risk-reducing surgery
+Factors to take into account when considering risk-reducing
+surgery
+Recommendations 1.8.1 to 1.8.5
+Why the committee made the recommendations
+The committee discussed general factors that need to be taken into account or discussed
+with the person when considering risk-reducing surgery. Risk-reducing surgery means that
+the person would become unable to become pregnant because their ovaries and fallopian
+tubes would be removed. The committee agreed that risk-reducing surgery should not be
+offered to people planning to conceive naturally because the incidence of ovarian cancer
+in people younger than 35 is relatively small. Based on the evidence, they also specified
+the criteria for offering risk-reducing surgery. The criteria relate to people who have a total
+lifetime risk of ovarian cancer of 5% or over because they have either a pathogenic variant
+or a strong family history. The committee noted that it is important to attempt to verify the
+family history if possible (by exploring testing with the person or their family, or via the
+Cancer Registry or other medical documents).
+The committee discussed the importance of supporting people to make informed
+decisions, and agreed the information and support that people should receive.
+The committee agreed that decisions around risk-reducing surgery can cause anxiety and
+stress. They discussed that the psychological impact of surgery should be taken into
+account in discussions with the person, and that psychological support before surgery
+may be needed.
+The committee also discussed information and support to aid decision making, particularly
+around menopause and managing symptoms for premenopausal people considering
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 57 of
+68
+
+
+
+---
+[PAGE 58/68]
+
+bilateral salpingo-oophorectomy.
+The committee noted, based on their knowledge and experience, that decisions about
+risk-reducing surgery for people who are carriers of bi-allelic pathogenic variants in
+mismatch repair genes (for example, homozygous PMS2) are complex. However, they are
+also very rare so the committee agreed that a referral to a specialist multidisciplinary team
+would be needed for discussions about potential risk-reducing surgery.
+How the recommendations might affect practice
+The recommendations will reinforce common good practice and will lead to safer practice
+and better outcomes.
+Return to recommendations
+Types of risk-reducing surgery and timing in relation to the
+person's specific pathogenic variant
+Recommendations 1.8.6 to 1.8.11 and table 5
+Why the committee made the recommendations
+The committee agreed that decisions related to risk-reducing surgery for ovarian cancer
+should take into account the NICE guideline on familial breast cancer because some of the
+genes associated with ovarian cancer would also increase the risk of breast cancer, so
+considerations around risk-reducing mastectomy should be made in line with the NICE
+familial breast cancer guideline.
+The committee discussed the evidence that bilateral salpingo-oophorectomy improves
+overall survival. They noted that most of the evidence came from studies with carriers of
+the BRCA1 or BRCA2 variants. Based on the evidence, they recommended bilateral
+salpingo-oophorectomy for people at increased risk of ovarian cancer with BRCA1 and
+BRCA2, and also RAD51C, RAD51D, BRIP1 or PALB2, which are also associated with an
+increased risk of ovarian cancer.
+The MLH1, MSH2 or MSH6 pathogenic variants are associated with Lynch syndrome,
+which is associated with an increased risk of endometrial as well as ovarian cancer.
+Although there was no evidence identified related to different types of surgery within this
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 58 of
+68
+
+
+
+---
+[PAGE 59/68]
+
+specific group, the committee decided that total hysterectomy as well as bilateral
+salpingo-oophorectomy should be recommended to prevent both of these types of
+cancers. They noted that PMS2 is also associated with Lynch syndrome (and is therefore
+on the associated gene panel). PMS2 increases the risk of endometrial cancer alone rather
+than endometrial as well as ovarian cancer. They therefore did not add it to the table of
+risk-reducing surgery for people at risk of ovarian cancer.
+The committee made separate recommendations related to the PMS2 pathogenic variant
+because of its link to Lynch syndrome. People with this pathogenic variant have an
+increased risk of endometrial cancer alone, but could have an increased risk of ovarian
+cancer if there is also a family history of ovarian cancer. They therefore considered it to be
+safe to only recommend total hysterectomy for people with a heterogenous PMS2
+pathogenic variant unless there is also a family history of ovarian cancer when additional
+bilateral salpingo-oophorectomy could be considered.
+The committee used their knowledge and experience to agree the minimum ages for risk-
+reducing surgery, and discussed that there could be exceptional circumstances when risk-
+reducing surgery could be considered earlier, based on an individualised assessment.
+The committee acknowledged that an argument could be made for having salpingectomy
+first and then delayed oophorectomy, which would avoid a surgical menopause. They
+noted that some of the evidence related to this showed promise. However, the evidence
+had very short follow-up and therefore, the important outcomes such as overall survival
+and ovarian cancer incidence could not be measured.
+The committee noted that MLH1, MSH2, MSH6 and PMS2 increase the risk of endometrial
+cancer, and therefore a hysterectomy is indicated only for carriers of these pathogenic
+variants. The committee recommended against hysterectomy for carriers of other
+pathogenic variants unless there would be other reasons for this to be done.
+How the recommendations might affect practice
+Risk-reducing surgery is already current practice, but the timing of when it is offered
+varies. There is currently no specific consideration for the timing related to specific
+pathogenic variants other than BRCA1 and BRCA2, and the committee noted that the
+recommendations will standardise this. The recommended ages for risk-reducing surgery
+correspond with increasing cancer incidence and offer the greatest potential for cancer
+reduction and associated healthcare cost savings.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 59 of
+68
+
+
+
+---
+[PAGE 60/68]
+
+The committee noted that broader eligibility criteria for genetic testing will lead to more
+people opting for risk-reducing surgery. This could put additional pressure on existing
+services. However, risk-reducing surgeries are generally less complex and require less
+extensive preoperative and postoperative care compared with ovarian cancer surgery. It
+would also save costs associated with other cancer treatment as well as save lives.
+Therefore, in the long term, risk-reducing surgery is likely to result in better outcomes for
+people and cost savings for services.
+Return to recommendations
+Tests before risk-reducing surgery, referral to the gynaecology
+oncology multidisciplinary team, and what to consider during
+surgery
+Recommendations 1.8.12 to 1.8.17
+Why the committee made the recommendations
+Tests before risk-reducing surgery
+The committee used their knowledge and experience to agree the tests that should be
+carried out before risk-reducing surgery to minimise the risk of missing asymptomatic
+ovarian or endometrial cancer.
+Referral to the gynaecology oncology multidisciplinary team
+There was evidence that risk-reducing surgery is effective and will identify asymptomatic
+cancer in some people undergoing risk-reducing surgery. Based on this evidence, the
+committee recommended that if this is identified before or after surgery, a referral should
+be made to the gynaecology oncology multidisciplinary team so that cancer treatment can
+be planned.
+During risk-reducing surgery
+Based on their knowledge and experience, the committee agreed that minimal access
+surgery is generally preferred over a laparotomy. They noted that some of the evidence
+included peritoneal washing, but the study included this in both arms of the comparison. It
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 60 of
+68
+
+
+
+---
+[PAGE 61/68]
+
+was therefore unclear whether this would be more effective than not using it. However, the
+committee recommended that peritoneal washings should be taken to prevent missing
+cancerous cells that may have spread to the peritoneal cavity. Missing cancerous cells,
+such as serous tubal intraepithelial carcinoma (STIC), would affect staging and ongoing
+management. In their experience, the committee were aware that up to 5% of incidental
+cancers could be missed if ultrasound alone is used, and that ultrasound is particularly
+unreliable in Lynch syndrome. They therefore recommended that any lesions noticed
+during surgery should be investigated – even if they are found outside the organs that are
+being removed (such as in the peritoneal cavity) – to increase the likelihood of finding any
+asymptomatic cancers.
+How the recommendations might affect practice
+The recommendations generally reflect current practice and will reduce variation. Taking
+peritoneal washings is not currently practised everywhere but identifying cancer early,
+correct staging and the appropriate treatment will lead to better outcomes.
+Return to recommendations
+Ovarian cancer surveillance by the familial ovarian cancer
+multidisciplinary team for people who choose to delay or not
+have risk-reducing surgery
+Recommendations 1.8.18 to 1.8.20
+Why the committee made the recommendations
+The recommendations are based on limited evidence of the effectiveness of ovarian
+cancer surveillance as well as how accurately the methods diagnose cancer. Not many
+studies were identified, and the available studies were limited in the applicability of the
+populations and the comparisons investigated.
+The committee agreed that risk-reducing surgery is always superior to surveillance in
+relation to preventing cancer and therefore decided not to recommend surveillance
+because it could encourage people to delay or avoid risk-reducing surgery; the evidence
+supported this. The committee also discussed the evidence that surveillance is associated
+with an earlier detection of cancer but also noted a lack of data on an associated survival
+benefit. However, the committee acknowledged that because people often have children
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 61 of
+68
+
+
+
+---
+[PAGE 62/68]
+
+later in life, they may delay or choose to not have risk-reducing surgery. The committee
+discussed, based on their expertise and the evidence, that the risk of ovarian cancer rises
+with age and incidence curves vary according to the pathogenic variant, and therefore
+suggested varying ages for onset of surveillance if surgery was delayed or declined.
+They were also concerned about the risk of false-positive surveillance results so
+recommended the test with the best performance characteristics in relation to false-
+positive and false-negative rates. If surveillance is carried out, the evidence showed that
+serial 4-monthly CA125 longitudinal testing using an algorithm was the most accurate test
+for this. In the evidence, this was based on the Risk of Ovarian Cancer Algorithm (ROCA)
+Test, but the committee did not want to rule out using other CA125 longitudinal testing
+using another algorithm as long as it has demonstrated accuracy. The committee
+acknowledged that an infrastructure needs to be in place, so recommended that all
+surveillance activities should come under the remit of the familial ovarian cancer
+multidisciplinary team who should coordinate, audit and interpret it, using a call and recall
+mechanism. They recommended that there should be a review at least once a year to
+discuss the recommendation of having risk-reducing surgery.
+The committee agreed that people should be made aware that surveillance is not an
+alternative to risk-reducing surgery and that risk-reducing surgery is the only way to
+reduce their risk of developing ovarian cancer. It should also be explained that surveillance
+would involve 4-monthly blood tests with an algorithm to analyse results and that there is
+a possibility that a test result could be false. The committee decided that this information
+is needed to encourage people not to delay the recommended risk-reducing surgery
+indefinitely.
+The committee also made a recommendation for research to obtain more evidence on the
+long-term benefits and risks of ovarian cancer surveillance.
+How the recommendations might affect practice
+Because surveillance would be a change to current practice, the infrastructure for services
+is not established. Implementing the recommendations may be a challenge and associated
+with a considerable resource impact. Implementation would take up clinical as well as
+administrative time, for example, screening invitations, appointments, cost of tests (the
+ROCA Test is currently not available on the NHS), interpretation of tests and providing the
+outcomes of tests. Surveillance has been shown to detect ovarian cancer at an earlier
+stage but it has not been shown to translate into a survival benefit. The committee also
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 62 of
+68
+
+
+
+---
+[PAGE 63/68]
+
+noted that most people would be expected to opt for risk-reducing surgery; hence, only
+very few people would require surveillance, potentially mitigating some of the resource
+impact.
+Return to recommendations
+Pathology protocol for handling specimens from
+risk-reducing surgery
+Recommendations 1.9.1 to 1.9.5
+Why the committee made the recommendations
+The committee agreed, based on their knowledge and experience, that people undergoing
+risk-reducing surgery are at increased risk of having an occult precancerous or malignant
+lesion, so intensive pathological investigation is needed. The committee discussed that
+pathology protocols for the detection of microscopic lesions found within the fallopian
+tubes have changed over time. The SEE-FIM (Sectioning and Extensively Examining the
+FIMbriated End) protocol entails multiple sagittal sections of fimbriae combined with
+2 mm-thick sections of the remainder. The committee agreed, based on their knowledge
+and experience, that this type of sectioning is necessary to maximise the detection of
+precancerous lesions and early cancers.
+The committee discussed that immunohistochemistry is a relatively inexpensive, yet
+informative, investigation that is available in all NHS pathology laboratories.
+Immunohistochemistry (for p53 and Ki67/MIB1) helps in the identification of serous tubal
+intraepithelial carcinoma (STIC) and high-grade serous ovarian carcinomas. The committee
+agreed that investigations of these markers are only necessary if a premalignant or
+malignant lesion is suspected on morphological examination. They should not be
+performed in morphologically normal fallopian tubes because immunohistochemistry
+would not provide any additional information.
+The committee agreed that to enable accurate reporting, surgical specimens need to be
+correctly labelled. It is not possible to determine the laterality of an adnexa once it has
+been removed from the body. Therefore, at the time of removal, surgeons should ensure
+adnexal specimens are submitted in 2 separate containers and labelled as originating from
+either the left or right adnexa. This will enable pathologists to issue accurate reports.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 63 of
+68
+
+
+
+---
+[PAGE 64/68]
+
+The committee also agreed that peritoneal cytology is needed to correctly stage any
+precancerous or cancerous lesions and detect occult peritoneal cancers.
+The committee noted that people with Lynch syndrome are at increased risk of developing
+endometrial cancers. In Lynch syndrome, there is a propensity for endometrial cancers to
+arise within the lower uterine segment. The committee decided that the entire
+endometrium, including the lower uterine segment, should be submitted for pathological
+examination to ensure that such cancers and precancerous lesions are identified.
+How the recommendations might affect practice
+There is already widespread use of the SEE-FIM protocol by pathologists in dealing with
+risk-reducing surgery specimens. Where this is not currently used, it will improve detection
+of occult precancers and cancers and therefore may lead to earlier treatment. Therefore,
+the recommendations will standardise the use of this pathology protocol.
+Return to recommendations
+Hormone replacement therapy after risk-reducing
+surgery
+Recommendations 1.10.1 to 1.10.4
+Why the committee made the recommendations
+There was little evidence about hormone replacement therapy (HRT) after risk-reducing
+salpingo-oophorectomy. Studies were small and most had follow-up that was too short for
+some of the outcomes investigated, such as cardiovascular events for which the baseline
+risk is relatively low at a younger age. The committee noted that the evidence showed that
+HRT is effective in decreasing vasomotor symptoms and agreed that this is in line with the
+general literature on managing troublesome vasomotor symptoms. There was evidence
+that HRT is associated with fewer diagnoses of osteoporosis as well as higher bone
+mineral density. Despite the relatively small evidence base, this was consistent with the
+committee's experience and knowledge. They recommended that HRT should be offered
+to prevent loss of bone density and manage symptoms and, based on their knowledge and
+experience, decided that it should be offered until the average age of menopause (which
+is usually around 51 years).
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 64 of
+68
+
+
+
+---
+[PAGE 65/68]
+
+The committee agreed that premenopausal women and people with female reproductive
+organs without a history of breast cancer should be offered HRT after risk-reducing
+surgery. They agreed that those with a history of certain types of breast cancer may
+sometimes be prescribed HRT after risk-reducing bilateral salpingo-oophorectomy, but
+that this should only be offered after advice from their breast cancer team. This is to
+ensure that HRT would not increase the risk of breast cancer recurrence given other
+potential risk factors (for example, oestrogen receptor-positive breast cancer).
+The committee noted that oestrogen-only HRT is appropriate after a hysterectomy,
+whereas only combined preparations are appropriate for those with a uterus. The
+committee were also aware of a Royal College of Obstetricians and Gynaecologists
+(RCOG) Scientific impact paper on HRT after risk-reducing salpingo-oophorectomy. To be
+consistent with this paper, they agreed that in most cases, HRT could be started
+immediately after surgery unless this is not clinically appropriate. They also decided, in line
+with the RCOG recommendations, that it may be advisable to insert a levonorgestrel
+intrauterine system at the same time as the surgery, if this was the preferred HRT option.
+The committee discussed whether or not HRT should be continued after the person
+reaches the average age of menopause. They agreed that although this is a possibility, it
+should not automatically happen. If a person wants to take HRT beyond the average age of
+menopause, there should first be a discussion to assess the person's individual risks and
+benefits.
+The committee were aware that genitourinary symptoms are effectively treated by vaginal
+oestrogen for people who have not had breast cancer. This is consistent with the
+conclusions from the NICE guideline on menopause.
+Because of the sparsity of evidence, the committee made a recommendation for research
+on the effectiveness and safety of HRT after risk-reducing surgery.
+How the recommendations might affect practice
+The committee noted that these recommendations align with other NICE guidance and
+therefore should not change current practice.
+Return to recommendations
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 65 of
+68
+
+
+
+---
+[PAGE 66/68]
+
+Context
+Familial ovarian cancer affects people born with female reproductive organs (ovaries,
+fallopian tubes and/or a uterus). Although in this guideline, the term ovarian cancer is used
+throughout, there is now evidence that most high-grade serous cancers (the most
+common type of ovarian cancer) arise from the distal fallopian tube from a precursor lesion
+referred to as serous tubal intraepithelial carcinoma (STIC).
+In the UK, between 340,000 and 440,000 women have a pathogenic variant associated
+with an increased risk of ovarian cancer. This includes pathogenic variants in BRCA1,
+BRCA2, RAD51C, RAD51D, BRIP1, PALB2, MLH1, MSH2 and MSH6 genes. It is estimated
+that 15% to 20% of those with high-grade epithelial ovarian cancer also carry a pathogenic
+variant associated with increased risk of ovarian cancer.
+Most of the people who carry a pathogenic variant for ovarian cancer do not have a family
+history suggestive of a genetic risk. This means many people have not sought testing for
+high-risk ovarian cancer pathogenic variants. Current best estimates are that only 3% of
+people with a pathogenic variant know that they are carriers. This proportion will increase
+with improved availability of genetic testing.
+Most women and people born with female reproductive organs who carry a pathogenic
+variant will not develop ovarian cancer. This guideline recommends how to assess the risk
+of having a pathogenic variant and the risk of developing ovarian cancer, what risk-
+reducing interventions should or should not be offered, and what information and support
+should be given.
+The guideline does not cover risk management and decision-making support for people
+born with male reproductive organs who have, or are at risk of having, a pathogenic
+variant associated with ovarian cancer. This is because they are not at risk of developing
+ovarian cancer, and the decisions that they would have to make are different and outside
+the scope of this guideline.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 66 of
+68
+
+
+
+---
+[PAGE 67/68]
+
+Finding more information and committee
+details
+To find NICE guidance on related topics, including guidance in development, see the NICE
+topic page on ovarian cancer.
+For full details of the evidence and the guideline committee's discussions, see the
+evidence reviews. You can also find information about how the guideline was developed,
+including details of the committee.
+NICE has produced tools and resources to help you put this guideline into practice. For
+general help and advice on putting our guidelines into practice, see resources to help you
+put NICE guidance into practice.
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 67 of
+68
+
+
+
+---
+[PAGE 68/68]
+
+Update information
+Minor changes since publication
+March 2025: In the terms used in this guideline section, we removed the word
+'grandmother' from the definition of 'strong family history of ovarian cancer' because this
+definition only applies to first-degree relatives.
+ISBN: 978-1-4731-5815-3
+Ovarian cancer: identifying and managing familial and genetic risk (NG241)
+© NICE 2025. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 68 of
+68
+

@@ -1,0 +1,645 @@
+# ACR Appropriateness Criteria
+
+
+---
+[PAGE 1/12]
+
+Revised 2025
+ACR Appropriateness Criteria®
+1
+Staging and Follow-up of Ovarian Cancer
+American College of Radiology
+ACR Appropriateness Criteria®
+Staging and Follow-up of Ovarian Cancer
+Variant 1:
+Adult. Ovarian cancer. Pretreatment staging.
+Procedure
+Appropriateness Category
+Relative Radiation Level
+CT abdomen and pelvis with IV contrast
+Usually Appropriate
+☢☢☢
+CT chest with IV contrast
+Usually Appropriate
+☢☢☢
+MRI abdomen and pelvis without and with IV
+contrast
+May Be Appropriate
+O
+MRI abdomen and pelvis without IV contrast
+May Be Appropriate
+O
+CT abdomen and pelvis without IV contrast
+May Be Appropriate
+☢☢☢
+CT chest without IV contrast
+May Be Appropriate
+☢☢☢
+FDG-PET/MRI skull base to mid-thigh
+May Be Appropriate
+☢☢☢
+FDG-PET/CT skull base to mid-thigh
+May Be Appropriate
+☢☢☢☢
+US abdomen and pelvis transabdominal
+Usually Not Appropriate
+O
+US pelvis transvaginal
+Usually Not Appropriate
+O
+CT chest without and with IV contrast
+Usually Not Appropriate
+☢☢☢
+CT abdomen and pelvis without and with IV
+contrast
+Usually Not Appropriate
+☢☢☢☢
+Variant 2:
+Adult. Ovarian cancer. Posttreatment response evaluation.
+Procedure
+Appropriateness Category
+Relative Radiation Level
+CT abdomen and pelvis with IV contrast
+Usually Appropriate
+☢☢☢
+CT chest with IV contrast
+Usually Appropriate
+☢☢☢
+FDG-PET/CT skull base to mid-thigh
+Usually Appropriate
+☢☢☢☢
+MRI abdomen and pelvis without and with IV
+contrast
+May Be Appropriate
+O
+MRI abdomen and pelvis without IV contrast
+May Be Appropriate
+O
+CT abdomen and pelvis without IV contrast
+May Be Appropriate
+☢☢☢
+CT chest without IV contrast
+May Be Appropriate
+☢☢☢
+FDG-PET/MRI skull base to mid-thigh
+May Be Appropriate
+☢☢☢
+US abdomen and pelvis transabdominal
+Usually Not Appropriate
+O
+US pelvis transvaginal
+Usually Not Appropriate
+O
+CT chest without and with IV contrast
+Usually Not Appropriate
+☢☢☢
+CT abdomen and pelvis without and with IV
+contrast
+Usually Not Appropriate
+☢☢☢☢
+
+
+
+---
+[PAGE 2/12]
+
+ACR Appropriateness Criteria®
+2
+Staging and Follow-up of Ovarian Cancer
+Variant 3:
+Adult. Ovarian cancer. Posttreatment routine surveillance. Asymptomatic patient, no
+suspected recurrence.
+Procedure
+Appropriateness Category
+Relative Radiation Level
+MRI abdomen and pelvis without and with IV
+contrast
+May Be Appropriate
+O
+MRI abdomen and pelvis without IV contrast
+May Be Appropriate
+O
+CT abdomen and pelvis with IV contrast
+May Be Appropriate
+☢☢☢
+CT abdomen and pelvis without IV contrast
+May Be Appropriate
+☢☢☢
+CT chest with IV contrast
+May Be Appropriate
+☢☢☢
+CT chest without IV contrast
+May Be Appropriate
+☢☢☢
+FDG-PET/MRI skull base to mid-thigh
+May Be Appropriate
+☢☢☢
+FDG-PET/CT skull base to mid-thigh
+May Be Appropriate
+☢☢☢☢
+US abdomen and pelvis transabdominal
+Usually Not Appropriate
+O
+US pelvis transvaginal
+Usually Not Appropriate
+O
+CT chest without and with IV contrast
+Usually Not Appropriate
+☢☢☢
+CT abdomen and pelvis without and with IV
+contrast
+Usually Not Appropriate
+☢☢☢☢
+Variant 4:
+Adult. Ovarian cancer. Posttreatment evaluation. Suspected or known recurrence.
+Procedure
+Appropriateness Category
+Relative Radiation Level
+CT abdomen and pelvis with IV contrast
+Usually Appropriate
+☢☢☢
+CT chest with IV contrast
+Usually Appropriate
+☢☢☢
+FDG-PET/CT skull base to mid-thigh
+Usually Appropriate
+☢☢☢☢
+MRI abdomen and pelvis without and with IV
+contrast
+May Be Appropriate
+O
+MRI abdomen and pelvis without IV contrast
+May Be Appropriate
+O
+CT abdomen and pelvis without IV contrast
+May Be Appropriate
+☢☢☢
+CT chest without IV contrast
+May Be Appropriate
+☢☢☢
+FDG-PET/MRI skull base to mid-thigh
+May Be Appropriate
+☢☢☢
+US abdomen and pelvis transabdominal
+Usually Not Appropriate
+O
+US pelvis transvaginal
+Usually Not Appropriate
+O
+CT chest without and with IV contrast
+Usually Not Appropriate
+☢☢☢
+CT abdomen and pelvis without and with IV
+contrast
+Usually Not Appropriate
+☢☢☢☢
+
+
+
+---
+[PAGE 3/12]
+
+ACR Appropriateness Criteria®
+3
+Staging and Follow-up of Ovarian Cancer
+STAGING AND FOLLOW-UP OF OVARIAN CANCER
+Expert Panel on GYN and OB Imaging: Erica B. Stein, MDa; Aradhana M. Venkatesan, MDb; Esma A. Akin, MDc;
+Emily Barrows, MDd; Parul Barry, MDe; Nicole M. Hindman, MDf; Chenchan Huang, MDg;
+Gaiane M. Rauch, MD, PhDh; Madeleine Sertic, MB, BChi; Krista Suarez-Weiss, MDj; Jason D. Wright, MDk;
+Ashish P. Wasnik, MD.l
+Summary of Literature Review
+Introduction/Background
+Ovarian cancer remains the sixth most common cause of cancer mortality in women in the United States and is a
+leading cause of cancer mortality among patients with gynecologic malignancies [1]. Ovarian cancer can affect
+anyone who has ovaries, including cisgender females as well as transgender men and nonbinary gender–identifying
+groups who have ovaries.
+There are several different histopathologic subtypes of ovarian cancer, with epithelial ovarian cancer being the most
+common and accounting for approximately 90% of all malignant ovarian neoplasms [2]. Most of the information
+in this document regarding imaging use for staging and recurrence applies to epithelial ovarian cancers. There are
+two major subtypes of epithelial ovarian cancers that are distinguished by molecular, genetic, and morphologic
+characteristics. Type I is the more indolent form that includes low-grade serous, low-grade endometrioid, mucinous
+tumors, and clear cell carcinomas. Type II includes aggressive neoplasms, such as high-grade serous or
+endometrioid, and undifferentiated cancer [3]. The aggressive, or type II ovarian cancers, typically present in
+advanced stages (stage III-IV), after the disease has spread beyond the pelvis [4,5].
+This document largely applies to staging and follow-up for type II ovarian cancers. Diagnostic imaging plays a
+major role in characterizing ovarian mass(es), determining presurgical disease extent, predicting tumor resectability,
+evaluating response to chemotherapy, and evaluating for posttreatment recurrence [2,5-11].
+Although surgical staging is the reference standard in ovarian cancer, initial management recommendations rely on
+presurgical imaging to assess disease extent. Pretreatment imaging can assess the likelihood of optimal primary
+cytoreduction, which is the surgical removal of macroscopic disease but small sites of visible disease <1 cm in size
+may remain [12]. In addition to disease extent, preoperative imaging can also identify sites of disease that are
+deemed potentially unresectable or challenging to resect; for example, disease involving the small bowel mesentery
+or porta hepatis and suprarenal lymph node metastases [12]. If complete or optimal cytoreduction is not felt to be
+achievable, then neoadjuvant chemotherapy may be considered prior to interval debulking surgery.
+Discussion of Procedures by Variant
+Variant 1: Adult. Ovarian cancer. Pretreatment staging.
+The goal of imaging is to appropriately stage ovarian cancer in treatment-naive patients. Imaging plays a crucial
+role in guiding the most appropriate therapeutic interventions, thereby optimizing patient outcomes and overall
+management of the disease.
+CT Abdomen and Pelvis With IV Contrast
+Contrast-enhanced CT is the most useful procedure in the preoperative evaluation of ovarian cancer [13]. It can
+provide clinically relevant information, including assessment of locoregional tumor extent and distant sites of
+disease including peritoneum, omentum, mesentery, liver, and lymph nodes. Contrast-enhanced CT has a reported
+accuracy for ovarian cancer staging of up to 94% [14], and accurate abdominopelvic disease assessment can predict
+successful surgical cytoreduction [13]. The sensitivity of CT staging varies depending on the anatomical location
+
+aUniversity of Michigan Medical Center, Ann Arbor, Michigan. bPanel Chair, The University of Texas MD Anderson Cancer Center, Houston, Texas. cGeorge
+Washington University Hospital, Washington, District of Columbia; Commission on Nuclear Medicine and Molecular Imaging. dVirginia Commonwealth
+University Health/Virginia Commonwealth University School of Medicine, Richmond, Virginia; American College of Obstetricians and Gynecologists.
+eUniversity of Pittsburgh Medical Center Hillman Cancer Center, Pittsburgh, Pennsylvania; Commission on Radiation Oncology. fNew York University School
+of Medicine, New York, New York. gNew York University Langone Medical Center, New York, New York. hThe University of Texas MD Anderson Cancer
+Center, Houston, Texas. iMassachusetts General Hospital and Harvard Medical School, Boston, Massachusetts. jBrown University Health, Providence, Rhode
+Island. kColumbia University Vagelos College of Physicians and Surgeons, New York, New York; Society of Gynecologic Oncology. lSpecialty Chair,
+University of Michigan, Ann Arbor, Michigan.
+
+The American College of Radiology seeks and encourages collaboration with other organizations on the development of the ACR Appropriateness
+Criteria through representation of such organizations on expert panels. Participation on the expert panel does not necessarily imply endorsement of the final
+document by individual contributors or their respective organization.
+
+Reprint requests to: publications@acr.org
+
+
+
+---
+[PAGE 4/12]
+
+ACR Appropriateness Criteria®
+4
+Staging and Follow-up of Ovarian Cancer
+being examined. One of the significant drawbacks of CT in staging ovarian cancer is its limited ability to
+consistently identify tumor implants on the bowel surface, mesentery, or peritoneum that are smaller than 5 mm,
+particularly in in the absence of ascites [6,15-17].
+The addition of oral contrast on CT imaging, typically performed with positive oral contrast, can help differentiate
+peritoneal implants from adjacent bowel. Rectal contrast administration can increase the sensitivity in detecting
+rectosigmoid serosal implants [2].
+CT imaging can be instrumental in planning biopsies of the omentum or other abdominopelvic tumor sites when
+preoperative histology is necessary [18-21].
+CT Abdomen and Pelvis Without and With IV Contrast
+There is no relevant literature to support the use of CT of the abdomen and pelvis without and with intravenous (IV)
+contrast for ovarian cancer staging.
+CT Abdomen and Pelvis Without IV Contrast
+CT of the abdomen and pelvis without IV contrast can be considered in certain clinical settings but offers limited
+ability to identify small peritoneal or mesenteric implants or lymphadenopathy from bowel or adjacent organs.
+CT Chest With IV Contrast
+CT of the chest with IV contrast is a useful modality for detecting pulmonary metastases during the baseline staging
+of ovarian cancer. Presence of pleural metastases and pleural effusions may suggest transdiaphragmatic tumor
+spread. Presence of a moderate-to-large pleural effusion on preoperative CT is a predictor of poor posttreatment
+outcome and may impact decisions to pursue neoadjuvant chemotherapy over primary cytoreductive surgery [22].
+CT Chest Without and With IV Contrast
+There is no relevant literature to support the use of CT of the chest without and with IV contrast for ovarian cancer
+staging.
+CT Chest Without IV Contrast
+CT of the chest without IV contrast may be useful for staging evaluation. CT of the chest without IV contrast can
+detect small pulmonary nodules; however, pleural metastases may be difficult to delineate without IV contrast.
+FDG-PET/CT Skull Base to Mid-Thigh
+Fluorine-18-2-fluoro-2-deoxy-D-glucose (FDG)-PET, when combined with CT, is a valuable tool for staging
+advanced ovarian cancer. Although this modality has a limited role for locoregional staging, it is helpful in
+identifying sites of distant metastatic disease, such as peritoneal and lymph node metastases when lesion
+characterization may alter clinical management. A recent meta-analysis showed no statistical difference in
+sensitivity between CT with IV contrast and FDG-PET/CT in the detection of stage III ovarian cancer; however,
+there was improved specificity with FDG-PET/CT [23].
+FDG-PET/MRI Skull Base to Mid-Thigh
+FDG-PET, when combined with MRI, is a diagnostic alternative to more established imaging modalities, such as
+contrast-enhanced CT and FDG-PET/CT, and may be useful for pretreatment staging. MRI allows for high contrast
+and spatial resolution of soft tissues as compared with CT, and when paired with the functional capabilities of FDG
+it may offer improved diagnostic performance compared with FDG-PET/CT [24-26]. FDG-PET/MRI can better
+resolve sites of physiologic FDG activity in the pelvis (eg, pelvic ureters), distinguishing them from peritoneal
+deposits, which is an advantage over FDG-PET/CT [27].
+MRI Abdomen and Pelvis Without and With IV Contrast
+MRI of the abdomen and pelvis can be used for ovarian cancer staging, specifically in certain clinical settings such
+as in patients with a history of fertility preservation for borderline tumors and/or inconclusive CT findings [28,29].
+MRI has shown similar accuracy to CT for initial staging and has been shown to predict peritoneal tumor volume
+comparable to surgery [30,31]. Limitations in the use of MRI for ovarian cancer staging include nonroutine use of
+intraluminal gastrointestinal contrast agents and greater likelihood of patient motion due to examination length.
+MRI Abdomen and Pelvis Without IV Contrast
+MRI of the abdomen and pelvis without IV contrast has a limited role in baseline ovarian cancer staging, but it can
+offer better soft tissue resolution when compared with CT abdomen pelvis without IV contrast.
+
+
+
+---
+[PAGE 5/12]
+
+ACR Appropriateness Criteria®
+5
+Staging and Follow-up of Ovarian Cancer
+US Abdomen and Pelvis Transabdominal
+Transabdominal ultrasound (US) of the abdomen and pelvis is not useful for pretreatment ovarian cancer staging.
+A recent meta-analysis observed that although US had a good diagnostic performance in detecting disease in certain
+anatomical sites (eg, rectosigmoid), it had low diagnostic performance in other anatomical sites (eg, root of the
+mesentery) [32]. Although few studies have shown sensitivity comparable to that of CT [33], the use of US in
+ovarian cancer staging does not reflect universal practice or experience. National Comprehensive Cancer Network
+(NCCN) guidelines state that in patients with newly diagnosed ovarian cancer after recent surgical procedure that
+imaging with US can be used as clinically indicated [2].
+US Pelvis Transvaginal
+There is no relevant literature to support the use of transvaginal pelvic US for ovarian cancer staging. Transvaginal
+pelvis US is helpful to determine site of origin of a pelvic mass, characterize the lesion, and assist in image-guided
+core biopsy [34].
+Variant 2: Adult. Ovarian cancer. Posttreatment response evaluation.
+The goal of imaging is to assess the posttreatment response evaluation in ovarian cancer. With the relevant imaging
+information, an appropriate clinical and follow-up plan can be determined.
+CT Abdomen and Pelvis With IV Contrast
+CT of the abdomen and pelvis with IV and oral contrast is the most useful procedure to assess disease extent
+following treatment [35]. NCCN guidelines state that contrast-enhanced CT of the abdomen and pelvis can be
+performed for monitoring and follow-up of tumor burden [2].
+CT Abdomen and Pelvis Without and With IV Contrast
+There is no relevant literature to support the use of CT of the abdomen and pelvis without and with IV contrast for
+posttreatment ovarian cancer response evaluation.
+CT Abdomen and Pelvis Without IV Contrast
+CT of the abdomen and pelvis without IV contrast can be considered in certain clinical settings but offers limited
+ability to identify metastases, especially differentiating small peritoneal or mesenteric implants, or
+lymphadenopathy from bowel or adjacent organs.
+CT Chest With IV Contrast
+CT of the chest with IV contrast is a useful modality to assess posttreatment response in patients with ovarian cancer
+[2].
+CT Chest Without and With IV Contrast
+There is no relevant literature to support the use of CT of the chest without and with IV contrast for posttreatment
+ovarian cancer response evaluation.
+CT Chest Without IV Contrast
+CT of the chest without IV contrast may be considered to assess posttreatment response. CT of the chest without
+IV contrast can detect small pulmonary nodules; however, pleural metastases may be difficult to delineate without
+IV contrast.
+FDG-PET/CT Skull Base to Mid-Thigh
+FDG-PET/CT may be useful in the posttreatment response evaluation of ovarian cancer [2]. Resolution or
+regression of neoplastic implants with concomitant reduction in metabolic activity indicates a favorable response
+to therapy.
+FDG-PET/MRI Skull Base to Mid-Thigh
+FDG-PET/MRI may be useful in the posttreatment response evaluation of ovarian cancer. In postoperative patients,
+FDG-PET/MRI is at least equivalent to FDG-PET/CT and provides additional diagnostic benefits, such as higher
+soft tissue resolution [27,36].
+MRI Abdomen and Pelvis Without and With IV Contrast
+MRI of the abdomen and pelvis may be useful in the posttreatment response evaluation of ovarian cancer [2]. MRI
+has comparable sensitivity and specificity to CT scans [37,38].
+
+
+
+---
+[PAGE 6/12]
+
+ACR Appropriateness Criteria®
+6
+Staging and Follow-up of Ovarian Cancer
+MRI Abdomen and Pelvis Without IV Contrast
+MRI of the abdomen and pelvis without IV contrast may be considered in the posttreatment response evaluation of
+ovarian cancer and may offer improved soft tissue contrast compared with CT without IV contrast.
+US Abdomen and Pelvis Transabdominal
+There is no relevant literature to support the use of transabdominal US of the abdomen and pelvis in evaluating
+posttreatment response.
+US Pelvis Transvaginal
+There is no relevant literature to support the use of transvaginal US of the pelvis for the evaluation of posttreatment
+response.
+Variant 3: Adult. Ovarian cancer. Posttreatment routine surveillance. Asymptomatic patient, no suspected
+recurrence.
+The goal of imaging is to identify disease recurrence in asymptomatic patients on surveillance with a history of
+treated ovarian cancer. With the relevant imaging information, early and unexpected recurrence can be identified,
+thus improving patient outcomes.
+The role for routine surveillance with imaging is unclear in patients considered to be in clinical remission. Imaging
+has limited sensitivity for the detection of small tumor deposits in the abdomen and pelvis, with or without
+monitoring of cancer antigen 125 (CA-125) levels [4,39]. NCCN guidelines for follow-up after primary treatment
+includes scheduled clinical visits, imaging when clinically indicated (CT of the chest, abdomen, and pelvis; MRI;
+FDG-PET/CT; or PET), and CA-125 monitoring if initial elevation was present [2].
+Surveillance imaging may be warranted in asymptomatic patients under circumstances in which tumor markers are
+deemed unreliable, physical examinations are inconclusive, or there is a significant risk of recurrence [2].
+The patient population defined in this scenario is an asymptomatic patient in whom no recurrence is suspected (eg,
+no concerning physical examination findings and no elevation of serum tumor markers).
+CT Abdomen and Pelvis With IV Contrast
+The use of surveillance with CT of the abdomen and pelvis with IV contrast is unclear in those patients considered
+to be in clinical remission. In one study with CT surveillance, a higher rate of optimal secondary cytoreductive
+surgery and improved overall survival was reported in those with asymptomatic recurrences compared with patients
+with symptomatic recurrences [38,40]. However, in another study of 412 patients, recurrence in 80% of the patient
+population was detected by either physical examination (15%), imaging (27%), CA-125 level (23%), or CA-125
+level combined with imaging (35%) [4,38]. In this same study, no difference in overall survival was shown between
+asymptomatic and symptomatic patients with recurrence.
+CT Abdomen and Pelvis Without and With IV Contrast
+There is no relevant literature to support the use of CT of the abdomen and pelvis without and with IV contrast in
+asymptomatic patients without suspected recurrence.
+CT Abdomen and Pelvis Without IV Contrast
+In instances for which CT of the abdomen and pelvis is clinically indicated, CT of the abdomen and pelvis without
+IV contrast may be considered in some clinical instances.
+CT Chest With IV Contrast
+Surveillance with CT of the chest with IV contrast is unclear in patients without suspected recurrence. Per NCCN
+guidelines, CT of the chest may be considered as part of monitoring and follow-up, as clinically useful [2].
+CT Chest Without and With IV Contrast
+There is no relevant literature to support the use of CT of the chest without and with IV contrast in asymptomatic
+patients without suspected recurrence.
+CT Chest Without IV Contrast
+The utility of surveillance imaging is unclear in those patients considered to be in clinical remission. Per NCCN
+guidelines, CT of the chest may be considered as part of monitoring and follow-up, as clinically indicated [2].
+FDG-PET/CT Skull Base to Mid-Thigh
+The use of surveillance FDG-PET/CT is unclear in those patients considered to be in clinical remission. Per NCCN
+guidelines, PET/CT or PET may be considered as part of monitoring and follow-up, as clinically indicated [2].
+
+
+
+---
+[PAGE 7/12]
+
+ACR Appropriateness Criteria®
+7
+Staging and Follow-up of Ovarian Cancer
+FDG-PET/MRI Skull Base to Mid-Thigh
+There is no relevant literature to support the use of FDG-PET/MRI in asymptomatic patients without suspected
+recurrence.
+MRI Abdomen and Pelvis Without and With IV Contrast
+Per NCCN guidelines, MRI may be considered as part of monitoring and follow-up for patients with ovarian cancer
+in the posttreatment routine surveillance setting, as clinically indicated [2]. As such, MRI of the abdomen without
+and with IV contrast may be useful.
+MRI Abdomen and Pelvis Without IV Contrast
+Per NCCN guidelines, MRI may be considered as part of monitoring and follow-up for patients with ovarian cancer
+in the posttreatment routine surveillance setting, as clinically indicated [2]. As such, MRI of the abdomen and pelvis
+without IV contrast may be useful.
+US Abdomen and Pelvis Transabdominal
+There is no evidence to support the use of transabdominal US of the abdomen and pelvis for posttreatment
+surveillance in asymptomatic patients.
+US Pelvis Transvaginal
+There is no evidence to support the use of transvaginal US of the pelvis for posttreatment surveillance in
+asymptomatic patients with a history of treated ovarian cancer.
+Variant 4: Adult. Ovarian cancer. Posttreatment evaluation. Suspected or known recurrence.
+The goal of imaging is to identify sites of disease recurrence in patients with a history of treated ovarian cancer with
+suspected or known recurrence. The relevant imaging information can inform treatment planning and specifically
+guide decisions related to surgical or medical treatment.
+In the evaluation for recurrence and extent of disease, imaging of the chest, abdomen, and pelvis plays a key role.
+The suspicion of recurrence after treatment may arise from clinical symptoms, findings during physical
+examination, or an increase in CA-125 levels, which would then prompt the need for imaging to evaluate for
+recurrence.
+CT Abdomen and Pelvis With IV Contrast
+CT of the abdomen and pelvis with IV and oral contrast is the most useful procedure for confirming recurrent
+disease and determining the extent in patients with suspected or known recurrence (based on clinical symptoms,
+physical examination, or CA-125 level) [38]. Contrast-enhanced CT has a reported sensitivity ranging from 58% to
+84% and a specificity in the range of 59% to 100% in identifying tumor recurrence [41-43]. Recurrent disease often
+presents as peritoneal implants, both within the peritoneal cavity and along the surface of visceral organs. A
+limitation with CT is detecting peritoneal, mesenteric, or serosal lesions that are <5 mm in size [40].
+CT Abdomen and Pelvis Without and With IV Contrast
+There is no relevant literature to support the use of CT of the abdomen and pelvis without and with IV contrast in
+the evaluation of suspected or known ovarian cancer recurrence.
+CT Abdomen and Pelvis Without IV Contrast
+CT of the abdomen and pelvis without IV contrast offers limited ability to identify small peritoneal or mesenteric
+implants, or lymphadenopathy among bowel loops and other adjacent organs.
+CT Chest With IV Contrast
+CT of the chest with IV contrast is the most useful modality in evaluating recurrent or metastatic disease in the
+thorax.
+CT Chest Without and With IV Contrast
+There is no relevant literature to support the use of CT of the chest without and with IV contrast in the evaluation
+of suspected or known ovarian cancer recurrence.
+CT Chest Without IV Contrast
+CT of the chest without IV contrast is not typically useful in this setting.
+FDG-PET/CT Skull Base to Mid-Thigh
+FDG-PET/CT can be used in the evaluation of recurrent ovarian cancer [2]. In a recent meta-analysis, FDG-PET/CT
+showed a sensitivity of 88% and a specificity of 89% in diagnosing recurrent epithelial ovarian cancer [44]. FDG-
+
+
+
+---
+[PAGE 8/12]
+
+ACR Appropriateness Criteria®
+8
+Staging and Follow-up of Ovarian Cancer
+PET/CT can also be used as an adjunct imaging study when there is a high clinical suspicion for recurrence but CT
+is indeterminate [45]. Certain limitations of FDG-PET/CT including poor detection of subcentimeter metastases
+due to suboptimal spatial resolution of PET, high concentration of excreted FDG obscuring lesions near the bladder,
+and metabolic activity on or between bowel loops, particularly after surgery when adhesions or inflammation are
+present, may be difficult to assess [44,45].
+FDG-PET/MRI Skull Base to Mid-Thigh
+In specific patient scenarios, FDG-PET/MRI may be useful in the suspected recurrence. Example scenarios include
+those patients with high clinical suspicion (such as rising CA-125 levels or worsening clinical symptoms) but
+indeterminate CT findings [27].
+MRI Abdomen and Pelvis Without and With IV Contrast
+MRI of the abdomen and pelvis may be useful as a problem-solving tool in those patients with suspected or known
+disease recurrence and when CT is indeterminate.
+MRI Abdomen and Pelvis Without IV Contrast
+MRI without IV contrast may be considered in those patients with suspected or known disease recurrence of ovarian
+cancer and when CT is indeterminate. However, IV contrast is preferable for the detection and characterization of
+lesions suspected to represent tumor deposits.
+US Abdomen and Pelvis Transabdominal
+There is no relevant literature to support the use of transabdominal US of the abdomen and pelvis in the evaluation
+of suspected or known ovarian cancer recurrence.
+US Pelvis Transvaginal
+There is no relevant literature to support the routine use of pelvic US in the evaluation of suspected or known
+ovarian cancer recurrence following treatment.
+Summary of Highlights
+This is a summary of the key recommendations from the variant tables. Refer to the complete narrative document
+for more information.
+•
+Variant 1: For initial pretreatment staging of ovarian cancer, CT abdomen and pelvis with IV contrast and CT
+chest with IV contrast are recommended complementary studies to stage the tumor and evaluate for distant
+metastases. MRI abdomen and pelvis without and with IV contrast, MRI abdomen and pelvis without IV
+contrast, CT abdomen and pelvis without IV contrast, CT chest without IV contrast, FDG-PET/MRI, and FDG-
+PET/CT may be appropriate in staging ovarian cancer prior to treatment.
+•
+Variant 2: For follow-up imaging evaluation following treatment for ovarian cancer, CT abdomen and pelvis
+with IV contrast, CT chest with IV contrast, and FDG-PET/CT are recommended complementary studies to
+evaluate the posttreatment response. MRI abdomen and pelvis without and with IV contrast, MRI abdomen and
+pelvis without IV contrast, CT abdomen and pelvis without IV contrast, CT chest without IV contrast, and FDG-
+PET/MRI may be appropriate in the posttreatment response evaluation.
+•
+Variant 3: For posttreatment imaging evaluation in asymptomatic patients without suspected recurrence, the
+role of imaging is unclear in those patients considered to be in clinical remission. CT abdomen and pelvis with
+or without IV contrast, CT chest with or without IV contrast, MRI abdomen and pelvis without and with IV
+contrast, MR abdomen and pelvis without IV contrast, FDG-PET/MRI, and FDG-PET/CT may be appropriate,
+as clinically indicated.
+•
+Variant 4: For follow-up imaging evaluation following treatment for ovarian cancer in patients with suspected
+or known recurrence, CT abdomen and pelvis with IV contrast, CT chest with IV contrast, and FDG-PET/CT
+are recommended complementary studies to evaluate for local recurrence and metastatic disease. MRI abdomen
+and pelvis without and with IV contrast, MRI abdomen and pelvis without IV contrast, CT abdomen and pelvis
+without IV contrast, CT chest without IV contrast, and FDG-PET/MRI may be appropriate in the posttreatment
+evaluation of patients with suspected or known recurrence.
+
+
+
+---
+[PAGE 9/12]
+
+ACR Appropriateness Criteria®
+9
+Staging and Follow-up of Ovarian Cancer
+Supporting Documents
+The evidence table, literature search, and appendix for this topic are available at https://acsearch.acr.org/list. The
+appendix includes the strength of evidence assessment and the final rating round tabulations for each
+recommendation.
+For additional information on the Appropriateness Criteria methodology and other supporting documents, click
+here.
+Gender Equality and Inclusivity Clause
+The ACR acknowledges the limitations in applying inclusive language when citing research studies that pre-dates
+the use of the current understanding of language inclusive of diversity in sex, intersex, gender and gender-diverse
+people. The data variables regarding sex and gender used in the cited literature will not be changed. However, this
+guideline will use the terminology and definitions as proposed by the National Institutes of Health [46].
+Appropriateness Category Names and Definitions
+Appropriateness Category Name
+Appropriateness
+Rating
+Appropriateness Category Definition
+Usually Appropriate
+7, 8, or 9
+The imaging procedure or treatment is indicated in the
+specified clinical scenarios at a favorable risk-benefit
+ratio for patients.
+May Be Appropriate
+4, 5, or 6
+The imaging procedure or treatment may be indicated
+in the specified clinical scenarios as an alternative to
+imaging procedures or treatments with a more
+favorable risk-benefit ratio, or the risk-benefit ratio for
+patients is equivocal.
+May Be Appropriate
+(Disagreement)
+5
+The individual ratings are too dispersed from the panel
+median. The different label provides transparency
+regarding the panel’s recommendation. “May be
+appropriate” is the rating category and a rating of 5 is
+assigned.
+Usually Not Appropriate
+1, 2, or 3
+The imaging procedure or treatment is unlikely to be
+indicated in the specified clinical scenarios, or the
+risk-benefit ratio for patients is likely to be
+unfavorable.
+Relative Radiation Level Information
+Potential adverse health effects associated with radiation exposure are an important factor to consider when
+selecting the appropriate imaging procedure. Because there is a wide range of radiation exposures associated with
+different diagnostic procedures, a relative radiation level (RRL) indication has been included for each imaging
+examination. The RRLs are based on effective dose, which is a radiation dose quantity that is used to estimate
+population total radiation risk associated with an imaging procedure. Patients in the pediatric age group are at
+inherently higher risk from exposure, because of both organ sensitivity and longer life expectancy (relevant to the
+long latency that appears to accompany radiation exposure). For these reasons, the RRL dose estimate ranges for
+pediatric examinations are lower as compared with those specified for adults (see Table below). Additional
+information regarding radiation dose assessment for imaging examinations can be found in the ACR
+Appropriateness Criteria® Radiation Dose Assessment Introduction document [47].
+
+
+
+---
+[PAGE 10/12]
+
+ACR Appropriateness Criteria®
+10
+Staging and Follow-up of Ovarian Cancer
+Relative Radiation Level Designations
+Relative Radiation Level*
+Adult Effective Dose Estimate
+Range
+Pediatric Effective Dose Estimate
+Range
+O
+0 mSv
+0 mSv
+☢
+<0.1 mSv
+<0.03 mSv
+☢☢
+0.1-1 mSv
+0.03-0.3 mSv
+☢☢☢
+1-10 mSv
+0.3-3 mSv
+☢☢☢☢
+10-30 mSv
+3-10 mSv
+☢☢☢☢☢
+30-100 mSv
+10-30 mSv
+*RRL assignments for some of the examinations cannot be made, because the actual patient doses in these procedures vary
+as a function of a number of factors (eg, region of the body exposed to ionizing radiation, the imaging guidance that is used).
+The RRLs for these examinations are designated as “Varies.”

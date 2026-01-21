@@ -89,6 +89,7 @@ flowchart LR
 
 - **🔍 RAG Enhancement**: ChromaDB-backed guideline and PubMed retrieval
 - **📊 Smart Report Selection**: LLM-powered filtering of labs, imaging, pathology, mutations
+- **🧬 Automatic Genetic Marker Extraction**: Automatically extracts HRD/BRCA status from mutation reports for accurate RAG queries
 - **🧪 Clinical Trial Matching**: Optional trial recommendation module
 
 ### Observability & Traceability
@@ -96,11 +97,13 @@ flowchart LR
 - **📝 Full Logging**: JSONL logs, Markdown transcripts, HTML reports
 - **📈 Interaction Matrix**: Visual representation of expert discussions
 - **🔐 Evidence Tags**: All claims linked to source reports or guidelines
+- **📊 Pipeline Statistics**: Automatic tracking and display of execution time, token usage, and model utilization in HTML reports
 
 ### Error Handling & Resilience
 
 - **🛡️ Graceful Degradation**: Single agent failures don't crash the entire MDT pipeline
 - **⏱️ Timeout Protection**: 10-second timeout for RAG model initialization prevents infinite retries
+- **🔄 Automatic Retries**: Rate limit errors (429) are automatically retried with exponential backoff (2-3 attempts)
 - **🔄 Automatic Fallbacks**: Failed operations use sensible defaults (e.g., empty RAG results, error placeholders)
 - **📊 Error Tracking**: All errors logged to trace with detailed context for debugging
 - **🌐 Network Resilience**: Handles HuggingFace model download failures gracefully, skips RAG if network unavailable
@@ -109,10 +112,10 @@ flowchart LR
 ### Open Evidence References
 
 - **📋 Structured References**: Auto-generated reference section with 4 categories:
-  - Guidelines (`[@guideline:doc_id|page]`)
-  - Literature (`[@pubmed:PMID]`)
-  - Clinical Trials (`[@trial:id]`)
-  - Clinical Reports (`[@report_id|date]`)
+  - Guidelines (`[@guideline:doc_id | Page xx]`)
+  - Literature (`[@pubmed | PMID]`)
+  - Clinical Trials (`[@trial | id]`)
+  - Clinical Reports (`[@actual_report_id | LAB/Genomics/MR/CT]`)
 - **🎨 Visual HTML Report**: Color-coded reference cards with Mermaid flowchart
 - **🔗 1:1 Evidence Mapping**: Each RAG result gets a dedicated digest bullet
 
@@ -588,6 +591,11 @@ OMGs supports multiple LLM providers through the `--provider` argument:
 
 You can use different providers for different steps of the pipeline. For example, use Azure for EHR extraction and OpenAI for MDT processing.
 
+**Gemini Reasoning Models:** For `google/gemini-3-pro-preview` and similar reasoning models via OpenRouter:
+- **Reasoning is mandatory**: The model requires reasoning to be enabled and cannot be disabled. The system automatically sends an empty `extra_body` (letting the API use default reasoning settings) instead of `reasoning: {enabled: false}`.
+- **Automatic token scaling**: Since reasoning tokens are counted in `max_completion_tokens`, the system automatically scales up `max_tokens` by 8x (minimum 20,000) for Gemini 3 Pro models to ensure sufficient tokens for both reasoning (~1000-2000 tokens) and actual content output.
+- **Example**: An expert agent with `max_tokens=900` will automatically get `max(900*8, 20000) = 20000` tokens when using Gemini 3 Pro.
+
 See [clients/PROVIDERS.md](clients/PROVIDERS.md) for detailed provider usage guide.
 
 ### CLI Arguments
@@ -748,7 +756,7 @@ OMGs/
 │   ├── evidence_search.py      # RAG retrieval & evidence summarization
 │   │                           #   - get_global_guideline_rag()
 │   │                           #   - pubmed_search_pack()
-│   │                           #   - build_rag_query_for_mdt()
+│   │                           #   - build_rag_query_for_mdt() → extracts HRD/BRCA from mutation reports
 │   │                           #   - summarize_rag_evidence() → 1:1 digest
 │   ├── reports_selector.py     # Clinical report selection
 │   │                           #   - load_patient_labs/imaging/pathology/mutations()
@@ -761,6 +769,7 @@ OMGs/
 │   └── reporters.py            # Report generation & HTML visualization
 │                               #   - save_mdt_log() → JSONL + Markdown
 │                               #   - save_case_html_report() → HTML report
+│                               #   - _render_pipeline_stats_html() → Statistics card
 │                               #   - _render_final_output_html() → References UI
 │                               #   - Mermaid.js flowchart rendering
 │
@@ -786,6 +795,11 @@ OMGs/
 │   ├── __init__.py             # Package exports
 │   ├── console_utils.py        # Console formatting
 │   │                           #   - Color class
+│   ├── stats_collector.py      # Pipeline statistics collection
+│   │                           #   - collect_pipeline_stats() → query API trace DB
+│   │                           #   - Aggregates tokens, models, execution time
+│   ├── time_utils.py           # Time-related utilities
+│   │                           #   - format_duration() → human-readable time
 │   │                           #   - preview_text(), print_prompt_budget()
 │   │                           #   - normalize_trial_compact()
 │   │                           #   - safe_parse_json_block()
@@ -794,6 +808,7 @@ OMGs/
 │   │                           #   - parse_dt(), parse_date()
 │   │                           #   - make_cutoff(), filter_before()
 │   │                           #   - build_lab/imaging/pathology_timeline()
+│   │                           #   - format_duration() → human-readable time format
 │   ├── reference_cache.py      # Reference caching & Open Evidence system
 │   │                           #   - ReferenceCache, get_reference_cache()
 │   │                           #   - extract_reference_tags() - 4 types supported
@@ -966,7 +981,8 @@ Each Expert Agent receives a concise digest (~75 tokens) at the start of their i
 ```
 # OMGs SKILL PROTOCOL
 System: OMGs (Ovarian-cancer Multidisciplinary aGent System)
-Evidence tags REQUIRED: [@guideline:doc_id|page], [@pubmed:PMID], [@trial:id], [@report_id|date]
+Evidence tags REQUIRED: [@guideline:doc_id | Page xx], [@pubmed | PMID], [@trial | id], [@actual_report_id | LAB/Genomics/MR/CT]
+Use actual report_id from report data (e.g., [@20220407|17300673 | LAB], [@OH2203828|2022-04-18 | Genomics])
 Role constraint: {role-specific constraint}
 ```
 
@@ -1026,51 +1042,66 @@ OMGs implements an **Open Evidence** system that automatically generates a struc
 
 | Type | Format | Example |
 |------|--------|---------|
-| **Guidelines** | `[@guideline:doc_id\|page]` | `[@guideline:nccn_ovarian_v3\|14]` |
-| **Literature** | `[@pubmed:PMID]` | `[@pubmed:33758607]` |
-| **Clinical Trials** | `[@trial:id]` | `[@trial:350]` |
-| **Clinical Reports** | `[@report_id\|date]` | `[@20230103\|2023-01-03]` |
+| **Guidelines** | `[@guideline:doc_id \| Page xx]` | `[@guideline:nccn_ovarian_v3 \| Page 14]` |
+| **Literature** | `[@pubmed \| PMID]` | `[@pubmed \| 33758607]` |
+| **Clinical Trials** | `[@trial \| id]` | `[@trial \| 350]` |
+| **Clinical Reports** | `[@actual_report_id \| LAB/Genomics/MR/CT]` | `[@20220407\|17300673 \| LAB]`, `[@OH2203828\|2022-04-18 \| Genomics]`, `[@2022-12-29 \| MR]`, `[@2022-12-29 \| CT]` |
 
 ### Output Example
+
+**Natural Trial Citation:** When a clinical trial is recommended by the assistant, the Chair agent naturally integrates it into the Core Treatment Strategy or Change Triggers with proper `[@trial | id]` citation, rather than appending it at the end. The trial recommendation is passed directly in the final output prompt, allowing the Chair to judge appropriateness and cite naturally.
 
 ```
 Final Assessment:
 Patient with platinum-resistant recurrent ovarian clear cell carcinoma...
 
 Core Treatment Strategy:
-- Correct anemia before systemic therapy [@20230103|2023-01-03]
-- Consider non-platinum palliative chemotherapy [@guideline:nccn_ov|14]
-- Pursue clinical trial enrollment if eligible [@trial:350]
+- Correct anemia before systemic therapy [@20220407|17300673 | LAB]
+- Consider non-platinum palliative chemotherapy [@guideline:nccn_ov | Page 14]
+- Pursue clinical trial enrollment if eligible [@trial | 350]
 
 ---
 ## References
 
 ### Guidelines
-[@guideline:nccn_ov|14]
+[@guideline:nccn_ov | Page 14]
   Document: nccn_ov, Page 14
   Content: For platinum-resistant disease, consider...
 
 ### Literature
-[@pubmed:33758607]
+[@pubmed | 33758607]
   PMID: 33758607 | J Cancer | 2021
   Title: Updates of Pathogenesis for Ovarian Clear Cell Carcinoma
 
 ### Clinical Trials
-[@trial:350]
+[@trial | 350]
   Trial ID: 350
   Name: Phase Ib/II study of BL-B01D1 in gynecologic malignancies
   Rationale: Patient meets eligibility for recurrent disease
 
 ### Clinical Reports
-[@20230103|2023-01-03]
-  Lab ID: 20230103 | Date: 2023-01-03
+[@20220407|17300673 | LAB]
+  LAB ID: 20220407|17300673 | Date: 2022-04-07
   Content: Hemoglobin 8.2 g/dL (severe anemia)
+
+[@OH2203828|2022-04-18 | Genomics]
+  Genomics ID: OH2203828|2022-04-18 | Date: 2022-04-18
+  Content: ATM mutation detected...
 ```
 
 ### HTML Report Features
 
 The generated HTML report (`mdt_report_*.html`) includes:
 
+- **📊 Pipeline Execution Statistics** (displayed at the top):
+  - **Total Execution Time**: Shown in both seconds and human-readable format (e.g., "45.3 seconds (45.3秒)", "1分25秒")
+  - **Total Token Usage**: Breakdown of input tokens, output tokens, and total tokens with thousands separators
+  - **Models Used**: Per-model statistics including:
+    - Model name with provider information (e.g., "gpt-5.1 (Azure)")
+    - Number of API calls
+    - Total tokens consumed
+    - Input/output token breakdown
+  - Statistics are automatically collected from the `api_trace.db` database during pipeline execution
 - **Mermaid Pipeline Flowchart**: Visual representation of the MDT workflow
 - **Color-coded References**: Each category has distinct styling:
   - 📋 Guidelines (green)
@@ -1079,19 +1110,76 @@ The generated HTML report (`mdt_report_*.html`) includes:
   - 📄 Clinical Reports (orange)
 - **Interactive Details**: Collapsible sections for evidence, RAG hits, and trace events
 
-### Evidence Digest (1:1 Mapping)
+### Evidence Digest (Dynamic 1:1 Mapping)
 
-The RAG evidence digest maintains a strict 1:1 correspondence with retrieved results:
+The RAG evidence digest maintains a strict 1:1 correspondence with retrieved results. The system dynamically instructs the digester to produce exactly N bullets for N RAG results:
 
 ```python
-# For N RAG results, exactly N digest bullets are generated
+# Dynamic instruction: "Digest RAG chunks into exactly {rag_count} evidence bullets"
+# For 10 RAG results → exactly 10 digest bullets
 # Each bullet uses the EXACT citation tag from its source
 
 # Example: 3 RAG results → 3 digest bullets
-- Platinum-based chemotherapy is standard first-line... [@guideline:nccn_ov|12]
-- PARP inhibitors improve PFS in BRCA-mutated... [@pubmed:33758607]
-- Anti-VEGF therapy option for platinum-sensitive... [@guideline:esmo_ov|10]
+- Platinum-based chemotherapy is standard first-line... [@guideline:nccn_ov | Page 12]
+- PARP inhibitors improve PFS in BRCA-mutated... [@pubmed | 33758607]
+- Anti-VEGF therapy option for platinum-sensitive... [@guideline:esmo_ov | Page 10]
 ```
+
+### Mutation Report Handling (Comprehensive NGS Panel)
+
+OMGs treats mutation reports as **comprehensive NGS panel results** (~20,000 genes) and provides consistent interpretation rules across all components (RAG queries, expert agents, trial matching):
+
+**Interpretation Rules:**
+
+The system injects the following interpretation rules whenever mutation reports are present:
+
+| Chinese Term | English Meaning | Interpretation |
+|--------------|-----------------|----------------|
+| `未检出` | Not detected | NO pathogenic mutation found |
+| `（视为阴性）` | Considered negative | NO pathogenic mutation found |
+| `阴性` | Negative | Negative result |
+| `NM_xxx:exon:c.xxx:p.xxx` | Variant notation | POSITIVE mutation detected |
+| Gene not mentioned | - | NO pathogenic mutation (comprehensive panel) |
+
+**Key Features:**
+
+1. **Comprehensive Panel Assumption**: Since mutation reports come from ~20,000 gene NGS panels:
+   - Any gene NOT mentioned in the report = NO pathogenic mutation found
+   - The system never says "not tested" or "not reported" when a mutation report exists
+
+2. **Universal Application**: Interpretation rules are injected into:
+   - RAG query building (`servers/evidence_search.py`)
+   - Expert agent context (`host/experts.py`)
+   - Clinical trial matching (`host/decision.py`)
+
+3. **Tumor-Agnostic Design**: Unlike previous HRD/BRCA-specific logic, the new approach:
+   - Passes full `raw_text` to agents
+   - Lets agents focus on relevant genes based on tumor type
+   - Works for all cancer types, not just epithelial ovarian cancer
+
+**Example Mutation Report:**
+
+```
+MSH6 NM_001281492:exon3:c.G2971A:p.E991K（胚系）；
+BRCA1 NM_007297:exon18:c.C5110T:p.R1704X（胚系）；
+BRCA2 胚系和体系未检出致病突变（视为阴性）；
+TP53 胚系和体系未检出致病突变（视为阴性）；
+HRD 阴性（未检出阳性结果）
+```
+
+**Interpretation:**
+- MSH6: **POSITIVE** (germline mutation detected)
+- BRCA1: **POSITIVE** (germline mutation detected)
+- BRCA2: **NEGATIVE** (视为阴性)
+- TP53: **NEGATIVE** (视为阴性)
+- HRD: **NEGATIVE** (阴性)
+- Other genes (e.g., PTEN, PIK3CA): **NEGATIVE** (not mentioned = no mutation)
+
+**Why This Matters:**
+
+- **Clinical Accuracy**: Experts correctly interpret comprehensive NGS results
+- **No False Negatives**: System never incorrectly states "not tested" when reports exist
+- **Tumor-Type Flexibility**: Works for ovarian, endometrial, and other cancer types with different gene focuses
 
 ---
 
@@ -1347,6 +1435,18 @@ OMGs implements comprehensive error handling to ensure the pipeline continues ev
 2. **MDT Discussion Level** (`host/orchestrator.py`): Handles expert failures with fallback responses
 3. **Pipeline Level** (`host/orchestrator.py`): Handles RAG, report selection, and initialization failures
 4. **RAG Level** (`servers/evidence_search.py`): Prevents infinite retries with timeout and request patching
+5. **Retry Layer** (`utils/error_handling.py`): Automatic retry with exponential backoff for rate limit errors (429)
+
+**Automatic Retry for Rate Limits (429 Errors):**
+
+The system automatically retries API calls that fail with 429 (rate limit) errors:
+- **Retry Strategy**: Up to 2-3 retries (depending on operation) with exponential backoff
+- **Backoff Timing**: 2^attempt seconds + random jitter (e.g., 2s, 4s, 8s)
+- **Operations Covered**:
+  - Assistant summary (initial and round summaries)
+  - Memory updates
+  - Clinical trial matching
+- **Fallback**: If all retries fail, the system uses a sensible fallback response and continues the pipeline
 
 **Fallback Strategies:**
 
@@ -1354,7 +1454,7 @@ OMGs implements comprehensive error handling to ensure the pipeline continues ev
 |---------------|-------------------|
 | Expert initial opinion | Uses error placeholder, continues with other experts |
 | Assistant summary | Uses JSON of initial opinions as merged context |
-| Turn发言 | Skips that expert for the turn, continues discussion |
+| Turn speaking | Skips that expert for the turn, continues discussion |
 | Final plan | Uses error placeholder, included in final output |
 | RAG retrieval | Returns empty results, continues without RAG evidence |
 | RAG summarization | Uses first 3 RAG results as simple digest |
@@ -1402,6 +1502,7 @@ print(f"Errors by stage: {error_summary['errors_by_stage']}")
 | `Failed to create RAG index directory` | Permission denied or disk full | Check directory permissions. System will skip RAG if directory cannot be created. |
 | `[WARNING] Failed to create reference cache directory` | `rag_store/reference_cache/` cannot be created | **System handles gracefully**: Cache works in-memory only. Check parent directory permissions. |
 | `AgentError: ... failed in chat` | API call failed | Check provider credentials and quota. Agent uses fallback response. |
+| `Error code: 429` (Rate limit) | Model temporarily rate-limited upstream | **System automatically retries** with exponential backoff (2-3 attempts). If all retries fail, uses fallback. For persistent rate limits: wait and retry, use a different model, or add your own API key to OpenRouter for higher limits. |
 | `Azure API error` | Invalid deployment name | Verify `--model` matches Azure deployment, or try `--provider openai`/`openrouter` |
 | `OpenAI API error` | Invalid model name or API key | Verify `--model` is valid for OpenAI, check `OPENAI_API_KEY` |
 | `OpenRouter API error` | Invalid model name or API key | Verify `--model` format (e.g., `google/gemini-*`), check `OPENROUTER_API_KEY` |

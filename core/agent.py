@@ -7,7 +7,7 @@ from clients import OpenAIWrapper
 
 
 class AgentError(Exception):
-    """Agent操作失败的自定义异常"""
+    """Custom exception for Agent operation failures"""
     def __init__(self, role: str, operation: str, original_error: Exception):
         self.role = role
         self.operation = operation
@@ -38,9 +38,16 @@ class Agent:
         self.role = role
         self.examplers = examplers or []
         self.client = client
-        self.max_tokens = max_tokens
         self.deployment = model_info
         self.enable_reasoning = enable_reasoning
+        
+        # For reasoning models like Gemini 3 Pro, scale up max_tokens
+        # because reasoning tokens are counted in max_completion_tokens
+        # Reasoning can consume 500-2000+ tokens, so multiply by 4x
+        if "gemini-3-pro" in model_info.lower():
+            self.max_tokens = max(max_tokens * 8, 20000)  # At least 4000 for reasoning models
+        else:
+            self.max_tokens = max_tokens
 
         # Local interaction log for recording all model calls
         self.enable_local_log = enable_local_log
@@ -182,10 +189,14 @@ class Agent:
         self.messages = self._trim_messages_to_budget(self.messages, self.max_prompt_tokens)
 
         try:
-            # Prepare extra_body for reasoning if enabled
-            extra_body = None
-            if self.enable_reasoning:
-                extra_body = {"reasoning": {"enabled": True}}
+            # Prepare extra_body for reasoning
+            # For gemini-3-pro-preview, reasoning is MANDATORY - do not send the param
+            # For other Gemini models, we can disable reasoning output
+            # For non-Gemini models, this setting is safely ignored
+            if "gemini-3-pro" in self.deployment.lower():
+                extra_body = {}
+            else:
+                extra_body = {"reasoning": {"enabled": self.enable_reasoning}}
             
             resp = self.client.chat_completion(
                 model=self.deployment,
@@ -246,10 +257,14 @@ class Agent:
         msgs = self._trim_messages_to_budget(msgs, min(self.max_prompt_tokens, 2500))
 
         try:
-            # Prepare extra_body for reasoning if enabled
-            extra_body = None
-            if self.enable_reasoning:
-                extra_body = {"reasoning": {"enabled": True}}
+            # Prepare extra_body for reasoning
+            # For gemini-3-pro-preview, reasoning is MANDATORY - do not send the param
+            # For other Gemini models, we can disable reasoning output
+            # For non-Gemini models, this setting is safely ignored
+            if "gemini-3-pro" in self.deployment.lower():
+                extra_body = {}
+            else:
+                extra_body = {"reasoning": {"enabled": self.enable_reasoning}}
             
             resp = self.client.chat_completion(
                 model=self.deployment,

@@ -1,0 +1,3040 @@
+# acco_parpi
+
+
+---
+[PAGE 1/28]
+
+rapid communications
+PARP Inhibitors in the Management of Ovarian
+Cancer: ASCO Guideline
+William P. Tew, MD1; Christina Lacchetti, MHSc2; Annie Ellis3,4; Kathleen Maxian, BSW5; Susana Banerjee, PhD6; Michael Bookman, MD7;
+Monica Brown Jones, MD8; Jung-Min Lee, MD9; St´ephanie Lheureux, MD, PhD10; Joyce F. Liu, MD11; Kathleen N. Moore, MD12;
+Carolyn Muller, MD13; Patricia Rodriguez, MD14; Christine Walsh, MD15; Shannon N. Westin, MD16; and Elise C. Kohn, MD9
+abstract
+PURPOSE To provide recommendations on the use of poly(ADP-ribose) polymerase inhibitors (PARPis) for
+management of epithelial ovarian, tubal, or primary peritoneal cancer (EOC).
+METHODS Randomized, controlled, and open-labeled trials published from 2011 through 2020 were identiﬁed in
+a literature search. Guideline recommendations were based on the review of the evidence, US Food and Drug
+Administration approvals, and consensus when evidence was lacking.
+RESULTS The systematic review identiﬁed 17 eligible trials.
+RECOMMENDATIONS The guideline pertains to patients who are PARPi na¨ıve. All patients with newly diagnosed,
+stage III-IV EOC whose disease is in complete or partial response to ﬁrst-line, platinum-based chemotherapy with
+high-grade serous or endometrioid EOC should be offered PARPi maintenance therapy with niraparib. For
+patients with germline or somatic pathogenic or likely pathogenic variants in BRCA1 (g/sBRCA1) or BRCA2
+(g/sBRCA2) genes should be treated with olaparib. The addition of olaparib to bevacizumab may be offered to
+patients with stage III-IV EOC with g/sBRCA1/2 and/or genomic instability and a partial or complete response
+to chemotherapy plus bevacizumab combination. Maintenance therapy (second line or more) with single-
+agent PARPi may be offered for patients with EOC who have not received a PARPi and have responded to
+platinum-based therapy regardless of BRCA mutation status. Treatment with a PARPi should be offered to
+patients with recurrent EOC that has not recurred within 6 months of platinum-based therapy, who have not
+received a PARPi and have a g/sBRCA1/2, or whose tumor demonstrates genomic instability. PARPis are not
+recommended for use in combination with chemotherapy, other targeted agents, or immune-oncology agents
+in the recurrent setting outside the context of a clinical trial. Recommendations for managing speciﬁc adverse
+events are presented. Data to support reuse of PARPis in any setting are needed.
+Additional information is available at www.asco.org/gynecologic-cancer-guidelines.
+J Clin Oncol 38:3468-3493. © 2020 by American Society of Clinical Oncology
+INTRODUCTION
+In 2020, it is estimated that there will be 21,750 new
+cases of ovarian cancers diagnosed in the United
+States, and despite advances in treatment, an esti-
+mated 13,940 women will die of the disease.1 A
+woman’s risk of getting ovarian cancer during her
+lifetime is approximately 1 in 78 and her lifetime
+chance of dying of ovarian cancer is about 1 in 108.1
+Approximately 85%-90% of all ovarian cancers are
+epithelial in origin, and approximately 70% of all ep-
+ithelial ovarian cancers are high-grade serous (HGS)
+adenocarcinoma.2 Despite initial therapy, usually
+consisting of surgical cytoreduction and platinum-
+taxane combination therapy, the majority of women
+with advanced-stage epithelial ovarian, tubal, or pri-
+mary peritoneal cancer (hereinafter referred to as
+EOC), will have a relapse of their disease and require
+additional treatment.3
+Germline alterations in breast cancer 1 (gBRCA1) and
+breast cancer 2 (gBRCA2) genes have been identiﬁed
+in up to 17% of women diagnosed with EOC, and
+somatic mutations are found in an additional 7%.4-7
+Approximately 41%-50% of EOCs are estimated to
+exhibit homologous recombination deﬁciency (HRD)
+involved in repair of DNA damage and replication.8
+The introduction of poly(ADP-ribose) polymerase
+ASSOCIATED
+CONTENT
+Appendix
+Data Supplement
+Author afﬁliations
+and support
+information (if
+applicable) appear
+at the end of this
+article.
+Accepted on June 25,
+2020 and published at
+ascopubs.org/journal/
+jco on August 13,
+2020: DOI https://doi.
+org/10.1200/JCO.20.
+01924
+Clinical Practice
+Guidelines Committee
+approval: June 15,
+2020
+Reprint Requests:
+2318 Mill Rd, Suite
+800, Alexandria, VA
+22314; guidelines@
+asco.org
+3468 Volume 38, Issue 30
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 2/28]
+
+THE BOTTOM LINE
+PARP Inhibitors in the Management of Ovarian Cancer: ASCO Guideline
+Guideline Questions
+1. Should PARPi therapy for EOC be repeated over the course of treatment?
+2. In which patients with newly diagnosed EOC are PARPis recommended?
+a. What are the histologic types of EOC for which PARPis are recommended?
+b. What are the biomarker subsets for which PARPis are recommended?
+3. Is PARPi monotherapy recommended for recurrent EOC? If so,
+a. In which settings (eg, second-line maintenance or treatment of recurrent disease)?
+b. At what dose and duration?
+4. Are there settings where PARPis in combination with chemotherapy or other targeted therapy are recommended?
+5. How should clinicians manage the speciﬁc toxicities of the various PARPis?
+Target Population
+Patients diagnosed with epithelial ovarian, tubal, or primary peritoneal cancer (EOC) who have not previously received
+a poly(ADP-ribose) polymerase inhibitor (PARPi).
+Target Audience
+Medical, radiation, and surgical oncologists; gynecologic oncologists; gynecologists; advanced practice and other health
+professionals; women with ovarian cancer and their families.
+METHODS
+An Expert Panel was convened to develop clinical practice guideline recommendations on the basis of a systematic review of
+the medical literature and Food and Drug Administration (FDA) regulatory approvals.
+Recommendations
+Note: These recommendations pertain only to patients with EOC who have not previously received a PARPi. The recommendations
+are based on clinical trial results and FDA approvals and do not necessarily capture regulatory approvals in other jurisdictions.
+Repeating PARPi
+Recommendation 1.0.
+Repeating PARPi therapy in the treatment of EOC is not recommended at this time. Consideration
+should be made as to the best time in the life cycle of an individual patient’s EOC in which to use PARPi; clinical trial
+participation is encouraged (Type: informal consensus, beneﬁts outweigh harms; Evidence quality: insufﬁcient; Strength of
+recommendation: strong).
+Newly Diagnosed Ovarian Cancer
+Recommendation 2.0. PARPis are not recommended for use in initial treatment of early stage (stage I-II) EOC because there is
+insufﬁcient evidence to support use in this population (Type: informal consensus, beneﬁts outweigh harms; Evidence quality:
+insufﬁcient; Strength of recommendation: strong).
+Recommendation 2.1.
+Women with newly diagnosed stage III-IV EOC that is in complete or partial response to ﬁrst-line
+platinum-based chemotherapy should be offered PARPi maintenance therapy with olaparib (for those with germline or
+somatic pathogenic or likely pathogenic variants in BRCA1 or BRCA2 genes) or niraparib (all women) in high-grade serous
+(HGS) or endometrioid ovarian cancer.
+• PARPi maintenance therapy should consist of olaparib (300 mg orally every 12 hours for 2 years) or niraparib (200-
+300 mg orally daily for 3 years). Longer duration could be considered in selected individuals. (Type: evidence based,
+beneﬁts outweigh harms; Evidence quality: high; Strength of recommendation: strong).
+Recommendation 2.2. The addition of olaparib to bevacizumab maintenance may be offered to patients who have stage III-IV
+HGS or endometrioid ovarian cancer and germline or somatic pathogenic or likely pathogenic variants in BRCA1 or BRCA2
+genes and/or genomic instability, as determined by Myriad myChoice CDx, and who have had a partial or complete response to
+chemotherapy plus bevacizumab combination (Type: evidence based, beneﬁts outweigh harms; Evidence quality: strong;
+Strength of recommendation: strong).
+Recommendation 2.3.
+Inclusion of the PARPi veliparib with combination chemotherapy followed by veliparib maintenance
+therapy cannot be recommended at this time. There are no data that this approach is superior, equal, or less toxic than
+a switch maintenance (Type: evidence based; beneﬁt/harms ratio unknown; Evidence quality: intermediate; Strength of
+recommendation: strong).
+(continued on following page)
+Journal of Clinical Oncology
+3469
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 3/28]
+
+THE BOTTOM LINE (CONTINUED)
+Note: As of this writing, veliparib is not commercially available.
+Recurrent Ovarian Cancer: Second-Line or Greater Maintenance and Treatment
+Recommendation 3.0. PARPi monotherapy maintenance (second-line or more) may be offered to patients with EOC who have
+not already received a PARPi and who have responded to platinum-based therapy regardless of BRCA mutation status;
+treatment is continued until progression of disease or toxicity despite dose reductions and best supportive care.
+• Options include: olaparib 300 mg every 12 hours; rucaparib 600 mg every 12 hours; niraparib 200-300 mg once daily.
+(Type: evidence based, beneﬁts outweigh harms; Evidence quality: high; Strength of recommendation: strong).
+Recommendation 3.1. Treatment with a PARPi should be offered to patients with recurrent EOC who have not already received
+a PARPi and have a germline or somatic pathogenic or likely pathogenic variants in BRCA1 or BRCA2 genes.
+• Options include: olaparib 300 mg every 12 hours; rucaparib 600 mg every 12 hours; niraparib 200-300 mg once daily
+(Type: evidence based, beneﬁts outweigh harms; Evidence quality: high; Strength of recommendation: strong).
+Recommendation 3.2. Treatment with a PARPi monotherapy should be offered to patients with recurrent EOC who have not
+already received a PARPi and whose tumor demonstrates genomic instability, as determined by Myriad myChoice CDx, and
+has not recurred within 6 months of platinum-based therapy (Type: evidence based, beneﬁts outweigh harms; Evidence
+quality: high; Strength of recommendation: strong).
+Recommendation 3.3.
+PARPis are not recommended for treatment of BRCA wild-type or platinum-resistant recurrent EOC
+(Type: evidence based, beneﬁts outweigh harms; Evidence quality: high; Strength of recommendation: strong).
+PARPis in Combination
+Recommendation 4.0.
+PARPi are not recommended for use in combination with chemotherapy, other targeted agents, or
+immune-oncology agents in the recurrent setting outside the context of a clinical trial. Clinical trial participation is encouraged
+(Type: informal consensus, beneﬁts outweigh harms; Evidence quality: insufﬁcient; Strength of recommendation: strong).
+Management of Adverse Events
+Recommendation 5.0 Anemia:
+a. Patients requiring a blood transfusion for symptom relief and/or hemoglobin level , 8 g/dL should be monitored. PARPi
+dose should be reduced with evidence of repeated anemia to avoid multiple transfusions.
+b. Patients with progressive anemia may be offered growth factor per ASCO guidelines and physician and patient comfort.
+(Type: informal consensus, beneﬁts outweigh harms; Evidence quality: insufﬁcient; Strength of recommendation: moderate).
+Recommendation 5.1 Neutropenia:
+a. Growth factor is not indicated for use in patients receiving daily PARPi.
+b. Neutropenia (grade 4 lasting at least 5-7 days or associated with fever) should result in dose hold until recovery of
+infection and granulocyte count, followed by dose reduction. Growth factor support may be used in this setting to
+support patient safety during the drug hold.
+(Type: informal consensus, beneﬁts outweigh harms; Evidence quality: insufﬁcient; Strength of recommendation: moderate).
+Recommendation 5.2 Platelets:
+a. Thrombocytopenia is most common with niraparib. Niraparib dosing guidelines should be used to lower starting dose
+(200 mg) based on weight and platelet count.
+b. Discontinue PARPi for persistent thrombocytopenia or signiﬁcant bleeding despite dose reduction.
+(Type: informal consensus, beneﬁts outweigh harms; Evidence quality: insufﬁcient; Strength of recommendation: moderate)
+Recommendation 5.3 Persistent cytopenia:
+a. Evaluation for treatment-related myelodysplastic syndrome/acute myeloid leukemia should be initiated in patients with
+persistent cytopenia that occurs despite drug hold.
+(Type: informal consensus, beneﬁts outweigh harms; Evidence quality: insufﬁcient; Strength of recommendation: moderate).
+Recommendation 5.4 Nausea:
+a. Many patients will have tachyphylaxis of nausea symptoms over the ﬁrst cycle of therapy.
+b. Persistent nausea requiring daily antiemetic intervention, causing a reduction in performance status, and/or resulting in
+. 5% weight loss should result in dose reduction.
+(Type: informal consensus, beneﬁts outweigh harms; Evidence quality: insufﬁcient; Strength of recommendation: moderate).
+(continued on following page)
+3470 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 4/28]
+
+inhibitors (PARPis) has led to major change in the ap-
+proaches to EOC management across the treatment life
+cycle. In 2014, the US Food and Drug Administration
+(FDA) approved the ﬁrst PARPi, olaparib, as a treatment
+of gBRCA EOC for patients who had received $ 3 prior
+lines of chemotherapy. Rucaparib received FDA approval
+for treatment of g/sBRCA recurrent disease in 2016.
+Approval for niraparib and, subsequently, olaparib as
+maintenance therapy for women with complete or partial
+response to platinum-based chemotherapy was granted
+in 2017. Since then, the FDA has expanded the regulatory
+approval of PARPis, thereby allowing more patients to
+beneﬁt from these agents and access the drugs earlier in
+treatment. Recent studies have conﬁrmed that the efﬁ-
+cacy of PARPis is enhanced not only in g/sBRCA EOC but
+also in cancers in which HRD is caused by other un-
+derlying etiologies. The applications of PARPis in the
+management of EOC are complex and all approvals to
+date are predicated on the absence of prior exposure to
+PARPis.
+The purpose of this guideline is to provide clinicians,
+other health care practitioners, patients, and caregivers
+with recommendations regarding the role of PARPis in
+the management of EOC based on the best available
+evidence.
+GUIDELINE QUESTIONS
+This clinical practice guideline addresses ﬁve overarching
+clinical questions:
+1. Should PARPi therapy for EOC be repeated over the
+course of treatment?
+2. In which patients with newly diagnosed EOC are
+PARPis recommended?
+2a. What are the histologic types of EOC for which
+PARPis are recommended?
+2b. What are the biomarker subsets for which PARPis
+are recommended?
+3. Is PARPi monotherapy recommended for recurrent
+EOC? If so:
+3a. In which settings (eg, second-line maintenance or
+treatment of recurrent disease)?
+3b. At what dose and duration?
+4. Are there settings where PARPis in combination
+with chemotherapy or other targeted therapy are
+recommended?
+5. How should clinicians manage the speciﬁc toxicities of
+the various PARPis?
+METHODS
+Guideline Development Process
+This systematic review-based guideline was developed by
+a multidisciplinary Expert Panel, which included two patient
+representatives and an ASCO guidelines staff member with
+health research methodology expertise (Appendix Table
+A1, online only). The Expert Panel met in person, via
+teleconference, and/or webinar, and corresponded through
+e-mail. Based on the consideration of the evidence and
+FDA regulatory approval, the authors were asked to con-
+tribute to the development of the guideline, provide critical
+review, and ﬁnalize the guideline recommendations. The
+guideline recommendations were sent for an open com-
+ment period of 2 weeks, allowing the public to review and
+comment on the recommendations after submitting
+a conﬁdentiality agreement. These comments were taken
+into consideration while ﬁnalizing the recommendations.
+Members of the Expert Panel were responsible for reviewing
+and approving the penultimate version of the guideline,
+which was then circulated for external review, and sub-
+mitted to Journal of Clinical Oncology (JCO) for editorial
+review and consideration for publication. All ASCO guide-
+lines are ultimately reviewed and approved by the Expert
+Panel and the ASCO Clinical Practice Guidelines Com-
+mittee before publication. All funding for the administration
+of the project was provided by ASCO.
+The recommendations were developed by using a sys-
+tematic review of the literature conducted in PubMed for
+randomized controlled trials (RCTs) published from Jan-
+uary 1, 2009, to May 3, 2019. The search was then
+updated on April 20, 2020, and relevant trials released at
+ESMO (European Society for Medical Oncology) 2019 and
+ASCO 2020 were also identiﬁed. The FDA’s Center for Drug
+Evaluation and Research database was also searched for
+regulatory information. Articles were selected for inclusion
+in the systematic review of the evidence on the basis of the
+following criteria:
+THE BOTTOM LINE (CONTINUED)
+ASCO believes that cancer clinical trials are vital to inform medical decisions and improve cancer care, and that all patients
+should have the opportunity to participate.
+Additional Resources
+More information, including a supplement with additional evidence tables, slide sets, and clinical tools and resources, as well
+as a companion guideline on Germline and Somatic Tumor Testing in EOC,9 is available at www.asco.org/gynecologic-cancer-
+guidelines. The ASCO Guidelines Methodology Manual (available at www.asco.org/guideline-methodology) provides addi-
+tional information about the methods used to develop this guideline. Patient information is available at www.cancer.net.
+Journal of Clinical Oncology
+3471
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 5/28]
+
+• Population: Adult women with EOC
+• Intervention: PARPi, including olaparib, niraparib,
+rucaparib, and veliparib
+• Comparator: Standard-of-care options or placebo
+• Outcomes: Therapeutic efﬁcacy (eg, survival, re-
+sponse rate), health-related quality of life, adverse
+events
+• Fully published or recent meeting presentations of
+English-language reports of phase II-III RCTs
+• For special circumstances, prospective, single-arm
+trials were accepted.
+Articles were excluded from the systematic review if they
+were (1) editorials, commentaries, letters, news articles,
+case reports, narrative reviews; or (2) published in a non-
+English language. The guideline recommendations were
+crafted, in part, using the Guidelines Into Decision Support
+(GLIDES) methodology and accompanying BRIDGE-Wiz
+software.9 In addition, a guideline implementability re-
+view was conducted. Based on the implementability review,
+revisions were made to the draft to clarify recommended
+actions for clinical practice. Ratings for the type and
+strength of recommendation, evidence, and potential bias
+are provided with each recommendation.
+The ASCO Expert Panel and guidelines staff will work with
+co-chairs to keep abreast of any substantive updates to
+the guideline. Based on formal review of the emerging
+literature, ASCO will determine the need to update. The
+ASCO Guidelines Methodology Manual (hereafter, Meth-
+odology Manual; available at www.asco.org/guidelines-
+methodology) provides additional information about the
+guideline update process. This is the most recent in-
+formation as of the publication date.
+Guideline Disclaimer
+The Clinical Practice Guidelines and other guidance
+published herein are provided by the American Society of
+Clinical Oncology, Inc. (ASCO) to assist providers in clinical
+decision making. The information herein should not be
+relied upon as being complete or accurate, nor should it be
+considered as inclusive of all proper treatments or methods
+of care or as a statement of the standard of care. With the
+rapid development of scientiﬁc knowledge, new evidence
+may emerge between the time information is developed
+and when it is published or read. The information is not
+continually updated and may not reﬂect the most recent
+evidence. The information addresses only the topics spe-
+ciﬁcally identiﬁed therein and is not applicable to other
+interventions, diseases, or stages of diseases. This in-
+formation does not mandate any particular course of
+medical care. Further, the information is not intended to
+substitute for the independent professional judgment of the
+treating provider, as the information does not account for
+individual variation among patients. Recommendations
+reﬂect high, moderate, or low conﬁdence that the
+recommendation reﬂects the net effect of a given course of
+action. The use of words like “must,” “must not,” “should,”
+and “should not” indicates that a course of action is rec-
+ommended or not recommended for either most or many
+patients, but there is latitude for the treating physician to
+select other courses of action in individual cases. In all
+cases, the selected course of action should be considered
+by the treating provider in the context of treating the in-
+dividual patient. Use of the information is voluntary. ASCO
+provides this information on an “as is” basis and makes no
+warranty, express or implied, regarding the information.
+ASCO speciﬁcally disclaims any warranties of merchant-
+ability or ﬁtness for a particular use or purpose. ASCO
+assumes no responsibility for any injury or damage to
+persons or property arising out of or related to any use of this
+information, or for any errors or omissions.
+Guideline and Conﬂicts of Interest
+The Expert Panel was assembled in accordance with
+ASCO’s Conﬂict of Interest Policy Implementation for
+Clinical Practice Guidelines (“Policy,” found at www.asco.org/
+rwc). All members of the Expert Panel completed ASCO’s
+disclosure form, which requires disclosure of ﬁnancial and
+other interests, including relationships with commercial
+entities that are reasonably likely to experience direct
+regulatory or commercial impact as a result of pro-
+mulgation of the guideline. Categories for disclosure in-
+clude employment; leadership; stock or other ownership;
+honoraria, consulting or advisory role; speaker’s bureau;
+research funding; patents, royalties, other intellectual
+property; expert testimony; travel, accommodations, ex-
+penses; and other relationships. In accordance with the
+Policy, the majority of the members of the Expert Panel did
+not disclose any relationships constituting a conﬂict under
+the Policy.
+RESULTS
+A total of 17 trials10-27 met eligibility criteria and form the
+evidentiary basis for the guideline recommendations
+(Table 1). Outcomes are summarized in Tables 2-5. The
+identiﬁed trials were published between 2011 and 2020
+and compared, when comparators were part of the study
+design, PARPis to standard-of-care options or placebo. The
+primary outcome for all trials was therapeutic efﬁcacy,
+expressed as progression-free survival (PFS). Secondary
+and exploratory outcomes included overall survival (OS),
+objective response rate, progression-free survival 2, time to
+discontinuation of treatment or death, time to ﬁrst sub-
+sequent therapy or death (TFST), adverse events (AEs) and
+health-related quality of life (HRQoL). Characteristics of the
+studies’ participants are outlined in Table 1. Figure 1
+outlines the current approval of PARPis in ovarian cancer.
+Study Quality
+Study design aspects related to individual study quality,
+strength of evidence, strength of recommendations, and
+risk of bias were assessed. Refer to the Methodology
+3472 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 6/28]
+
+Manual for more information and for deﬁnitions of ratings
+for overall potential risk of bias.
+Study quality was formally assessed for the fully published
+trials identiﬁed but not for the study only available in ab-
+stract form.26 Design aspects related to the individual study
+quality were assessed by one reviewer, including factors
+such as blinding, allocation concealment, placebo control,
+intention to treat (ITT), funding sources, and so forth, and
+generally indicated a low to intermediate potential risk of
+bias for most of the identiﬁed evidence. In general, the
+quality of the included studies ranged from intermediate to
+high. Quality assessment ratings are found in the Data
+Supplement. Please refer to Methodology Manual for
+deﬁnitions of ratings for overall potential risk of bias.
+KEY OUTCOMES OF INTEREST
+Efﬁcacy
+Newly diagnosed (frontline) maintenance setting. In the
+upfront setting, a total of four trials investigated PARPis for
+maintenance therapy, two as monotherapy13,20 one as
+combination therapy,24 and one as combination therapy
+followed by monotherapy.10
+The SOLO1 trial20 investigated olaparib as ﬁrst-line main-
+tenance therapy in patients with gBRCA1/2 International
+Federation of Obstetrics and Gynecology (FIGO) stage III-
+IV, HGS or endometrioid EOC after a complete response
+(CR) or partial response (PR) to initial ﬁrst-line, platinum-
+based chemotherapy. The trial showed that maintenance
+with olaparib improved PFS compared with placebo
+(hazard ratio [HR], 0.30; 95% CI, 0.23 to 0.41). Although
+the data from secondary outcomes are still immature, they
+suggest olaparib delays TFST (median, 51.8 months)
+compared with placebo (median, 15.1 months; TFST HR,
+0.30; 95% CI, 0.22 to 0.40).
+The PRIMA trial13 investigated the efﬁcacy of niraparib
+maintenance therapy after a response to platinum-based
+chemotherapy in patients with newly diagnosed, advanced
+(FIGO stage III-IV), HGS or endometrioid EOC at high risk
+for relapse. The trial conﬁrmed that the clinical beneﬁt of
+ﬁrst-line treatment with niraparib could be extended to all
+patients with advanced EOC regardless of HRD status,
+which was used as a stratiﬁcation factor. In the overall
+population, a signiﬁcant beneﬁt in median duration of PFS
+was seen with niraparib over placebo (13.8 months v 8.2
+months; HR, 0.62; 95% CI, 0.50 to 0.76; P , .001). PFS
+was also signiﬁcantly improved in those with HRD tumors
+(21.9 months v 10.4 months; HR, 0.43; 95% CI, 0.31 to
+0.59; P , .001). The extended median duration of PFS was
+also observed in the niraparib group compared with the
+placebo group (8.1 months v 5.4 months; HR, 0.68) in the
+subgroup of patients with homologous recombination–
+proﬁcient tumors.
+The PAOLA-124 trial is the ﬁrst phase III trial to examine the
+efﬁcacy of a PARPi
+with bevacizumab as
+ﬁrst-line
+maintenance therapy in patients with advanced (FIGO
+stage III-IV), HGS and endometrioid EOC (other histologies
+if gBRCAm) with CR or PR (CR/PR) to standard platinum-
+based chemotherapy given with bevacizumab. Patients,
+who were not restricted by surgical outcome or gBRCA
+status, were randomly assigned to receive olaparib for up to
+24 months and bevacizumab for 15 months in total, or
+placebo. A statistically signiﬁcant improvement in PFS was
+demonstrated in the ITT population compared with placebo
+(median PFS, 22.1 months v 16.6 months; HR, 0.59;
+95% CI, 0.49 to 0.72; P , .0001). Prespeciﬁed subgroup
+analyses showed that patients with sBRCA mutations (HR,
+0.31; 95% CI, 0.20 to 0.47) and patients with positive HRD
+status (including g/sBRCA-mutated tumors; HR, 0.33;
+95% CI, 0.25 to 0.45) had the greatest PFS beneﬁts. No
+beneﬁt was observed in patients with negative HRD status
+(16.6 v 16.2 months; HR, 1.00; 95% CI, 0.75 to 1.35). The
+recent approval was limited to women with g/sBRCA and
+and/or genomic instability by Myriad myChoice CDx
+(Myriad Genetics, Salt Lake City, UT) and who have had
+a CR/PR to chemotherapy plus bevacizumab combination.
+The VELIA trial10 assessed the efﬁcacy of veliparib added to
+ﬁrst-line chemotherapy with carboplatin and paclitaxel and
+continued as maintenance monotherapy in patients with
+previously untreated, advanced, FIGO stage III-IV, HGS
+EOC. In the overall population, the median PFS was
+23.5 months in the induction and maintenance veliparib
+group compared with 17.3 months in those receiving
+placebo (HR, 0.68; 95% CI, 0.56 to 0.83; P , .001). In
+patients with gBRCA mutation, the median PFS was 34.7
+versus 22.0 months, respectively, in the veliparib com-
+pared with the control group (HR, 0.44; 95% CI, 0.28 to
+0.68; P , .001). In the HRD cohort, the corresponding
+duration was 31.9 months and 20.5 months, respectively
+(HR, 0.57; 95% CI, 0.43 to 0.76; P , .001). In the ITT
+population, median PFS was 23.5 months versus 17.3
+months, respectively (HR, 0.68; 95% CI, 0.56 to 0.83; P ,
+.001). Stratiﬁcation was based on gBRCA status and was
+added 14 months after initiation of the study, at which time
+the study was more than half accrued. No beneﬁt was seen
+in patients with homologous-recombination–deﬁcient
+BRCA wild-type (BRCAwt) disease (HR, 0.74; 95% CI,
+0.52 to 1.06) or those with homologous-recombination–
+proﬁcient disease (HR, 0.81; 95% CI, 0.60 to 1.09).
+Veliparib is not approved in this setting and is not com-
+mercially available at this writing.
+Treatment of Recurrence Setting. Eight studies12,14,16,18,21,22,25,26
+were identiﬁed that investigated PARPis as treatment for re-
+currence. Four open-label, phase II studies12,14,18,26 examined
+olaparib for patients with gBRCAm advanced EOC. Each study
+found improved clinical beneﬁt with olaparib. Two single-arm
+studies of rucaparib, ARIEL 225 and Study 10,16, also both
+demonstrated improved PFS in measurable gBRCAm ovarian
+cancer.
+Journal of Clinical Oncology
+3473
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 7/28]
+
+TABLE 1. Clinical Trials Evaluating PARPis in EOC
+Study (ClinicalTrials.gov identiﬁer)
+Patient Population
+PARPi
+FDA
+Approval
+Date
+Treatment Dosing
+Indication
+Front-line maintenance
+SOLO120
+(NCT01844986). Phase III,
+randomized, double-blind, placebo
+controlled, multicenter study
+Female patients with newly diagnosed, histologically
+conﬁrmed, high-risk advanced (FIGO stage III-IV)
+BRCAm, HGS or high-grade endometrioid ovarian cancer,
+primary peritoneal cancer and/or fallopian tube cancer
+who have completed ﬁrst-line platinum-based
+chemotherapy
+Olaparib
+12/2018
+300 mg BID (150 mg, 100 mg
+tablets)
+Deleterious germline OR somatic
+BRCAm and CR/PR to ﬁrst-line
+platinum-based chemotherapy
+Patients must have clinical CR/PR and have no clinical
+evidence of disease progression
+Patients must be randomly assigned within 8 weeks of their
+last dose of chemotherapy
+PRIMA (Gonzalez-Martin, 201913
+NCT02655016). Phase III,
+randomized, double-blind, placebo
+controlled, multicenter study
+Newly diagnosed advanced ovarian cancer, regardless of
+BRCAm status
+Niraparib
+4/2020
+300 mg (3 3 100-mg capsules) for
+patients with a baseline body
+weight $ 77 kg and baseline
+platelet count $ 150,000 mL
+CR/PR to ﬁrst-line platinum-based
+chemotherapy, regardless of
+BRCAm or HRD status
+Histologically conﬁrmed, advanced (FIGO stage III or IV),
+high-grade, predominantly serous or endometrioid
+ovarian cancer, fallopian tube cancer, or primary
+peritoneal cancer who have completed ﬁrst-line platinum-
+based chemotherapy (neoadjuvant or adjuvant)
+200 mg (2 3 100-mg capsules) for
+patients with a baseline body
+weight , 77 kg or baseline
+platelet count , 150,000 mL
+Patient must have clinical CR/PR after completing
+chemotherapy course
+Patient must be randomly assigned within 12 weeks of the
+ﬁrst day of the last cycle of chemotherapy
+PAOLA-124
+(NCT02477644). Phase III,
+randomized, double-blind,
+placebo controlled, multicenter
+study
+Newly diagnosed ovarian cancer, primary peritoneal cancer,
+and/or fallopian tube cancer
+Olaparib 1
+bevacizumab
+5/2020
+300 mg BID (2 3 150-mg or
+3 3 100-mg tablets)
+CR/PR to ﬁrst-line chemotherapy and
+bevacizumab combination and
+g/sBRCA and/or genomic instability
+by Myriad myChoice CDx
+Histologically conﬁrmed HGS, high-grade endometrioid or
+other epithelial nonmucinous ovarian cancer in a patient
+with deleterious germline BRCA1/2 at an advanced stage
+(FIGO stage IIIB, IIIC, or IV)
+Non-BRCAm patients allowed if HGS
+Completed ﬁrst-line platinum-taxane chemotherapy with
+bevacizumab prior to randomization
+Platinum-taxane–based regimen must have consisted of
+a minimum of four treatment cycles, including platinum,
+and a maximum of nine
+Bevacizumab dose 15 mg/kg every 3 weeks up to a total of
+15 months
+Prior to randomization, patient’s disease must be NED or in
+CR/PR from her ﬁrst-line treatment
+(continued on following page)
+3474 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 8/28]
+
+TABLE 1. Clinical Trials Evaluating PARPis in EOC (continued)
+Study (ClinicalTrials.gov identiﬁer)
+Patient Population
+PARPi
+FDA
+Approval
+Date
+Treatment Dosing
+Indication
+VELIA10
+(NCT02470585). Phase III,
+randomized, double-blind, placebo
+controlled, multicenter study
+Histologic diagnosis of FIGO stage III or IV epithelial ovarian,
+fallopian tube, or primary peritoneal carcinoma, with the
+appropriate tissue available for histologic evaluation
+Veliparib
+None to
+date
+150 mg BID for 2 weeks then
+(transition period) 400 mg BID
+Stage III or IV HGS EOC
+HGS adenocarcinoma
+Willing to undergo testing for gBRCA
+Treatment of recurrent ovarian cancer
+Study 4214
+(NCT01078662). Phase II, open
+label, nonrandomized,
+noncomparative, multicenter study
+Conﬁrmed germline loss-of-function BRCA1 or BRCA2
+mutation deemed deleterious or suspected
+Olaparib
+12/2014
+400 mg BID (50-mg capsules)
+Deleterious germline BRCA mutation,
+$ 3 prior systemic therapies
+Platinum-resistant (relapse within 6 months of platinum
+therapy) epithelial ovarian, primary peritoneal, or fallopian
+tube cancer (or unsuitable for additional platinum
+therapy)
+Select patients with breast, pancreatic, and hormone-
+refractory prostate cancer were also eligible to participate
+Olaparib
+12/2014
+400 mg BID (50-mg capsules)
+Deleterious germline BRCA mutation,
+$ 3 prior systemic therapies
+Gelmon et al12
+(NCT00679783). Phase II, open
+label, nonrandomized,
+noncomparative, multicenter study
+Histologically conﬁrmed HGS and/or undifferentiated
+carcinoma of ovary, fallopian tube, or peritoneum
+Estrogen, progesterone, and HER2-negative advanced
+adenocarcinoma of the breast
+Olaparib
+12/2014
+400 mg BID (50-mg capsules)
+Deleterious germline BRCA mutation,
+$ 3 prior systemic therapies
+Known BRCA-positive breast cancer or ovarian cancer that is
+not HGS or undifferentiated tubo-ovarian carcinoma
+CLIO Study26
+(NCT02822157). Phase II, open
+label, randomized, crossover study
+Recurrent epithelial carcinoma of the ovary, fallopian tube,
+or primary peritoneum
+Olaparib
+12/2014
+400 mg BID (50-mg capsules)
+Deleterious germline BRCA mutation,
+$ 3 prior systemic therapies
+At least one previous line of chemotherapy
+Liu et al18
+(NCT01116648). Phase II, open
+label, randomized study
+Histologically or cytologically grade 2 or 3 (high-grade)
+papillary-serous or endometrioid epithelial ovarian cancer,
+primary peritoneal serous cancer, or fallopian tube
+cancer;
+Olaparib
+12/2014
+400 mg BID (50-mg capsules)
+Deleterious germline BRCA mutation,
+$ 3 prior systemic therapies
+Participants with epithelial ovarian, primary peritoneal, or
+fallopian tube cancers of other high-grade histologies who
+carry a known deleterious BRCA germline mutation
+Kaye et al15
+(NCT 00628251). Phase II, open
+label, randomized study
+Histologically or cytologically conﬁrmed recurrent epithelial
+ovarian, primary peritoneal, or fallopian tube carcinoma
+and $ 1 measurable lesions according to RECIST
+Olaparib
+12/2014
+400 mg BID (50-mg capsules)
+Deleterious germline BRCA mutation,
+$ 3 prior systemic therapies
+Conﬁrmed germline BRCA1/2 mutation, disease that
+recurred or progressed within 12 months of the most
+recent platinum-based chemotherapy regimen
+(continued on following page)
+Journal of Clinical Oncology
+3475
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 9/28]
+
+TABLE 1. Clinical Trials Evaluating PARPis in EOC (continued)
+Study (ClinicalTrials.gov identiﬁer)
+Patient Population
+PARPi
+FDA
+Approval
+Date
+Treatment Dosing
+Indication
+SOLO 322
+(NCT02282020). Phase III, open
+label, randomized, controlled,
+study
+Histologically diagnosed relapsed HGS ovarian cancer
+(including primary peritoneal and/or fallopian tube
+cancer) or high-grade endometrioid cancer. Patients are
+eligible to undergo BRCA testing even if they have not yet
+had recurrence or progression of disease . 6 months
+($ 183 d) after completion of their last platinum therapy
+Olaparib
+12/2014
+300 mg BID (150-mg tablets)
+Deleterious germline BRCA mutation,
+$ 3 prior systemic therapies
+Documented germline mutation in BRCA1 and/or BRCA2
+predicted to be deleterious or suspected deleterious
+Patients must have received $ 2 prior platinum-based lines
+of chemotherapy
+Patients must be partially platinum sensitive or platinum
+sensitive
+Study 1016
+(NCT01482715). Phase I/II, open-
+label, safety, pharmacokinetic, and
+preliminary efﬁcacy study
+Known deleterious BRCA mutation (gBRCA or sBRCA)
+Rucaparib
+12/2016
+600 mg BID (200-mg, 300-mg
+capsules)
+Deleterious germline OR somatic
+BRCAm and $ 2 priors
+Evidence of measurable disease
+Histologically conﬁrmed diagnosis of high-grade epithelial
+ovarian, fallopian tube, or primary peritoneal cancer
+Received $ 3 prior chemotherapy regimens and had
+disease relapse
+ARIEL 225
+(NCT01891344). Phase II, open-
+label, multicenter study
+Histologically conﬁrmed diagnosis of HGS or grade 2 or
+grade 3 endometrioid epithelial ovarian, fallopian tube, or
+primary peritoneal cancer. If mixed histology, . 50% of
+the primary tumor had to be conﬁrmed to be HGS or
+endometrioid upon rereview by local pathology
+Rucaparib
+12/2016
+600 mg BID (200-mg, 300-mg
+capsules)
+Deleterious germline OR somatic
+BRCAm and $ 2 priors
+Relapsed/progressive disease
+Received prior platinum-based therapy and had platinum-
+sensitive disease
+Disease had progressed $ 6 months after their most recent
+platinum-based treatment
+(continued on following page)
+3476 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 10/28]
+
+TABLE 1. Clinical Trials Evaluating PARPis in EOC (continued)
+Study (ClinicalTrials.gov identiﬁer)
+Patient Population
+PARPi
+FDA
+Approval
+Date
+Treatment Dosing
+Indication
+QUADRA21
+(NCT02354586). Phase II,
+multicenter, open-label, single arm
+study
+Tumor HRD testing and blood gBRCAm status testing
+Niraparib
+10/2019
+300 mg daily
+Recurrent ovarian cancer treated with
+$ 3 prior chemotherapy regimens
+and cancer is associated with HRD
+positivity
+Patients must have histologically diagnosed high-grade
+(grade 2 or 3) serous epithelial ovarian, fallopian tube, or
+primary peritoneal cancer with recurrent disease and
+must have been previously treated with chemotherapy
+and experienced a response lasting $ 6 months to ﬁrst-
+line platinum-based therapy
+Patients must have completed three or four previous
+chemotherapy regimens, with the last chemotherapy
+regimen . 4 weeks before treatment initiation
+Patients must have measurable disease according to
+RECIST
+Patients must have formalin-ﬁxed, parafﬁn-embedded
+tumor samples available from the primary or recurrent
+cancer or agree to undergo fresh biopsy before study
+treatment initiation
+Maintenance therapy, second-line and beyond
+Study 1917,28
+(NCT00753545). A phase II,
+randomized, double-blind, placebo
+controlled, multicenter study
+Female patients with histologically diagnosed recurrent
+ovarian or fallopian tube cancer or primary peritoneal
+cancer with HGS (grade 2 or 3) features
+Olaparib
+8/2017
+400 mg BID (50-mg capsules)a
+Recurrent ovarian cancer and CR/PR
+to platinum-based chemotherapy
+Completed $ 2 courses of platinum-based chemotherapy
+and patient’s most recent regimen induced an objective
+response
+BRCAm status was not required (preplanned retrospective
+analysis was conducted and published based on BRCAm
+status)
+Patients must be treated in the study within 8 weeks of
+completion of their ﬁnal dose of the platinum-containing
+regimen
+SOLO 223,27
+(NCT01874353). A phase III,
+randomized, double-blind, placebo
+controlled, multicenter study
+Recurrent ovarian or fallopian tube or peritoneal cancer
+Olaparib
+8/2017
+300 mg BID (150-mg tablets)a
+Recurrent ovarian cancer and CR/PR
+to platinum-based chemotherapy
+Platinum-sensitive disease
+Patients had completed $ 2 courses of platinum-based
+chemotherapy with objective response
+Required to have a predicted deleterious, or suspected
+deleterious, BRCAm based on blood or tumor testing
+(continued on following page)
+Journal of Clinical Oncology
+3477
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 11/28]
+
+TABLE 1. Clinical Trials Evaluating PARPis in EOC (continued)
+Study (ClinicalTrials.gov identiﬁer)
+Patient Population
+PARPi
+FDA
+Approval
+Date
+Treatment Dosing
+Indication
+NOVA19
+(NCT01847274). A phase III,
+randomized, double-blind, placebo
+controlled, multicenter study
+Histologically diagnosed ovarian cancer, fallopian tube
+cancer or primary peritoneal cancer
+Niraparib
+3/2017
+300 mg daily (100-mg capsules)
+Recurrent ovarian cancer and CR/PR
+to platinum-based chemotherapy
+HGS (or grade 3) histology or known to have gBRCAm
+Received $ 2 previous courses of platinum-containing
+therapy and had disease that was considered platinum
+sensitive (. 6 months between penultimate platinum
+regimen and progression of disease)
+Responded to last the platinum regimen and enrolled within
+8 weeks of the last platinum regimen
+ARIEL 311
+(NCT01968213). A phase III,
+randomized, double-blind, parallel
+assignment, multicenter study
+Conﬁrmed diagnosis of HGS or endometrioid epithelial
+ovarian, primary peritoneal, or fallopian tube cancer
+Rucaparib
+4/2018
+600 mg BID (200-mg, 300-mg
+capsules)
+Recurrent ovarian cancer and CR/PR
+to platinum-based chemotherapy
+Received $ 2 prior platinum-based treatments; last
+platinum-based regimen must have been administered
+immediately before maintenance therapy
+Received # 1 nonplatinum chemotherapy regimen. Prior
+hormonal therapy will not be counted as a nonplatinum
+regimen
+At least a 6-month disease-free period after prior treatment
+with the penultimate platinum-based chemotherapy and
+achieved a response
+For the last chemotherapy course before study entry,
+patients must have received a platinum-based doublet
+chemotherapy regimen and have achieved a CR/PR and/
+or a GCIG CA-125 response
+Abbreviations: BID, twice daily; BRCAm, BRCA mutation; CGIC, Clinical Global Impression of Change; CR, complete response; EOC, epithelial ovarian, tubal, or primary peritoneal cancer; FDA, Food and
+Drug Administration; FIGO, International Federation of Obstetrics and Gynecology; gBRCAm, germline BRCA mutation; gBRCAwt, germline BRCA wild-type; g/sBRCAm, germline and/or somatic BRCA
+mutation; HGS, high-grade serous; HRD, homologous recombination deﬁciency; NED, without evidence of disease; PARPi, PARP inhibitor; PR, partial response; sBRCAm, somatic BRCA mutation.
+aIn an attempt to improve dosing constraints of the capsule formulation, an alternative tablet formulation with improved bioavailability was developed to facilitate olaparib administration to patients.
+Comparisons of the bioavailability of these two different oral formulations was investigated.29 Study 24 demonstrated that patients’ exposure after tablet doses $ 300 mg BID matched or exceeded that of the
+approved 400-mg BID capsule formulation (8 3 5-mg capsules BID). The 300-mg tablet dose BID was better tolerated than higher doses and it showed similar effectiveness in tumor shrinkage.
+3478 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 12/28]
+
+TABLE 2. Newly Diagnosed Maintenance Setting
+Outcome
+SOLO120
+PRIMA13
+PRIMA13
+VELIA10
+VELIA10
+PAOLA-124
+ITT Set
+(n 5 391)
+ITT Set
+(n 5 733)
+HRD Population Subset
+(n 5 373)
+ITT Set
+(n 5 757)
+BRCAm Subset
+(n 5 200)
+ITT Set
+(n 5 806)
+Olaparib
+(n 5 260)
+Placebo
+(n 5 131)
+Niraparib
+(n 5 487
+Placebo
+(n 5 246)
+Niraparib
+(n 5 247
+Placebo
+(n 5 126)
+Veliparib
+(n 5 382)
+Control
+(n 5 375)
+Veliparib
+(n 5 108)
+Control
+(n 5 92)
+Olaparib 1 Bev
+(n 5 537)
+Placebo
+1 Bev
+(n 5 269)
+PFS
+Data maturity: 51%
+Data maturity: 59%
+Rate, %
+60
+27
+—
+—
+—
+—
+48
+34
+—
+—
+52
+72
+Median PFS, months
+NR
+13.8
+13.8
+8.2
+21.9
+10.4
+23.5
+17.3
+34.7
+22.0
+22.1
+16.6
+HR (95% CI)
+0.30 (0.23 to 0.41)
+0.62 (0.50 to 0.76)
+0.43 (0.31 to 0.59)
+0.68 (0.56 to 0.83)
+0.44 (0.2 8to 0.68)
+0.59 (0.49 to 0.72)
+Two-sided P
+, .001
+, .001
+, .001
+, .001
+, .001
+, .0001
+PFS2
+Data maturity: 31%
+Data maturity: 39%
+Rate, %
+75
+60
+NR
+NR
+NR
+NR
+—
+—
+Median PFS2 (months)
+NR
+41.9
+32.3
+30.1
+HR (95% CI)
+0.50 (0.35 to 0.72)
+0.86 (0.69 to 1.09)
+Two-sided P
+.0002
+—
+OS
+Data maturity: 21%
+Interim analysis only
+Data maturity 26%
+Rate, %
+84
+80
+84
+77%
+91
+85
+NR
+NR
+NR
+Median OS (months)
+—
+—
+—
+HR (95% CI)
+0.95 (0.60 to 1.53)
+0.70 (0.44 to 1.11)
+0.61 (0.27 to 1.39)
+Two-sided P
+—
+—
+TFST
+Data maturity: 59%
+Rate, %
+—
+—
+NR
+NR
+NR
+NR
+—
+—
+Median time (months)
+51.8
+15.1
+24.8
+18.5
+HR (95% CI)
+0.30 (0.22 to 0.40)
+0.59 (0.49 to 0.71)
+Two-sided P
+—
+, .0001
+Abbreviations: —, not available; Bev, bevacizumab; BRCAm: breast cancer susceptibility gene mutation; HR, hazard ratio; HRD, homologous recombinant deﬁciency; ITT, intention to treat; NR, not
+reported; OS, overall survival; PFS, progression-free survival; PFS2, progression-free survival 2; TDT, time to study treatment discontinuation or death; TFST, time to ﬁrst subsequent therapy or death; TSST,
+time to second subsequent therapy or death.
+Journal of Clinical Oncology
+3479
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 13/28]
+
+TABLE 3. Treatment of Recurrent Ovarian Cancer
+Study
+Dose and
+Formulation
+Data
+Cutoff
+No. of
+Patients
+Treatment and Comparator
+Efﬁcacy Outcomes
+PFS Rate
+and
+HR (95% CI) P
+Median PFS
+(months) and
+HR (95% CI) P
+OS Rate and
+HR (95% CI)
+Median OS
+(months)
+ORR% and
+ORR (95% CI) P
+Study 4214
+400 mg BID,
+capsule
+July 2012
+Ovarian
+cancer
+subset:
+193
+Olaparib (no comparator)
+54.6%
+7.0
+64.4%
+16.6
+31.1 ( 24.6 to 38.1)
+CLIO26
+300 mg BID,
+tablet
+Dec
+2018
+100
+Olaparib v CTa
+NA
+Olaparib: 2.9
+NA
+NA
+Olaparib: 18%b
+CT: 3.4
+CT: 6%
+Liu et al18
+400 mg BID,
+capsule
+Mar 2014
+90
+Olaparib 1 cediranib v
+olaparib
+NA
+Olaparib 1
+cediranib: 17.7
+NA
+NA
+NA
+Olaparib: 9.0
+0.42 (0.23 to
+0.76)
+P 5 .005
+Gelmon
+et al12
+400 mg BID,
+capsule
+Mar 2010
+Ovarian
+cancer
+subset: 65
+Olaparib (no comparator)
+NA
+BRCAm
+nonserous:
+11.4c
+NA
+NA
+BRCAm nonserous:
+75%
+BRCAm serous:
+7.2c
+BRCAm serous:
+30.8%
+BRCAwt
+nonserous: 2.6c
+BRCAwt nonserous:
+0%
+BRCAwt serous:
+6.3c
+BRCAwt serous:
+25.6%
+Kaye et al15
+200 or 400 mg
+BID, capsules
+PFS: Sep
+15,
+2009
+97
+Olaparib v PLD
+0.88 (0.51 to
+1.56) .66
+Olaparib 200 mg:
+6.5 (5.5 to
+10.1)
+PLD v 200:
+0.66 (0.27 to
+1.55)
+NA
+Olaparib 200 mg:
+25%
+OS: April
+30,
+2010
+Olaparib 400 mg:
+8.8 (5.4 to 9.2)
+PLD v 40: 1.01
+(0.44 to
+2.27)
+Olaparib 400 mg:
+31%
+PLD: 7.1 (3.7 to
+10.7)
+PLD: 18%
+SOLO322
+300 mg BID,
+tablets
+Oct 2018
+266
+Olaparib v chemotherapy
+treatment of physician’s
+choice
+0.62 (0.43 to
+0.91) .013
+Olaparib: 13.4
+NA
+NA
+Olaparib: 72.2%
+TPC: 9.2
+TPC: 51.4%
+2.53 (1.40 to 4.58)
+.002
+Study 1016
+600 mg BID,
+capsule
+Nov 2015
+42
+Rucaparib (no
+comparator)
+59.5%
+7.8
+NA
+NA
+—
+ARIEL 225
+600 mg BID,
+capsule
+Jan 2016
+206
+Rucaparib (no
+comparator)
+BRCAm: 50%
+BRCAm: 12.8
+NA
+NA
+BRCAm: 32%
+LOH low: 10%
+LOH low: 5.2
+LOH low: 7%
+0.27 (0.16 to
+0.44)
+, .0001
+LOH high: 5.7
+P , .0001
+LOH low: 5.2
+LOH high: 24%
+LOH high:
+28%
+LOH low: 7%
+LOH low: 10%
+P 5 .0033
+0.62 (0.42 to
+0.90) .011
+QUADRA21
+300 mg, daily
+Apr 2018
+463
+Niraparib (no comparator)
+NA
+5.5
+NA
+17.2
+28%
+Median duration of
+response:
+9.2 months
+Abbreviations: BID, twice daily; CT, chemotherapy; HR, hazard ratio; LOH, loss of heterozygosity; NA, not available; OR, odds ratio; ORR, objective
+response rate; OS, overall survival; PFS, progression-free survival; PLD, pegylated liposomal doxorubicin; TPC, treatment of physician’s choice.
+aPhysician’s choice chemotherapy that includes carboplatin 1 gemcitabine or carboplatin 1 paclitaxel or carboplatin 1 liposomal doxorubicin or liposomal
+doxorubicin every 4 weeks or topotecan or paclitaxel weekly.
+bORR for olaparib was 38% (n 5 5 of 13) in patients with gBRCAm and 13% (n 5 7 of 54) in patients with gBRCAwt.
+cMedian PFS was reported in days and converted to months for the table.
+3480 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 14/28]
+
+TABLE 4. Maintenance Therapy for Recurrent Platinum-Sensitive Disease
+Outcome
+SOLO223,27
+(tablet formulation,
+300 mg BID)
+STUDY 1917,28
+(capsule
+formulation, 400 mg
+BID)
+NOVA19
+(capsule
+formulation, 300 mg
+daily)
+NOVA19
+capsule formulation,
+300 mg daily)
+ARIEL 311
+(capsule formulation,
+600 mg BID)
+ARIEL 311
+(capsule formulation,
+600 mg BID)
+DCO Sept 2016/Feb
+2020 for OS
+Full Analysis Set
+(N 5 295)
+DCO 2012/2015
+BRCAm Subset
+(n 5 136)
+DCO June 2016
+gBRCAm Subset
+(n 5 203)
+DCO June 2016
+Non-gBRCAm Subset
+(n 5 350)
+DCO April 2017
+BRCAm Subset
+(n 5 196)
+DCO April 2017
+ITT
+(n 5 207)
+Olaparib
+(n 5 196)
+Placebo
+(n 5 99)
+Olaparib
+(n 5 74)
+Placebo
+(n 5 62)
+Niraparib
+(n 5 138)
+Placebo
+(n 5 65)
+Niraparib
+(n 5 234)
+Placebo
+(n 5 116)
+Rucaparib
+(n 5 130)
+Placebo
+(n 5 66)
+Rucaparib
+(n 5 141)
+Placebo
+(n 5 66)
+PFS
+Median PFS
+(months)
+19.1
+5.5
+11.2
+4.3
+21.0
+5.5
+9.3
+3.9
+16.6
+5.4
+10.8
+5.4
+HR (95% CI)
+0.30 (0.22 to 0.41)
+0.18 (0.10 to 0.31)
+0.27 (0.17 to 0.41)
+0.45 (0.34 to 0.61)
+0.23 (0.16 to 0.34)
+0.37 (0.30 to 0.45)
+Two-sided P
+, .0001
+, .00001
+, .0001
+, .001
+, .001
+, .0001
+PFS2
+Median PFS2
+(months)
+NR
+18.4
+NA
+NA
+25.8
+19.5
+18.6
+15.6
+NA
+NA
+NA
+NA
+HR (95% CI)
+0.50 (0.34 to 0.72)
+NA
+0.48 (0.28 to 0.82)
+0.69 (0.49 to 0.96)
+NA
+NA
+Two-sided P
+.0002
+NA
+.006
+.03
+NA
+NA
+OS
+Median OS
+(months)
+51.7
+38.8
+34.9
+30.2
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+HR (95% CI)
+0.74 (0.54 to 1.00)
+0.62 (0.41 to 0.94)
+NA
+NA
+NA
+NA
+Two-sided P
+.054
+.02480
+NA
+NA
+NA
+NA
+ORR (CR1PR)
+No. of events:
+total no. of
+patients (%)
+NA
+NA
+7:57
+(12)
+2:48 (4)
+NA
+NA
+NA
+NA
+15:40
+(37.5)
+2:23
+(8.7)
+26:141
+(18.4)
+5:66
+(7.6)
+HR (95% CI)
+NA
+3.36 (0.75 to
+23.72)
+NA
+NA
+NR
+NR
+Two-sided P
+NA
+.12
+NA
+NA
+TDT
+Median time
+(months)
+19.4
+5.6
+11.0
+4.6
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+HR (95% CI)
+0.31 (0.23 to 0.42)
+0.36 (0.25 to 0.52)
+NA
+NA
+NA
+NA
+Two-sided P
+, .0001 (nominal P
+value)
+, .00001
+NA
+NA
+NA
+NA
+TFST
+Median time
+(months)
+27.9
+7.1
+15.6
+6.2
+21.0
+8.4
+11.8
+7.2
+NA
+NA
+NA
+NA
+HR (95% CI)
+0.28 (0.21 to 0.38)
+0.32 (0.22 to 0.48)
+0.31 (0.21 to 0.48)
+0.55 (0.41 to 0.72)
+NA
+NA
+Two-sided P)
+, .0001
+, .00001
+, .001
+, .001
+NA
+NA
+TSST
+Median time
+(months)
+NR
+18.2
+22.0
+15.3
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+NA
+HR (95% CI)
+0.37 (0.26 to 0.53)
+0.41 (0.28 to 0.62)
+NA
+NA
+NA
+NA
+Two-sided P
+, .0001
+.00001
+NA
+NA
+NA
+NA
+Abbreviations: BID, twice daily; BRCAm, breast cancer susceptibility gene mutation; CR, complete response; DCO, data cutoff; gBRCAm, germline breast
+cancer susceptibility gene mutation; HR, hazard ratio; ITT, intention to treat; NA, not available; NR, not reached; PFS, progression-free survival; PFS2,
+progression-free survival 2; OS, overall survival; ORR, objective response rate; PR, partial response; TDT, time to study treatment discontinuation or death;
+TFST, time to ﬁrst subsequent therapy or death; TSST, time to second subsequent therapy or death.
+Journal of Clinical Oncology
+3481
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 15/28]
+
+The SOLO3 trial22 assessed the efﬁcacy of olaparib com-
+pared with chemotherapy of physician’s choice in patients
+with platinum-sensitive, relapsed, HGS or endometrioid
+EOC with gBRCAm. Patients were stratiﬁed by type of
+chemotherapy received, prior lines of chemotherapy (2-
+3 v $ 4), and platinum-free interval (6-12 v . 12 months).
+The objective response rate (ORR) by independent central
+review was 72% with olaparib versus 51% with treatment of
+physician’s choice (odds ratio, 2.53; 95% CI, 1.40 to 4.58;
+P 5 .002). The HR for PFS independent central review was
+0.62 (95% CI, 0.43 to 0.91; P 5 .013), with a median of
+13.4 months with olaparib versus 9.2 months with che-
+motherapy. The PFS by investigator assessment was 0.49
+(95% CI, 0.35 to 0.70; P , .001), with a median of 13.2
+versus 8.5 months, respectively.
+The QUADRA trial,21 a single-arm nonrandomized trial,
+evaluated niraparib in adult patients with relapsed, HGS
+epithelial ovarian, fallopian tube, or primary peritoneal
+cancer who had been treated with $ 3 previous che-
+motherapy regimens. The trial met its primary end point of
+overall response, with 13 of 47 patients (28%; 95% CI,
+15.6% to 42.6%; one-sided P 5 .00053) with HRD-positive
+tumors who received three to four previous anticancer
+therapies and were sensitive to the most recent platinum-
+based therapy. The median duration of PFS in this pop-
+ulation was 5.5 months (95% CI, 3.5 to 8.2 months), and
+median duration of response was 9.2 months (95% CI,
+5.9–not estimable months). A total of 38 of 456 patients
+(8%) in the modiﬁed per-protocol population achieved an
+overall response. The observed median OS in the modiﬁed
+per-protocol population was 17.2 months (95% CI, 14.9 to
+19.8 months).
+Second-line and beyond maintenance setting. Four trials
+investigated the efﬁcacy of PARPis in maintenance therapy
+in recurrent disease.11,17,19,23,28
+Study 1917 accrued patients with platinum-sensitive, re-
+current, high-grade EOC who had received $ 2 prior lines of
+platinum-based chemotherapy and had a CR/PR to the
+most recent treatment, demonstrating olaparib mainte-
+nance signiﬁcantly improved PFS (median 8.4 v 4.8
+months; HR, 0.35; 95% CI, 0.25 to 0.49; P , .001).
+TABLE 5. Grade 3/4 Adverse Events in Randomized Controlled Trials
+Grade 3/4 Adverse Events (%)
+Reference
+Intervention
+No. of Patients
+Fatiguea
+Nausea/Vomiting
+Anemiab
+Neutropeniac
+Thrombocytopenia
+Study 1917
+Olaparib
+136
+7.3
+4.4
+5.1
+4
+NR
+Placebo
+129
+3.0
+, 1
+, 1
+, 1
+SOLO223
+Olaparib
+195
+4.1
+5.2
+19.5
+5.1
+1
+Placebo
+99
+2.0
+1.0
+2.0
+4.0
+NR
+SOLO120
+Olaparib
+260
+4
+1.1
+22
+9
+1
+Placebo
+130
+2
+1
+2
+5
+2
+SOLO322
+Olaparib
+178
+4.5
+2.2
+21.3
+9.6
+3.9
+Nonplatinum-based chemotherapy
+88
+1.3
+3.9
+0
+15.8
+2.6
+Study 1016
+Rucaparib
+42
+26.2
+14.3
+38.1
+16.7
+2.4
+ARIEL 225
+Rucaparib
+204
+9
+6
+22
+8
+2
+ARIEL 311
+Rucaparib
+372
+7
+8
+19
+7
+5
+Placebo
+189
+3
+2
+1
+2
+0
+NOVA19
+Niraparib
+367
+8.2
+4.9
+25.3
+19.6
+33.8
+Placebo
+179
+0.6
+1.7
+0
+1.7
+0.6
+PRIMA13
+Niraparib
+484
+1.9
+2.0
+31
+12.8
+28.7
+Placebo
+244
+0.4
+1.6
+1.6
+1.2
+0.4
+VELIA10
+Veliparib combination
+376
+5
+8
+41
+62
+31
+Veliparib throughout
+377
+8
+12
+38
+58
+28
+Control
+371
+3
+5
+26
+49
+8
+PAOLA-124
+Olaparib 1 bev
+535
+5
+4
+17
+6
+2
+Placebo 1 bev
+267
+1
+3
+, 1
+3
+, 1
+Abbreviations: bev, bevacizumab; NR, not reported.
+aIncludes patients with fatigue and patients with asthenia.
+bIncludes patients with anemia, decreased hemoglobin, hematocrit, and red blood cell count.
+cIncludes patients with neutropenia; febrile neutropenia; neutropenic sepsis; decreased neutrophil and granulocytes; granulocytopenia.
+3482 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 16/28]
+
+Retrospective testing for g/sBRCA mutations was per-
+formed for all patients, and it was determined that 51% of
+participants had g/sBRCAm. Patients with gBRCAm tumors
+were reported to have a 6.9-month prolongation of median
+PFS (11.2 compared with 4.3 months in the olaparib and
+placebo arms, respectively). Additional analyses in the
+BRCAwt population also demonstrated a statistically sig-
+niﬁcant difference in favor of the olaparib maintenance
+treatment arm. However, the magnitude of difference was
+lower when compared with the population of patients with
+gBRCAm (7.4 months v 5.5 months; HR, 0.54; 95% CI,
+0.34 to 0.85; P 5 .0075). Analyses for OS28 showed
+a slight survival advantage with olaparib over placebo in
+the ITT population (media OS, 29.8 v 27.8 months, re-
+spectively; HR, 0.73; 95% CI, 0.55 to 0.95; P 5 .02) after
+a median follow-up of 78 months. In the gBRCAm
+population, OS was 34.9 months versus 30.2 months in
+the olaparib-treated patients compared with those re-
+ceiving placebo, respectively. The median improvement
+in OS was 4.7 months longer for olaparib versus placebo
+(HR, 0.62; 95% CI, 0.42 to 0.93). It is notable that
+the threshold was not set to determine statistical signif-
+icance for OS in the BRCAm subgroup; therefore, the
+reported P values are nominal.
+The SOLO2 trial23 investigated olaparib monotherapy in
+patients with platinum-sensitive, recurrent, g/sBRCA1/2m
+EOC who had received $ 2 lines of chemotherapy and
+demonstrated a CR/PR to the most recent line of treatment.
+Results showed a statistically signiﬁcant improvement in
+the median PFS for olaparib over placebo of 13.6 months
+(median PFS, 19.1 v 5.5 months), translating to a 70%
+reduction in risk of disease progression or death with
+olaparib versus placebo (HR, 0.30; 95% CI, 0.22 to 0.41;
+P , .0001). The proportion of patients who had not ex-
+perienced disease progression at 12 months was
+3.1 times greater in the olaparib group than in the placebo
+group (65.1% v 20.9%, respectively). Moreover, the
+proportion of patients who remained progression free at the
+2-year mark was 2.8 times greater in the olaparib group than
+in the placebo group (43.0% v 15.1%, respectively). A
+preplanned, ﬁnal, OS analysis with data maturity of
+61% demonstrated that olaparib extended OS by approxi-
+mately 13 months compared with placebo (38.8 v 51.7
+months; HR, 0.74; 95% CI, 0.54 to 1.00; P 5 .054) in the full
+analysis set.27 In the prespeciﬁed sensitivity analysis of
+patients with germline BRCA mutation, OS was extended by
+15 months with olaparib compared with placebo (37.4 v
+52.4 months; HR, 0.71; 95% CI, 0.52 to 0.97; P 5 .031).27
+Chemotherapy
+± bev
+Chemotherapy
+Recommended
+May be used
+Standard of
+Care
+Disease Life
+Cycle
+PARPi
+Recommendations
+PARPi
+maintenance
+in stages III-IV
+PARPi treatment for
+germline or somatic
+BRCAm
+PARPi
+treatment
+PARPi
+maintenance
+CT ± bev → PARPi + bev
+OR
+OR
+OR
+OR
+CT ±
+bev
+Bev
+maintenance
+Platinum
+combination +
+bev
+Bev
+maintenance
+Chemotherapy
+Diagnosis
+End first-
+line
+therapy
+Platinum-
+sensitive
+recurrence
+End
+second-
+line
+therapy
+Platinum-
+resistent
+recurrence
+FIG 1. PARP inhibitor (PARPi) use opportunities in women who are PARPi na¨ıve. Recommendations are color coded: Orange indicates rec-
+ommendations; green indicates considerations for use. Figure 1 should not be interpreted as justiﬁcation for PARPi use in . 1 of these settings. Bev,
+bevacixumab; CT, carboplatin and paclitaxel; BRCAm: BRCA1/2 mutation.
+Journal of Clinical Oncology
+3483
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 17/28]
+
+The NOVA trial19 evaluated niraparib in patients with
+platinum-sensitive, recurrent EOC who had a CR/PR after
+$ 2 prior lines of platinum-based chemotherapy. Niraparib
+maintenance signiﬁcantly improved PFS, compared with
+placebo, irrespective of the gBRCAm (21.0 v 5.5 months;
+HR, 0.27; 95% CI, 0.17 to 0.41; P , .001) or HRD status
+(HRD plus BRCAwt: 12.9 v 3.8 months; HR, 0.38; 95% CI,
+0.24 to 0.59; P , .001) and in the overall BRCAwt group
+(9.3 v 3.9 months; HR, 0.45; 95% CI, 0.34 to 0.61;
+P , .001).
+The ARIEL 3 trial11 for rucaparib included three populations
+for step-down analysis of the primary end point, PFS: tumor
+BRCA-mutant (germline or somatic); HRD-positive, which
+included the gBRCAm group along with those with a pos-
+itive HRD score (including BRCAwt with high [$ 16%]
+genomic loss of heterozygosity; and the ITT [all-comer]
+population), which, again, included the gBRCAm and
+HRD-positive groups.11 PFS was signiﬁcantly improved with
+rucaparib versus placebo in all three populations, although
+the most robust clinical outcomes were seen in the
+gBRCAm subgroup.
+Quality of Life
+Seven RCTs10,13,17,19,20,23,24 reported quality-of-life (QOL)
+end points with high completion rates. Analyses of these
+patient-reported outcomes found, in general, the majority of
+QOL scores numerically favored treatment with PARPis.
+However, few signiﬁcant differences were observed be-
+tween the treatment groups. In the absence of disease-
+related symptoms for trials occurring in the maintenance
+setting, that comparable scores were observed over time
+across and between treatment groups suggests that women
+maintain QOL during their PARPi treatment when com-
+pared with placebo. PARPis did not appear to incur ad-
+ditional burden or negatively impact HRQoL either during
+treatment or long-term follow up.
+Adverse Events
+The proportion of patients who experienced any AEs was
+higher in patients receiving PARPis than those in the
+comparator groups (Table 5). Anemia was the most
+common grade $ 3 AE in the PARPi group, reported to
+range from 5% to 22% with olaparib,17,20,22,23 19% to
+38% with rucaparib,11,16,25 25% to 31% with niraparib,13,19
+38% to 41% with veliparib combination therapy,10 and
+17% with olaparib plus bevacizumab.24 The incidence of
+other AEs such as fatigue/asthenia, nausea, and vomiting
+were much lower (Table 5). Hematologic toxicities were
+more frequent with veliparib combination and niraparib
+monotherapy than with treatment with other PARPis. Grade
+3 or higher neutropenia occurred in up to 62% of patients
+receiving veliparib combination treatment10 and in
+19.6% of patient treated with niraparib.19 Similarly,
+thrombocytopenia was reported in up to 31% of patients
+receiving veliparib combination treatment and in 34% of
+those treated with niraparib. However, in the NOVA trial,
+thrombocytopenia was transient and treatment discontin-
+uations were not attributed to these hematologic events.19
+The most prominent grade 3/4 AEs with rucaparib included
+fatigue (26.2%) and nausea and vomiting (14%).16 Overall,
+management of AEs, for the majority of cases, were han-
+dled with appropriate dose reductions and delays.
+RECOMMENDATIONS
+NOTE: These recommendations pertain only to patients
+with EOC who have not previously received a PARPi. The
+recommendations are based on clinical trial results and
+FDA approvals and do not necessarily capture regulatory
+approval in other jurisdictions.
+CLINICAL QUESTION 1
+Repeating PARPi
+Should PARPi therapy for EOC be repeated over the course
+of treatment?
+Recommendation 1.0
+Repeating PARPi therapy in the treatment of EOC is not
+recommended at this time. Consideration should be made
+as to the best time in the life cycle of an individual patient’s
+EOC in which to use PARPi; clinical trial participation is
+encouraged (Type: informal consensus, beneﬁts outweigh
+harms; Evidence quality: insufﬁcient; Strength of recom-
+mendation: strong).
+Literature review and analysis.
+Trials investigating the
+redeployment of PARPis are currently underway. Enroll-
+ment began in 2017 for the OReO/ENGOT Ov-38 trial
+(ClinicalTrials.gov identiﬁer: NCT03106987), a random-
+ized, placebo-controlled, multicenter trial of olaparib
+maintenance retreatment in patients with nonmucinous
+EOC, and a CR/PR to their most recent platinum-based
+chemotherapy. Eligibility requires prior receipt of mainte-
+nance PARPi therapy. Random assignment to olaparib or
+matching placebo is split across two cohorts (approximately
+416 patients): patients with a known BRCAm in cohort 1;
+patients with BRCAwt in cohort 2. The primary end point is
+investigator-assessed PFS and the study is expected to be
+completed in 2021.
+CLINICAL QUESTION 2
+Newly Diagnosed Ovarian Cancer
+For which patients with newly diagnosed EOC are PARPi
+recommended?
+a. What are the histologic types of EOC for which PARPis
+are recommended?
+b. What are the biomarker subsets for which PARPis are
+recommended?
+Recommendation 2.0
+PARPis are not recommended for use in initial treatment of
+early-stage (ie, stage I-II) EOC, because there is insufﬁcient
+evidence to support use in this population. (Type: informal
+3484 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 18/28]
+
+consensus; beneﬁts outweigh harms; Evidence quality:
+insufﬁcient; Strength of recommendation: strong)
+Recommendation 2.1
+Women with newly diagnosed stage III-IV EOC whose
+disease is in CR/PR to ﬁrst-line, platinum-based chemo-
+therapy should be offered PARPi maintenance therapy with
+olaparib (for those with germline or somatic pathogenic or
+likely pathogenic variants in BRCA1 and BRCA2 genes) or
+niraparib (all women) for treatment of high-grade serous
+or endometrioid ovarian cancer.
+• PARPi maintenance therapy should consist of olaparib
+(300 mg orally every 12 hours for 2 years) or niraparib
+(200-300 mg orally daily for 3 years). Longer duration
+could be considered in selected individuals.
+(Type: evidence based, beneﬁts outweigh harms; Evidence
+quality: high; Strength of recommendation: strong).
+Recommendation 2.2
+The addition of olaparib to bevacizumab maintenance may
+be offered to patients who have stage III-IV, high-grade
+serous or endometrioid ovarian cancer and germline or
+somatic pathogenic or likely pathogenic variants in BRCA1
+or BRCA2 genes and/or genomic instability, as determined
+by Myriad myChoice CDx, and who have a CR/PR to
+chemotherapy plus bevacizumab combination (Type: evi-
+dence based, beneﬁts outweigh harms; Evidence quality:
+strong; Strength of recommendation: strong).
+Recommendation 2.3
+Inclusion of the PARPi veliparib with combination che-
+motherapy followed by veliparib maintenance therapy
+cannot be recommended at this time. There are no data
+that this approach is superior, equal, or less toxic than
+a switch maintenance (Type: evidence based; beneﬁts/
+harms ratio unknown; Evidence quality: intermediate;
+Strength of recommendation: strong).
+Note: As of this writing, veliparib is not commercially available.
+Literature review and analysis.
+The efﬁcacy of PARPi as
+front-line maintenance therapy has been demonstrated in
+four randomized trials identiﬁed by the systematic review:
+SOLO1,20 PRIMA,13 PAOLA-1,24 and VELIA.10 Maintenance
+therapy with PARPi achieved substantial PFS beneﬁt
+among patients with platinum-sensitive, recurrent ovarian
+cancer after a CR/PR to the most recent regimen. SOLO120
+demonstrated that, after a CR/PR to ﬁrst-line platinum-
+based
+chemotherapy,
+olaparib
+maintenance
+therapy
+confers PFS beneﬁts to patients with advanced primary
+BRCA1/2-mutated ovarian cancer (Table 2). The PRIMA
+trial,13 in which patients newly diagnosed with advanced
+ovarian cancer were enrolled regardless of their BRCA
+status, found a signiﬁcant improvement in PFS compared
+with placebo in the overall population (Table 2). The PFS
+beneﬁt was even more pronounced in the HRD-positive
+patient subgroup. Notably, maintenance with niraparib also
+demonstrated a signiﬁcant reduction in the risk of disease
+progression or death in the HRD-negative subgroup.
+Two trials were identiﬁed that considered PARPi combi-
+nation therapy. The PAOLA-1 trial24 investigated the efﬁ-
+cacy of maintenance therapy with a PARPi in patients with
+advanced ovarian cancer regardless of BRCA mutation
+status who are receiving ﬁrst-line standard-of-care treat-
+ment including bevacizumab. Results demonstrate ola-
+parib added to bevacizumab maintenance treatment
+signiﬁcantly improved PFS in the overall population. The
+beneﬁt was even more pronounced in the BRCA-mutated
+and HRD-positive subgroups. No statistically signiﬁcant
+beneﬁt was seen in patients with HRD-negative tumors
+(HR, 1.00; 95% CI, 0.75 to 1.35). VELIA10 evaluated
+a PARPi, veliparib, in combination with chemotherapy
+(carboplatin and paclitaxel), followed by PARPi mainte-
+nance treatment in the ﬁrst-line setting. The primary
+analysis demonstrated a signiﬁcantly extended PFS in all
+women, regardless of biomarker status. However, it re-
+mains unclear if the addition of veliparib is necessary for the
+overall beneﬁt, because no chemotherapy-plus-placebo
+comparator arm was included in the study design.
+Clinical interpretation. All trials reported to date present
+results for women who were PARPi na¨ıve at the time of
+initiation of PARPi therapy. The rapid progression of studies
+examining PARPi for therapy of recurrent disease to
+second-line maintenance to front-line maintenance limited
+having a re-exposure scenario. This is an important area of
+unmet need for investigation. Retreatment off study is
+strongly discouraged because it is unsupported by data and
+prevents the capture of data that may be useful to the
+community. The lack of OS beneﬁt from any of the treat-
+ment or maintenance studies to date should be balanced
+against factors such as the unknown short-term and late
+risks (eg, acute myeloid leukemia [AML]/myelodysplastic
+syndromes [MDS]) and development of collateral re-
+sistance to other agents (eg, platinum).
+Physicians and patients are strongly encouraged to con-
+sider the full life cycle of advanced ovarian cancer against
+current data in determining when to use PARPi for indi-
+vidual care (Fig 1). The evolution of knowledge regarding
+mechanisms of resistance to PARPi makes clear that pa-
+rameters deﬁning resistance (eg, minimum treatment-free
+interval, biomarker selection) may need to be taken into
+account in clinical testing of PARPi retreatment. This
+should be done in the context of well-deﬁned clinical trials.
+The recommendations herein are focused on the use of
+PARPi for women with ovarian cancer who have not re-
+ceived prior treatment with a PARPi.
+Data are strong from all studies indicating that women with
+gBRCAm (or the rare sBRCAm) have improved PFS with
+PARPi maintenance therapy with either olaparib or nir-
+aparib. The recently published ASCO guideline on germline
+and somatic tumor testing in epithelial ovarian cancer30
+Journal of Clinical Oncology
+3485
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 19/28]
+
+recommends early germline testing. This recommenda-
+tion recognizes that the identiﬁcation of a deleterious
+germline or somatic mutation in BRCA1 or BRCA2 would
+inform
+PARPi
+treatment
+decisions
+for
+women
+with
+newly diagnosed disease. The PRIMA study demonstrates
+progression-free beneﬁt for all women with high-grade
+serous or endometrioid ovarian cancer. Together, these
+results support consideration of primary maintenance
+therapy for all women with high-grade serous or endo-
+metrioid disease. However, no OS results are available from
+these studies nor data to address conservation of platinum-
+sensitivity in women whose disease progressed while they
+received PARPi maintenance or after completion of PARPi
+maintenance. Those results should inform future treatment
+decision-making. Given the expectation that early treat-
+ment may confer the best outcome, maintenance therapy
+with PARPi should be offered, with these caveats.
+Doses recommended are the standard dose used for either
+maintenance or treatment of existing disease and are
+shown in Recommendation 2.0 with a qualiﬁcation in the
+discussion for Recommendation 5.2. Eligibility for main-
+tenance therapy includes women with CR/PR to initial
+platinum-based therapy, to continue for up to 2 years
+(olaparib) or 3 years (niraparib) in women with CRs who are
+tolerating the drug. Longer treatment duration can be
+considered for women initiating maintenance therapy with
+a PR to platinum-based therapy and demonstrating clinical
+improvement with PARPi treatment. The patient and her
+physician should consider risk-beneﬁt balance for pro-
+longed therapy. Switching PARPis to address tolerance is
+acceptable; however, it is not acceptable to switch to
+a different PARPi at the time of disease progression while
+being treated with a PARPi.
+Inclusion of bevacizumab with primary chemotherapy and
+as maintenance has been evaluated for women with ad-
+vanced stage III-IV, newly diagnosed EOC.31 It is recognized
+that not all women with newly diagnosed EOC may have
+results of a germline test at the initiation or even during
+primary chemotherapy and may have been initiated on
+a bevacizumab-containing therapy. Moving to a PARPi
+maintenance per the FDA approval would then be difﬁcult.
+The PAOLA-1 trial examined the role of olaparib mainte-
+nance added on top of a regimen including bevacizumab
+with primary chemotherapy and as maintenance. This
+phase III trial demonstrated beneﬁt with addition of olaparib
+for women with g/sBRCA and women with HRD score $ 42;
+there was a 0.9-month difference for women with wild-type
+disease and no evidence of HRD.24 Thus, addition of
+a PARPi in the setting of a bevacizumab combination
+primary therapy is a reasonable option for those women
+who have attained a CR/PR to primary therapy. This rec-
+ommendation is of moderate strength, because the added
+value for women with wild-type disease is questionable and
+may be informed further by the outcome of the ongoing
+FDA review.
+Only the VELIA study included a PARPi with chemotherapy
+in initial treatment of ovarian cancer.10 Inclusion of veliparib
+with chemotherapy and continued into maintenance
+therapy for 30 cycles may be offered if veliparib becomes
+commercially available.10 There are no data, to our
+knowledge, to demonstrate inclusion during chemotherapy
+followed by maintenance provides equal to or greater
+beneﬁt, or reduced toxicity, compared with switch main-
+tenance approaches. Furthermore, long-term safety data
+for inclusion of veliparib with chemotherapy followed by
+maintenance are needed, especially to address risk of AML/
+MDS. Substitution of another PARPi in the VELIA regimen is
+strongly discouraged, because safety, dose, and duration of
+niraparib and rucaparib have not been deﬁned. Use of
+olaparib requires a carboplatin dose modiﬁcation and at-
+tenuation of the olaparib exposure per cycle.32-34 There are
+also limited long-term safety data for the olaparib/carbo-
+platin/paclitaxel regimen.34
+CLINICAL QUESTION 3
+Recurrent Ovarian Cancer: Second-Line or Greater
+Maintenance and Treatment
+Is PARPi monotherapy recommended for recurrent EOC?
+If so:
+a. In which settings (eg, second-line maintenance or
+treatment of recurrent disease)?
+b. At what dose and duration?
+Recommendation 3.0
+PARPi monotherapy maintenance (second-line or more)
+may be offered to patients with EOC who have not already
+received a PARPi and who have responded to platinum-
+based therapy regardless of BRCA mutation status; treat-
+ment is continued until progression of disease or toxicity
+despite dose reductions and best supportive care.
+• Options include: olaparib 300 mg every 12 hours;
+rucaparib 600 mg every 12 hours; niraparib 200-
+300 mg once daily.
+(Type: evidence based, beneﬁts outweigh harms; Evidence
+quality: high; Strength of recommendation: strong)
+Recommendation 3.1
+Treatment with a PARPi should be offered to patients with
+recurrent EOC who have not already received a PARPi and
+have a germline or somatic pathogenic or likely pathogenic
+variants in BRCA1 or BRCA2 genes.
+• Options include: olaparib 300 mg every 12 hours;
+rucaparib 600 mg every 12 hours; niraparib 200-
+300 mg once daily.
+(Type: evidence based, beneﬁts outweigh harms; Evidence
+quality: high; Strength of recommendation: strong)
+Recommendation 3.2
+Treatment with a PARPi monotherapy should be offered to
+patients with recurrent EOC who have not already received
+3486 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 20/28]
+
+a PARPi and whose tumor demonstrates genomic in-
+stability, as determined by Myriad myChoice CDx, and has
+not recurred within 6 months of platinum-based therapy
+(Type: evidence based, beneﬁts outweigh harms; Evidence
+quality: high; Strength of recommendation: strong).
+Recommendation 3.3
+PARPis are not recommended for treatment of BRCAwt or
+platinum-resistant, recurrent EOC (Type: evidence based,
+beneﬁts outweigh harms; Evidence quality: high; Strength
+of recommendation: strong).
+Literature review and analysis.
+The systematic review
+identiﬁed 13 trials in total, nine of which were open label,
+phase II studies12,14-16,18,21,22,25,26 and four of which were
+phase II or III controlled trials.11,17,19,23 In maintenance
+therapy for the second-line or greater setting, Study 19,17,28
+SOLO2,23 NOVA,19 and ARIEL311 all demonstrated signif-
+icant efﬁcacy of PARPis compared with placebo (Table 3).
+For recurrent disease, Study 42,14 SOLO3,22 Study 1016,
+ARIEL2,25 and QUADRA21 all reported a signiﬁcant im-
+provement in response and PFS in patients with BRCA
+mutations (Table 4).
+Clinical interpretation:
+• Maintenance: Four trials investigated the efﬁcacy of
+PARPi maintenance therapy in platinum-sensitive
+recurrent disease, and all showed an improvement
+in PFS.11,17,19,23 Across all studies, women with
+a g/sBRCA mutation had the most robust clinical
+improvements. OS results just reported on the SOLO2
+trial, which investigated olaparib monotherapy in pa-
+tients with platinum-sensitive, recurrent, g/sBRCA1/
+2m EOC who had received $ 2 lines of chemotherapy.
+The preplanned, ﬁnal, OS analysis with data maturity of
+61% demonstrated that olaparib extended OS by
+approximately 13 months compared with placebo
+(38.8 v 51.7 months; HR, 0.74, 95% CI, 0.54 to 1.00;
+P 5 .054) in the full analysis set and extended OS by
+15 months with olaparib compared with placebo
+(37.4 v 52.4 months; HR, 0.71; 95% CI, 0.52 to 0.97;
+P 5 .031) in the prespeciﬁed sensitivity analysis of
+patients with germline BRCA mutation.
+• Recurrent disease: The ﬁrst approval for PARPis was
+for use in the treatment setting for recurrent ovarian
+cancer for PARPi-na¨ıve women. Olaparib is FDA approved
+for the treatment of patients with gBRCAm ovarian, fal-
+lopian, or primary peritoneal cancer who have received
+$ 3 prior lines of chemotherapy. Rucaparib is approved
+for the treatment of patients with gBRCAm–associated
+ovarian, fallopian tube, or primary peritoneal cancer who
+have been treated with $ 2 chemotherapy regimens.
+Rucaparib yielded beneﬁt in ARIEL2 in a small cohort (n 5
+5) of ovarian cancers with RAD51C or RAD51D mutations,
+with three PRs and two patients with prolonged stable
+disease for 8.3 and 11.0 months.25
+The recently reported, single-arm QUADRA trial of nir-
+aparib treatment in recurrent ovarian cancer met its pri-
+mary end point demonstrating activity in fourth- and
+ﬁfth-line treatment of patients with gBRCA and positive
+for HRD who were PARPi na¨ıve and platinum sensitive to
+their last platinum therapy (n 5 47). The study had an
+ORR of 28% and a median duration of response of 9.2
+months. It was approved in 2019 for patients with ad-
+vanced ovarian, fallopian tube, or primary peritoneal
+cancer treated with $ 3 prior chemotherapy regimens
+who are PARPi na¨ıve and whose cancer is associated
+with HRD-positive status determined using the myChoice
+CDx as either tumor BRCA mutated and/or with a ge-
+nomic instability score $ 42. Patients with HRD-positive
+cancers but without BRCA mutations must have expe-
+rienced progression at least 6 months after the last dose
+of platinum-based therapy (ie, must have platinum-
+sensitive disease).
+Dosing recommendations for treatment with all three
+agents are the same as deﬁned previously for use in
+maintenance therapy. PARPi treatment is not generally
+recommended for treatment of platinum-resistant cancer. It
+has , 5% activity for treatment of BRCAwt, platinum-
+resistant, recurrent EOC. Any use of PARPi in the
+platinum-resistant setting is recommended to occur in the
+setting of a clinical trial, whether as a single agent or in
+chemotherapy, antiangiogenesis, or immunotherapy com-
+binations. Nor should PARPis be readministered after
+prior exposure and progression on PARPi therapy, because
+there are no data to support that re-exposure in this setting
+is beneﬁcial, and agent approval does not specify this
+option. Clinical trial participation is encouraged.
+CLINICAL QUESTION 4
+PARPi in Combination
+Are there settings where a PARPi in combination with
+chemotherapy or other targeted therapy are recommended?
+Recommendation 4.0
+PARPis are not recommended for use in combination with
+chemotherapy, other targeted agents, or immune-oncology
+agents outside the context of a clinical trial. Clinical trial
+participation is encouraged (Type: informal consensus,
+beneﬁts outweigh harms; Evidence quality: insufﬁcient;
+Strength of recommendation: moderate).
+Clinical interpretation.
+There are limited data and nu-
+merous clinical trials now investigating the roles of PARPis
+in combination with chemotherapy, antiangiogenesis, or
+immunotherapies as treatment and in maintenance. The
+addition of PARPi is safe given no signiﬁcant overlapping
+toxicity for women receiving hormonal blockade (ie, aro-
+matase inhibitor) for synchronous breast cancer. However,
+there are no outcome data speciﬁc to this approach, to our
+knowledge. There is an increasing need to understand
+when and how to retreat with a PARPi, especially when
+Journal of Clinical Oncology
+3487
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 21/28]
+
+there has been progression while receiving a prior PARPi.
+These unmet needs can only be clariﬁed with well-designed
+randomized trials stratiﬁed for confounding elements such
+as g/sBRCA status, prior exposure to platinum agents, prior
+exposure to a PARPi, and accounting for AE risks. At this
+time, it is not recommended to re-treat with PARPi, even for
+patients with g/sBRCA platinum-sensitive disease, nor to
+use combination therapy not in a clinical trial.
+CLINICAL QUESTION 5
+Adverse Events
+How should clinicians manage the speciﬁc toxicities of the
+various PARPis?
+Recommendation 5.0 Anemia
+a. Patients requiring a blood transfusion for symptom
+relief and/or hemoglobin level , 8 g/dL should be
+monitored. PARPi dose should be reduced with evi-
+dence of repeated anemia to avoid multiple transfusions.
+b. Patients with progressive anemia may be offered
+growth factor per ASCO guidelines and physician and
+patient comfort.
+(Type: informal consensus, beneﬁts outweigh harms; Evi-
+dence quality: insufﬁcient; Strength of recommendation:
+moderate).
+Recommendation 5.1 Neutropenia
+a. Growth factor is not indicated for use in patients re-
+ceiving daily PARPi.
+b. Neutropenia (grade 4 lasting $ 5-7 days or associated
+with fever) should result in dose hold until recovery of
+infection and granulocyte count, then dose may be
+reduced. Growth factor support may be used in this
+setting to support patient safety during the drug hold.
+(Type: informal consensus, beneﬁts outweigh harms; Evi-
+dence quality: insufﬁcient; Strength of recommendation:
+moderate),
+Recommendation 5.2 Platelets
+a. Thrombocytopenia is most common with nir-
+aparib. Niraparib dosing guidelines should be used to
+lower starting dose (200 mg) based on weight and
+platelet count.
+b. Discontinue PARPi for persistent thrombocytopenia or
+signiﬁcant bleeding despite dose reduction.
+(Type: informal consensus, beneﬁts outweigh harms; Evi-
+dence quality: insufﬁcient; Strength of recommendation:
+moderate).
+Recommendation 5.3 Persistent cytopenia
+a. Evaluation for treatment-related MDS/AML should be
+initiated in patients with persistent cytopenia that
+occurs despite drug hold.
+(Type: informal consensus, beneﬁts outweigh harms; Evi-
+dence quality: insufﬁcient; Strength of recommendation:
+moderate).
+Recommendation 5.4 Nausea
+a. Many patients will have tachyphylaxis of nausea
+symptoms over the ﬁrst cycle of therapy.
+b. Persistent
+nausea
+requiring
+daily
+antiemetic
+in-
+tervention, causing a reduction in performance status,
+and/or resulting in . 5% weight loss should result in
+dose reduction.
+(Type: informal consensus, beneﬁts outweigh harms; Evi-
+dence quality: insufﬁcient; Strength of recommendation:
+moderate).
+Clinical interpretation.
+PARPis, while generally well tol-
+erated, have class- and agent-speciﬁc AEs, some of which
+may lead to requirements for dose modiﬁcation (Table 6).
+The most common of those include fatigue, anemia,
+neutropenia, thrombocytopenia, persistent cytopenias, and
+nausea. Other, less common, class-effect AEs include
+vomiting and diarrhea, headache, elevation in levels of liver
+function enzymes or creatinine, and the rarer, but also more
+serious, pneumonitis and leukemia risks. Fatigue maybe
+multifactorial, due to and/or representing cytopenias, stress
+of nausea, and other elements, and may also be a conse-
+quence of persistent grade 1 and/or grade 2 events. Thus,
+because these are daily, continuously administered agents,
+special attention should be paid to low-grade AEs, and any
+grade 2 AE requiring a dose hold should be accompanied
+TABLE 6. Dose Modiﬁcation for PARPi
+PARPi
+Starting
+Dose
+Initial Dose
+Reduction
+Second Dose
+Reduction
+Third Dose
+Reduction
+Final
+Reduction
+Olaparib
+300 mg every
+12 hours
+200 mga every
+12 hours
+150 mga every
+12 hours
+Discontinue
+–
+Rucaparib
+600 mg every
+12 hours
+500 mg every
+12 hours
+400 mg every
+12 hours
+300 mg every
+12 hours
+Discontinue
+Niraparib
+300 mg once
+daily
+200 mg once
+daily
+100 mg once daily
+Discontinue
+–
+Niraparib if weight , 77 kg and/or platelet counts
+, 150,000/mL (UK based on weight , 58 kg)
+200 mg once
+daily
+100 mg once
+daily
+Discontinue
+–
+–
+Abbreviations: –, not applicable; PARPi, PARP inhibitor; UK, United Kingdom.
+aDose reductions are based on general practice standard and deviate slightly from AstraZeneca’s Prescribing Information
+3488 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 22/28]
+
+by a dose reduction to minimize risk of a second dose hold
+and further or persistent events or injury. Re-escalation or
+resumption of initial dose is never recommended.
+Anemia. Anemia is found across all PARPi use and is
+characterized by a macrocytic phenotype with mean cor-
+puscular volumes that can reach . 105 (units) but is not
+a vitamin B12–dependent pernicious anemia functionally.
+The anemia may present early or slowly progressively; have
+the commonly associated effects of fatigue, decreased
+exercise tolerance, and shortness of breath; and come on at
+different levels of anemia across patients depending on
+their underlying tolerance. Interventions include drug hold,
+dose reduction, transfusion, and consideration of growth
+factor support. The latter is recommended to follow existing
+ASCO guidelines and appears to be used less commonly.
+Ample experience demonstrates that drug holding without
+associated other change will result in recurrence of the
+anemia upon reinstitution of the agent. Thus, dose modi-
+ﬁcation with or without transfusion to acutely ameliorate
+effects of anemia is recommended.
+Neutropenia. More variable across agents is the presence
+and depth of neutropenia. All PARPis have the potential for
+trilineage suppression; however, the severity of neutropenia
+appears to vary across agents and patients. The degree of
+prior marrow suppressive treatment(s) and bone marrow
+reserve may also contribute to the tolerance of PARPi by the
+bone marrow. The degree of myelosuppression has not
+been shown to reach the levels deﬁned in the ASCO 2015
+Guideline Update for prophylactic use of growth factor
+support recommended for use with a . 20% risk of
+neutropenia with fever.35 Thus, growth factor support is not
+recommended for prophylactic use during PARPi therapy.
+The 2015 guidelines also reinforce that growth factors
+should be administered 24-72 hours after completion of the
+chemotherapy, making consistent use of such agents not
+feasible when administering a daily treatment regimen such
+as a PARPi. Grade 4 neutropenia of $ 5-7 days or grade 3
+with fever are indications for holding PARPi. Severe cir-
+cumstances warrant consideration of short-acting growth
+factor support, such as 3 days of neupogen, to mitigate
+further decline. If that is done, PARPi should not be
+restarted until resolution of fever, a granulocyte count of
+$ 1,000/dL, and adequate time (ie, 48-72 hours) have
+elapsed since the last dose of growth factor.
+Thrombocytopenia. Thrombocytopenia has been reported
+with all commercially available PARPis, with variability in
+frequency and depth across agents. Of the three approved
+PARPis for ovarian cancer, niraparib had the greatest
+impact on platelet counts, and the risk of thrombocytopenia
+was greatest with initial exposures. Recommendations have
+been proposed in the United States (pending FDA ap-
+proval) and the United Kingdom (recommended in drug
+insert) to modify doses as a function of age and/or weight.
+United Kingdom recommendations are based on the
+ﬁnding from the NOVA trial that there was a greater pro-
+portion grade 3/4 adverse reactions including thrombo-
+cytopenia in women in the lowest quartile of weight (# 58
+kg) and state that a starting dose of 200 mg is recom-
+mended for women weighing , 58 kg.19 Pending US
+dosing recommendations indicate that 200 mg be the
+starting dose for women weighing , 77 kg and/or with
+a starting platelet count , 150,000/mL. Dose hold followed
+by reduction is the recommended approach to grade 3/4
+thrombocytopenia to avoid the requirement for platelet
+transfusions. Patients who develop persistent or recurrent
+thrombocytopenia while receiving a reduced dose or dose
+hold of PARPi should be evaluated per the following section
+on persistent cytopenias.
+Persistent cytopenia, AML, MDS.
+As with all DNA-
+damaging agents, there is a risk for inducing injury, with
+the bone marrow the most common site for such injury. It is
+unclear the extent to which the PARPis contribute to un-
+derlying injury that may have occurred from prior exposures
+such as platinums, topoisomerase 1 and 2 inhibitors, and
+antimetabolites, all of which have some reported risks. In
+addition, women are living longer and thus having more
+overall treatment exposures, which may contribute to ac-
+cumulated injury. The most common ﬁrst sign is devel-
+opment of a single or multiple persistent cytopenias. Such
+a ﬁnding should trigger drug discontinuation and evaluation
+for common underlying causes, such as evaluation of iron
+stores, vitamin B12 level, and folate status, in the case of
+persistent anemia. A low threshold should be used for
+moving to bone marrow evaluation to rule out development
+of MDS or AML, especially with persistent multilinear
+cytopenia. Where appropriate, early hematology consul-
+tation is recommended.
+Nausea. Nausea occurs in various frequency and severity
+across patients and PARPis. Many patients will have
+tachyphylaxis of nausea symptoms during the ﬁrst cycle of
+therapy, often without institution of antiemetic therapy or
+dose reduction. Some patients may ﬁnd a light meal or
+snack before taking a PARPi improves their symptoms.
+Persistent nausea associated with vomiting, weight loss
+. 5%, and/or reduction in performance status should be
+evaluated to rule out other causes, such as bowel ob-
+struction. Absent other causes, any situation with a re-
+quirement for daily antiemetic intervention, causing
+a reduction in performance status, and/or resulting in
+. 5% weight loss should result in dose hold and then dose
+reduction upon improvement and reinstitution.
+PATIENT AND CLINICIAN COMMUNICATION
+Women with advanced ovarian cancer considering treat-
+ment or maintenance with a PARPi do so during a time of
+rapidly emerging new data and complex regulatory ap-
+provals. It is important to recognize that patients no longer
+rely solely on their medical team for information and often
+access other sources online, in print, or through social
+Journal of Clinical Oncology
+3489
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 23/28]
+
+media and support groups. Shared decision-making is
+essential, and patients should be informed that the
+evidence-based options for treatment (or maintenance), as
+well as the potential beneﬁts and risks communicated by
+the physician, are based on knowledge that continues to
+evolve. Consideration of the patient’s preferences should be
+supported in deciding the best course of treatment.
+For patients faced with a decision to undergo potentially
+years of treatment or maintenance with a PARPi, it is es-
+sential that providers thoroughly explain the potential im-
+pact on QoL during the initial 30- to 60-day adjustment
+period and provide a plan for aggressive management of
+AEs during this phase and beyond. Patients should also be
+informed that a potential dose reduction may be reasonable
+to manage AEs. Connection with other patients who have
+already navigated adjustment to PARPis, through local or
+on-line support networks, may increase tolerability and
+adherence.
+For recommendations and strategies to optimize patient-
+clinician communication, see “Patient-Clinician Commu-
+nication: American Society of Clinical Oncology Consensus
+Guideline.”36
+HEALTH DISPARITIES
+Although ASCO clinical practice guidelines represent ex-
+pert recommendations on the best practices in disease
+management to provide the highest level of cancer care, it is
+important to note that many patients have limited access to
+medical care, and access to drugs can vary between
+countries. Racial and ethnic disparities in health care
+contribute signiﬁcantly to this problem in the United States.
+A recent, large, population-based study of multigene testing
+in patients with breast or ovarian cancer observed racial
+disparities in genetic testing.37 While approximately 34% of
+White women were tested, only about 22% of Black women
+and 24% of Hispanic women received testing. Further-
+more, racial/ethnic differences in pathogenic variants ob-
+served in patients with ovarian cancer include BRCA1,
+which is reported to be 1% in individuals of African descent,
+7% in Whites and 16% in Hispanics.37 Patients with cancer
+who are members of racial/ethnic minorities also suffer
+disproportionately from comorbidities, experience more
+substantial obstacles to receiving care, are more likely to be
+uninsured, and are at greater risk of receiving care of poor
+quality than other Americans.38-41 It is also recognized and
+unfortunate that there are disparities in adherence to
+treatment guidelines.42 As such, it is important for clinicians
+to offer appropriate testing and to address patients’
+questions, concerns, and/or misconceptions. Many other
+patients lack access to care because of their geographic
+location and distance from appropriate treatment facilities.
+Awareness of these disparities in access to care should be
+considered in the context of this clinical practice guideline,
+and health care providers should strive to deliver the highest
+level of cancer care to these vulnerable populations.
+MULTIPLE CHRONIC CONDITIONS
+Creating
+evidence-based
+recommendations
+to
+inform
+treatment of patients with additional chronic conditions,
+a situation in which the patient may have $ 2 such con-
+ditions—referred
+to
+as
+multiple
+chronic
+conditions
+(MCC)—is challenging. Patients with MCC are a complex
+and heterogeneous population, making it difﬁcult to ac-
+count for all the possible permutations to develop speciﬁc
+recommendations for care. In addition, the best available
+evidence for treating index conditions, such as cancer, is
+often from clinical trials whose study selection criteria may
+exclude these patients to avoid potential interaction effects
+or confounding of results associated with MCC. As a result,
+the reliability of outcome data from these studies may be
+limited, thereby creating constraints for expert groups to
+make recommendations for care in this heterogeneous
+patient population.
+Because many patients for whom guideline recommen-
+dations apply present with MCC, any treatment plan needs
+to take into account the complexity and uncertainty created
+by the presence of MCC and highlights the importance of
+shared decision-making regarding guideline use and
+implementation. Therefore, in consideration of recom-
+mended care for the target index condition, clinicians
+should review all other chronic conditions present in the
+patient and take those conditions into account when for-
+mulating the treatment and follow-up plan.
+In light of the aforementioned considerations, practice
+guidelines should provide information on how to apply the
+recommendations for patients with MCC, perhaps as
+a qualifying statement for recommended care. This may
+mean that some or all of the recommended care options are
+modiﬁed or not applied, as determined by best practice in
+consideration of any MCC.
+COST IMPLICATIONS
+Increasingly, individuals with cancer are required to pay
+a larger proportion of their treatment costs through de-
+ductibles and coinsurance.43,44 Higher patient out-of-
+pocket costs are a barrier to initiating and adhering to
+recommended cancer treatments.45,46 PARPis are costlier
+than other available therapies, 18.8, 6.9, and 2.2-2.7 times
+costlier than paclitaxel, pembrolizumab, and bevacizumab,
+respectively. Patients’ out-of-pocket costs may vary
+depending on insurance coverage. Coverage may originate
+in the medical or pharmacy beneﬁt, which may have dif-
+ferent cost-sharing arrangements. Patients should be
+aware that different products may be preferred or covered
+by their particular insurance plan. Even with the same
+insurance plan, the price may vary between different
+pharmacies. While most insurance carriers will provide
+some coverage for PARPis, the patient’s copayment can
+remain prohibitive, nonetheless. Medicare, which is used
+by many patients with ovarian cancer, given that the
+3490 © 2020 by American Society of Clinical Oncology
+Volume 38, Issue 30
+Tew et al
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 24/28]
+
+disease largely affects older women, does cover most
+PARPis. The amount of coverage and the size of copay,
+however, vary from state to state. When discussing ﬁnancial
+issues and concerns, patients should be made aware of any
+ﬁnancial counseling services available to address this
+complex and heterogeneous landscape.47
+Discussion of cost can be an important part of shared
+decision-making.47 Clinicians should discuss with patients
+the use of less expensive alternatives when it is practical
+and feasible for treatment of the patient’s disease and when
+there are $ 2 treatment options that are comparable in
+terms of beneﬁts and harms.47
+EXTERNAL REVIEW AND OPEN COMMENT
+The draft recommendations were released to the public for
+open comment from February 11, 2020, through February
+25, 2020. Response categories of “Agree as written,”
+“Agree with suggested modiﬁcations,” and “Disagree. See
+comments” were captured for every proposed recom-
+mendation, with 58 written comments received. A total of
+12 respondents, who had not previously reviewed the
+recommendations, either agreed or agreed with slight
+modiﬁcations to the vast majority of the recommendations.
+Expert Panel members reviewed comments from all
+sources and determined whether to maintain original draft
+recommendations, revise with minor language changes, or
+consider major recommendation revisions. All changes
+were incorporated prior to Clinical Practice Guideline
+Committee review and approval.
+The draft was submitted to two external reviewers with
+content expertise. It was rated as high quality, and it was
+agreed it would be useful in practice. Speciﬁc comments
+were reviewed by the Expert Panel and integrated into the
+ﬁnal manuscript before submission to JCO.
+GUIDELINE IMPLEMENTATION
+ASCO guidelines are developed for implementation across
+health settings. Each ASCO guideline includes a member
+from ASCO’s Practice Guideline Implementation Network
+(PGIN) on the panel. The additional role of this PGIN rep-
+resentative on the guideline panel is to assess the suitability of
+the recommendations to implementation in the community
+setting and also to identify any other barrier to implementation
+a reader should be aware of. Barriers to implementation
+include the need to increase awareness of the guideline
+recommendations among front-line practitioners and survi-
+vors of cancer and caregivers, and also to provide adequate
+services in the face of limited resources. The guideline
+Bottom Line box was designed to facilitate implementation of
+recommendations. This guideline will be distributed widely
+through the ASCO PGIN. ASCO guidelines are posted on the
+ASCO website and most often published in JCO.
+LIMITATION OF THE RESEARCH AND FUTURE RESEARCH
+A major limitation of these guidelines is their focus on
+women who are PARPi na¨ıve. The physician and patient
+need to consider the full lifetime of the patient and disease
+and weigh the data beneﬁts and risks, especially given the
+lack of an OS beneﬁt to date. A critical unmet need is to
+understand the opportunities and where the beneﬁts may
+be for re-exposure to a PARPi after an initial good response
+and in combinations after a progression outcome. Pre-
+clinical development is moving rapidly and some empirical
+and some data-driven clinical trials have begun. Reuse of
+a PARPi should only be considered in such a trial situation
+until data develop to guide evidence-based clinical care.
+Future clinical trials that examine PARPi timing within the
+treatment life cycle and optimal duration of treatment could
+help establish the best risk-beneﬁt balance practice pattern
+for PARPi use in the management of EOC.
+ADDITIONAL RESOURCES
+More information, including a supplement with additional
+evidence tables, slide sets, and clinical tools and resources,
+is available at www.asco.org/gynecologic-cancer-guidelines.
+Patient information is available at www.cancer.net.
+RELATED ASCO GUIDELINES
+• Germline and Somatic Tumor Testing in Epi-
+thelial
+Ovarian
+Cancer:
+ASCO
+Guideline30
+(https://ascopubs.org/doi/full/10.1200/
+JCO.19.02960)
+• Patient-Clinician Communication: American Society
+of Clinical Oncology Consensus Guideline36 (http://
+ascopubs.org/doi/10.1200/JCO.2017.75.2311)
+AFFILIATIONS
+1Memorial Sloan Kettering Cancer Center, New York, NY
+2American Society of Clinical Oncology, Alexandria, VA
+3SHARE Cancer Support, New York, NY
+4Ovarian Cancer Research Alliance, New York, NY
+5Ovarian Cancer Project, Williamsville, NY
+6The Royal Marsden NHS Foundation Trust and Institute of Cancer
+Research, London, United Kingdom
+7Kaiser Permanente, San Francisco, CA
+8DeCesaris Cancer Institute, Anne Arundel Medical Center, Annapolis,
+MD
+9National Cancer Institute, Bethesda, MD
+10University Health Network, Toronto, Ontario, Canada
+11Dana-Farber Cancer Institute, Boston, MA
+12Stephenson Cancer Center, Oklahoma City, OK
+13University of New Mexico, Albuquerque, NM
+14Virginia Cancer Specialists, Arlington, VA
+15Cedars-Sinai, West Hollywood, CA
+16University of Texas MD Anderson Cancer Center, Houston, TX
+Journal of Clinical Oncology
+3491
+PARP Inhibitors in Ovarian Cancer
+Downloaded from ascopubs.org by 23.247.137.158 on October 24, 2025 from 023.247.137.158
+Copyright © 2025 American Society of Clinical Oncology. All rights reserved.
+
+
+
+---
+[PAGE 25/28]
+
+CORRESPONDING AUTHOR
+American Society of Clinical Oncology, 2318 Mill Rd, Suite 800,
+Alexandria, VA 22314; e-mail: guidelines@asco.org.
+EQUAL CONTRIBUTION
+W.P.T. and E.C.K. were Expert Panel co-chairs.
+EDITOR’S NOTE
+This American Society of Clinical Oncology (ASCO) Clinical Practice
+Guideline provides recommendations, with comprehensive review and
+analyses of the relevant literature for each recommendation. Additional
+information, including a supplement with additional evidence tables,
+slide sets, clinical tools and resources, and links to patient information at
+www.cancer.net, is available at www.asco.org/gynecologic-cancer-
+guidelines.
+AUTHORS’ DISCLOSURES OF POTENTIAL CONFLICTS OF
+INTEREST AND DATA AVAILABILITY STATEMENT
+Disclosures provided by the authors and data availability statement (if
+applicable) are available with this article at DOI https://doi.org/10.1200/
+JCO.20.01924.
+AUTHOR CONTRIBUTIONS
+Conception and design: All authors
+Collection and assembly of data: William P. Tew, Christina Lacchetti, Elise
+C. Kohn
+Data analysis and interpretation: All authors
+Manuscript writing: All authors
+Final approval of manuscript: All authors
+Accountable for all aspects of the work: All authors
+ACKNOWLEDGMENT
+The Expert Panel wishes to thank Rachel Grisham, MD; Christopher Lao,
+MD; Tracey Weisberg, MD; Corrine Zarwan, MD; Jonathan Ledermann,
+MD; and the Clinical Practice Guidelines Committee for their thoughtful
+reviews and insightful comments on this guideline.
+APPENDICES
+All Appendices and Acknowledgment material (including the table of
+Expert Panel members) are online only. It will appear on JCO website
+online but not in the print version.

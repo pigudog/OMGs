@@ -94,7 +94,7 @@ def load_prompt_config(prompt_path: str) -> Dict[str, Any]:
     if isinstance(data, dict) and "prompts" in data:
         data = data["prompts"]
     if "MASTER_INSTRUCTIONS" not in data or "OUTPUT_SCHEMA" not in data:
-        raise RuntimeError(f"{prompt_path} 不符合 schema-driven 格式")
+        raise RuntimeError(f"{prompt_path} does not conform to schema-driven format")
     return data
 
 
@@ -740,7 +740,7 @@ def process_file(
 
         pbar.close()
 
-    print(f"✅ 已写入 {output_path}")
+    print(f"✅ Written to {output_path}")
     print(f"✅ Review sidecar: {review_output_path}")
 
 

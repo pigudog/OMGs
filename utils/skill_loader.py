@@ -77,7 +77,8 @@ def build_skill_digest(role: str) -> str:
     
     return f"""# OMGs SKILL PROTOCOL
 System: OMGs (Ovarian-cancer Multidisciplinary aGent System)
-Evidence tags REQUIRED: [@guideline:doc_id|page], [@pubmed:PMID], [@trial:id], [@report_id|date]
+Evidence tags REQUIRED: [@guideline:doc_id | Page xx], [@pubmed | PMID], [@trial | id], [@actual_report_id | LAB/Genomics/MR/CT]
+Use actual report_id from report data (e.g., [@20220407|17300673 | LAB], [@OH2203828|2022-04-18 | Genomics])
 Role constraint: {constraint}"""
 
 

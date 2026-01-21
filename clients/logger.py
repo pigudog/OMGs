@@ -49,7 +49,7 @@ class DBLogger:
         self.conn.commit()
 
     def log(self, **data):
-        """data 中包含上述字段，包括可选的 extra_body 和 reasoning_details"""
+        """data contains the above fields, including optional extra_body and reasoning_details"""
         self.conn.execute("""
             INSERT INTO api_logs (
                 timestamp, model, temperature, input_text, output_text,

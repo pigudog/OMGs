@@ -1,0 +1,809 @@
+# esmo_hrd
+
+
+---
+[PAGE 1/9]
+
+ORIGINAL ARTICLE
+Unraveling the complexity of HRD assessment in ovarian cancer by
+combining genomic and functional approaches: translational analyses of
+MITO16-MaNGO-OV-2 trial
+B. Pellegrino1,2y, E. D. Capoluongo3,4y, M. Bagnoli5, L. Arenare6, D. Califano7, G. Scambia8,9, S. C. Cecere10, E. M. Silini11,
+G. L. Scaglione12, A. Spina7, G. Tognon13, N. Campanini11, C. Pisano10, D. Russo7, A. Pettinato14, P. Scollo15, R. Iemmolo16,
+L. De Cecco5, A. Musolino1,2,17, S. Marchini18, L. Beltrame18, L. Paracchini18, F. Perrone6, D. Mezzanzanica5z &
+S. Pignata10z
+1Medical Oncology Unit, University Hospital of Parma, Parma; 2Breast Unit, University Hospital of Parma, Parma; 3Department of Molecular Medicine and Medical
+Biotechnology, Università degli Studi di Napoli Federico II, Naples; 4Department of Clinical Pathology, Azienda Ospedaliera San Giovanni Addolorata, Rome;
+5Department of Experimental Oncology, Fondazione IRCCS Istituto Nazionale dei Tumori, Milano; 6Clinical Trial Unit, Istituto Nazionale Tumori, IRCCS, Fondazione G.
+Pascale, Naples; 7Microenvironment Molecular Targets Unit, Istituto Nazionale Tumori IRCCS e Fondazione G. Pascale, Naples; 8Gynecologic Oncology Unit, Fondazione
+Policlinico Universitario A. Gemelli, IRCCS, Rome; 9Catholic University of Sacred Heart, Rome; 10Uro-Gynecologic Oncology Unit, Istituto Nazionale Tumori IRCCS
+Fondazione G. Pascale, Naples; 11Unit of Pathological Anatomy, Department of Medicine and Surgery, University Hospital of Parma, Parma; 12Laboratory of Molecular
+Oncology, IDI-IRCCS, Rome; 13Division of Obstetrics and Gynecology, ASST Spedali Civili di Brescia, Brescia; 14Department of Pathological Anatomy, A.O.E. Cannizzaro,
+Catania; 15Division of Gynecology and Obstetrics, Maternal and Child Department, Cannizzaro Hospital, Kore University of Enna, Enna; 16Laboratory of Genomics, L.C.
+Laboratori Campisi, Avola; 17Department of Medicine and Surgery, University of Parma, Parma; 18Cancer Pharmacology Lab, IRCCS Humanitas Research Hospital,
+Milan, Italy
+Available online 3 January 2025
+Background: Ovarian cancer (OvC) constitutes signiﬁcant management challenges primarily due to its late-stage
+diagnosis and the development of resistance to chemotherapy. The standard treatment regimen typically includes
+carboplatin and paclitaxel, with the addition of poly (ADP-ribose) polymerase inhibitors for patients with high-grade
+serous ovarian cancer (HGSOC) harboring BRCA1/2 mutations. However, the variability in treatment responses
+suggests the need to investigate factors beyond BRCA1/2 mutations, such as DNA repair mechanisms and epigenetic
+alterations. Notably, homologous recombination repair deﬁciency (HRD) is observed in an additional 20% of HGSOC
+cases, indicating a broader spectrum of DNA repair defects. Existing commercial HRD assays have certain limitations,
+prompting a global effort to develop new genomic and functional tests through academic research.
+Materials and methods: This study investigates, in the 187 high-grade serous and endometrioid tumors from the
+MITO16/MaNGO-OV-2 trial, academic HRD genomic tests in conjunction with a RAD51 immunoﬂuorescence assay to
+assess functional activation of HRD. Additionally, the study incorporates analysis of microRNA-506 (miR-506)
+expression as a putative epigenetic effector.
+Results: The RAD51 test identiﬁed HRD in 73% of the samples and genomic HRD testing in 57%, with HRD identiﬁed in
+45% of samples by both tests. The signiﬁcant discrepancy between the two assays emphasizes the need to reﬁne tumor
+classiﬁcation for HRD. A three-group genomic classiﬁcation unveiled superior progression-free survival (PFS) in high-
+and mild-HRD tumors compared with negative-HRD tumors. High concordance between RAD51 and genomic testing
+in high-HRD tumors suggests a subset of ‘super-HRD’ tumors exhibiting superior PFS. High expression of miR-506
+may be used to further reﬁne HRD status.
+Conclusions: The study underscores the complexities of HRD assessment and advocates for a combined genomic and
+functional approach to enhance predictive accuracy in OvC treatment responses.
+Key words: ovarian cancer, HRD, RAD51, miR-506
+INTRODUCTION
+Ovarian cancer (OvC) is the primary cause of death among
+gynecological malignancies, characterized by a lack of early
+diagnosis
+and
+the
+development
+of
+chemo-resistance,
+resulting in poor long-term disease control.1 The standard
+ﬁrst-line chemotherapy treatment involves the combination
+*Correspondence to: Dr Sandro Pignata, Uro-Gynecologic Oncology Unit,
+Istituto Nazionale Tumori IRCCS Fondazione G. Pascale, Via M. Semmola,
+80135 Naples, Italy. Tel: þ08117770755
+E-mail: s.pignata@istitutotumori.na.it (S. Pignata).
+yThese authors contributed equally to this work.
+zThese authors are co-last authors.
+2059-7029/© 2024 The Authors. Published by Elsevier Ltd on behalf of Eu-
+ropean Society for Medical Oncology. This is an open access article under the CC
+BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Volume 10
+- Issue 1
+- 2025
+https://doi.org/10.1016/j.esmoop.2024.104091
+1
+
+
+
+---
+[PAGE 2/9]
+
+of carboplatin and paclitaxel. However, the heterogeneity of
+treatment response among patients prompts the explora-
+tion of additional predictive biomarkers of response/resis-
+tance such as impairment in DNA repair mechanisms and
+epigenetic changes.2 Data coming from The Cancer Genome
+Atlas analysis have clearly shown that w30% of the patients
+with high-grade serous ovarian cancer (HGSOC) carry a
+germline or somatic mutation in BRCA1 or BRCA2 (BRCA1/
+2) genes, involved in the homologous recombination repair
+(HRR) pathway. These patients present better prognosis,
+higher response to platinum and better outcome after
+maintenance treatment with poly (ADP-ribose) polymerase
+inhibitors (PARPi). It has been commonly recognized that
+HRR deﬁciency (HRD) is not restricted to patients with
+BRCA1/2
+mutations.
+Other
+mutations
+and
+epigenetic
+changes in HRR genes account for a further 20% of HRD in
+HGSOC.3
+The efﬁcacy of niraparib and rucaparib has been docu-
+mented in ﬁrst line also for ‘all-comers’ patients, although
+better response is observed for BRCA1/2-mutated and HRD
+patients.4,5 Nonetheless, several HRR-proﬁcient (HRP) pa-
+tients do respond to platinum and PARPi raising the ques-
+tion of a better understanding of the biology and better
+testing to predict the response to treatment.4,6
+The myChoice CDx assay by Myriad Genetics was the ﬁrst
+commercially available HRD assay, assessing mutations in
+BRCA1/2 genes and genomic instability patterns topically
+developed by HRD tumors.7 The assay combines the results
+of three molecular parameters, expressed as the sum of loss
+of heterozygosity (LOH), telomeric allelic imbalance and
+large-scale state transitions.7 The deﬁnitions of HRD posi-
+tivity varied between the trials.7 All trials used an HRD score
+cut-off of 42 to deﬁne HRD status, but as the methodol-
+ogy for cut-off selection has not been shown, the test is
+considered poorly reproducible, and the deﬁnition of an
+unequivocal score value is far to be achieved.4,6,7 The
+Foundation Medicine CDxBRCA is another test detecting
+BRCA1/2 mutations and assessing the percentage of the
+genome affected by LOH.8 Tumors are considered to be
+HRD if the LOH score is 16.8
+Many other genomic tests have been recently developed
+and proved to be able to predict response to PARPi with
+similar efﬁcacy than the myChoice CDx assay by Myriad
+Genetics.2 Despite their efﬁcacy, these commercial tests
+have limitations, including ‘unknown’ status (i.e. tumors for
+which the test was unable to provide a deﬁnitive determi-
+nation of the HRD status), false negatives and high costs.2
+Furthermore, these tests are static and do not catch the
+dynamic evolution of the sensitivity to treatment.2,9 New
+genomic and functional academic tests are being developed
+globally to overcome these limitations.
+In the preliminary experience from our group, we
+investigated two academic genomic tests to assess the HRD
+status and combined these with the RAD51 assay to eval-
+uate the functional activation of the HRR pathway.10 The
+performance of our academic HRD test has been recently
+conﬁrmed in an independent cohort of patients using two
+different pipelines for shallow whole-genome sequencing
+(WGS) compared with the myChoice CDx assay.11
+In this paper, we further explore this concept increasing
+the sample size and combining also with other putative
+epigenetic
+effectors such
+as
+microRNA-506
+(miR-506)
+whose overexpression in cellular models impairs RAD51 foci
+formation following induction of DNA damage, increasing
+cell line sensitivity to platinum salts and PARPi,12,13 and
+correlates to better prognosis in OvC patients.12
+MATERIALS AND METHODS
+Study design
+This study is part of the translational activities associated
+with the MITO16A/MaNGO-OV2 (EudraCT number: 2012-
+003043-29, hereafter indicated as MITO16A) clinical trial,
+coordinated by the Clinical Trials Unit at Istituto Nazionale
+Tumori IRCCS “Fondazione G. Pascale” in Naples. MITO16A
+is a phase IV trial that aims to explore the prognostic role
+of selected biomarkers in epithelial ovarian cancer pat-
+ients treated in ﬁrst line with chemotherapy (paclitaxel þ
+carboplatin  6) plus bevacizumab (BEV) (15 mg/kg) for
+15 months. Overall, 398 patients were prospectively
+enrolled.14
+Sample collection and processing
+MITO16A samples have been collected and processed in the
+coordinating center. A 5-mm section was cut from each
+formalin-ﬁxed parafﬁn-embedded (FFPE) block, stained with
+hematoxylineeosin and reviewed by a trained gynecologic
+pathologist. For the current analysis, 187 samples of all
+available high-grade serous and endometrioid samples with
+available DNA and FFPE blocks were selected for the dedi-
+cated analyses.
+Extraction of total nucleic acids was carried out as
+described.15 Brieﬂy, extraction of genomic DNA from FFPE
+tissues was carried out from two cores of parafﬁn-
+embedded tissues using the GeneRead DNA FFPE Kit
+(Qiagen, GmbH, Hilden, Germany) according to the man-
+ufacturer’s instructions. Total RNA was extracted from two
+1-mm cores of FFPE tissues using the QIAGEN miRNeasy
+FFPE Kit. RNA concentration was assessed using the
+NanoDrop
+2000
+UV-Vis
+spectrophotometer
+(Thermo
+Scientiﬁc, Waltham, MA) and samples with RNA con-
+centration <80 ng/ml were excluded from the study.
+Sample purity and RNA integrity were evaluated as
+described.15 For 140 out of 187 patients, miRNA expres-
+sion proﬁles were also available (see following section).
+The institutional review boards of the involved institutions
+have approved the study design. All patients provided
+informed consent to the use of their data for research
+purposes before enrolment.
+ESMO Open
+B. Pellegrino et al.
+2
+https://doi.org/10.1016/j.esmoop.2024.104091
+Volume 10
+- Issue 1
+- 2025
+
+
+
+---
+[PAGE 3/9]
+
+Immunoﬂuorescence staining and scoring
+The immunoﬂuorescence-based RAD51 test was carried out
+on FFPE patient tumor samples as described in Castroviejo-
+Bermejo et al. and Cruz et al.16,17
+The following primary antibodies were used: rabbit anti-
+RAD51 (Abcam ab133534, 1 : 1000), mouse anti-geminin
+(NovoCastra NCL-L, 1 : 100 in patient-derived xenograft
+samples, 1 : 60 in patient samples), rabbit anti-geminin
+(ProteinTech 10802-1-AP, 1 : 400), mouse anti-BRCA1
+(Abcam ab16780, 1 : 200), mouse anti-phospho-H2AX
+(Millipore #05-636, 1 : 200). Goat anti-rabbit Alexa ﬂuor
+568 (Invitrogen; 1 : 500), goat anti-mouse Alexa ﬂuor 488
+(Invitrogen; 1 : 500), donkey anti-mouse Alexa ﬂuor 568
+(Invitrogen; 1 : 500) and goat anti-rabbit Alexa ﬂuor 488
+(Invitrogen; 1 : 500) were used as secondary antibodies.16
+Biomarker scoring was carried out on to life images using
+a 60-immersion oil lens.16,18 One hundred geminin-positive
+cells from at least three representative areas of each sample
+were analyzed and biomarker scores were calculated as the
+percentage of geminin-positive cells with ﬁve or more nu-
+clear foci of any size. Twenty-ﬁve (13%) samples with low
+gH2AX (<25% of geminin-positive cells with gH2AX foci) and
+34 (18%) samples with <40 geminin-positive cells were not
+included in the analyses, due to insufﬁcient endogenous
+DNA damage or tumor cells in the S/G2 phase of the
+cell cycle and poor quality of the samples, respectively
+(Supplementary Figure S1, available at https://doi.org/10.
+1016/j.esmoop.2024.104091). Tumors showing >10% of
+geminin-positive cells with BRCA1 foci were considered
+BRCA1 proﬁcient; tumors showing >10% of geminin-positive
+cells with RAD51 foci were considered HRP.16,17
+BRCA1/2 status deﬁnition
+For 144 out of the 187 patients included in this study, the
+BRCA1/2 mutational status was available, with 43 patients
+being germline or somatically mutated and 96 wild
+type (wt) as recorded from case report forms or determined
+by targeted hybrid capture sequencing, as previously
+described.10
+HRD based on shallow WGS DNA libraries
+Shallow WGS DNA libraries for Illumina sequencing were
+prepared using the Watchmaker DNA Library Prep Kit
+(Watchmaker Genomics, Boulder, CO), using 100 ng of DNA,
+following the same procedure already published.11 The
+paired-end sequencing reaction was carried out on the
+Illumina NextSeq550 Dx System (Illumina, San Diego, CA),
+loading the pool with a concentration of 1.5 pM and 2%
+Phix 1.5 pM. Through the bioinformatic analysis, six inde-
+pendent models spanning the 5- to 1000-kb genome win-
+dow, implemented using the large-scale genomic alteration
+(LGA) method19 and a neural network module,20 provided
+the predicted HRD status, as previously described.10 Based
+on the LGAs of myChoice CDx assay by Myriad Genetics
+carried out on the ﬁrst 100 samples,10 we identiﬁed
+the following groups of patients: HRD deﬁcient (LGA > 20),
+HRD mild (15 < LGA < 19) and HRD negative (LGA < 14)
+corresponding to a genomic score >50, 42-50 and <42,
+respectively, as referred to the Myriad scoring.19
+miR-506 expression
+miRNA expression proﬁling was carried out on 100 ng of
+total RNA using Agilent SurePrint G3 8  60K microarrays
+designed on miRBase 21.0 and covering the expression of
+2549 miRNAs, essentially following Agilent’s protocols
+(see Bagnoli et al.21 for details). Relative expression of miR-
+506 was considered after data normalization and ﬁltering.
+Statistical methods
+Data were described using median and interquartile range
+for continuous variables and frequencies and percentages
+for qualitative variables. The characteristics of the studied
+population were compared with those of the population
+enrolled in the MITO16A trial (Supplementary Table S1,
+available
+at
+https://doi.org/10.1016/j.esmoop.2024.104
+091). To evaluate the concordance between the genomic
+test and functional HRD by RAD51 assay, Cohen’s k statistic
+with 95% conﬁdence interval (CI) was used. The k statistic
+was interpreted as <0, indicating no agreement, 0.00-0.20
+as slight, 0.21-0.40 as fair, 0.41-0.60 as moderate, 0.61-0.80
+as substantial and 0.81-1.00 as an almost perfect agree-
+ment. The prognostic value for the genomic test, the
+functional HRD by RAD51 and miR-506 expression assay
+was investigated in terms of PFS and overall survival (OS).
+PFS was deﬁned as the time from registration to docu-
+mented progression according to RECIST criteria, death due
+to any cause or last follow-up date. OS was deﬁned as
+the time from randomization to death due to any cause or
+last information on the vital status. Survival curves were
+calculated using the KaplaneMeier method and compared
+by a log-rank test. Hazard ratios (HRs) were estimated using
+the Cox regression model. In the multivariable models, the
+following covariates were added: age (as category <65
+versus 65 years), Eastern Cooperative Oncology Group
+performance status (PS; 0 versus 1-2), residual disease
+(none; 1 cm; >1 cm/not operated) and International
+Federation of Gynecology and Obstetrics stage (III versus
+IV). All the analyses were carried out with STATA 14 MP
+(StataCorp 2015, Stata Statistical Software: Release 14,
+StataCorp LP, College Station, TX).
+RESULTS
+Out of the 187 samples examined, 181 (97%) and 125 (67%)
+were evaluable for genomic testing and RAD51 assay,
+respectively
+(Supplementary
+Figure
+S1A,
+available
+at
+https://doi.org/10.1016/j.esmoop.2024.104091). The anal-
+ysis of concordance was conducted on 121 samples for
+which both evaluations were available (Supplementary
+Figure S1A, available at https://doi.org/10.1016/j.esmoop.
+2024.104091). Supplementary Figure S1B, available at
+https://doi.org/10.1016/j.esmoop.2024.104091, details the
+causes of the failure rate for the RAD51 test: 34 out of 184
+samples (18%) did not present enough geminin-positive
+cells and were considered low-proliferation samples; 25
+B. Pellegrino et al.
+ESMO Open
+Volume 10
+- Issue 1
+- 2025
+https://doi.org/10.1016/j.esmoop.2024.104091
+3
+
+
+
+---
+[PAGE 4/9]
+
+out of 184 samples (13%) exhibited insufﬁcient DNA dam-
+age for evaluation in the functional HRD test. The charac-
+teristics of the 183 analyzed patients closely mirrored those
+of the participants in the MITO16A study (Supplementary
+Table S1, available at https://doi.org/10.1016/j.esmoop.
+2024.104091). miRNA expression proﬁles were available
+for 140 of 187 samples (Supplementary Figure S1A, avail-
+able at https://doi.org/10.1016/j.esmoop.2024.104091).
+Functional HRD by RAD51 assay
+In the assessment of functional HRD using the RAD51 assay,
+gH2AX emerged as the primary sensor of the HRR pathway.
+The presence of gH2AX foci indicated double-strand breaks,
+serving as the internal positive control for the RAD51 assay.
+In the 125 (69%) evaluable samples (Supplementary
+Figure S1A, available at https://doi.org/10.1016/j.esmoop.
+2024.104091), gH2AX showed a median expression of
+53% (Figure 1A): these ﬁndings suggested that the majority
+of HGSOC cases displayed high levels of endogenous DNA
+damage (Supplementary Figure S1B, available at https://doi.
+org/10.1016/j.esmoop.2024.104091, and Figure 1A). The
+functionality of the BRCA1 protein, a key mediator in the
+HRR pathway, was assessed by immunoﬂuorescence. Sixty-
+one (49%) of the samples exhibited negative BRCA1
+immunoﬂuorescence (Figure 1B), indicating a loss of func-
+tion in BRCA1 due to somatic or germline mutations or
+epigenetic modiﬁcations. RAD51, the key effector of the
+HRR pathway, was evaluated by immunoﬂuorescence to
+determine HRD status, revealing that 91 (73%) tumors were
+HRD in our cohort (Figure 1C). Fifty-seven out of 61 (93%)
+BRCA1-negative tumors were HRD by RAD51; on the con-
+trary, the main cause of HRD in this series was the loss of
+function of BRCA1 which occurred in 57 out of 91 (63%)
+HRD tumors.
+Functional HRD by RAD51 did not predict response to
+platinum salts in univariate analyses for PFS (Figure 2A) (HR
+0.79, 95% CI 0.51-1.23, P ¼ 0.302) or OS (Figure 2B) (HR
+0.76, 95% CI 0.42-1.39, P ¼ 0.378). The association with PFS
+slightly improved in multivariate analyses when adjusted for
+PS, age, stage and residual disease (HR 0.65, 95% CI 0.41-
+1.03, P ¼ 0.07).
+Evaluation of HRD by academic genomic testing
+Analysis by academic genomic testing identiﬁed 69 out
+of 121 tumors (57%) as HRD (Supplementary Table S2A,
+available
+at
+https://doi.org/10.1016/j.esmoop.2024.104
+091). HRD genomic testing was predictive of response to
+platinum salts in terms of PFS in both univariate (HR 0.56,
+95% CI 0.40-0.78, P ¼ 0.001) (Figure 2C) and multivariate
+analyses (HR 0.52, 95% CI 0.37-0.74, P < 0.001). No dif-
+ferences were observed in terms of OS (HR 0.70, 95% CI
+0.44-1.13, P ¼ 0.147) (Figure 2D).
+No correlation was found between HRD status by RAD51
+and HRD genomic test (Pearson r ¼ 0.17, P ¼ 0.06). RAD51
+identiﬁed up to 33 HGSOC as HRD, which were negative
+HRD
+(neg-HRD)
+for
+genomic
+testing
+(Supplementary
+Table S2A, available at https://doi.org/10.1016/j.esmoop.
+2024.104091) (Cohen’s k coefﬁcient ¼ 0.19, 95% CI 0.02-
+0.36). To investigate the discrepancy, Ki67 expression
+was examined in discordant cases, revealing positive per-
+centages >10%, suggesting suitability for immunohisto-
+chemistry/immunoﬂuorescence assays. Additionally, the
+expression of gH2AX, as a positive internal control, was
+rechecked in tumors with a RAD51 score <1, all presenting
+an adequate percentage of endogenous DNA damage, with
+a median of 50% (data not shown).
+Group re-classiﬁcation by academic testing
+A three-group genomic classiﬁcation based on HRD genomic
+testing identiﬁed high-HRD, mild-HRD and neg-HRD tumors
+(Materials
+and
+Methods,
+Supplementary
+Table
+S2B,
+available at https://doi.org/10.1016/j.esmoop.2024.104091
+and Capoluongo et al.10). High-HRD, mild-HRD and neg-
+HRD tumors constituted 43% (77/181), 14% (25/181) and
+44% (79/181) of samples, respectively (Supplementary
+Table S2B, available at https://doi.org/10.1016/j.esmoop.
+0
+20
+40
+60
+80
+100
+10
+RAD51 score (%)
+0
+20
+40
+60
+80
+100
+10
+BRCA1 score (%)
+0
+20
+40
+60
+80
+100
+25
+γH2AX score (%)
+A
+B
+C
+Figure 1. Functional HRD in ovarian cancer according to RAD51 assay. (A) Distribution of gH2AX: gH2AX is the main sensor of the HRR pathway; the presence of
+gH2AX foci in >25% of geminin-positive cells indicates the presence of double-strand breaks and it is the internal positive control of the RAD51 assay. (B) Distribution
+of BRCA1: BRCA1 is a mediator of the HRR pathway; the presence of BRCA1 foci in >10% of geminin-positive cells indicates the correct functionality of the BRCA1
+protein. (C) Distribution of RAD51: RAD51 is the main effector of the HRR pathway; the presence of RAD51 foci in at least 10% of geminin-positive cells reveals the
+correct functionality of the HRR pathway. Dotted lines represent each cut-off for positive expression.
+HRD, homologous recombination repair deﬁciency; HRR, homologous recombination repair.
+ESMO Open
+B. Pellegrino et al.
+4
+https://doi.org/10.1016/j.esmoop.2024.104091
+Volume 10
+- Issue 1
+- 2025
+
+
+
+---
+[PAGE 5/9]
+
+2024.104091). Both high- and mild-HRD tumors demon-
+strated statistically superior PFS in univariate (high versus
+neg: HR 0.59, 95% CI 0.41-0.85, P ¼ 0.004; mild versus neg:
+HR 0.45, 95% CI 0.25-0.82, P ¼ 0.009) (Figure 2E) and
+multivariate analyses (high versus neg: HR 0.53, 95% CI
+0.37-0.77, P ¼ 0.001; mild versus neg: HR 0.48, 95% CI 0.27-
+0.88, P ¼ 0.017) compared with neg-HRD tumors. No dif-
+ferences were noted in terms of OS (Figure 2F) (high versus
+neg: HR 0.70, 95% CI 0.42-1.16, P ¼ 0.161; mild versus neg:
+HR 0.74, 95% CI 0.34-1.59, P ¼ 0.433).
+Among high-HRD tumors, there was a high concordance
+with the RAD51 test, with 86% of tumors being HRD
+for both tests (Supplementary Table S2B, available at
+https://doi.org/10.1016/j.esmoop.2024.104091). These ‘super-
+HRD’ tumors demonstrated statistically superior PFS compared
+with ‘super-HRP’ tumors (neg-HRD and HRP for RAD51)
+(Cox PFS: HR 0.52, 95% CI 0.29-0.95, P ¼ 0.04).
+Combined genomic and functional HRD test
+Combining genomic and functional HRD tests, 102 out of
+121 (84%) OvC samples were HRD for RAD51 and/or
+genomic HRD tests. HRD tumors for at least one test dis-
+played statistically superior PFS compared with HRP tumors
+for both tests in univariate (HR 0.60, 95% CI 0.41-0.86, P ¼
+0.005) and multivariate (Figure 3A) (HR 0.49, 95% CI 0.34-
+A
+B
+C
+D
+E
+F
+Figure 2. Prognostic role of functional and genomic HRD. (A) PFS in HRD and HRP tumors according to RAD51 assay. (B) OS in HRD and HRP tumors according to RAD51
+assay. (C) PFS in HRD and neg-HRD tumors according to genomic HRD assay. (D) OS in HRD and neg-HRD tumors according to genomic HRD assay. (E) PFS in high-HRD, mild-
+HRD and neg-HRD tumors according to genomic HRD assay. (F) OS in high-HRD, mild-HRD and neg-HRD tumors according to genomic HRD assay.
+HRD, homologous recombination repair deﬁciency; HRP, homologous recombination repair proﬁcient; neg, negative; OS, overall survival; PFS, progression-free survival.
+B. Pellegrino et al.
+ESMO Open
+Volume 10
+- Issue 1
+- 2025
+https://doi.org/10.1016/j.esmoop.2024.104091
+5
+
+
+
+---
+[PAGE 6/9]
+
+0.72, P < 0.001) analyses. No differences were observed in
+terms of OS (Figure 3B) (HR 0.79, 95% CI 0.47-1.32,
+P ¼ 0.365).
+miR-506 and HRD status in OvC samples of MITO16 trial
+miR-506 exerts a regulatory role on genes related to DNA
+repair recapitulating a BRCAness phenotype when highly
+expressed in tumors. In a preliminary analysis on 72 of 100
+samples used to set up the academic genomic assay,10 we
+observed a signiﬁcant relative higher expression (as assessed
+by microarray proﬁling) of miR-506 in the group of patients
+deﬁned
+as
+HRD
+by
+genomic
+testing
+(Supplementary
+Figure S2A, available at https://doi.org/10.1016/j.esmoop.
+2024.104091). In the present case material relative miR-506
+expression was evaluable for 140 samples (Supplementary
+Figure S1A, available at https://doi.org/10.1016/j.esmoop.
+2024.104091). In this further analysis, we took into consider-
+ation that miR-506, due to its regulatory functions, is a tumor-
+suppressive miRNA and it is therefore downregulated in
+various cancers, with its high expression being a clinically
+favorable prognostic factor.12,22 The upper quartile of miR-506
+relative expression, showing a trend in PFS advantage
+(Supplementary Figure S2B, available at https://doi.org/10.
+1016/j.esmoop.2024.104091) but not in OS (not shown), is
+indeed associated with 68% and 76% of HRD samples by the
+genomic testing and the functional assay, respectively
+(Supplementary Table S3, available at https://doi.org/10.
+1016/j.esmoop.2024.104091). Since from a biological point
+of view, what makes the difference is a high expression of miR-
+506, we correlated the genomic (Supplementary Figure S2C,
+available at https://doi.org/10.1016/j.esmoop.2024.104091)
+and functional (Supplementary Figure S2D, available at
+https://doi.org/10.1016/j.esmoop.2024.104091) HRD status
+onlyconsidering the samples witha relative expressionof miR-
+506 above the median value. Although the sample size did not
+allow reaching a statistically signiﬁcant difference between
+HRP and HRD samples, a clear trend in higher expression of
+miR-506 in samples deﬁned HRD, particularly by RAD51 assay,
+was evident (Supplementary Figure S2D, available at https://
+doi.org/10.1016/j.esmoop.2024.104091).
+BRCA1/2 mutations and HRD status in OvC samples of
+MITO16 trial
+Among the 96 BRCA1/2-wt patients, 29 (46%) were HRD and
+34(56%)wereneg-HRDforthegenomictesting;47(75%)were
+HRD and 16 were HRP, according to the RAD51 assay
+(Supplementary Figure S3A, available at https://doi.org/10.
+1016/j.esmoop.2024.104091). The concordance of the two
+HRD methods resembled the results of the overall population:
+24 (83%) and 5 (17%) of the HRD samples by genomic testing
+were HRD andHRP forRAD51assay, respectively;23(68%)and
+11 (32%) of the neg-HRD samples by genomic testing were
+HRD and HRP for RAD51 assay, respectively (Supplementary
+Figure S3A and B, available at https://doi.org/10.1016/j.
+esmoop.2024.104091). Supplementary Figure S3C and D,
+available at https://doi.org/10.1016/j.esmoop.2024.104091,
+illustrates the peculiar case of the patient with the highest
+expression of miR-506: she was classiﬁed as neg-HRD for
+genomic testing but HRD for the functional assay, supporting
+once again the importance of combining genomic and func-
+tional assays in order to increase the number of HRD patients
+who might beneﬁt from PARPi.
+DISCUSSION
+OvC poses a challenge in clinical management due to its
+late-stage
+diagnosis
+and
+the
+emergence
+of
+chemo-
+resistance, particularly in HGSOC. The conventional treat-
+ment
+involving
+carboplatin
+and
+paclitaxel
+has
+been
+augmented with maintenance strategies, including PARPi,
+especially for BRCA1/2-mutated HGSOC. However, the
+inherent heterogeneity in treatment responses prompts a
+deeper exploration of biomarkers beyond BRCA1/2 muta-
+tions
+for
+expanding/reﬁning
+the
+patient
+population
+beneﬁting from PARPi and platinum salts.9
+Numerous studies have investigated biomarkers of HRD
+beyond BRCA1/2 mutations. Next-generation sequencing
+panels, while dynamic, are constrained by current knowl-
+edge and may exclude genes not yet known to be part of
+HRR. Genomic HRD tests, or genomic scars, are static and
+unable to identify tumors regaining HRR ability under
+A
+B
+Figure 3. Prognostic role of combined functional and genomic HRD test. (A) PFS in HRD tumors for at least one HRD test compared with HRP tumors for both tests.
+(B) OS in HRD tumors for at least one HRD test compared with HRP tumors for both tests.
+HRD, homologous recombination repair deﬁciency; HRP, homologous recombination repair proﬁcient; OS, overall survival; PFS, progression-free survival.
+ESMO Open
+B. Pellegrino et al.
+6
+https://doi.org/10.1016/j.esmoop.2024.104091
+Volume 10
+- Issue 1
+- 2025
+
+
+
+---
+[PAGE 7/9]
+
+treatment pressure. The RAD51 assay, however, is both
+functional and dynamic, capturing the actual HRR status of
+tumors and identifying those that may have regained HRR
+ability during the natural history of the disease.16,17,23
+Trials like PRIMA and PAOLA demonstrated the associa-
+tion between genomic HRD status and PARPi response in
+HGSOC.4,6 While the PAOLA trial indicated that only tumors
+classiﬁed as HRD by myChoice CDx assay beneﬁted from
+olaparib, in the PRIMA trial, it was found that HRP tumors
+still exhibited beneﬁts from treatment with niraparib. This
+discrepancy may arise from several factors, including the
+sensitivity and false-negative rate of the tests used to
+determine HRD status. Furthermore, niraparib is known to
+be more potent in trapping PARP1, which may enhance its
+efﬁcacy even in ‘weaker’ HRD tumors.
+Academic laboratories have been pivotal in developing
+novel HRD testing approaches, trying to increase the plethora
+of patients who may beneﬁt from PARPi. Previous work by
+our group compared two academic genomic HRD tests and
+RAD51 assay with Myriad as a reference standard, showing a
+high level of concordance between genomic HRD tests and
+Myriad.10 In this study, a larger cohort from the MITO16a trial
+was analyzed, revealing complementary insights from
+genomic testing and RAD51 assay. Despite technical chal-
+lenges, the RAD51 assay identiﬁed heightened endogenous
+DNA damage in 70% of HGSOC cases. However, functional
+HRD by RAD51 did not predict response to platinum salts in
+terms of PFS or OS. This discrepancy with other studies may
+be attributed to technical challenges which led to a higher
+failure rate in surgical samples, reducing the sample size of
+our research.24-26 Despite its potential, the RAD51 assay
+faced a 30% failure rate in this study, possibly linked to the
+distinct quality of parafﬁn-embedded ovarian surgical sam-
+ples compared with breast biopsies.27 Furthermore, the
+follow-up data of the present study are inﬂuenced by the
+addition of BEV to front-line treatment.14 Genomic HRD
+testing classiﬁed 57% of tumors as HRD, aligning with existing
+literature.4,6 A notable discordance emerged between HRD
+status identiﬁed by RAD51 and genomic testing, emphasizing
+the need for further investigation. The introduction of a
+three-group genomic classiﬁcation based on HRD genomic
+testing revealed superior PFS not only in high- but also in
+mild-HRD tumors compared with neg-HRD tumors. Among
+high-HRD tumors, a high concordance with the RAD51 test
+was noted and ‘super-HRD’ tumors showed superior PFS
+compared with ‘super-HRP’6 tumors. Considering both
+genomic and functional HRD tests, 84% of OvC samples were
+HRD for at least one test, demonstrating superior PFS
+compared with tumors that were neg-HRD and HRP. This
+study underscores the complexity of HRD assessment
+and suggests that a combined genomic and functional
+approach may enhance predictive accuracy for OvC treat-
+ment responses.
+The
+clinical
+signiﬁcance
+of
+HRD
+testing
+is
+further
+highlighted by recent approvals of PARPi as ﬁrst- and second-
+line maintenance therapy in platinum-sensitive HGSOC.28-31
+Recently, the European Medicines Agency approved ola-
+parib in combination with BEV (an anti-vascular endothelial
+growth factor monoclonal antibody) as ﬁrst-line therapy in
+HRD-positive platinum-sensitive HGSOC patients, using an
+HRD diagnostic test with demonstrated clinical validity, the
+myChoice CDx assay by Myriad Genetics.2,6,8,28,32 As the
+most widely used test, Myriad has limitations, including
+unknown status, false negatives and high cost.33,34 Newer
+approaches, combining genomic testing and functional
+activity, are crucial to optimizing the management of PARPi-
+eligible patients. In this context, the combined score could
+be helpful to: (i) refrain from using platinum-based chemo-
+therapy sensitivity as a selection biomarker for PARPi,
+thereby minimizing toxicities for patients who may not
+derive beneﬁts from such treatments; (ii) utilize the RAD51
+assay as a pre-screening tool to identify patients with
+germline BRCA1/2 mutations, considering the low incidence
+of these mutations in this speciﬁc subset of patients;
+(iii) expand the pool of patients who could beneﬁt from
+PARPi beyond those with platinum sensitivity or genomic
+alterations.
+Considering the complexity of HRR pathways, we should
+take into consideration also the possible epigenetic regu-
+lation of this process possibly mediated by miRNAs. miR-
+506 is the most well-known miRNA in the ChrXq27.3
+miRNA cluster, which has been linked to better prognosis in
+HGSOC patients.35 Alongside miR-506, miR-508 and miR-
+509, also found in this cluster, are known to have tumor-
+suppressive roles.22 miR-506 responds to genotoxic stress,
+suggesting its involvement in the DNA damage response.36
+Similar expression patterns are observed for miR-508 and
+miR-509, hinting at their potential roles in DNA damage
+response as well, with miR-509 being a further regulator of
+RAD51.37 Given their highly correlated expression,21,35 it is
+likely that these miRNAs share target genes or regulate
+similar signaling pathways. Our data suggested a possible
+role of miR-506 expression as a reﬁnement of HRD status;
+however, we need to rely on a more sensitive detection
+method such as digital PCR, enabling detection of rare
+transcripts (and miRNAs) and small quantitative variations,
+and to expand the analysis on other miRNAs regulating the
+same pathways, such as miR-509.
+Looking ahead, the study suggests a roadmap for future
+research: (i) standardizing HRD assessment methodologies
+should be prioritized to facilitate cross-study comparisons;
+(ii) combining genomic and functional HRD testing can help
+identify patients with ‘weak HRD’ who may beneﬁt from
+PARPis, as suggested by the ﬁndings from the PRIMA study;
+we believe that this approach may provide a deeper un-
+derstanding of patient selection for targeted therapies and
+represents the novelty of our work; (iii) the signiﬁcant
+discrepancy noted between the RAD51 test and genomic
+HRD testing highlights the need for improved tumor clas-
+siﬁcation based on HRD status, which we address in our
+study; (iv) discrepancies among different assays can be due
+to some pre-analytical issues38 related to the cellularity and
+quality of the sample that can impair the HRD assessment,
+at both functional and genomic levels.
+The present paper conﬁrms the need of a better stan-
+dardization and harmonization in HRD assessment, particularly
+B. Pellegrino et al.
+ESMO Open
+Volume 10
+- Issue 1
+- 2025
+https://doi.org/10.1016/j.esmoop.2024.104091
+7
+
+
+
+---
+[PAGE 8/9]
+
+to overcome the pre-analytical limitations through the inte-
+gration of multiple tests, including both genomic and func-
+tional assays, as we have reported in this article. Ongoing
+analyses on samples from patients enrolled in the MITO35
+trial (EudraCT number: 2021-000244-21) will be crucial to
+conﬁrm the predictive role of the combined score and of
+miRNA regulation to PARPi response.
+In conclusion, this study provides a valuable contribution
+to the ongoing discourse on HRD assessment in OvC. By
+highlighting the complexities and nuances of genomic and
+functional testing, the research prompts a reevaluation of
+current approaches and underscores the need for a more
+personalized and dynamic understanding of HRD for
+improved patient outcomes.
+ACKNOWLEDGEMENTS
+We acknowledge V. Serra, A. Llop-Guevara, C. Tornali, A.
+Santiamantini and E. Sangiovanni for their precious contri-
+bution in RAD51 assay management.
+FUNDING
+This work was supported by funding from AIRC [grant
+numbers IG 2016e18921, IG 2021e25932 to SP]; Ministero
+della Salute [grant numbers CO-2018-12367051 to SP, RF-
+2016-02363995 to DM]; Ministero della SalutedRicerca
+Corrente grant [grant numbers L3/13 to SP, L2.1.2/46]; Eu-
+ropean Union (DISRUPT) [grant number 101099663 to DM].
+The MITO16A/MaNGO-OV2 trial was partially supported by
+Roche (no grant number).
+DATA SHARING
+The core dataset from this study is available online (https://
+doi.org/10.5281/zenodo.14288047). Full data will be shared
+upon publication after a reasonable request to the corre-
+sponding author.
+DISCLOSURE
+BP reports advisory board from Daiichi-Sankyo, other sup-
+port from Lilly, Pﬁzer, Novartis and Gilead; and personal fees
+from MSD outside the submitted work. SP reports hono-
+raria from AZ, MSD, GSK, Roche, Novartis and research
+funding from Roche, AZ, GSK, Pﬁzer, MSD. All other authors
+have declared no conﬂicts of interest.

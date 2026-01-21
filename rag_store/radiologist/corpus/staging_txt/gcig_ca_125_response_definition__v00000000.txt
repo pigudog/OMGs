@@ -1,0 +1,126 @@
+# GCIG CA 125 Response Definition
+
+
+---
+[PAGE 1/2]
+
+Re: New Guidelines to Evaluate
+the Response to Treatment in
+Solid Tumors (Ovarian Cancer)
+The Gynaecologic Cancer Intergroup
+(GCIG) believes that deﬁnitions for re-
+sponse and progression of ovarian can-
+cer according to serum CA 125 levels
+should be incorporated into ovarian can-
+cer clinical trial protocols for relapse
+therapy. Although the GCIG is con-
+vinced of the value of the deﬁnition of
+progression that incorporates both Re-
+sponse Evaluation Criteria in Solid Tu-
+mors (RECIST) and CA 125 criteria and
+which should be used to deﬁne date of
+progression (1,2), the response deﬁni-
+tion as deﬁned by Rustin (3) could ben-
+eﬁt from further simpliﬁcation. On the
+basis of the available data and extensive
+discussions among the cooperative groups
+within the GCIG, we recommend that
+the following deﬁnition of response be
+used in ovarian cancer trials so that
+response can be measured by either
+RECIST or CA 125 criteria. If the re-
+sponse is evaluable by both criteria, then
+the date of response will be the date of
+the earlier of the two events.
+A response according to CA 125 has
+occurred if there is at least a 50% reduc-
+tion in CA 125 levels from a pretreatment
+sample. The response must be conﬁrmed
+and maintained for at least 28 days. Pa-
+tients can be evaluated according to CA
+125 only if they have a pretreatment sam-
+ple that is at least twice the upper limit of
+normal and within 2 weeks prior to start-
+ing treatment.
+The date when the CA 125 level is
+ﬁrst reduced by 50% is the date of the
+CA 125 response. To calculate CA 125
+responses accurately, the following rules
+apply: 1) Intervening samples and the
+28-day conﬁrmatory sample must be
+less than or equal to (within an assay
+variability of 10%) the previous sample.
+2) Variations within the normal range of
+CA 125 levels will not interfere with
+the response deﬁnition. We recommend
+that, in an ideal situation, CA 125 mea-
+surements be taken at speciﬁc time in-
+tervals. The ﬁrst sample would be col-
+lected within 2 weeks before treatment
+is started, and later samples would be
+collected at intervals of 2–4 weeks dur-
+ing treatment and at intervals of every 2
+Journal of the National Cancer Institute, Vol. 96, No. 6, March 17, 2004
+CORRESPONDENCE 487
+
+
+
+---
+[PAGE 2/2]
+
+or 3 months during follow-up. For each
+patient, the same assay method must be
+used and the assay must be tested in a
+quality-control scheme. Patients are not
+evaluable by CA 125 if they have re-
+ceived mouse antibodies or if there has
+been medical and/or surgical interfer-
+ence with their peritoneum or pleura
+during the previous 28 days.
+This CA 125 response deﬁnition has
+been produced to evaluate relapse ther-
+apy. If assessing therapy that includes
+two treatment modalities for relapse
+(e.g., surgery and chemotherapy), any
+CA 125 response results from both treat-
+ments, and it should be clearly stated
+that CA 125 cannot distinguish between
+the effects of each treatment. To calcu-
+late response rates in protocols, an
+intent-to-treat analysis should be used
+that includes all patients with an initial
+CA 125 level of at least twice the upper
+limit of normal as eligible and evalu-
+able. In addition to calculating response
+rates in protocols, it is advisable to
+record those patients who have both a
+CA 125 response and whose CA 125
+level falls to within the normal range (4).
+Gavin Shreeves supervised an inde-
+pendent validation of this deﬁnition by
+Justine Rochon for the Arbeitsgemein-
+schaft
+Gynaekologische
+Onkologie
+(AGO; Munich, Germany), Desiré Paraiso
+for Group d’Investigateurs Nationaux
+pour l’Etude des Cancers Ovariens
+(GINECO; Paris, France), and Margot
+Osinski for The Australian and New
+Zealand Gynaecological Oncology
+Group. An example of its use can be
+seen on the Gynaecologic Cancer Inter-
+group Web site (http://ctep.info.nih.gov/
+resources/gcig/ index.html).
+GORDON J. S. RUSTIN
+MICHAEL QUINN
+TATE THIGPEN
+ANDREAS DU BOIS
+ERIC PUJADE-LAURAINE
+ANDERS JAKOBSEN
+ELIZABETH EISENHAUER
+SATORU SAGAE
+KATHRYN GREVEN
+IGNACE VERGOTE
+ANDRES CERVANTES
+JAN VERMORKEN

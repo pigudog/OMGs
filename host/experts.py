@@ -123,6 +123,14 @@ def init_expert_agent(
     mut_for_role = (context.get("mutation", {}) or {}).get(role, [])
     if mut_for_role:
         clinical += "# MUTATION / MOLECULAR REPORTS (PATIENT FACTS)\n"
+        clinical += "⚠️ COMPREHENSIVE NGS PANEL (~20,000 genes) - INTERPRETATION RULES:\n"
+        clinical += "• '未检出' (not detected) = NO pathogenic mutation found\n"
+        clinical += "• '（视为阴性）' (considered negative) = NO pathogenic mutation found\n"
+        clinical += "• '阴性' (negative) = negative result\n"
+        clinical += "• Genes with specific variants (e.g., 'NM_xxx:exon:c.xxx:p.xxx') = POSITIVE mutation\n"
+        clinical += "• If a gene of interest is NOT mentioned in the report, it means NO pathogenic mutation (comprehensive panel)\n"
+        clinical += "• NEVER say 'not tested' or 'not reported' - comprehensive NGS WAS done.\n"
+        clinical += "• Only say 'unknown' if NO mutation report is provided at all.\n\n"
         clinical += json.dumps(mut_for_role, ensure_ascii=False, indent=2) + "\n\n"
 
     if not clinical.strip():
@@ -156,10 +164,13 @@ CASE_FINGERPRINT: {case_fingerprint}
    - Never invent labs/imaging/mutations from guidelines.
 4) Any claim derived from guideline/PubMed evidence MUST include evidence tag:
    - applies to treatment strategy categories, guideline/consensus statements, or trial/literature evidence
-   - format: [@guideline:doc_id|page] or [@pubmed:PMID]
-4b) At least ONE bullet must be evidence-based and include [@guideline:doc_id|page] or [@pubmed:PMID].
+   - format: [@guideline:doc_id | Page xx] or [@pubmed | PMID]
+4b) At least ONE bullet must be evidence-based and include [@guideline:doc_id | Page xx] or [@pubmed | PMID].
 5) Any claim about labs/imaging/pathology/molecular MUST include evidence tag:
-   - format: [@report_id|YYYY-MM-DD]
+   - format: [@actual_report_id | LAB/Genomics/MR/CT] using actual report_id from report data
+   - Examples: [@20220407|17300673 | LAB], [@OH2203828|2022-04-18 | Genomics], [@2022-12-29 | MR], [@2022-12-29 | CT]
+   - Note: Always use spaces around | for consistency: [@xxx | yyy]
+   - Use the exact report_id value from the Clinical Reports section above
    - If no report supports it, say "unknown/needs update".
 6) If Case View conflicts with Clinical Reports:
    - Prefer Clinical Reports; note discrepancy briefly.

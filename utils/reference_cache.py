@@ -247,33 +247,48 @@ class ReferenceCache:
         
         Args:
             tag: Evidence tag in format:
-                - [@guideline:doc_id|page]
-                - [@pubmed:PMID]
-                - [@trial:id]
+                - [@guideline:doc_id | Page xx] (new format with spaces)
+                - [@guideline:doc_id|page] (legacy format, still supported)
+                - [@pubmed | PMID] (new format with spaces)
+                - [@pubmed:PMID] (legacy format, still supported)
+                - [@trial | id] (new format with spaces)
+                - [@trial:id] (legacy format, still supported)
         
         Returns:
             Cached reference dict or None if not found
         """
         import re
         
-        # Parse guideline tag: [@guideline:doc_id|page]
-        guideline_match = re.match(r"\[@guideline:([^|]+)\|?(\d+)?\]", tag, re.IGNORECASE)
+        # Parse guideline tag: [@guideline:doc_id | Page xx] or [@guideline:doc_id|page]
+        guideline_match = re.match(r"\[@guideline:([^|\]]+)\s*\|\s*(?:Page\s+)?(\d+|\w+)\]", tag, re.IGNORECASE)
+        if not guideline_match:
+            # Try legacy format: [@guideline:doc_id|page]
+            guideline_match = re.match(r"\[@guideline:([^|]+)\|(\d+|\w+)\]", tag, re.IGNORECASE)
         if guideline_match:
-            doc_id = guideline_match.group(1)
-            page_str = guideline_match.group(2)
-            page = int(page_str) if page_str else None
+            doc_id = guideline_match.group(1).strip()
+            page_str = guideline_match.group(2).strip()
+            try:
+                page = int(page_str) if page_str.isdigit() else None
+            except (ValueError, AttributeError):
+                page = None
             return self.get_guideline(doc_id, page)
         
-        # Parse PubMed tag: [@pubmed:PMID]
-        pubmed_match = re.match(r"\[@pubmed:(\d+)\]", tag, re.IGNORECASE)
+        # Parse PubMed tag: [@pubmed | PMID] or [@pubmed:PMID]
+        pubmed_match = re.match(r"\[@pubmed\s*\|\s*(\d+)\]", tag, re.IGNORECASE)
+        if not pubmed_match:
+            # Try legacy format: [@pubmed:PMID]
+            pubmed_match = re.match(r"\[@pubmed:(\d+)\]", tag, re.IGNORECASE)
         if pubmed_match:
             pmid = pubmed_match.group(1)
             return self.get_pubmed(pmid)
         
-        # Parse trial tag: [@trial:id]
-        trial_match = re.match(r"\[@trial:([^\]]+)\]", tag, re.IGNORECASE)
+        # Parse trial tag: [@trial | id] or [@trial:id]
+        trial_match = re.match(r"\[@trial\s*\|\s*([^\]]+)\]", tag, re.IGNORECASE)
+        if not trial_match:
+            # Try legacy format: [@trial:id]
+            trial_match = re.match(r"\[@trial:([^\]]+)\]", tag, re.IGNORECASE)
         if trial_match:
-            trial_id = trial_match.group(1)
+            trial_id = trial_match.group(1).strip()
             return self.get_trial(trial_id)
         
         return None
@@ -338,11 +353,17 @@ def extract_reference_tags(text: str) -> List[str]:
     """
     Extract all reference tags from text.
     
-    Supported formats:
+    Supported formats (new format with spaces):
+    - [@guideline:doc_id | Page xx] - Guideline references
+    - [@pubmed | PMID] - PubMed literature
+    - [@trial | id] - Clinical trial references
+    - [@actual_report_id | LAB/Genomics/MR/CT] - Clinical report references (e.g., [@20220407|17300673 | LAB])
+    
+    Legacy formats (still supported):
     - [@guideline:doc_id|page] - Guideline references
     - [@pubmed:PMID] - PubMed literature
     - [@trial:id] - Clinical trial references
-    - [@report_id|date] - Clinical report references (e.g., [@20230103|2023-01-03])
+    - [@report_id|date] - Clinical report references
     
     Also handles combined tags like [@tag1; @tag2] by splitting them.
     
@@ -358,31 +379,48 @@ def extract_reference_tags(text: str) -> List[str]:
     # This handles LLM output that combines multiple refs in one bracket
     normalized_text = re.sub(r';\s*@', '] [@', text)
     
-    # Guideline tags: [@guideline:doc_id|page]
+    all_tags = []
+    
+    # Guideline tags: [@guideline:doc_id | Page xx] (new) or [@guideline:doc_id|page] (legacy)
     # doc_id can contain underscores, letters, numbers, dashes
-    guideline_tags = re.findall(r"\[@guideline:[a-zA-Z0-9_\-]+\|[^\]]+\]", normalized_text, re.IGNORECASE)
+    guideline_new = re.findall(r"\[@guideline:[a-zA-Z0-9_\-]+\s*\|\s*Page\s+[^\]]+\]", normalized_text, re.IGNORECASE)
+    guideline_legacy = re.findall(r"\[@guideline:[a-zA-Z0-9_\-]+\|[^\]]+\]", normalized_text, re.IGNORECASE)
+    # Remove duplicates
+    guideline_tags = list(dict.fromkeys(guideline_new + guideline_legacy))
     
-    # PubMed tags: [@pubmed:PMID]
-    pubmed_tags = re.findall(r"\[@pubmed:\d+\]", normalized_text, re.IGNORECASE)
+    # PubMed tags: [@pubmed | PMID] (new) or [@pubmed:PMID] (legacy)
+    pubmed_new = re.findall(r"\[@pubmed\s*\|\s*\d+\]", normalized_text, re.IGNORECASE)
+    pubmed_legacy = re.findall(r"\[@pubmed:\d+\]", normalized_text, re.IGNORECASE)
+    pubmed_tags = list(dict.fromkeys(pubmed_new + pubmed_legacy))
     
-    # Trial tags: [@trial:id]
-    trial_tags = re.findall(r"\[@trial:[^\]]+\]", normalized_text, re.IGNORECASE)
+    # Trial tags: [@trial | id] (new) or [@trial:id] (legacy)
+    trial_new = re.findall(r"\[@trial\s*\|\s*[^\]]+\]", normalized_text, re.IGNORECASE)
+    trial_legacy = re.findall(r"\[@trial:[^\]]+\]", normalized_text, re.IGNORECASE)
+    trial_tags = list(dict.fromkeys(trial_new + trial_legacy))
     
-    # Report tags: [@report_id|date] - simple format without colons
-    # Matches patterns like [@20230103|2023-01-03], [@OH2203828|2022-04-18], [@2022-12-29|CT]
-    # More flexible: report_id can be alphanumeric with dashes/underscores
-    report_tags = re.findall(r"\[@[a-zA-Z0-9_\-]+\|[^\]]+\]", normalized_text)
+    # Report tags: [@actual_report_id | LAB/Genomics/MR/CT] (new format with spaces)
+    # report_id may contain | (e.g., 20220407|17300673)
+    # Matches patterns like [@20220407|17300673 | LAB], [@OH2203828|2022-04-18 | Genomics], [@2022-12-29 | MR], [@2022-12-29 | CT]
+    # Note: Must have spaces around | for consistency: [@xxx | yyy] (space before and after |)
+    report_new = re.findall(r"\[@[a-zA-Z0-9_\-|]+\s+\|\s+(?:LAB|Genomics|MR|CT|Imaging|Pathology)\s*\]", normalized_text, re.IGNORECASE)
     
-    # Filter out guideline/pubmed/trial from report_tags (they might have | too)
-    filtered_report_tags = []
-    for tag in report_tags:
+    # Legacy report tags: [@report_id|date] or [@report_id|type] without spaces - still supported for backward compatibility
+    # Legacy format (without spaces) - still supported for backward compatibility
+    # Matches patterns like [@20230103|2023-01-03], [@OH2203828|2022-04-18], [@2022-12-29|CT], [@2022-12-29|MR]
+    report_legacy = re.findall(r"\[@[a-zA-Z0-9_\-|]+\|[^\]]+\]", normalized_text)
+    
+    # Filter out guideline/pubmed/trial from legacy report_tags (they might have | too)
+    filtered_report_legacy = []
+    for tag in report_legacy:
         tag_lower = tag.lower()
         if (not tag_lower.startswith("[@guideline:") and 
-            not tag_lower.startswith("[@pubmed:") and 
-            not tag_lower.startswith("[@trial:")):
-            filtered_report_tags.append(tag)
+            not tag_lower.startswith("[@pubmed") and 
+            not tag_lower.startswith("[@trial")):
+            filtered_report_legacy.append(tag)
     
-    return guideline_tags + pubmed_tags + trial_tags + filtered_report_tags
+    report_tags = list(dict.fromkeys(report_new + filtered_report_legacy))
+    
+    return guideline_tags + pubmed_tags + trial_tags + report_tags
 
 
 def build_references_section(
@@ -424,6 +462,7 @@ def build_references_section(
         return ""
     
     # Categorize and deduplicate tags
+    # Support both new format (with spaces) and legacy format (without spaces)
     guideline_tags = []
     pubmed_tags = []
     trial_tags = []
@@ -436,14 +475,17 @@ def build_references_section(
             continue
         seen.add(tag_lower)
         
+        # Check for guideline tags: [@guideline:...] (both new and legacy formats)
         if tag_lower.startswith("[@guideline:"):
             guideline_tags.append(tag)
-        elif tag_lower.startswith("[@pubmed:"):
+        # Check for pubmed tags: [@pubmed | ...] (new) or [@pubmed:...] (legacy)
+        elif tag_lower.startswith("[@pubmed |") or tag_lower.startswith("[@pubmed:"):
             pubmed_tags.append(tag)
-        elif tag_lower.startswith("[@trial:"):
+        # Check for trial tags: [@trial | ...] (new) or [@trial:...] (legacy)
+        elif tag_lower.startswith("[@trial |") or tag_lower.startswith("[@trial:"):
             trial_tags.append(tag)
         else:
-            # Report reference [@report_id|date]
+            # Report reference [@report_id | LAB/Genomics/MR/CT] or [@report_id|date]
             report_tags.append(tag)
     
     ref_lines = []
@@ -512,12 +554,19 @@ def build_references_section(
     ref_lines.append("### Clinical Trials\n")
     if trial_tags:
         for tag in trial_tags:
-            # Extract trial ID from tag [@trial:id]
+            # Extract trial ID from tag [@trial | id] (new) or [@trial:id] (legacy)
             import re
-            match = re.match(r"\[@trial:([^\]]+)\]", tag, re.IGNORECASE)
-            if not match:
-                continue
-            trial_id = match.group(1)
+            # Try new format first: [@trial | id]
+            match_new = re.match(r"\[@trial\s*\|\s*([^\]]+)\]", tag, re.IGNORECASE)
+            if match_new:
+                trial_id = match_new.group(1).strip()
+            else:
+                # Try legacy format: [@trial:id]
+                match_legacy = re.match(r"\[@trial:([^\]]+)\]", tag, re.IGNORECASE)
+                if match_legacy:
+                    trial_id = match_legacy.group(1)
+                else:
+                    continue
             
             # Try cache first, then fall back to trial_info parameter
             trial = cache.get_trial(trial_id)
@@ -542,29 +591,65 @@ def build_references_section(
     ref_lines.append("### Clinical Reports\n")
     if report_tags:
         for tag in report_tags:
-            # Parse [@report_id|date] format
+            # Parse new format: [@actual_report_id | LAB/Genomics/MR/CT] or legacy: [@report_id|date]
             import re
-            match = re.match(r"\[@([^|\]]+)\|([^\]]+)\]", tag)
-            if not match:
-                continue
-            report_id = match.group(1)
-            report_date = match.group(2)
-            
-            # Look up report in context if available
-            report_info = _find_report_in_context(report_id, report_context) if report_context else None
-            
-            ref_lines.append(f"{tag}")
-            if report_info:
-                rtype = report_info.get("type", "")
-                # Try multiple fields for summary content
-                summary = _extract_report_summary(report_info, max_content_length)
+            # Try new format first: [@actual_report_id | LAB/Genomics/MR/CT] (must have spaces around |)
+            match_new = re.match(r"\[@([^|\]]+(?:\|[^|\]]+)*)\s+\|\s+([^\]]+)\]", tag)
+            if match_new:
+                report_id = match_new.group(1).strip()
+                report_type_or_date = match_new.group(2).strip()
                 
-                type_label = rtype.capitalize() if rtype else "Report"
-                ref_lines.append(f"  {type_label} ID: {report_id} | Date: {report_date}")
-                if summary:
-                    ref_lines.append(f"  Content: {summary}")
+                # Look up report in context if available
+                report_info = _find_report_in_context(report_id, report_context) if report_context else None
+                
+                ref_lines.append(f"{tag}")
+                if report_info:
+                    rtype = report_info.get("type", "")
+                    # Try multiple fields for summary content
+                    summary = _extract_report_summary(report_info, max_content_length)
+                    
+                    # Determine type label from tag or report_info
+                    if report_type_or_date.upper() in ["LAB", "GENOMICS", "MR", "CT", "IMAGING", "PATHOLOGY"]:
+                        type_label = report_type_or_date
+                    else:
+                        type_label = rtype.capitalize() if rtype else "Report"
+                    
+                    # Get date from report_info if available
+                    report_date = report_info.get("date", "") or report_info.get("report_date", "")
+                    if report_date:
+                        date_str = str(report_date)[:10] if len(str(report_date)) > 10 else str(report_date)
+                        ref_lines.append(f"  {type_label} ID: {report_id} | Date: {date_str}")
+                    else:
+                        ref_lines.append(f"  {type_label} ID: {report_id}")
+                    
+                    if summary:
+                        ref_lines.append(f"  Content: {summary}")
+                else:
+                    # No report info found, use what's in the tag
+                    if report_type_or_date.upper() in ["LAB", "GENOMICS", "MR", "CT", "IMAGING", "PATHOLOGY"]:
+                        ref_lines.append(f"  {report_type_or_date} ID: {report_id}")
+                    else:
+                        ref_lines.append(f"  Report ID: {report_id} | Date: {report_type_or_date}")
             else:
-                ref_lines.append(f"  Report ID: {report_id} | Date: {report_date}")
+                # Try legacy format: [@report_id|date]
+                match_legacy = re.match(r"\[@([^|\]]+)\|([^\]]+)\]", tag)
+                if match_legacy:
+                    report_id = match_legacy.group(1)
+                    report_date = match_legacy.group(2)
+                    
+                    # Look up report in context if available
+                    report_info = _find_report_in_context(report_id, report_context) if report_context else None
+                    
+                    ref_lines.append(f"{tag}")
+                    if report_info:
+                        rtype = report_info.get("type", "")
+                        summary = _extract_report_summary(report_info, max_content_length)
+                        type_label = rtype.capitalize() if rtype else "Report"
+                        ref_lines.append(f"  {type_label} ID: {report_id} | Date: {report_date}")
+                        if summary:
+                            ref_lines.append(f"  Content: {summary}")
+                    else:
+                        ref_lines.append(f"  Report ID: {report_id} | Date: {report_date}")
             ref_lines.append("")
     
     return "\n".join(ref_lines)
