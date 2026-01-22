@@ -209,6 +209,40 @@ This matrix ensures:
 
 ---
 
+## Mutation/Molecular Report Interpretation Rules
+
+**Location:** `host/experts.py` → `init_expert_agent()`
+
+When mutation/molecular reports are provided to experts (chair, oncologist, pathologist), a special interpretation prompt is injected to handle Chinese NGS reports correctly:
+
+```
+# MUTATION / MOLECULAR REPORTS (PATIENT FACTS)
+⚠️ COMPREHENSIVE NGS PANEL (~20,000 genes) - INTERPRETATION RULES:
+• '未检出' (not detected) = NO pathogenic mutation found
+• '（视为阴性）' (considered negative) = NO pathogenic mutation found
+• '阴性' (negative) = negative result
+• Genes with specific variants (e.g., 'NM_xxx:exon:c.xxx:p.xxx') = POSITIVE mutation
+• If a gene of interest is NOT mentioned in the report, it means NO pathogenic mutation (comprehensive panel)
+• NEVER say 'not tested' or 'not reported' - comprehensive NGS WAS done.
+• Only say 'unknown' if NO mutation report is provided at all.
+```
+
+**Why This Matters:**
+
+| Chinese Term | Meaning | LLM Misinterpretation Risk |
+|--------------|---------|---------------------------|
+| 未检出 | Not detected (negative) | LLM may say "not tested" |
+| 视为阴性 | Considered negative | LLM may ignore or misread |
+| 阴性 | Negative | Generally understood |
+| NM_xxx:exon:c.xxx:p.xxx | Positive variant | LLM may miss significance |
+
+**Key Design Decision:**
+- Comprehensive NGS panels test ~20,000 genes
+- If a gene is NOT mentioned → it was tested and found NEGATIVE
+- This prevents LLM from incorrectly stating "BRCA status unknown" when the report simply didn't list BRCA (because it was negative)
+
+---
+
 ## MDT Discussion Prompts
 
 **Location:** `config/mdt_prompts.json` → `mdt_discussion`
