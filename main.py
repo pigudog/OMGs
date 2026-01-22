@@ -5,7 +5,13 @@ import argparse
 from tqdm import tqdm
 from datetime import datetime
 
-from host import process_omgs_multi_expert_query
+from host import (
+    process_omgs_multi_expert_query,
+    process_chair_sa_k_query,
+    process_chair_sa_kep_query,
+    process_chair_sa_query,
+    process_auto_query,
+)
 from core import setup_model, load_data, create_question
 
 # ---------------------------------------------------------
@@ -18,9 +24,9 @@ parser.add_argument('--provider', type=str, default='auto',
                     choices=['azure', 'openai', 'openrouter', 'auto'],
                     help="LLM provider: 'azure', 'openai', 'openrouter', or 'auto' (auto-detect based on model name)")
 parser.add_argument('--num_samples', type=int, default=999999, help="Number of samples to process")
-parser.add_argument('--agent', type=str, default='basic_baseline',
-                    choices=['basic_baseline', 'basic_role','basic_rag','basic_rag_lab','basic_rag_lab_full','omgs'],
-                    help="Choose which reasoning agent to use")
+parser.add_argument('--agent', type=str, default='omgs',
+                    choices=['omgs', 'chair_sa', 'chair_sa_k', 'chair_sa_kep', 'auto'],
+                    help="Agent type: 'omgs' (multi-agent), 'chair_sa' (simplest), 'chair_sa_k' (knowledge), 'chair_sa_kep' (knowledge+evidence), 'auto' (intelligent routing)")
 args = parser.parse_args()
 
 # ---------------------------------------------------------
@@ -56,10 +62,23 @@ print(f"[INFO] Output folder created: {output_dir}")
 # ---------------------------------------------------------
 # 4) Select agent function
 # ---------------------------------------------------------
-# Currently only OMGs agent is supported
-if args.agent != "omgs":
-    print(f"[WARNING] Agent '{args.agent}' not implemented, using 'omgs' instead")
-process_fn = process_omgs_multi_expert_query
+# Agent selection based on --agent argument
+if args.agent == "chair_sa":
+    process_fn = process_chair_sa_query
+    print(f"[INFO] Using Chair-SA - Simplest mode (for testing)")
+elif args.agent == "chair_sa_k":
+    process_fn = process_chair_sa_k_query
+    print(f"[INFO] Using Chair-SA(K) - Single agent with Knowledge only")
+elif args.agent == "chair_sa_kep":
+    process_fn = process_chair_sa_kep_query
+    print(f"[INFO] Using Chair-SA(K+EP) - Single agent with Knowledge + Evidence Pack")
+elif args.agent == "auto":
+    process_fn = process_auto_query
+    print(f"[INFO] Using Auto - Intelligent routing based on case complexity")
+else:
+    # Default to OMGs multi-agent
+    process_fn = process_omgs_multi_expert_query
+    print(f"[INFO] Using OMGs - Multi-agent MDT pipeline")
 
 
 results = []
@@ -84,8 +103,17 @@ for no, sample in enumerate(tqdm(test_qa)):
             time = sample.get('Time'),
             args=args
         )
+        
+        # Determine agent_mode for results (auto mode sets _auto_routed_mode)
+        if hasattr(args, '_auto_routed_mode'):
+            agent_mode = args._auto_routed_mode
+            # Clean up for next sample
+            delattr(args, '_auto_routed_mode')
+        else:
+            agent_mode = args.agent
 
         results.append({
+            'agent_mode': agent_mode,
             'scene': sample.get('scene'),
             'question': question,
             'response': final_decision,
@@ -93,7 +121,6 @@ for no, sample in enumerate(tqdm(test_qa)):
             'question_raw': sample.get('question_raw'),
             'Time': sample.get('Time'),
             'meta_info': sample.get('meta_info'),
-
         })
 
         # Write to TXT
@@ -116,8 +143,16 @@ for no, sample in enumerate(tqdm(test_qa)):
         error_msg = f"Error processing sample {no}: {str(e)}"
         print(f"[ERROR] {error_msg}")
         
+        # Determine agent_mode for error case
+        if hasattr(args, '_auto_routed_mode'):
+            agent_mode = args._auto_routed_mode
+            delattr(args, '_auto_routed_mode')
+        else:
+            agent_mode = args.agent
+        
         # Record error in results
         results.append({
+            'agent_mode': agent_mode,
             'scene': sample.get('scene'),
             'question': sample.get('question', ''),
             'response': None,

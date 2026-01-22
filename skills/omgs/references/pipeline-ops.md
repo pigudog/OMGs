@@ -18,7 +18,7 @@ Complete guide for running, configuring, and debugging the OMGs MDT pipeline.
 ### Basic Command
 
 ```bash
-python main.py --input_path <path> --agent omgs [--model <deployment>] [--num_samples <n>]
+python main.py --input_path <path> --agent <mode> [--provider <provider>] [--model <model>] [--num_samples <n>]
 ```
 
 ### Arguments
@@ -26,18 +26,35 @@ python main.py --input_path <path> --agent omgs [--model <deployment>] [--num_sa
 | Argument | Type | Default | Description |
 |----------|------|---------|-------------|
 | `--input_path` | str | **Required** | Input JSONL file path |
-| `--model` | str | `gpt-5.1` | Azure OpenAI deployment name |
-| `--agent` | str | `basic_baseline` | Agent type (use `omgs`) |
+| `--model` | str | `gpt-5.1` | Model/deployment name |
+| `--provider` | str | `auto` | LLM provider: `azure`, `openai`, `openrouter`, `auto` |
+| `--agent` | str | `omgs` | Agent mode (see below) |
 | `--num_samples` | int | 999999 | Max samples to process |
+
+### Agent Modes
+
+| Mode | Description | Use Case |
+|------|-------------|----------|
+| `omgs` | Full multi-agent MDT discussion | Complex cases requiring multi-specialty debate |
+| `chair_sa` | Simplest single-agent mode | Environment/API testing |
+| `chair_sa_k` | Single agent + Knowledge (RAG) | Cases needing guideline/literature reference |
+| `chair_sa_kep` | Single agent + Knowledge + Evidence Pack | Complex cases with patient data |
+| `auto` | **Intelligent routing** | Recommended - auto-selects mode based on complexity |
 
 ### Examples
 
 ```bash
-# Run with default settings
-python main.py --input_path ./input_ehr/test.jsonl --agent omgs
+# Intelligent routing (recommended)
+python main.py --input_path ./data.jsonl --agent auto --provider azure --model gpt-5.1
 
-# Specify model and limit samples
-python main.py --input_path ./input_ehr/cases.jsonl --agent omgs --model gpt-4 --num_samples 5
+# Full MDT discussion
+python main.py --input_path ./data.jsonl --agent omgs --provider azure --model gpt-5.1
+
+# Quick test with simplest mode
+python main.py --input_path ./data.jsonl --agent chair_sa --provider azure --model gpt-5.1
+
+# Single agent with knowledge + evidence
+python main.py --input_path ./data.jsonl --agent chair_sa_kep --provider azure --model gpt-5.1
 ```
 
 ---
@@ -149,6 +166,7 @@ mdt_logs/
 
 ```json
 {
+  "agent_mode": "auto(chair_sa_kep)",
   "scene": "recurrence",
   "question": { "CASE_CORE": {...}, "TIMELINE": {...}, ... },
   "response": "Final Assessment:\n...\nCore Treatment Strategy:\n...",
@@ -159,13 +177,20 @@ mdt_logs/
 }
 ```
 
+**Note:** `agent_mode` shows actual mode used. For `auto` mode, it displays `auto(selected_mode)`.
+
 ### HTML Report Features
 
+- **Mode badge** in Pipeline Statistics card
+- **MDT Discussion Summary** (Key Knowledge, Controversies, Missing Info, Working Plan)
+- **Print button** (🖨️) for one-click printing
 - Mermaid pipeline flowchart
 - Color-coded References section (4 categories)
 - Collapsible expert discussion logs
 - Interaction direction matrix
 - RAG hits table
+- **Dark mode** (auto-detects system theme)
+- **Responsive layout** for mobile viewing
 
 ---
 

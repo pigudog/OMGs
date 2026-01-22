@@ -49,11 +49,21 @@ flowchart TB
     Config --> Client
 ```
 
+## Agent Modes
+
+| Mode | Function | Description |
+|------|----------|-------------|
+| `omgs` | `process_omgs_multi_expert_query()` | Full multi-agent MDT discussion (default) |
+| `chair_sa` | `process_chair_sa_query()` | Simplest single-agent mode (for testing) |
+| `chair_sa_k` | `process_chair_sa_k_query()` | Single agent + Knowledge (RAG) |
+| `chair_sa_kep` | `process_chair_sa_kep_query()` | Single agent + Knowledge + Evidence Pack |
+| `auto` | `process_auto_query()` | Intelligent routing based on case complexity |
+
 ## Key Entry Points
 
 | Task | Entry | Key Function |
 |------|-------|--------------|
-| Run MDT pipeline | `main.py` | CLI entry, calls `process_omgs_multi_expert_query()` |
+| Run pipeline | `main.py` | CLI entry, `--agent` selects mode |
 | MDT discussion engine | `host/orchestrator.py` | `run_mdt_discussion()` - 2 rounds × 2 turns |
 | Expert agent init | `host/experts.py` | `init_expert_agent()`, `ROLES`, `ROLE_PERMISSIONS` |
 | Final synthesis | `host/decision.py` | `generate_final_output()`, `append_references_to_output()` |

@@ -260,6 +260,13 @@ def _render_pipeline_stats_html(stats: Optional[Dict[str, Any]]) -> str:
     html_parts.append("<div class='card stats-card' style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #0ea5e9; margin-bottom: 16px;'>")
     html_parts.append("<h2 style='margin-top: 0; color: #0369a1;'>📊 Pipeline Execution Statistics</h2>")
     
+    # Agent mode (new)
+    agent_mode = stats.get("agent_mode", "")
+    if agent_mode:
+        html_parts.append("<div style='margin-bottom: 12px;'>")
+        html_parts.append(f"<strong>🎯 Mode:</strong> <code style='background: #e0f2fe; padding: 2px 8px; border-radius: 4px; font-weight: 600;'>{_html_escape(agent_mode)}</code>")
+        html_parts.append("</div>")
+    
     # Total execution time
     total_seconds = stats.get("total_seconds", 0)
     if total_seconds > 0:
@@ -458,6 +465,7 @@ def save_case_html_report(
     # Reserved for future: role ordering in the HTML layout (currently unused).
     roles_order: Optional[List[str]] = None,
     pipeline_stats: Optional[Dict[str, Any]] = None,
+    merged_summary: Optional[str] = None,
 ) -> str:
     """Write a standalone per-case HTML report.
 
@@ -572,9 +580,59 @@ def save_case_html_report(
     .mermaid-container > summary { color: #059669; }
     .mermaid-chart { padding: 16px; background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border-radius: 10px; margin-top: 10px; overflow-x: auto; }
     .mermaid-chart svg { max-width: 100%; height: auto; }
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --border: #374151;
+        --muted: #9ca3af;
+        --bg: #111827;
+        --card: #1f2937;
+        --soft: #374151;
+        --accent: #60a5fa;
+      }
+      body { color: #f3f4f6; }
+      h1, h2, h3 { color: #f9fafb; }
+      table.grid th { background: #374151; color: #f3f4f6; }
+      .refs-title { color: #f9fafb; }
+      .ref-cat-header { background: linear-gradient(135deg, #374151 0%, #4b5563 100%); color: #f3f4f6; }
+      .ref-entry { background: #374151; }
+      .ref-details { color: #d1d5db; }
+      .mermaid-chart { background: linear-gradient(135deg, #1f2937 0%, #374151 100%); }
+      .stats-card { background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%) !important; border-color: #0ea5e9 !important; }
+      .stats-card h2 { color: #7dd3fc !important; }
+    }
+    /* Print button */
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; z-index: 1000;
+      padding: 10px 18px; cursor: pointer;
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: white; border: none; border-radius: 8px;
+      font-size: 14px; font-weight: 600;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+      transition: all 0.2s ease;
+    }
+    .print-btn:hover { background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4); }
+    .print-btn:active { transform: translateY(0); }
+    /* Print-friendly styles */
+    @media print {
+      body { margin: 0; background: white; }
+      .card, details { border: 1px solid #ccc; page-break-inside: avoid; }
+      details[open] > summary ~ * { display: block; }
+      .mermaid-chart { page-break-inside: avoid; }
+      .stats-card { background: #f0f9ff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .no-print { display: none !important; }
+    }
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      body { margin: 12px; }
+      .cols { grid-template-columns: 1fr; }
+      table.grid { font-size: 11px; }
+      table.grid th, table.grid td { padding: 4px; }
+    }
   </style>
 </head>
 <body>
+  <button onclick=\"window.print()\" class=\"print-btn no-print\">🖨️ Print Report</button>
   <h1>OMGs / MDT Report</h1>
   __PIPELINE_STATS__
   <div class=\"meta\">
@@ -602,6 +660,12 @@ def save_case_html_report(
     <summary>Clinical Trial Recommendation</summary>
     __TRIAL_NOTE__
     <div class=\"hint\">Shown only when the trial matcher produced a recommendation.</div>
+  </details>
+
+  <details class=\"mt\" open>
+    <summary>📋 MDT Discussion Summary (Assistant)</summary>
+    __MERGED_SUMMARY__
+    <div class=\"hint\">Structured summary of Key Knowledge, Controversies, Missing Info, and Working Plan.</div>
   </details>
 
   <details class=\"mt\" open>
@@ -681,6 +745,7 @@ def save_case_html_report(
     html_page = html_page.replace("__QUESTION_RAW__", _html_pre(question_raw))
     html_page = html_page.replace("__QUESTION_STRUCT__", _html_pre(question_str))
     html_page = html_page.replace("__TRIAL_NOTE__", _html_pre(trial_note or "None"))
+    html_page = html_page.replace("__MERGED_SUMMARY__", _html_pre(merged_summary or "(No summary available)"))
     html_page = html_page.replace("__INTERACTION_TABLE__", interaction_block)
     html_page = html_page.replace("__INITIAL_OPS__", _html_pre(init_ops_pretty))
     html_page = html_page.replace("__FINAL_ROUND_OPS__", _html_pre(final_round_ops_pretty))

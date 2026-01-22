@@ -5,12 +5,20 @@
 
 **OMGs** (Ovarian-cancer Multidisciplinary intelligent aGent System) is a multi-agent clinical decision-support system for ovarian cancer MDT (multidisciplinary team) discussions. It simulates multiple specialist roles (Chair, Medical Oncology, Radiology, Pathology, Nuclear Medicine), runs multi-round deliberation, and produces structured MDT recommendations.
 
+> [!NOTE]
+> **Design Philosophy**: OMGs is specifically designed for ovarian cancer patients requiring **multi-line therapy** with **complex etiologies** and **multiple comorbidities**. Our goal is to provide comprehensive care throughout the **entire lifecycle** of ovarian cancer patients.
+>
+> **Tiered Care Recommendation**: Not all patients require full MDT discussion. For **simpler cases**, we recommend using the `--agent auto` mode, which intelligently routes cases to the appropriate processing level based on complexity assessment.
+>
+> **SKILL Protocol**: The `skills/omgs/` documentation is designed for future tool enhancements and IDE integration. Currently it only provides: (1) ~75-token evidence tagging prompt injection per agent, (2) Cursor IDE development context via `.cursorrules`. The SKILL docs do **not** increase runtime token consumption.
+
 ---
 
 ## Table of Contents
 
 - [Clinical Significance](#-clinical-significance)
 - [Key Features](#-key-features)
+- [Recent Updates](#-recent-updates)
 - [System Architecture](#-system-architecture)
 - [Installation](#-installation)
 - [Quick Start](#-quick-start)
@@ -125,6 +133,44 @@ flowchart LR
 - **⚡ Runtime Injection**: ~75 tokens per agent enforcing evidence format and role constraints
 - **📖 Reference Guides**: Architecture, expert roles, extension guide, and pipeline ops documentation
 - **🔧 Cursor Integration**: `.cursorrules` for automatic IDE context loading
+
+---
+
+## 🆕 Recent Updates
+
+### v1.1 - Multi-Mode Support & Intelligent Routing
+
+**New Agent Modes:**
+
+| Mode | Description | Use Case |
+|------|-------------|----------|
+| `omgs` | Full multi-agent MDT discussion (default) | Complex cases requiring multi-specialty debate |
+| `chair_sa` | Simplest single-agent mode | Environment/API testing |
+| `chair_sa_k` | Single agent + Knowledge (Guidelines + PubMed) | Cases needing evidence reference |
+| `chair_sa_kep` | Single agent + Knowledge + Evidence Pack | Complex cases with patient data |
+| `auto` | **Intelligent routing** based on case complexity | Recommended for tiered care |
+
+**Auto Mode Features:**
+- Automatically assesses case complexity (treatment line, genetic testing, platinum status, comorbidities)
+- Routes to appropriate processing mode (`chair_sa` → `chair_sa_k` → `chair_sa_kep` → `omgs`)
+- Reduces resource usage for simpler cases while ensuring complex cases get full MDT support
+
+**Output Enhancements:**
+- `agent_mode` field recorded in `results.json` (e.g., `"auto(chair_sa_kep)"`)
+- HTML report displays mode badge in Pipeline Statistics card
+- **MDT Discussion Summary** section in HTML report (Key Knowledge, Controversies, Missing Info, Working Plan)
+- **Print button** (🖨️) in HTML report for one-click printing
+- Dark mode support (auto-detects system theme)
+- Print-friendly and responsive CSS styles
+
+**Usage:**
+```bash
+# Intelligent routing (recommended)
+python main.py --input_path ./data.jsonl --agent auto --provider azure --model gpt-5.1
+
+# Specific mode
+python main.py --input_path ./data.jsonl --agent chair_sa_kep --provider azure --model gpt-5.1
+```
 
 ---
 
@@ -865,6 +911,8 @@ OMGs/
 ---
 
 ## ⚙️ Configuration
+
+> **Detailed Documentation:** See [config/README.md](config/README.md) for comprehensive prompt documentation including Expert Role Prompts, Permission Matrix, Evidence Tag Rules, and Customization Guide.
 
 ### Paths Configuration (`config/paths.json`)
 
