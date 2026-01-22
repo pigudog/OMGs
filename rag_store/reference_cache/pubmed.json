@@ -46,14 +46,14 @@
     "title": "Case report: Durable response after pembrolizumab in combination with radiation - induced abscopal effect in platinum - refractory metastatic endometrial clear cell carcinoma.",
     "abstract": "Advanced endometrial clear cell carcinoma (CCC) tends to have poor prognosis owing to aggressive clinical behavior and poor response to conventional chemotherapy. Herein, we report a case of platinum-refractory recurrent ECCC successfully treated with the combination of pembrolizumab, localized radiotherapy and a few cycles of chemotherapy with an extremely durable response even after cessation of immunotherapy for 3 years at the time of publication.",
     "metadata": {
-      "rank": 5,
-      "score": 0.6674334830332206,
+      "rank": 1,
+      "score": 0.6317567413424716,
       "journal": "Front Immunol",
       "pub_date": "2022-01-01",
       "doi": "10.3389/fimmu.2022.1079253",
       "impact_factor": 5.9
     },
-    "cached_at": "2026-01-21T07:01:43.411665"
+    "cached_at": "2026-01-21T23:50:14.556634"
   },
   "34916808": {
     "pmid": "34916808",
@@ -229,13 +229,13 @@
     "abstract": "Homologous recombination repair (HRR) pathway deficiency (HRD) is involved in the tumorigenesis and progression of high-grade serous ovarian carcinoma (HGSOC) as well as in the sensitivity to platinum chemotherapy drugs. In this study, we obtained data from The Cancer Genome Atlas (TCGA) on HGSOC and identified scores for the loss of heterozygosity, telomeric allelic imbalance, and large-scale state transitions, and calculated the HRD score. We then investigated the relationships among the score, genetic/epigenetic alterations in HRR-related genes, and the clinical data. We found that BRCA1/2 mutations were enriched in the group with HRD scores ≥63. Compared with the groups with scores ≤62, this group had a good prognosis; we thus considered HRD scores ≥63 to be the best cutoff point for identifying HRD cases in HGSOC. Classification of HGSOC cases by the HRD status revealed a better prognosis for HRD cases caused by genetic alterations (genetic HRD) than those caused by epigenetic changes and those caused by undetermined reasons (p = 0.0002). Among cases without macroscopic residual tumors after primary debulking surgery, 11 of 12 genetic HRD cases survived after the median observation period of 6.6 years, showing remarkably high survival rates (p = 0.0059). In conclusion, HGSOC can be classified into subtypes with different prognoses according to HRD status. This classification could be useful for personalized HGSOC treatment.",
     "metadata": {
       "rank": 4,
-      "score": 0.677630511399193,
+      "score": 0.7074573934920168,
       "journal": "Sci Rep",
       "pub_date": "2020-02-17",
       "doi": "10.1158/2159-8290.CD-12-0095",
       "impact_factor": 3.9
     },
-    "cached_at": "2026-01-21T06:57:11.965324"
+    "cached_at": "2026-01-21T23:22:06.481447"
   },
   "27042109": {
     "pmid": "27042109",
@@ -550,28 +550,28 @@
     "title": "Platinum-Based Neoadjuvant Chemotherapy Before Radical Prostatectomy for Locally Advanced Prostate Cancer With Homologous Recombination Deficiency: A Case Report.",
     "abstract": "More emerging evidence showed that homologous recombination (HR) defect (HRD) may predict sensitivity to platinum agents in metastatic prostate cancer (PCa). Platinum-based neoadjuvant chemotherapy for PCa with HRD has not been reported. Here, we reported a man diagnosed as locally advanced PCa with high Gleason Score (5 + 5) and low PSA level (5.2 ng/ml). Next-generation sequencing (NGS) demonstrated HRD. He received six cycles of platinum-based neoadjuvant chemotherapy before radical prostatectomy (RP). Fifteen months after RP, his PSA level was still undetectable, and no imaging progression was found, indicating a potential role for platinum-based neoadjuvant chemotherapy in locally advanced PCa with HRD.",
     "metadata": {
-      "rank": 4,
-      "score": 0.667881460780813,
+      "rank": 2,
+      "score": 0.6312728155396748,
       "journal": "Front Oncol",
       "pub_date": "2021-01-01",
       "doi": "10.3389/fonc.2021.777318",
       "impact_factor": 3.3
     },
-    "cached_at": "2026-01-21T06:30:17.518675"
+    "cached_at": "2026-01-21T23:50:14.558855"
   },
   "33376347": {
     "pmid": "33376347",
     "title": "Niraparib as Maintenance Therapy in Germline ATM-mutated and Somatic",
     "abstract": "Brain metastases from epithelial ovarian cancer are very rare with an incidence of only 1-2.5%. Many therapeutic methods such as surgery, irradiation and chemotherapy do produce survival benefits, but the overall outcome remains unsatisfactory. The BRCA (breast cancer susceptibility gene) mutation status seems to be associated with the development of brain metastases from ovarian cancer and these patients may benefit from treatment with PARP (poly ADP ribose polymerase) inhibitors. Here is a case where a Chinese female patient diagnosed with high-grade serous ovarian cancer with brain metastases was detected to have known germline ATM mutation and somatic BRCA2 mutation. The patient underwent whole brain radiotherapy and systemic chemotherapy, commenced niraparib as maintenance treatment and then presented considerable clinical and radiological response.",
     "metadata": {
-      "rank": 3,
-      "score": 0.681698009598641,
+      "rank": 1,
+      "score": 0.7985229420318835,
       "journal": "Onco Targets Ther",
       "pub_date": "2020-01-01",
       "doi": "10.2147/OTT.S281302",
       "impact_factor": 2.8
     },
-    "cached_at": "2026-01-21T07:17:18.240096"
+    "cached_at": "2026-01-21T23:36:21.557909"
   },
   "26774475": {
     "pmid": "26774475",
@@ -606,14 +606,14 @@
     "title": "Non-small cell neuroendocrine carcinoma of the ovary in a",
     "abstract": "Non-small cell neuroendocrine carcinomas (NSCNEC) account for 2% of gynecological cancer cases and are associated with a poor prognosis due to delayed diagnosis and aggressive tumor behavior. BRCA2-associated ovarian carcinomas predominantly possess a high-grade serous phenotype, which respond to platinum and targeted therapy with PARP inhibitors. Presented here is the case of an adult patient with NSCNEC of the ovaries associated with a deleterious BRCA2 germline mutation. The pathogenic mutation was also confirmed on the somatic level, while the wild-type allele had a high variant fraction, suggesting loss of heterozygosity. To the best of our knowledge, this is the first report of an adult BRCA2 germline mutation carrier with the rare NSCNEC of the ovary phenotype. Therefore, ovarian cancer patients with histological subtypes other than high-grade serous carcinomas should be tested for BRCA1/2 mutations, as they may benefit from targeted therapy with poly (ADP-ribose) polymerase inhibitors.",
     "metadata": {
-      "rank": 2,
-      "score": 0.6861368569696944,
+      "rank": 1,
+      "score": 0.7186286955422624,
       "journal": "Oncol Lett",
       "pub_date": "2018-04-01",
       "doi": "10.3892/ol.2018.7836",
       "impact_factor": 2.2
     },
-    "cached_at": "2026-01-21T07:17:18.238546"
+    "cached_at": "2026-01-21T23:47:31.444826"
   },
   "36865800": {
     "pmid": "36865800",
@@ -642,5 +642,285 @@
       "impact_factor": 3.9
     },
     "cached_at": "2026-01-21T07:17:18.243175"
+  },
+  "38360632": {
+    "pmid": "38360632",
+    "title": "Primary fallopian tube cancer followed by primary breast cancer in RAD51C mutation carrier treated with niraparib as first line maintenance therapy: a case report.",
+    "abstract": "Given the rarity of RAD51C mutations, the risk and treatment of metachronous breast cancer after the diagnosis of ovarian cancer in RAD51C mutation carriers is not clear, especially for those who have received PARPi treatment. We report the case of a 65-year-old woman diagnosed with stage IIIC high-grade serous primary fallopian tube cancer. The patient had no family history of breast or ovarian cancer. The patient received three cycles of neoadjuvant chemotherapy with paclitaxel and carboplatin and achieved a complete response. After interval debulking surgery, the patient received three cycles of adjuvant chemotherapy. Collection and extraction of saliva DNA for next-generation sequencing identified a RAD51C mutation c.838-2 A > G. The patient received niraparib as front-line maintenance treatment. After 36 months of niraparib treatment, the patient had grade II invasive ductal carcinoma of the left breast that was positive for estrogen receptor (90%) and Ki-67 (30%) and negative for progesterone receptor and human epidermal growth factor receptor 2. Computed tomography revealed the absence of distant metastases. Modified radical mastectomy and axillary lymph node dissection were then performed. The final pathological report of the breast showed a 1.8 cm Bloom-Richardson grade II invasive ductal carcinoma in the left breast with axillary lymph node metastasis (1/21). Finally, the breast cancer was stage IIA, pT1cN1M0. The metachronous breast cancer in this case may be the first report of second primary cancer in fallopian tube cancer patient harboring a RAD51C mutation during niraparib treatment. Further studies are required to determine optimal treatment.",
+    "metadata": {
+      "rank": 4,
+      "score": 0.7321879226837089,
+      "journal": "Hered Cancer Clin Pract",
+      "pub_date": "2024-02-15",
+      "doi": "10.1186/s13053-024-00274-8",
+      "impact_factor": 2.4
+    },
+    "cached_at": "2026-01-21T23:36:21.565760"
+  },
+  "39312297": {
+    "pmid": "39312297",
+    "title": "Predictive value of homologous recombination deficiency status for survival outcomes in primary tubo-ovarian high-grade serous carcinoma.",
+    "abstract": "This is a protocol for a Cochrane Review (prognosis). The objectives are as follows: To evaluate the predictive value of the prognostic factor HRD status, as determined by various clinically validated HRD assays at the time of staging laparotomy, compared to BRCA1/2 mutation status for progression-free survival and overall survival in patients with tubo-ovarian high-grade serous carcinoma treated in the first-line setting with a combination of surgery and platinum-based chemotherapy and/or maintenance with PARP inhibitors.",
+    "metadata": {
+      "rank": 3,
+      "score": 0.7002411899890634,
+      "journal": "Cochrane Database Syst Rev",
+      "pub_date": "2024-09-23",
+      "doi": "10.1002/14651858.CD015896",
+      "impact_factor": 9.4
+    },
+    "cached_at": "2026-01-21T23:09:24.654147"
+  },
+  "38515573": {
+    "pmid": "38515573",
+    "title": "High-grade serous papillary ovarian carcinoma combined with nonkeratinizing squamous cell carcinoma of the cervix: a case report.",
+    "abstract": "Multiple primary malignant neoplasms are a rare gynecologic malignancy; particularly, cases originating from the heterologous organs, such as the ovary and cervix. Here, we report a case of two primary malignant neoplasms in a patient who had undergone laparoscopic radical hysterectomy + bilateral salpingo-oophorectomy + pelvic lymph node dissection + para-aortic lymphadenectomy + appendectomy + omentectomy + metastasectomy under general anesthesia. The patient experienced complete remission after six courses of postoperative chemotherapy with a standard Taxol and Carboplatin regimen. Genetic testing was performed to detect BRCA2 mutations, and poly (ADP-ribose) polymerase (PARP) inhibitors were used for maintenance therapy.",
+    "metadata": {
+      "rank": 3,
+      "score": 0.6287800072194178,
+      "journal": "Front Oncol",
+      "pub_date": "2024-01-01",
+      "doi": "10.3389/fonc.2024.1298109",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-21T23:50:14.561589"
+  },
+  "35359396": {
+    "pmid": "35359396",
+    "title": "Case Report: Niraparib-Related Pulmonary Embolism During the Treatment of",
+    "abstract": "Niraparib, an oral, potent, highly selective poly (ADP-ribose) polymerase (PARP) inhibitor, has promising clinical benefit for maintenance treatment of patients with ovarian cancer in partial response to platinum-based chemotherapy, especially in patients with BRCA mutation. In publicly available niraparib treatment-related adverse events, gastrointestinal disorders and hematological toxicities were most commonly reported with manageable safety profile. Herein, we first describe a severe and never-reported pulmonary embolism (PE) associated with the use of niraparib in a patient with BRCA mutation advanced high-grade serous ovarian cancer and received anticoagulant therapy after PE. There have been no reports of PE caused by the use of niraparib in patients with advanced high-grade serous ovarian cancer; knowledge of the occurrence of PE after the use of niraparib may assist other clinicians in managing this rare but potentially serious toxic effect.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.709928604772172,
+      "journal": "Front Oncol",
+      "pub_date": "2022-01-01",
+      "doi": "10.3389/fonc.2022.853211",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-21T23:08:39.386787"
+  },
+  "38601768": {
+    "pmid": "38601768",
+    "title": "Case report: Response to everolimus in a patient with platinum resistant, high grade serous ovarian carcinoma with biallelic",
+    "abstract": "Patients with platinum-resistant recurrent high grade serous ovarian carcinoma have poor outcomes and limited treatment options.\n          \nWe present a case of a 48-year-old woman with platinum-resistant high grade serous ovarian carcinoma harboring the pathogenic TSC2 R611Q variant with concomitant single copy loss of TSC2 (suggesting biallelic TSC2 inactivation) identified in targeted tumor sequencing. The patient was treated with the mTOR inhibitor everolimus, with an excellent response by imaging and a marked decrease in CA125; she remained on everolimus for 19 months until she developed progressive disease.\n          \nWhile mTOR inhibition is frequently used in tumors associated with tuberous sclerosis complex (TSC), such as lymphangioleiomyomatosis and malignant perivascular epithelioid cell tumors, this is the first case of a patient with ovarian cancer harboring TSC1/2 mutations who responded to mTOR inhibition. This case highlights the utility of targeted DNA sequencing in the management of ovarian carcinoma and demonstrates the value of tumor-agnostic targeted therapies.",
+    "metadata": {
+      "rank": 3,
+      "score": 0.7114367295873936,
+      "journal": "Front Oncol",
+      "pub_date": "2024-01-01",
+      "doi": "10.3389/fonc.2024.1357980",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-21T23:22:06.479360"
+  },
+  "34316715": {
+    "pmid": "34316715",
+    "title": "Characterization of a",
+    "abstract": "Acquired PARP inhibitor (PARPi) resistance in BRCA1- or BRCA2-mutant ovarian cancer often results from secondary mutations that restore expression of functional protein. RAD51C is a less commonly studied ovarian cancer susceptibility gene whose promoter is sometimes methylated, leading to homologous recombination (HR) deficiency and PARPi sensitivity. For this study, the PARPi-sensitive patient-derived ovarian cancer xenograft PH039, which lacks HR gene mutations but harbors RAD51C promoter methylation, was selected for PARPi resistance by cyclical niraparib treatment in vivo. PH039 acquired PARPi resistance by the third treatment cycle and grew through subsequent treatment with either niraparib or rucaparib. Transcriptional profiling throughout the course of resistance development showed widespread pathway level changes along with a marked increase in RAD51C mRNA, which reflected loss of RAD51C promoter methylation. Analysis of ovarian cancer samples from the ARIEL2 Part 1 clinical trial of rucaparib monotherapy likewise indicated an association between loss of RAD51C methylation prior to on-study biopsy and limited response. Interestingly, the PARPi resistant PH039 model remained platinum sensitive. Collectively, these results not only indicate that PARPi treatment pressure can reverse RAD51C methylation and restore RAD51C expression, but also provide a model for studying the clinical observation that PARPi and platinum sensitivity are sometimes dissociated.",
+    "metadata": {
+      "rank": 4,
+      "score": 0.6987930520346735,
+      "journal": "NAR Cancer",
+      "pub_date": "2021-09-01",
+      "doi": "10.1093/narcan/zcab028",
+      "impact_factor": 3.2
+    },
+    "cached_at": "2026-01-21T23:10:11.948093"
+  },
+  "33941784": {
+    "pmid": "33941784",
+    "title": "Molecular and clinical determinants of response and resistance to rucaparib for recurrent ovarian cancer treatment in ARIEL2 (Parts 1 and 2).",
+    "abstract": "ARIEL2 (NCT01891344) is a single-arm, open-label phase 2 study of the PARP inhibitor (PARPi) rucaparib in relapsed high-grade ovarian carcinoma. In this post hoc exploratory biomarker analysis of pre- and post-platinum ARIEL2 samples, RAD51C and RAD51D mutations and high-level BRCA1 promoter methylation predict response to rucaparib, similar to BRCA1/BRCA2 mutations. BRCA1 methylation loss may be a major cross-resistance mechanism to platinum and PARPi. Genomic scars associated with homologous recombination deficiency are irreversible, persisting even as platinum resistance develops, and therefore are predictive of rucaparib response only in platinum-sensitive disease. The RAS, AKT, and cell cycle pathways may be additional modulators of PARPi sensitivity.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.6947146251637891,
+      "journal": "Nat Commun",
+      "pub_date": "2021-05-03",
+      "doi": "10.1038/s41467-021-22582-6",
+      "impact_factor": 15.7
+    },
+    "cached_at": "2026-01-21T23:10:11.949964"
+  },
+  "34938651": {
+    "pmid": "34938651",
+    "title": "Case Report: Niraparib as Maintenance Therapy in A Patient With Ovarian Carcinosarcoma.",
+    "abstract": "Ovarian carcinosarcoma (OCS) is a rare, highly aggressive and rapidly progressing malignant tumor with an extremely poor prognosis. So far, due to the low incidence of OCS, there are no large-scale prospective studies exploring the standard care of OCS patients. There is no uniform and effective treatment for OCS. Within the development of precision medicine, targeted therapies (such as PARP inhibitors) have been widely used in epithelial ovarian cancer and various other solid tumors. Here, we report a BRCAwt patient with advanced OCS who experienced a second and a third cytoreductive surgery in June 2017 and October 2019 and has been on niraparib maintenance therapy for more than 20 months after receiving second-line and third-line chemotherapy.",
+    "metadata": {
+      "rank": 4,
+      "score": 0.7083234760179101,
+      "journal": "Front Oncol",
+      "pub_date": "2021-01-01",
+      "doi": "10.3389/fonc.2021.603591",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-21T23:12:35.115631"
+  },
+  "35696850": {
+    "pmid": "35696850",
+    "title": "Case report: Response to platinum agents and poly (adenosine diphosphate-ribose) polymerase inhibitor in a patient with BRCA1 c.5096G>A (R1699Q) intermediate-risk variant.",
+    "abstract": "BRCA1 c.5096G>A (p. Arg1699Gln) (hereinafter BRCA1 R1699Q) is classified as a pathogenic genetic variant despite its lower penetrance of breast and ovarian cancers compared to other BRCA1 variants. However, this mutation is currently reported as a 'special interpretation' variant in the BRACAnalysis® because the response to platinum agents and poly (adenosine diphosphate-ribose) polymerase (PARP) inhibitors remains unknown in patients with this mutation.\n          \nWe present a case of stage IIIc high-grade primary peritoneal cancer in a 69-year-old woman with germline BRCA1 R1699Q variant. She received platinum-containing chemotherapy followed by surgery. Eight months later, the patient experienced recurrence and received six cycles of chemotherapy and olaparib maintenance therapy. However, the disease progressed after only 5 months, and she received another chemotherapy drug. This patient responded slightly to platinum agents and had shorter progression-free survival on olaparib compared with clinical trial data. myChoice® CDx also showed Genomic Instability Score (GIS) was 50. This patient had no other gene mutations which could cause homologous recombination deficiency.\n          \nThis is the first report of the clinical outcome of PARP inhibitor and platinum-containing chemotherapy in a patient with a BRCA1 R1699Q variant. Despite BRCA1 mutation and high GIS, used as indicators of drug sensitivity, the recurrent tumor did not respond well to platinum agents and olaparib. BRCA1 R1699Q variant could differ from others in cancer risk and in drug response. Further studies are needed to confirm these observations.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.7056766235526071,
+      "journal": "Cancer Treat Res Commun",
+      "pub_date": "2022-01-01",
+      "doi": "10.1016/j.ctarc.2022.100587",
+      "impact_factor": 2.4
+    },
+    "cached_at": "2026-01-21T23:12:35.117764"
+  },
+  "39270525": {
+    "pmid": "39270525",
+    "title": "Characterization of DNA damage repair pathway utilization in high-grade serous ovarian cancers yields rational therapeutic approaches.",
+    "abstract": "While poly (ADP-ribose) polymerase (PARP) inhibitors (PARPi) have improved the prognosis of ovarian high-grade serous carcinoma (HGSC) tumors that are homologous recombination (HR) deficient (HRD), new therapeutic strategies are needed for tumors that are HR proficient (HRP) because they demonstrate greater resistance to current treatments and thus have poorer clinical outcomes. Additionally, clinical precautionary statements regarding potential risks associated with PARPi, such as myelodysplastic syndrome, highlight the need for combinatorial approaches that can lessen the dose and duration of PARPi treatment to reduce toxicities. Here, we evaluated DNA double-strand damage repair pathways in HRD and HRP ovarian cancer cell lines and found that in HRD cell lines, PARPi therapy reduced non-homologous end joining (NHEJ)-mediated repair, specifically due to decreased theta-mediated end-joining. The combination of PARPi with ATM serine/threonine kinase inhibitor (ATMi) suppressed both NHEJ and HR pathways in HRD and HRP cell lines, with synergistic increases in apoptosis and decreases in cell viability and colony formation. Interestingly, PARPi plus ATMi also decreased NF-κB p65 phosphorylation, which was not observed when PARPi was combined with inhibition of the ATR kinase (ATRi). These findings indicate that PARPi plus ATMi is a promising strategy for HGSC independent of underlying tumor HR status.",
+    "metadata": {
+      "rank": 1,
+      "score": 0.7383076554331318,
+      "journal": "Transl Oncol",
+      "pub_date": "2024-12-01",
+      "doi": "10.1016/j.tranon.2024.102119",
+      "impact_factor": 4.1
+    },
+    "cached_at": "2026-01-21T23:15:11.661372"
+  },
+  "33024871": {
+    "pmid": "33024871",
+    "title": "ATM inhibition synergizes with fenofibrate in high grade serous ovarian cancer cells.",
+    "abstract": "While therapies targeting deficiencies in the homologous recombination (HR) pathway are emerging as the standard treatment for high grade serous ovarian cancer (HGSOC) patients, this strategy is limited to the ~50% of patients with a deficiency in this pathway. Therefore, patients with HR-proficient tumors are likely to be resistant to these therapies and require alternative strategies. We found that the HR gene Ataxia Telangiectasia Mutated (ATM) is wildtype and its activity is upregulated in HGSOC compared to normal fallopian tube tissue. Interestingly, multiple pathways related to metabolism are inversely correlated with ATM expression in HGSOC specimens, suggesting that combining ATM inhibition with metabolic drugs would be effective. Analysis of FDA-approved drugs from the Dependency Map demonstrated that ATM-low cells are more sensitive to fenofibrate, a PPARα agonist that affects multiple cellular metabolic pathways. Consistently, PPARα signaling is associated with ATM expression. We validated that combined inhibition of ATM and treatment with fenofibrate is synergistic in multiple HGSOC cell lines by inducing senescence. Together, our results suggest that metabolic changes induced by ATM inhibitors are a potential target for the treatment of HGSOC.",
+    "metadata": {
+      "rank": 4,
+      "score": 0.674204970813317,
+      "journal": "Heliyon",
+      "pub_date": "2020-09-01",
+      "doi": "10.1016/j.heliyon.2020.e05097",
+      "impact_factor": 3.6
+    },
+    "cached_at": "2026-01-21T23:47:31.453262"
+  },
+  "34912215": {
+    "pmid": "34912215",
+    "title": "Update on Poly ADP-Ribose Polymerase Inhibitors in Ovarian Cancer With Non-BRCA Mutations.",
+    "abstract": "Poly ADP-ribose polymerase inhibitor (PARPi) has become an important maintenance therapy for ovarian cancer after surgery and cytotoxic chemotherapy, which has changed the disease management model of ovarian cancer, greatly decreased the risk of recurrence, and made the prognosis of ovarian cancer better to certain extent. The three PARPis currently approved by the United States Food and Drug Administration (FDA) and the European Medicines Agency (EMA) for the treatment of ovarian cancer are Olaparib, Niraparib and Rucaparib. With the incremental results from new clinical trials, the applicable population of PARPi for ovarian cancer have expanded to population with non-BRCA mutations. Although BRCA mutated population are still the main beneficiaries of PARPi, recent clinical trials indicated PARPis' therapeutic potential in non-BRCA mutated population, especially in homologous recombination repair deficiency (HRD) positive population. However, lack of unified HRD status detection method poses a challenge for the accurate selection of PARPi beneficiaries. The reversal of homologous recombination (HR) function during the treatment will not only cause resistance to PARPis, but also reduce the accuracy of the current method to determine HRD status. Therefore, the development of reliable HRD status detection methods to determine the beneficiary population, as well as rational combination treatment are warranted. This review mainly summarizes the latest clinical trial results and combination treatment of PARPis in ovarian cancer with non-BRCA mutations, and discusses the application prospects, including optimizing combination therapy against drug resistance, developing unified and accurate HRD status detection methods for patient selection and stratification. This review further poses an interesting topic: the efficacy and safety in patients retreated with PARPis after previous PARPi treatment---\"PARPi after PARPi\".",
+    "metadata": {
+      "rank": 4,
+      "score": 0.7064132211907105,
+      "journal": "Front Pharmacol",
+      "pub_date": "2021-01-01",
+      "doi": "10.3389/fphar.2021.743073",
+      "impact_factor": 4.8
+    },
+    "cached_at": "2026-01-21T23:15:11.667767"
+  },
+  "31205507": {
+    "pmid": "31205507",
+    "title": "Olaparib as maintenance treatment for patients with platinum-sensitive relapsed ovarian cancer.",
+    "abstract": "Poly (ADP-ribose) polymerase (PARP) inhibitors were developed with the intention of treating patients with homologous recombination repair deficiency (HRD), specifically for patients with tumours that harbour a BRCA mutation (BRCAm). Evidence from clinical trials to date has demonstrated that patients with a BRCAm derive the greatest benefit from PARP inhibitors. However, clinical studies have also shown that PARP inhibitors provide benefit to women with ovarian cancer who do not have a BRCAm. The recent updated approvals of olaparib, niraparib and rucaparib by the US Food and Drug Administration and the European Medicines Agency for the treatment of all platinum-sensitive relapsed (PSR) ovarian-cancer populations, regardless of their BRCAm status, support this. Long-term tolerability and efficacy of olaparib have been demonstrated in patients both with and without a BRCAm, with 13% of patients receiving maintenance olaparib for at least 5 years in one study, which is unprecedented in the relapsed ovarian-cancer setting (versus 1% on placebo). Further studies should be performed to elucidate which non-BRCAm patients are deriving benefit and what molecular processes are enabling this, so that patients continue to receive optimal treatment for their disease. Here, we review clinical and molecular markers of HRD, the long-term clinical safety and efficacy of PARP inhibitors in ovarian cancer, with a focus on olaparib and the current approved indications for PARP inhibitors, as well as guidance on treatment decisions for patients with PSR ovarian cancer.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.7061815185419008,
+      "journal": "Ther Adv Med Oncol",
+      "pub_date": "2019-01-01",
+      "doi": "10.1177/1758835919849753",
+      "impact_factor": 4.2
+    },
+    "cached_at": "2026-01-21T23:15:11.670051"
+  },
+  "29651149": {
+    "pmid": "29651149",
+    "title": "Author Correction: CRISPR/Cas9-derived models of ovarian high grade serous carcinoma targeting Brca1, Pten and Nf1, and correlation with platinum sensitivity.",
+    "abstract": "A correction to this article has been published and is linked from the HTML and PDF versions of this paper. The error has not been fixed in the paper.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.6941722553028001,
+      "journal": "Sci Rep",
+      "pub_date": "2018-04-13",
+      "doi": "10.1038/s41598-018-24099-3",
+      "impact_factor": 3.9
+    },
+    "cached_at": "2026-01-21T23:22:06.483382"
+  },
+  "35004311": {
+    "pmid": "35004311",
+    "title": "Case Report: Combination of Olaparib With Chemotherapy in a Patient With ATM-Deficient Colorectal Cancer.",
+    "abstract": "Poly-ADP ribose polymerase (PARP) inhibitors are constantly increasing in their indications for use as anti-cancer treatment in various neoplasms, the majority of which are linked with BRCA deficiency. Preclinical data support the investigation of PARP inhibitors in other neoplasms exhibiting \"BRCAness\" or homologous recombination deficiency (HRD) as monotherapy as well as in combination with chemotherapy. With the current report we present the case of a heavily pretreated 55-year-old male patient diagnosed with stage IV ATM-deficient CRC, who was effectively treated with an off-label olaparib-irinotecan combination after exhaustion of all available treatment choices; furthermore, we discuss the existing data providing evidence for the use of PARP inhibitors in ATM-deficient CRC and encourage the implementation of next-generation sequencing (NGS) in patients with no other available treatment options.",
+    "metadata": {
+      "rank": 3,
+      "score": 0.7333945127791893,
+      "journal": "Front Oncol",
+      "pub_date": "2021-01-01",
+      "doi": "10.3389/fonc.2021.788809",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-21T23:36:21.563172"
+  },
+  "33240400": {
+    "pmid": "33240400",
+    "title": "Olaparib is effective for recurrent urothelial carcinoma with BRCA2 pathogenic germline mutation: first report on olaparib response in recurrent UC.",
+    "abstract": "Urothelial carcinoma (UC) is a common malignancy of the lower and upper urinary tract. Recurrent UC has poor prognosis due to delayed diagnosis and a lack of clinical management guidance, especially for upper urinary tract UC. Patients with germline or somatic BRCA1/2 mutations are a special population in UC. No evidence is available so far on the effectiveness of poly ADP-ribose polymerase inhibitor (PARPi) in this population. Here, we report a 60-year-old female patient diagnosed with left ureter high-grade UC. Recurrent lesions were found 20 months after radical surgery. Computed tomography (CT) examination showed a slightly high-density soft tissue mass (3.2 × 3.1 cm) on the left posterior wall of the abdomen (waist), soft tissue mass adjacent to the left inner wall of the pelvis (3.2 × 4.2 cm), and multiple enlarged lymph nodes to the left of abdominal aorta. A next-generation sequencing (NGS)-based 605-gene panel detected a novel BRCA2 pathogenic germline mutation c.1670T>A (p.L557*), and a series of somatic insertion and deletion (INDEL) mutations of BRCA1, RB1, and JAK2, and single nucleotide variation (SNV) mutations of TP53, KMT2D, MET, ROS1, and IL7R. The above lesions were reduced significantly or disappeared (partial response, PR) after a 3-month Olaparib treatment, and the patient's general condition remained well. In conclusion, this study proved for the first time that PARPi was effective for UC treatment in patients carrying germline BRCA2 pathogenic mutations, providing new treatment options for such patients. In addition, the circulating tumor DNA (ctDNA) test can be used for drug selection and response monitoring in UC treatment.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.7149822889827363,
+      "journal": "Ther Adv Med Oncol",
+      "pub_date": "2020-01-01",
+      "doi": "10.1177/1758835920970845",
+      "impact_factor": 4.2
+    },
+    "cached_at": "2026-01-21T23:36:21.569055"
+  },
+  "27347134": {
+    "pmid": "27347134",
+    "title": "Synchronous ovarian metastasis from colorectal cancer: A report of two cases.",
+    "abstract": "Ovarian metastasis of colorectal cancer is relatively rare. The present study reports two cases of synchronous ovarian metastasis from colorectal cancer, which were managed by cytoreductive surgery. In case one, a 60-year-old female patient presented with a multilocular pelvic tumor and ascites. Virtual colonoscopy revealed a mass in the sigmoid colon; however, no tumor cells were identified on histological examination. Ovarian metastasis from sigmoid colon cancer was suspected and adnexectomy was subsequently performed. Histological examination of the excised tumor revealed adenocarcinoma. Immunohistochemical analysis of the resected tumor revealed positive staining for cytokeratin (CK)20 and caudal-type homeobox 2 (CDX2), and negative staining for CK7, estrogen receptor, progesterone receptor and inhibin. The immunohistological results supported the diagnosis of ovarian metastasis from sigmoid colon cancer. In case two, a 56-year-old female patient presented with a multilocular pelvic tumor and ascites. Colonoscopy identified a rectal tumor, and histological examination revealed moderately-differentiated adenocarcinoma, which was confirmed by cytological analysis of ascites. Subsequently, ovarian metastasis from rectal cancer with peritoneal dissemination was diagnosed, and left ovariectomy and transverse colostomy were performed. Histological examination of the excised tumor revealed moderately-differentiated adenocarcinoma, and immunohistochemical investigation revealed positive staining for CK20 and CDX2, but negative staining for CK7. These immunohistological results indicated ovarian metastasis from rectal cancer. Both patients recovered well and are currently undergoing regular follow-up examinations. The observations from the two cases indicate that ovarian metastases of primary colorectal cancer may present as pelvic tumors and, thus, preoperative examination of the gastrointestinal tract is required. Furthermore, even in cases of widespread colorectal cancer metastases, excision of the ovarian tumor is required to establish a histological diagnosis for the selection of appropriate treatments.",
+    "metadata": {
+      "rank": 2,
+      "score": 0.6826750254000771,
+      "journal": "Oncol Lett",
+      "pub_date": "2016-07-01",
+      "doi": "10.3892/ol.2016.4553",
+      "impact_factor": 2.2
+    },
+    "cached_at": "2026-01-21T23:47:31.447317"
+  },
+  "34263651": {
+    "pmid": "34263651",
+    "title": "High-grade serous ovarian carcinoma and detection of inactivated BRCA genes from biopsy material of Slovak patients.",
+    "abstract": "Ovarian cancer is the leading cause of mortality among all gynecological cancers in developed countries and its most common and most lethal type is the high-grade serous ovarian carcinoma (HGSC). At the molecular level, nearly half of all HGSCs exhibit ineffective homologous DNA recombination and disruption of DNA damage/repair pathway inactivation caused often by BRCA1 and BRCA2 gene mutation. Recently, the detection of BRCA1/2 mutations became important for personalized treatment of HGSC patients with the PARP-inhibitors in the defined clinical setting of relapse after positive adjuvant platinum-based chemotherapeutic response. Based on the selection of patients by regional oncologists, we attempted to verify the possibilities of BRCA1/2 mutation testing on archival formalin-fixed paraffin-embedded (FFPE) biopsy material from regional hospitals. In the study we used: a/ FFPE tumor resections of 97 patients sent to our laboratory, originally stored in archives of regional departments for a period of 1-3 years and retrieved on the principle to contain a maximum of non-necrotic tumor tissue, b/ next-generation sequencing (NGS) assay covering all known mutations in the BRCA1/2 genes on MiSeq (Illumina® platform), and c/ Sophia DDM® bioinformatics platform. After processing of FFPE samples, 5 cases were excluded due to the insufficient genomic DNA quantity. Bioinformatics results of NGS analyses of 92 patients' samples indicated 17.39% pathogenic mutations and 32.61% potentially pathogenic mutations in genes BRCA1/2. Overall, 50% pathogenic and potentially pathogenic mutations were detected in the patient's cohort. The relatively high incidence of BRCA1/2 mutations in our series may be influenced by various indicators including the selection of patients based on adjuvant therapy response as well as regional or population heterogeneity in their frequency. Based on the interdisciplinary cooperation, the use of archival biopsy material processed primarily and stored for a longer period in different laboratories without uniformly defined pre-analytical conditions allows identifying the HGSC patients who might better respond to the PARP-inhibition therapy.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.6700950939868278,
+      "journal": "Neoplasma",
+      "pub_date": "2021-09-01",
+      "doi": "10.4149/neo_2021_210226N256",
+      "impact_factor": 2.2
+    },
+    "cached_at": "2026-01-21T23:47:31.455737"
+  },
+  "39898727": {
+    "pmid": "39898727",
+    "title": "Rectal linitis plastica as the sole manifestation of breast cancer recurrence.",
+    "abstract": "We present the case of a 51-year-old woman with a history of invasive lobular breast adenocarcinoma in remission for six years following surgery, chemoradiotherapy, and hormone therapy. During follow-up, an asymptomatic elevation of CA 15-3 was detected. A CT scan revealed rectal wall thickening suggestive of neoplasia, with no other lesions observed. Colonoscopy demonstrated a congested, thickened, and infiltrative mucosa in the rectal ampulla extending from the internal anal margin, accompanied by an impassable stricture 8 cm from the anal margin. Initial endoscopic biopsies were negative for malignancy. Endoscopic ultrasound (EUS) revealed rectal wall thickening, loss of normal wall stratification, and a regular outer border, findings consistent with rectal linitis plastica. The stricture prevented further advancement of the echoendoscope, but fine-needle biopsies were performed. Histological analysis confirmed adenocarcinoma infiltration of breast origin.",
+    "metadata": {
+      "rank": 4,
+      "score": 0.6269122783478234,
+      "journal": "Rev Esp Enferm Dig",
+      "pub_date": "2025-02-03",
+      "doi": "10.17235/reed.2025.11043/2024",
+      "impact_factor": 4.0
+    },
+    "cached_at": "2026-01-21T23:50:14.563871"
+  },
+  "39980539": {
+    "pmid": "39980539",
+    "title": "High-grade serous cancer of left fallopian tube with right inguinal lymph node enlargement: a case report.",
+    "abstract": "A 47-year-old woman with a two-month history of right inguinal lymphadenopathy visited Shanghai Pudong New Area People's Hospital for a biopsy. Histopathological and immunohistochemical analyses revealed a metastasis of high-grade serous carcinoma, likely of gynecological origin. A PET-CT scan identified a tumor in the left adnexa, with no other organ involvement. The patient underwent primary cytoreduction, including laparoscopy, hysterosalpingo-oophorectomy, omentectomy, and resection of the right deep inguinal lymph nodes at the Hospital of Obstetrics and Gynecology. No residual disease was found post-surgery. Pathological examination revealed high-grade serous cancer in the fimbria of the left fallopian tube and left ovary, while the right deep inguinal lymph nodes were negative. The patient received standard chemotherapy (Carboplatin and Taxol) and showed no new lesions after three cycles, as confirmed by imaging.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.6258161030372927,
+      "journal": "Front Oncol",
+      "pub_date": "2025-01-01",
+      "doi": "10.3389/fonc.2025.1486688",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-21T23:50:14.566029"
   }
 }

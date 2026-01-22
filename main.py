@@ -114,6 +114,8 @@ for no, sample in enumerate(tqdm(test_qa)):
 
         results.append({
             'agent_mode': agent_mode,
+            'mode': agent_mode,
+            'model': args.model,
             'scene': sample.get('scene'),
             'question': question,
             'response': final_decision,
@@ -153,6 +155,8 @@ for no, sample in enumerate(tqdm(test_qa)):
         # Record error in results
         results.append({
             'agent_mode': agent_mode,
+            'mode': agent_mode,
+            'model': args.model,
             'scene': sample.get('scene'),
             'question': sample.get('question', ''),
             'response': None,

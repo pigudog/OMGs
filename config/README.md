@@ -12,6 +12,7 @@ This document provides comprehensive documentation for the prompt system and con
 - [Agent Instructions](#agent-instructions)
 - [Evidence Tag Rules](#evidence-tag-rules)
 - [Customization Guide](#customization-guide)
+- [Related Documentation](#related-documentation)
 
 ---
 
@@ -619,6 +620,82 @@ See [extension-guide.md](../skills/omgs/references/extension-guide.md) for detai
 
 ---
 
+## Output Format
+
+### results.json Schema
+
+The `main.py` script generates `results.json` files in `output_answer/{agent}_{timestamp}/` directories. Each result entry includes:
+
+```json
+{
+  "agent_mode": "omgs",
+  "mode": "omgs",
+  "model": "gpt-5.1",
+  "scene": "recurrence",
+  "question": { "CASE_CORE": {...}, "TIMELINE": {...}, ... },
+  "response": "Final Assessment:\n...\nCore Treatment Strategy:\n...",
+  "gold_plan": "reference answer (optional)",
+  "question_raw": "original clinical question",
+  "Time": "2024-01-15T10:00:00",
+  "meta_info": "patient_identifier"
+}
+```
+
+**Key Fields:**
+- `agent_mode`: The actual agent mode used (e.g., `"omgs"`, `"chair_sa"`, `"auto(chair_sa_kep)"`)
+- `mode`: Same as `agent_mode` (for backward compatibility and batch processing)
+- `model`: The LLM model name used (e.g., `"gpt-5.1"`, `"anthropic/claude-opus-4.5"`)
+- `meta_info`: Patient identifier used for grouping results in batch processing
+- `response`: The final MDT decision output
+
+**Note:** For `auto` mode, `agent_mode` displays as `auto(selected_mode)` to show the actual mode that was selected by the routing agent.
+
+### Batch Processing
+
+**Location:** `run_batch.sh`
+
+The batch processing script automates multi-model evaluation workflows:
+
+1. **EHR Structuring**: Runs `ehr_structurer.py` to process input JSONL files
+2. **Multi-Model Execution**: Sequentially runs `main.py` with different agent and model configurations
+3. **Result Extraction**: Automatically extracts and organizes results by patient (`meta_info`)
+
+**Usage:**
+```bash
+./run_batch.sh
+```
+
+**Output Structure:**
+```
+output_batch/
+└── {meta_info}/
+    └── results.txt
+```
+
+Each `results.txt` file contains all model results for that patient, organized by `{mode}_{model}` sections:
+
+```
+==================================================
+chair_sa_gpt-5.1
+==================================================
+{response content}
+
+==================================================
+omgs_anthropic/claude-opus-4.5
+==================================================
+{response content}
+...
+```
+
+**Supported Configurations:**
+- Chair-SA baseline group (3 configurations)
+- OMGs baseline group (1 configuration)
+- OpenRouter comparison group (6 configurations)
+
+See the script comments for the complete list of model configurations.
+
+---
+
 ## Quick Reference
 
 ### Prompt Flow in MDT
@@ -644,3 +721,14 @@ See [extension-guide.md](../skills/omgs/references/extension-guide.md) for detai
 | `config/mdt_prompts.json` | All prompts and agent instructions |
 | `host/experts.py` | Role prompts, permissions, agent initialization |
 | `host/orchestrator.py` | MDT discussion flow and round/turn logic |
+| `run_batch.sh` | Batch processing script for multi-model evaluation |
+
+---
+
+## Related Documentation
+
+- **[Multi-Provider Guide](../clients/PROVIDERS.md)** - Detailed LLM provider usage, configuration, and model-specific settings (Azure OpenAI, OpenAI, OpenRouter)
+- **[Installation Guide](../docs/installation.md)** - System requirements and installation steps
+- **[Usage Guide](../docs/usage.md)** - CLI arguments and usage instructions
+- **[Evidence System](../docs/evidence-system.md)** - Open Evidence References system
+- **[Extension Guide](../skills/omgs/references/extension-guide.md)** - Adding new roles and report types
