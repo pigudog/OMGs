@@ -1000,8 +1000,8 @@ def process_omgs_multi_expert_query(
     initial_ops, merged, final_round_ops, interaction_log = run_mdt_discussion(
         agents=agents,
         assistant=assistant,
-        num_rounds=2, # 2 for formal； 1 for test
-        num_turns=2,  # 2
+        num_rounds=1, # 2 for formal； 1 for test
+        num_turns=1,  # 2
         visit_time=str(time) if time else None,
         trace=trace,
     )

@@ -217,17 +217,27 @@ This matrix ensures:
 
 Expert's first assessment at the start of MDT discussion.
 
-**Rules:**
-- Up to 3 bullets, each ≤20 words
-- At least ONE bullet must include evidence tag
-- If key data missing, state exactly what needs updating
+```
+Give INITIAL opinion (use ONLY your system-provided patient facts).
+Return up to 3 bullets, each ≤20 words.
+If key data missing, say exactly what needs updating.
+At least ONE bullet must be evidence-based and include [@guideline:doc_id | Page xx] or [@pubmed | PMID].
+If you reference treatment strategy categories, guidelines, trials, or literature evidence, 
+include tags [@guideline:doc_id | Page xx], [@pubmed | PMID], or [@trial | id].
+For clinical reports, use actual report_id from report data with type: 
+[@actual_report_id | LAB], [@actual_report_id | Genomics], [@actual_report_id | MR], [@actual_report_id | CT].
+Always use spaces around | for consistency: [@xxx | yyy].
+```
 
 ### summarize_initial_template
 
 Assistant merges all expert opinions into structured summary.
 
-**Output format:**
 ```
+Summarize expert opinions concisely for MDT.
+{opinions}
+
+Output:
 Key Knowledge:
 - ...
 Controversies:
@@ -242,28 +252,86 @@ Working Plan:
 
 Re-summarize global knowledge after each discussion round.
 
-**Same output format as above.**
+```
+MDT global knowledge:
+{merged}
 
-### speak_prompt_template
+Re-summarize concisely. Must include:
+Key Knowledge:
+- ...
+Controversies:
+- ...
+Missing Info:
+- ...
+Working Plan:
+- ...
+```
+
+### speak_prompt_template (Expert Discussion with "why" Concept)
 
 Controls when experts speak during turns. **Default is NOT to speak.**
 
-**Speak only if:**
-- `conflict`: Disagreement with another expert
-- `safety`: Safety concern identified
-- `missing`: Missing critical information
-- `new`: New critical insight
+This prompt implements the **"why" concept** - experts must justify why they choose to speak:
 
-**Output:** Single-line JSON with speak decision and messages
+```
+ROLE: {role}. VISIT: {visit_time}
+Default is NOT to speak. Speak ONLY if: conflict | safety | missing-critical | new-critical.
+
+CONTEXT (latest):
+{context}
+
+Allowed targets: [{allowed_targets}]
+
+EVIDENCE TAGS (if your message references evidence):
+- Any factual statement about past tests/treatments must include 
+  [@actual_report_id | LAB/Genomics/MR/CT] using actual report_id from report data.
+- Any statement derived from guideline or PubMed literature must include 
+  [@guideline:doc_id | Page xx] or [@pubmed | PMID].
+- If you cite guideline/PubMed evidence or reference clinical trials, 
+  include appropriate tags.
+
+Return ONE-LINE JSON only:
+{
+  "speak": "yes/no",
+  "messages": [
+    {
+      "target": "<role>",
+      "message": "<1-2 sentences with evidence tags if applicable>",
+      "why": "conflict|safety|missing|new"
+    }
+  ]
+}
+```
+
+**The "why" Field Values:**
+
+| Value | Meaning | Example |
+|-------|---------|---------|
+| `conflict` | Disagreement with another expert's assessment | "I disagree with radiologist's interpretation of tumor response" |
+| `safety` | Safety concern identified that must be addressed | "Renal function may contraindicate proposed regimen" |
+| `missing` | Missing critical information needed for decision | "BRCA status required before maintenance therapy decision" |
+| `new` | New critical insight not previously discussed | "Recent PET shows metabolic progression not reflected in CT" |
 
 ### final_plan_template
 
 Expert's refined plan after discussion rounds.
 
-**Rules:**
-- Up to 3 bullets, each ≤20 words
-- At least ONE bullet must include evidence tag
-- Reference discussion evidence where applicable
+```
+Given MDT context:
+{merged}
+
+DISCUSSION HISTORY (this round):
+{discussion_history}
+
+Provide FINAL refined plan based on the above context and discussions.
+Up to 3 bullets, each ≤20 words.
+Any factual claim must include [@actual_report_id | LAB/Genomics/MR/CT] 
+using actual report_id from report data. Always use spaces around | for consistency.
+At least ONE bullet must be evidence-based and include [@guideline:doc_id | Page xx] or [@pubmed | PMID].
+If you reference treatment strategy categories, guidelines, trials, or literature evidence, 
+include tags [@guideline:doc_id | Page xx], [@pubmed | PMID], or [@trial | id].
+If discussions mentioned specific evidence, you may reference it with appropriate tags.
+```
 
 ---
 
@@ -275,23 +343,47 @@ Expert's refined plan after discussion rounds.
 
 Constructs a concise English query for guideline/evidence retrieval.
 
-**Focus areas:**
-- Tumor type/histology and platinum status
-- Key metastases / disease extent
-- Key molecular markers (BRCA/HRD/MSI/PD-L1/ATM)
-- Major clinical constraints (anemia, organ function, performance)
+```
+You are preparing a single concise English query to retrieve guideline/clinical evidence 
+for this ovarian cancer MDT case.
 
-**Constraint:** ≤40 words, no patient identifiers
+# STRUCTURED_CASE_TEXT
+{question}
+
+Write ONE line (<=40 words) focusing on:
+- tumor type/histology and platinum status;
+- key metastases / disease extent;
+- key molecular markers if mentioned (e.g., BRCA/HRD/MSI/PD-L1/ATM);
+- major clinical constraints (e.g., anemia, organ function, performance).
+
+Do NOT mention report_ids, dates, hospital names, or patient identifiers.
+
+IMPORTANT PRIORITY: If KEY FACTS section exists above, it takes PRIORITY over STRUCTURED_CASE_TEXT 
+for genetic markers. If KEY FACTS shows 'MUTATION_REPORT' with 'HRD 阴性' (negative) or 
+'BRCA 未检出/阴性' (negative), you MUST say 'HRD-negative' or 'BRCA-negative' in your query. 
+NEVER say 'not reported' or 'not tested' when KEY FACTS contains MUTATION_REPORT data.
+
+Output ONLY the query text.
+```
 
 ### evidence_summarizer
 
 Digests RAG results into actionable evidence bullets.
 
-**Rules:**
-- Each bullet must be actionable evidence
-- Do NOT restate patient-specific facts
-- Each bullet MUST include evidence tag
-- One bullet per RAG result, in order
+```
+# RAG CHUNKS
+{rag_pack}
+
+{count_info}
+Summarize into evidence bullets for MDT decision-making.
+
+Rules:
+- Each bullet must be actionable evidence (guideline/trial-based).
+- Do NOT restate patient-specific facts.
+- Avoid long quotes.
+- Each bullet MUST include at least one evidence tag: [@guideline:doc_id | Page xx] or [@pubmed | PMID].
+- Output ONLY plain text bullets, one per RAG result, in order.
+```
 
 ---
 
@@ -307,6 +399,114 @@ Short role descriptions for specialized utility agents:
 | `global_guideline_digester` | Digest RAG chunks into exactly N evidence bullets (1:1 mapping) |
 | `assistant` | MDT assistant, summarize only, do not decide treatment |
 | `trial_selector` | Clinical trial matching, recommend at most ONE trial |
+
+### Detailed Agent Prompts
+
+**rag_query_builder:**
+```
+Construct concise English MDT guideline query.
+```
+
+**global_guideline_digester:**
+```
+(Dynamic: 1:1 mapping) Digest RAG chunks into exactly N evidence bullets (one per RAG result); 
+no patient facts.
+```
+
+**assistant:**
+```
+You are MDT assistant. Summarize only. Do not decide treatment.
+```
+
+**trial_selector:**
+```
+You are an MDT assistant for clinical trial matching in gynecologic oncology. 
+Follow the trial recommendation gate strictly and recommend at most ONE trial.
+```
+
+### Trial Selector Detailed Prompt
+
+**Location:** `host/decision.py` → `assistant_trial_suggestion()`
+
+When performing clinical trial matching, the trial_selector uses this comprehensive prompt:
+
+```
+You are an MDT assistant for gynecologic oncology clinical trial matching.
+
+CRITICAL BEHAVIOR:
+- You MUST NOT ask the user any questions.
+- You MUST NOT request additional information.
+- You MUST NOT output anything except the required template.
+- Use ONLY the provided PATIENT CASE text and AVAILABLE TRIALS list.
+- If eligibility is unclear due to missing key facts, you MUST output None.
+
+PATIENT CASE (facts only; do not infer):
+{case_json_str}
+
+AVAILABLE TRIALS (compact; use id/name exactly as shown):
+{trials_json}
+
+DECISION RULE (be conservative):
+Recommend ONE trial ONLY IF ALL are true:
+1) Cancer type / primary site clearly matches.
+2) Disease setting clearly matches (e.g., recurrent/advanced/metastatic and line is not fundamentally unclear).
+3) Required biomarker/subtype is explicitly present in case text (if trial requires it).
+4) No more than 2 critical eligibility confirmations remain.
+
+If ANY of the above is not satisfied -> output None.
+
+OUTPUT TEMPLATE (EXACT; no extra text):
+
+Trial Recommendation:
+- id: <trial id or None>
+- name: <trial name or None>
+- Reason: <1 short sentence>
+- Missing eligibility confirmations (0-2 items):
+  - item1 (or "None")
+  - item2
+```
+
+### Auto Mode Routing Agent Prompt
+
+**Location:** `host/orchestrator.py` → `process_auto_query()`
+
+When using `--agent auto`, the routing agent analyzes case complexity:
+
+```
+# OMGs System Background (for routing decision)
+OMGs (Ovarian-cancer Multidisciplinary intelligent aGent System) is specifically designed for:
+- Complex ovarian cancer patients requiring multi-line therapy
+- Full lifecycle treatment management (from diagnosis through recurrence)
+- Multidisciplinary decision support integrating oncology, radiology, pathology, and nuclear medicine
+
+# Your Task
+Analyze the following case and determine which processing mode is most appropriate.
+
+# Available Modes
+1. chair_sa: Simplest mode for environment testing or trivial queries
+2. chair_sa_k: Single agent with Knowledge (guidelines + literature) - for cases needing evidence reference
+3. chair_sa_kep: Single agent with Knowledge + Evidence Pack (reports + trials) - for complex cases with available data
+4. omgs: Full multi-agent MDT discussion - for highly complex cases requiring multi-specialty debate
+
+# Complexity Factors to Consider
+- Line of therapy: 初诊/1线 (simple) → 2-3线 (medium) → 4线+ (complex)
+- Genetic testing: None/simple (simple) → BRCA/HRD present (medium) → Multiple complex mutations (complex)
+- Platinum status: Clear (simple) → Borderline (medium) → Complex/contradictory (complex)
+- Comorbidities: None/few (simple) → Moderate (medium) → Multiple/severe (complex)
+- Clinical questions: Single clear question (simple) → 2-3 questions (medium) → Multiple difficult decisions (complex)
+
+# Case to Analyze
+{question_str}
+
+# Output Format (JSON only, no other text)
+{"mode": "chair_sa|chair_sa_k|chair_sa_kep|omgs", "reason": "brief explanation in Chinese"}
+```
+
+**Routing Agent Instruction:**
+```
+You are a clinical triage agent for OMGs. 
+Analyze case complexity and select the appropriate processing mode.
+```
 
 ---
 
