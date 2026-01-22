@@ -66,11 +66,11 @@ def build_skill_digest(role: str) -> str:
     
     # Role-specific constraints (aligned with ROLE_PROMPTS in host/experts.py)
     role_constraints = {
-        "chair": "Integrate all specialties; no specific drug names.",
-        "oncologist": "Systemic therapy categories only; no drug names.",
-        "radiologist": "Imaging findings only; no treatment advice.",
-        "pathologist": "Histology/molecular only; no treatment advice.",
-        "nuclear": "Metabolic findings only; no treatment advice.",
+        "chair": "Integrate all specialties; no specific drug names; highlight missing info.",
+        "oncologist": "Treatment categories only; no specific drug names.",
+        "radiologist": "Imaging findings only; no drug names or treatment recommendations.",
+        "pathologist": "Histology/molecular only; no drug names or prognosis/treatment advice.",
+        "nuclear": "Metabolic findings only; no drug names or treatment recommendations.",
     }
     
     constraint = role_constraints.get(role, "Follow role-specific guidelines.")
