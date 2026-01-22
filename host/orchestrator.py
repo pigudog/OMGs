@@ -2018,6 +2018,173 @@ Change Triggers:
 
 
 ###############################################################################
+# Helper: Build report context from case_json for Chair-SA evidence tags
+###############################################################################
+def build_case_report_context(case_json: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Build a report_context from case_json for Chair-SA mode.
+    
+    Extracts date-based information from structured case data to enable
+    evidence tag lookup in build_references_section.
+    
+    The case_json may contain:
+    - CASE_CORE: diagnosis, biomarkers, treatment history
+    - TIMELINE: treatment timeline with dates
+    - MED_ONC: genetic testing results
+    - RADIOLOGY: imaging studies
+    - PATHOLOGY: pathology specimens
+    - LAB_TRENDS: lab results over time
+    
+    Args:
+        case_json: Structured case data dictionary
+    
+    Returns:
+        report_context dict compatible with _find_report_in_context:
+        {
+            "lab": {"chair": [...]},
+            "imaging": {"chair": [...]},
+            "pathology": {"chair": [...]},
+            "mutation": {"chair": [...]},
+            "case": {"chair": [...]},  # For general case facts
+        }
+    """
+    import re
+    
+    context = {
+        "lab": {"chair": []},
+        "imaging": {"chair": []},
+        "pathology": {"chair": []},
+        "mutation": {"chair": []},
+        "case": {"chair": []},
+    }
+    
+    # Helper to extract dates from text
+    def extract_dates_from_text(text: str) -> List[str]:
+        """Extract date patterns from text."""
+        if not text:
+            return []
+        # Match various date formats: YYYY-MM-DD, YYYY.MM.DD, YYYY/MM/DD, YYYY.MM, YYYY-MM
+        patterns = [
+            r'\d{4}-\d{2}-\d{2}',  # 2022-01-17
+            r'\d{4}\.\d{2}\.\d{2}',  # 2022.01.17
+            r'\d{4}/\d{2}/\d{2}',  # 2022/01/17
+            r'\d{4}\.\d{1,2}\.\d{1,2}',  # 2022.1.17
+            r'\d{4}-\d{1,2}-\d{1,2}',  # 2022-1-17
+        ]
+        dates = []
+        for pattern in patterns:
+            dates.extend(re.findall(pattern, str(text)))
+        return list(set(dates))
+    
+    # Convert case_json to string for date extraction
+    case_str = json.dumps(case_json, ensure_ascii=False) if isinstance(case_json, dict) else str(case_json)
+    all_dates = extract_dates_from_text(case_str)
+    
+    # Process structured case data if available
+    if isinstance(case_json, dict):
+        # Extract from CASE_CORE
+        core = case_json.get("CASE_CORE", {})
+        if core:
+            # Diagnosis, biomarkers, treatment history -> case
+            for key in ["DIAGNOSIS", "BIOMARKERS", "CURRENT_STATUS", "LINE_OF_THERAPY"]:
+                if core.get(key):
+                    context["case"]["chair"].append({
+                        "report_id": key,
+                        "type": "case",
+                        "summary": str(core.get(key))[:200],
+                    })
+        
+        # Extract from TIMELINE
+        timeline = case_json.get("TIMELINE", {})
+        if isinstance(timeline, dict):
+            for date, events in timeline.items():
+                context["case"]["chair"].append({
+                    "report_id": date,
+                    "date": date,
+                    "type": "case",
+                    "summary": str(events)[:200] if events else "",
+                })
+        
+        # Extract from MED_ONC (genetic testing)
+        med_onc = case_json.get("MED_ONC", {})
+        if med_onc:
+            genetic = med_onc.get("genetic_testing", {})
+            if genetic:
+                for key, value in genetic.items() if isinstance(genetic, dict) else []:
+                    context["mutation"]["chair"].append({
+                        "report_id": key,
+                        "type": "mutation",
+                        "summary": str(value)[:200],
+                    })
+        
+        # Extract from RADIOLOGY
+        radiology = case_json.get("RADIOLOGY", {})
+        if radiology:
+            studies = radiology.get("studies", [])
+            for study in studies if isinstance(studies, list) else []:
+                date = study.get("date", "")
+                context["imaging"]["chair"].append({
+                    "report_id": date,
+                    "date": date,
+                    "type": "imaging",
+                    "impression": study.get("impression", ""),
+                    "summary": study.get("impression", "")[:200],
+                })
+        
+        # Extract from PATHOLOGY
+        pathology = case_json.get("PATHOLOGY", {})
+        if pathology:
+            specimens = pathology.get("specimens", [])
+            for spec in specimens if isinstance(specimens, list) else []:
+                date = spec.get("date", "")
+                context["pathology"]["chair"].append({
+                    "report_id": date,
+                    "date": date,
+                    "type": "pathology",
+                    "diagnosis": spec.get("diagnosis", ""),
+                    "summary": spec.get("diagnosis", "")[:200],
+                })
+        
+        # Extract from LAB_TRENDS
+        labs = case_json.get("LAB_TRENDS", {})
+        if isinstance(labs, dict):
+            for marker, values in labs.items():
+                if isinstance(values, list):
+                    for entry in values:
+                        if isinstance(entry, dict):
+                            date = entry.get("date", "")
+                            context["lab"]["chair"].append({
+                                "report_id": date,
+                                "date": date,
+                                "type": "lab",
+                                "result": f"{marker}: {entry.get('value', '')}",
+                                "summary": f"{marker}: {entry.get('value', '')}",
+                            })
+    
+    # Add all extracted dates as general case references (fallback)
+    for date in all_dates:
+        # Check if date already exists in any category
+        existing = False
+        for cat in context.values():
+            for report in cat.get("chair", []):
+                if report.get("report_id") == date or report.get("date") == date:
+                    existing = True
+                    break
+            if existing:
+                break
+        
+        if not existing:
+            context["case"]["chair"].append({
+                "report_id": date,
+                "date": date,
+                "type": "case",
+                "summary": f"Case data from {date}",
+            })
+    
+    return context
+
+
+###############################################################################
 # CHAIR-SA - Simplest Mode (Environment/API Testing)
 ###############################################################################
 def process_chair_sa_query(
@@ -2100,14 +2267,21 @@ Base your assessment ONLY on the case information provided below.
 # HARD RULES
 1) All decisions are for THIS visit date and future care.
 2) PATIENT FACTS come ONLY from Role-Specific Case View below.
-3) NO clinical reports or RAG evidence are available in this mode.
+3) NO RAG (guidelines/PubMed) evidence is available in this mode.
 4) If critical information is missing, clearly state what data would be needed.
 5) Be conservative in recommendations when lacking specific evidence.
+6) Any factual statement from the case data MUST include evidence tag:
+   - For lab results: [@date | LAB] (e.g., [@2022-01-17 | LAB])
+   - For imaging findings: [@date | MR] or [@date | CT] (e.g., [@2022-08-19 | CT])
+   - For genetic testing: [@date | Genomics] (e.g., [@2021-09 | Genomics])
+   - For pathology: [@date | Pathology] (e.g., [@2021-09-08 | Pathology])
+   - For surgery/treatment history: [@date | CASE] (e.g., [@2021-09-08 | CASE])
+   Always use spaces around | for consistency: [@xxx | yyy].
 
 # Role-Specific Case View (PATIENT FACTS)
 {case_view}
 
-# NOTE: No RAG knowledge or clinical reports available in this mode.
+# NOTE: No RAG knowledge available - reference case data with evidence tags as instructed above.
 """.strip()
     
     chair_agent = Agent(
@@ -2130,17 +2304,25 @@ Base your assessment ONLY on the case information provided below.
 As the MDT chair for gynecologic oncology, you are seeing the patient at OUTPATIENT TIME: {visit_time_str}.
 Based on the case information provided in your system prompt, determine the CURRENT best management plan for this visit.
 
-NOTE: This is the simplest mode without RAG knowledge or clinical reports.
+NOTE: This is the simplest mode without RAG knowledge (guidelines/PubMed).
 You should clearly indicate what additional information would be needed for more definitive recommendations.
+
+IMPORTANT: Any factual statement from the case data MUST include evidence tag:
+- For lab results: [@date | LAB] (e.g., [@2022-01-17 | LAB])
+- For imaging findings: [@date | MR] or [@date | CT]
+- For genetic testing: [@date | Genomics]
+- For pathology: [@date | Pathology]
+- For surgery/treatment history: [@date | CASE]
+Always use spaces around | for consistency.
 
 # Response Format (follow OMGs standard format)
 Final Assessment:
-<1–3 sentences: summarize case, current status, and key uncertainties/missing data>
+<1–3 sentences: summarize case, current status, and key uncertainties/missing data. Include evidence tags for any facts cited.>
 
 Core Treatment Strategy:
-- < ≤20 words concrete decision or recommended next step >
-- < ≤20 words concrete decision or recommended next step >
-- < ≤20 words concrete decision or recommended next step >
+- < ≤20 words concrete decision or recommended next step, with evidence tag if citing case data >
+- < ≤20 words concrete decision or recommended next step, with evidence tag if citing case data >
+- < ≤20 words concrete decision or recommended next step, with evidence tag if citing case data >
 
 Change Triggers:
 - < ≤20 words "if X, then adjust management from A to B" >
@@ -2161,8 +2343,11 @@ Core Treatment Strategy:
 Change Triggers:
 - Re-run after fixing configuration issues"""
     
-    # Append empty references section (no evidence in this mode)
-    final_output = final_output.strip() + "\n\n---\n## References\n(No evidence sources in Chair-SA testing mode)"
+    # Build report context from case_json for evidence tag lookup
+    report_context = build_case_report_context(case_json)
+    
+    # Append references section (auto-generated from evidence tags in output)
+    final_output = append_references_to_output(final_output, trial_note="", report_context=report_context)
     
     print(final_output)
     trace.emit("final_output_end", {"final_output_chars": len(final_output or "")})
@@ -2202,21 +2387,21 @@ Change Triggers:
             ts=(log_paths or {}).get("ts") or datetime.now().strftime("%Y-%m-%d_%H-%M-%S"),
             question_str=question_str,
             final_output=final_output,
-            context={},
+            context=report_context,
             rag_query="(No RAG in Chair-SA mode)",
             rag_pack="",
             rag_raw=[],
-            global_guideline_digest="(No knowledge in Chair-SA mode)",
+            global_guideline_digest="(No knowledge in Chair-SA mode - case data references only)",
             interaction_log={},
             question_raw=question_raw,
             trial_note="",
-            initial_ops={"chair": "(Chair-SA: simplest testing mode)"},
+            initial_ops={"chair": "(Chair-SA: case data references mode)"},
             final_round_ops={},
             trace_events=trace.events,
             trace_mermaid=trace.to_mermaid_flow() if trace.enabled else "",
             roles_order=["chair"],
             pipeline_stats=pipeline_stats,
-            merged_summary="(Chair-SA: Simplest testing mode - no MDT discussion)",
+            merged_summary="(Chair-SA: Case data references mode - no MDT discussion)",
         )
     except Exception as e:
         print(f"{Color.WARNING}⚠ HTML report generation failed: {e}{Color.RESET}")

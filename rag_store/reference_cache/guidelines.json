@@ -14,40 +14,40 @@
     "page": 10,
     "text": "with ﬁrst line. This can probably be explained by an accu-\nmulative exposure to platinum.85\nSeveral factors need to be taken into consideration for\nthe selection of PARPis or anti-VEGF therapies in relapse\nincluding histotype, BRCA1/2-mut status, prior therapies\n(PARPi and/or bevacizumab), expected response to plat-\ninum ChT, presence of symptoms (speciﬁcally ascites),\npersistent toxicities from prior therapies, no contraindica-\ntion to bevacizumab and patient preference. Generally, for\nsymptomatic patients requiring a rapid treatment response,\nthe combination of carboplatin with bevacizumab would be\nrecommended (Figure 3).\nFurther information is provided in the Supplementary\nMaterial Section 4, available at https://doi.org/10.1016/j.\nannonc.2023.07.011.\nSystemic therapy when platinum is not an option\nFor some patients with recurrent ovarian cancer, platinum\nrechallenge may not be considered clinically appropriate.\nFor these patients, alternative systemic treatments are\navailable. Patients with good performance status should be\nprioritised for novel therapies within clinical trials. Inte-\ngrating early palliative care is particularly crucial.",
     "metadata": {
-      "rank": 3,
-      "score": 0.6175931692123413
+      "rank": 1,
+      "score": 0.6751233339309692
     },
-    "cached_at": "2026-01-21T23:47:31.437716"
+    "cached_at": "2026-01-22T07:02:53.281041"
   },
   "esmo_cpg_epithelialovarian_2023__v00000000|11": {
     "doc_id": "esmo_cpg_epithelialovarian_2023__v00000000",
     "page": 11,
     "text": "cytoreduction\no Residual ChT toxicity\no The patient’s general condition and preferences\n\u0004 Patients with ﬁrst relapse of ovarian cancer after >6\nmonths of last platinum administration should be evalu-\nated by a gynaecological oncology centre experienced in\nsurgery for ovarian cancer to identify potential candi-\ndates for surgical cytoreduction [I, A].\n\u0004 Patients who have previously responded to platinum\nwithout early symptomatic relapse should be treated\nwith either a platinum-based doublet (PLD, gemcitabine\nor paclitaxel) with bevacizumab [I, A; carboplatine\ngemcitabineebevacizumab ESMO-MCBS v1.1 score: 3]\nor a platinum-based doublet followed by maintenance\nwith PARPi therapy if a response is achieved and the\npatient has not been previously exposed to PARPis\n[I, A; olaparib for BRCA1/2-mutated: ESMO-MCBS v1.1\nscore: 2; niraparib regardless of BRCA1/2-mut status:\nESMO-MCBS v1.1 score: 3; rucaparib regardless of\nBRCA1/2-mut status: ESMO-MCBS v1.1 score: 3].\n\u0004 For patients requiring rapid response, the combination\nof a platinum-based doublet (PLD, gemcitabine or pacli-\ntaxel) with bevacizumab is preferred [V, A; carboplatine\ngemcitabineebevacizumab ESMO-MCBS v1.1 score: 3].",
     "metadata": {
-      "rank": 3,
-      "score": 0.6415979266166687
+      "rank": 5,
+      "score": 0.6331446766853333
     },
-    "cached_at": "2026-01-21T23:22:06.467932"
+    "cached_at": "2026-01-22T07:02:53.298930"
   },
   "nccn_ovariancancer_v3_2025__v00000000|15": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 15,
     "text": "based chemotherapy,n\npreferred for first\nrecurrence (category 1)\nor\nRecurrence therapyn,kk\nand/or\nBest supportive care\n(See NCCN Guidelines\nfor Palliative Care)\nConsider\nsecondary\ncytoreductive\nsurgeryj,k\nImmediate platinum-based\nrecurrence therapyn (category 2B)\nand/or\nBest supportive care (See NCCN\nGuidelines for Palliative Care)\nRECURRENCE THERAPY FOR PLATINUM-SENSITIVE DISEASEn,gg,hh,ii\nMaintenance therapy (if PR or CR)\n• Useful in certain circumstances:\n\u0017Continue bevacizumab if previously\ntreated with chemotherapy +\nbevacizumab;\nor\n\u0017PARPi therapy (for those with BRCA\n1/2 mutation)ll:\n ◊If not previously used (category 1)\n ◊If disease has not progressed\nduring prior PARPi treatment\nor\nObserve\ngg Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.\nhh During and after treatment for recurrence, patients should be evaluated as indicated with\ntumor markers and repeat imaging (with modalities previously used) to document response\nand/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\nkk Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.",
     "metadata": {
-      "rank": 1,
-      "score": 0.5869771838188171
+      "rank": 4,
+      "score": 0.6163729429244995
     },
-    "cached_at": "2026-01-21T23:50:14.544989"
+    "cached_at": "2026-01-22T07:17:50.080406"
   },
   "nccn_ovariancancer_v3_2025__v00000000|14": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 14,
     "text": "ff Definitions of platinum-sensitive and platinum-resistant disease\nrepresent a spectrum of disease; clinical judgment and flexibility should\nbe utilized in determining treatment options.\ngg Data are limited on primary and maintenance therapy for recurrent/\npersistent LCOC.\nhh During and after treatment for recurrence, patients should be evaluated\nas indicated with tumor markers and repeat imaging (with modalities\npreviously used) to document response and/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\njj Patients who do not respond and progress on two consecutive regimens\nwithout evidence of clinical benefits have diminished likelihood of\nbenefitting from additional therapy (Griffiths RW, et al. Int J Gynecol\nCancer 2011;21:58-65). Decisions to offer clinical trials, supportive care,\nor additional therapy should be made on an individual basis.\nkk Localized radiation therapy (RT) can be considered to palliate\nsymptoms and/or for oligometastatic disease.\nOV-8\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.",
     "metadata": {
-      "rank": 2,
-      "score": 0.6223087906837463
+      "rank": 1,
+      "score": 0.6430296897888184
     },
-    "cached_at": "2026-01-21T23:47:31.435389"
+    "cached_at": "2026-01-22T07:48:44.480684"
   },
   "esmo_cpg_epithelialovarian_2023__v00000000|4": {
     "doc_id": "esmo_cpg_epithelialovarian_2023__v00000000",
@@ -64,60 +64,60 @@
     "page": 22,
     "text": "Survivorship)\nRecurrent\ndiseaset\nHormonal therapyu\nor\nChemotherapy (if not previously used), see OV-C (6 of 12)\nor\nSystemic therapyf,v\n• For platinum-sensitive disease, see OV-C (8 of 12)\n• For platinum-resistant disease, see OV-C (9 of 12)\nor\nObservation\nf See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions\n(OV-D).\no Validated molecular testing should be performed in a CLIA-approved facility\nusing the most recent available tumor tissue. Tumor molecular analysis is\nrecommended to include, at a minimum, tests to identify potential benefit from\ntargeted therapeutics that have tumor-specific or tumor-agnostic benefit including,\nbut not limited to, HER2 status (by IHC), BRCA1/2, HRD status, MSI, MMR,\nTMB, BRAF, FRα (FOLR1), RET, and NTRK if prior testing did not include these\nmarkers. More comprehensive testing may be particularly important in LCOC with\nlimited approved therapeutic options (OV-B).\np CT is performed with oral and iodinated IV contrast (unless contraindicated due\nto anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI\nis performed with gadolinium-based contrast agents (unless contraindicated due",
     "metadata": {
-      "rank": 4,
-      "score": 0.6233800649642944
+      "rank": 5,
+      "score": 0.6108770370483398
     },
-    "cached_at": "2026-01-21T18:41:44.024236"
+    "cached_at": "2026-01-22T04:59:11.343889"
   },
   "esmo_cpg_epithelialovarian_2023__v00000000|7": {
     "doc_id": "esmo_cpg_epithelialovarian_2023__v00000000",
     "page": 7,
     "text": "A descriptive OS analysis of SOLO1 at 7-year follow-up60\nand the ﬁnal OS analysis of PAOLA-161 have shown a beneﬁt\nin OS for olaparib in patients with BRCA1/2-mutated tu-\nmours and olaparibebevacizumab in patients with HRD-\npositive tumours regardless of BRCA1/2-mut status (see\nSupplementary Material Section 3, available at https://doi.\norg/10.1016/j.annonc.2023.07.011).\nNon-high-grade serous advanced ovarian cancer. Pacli-\ntaxelecarboplatin is the standard systemic ChT used in\nLGSC, CCC and MC. Multiple retrospective studies, however,\nshowed lower response rates in these histotypes compared\nwith HGSC.62-64 Bevacizumab has shown activity in all his-\ntotypes including those less chemoresponsive, e.g. LGSC or\nCCC.49 The majority of LGSCs have high expression of es-\ntrogen receptor (ER) and progesterone receptor (PgR);\nretrospective studies suggest a possible therapeutic value of\nhormone therapy in the maintenance of newly diagnosed\nadvanced LGSC.65 This intervention is currently under\nevaluation in a prospective RCT (NCT04095364).\nRecommendations\n\u0004 Patients with advanced EOC should be evaluated for PCS\nby a specialised team, with the aim of achieving",
     "metadata": {
-      "rank": 5,
-      "score": 0.647292971611023
+      "rank": 3,
+      "score": 0.601442813873291
     },
-    "cached_at": "2026-01-21T23:12:35.107622"
+    "cached_at": "2026-01-22T05:24:41.313816"
   },
   "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000|10": {
     "doc_id": "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000",
     "page": 10,
     "text": "platinum-based ChT followed by niraparib or rucaparib if\nin CR/PR/NED [I, B].\nConsensus: 97% (35) yes, 0% (0) no, 3% (1) abstain (36\nvoters)\nRecommendation 13.9: When used as maintenance in\npatients in CR/PR/NED to platinum-based ChT, olaparib\n(alone or in combination with bevacizumab) and rucaparib\nare recommended for 2 years, and niraparib is recom-\nmended for 3 years [I, A].\nConsensus: 97% (34) yes, 0% (0) no, 3% (1) abstain (35\nvoters)\n14. How should older/frail patients with tubo-ovarian\ncarcinoma be investigated and treated?\nOlder patients are under-represented in clinical trials due\nto their poor performance status (PS) and comorbidities,88\nand their outcomes are poorer.89 Geriatric assessment\ngathers information on functional, mental and nutritional\nstatus, emotional conditions and social support.90 Vulner-\nability scores have been validated in clinical trials.90,91\nSurgery, frequently carried out in an emergency context\nand in unspecialised centres, is often incomplete, with\nhigher\npost-operative\ncomplications.92\nChT\nmay\nbe\nunderutilised.93,94\nRecommendation 14.1: Patients should not be excluded\nfrom diagnostic procedures, clinical trials and speciﬁc",
     "metadata": {
-      "rank": 3,
-      "score": 0.6678265333175659
+      "rank": 4,
+      "score": 0.6566630601882935
     },
-    "cached_at": "2026-01-21T23:10:11.935124"
+    "cached_at": "2026-01-22T05:36:14.501687"
   },
   "esgo_eshre_esge_fertilitysparing_pocket_2025__v00000000|17": {
     "doc_id": "esgo_eshre_esge_fertilitysparing_pocket_2025__v00000000",
     "page": 17,
-    "text": "to the use of ovarian preservation itself and/or the natural history of the disease (whatever\nthe preservation or not of the ovary) in these patients having poorest prognostic factors).\n1non-invasive peritoneal implants; 2including immature teratoma, dysgerminoma, Yolk-sac\ntumours; 3well and moderately differentiated; 4poorly differentiated; #for grade 2-3 imma-\nture teratoma stage II-IV, fertility-sparing data are limited; ## for Sertoli-Leydig cell tumour\nstage IC2-3, fertility-sparing data are limited.\nBOT borderline ovarian tumour; CCC clear cell carcinoma; GCT germ cell tumour; GrCT\ngranulosa cell tumour; HGEC high-grade endometrioid carcinoma; HGSC high-grade serous\ncarcinoma; LGSC low-grade serous carcinoma; LGEC low-grade endometrioid carcinoma,\nMCexp mucinous carcinoma with expansile invasion, MCinf mucinous carcinoma with in-\nfiltrative invasion; SCC small cell carcinoma; SLCT Sertoli-Leydig cell tumour.",
+    "text": "17\nTable 1\nIndications for in vivo ovarian tissue preservation in ovarian\nneoplasms according to the histological type and the stage\nof the disease\nSTAGE\nEPITHELIAL OVARIAN NEOPLASMS\nNON-EPITHELIAL OVARIAN NEOPLASMS\nBOT1\nLGSC\nLGEC\nMCexp\nCCC\nHGSC\nHGEC\nMCinf\nGCT2\nSCC\nGrCT\nSLCT3\nSLCT4\nIA\nIB\nIC1\nIC2\n##\nIC3\n##\nII-IV\n#\n\nfavourable oncologic selection criteria for fertility-sparing management as defined in\nthe text (based on the favourable survival and/or recurrence rates observed in cohorts and/\nor comparative studies (radical versus conservative) of patients treated with such characteris-\ntics).\n\noncologic selection criteria acceptable in selected cases (insufficient or conflicting data\nto evaluate accurately the results of the ovarian preservation in this subgroup of patients).\n\nunfavourable oncologic selection criteria for ovarian preservation (poorest survival\nobserved in patients having an ovarian preservation in these subgroups. It could be related\nto the use of ovarian preservation itself and/or the natural history of the disease (whatever\nthe preservation or not of the ovary) in these patients having poorest prognostic factors).",
     "metadata": {
-      "rank": 1,
-      "score": 0.6351507306098938
+      "rank": 4,
+      "score": 0.6059783101081848
     },
-    "cached_at": "2026-01-21T23:47:31.432465"
+    "cached_at": "2026-01-22T07:37:48.577768"
   },
   "esmo_cpg_nonepithelialovarian_2018__v00000000|13": {
     "doc_id": "esmo_cpg_nonepithelialovarian_2018__v00000000",
     "page": 13,
     "text": "nately, none of them has been compared with BEP in randomised\ntrials. A phase II Gynecologic Oncology Group (GOG) trial\nreported high activity with an acceptable toxicity proﬁle for a\ncarboplatin–etoposide combination in the adjuvant setting\nof completely resected stages I–III dysgerminomas [40].\nDysgerminomas are very sensitive to RT; however, its use is lim-\nited to selected cases because of the negative impact on fertility.\nIn patients with platinum-sensitive relapse (progression\n> 4–6 weeks after completion of ChT), ifosfamide/platinum (IP)\nwith or without paclitaxel (P) should be considered as second-\nline treatment [IV, C] [41]. Further active ChT regimens include:\nvinblastine/ifosfamide/cisplatin (VeIP) and cisplatin/vinblastine/\nbleomycin (PVB) [IV, C] [42]. Patients resistant to a cisplatin-\nbased combination may receive vincristine/actinomycin D/cyclo-\nphosphamide (VAC) or paclitaxel/gemcitabine or gemcitabine/\noxaliplatin as salvage therapy [IV, C].\nAlthough there is a role for ASCT in relapsed testicular cancer, it\nis not the standard of care for women with relapsed or recurrent\nmalignant ovarian GCTs and its role remains undeﬁned because of",
     "metadata": {
-      "rank": 2,
-      "score": 0.6657684445381165
+      "rank": 1,
+      "score": 0.6347836852073669
     },
-    "cached_at": "2026-01-21T23:12:35.102014"
+    "cached_at": "2026-01-22T05:21:55.960201"
   },
   "nccn_ovariancancer_v3_2025__v00000000|11": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 11,
-    "text": "is performed with gadolinium-based contrast agents (unless contraindicated due\nto anaphylaxis) and is preferred in select patients with renal dysfunction over CT.\nChest CT can be done with or without iodinated IV contrast.\nn See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions\n(OV-D).\no Carcinosarcoma, clear cell, mucinous, low-grade serous, grade 1 endometrioid,\nborderline epithelial, malignant sex cord-stromal tumors, and germ cell tumors.\nt Pathologists recommend categorizing serous ovarian cancer as either low-grade\nor high-grade. Grade 2 serous is considered high-grade.\nu Consider expert pathologic review to confirm histologic diagnosis. See WHO\nHistologic Classification (OV-E).\nv Patients receiving primary chemotherapy will be monitored as follows:\n1. Every 1–3 cycles: Physical exam and consider pelvic exam\n2. As indicated: Interim CBC and chemistry profiles\n3. \u0007CA-125 levels or other tumor markers as clinically indicated prior to each cycle\nof chemotherapy\n4. \u0007C/A/P CT or MRI with contrast, PET/CT (skull base to mid-thigh), or PET as\nindicated.\nx No definitive evidence of disease.\nGrade 2 endometrioid\nGrade 3 endometrioid/\nhigh-grade serous\ncarcinomat",
+    "text": "Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nEpithelial Ovarian Cancer/Fallopian Tube Cancer/\nPrimary Peritoneal Cancer\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nOV-4\nPATHOLOGIC STAGINGt,u\nStage IA or IB\nStage lC\n(High-grade serous or\ngrade 2/3 endometrioid)\nStage II\nStage III\nStage IV\nIV platinum-based therapyn,v\n(see primary regimens for\nstage I disease [OV-C, 5 of 12])\nObserve\nor\nIntravenous (IV) platinum-based\ntherapyn,v (see primary regimens for\nstage I disease [OV-C, 5 of 12])\nMonitoring/\nFollow-up\n(OV-6)\nMaintenance\nTherapy (OV-5)\na CT is performed with oral and iodinated IV contrast (unless contraindicated due\nto anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI\nis performed with gadolinium-based contrast agents (unless contraindicated due\nto anaphylaxis) and is preferred in select patients with renal dysfunction over CT.",
     "metadata": {
-      "rank": 4,
-      "score": 0.6277669072151184
+      "rank": 2,
+      "score": 0.61810702085495
     },
-    "cached_at": "2026-01-21T23:36:21.552093"
+    "cached_at": "2026-01-22T06:04:12.063435"
   },
   "nccn_ovariancancer_v3_2025__v00000000|6": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
@@ -134,20 +134,20 @@
     "page": 6,
     "text": "carcinoma demonstrated that adjuvant platinum-based ChT\nprolonged survival, but did not prospectively evaluate his-\ntological subtypes.38,39 High-grade EC has a similar prog-\nnosis to HGSC and is worse than low-grade EC. It is not clear\nwhether there is any survival beneﬁt for adjuvant ChT in\nstage IA or IB CCC.40,41\nRecommendation\n7.1:\nComplete\nsurgical\nresection\nincluding total abdominal hysterectomy, bilateral salpingo-\noophorectomy, omentectomy, systematic pelvic and para-\naortic lymph node dissection, peritoneal biopsies and\ncytological analysis should be the standard surgical pro-\ncedure in stage I-II high-grade EC, CCC and high-risk\nmucinous ovarian carcinoma [IV, A].\nConsensus: 97% (38) yes, 3% (1) no, 0% (0) abstain (39\nvoters)\nRecommendation 7.2: Patients with stage I-II high-grade\nEC should be offered adjuvant platinum-based ChT [IV, A].\nConsensus: 100% (39) yes, 0% (0) no, 0% (0) abstain (39\nvoters)\nRecommendation 7.3: Adjuvant ChT may be omitted for\nadequately staged IA or IB CCC [IV, C].\nConsensus: 90% (35) yes, 5% (2) no, 5% (2) abstain (39\nvoters)\nRecommendation 7.4: Adjuvant ChT may be considered\nfor stage IC1 CCC [IV, C].",
     "metadata": {
-      "rank": 3,
-      "score": 0.5692931413650513
+      "rank": 4,
+      "score": 0.6441802978515625
     },
-    "cached_at": "2026-01-21T23:50:14.550030"
+    "cached_at": "2026-01-22T07:02:53.294682"
   },
   "esgo_eshre_esge_fertilitysparing_pocket_2025__v00000000|16": {
     "doc_id": "esgo_eshre_esge_fertilitysparing_pocket_2025__v00000000",
     "page": 16,
     "text": "16\n•\t Granulosa cell tumours stage IA and IC1;\n•\t Sertoli-Leydig cell well-and-moderately differentiated tumours stage IA;\n•\t Low-grade serous and low grade endometrioid carcinomas stage IA and IC1;\n•\t High-grade serous carcinoma stage IA;\n•\t Mucinous carcinoma expansile subtype stage IA and IC1;\n•\t Mucinous carcinoma infiltrative stage IA;\n•\t Clear-cell carcinoma stage IA and IC1.\nB\nUnfavourable oncologic selection criteria for ovarian preservation\nOne of the following criteria should be met:\n•\t Invasive epithelial ovarian tumours stage IB and II–IV;\n•\t Low-grade serous carcinoma stage IC3;\n•\t Low-grade endometrioid carcinoma stage IC3;\n•\t High-grade serous and high-grade endometrioid carcinomas stage IC3;\n•\t Clear cell carcinoma stage IC3;\n•\t Mucinous carcinoma infiltrative stage IC3;\n•\t Small-cell carcinoma hyper calcaemic type;\n•\t Granulosa cell tumour stage IB and II–IV;\n•\t Sertoli-Leydig cell tumours well-and-moderately differentiated at stages\n\nIB and IC2–IV, and poorly differentiated at all stages.\nB\nOncologic selection criteria acceptable in selected cases\nOne of the following criteria should be met:\n•\t Low-grade serous and low-grade endometrioid carcinomas stage IC2;",
     "metadata": {
-      "rank": 4,
-      "score": 0.5006415247917175
+      "rank": 5,
+      "score": 0.6331235766410828
     },
-    "cached_at": "2026-01-21T08:31:44.402486"
+    "cached_at": "2026-01-22T07:48:44.498997"
   },
   "nccn_ovariancancer_v3_2025__v00000000|36": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
@@ -182,12 +182,12 @@
   "esmo_cpg_epithelialovarian_2023__v00000000|8": {
     "doc_id": "esmo_cpg_epithelialovarian_2023__v00000000",
     "page": 8,
-    "text": "MCBS v1.1 score: 4; ESMO Scale for Clinical Actionabil-\nity of molecular Targets (ESCAT) score: I-A], niraparib\nfor 3 years [ESMO-MCBS v1.1 score: 3; ESCAT score:\nI-A] or olaparibebevacizumab for 2 years [ESMO-\nMCBS v1.1 score: 3; ESCAT score: I-A].\no For BRCA1/2-wt/HRD-positive: niraparib for 3 years\n[ESMO-MCBS v1.1 score: 3; ESCAT score: I-A] or\nolaparibebevacizumab for 2 years [ESMO-MCBS v1.1\nscore: 3; ESCAT score: I-A).\n\u0004 Maintenance treatment with either bevacizumab [I, A] or\nniraparib for 3 years [I, B; ESMO-MCBS v1.1 score: 3] can\nbe recommended for HRD-negative tumours, with the\nlatter\nfollowing\ncomplete\nor\npartial\nresponse\nto\nplatinumepaclitaxel ﬁrst-line ChT. The choice of treat-\nment should be based on disease and clinical character-\nistics of the patient.\n\u0004 Maintenance with anti-estrogen therapy after ﬁrst-line\nplatinum-based ChT can be considered in LGSC [IV, B].\nMANAGEMENT OF RECURRENT EOC\nPatient assessment\nUp to 70% of patients with stage III-IV high-grade ovarian\ncancer will relapse within 3 years. Relapse rates for early-\nstage ovarian cancer are much lower.\nSeveral factors need to be assessed when selecting a",
+    "text": "safety proﬁle, the combination of carboplatinePLD is\nconsidered the preferred option.75 If combination therapy is\ncontraindicated, carboplatin monotherapy remains an option.\nTreatment is usually recommended for four to six cycles.\nPlatinum hypersensitivity reactions (HSRs) affect w5% of\nthe general cancer population. Several outpatient-based\nplatinum ‘desensitisation’ protocols exist for gynaecological\noncology patients with HSRs that permit the successful re-\nintroduction of platinum-based therapy (carboplatin or\ncisplatin) after patients have experienced HSRs.76\nAnnals of Oncology\nA. González-Martín et al.\n840\nhttps://doi.org/10.1016/j.annonc.2023.07.011\nVolume 34",
     "metadata": {
-      "rank": 5,
-      "score": 0.625560998916626
+      "rank": 4,
+      "score": 0.5864976048469543
     },
-    "cached_at": "2026-01-21T23:36:21.554745"
+    "cached_at": "2026-01-22T03:01:18.225560"
   },
   "nccn_ovariancancer_v3_2025__v00000000|9": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
@@ -195,19 +195,19 @@
     "text": "Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nEpithelial Ovarian Cancer/Fallopian Tube Cancer/\nPrimary Peritoneal Cancer\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nIDS with completion\nhysterectomy/BSOj,k and\ncytoreduction. Consider\nHIPEC.j\nor\nContinue current therapy (for\na total of at least 6 cycles)n\nor\nTherapy for Persistent\nDisease or Recurrence (OV-7)\nOV-2\nf See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian, Pancreatic,\nand Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment: Colorectal,\nEndometrial, and Gastric.\ng Germline and somatic BRCA1/2 status informs maintenance therapy.\nh In the absence of a BRCA1/2 mutation, HRD status may provide information on the\nmagnitude of benefit of PARPi therapy. For PARPi therapy in advanced stage disease, include\nmeasure of HR (OV-B).\ni Evaluation by a gynecologic oncologist is recommended for:",
     "metadata": {
       "rank": 5,
-      "score": 0.6125355958938599
+      "score": 0.6054003834724426
     },
-    "cached_at": "2026-01-21T23:15:11.658978"
+    "cached_at": "2026-01-22T07:37:48.581783"
   },
   "nccn_ovariancancer_v3_2025__v00000000|26": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 26,
     "text": "Consider\nsecondary\ncytoreductive\nsurgery\nor\nRecurrence\ntherapyee,ff\nComplete\nstagingc,d,bb\nSurveillance\n(LCOC-B)\nObservecc\na WHO Histologic Classification (OV-E).\nc Principles of Surgery (OV-A).\nd Principles of Pathology (OV-B).\nbb Lymphadenectomy may be omitted.\ncc Inhibin levels can be followed for granulosa cell tumors.\nSurveillance\n(LCOC-B)\ndd Acceptable options include paclitaxel/carboplatin (preferred), EP (etoposide, cisplatin), or BEP\n(bleomycin, etoposide, cisplatin) (category 2B).\nee See Principles of Systemic Therapy (OV-C) and Systemic Therapy Regimens for Malignant Germ\nCell/Sex Cord-Stromal Tumors (LCOC-A).\nff Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.\nPrinted by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.",
     "metadata": {
-      "rank": 2,
-      "score": 0.5761027336120605
+      "rank": 5,
+      "score": 0.609245240688324
     },
-    "cached_at": "2026-01-21T23:50:14.547701"
+    "cached_at": "2026-01-22T05:40:22.674390"
   },
   "nccn_ovariancancer_v3_2025__v00000000|28": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
@@ -222,12 +222,12 @@
   "nccn_ovariancancer_v3_2025__v00000000|10": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 10,
-    "text": "Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nEpithelial Ovarian Cancer/Fallopian Tube Cancer/\nPrimary Peritoneal Cancer\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nOV-3\nDIAGNOSIS BY PREVIOUS SURGERY\nFINDINGS\nPatient\nreferred\nwith newly\ndiagnosed\novarian\ncancer,\nincluding\nless common\novarian\ncancers\n(LCOCs),\nafter recent\nsurgical\nprocedure\nConsider surgical stagingj,k (if not\npreviously done) if considering\nobservation or to inform systemic\ntherapy decisionss\nTumor\ncytoreductive\nsurgeryj,k\nNeoadjuvant Therapy (OV-2)\nSuspect\nresectable\nresidual disease\nSuspect\nunresectable\nresidual diseaser\nAdjuvant\nTherapy\n(OV-4)\na CT is performed with oral and iodinated IV contrast (unless contraindicated due to\nanaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI is\nperformed with gadolinium-based contrast agents (unless contraindicated due to",
+    "text": "anaphylaxis or significant renal dysfunction) with or without rectal contrast. MRI is\nperformed with gadolinium-based contrast agents (unless contraindicated due to\nanaphylaxis) and is preferred in select patients with renal dysfunction over CT. Chest CT\ncan be done with or without iodinated IV contrast.\nd Other tumor markers may include inhibin, β-hCG, alpha-fetoprotein, LDH, CEA, CA 19-9,\nand HE4. See Discussion for usefulness of diagnostic tests.\nf See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian,\nPancreatic, and Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment:\nColorectal, Endometrial, and Gastric.\ng Germline and somatic BRCA1/2 status informs maintenance therapy.\nh In the absence of a BRCA1/2 mutation, HRD status may provide information on the\nmagnitude of benefit of PARPi therapy. For PARPi therapy in advanced stage disease,\ninclude measure of HR (OV-B).\ni Evaluation by a gynecologic oncologist is recommended for:\n•\tAll patients with suspected ovarian malignancies; published data demonstrate that\nprimary assessment and debulking by a gynecologic oncologist results in a survival\nadvantage.",
     "metadata": {
       "rank": 5,
-      "score": 0.590817928314209
+      "score": 0.5606176853179932
     },
-    "cached_at": "2026-01-21T03:12:30.002872"
+    "cached_at": "2026-01-22T06:15:31.988789"
   },
   "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000|8": {
     "doc_id": "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000",
@@ -252,32 +252,32 @@
   "nccn_ovariancancer_v3_2025__v00000000|13": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 13,
-    "text": "the most recent available tumor tissue. Tumor molecular analysis is recommended\nto include, at a minimum, tests to identify potential benefit from targeted therapeutics\nthat have tumor-specific or tumor-agnostic benefit including, but not limited to, HER2\nstatus (by IHC), BRCA1/2, HRD status, microsatellite instability (MSI), mismatch\nrepair (MMR), tumor mutational burden (TMB), BRAF, FRα (FOLR1), RET, and NTRK\nif prior testing did not include these markers. More comprehensive testing may be\nparticularly important in LCOC with limited approved therapeutic options (OV-B).\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.\nPrinted by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.",
+    "text": "Pancreatic, and Prostate and NCCN Guidelines for Genetic/Familial High-Risk\nAssessment: Colorectal, Endometrial, and Gastric.\nn See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-\nD).\naa There are data regarding the utility of CA-125 for monitoring of ovarian cancer after\ncompletion of primary therapy. See The Society of Gynecologic Oncology (SGO)\nposition statement and Discussion.\n• Imaging studies as\nclinically indicateda,cc:\nC/A/P CT, MRI, PET/CT, or\nPET\n• Tumor molecular testingdd\nif not previously done\n• Imaging studies as\nclinically indicateda,cc:\nC/A/P CT, MRI, PET/CT, or\nPET\n• Tumor molecular testingdd\nif not previously done\n• Imaging studies as\nclinically indicateda,cc:\nC/A/P CT, MRI, PET/CT, or\nPET\n• Tumor molecular testingdd\nif not previously done\nRising CA-125,\nno previous\nchemotherapy\nor\nClinical relapse,\nno previous\nchemotherapy\nClinical relapse,\nprevious\nchemotherapy\nSerially rising\nCA-125, previous\nchemotherapy\n• Visits every 2–4 mo for 2 y, then\n3–6 mo for 3 y, then annually after\n5 y\n• Physical exam including pelvis\nexam as clinically indicated\n• Imaging as clinically indicateda\n(eg, C/A/P CT, chest CT, A/P MRI,",
     "metadata": {
-      "rank": 3,
-      "score": 0.5049008131027222
+      "rank": 4,
+      "score": 0.634239912033081
     },
-    "cached_at": "2026-01-21T08:31:44.400933"
+    "cached_at": "2026-01-22T07:48:44.494581"
   },
   "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000|11": {
     "doc_id": "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000",
     "page": 11,
     "text": "mours regardless of HRD status. Their use in recurrent dis-\nease is currently diminishing as they are now often used\nafter ﬁrst-line ChT (see Question 13). Second-line molecu-\nlarly targeted therapy needs to take account of ﬁrst-line\ntreatment. Rechallenge with the same molecularly tar-\ngeted drug is currently experimental and does not have\nregulatory approval. It is an area where more research is\nneeded.\nPatients on maintenance treatment should be monitored\nproactively to manage potential side-effects102 and ensure a\ncontinued optimal clinical beneﬁt.103-106\nRecommendation 16.1: For patients with BRCA-mutated\ntumours, eligible for platinum and no prior PARPis and no\nprior bevacizumab use, a platinum-based combination fol-\nlowed by PARPis is recommended after CR/PR/NED [I, A].\nBevacizumab may still be considered depending on pa-\ntient’s symptoms and response to ChT [II, B].\nConsensus: 94% (32) yes, 3% (1) no, 3% (1) abstain (34\nvoters)\nRecommendation 16.2: For patients with BRCA-wt or\nunknown tumours eligible for platinum and no prior\nPARPis and no prior bevacizumab, maintenance therapy is\nrecommended with PARPis (after CR/PR/NED) or bev-",
     "metadata": {
-      "rank": 5,
-      "score": 0.6600563526153564
+      "rank": 3,
+      "score": 0.6174036264419556
     },
-    "cached_at": "2026-01-21T23:10:11.939880"
+    "cached_at": "2026-01-22T06:04:12.065784"
   },
   "nccn_ovariancancer_v3_2025__v00000000|12": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 12,
     "text": "Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nEpithelial Ovarian Cancer/Fallopian Tube Cancer/\nPrimary Peritoneal Cancer\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nCRx/PR\nOV-5\nSTAGE II, III, IVw\nPOST PRIMARY TREATMENT\nHR\ndeficient\nHomologous\nrecombination (HR)\nproficient or status\nunknown\nOlaparib (category 1)\nor\nNiraparib (category 1)\nor\nRucaparib\nor\nObserve for select stage II disease with CR\nObserve (if CR)\nor\nNiraparib (HR deficient)\nor\nRucaparib\nor\nOlaparib (HR deficient) (category 2B)\nor\nTherapy for Persistent Disease or Recurrence (OV-7)\nMonitoring/\nFollow-up (OV-6)\nMonitoring/\nFollow-Up (OV-6)\nMAINTENANCE THERAPYh,n,y\nBevacizumab\nused as part\nof primary\ntherapy\nNo\nbevacizumab\nused during\nprimary\ntherapy\nGermline\nor somatic\nBRCA1/2\nmutation\nBRCA1/2\nwild-type or\nunknownh\nGermline\nor somatic\nBRCA1/2\nmutation\nBRCA1/2\nwild-type or\nunknownh\nBevacizumab + olaparib (category 1)\nor",
     "metadata": {
-      "rank": 4,
-      "score": 0.5657084584236145
+      "rank": 1,
+      "score": 0.6107217669487
     },
-    "cached_at": "2026-01-21T23:50:14.552291"
+    "cached_at": "2026-01-22T07:37:48.560491"
   },
   "nccn_ovariancancer_v3_2025__v00000000|17": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
@@ -304,10 +304,10 @@
     "page": 8,
     "text": "management.\nc If there is concern for metastatic or disseminated disease.\nd Other tumor markers may include inhibin, beta-human chorionic gonadotropin (β-hCG), alpha-\nfetoprotein, lactate dehydrogenase (LDH), carcinoembryonic antigen (CEA), CA 19-9, and HE4.\nSee Discussion for usefulness of diagnostic tests.\ne Reconsider REI as clinically indicated once pathologic diagnosis is available.\nf See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian, Pancreatic,\nand Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment: Colorectal,\nEndometrial, and Gastric.\ng Germline and somatic BRCA1/2 status informs maintenance therapy.\nh In the absence of a BRCA1/2 mutation, homologous recombination deficiency (HRD) status may\nprovide information on the magnitude of benefit of PARP inhibitor (PARPi) therapy. For PARPi\ntherapy in advanced stage disease, include measure of homologous recombination (HR) (OV-B).\ni Evaluation by a gynecologic oncologist is recommended for:\n•\tAll patients with suspected ovarian malignancies; published data demonstrate that primary\nassessment and debulking by a gynecologic oncologist results in a survival advantage.",
     "metadata": {
-      "rank": 4,
-      "score": 0.6151020526885986
+      "rank": 2,
+      "score": 0.6393094062805176
     },
-    "cached_at": "2026-01-21T23:15:11.656726"
+    "cached_at": "2026-01-22T07:48:44.485581"
   },
   "esgo_ovariancancer_pocketguidelines_2025__v00000000|11": {
     "doc_id": "esgo_ovariancancer_pocketguidelines_2025__v00000000",
@@ -315,8 +315,88 @@
     "text": "11\nRoutine monitoring for circulating tumour DNA (ctDNA) and circulating\ntumour cells is not recommended but should be encouraged within the\ncontext of research projects.\nTesting ctDNA for reversion mutations can be considered in patients with\nBRCA-mutated tubo-ovarian carcinoma treated with at least one line of\nplatinum and eligible for PARPi treatment.\nChemotherapy response score at interval cytoreductive surgery on an\nomental (preferred) or adnexal specimen provides prognostic information\nand is recommended.\nTesting for a reversion mutation in tumour samples at relapse can be consi-\ndered in BRCA-mutated tumours.\nA\nC\n3.\t How should low-grade serous carcinoma (LGSC) and high-grade\n\nserous carcinoma (HGSC) be diagnosed?\nLGSC and HGSC should be regarded as two distinct neoplasms with diffe-\nrent morphology, underlying molecular events and behaviour and do not\nrepresent different grades of the same tumour type.\nThe distinction between LGSC and HGSC is based on a combination of\nmorphology and p53 immunohistochemistry (IHC); in diagnostically chal-\nlenging cases, referral for a specialist opinion and/or molecular testing is\nrecommended.",
     "metadata": {
       "rank": 5,
-      "score": 0.5639276504516602
+      "score": 0.5914468169212341
     },
-    "cached_at": "2026-01-21T23:50:14.554421"
+    "cached_at": "2026-01-22T07:08:41.331572"
+  },
+  "nccn_ovariancancer_v3_2025__v00000000|4": {
+    "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
+    "page": 4,
+    "text": "• Bevacizumab used as part of primary therapy\n\u0017BRCA1/2 wild-type or unknown, HR deficient, maintenance therapy regimen added: Olaparib (category 2B).\nLCOC-7\n• Recurrence therapy\n\u0017Specific regimens removed from this page; all listed in Systemic Therapy sections (OV-C 8 and OV-C 9).\nOV-C (8 of 12)\n• Useful in Certain Circumstances\n\u0017For low-grade serous carcinoma, regimen added: Avutometinib/defactinib (for KRAS-mutated tumors).\nOV-C (9 of 12)\n• Useful in Certain Circumstances\n\u0017For low-grade serous carcinoma, regimen added: Avutometinib/defactinib (for KRAS-mutated tumors).\nOV-C (11 of 12)\n• Reference added: Banerjee S, Nieuwenhuysen EV, Santin A, et al. Avutometinib plus defactinib in recurrent low-grade serous ovarian cancer: A\nsubgroup analysis of ENGOTOV60/ GOG-3052/RAMP 201 Part A. Gyn Oncol 2024;190:S55-S56.\nUpdates in Version 1.2025 of the NCCN Guidelines for Ovarian Cancer from Version 3.2024 include:\nGlobal\n• References have been updated throughout the Guidelines.\n• Imaging footnote revised throughout OV and LCOC algorithms: CT is performed with oral and iodinated IV contrast (unless contraindicated due to",
+    "metadata": {
+      "rank": 4,
+      "score": 0.6131673455238342
+    },
+    "cached_at": "2026-01-22T05:40:22.671218"
+  },
+  "esgo_ovariancancer_pocketguidelines_2025__v00000000|8": {
+    "doc_id": "esgo_ovariancancer_pocketguidelines_2025__v00000000",
+    "page": 8,
+    "text": "Advanced stage (including older/frail patients)................................................ 15\n11. \tHow should patients with advanced tubo-ovarian carcinoma\n\nbe selected for primary cytoreductive surgery?.............................................. 15\n12. \tWhat is the role of hyperthermic intraperitoneal chemotherapy (HIPEC)\n\nin newly diagnosed tubo-ovarian carcinoma?................................................ 16",
+    "metadata": {
+      "rank": 3,
+      "score": 0.6176164746284485
+    },
+    "cached_at": "2026-01-22T05:40:22.667988"
+  },
+  "esgo_ovariancancer_pocketguidelines_2025__v00000000|15": {
+    "doc_id": "esgo_ovariancancer_pocketguidelines_2025__v00000000",
+    "page": 15,
+    "text": "15\nIn STIC, it is recommended that (re)-staging is carried out, preferably by\na minimally invasive procedure.\nIn STIC, hysterectomy should be considered, particularly in patients with\na germline BRCA1 mutation (gBRCA1-mut).\nIn STIC, if the uterus is preserved, endometrial sampling in patients with\na gBRCA1-mut is recommended.\nIn STIC, lymphadenectomy is not recommended.\nAdjuvant chemotherapy is not recommended in surgically staged STIC.\nIn cases of STIC, testing for gBRCA1/2-muts and other high-penetrance\nhereditary genes is mandatory.\n11.\t How should patients with advanced tubo-ovarian carcinoma\n\nbe selected for primary cytoreductive surgery?\nAdvanced stage (including older/frail patients)\nThe selection of patients for primary cytoreductive surgery or neoadjuvant\nchemotherapy (NACT) must be carried out in an accredited ovarian cancer\ncentre (according to the ESGO quality indicators for ovarian cancer surgery\n2016/2020) in a multidisciplinary setting.\nPrimary cytoreductive surgery is the preferred option and should be offered\nif a complete resection seems achievable.\nPrimary cytoreductive surgery is the preferred option in patients with LGSC",
+    "metadata": {
+      "rank": 3,
+      "score": 0.6462115049362183
+    },
+    "cached_at": "2026-01-22T01:47:19.672461"
+  },
+  "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000|7": {
+    "doc_id": "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000",
+    "page": 7,
+    "text": "coldrecommended both in women with a BRCA-mut and\nthose with an unknown genetic predispositiondand the\nimproved diagnostic criteria, including the use of p53 and ki-67\nimmunostainings, has identiﬁed occult lesions, which were\npreviously missed in classical grossing procedures, as STIC.57-59\nThere is an increased risk of peritoneal carcinoma\ndeveloping with follow-up after RRBSO if a STIC is present,\nwhich supports staging of the peritoneum.60\nRecommendation 10.1: It is recommended that micro-\nscopic HGSC be managed as HGSC [V, B].\nConsensus: 97% (38) yes, 3% (1) no, 0% (0) abstain (39\nvoters)\nRecommendation 10.2: SEE-FIM is recommended in\nRRBSO [IV, A].\nConsensus: 85.4% (35) yes, 0% (0) no, 14.6% (6) abstain\n(41 voters)\nRecommendation 10.3: SEE-FIM is recommended when\nthere is doubt regarding the origin of the carcinoma\n(endometrial, tubal, ovarian, peritoneal) [IV, A].\nConsensus: 97% (38) yes, 0% (0) no, 3% (1) abstain (39\nvoters)\nRecommendation 10.4: It is suggested that the pathol-\nogist examines microscopically the whole ﬁmbriae in benign\nconditions [V, B].\nConsensus: 87% (34) yes, 3% (1) no, 10% (4) abstain (39\nvoters)\nRecommendation 10.5: In STIC, staging of the perito-",
+    "metadata": {
+      "rank": 1,
+      "score": 0.60099858045578
+    },
+    "cached_at": "2026-01-22T02:16:37.733976"
+  },
+  "esmo_cpg_nonepithelialovarian_2018__v00000000|7": {
+    "doc_id": "esmo_cpg_nonepithelialovarian_2018__v00000000",
+    "page": 7,
+    "text": "Active surveillance*\n[GoR C]\nYolk sac tumour\nStage IA-IB\nStage IC-IV\nFertility-sparing surgery\nStaging\n[III, A]\nDebulking/Staging\n[III, A]\nor\nFertility-sparing surgery\nStaging\n[IV, B]\nStandard follow-up\nBEP x 3–4 cycles [III, A]\nProperly-staged patients\nwith negative\npostoperative\ntumours markers\nFigure 3. Management of GCTs of the ovary—yolk sac tumour.\n*See Table 5.\nOptional\nBEP, bleomycin/etoposide/cisplatin; GCT, germ cell tumour; GoR, grade of recommendation.\nAnnals of Oncology\nClinical Practice Guidelines\nVolume 29 | Supplement 4 | October 2018\ndoi:10.1093/annonc/mdy001 | iv7",
+    "metadata": {
+      "rank": 1,
+      "score": 0.6445168852806091
+    },
+    "cached_at": "2026-01-22T05:12:08.830882"
+  },
+  "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000|3": {
+    "doc_id": "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000",
+    "page": 3,
+    "text": "high-grade non-mucinous tubo-ovarian carcinoma. These\ntests identify functional disturbance in homologous recom-\nbination repair of DNA damage that can be present due to\nBRCA mutations and other factors, such as mutations in\nhomologous recombination repair genes.12-14 Cancer antigen\n125 (CA-125) and human epididymis protein 4 (HE4) are two\nserological markers used to assist in the diagnosis of tubo-\novarian carcinoma.15\nRecommendation 1.1: An adequate surgical specimen or\nimage-guided biopsy of treatment-naive tumour is the\npreferred sample for diagnosis and molecular testing [IV, A].\nConsensus: 100% (41) yes, 0% (0) no, 0% (0) abstain (41\nvoters)\nRecommendation 1.2: In all cases, the sample should\ncontain a sufﬁcient number of tumour cells (preferably\n\u000330%). A cell block from peritoneal or pleural effusions\nmay be used for molecular analysis [IV, B].\nConsensus: 97.6% (40) yes, 2.4% (1) no, 0% (0) abstain\n(41 voters)\nRecommendation 1.3: BRCA-mut (germline and/or so-\nmatic) testing is recommended at diagnosis for patients\nwith high-grade non-mucinous tubo-ovarian carcinoma\nregardless of stage [I, A].\nConsensus: 98% (39) yes, 3% (1) no, 0% (0) abstain (40\nvoters)",
+    "metadata": {
+      "rank": 3,
+      "score": 0.6344937682151794
+    },
+    "cached_at": "2026-01-22T07:48:44.489845"
+  },
+  "nccn_ovariancancer_v3_2025__v00000000|23": {
+    "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
+    "page": 23,
+    "text": "ADJUVANT TREATMENTx\nPrior complete\nsurgical resectionc,d\nNo low-grade\nserous carcinoma\nPrior incomplete\nsurgical resectionc,d\nLow-grade serous\ncarcinomaw\nMonitoring/\nFollow-up\n(LCOC-10)\nLCOC-9\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.\nPrinted by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.",
+    "metadata": {
+      "rank": 2,
+      "score": 0.5968177318572998
+    },
+    "cached_at": "2026-01-22T07:08:41.316394"
+  },
+  "nccn_ovariancancer_v3_2025__v00000000|24": {
+    "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
+    "page": 24,
+    "text": "residual diseasey\nor\nFertility-sparing surgery (if fertility\ndesired)c,d and resection of residual\ndiseasey,z\nor\nConsider no surgical intervention for\nselect patientsaa\nBorderline on\nfinal pathology\nLow-grade\nserous\ncarcinoma on\nfinal pathologyw\nHigh-grade\nserous on final\npathologyw\nMonitoring/\nFollow-up\n(LCOC-10)\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.\nPrinted by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.",
+    "metadata": {
+      "rank": 3,
+      "score": 0.5957144498825073
+    },
+    "cached_at": "2026-01-22T07:08:41.319739"
   }
 }

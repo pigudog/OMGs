@@ -398,11 +398,11 @@ def extract_reference_tags(text: str) -> List[str]:
     trial_legacy = re.findall(r"\[@trial:[^\]]+\]", normalized_text, re.IGNORECASE)
     trial_tags = list(dict.fromkeys(trial_new + trial_legacy))
     
-    # Report tags: [@actual_report_id | LAB/Genomics/MR/CT] (new format with spaces)
+    # Report tags: [@actual_report_id | LAB/Genomics/MR/CT/CASE] (new format with spaces)
     # report_id may contain | (e.g., 20220407|17300673)
-    # Matches patterns like [@20220407|17300673 | LAB], [@OH2203828|2022-04-18 | Genomics], [@2022-12-29 | MR], [@2022-12-29 | CT]
+    # Matches patterns like [@20220407|17300673 | LAB], [@OH2203828|2022-04-18 | Genomics], [@2022-12-29 | MR], [@2022-12-29 | CT], [@2021-09-08 | CASE]
     # Note: Must have spaces around | for consistency: [@xxx | yyy] (space before and after |)
-    report_new = re.findall(r"\[@[a-zA-Z0-9_\-|]+\s+\|\s+(?:LAB|Genomics|MR|CT|Imaging|Pathology)\s*\]", normalized_text, re.IGNORECASE)
+    report_new = re.findall(r"\[@[a-zA-Z0-9_\-|]+\s+\|\s+(?:LAB|Genomics|MR|CT|Imaging|Pathology|CASE)\s*\]", normalized_text, re.IGNORECASE)
     
     # Legacy report tags: [@report_id|date] or [@report_id|type] without spaces - still supported for backward compatibility
     # Legacy format (without spaces) - still supported for backward compatibility
@@ -609,7 +609,7 @@ def build_references_section(
                     summary = _extract_report_summary(report_info, max_content_length)
                     
                     # Determine type label from tag or report_info
-                    if report_type_or_date.upper() in ["LAB", "GENOMICS", "MR", "CT", "IMAGING", "PATHOLOGY"]:
+                    if report_type_or_date.upper() in ["LAB", "GENOMICS", "MR", "CT", "IMAGING", "PATHOLOGY", "CASE"]:
                         type_label = report_type_or_date
                     else:
                         type_label = rtype.capitalize() if rtype else "Report"
@@ -626,7 +626,7 @@ def build_references_section(
                         ref_lines.append(f"  Content: {summary}")
                 else:
                     # No report info found, use what's in the tag
-                    if report_type_or_date.upper() in ["LAB", "GENOMICS", "MR", "CT", "IMAGING", "PATHOLOGY"]:
+                    if report_type_or_date.upper() in ["LAB", "GENOMICS", "MR", "CT", "IMAGING", "PATHOLOGY", "CASE"]:
                         ref_lines.append(f"  {report_type_or_date} ID: {report_id}")
                     else:
                         ref_lines.append(f"  Report ID: {report_id} | Date: {report_type_or_date}")
@@ -697,8 +697,8 @@ def _find_report_in_context(report_id: str, context: Dict[str, Any]) -> Optional
     # Normalize report_id for comparison
     report_id_str = str(report_id).strip()
     
-    # Search through all report types and roles
-    for report_type in ["lab", "imaging", "pathology", "mutation"]:
+    # Search through all report types and roles (including "case" for Chair-SA mode)
+    for report_type in ["lab", "imaging", "pathology", "mutation", "case"]:
         type_data = context.get(report_type, {})
         if not isinstance(type_data, dict):
             continue
@@ -711,7 +711,8 @@ def _find_report_in_context(report_id: str, context: Dict[str, Any]) -> Optional
                 # Check multiple ID fields
                 rid = (report.get("report_id", "") or 
                        report.get("id", "") or 
-                       report.get("report_no", ""))
+                       report.get("report_no", "") or
+                       report.get("date", ""))
                 if str(rid).strip() == report_id_str:
                     return {"type": report_type, **report}
     
