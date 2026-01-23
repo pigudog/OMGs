@@ -88,28 +88,28 @@
     "title": "A durable response to programmed cell death 1 blockade in a multidrug-resistant recurrent ovarian cancer patient with HLA-B44 supertype: A case report.",
     "abstract": "Relapsed/refractory ovarian cancer, especially platinum resistance recurrence, remains a major therapeutic challenge. Here, we present the case of a patient with recurrent ovarian clear cell carcinoma (OCCC) who failed to respond to multiline chemotherapy and target therapy but achieved an immune complete response (iCR) with programmed cell death 1 (PD-1) inhibitor treatment. The overall survival (OS) was 59 months, and the recurrence-free survival (RFS) was 34 months after immunotherapy, which was counting. Meantime, molecular testing results revealed that traditional biomarkers for immunotherapy, including PD-L1 expression, microsatellite instability (MSI), and tumor mutational burden (TMB), were negative. HLA-B44 (B*18:01) supertype was confirmed by sequence-based HLA typing. This case raises the possibility that ovarian cancer patients with multidrug resistance may still benefit from PD-1 inhibitor therapy, even if PD-L1 pathology is negative.",
     "metadata": {
-      "rank": 2,
-      "score": 0.6901810158010261,
+      "rank": 5,
+      "score": 0.6856345082003894,
       "journal": "Front Immunol",
       "pub_date": "2022-01-01",
       "doi": "10.3389/fimmu.2022.951422",
       "impact_factor": 5.9
     },
-    "cached_at": "2026-01-21T06:41:21.481481"
+    "cached_at": "2026-01-22T23:25:37.577597"
   },
   "38934360": {
     "pmid": "38934360",
     "title": "Cytoreductive surgery plus chemotherapy versus chemotherapy alone for recurrent epithelial ovarian cancer.",
     "abstract": "This is a protocol for a Cochrane Review (intervention). The objectives are as follows: To evaluate the benefits and harms of secondary CRS and chemotherapy in comparison to chemotherapy alone for women with platinum-sensitive recurrent epithelial ovarian cancer.",
     "metadata": {
-      "rank": 4,
-      "score": 0.6849196773371741,
+      "rank": 5,
+      "score": 0.6426904364752078,
       "journal": "Cochrane Database Syst Rev",
       "pub_date": "2024-06-27",
       "doi": "10.1002/14651858.CD015297",
       "impact_factor": 9.4
     },
-    "cached_at": "2026-01-22T04:49:44.792405"
+    "cached_at": "2026-01-23T00:49:12.709299"
   },
   "30034944": {
     "pmid": "30034944",
@@ -144,14 +144,14 @@
     "title": "An apoptosis-enhancing drug overcomes platinum resistance in a tumour-initiating subpopulation of ovarian cancer.",
     "abstract": "High-grade serous ovarian cancers (HGSCs) are deadly malignancies that relapse despite carboplatin chemotherapy. Here we show that 16 independent primary HGSC samples contain a CA125-negative population enriched for carboplatin-resistant cancer initiating cells. Transcriptome analysis reveals upregulation of homologous recombination DNA repair and anti-apoptotic signals in this population. While treatment with carboplatin enriches for CA125-negative cells, co-treatment with carboplatin and birinapant eliminates these cells in HGSCs expressing high levels of the inhibitor of apoptosis protein cIAP in the CA125-negative population. Birinapant sensitizes CA125-negative cells to carboplatin by mediating degradation of cIAP causing cleavage of caspase 8 and restoration of apoptosis. This co-therapy significantly improves disease-free survival in vivo compared with either therapy alone in tumour-bearing mice. These findings suggest that therapeutic strategies that target CA125-negative cells may be useful in the treatment of HGSC.",
     "metadata": {
-      "rank": 5,
-      "score": 0.7032246577082354,
+      "rank": 3,
+      "score": 0.6520826671075256,
       "journal": "Nat Commun",
       "pub_date": "2015-08-03",
       "doi": "10.1038/ncomms8956",
       "impact_factor": 15.7
     },
-    "cached_at": "2026-01-22T07:01:55.570576"
+    "cached_at": "2026-01-23T00:49:12.701811"
   },
   "35356229": {
     "pmid": "35356229",
@@ -200,14 +200,14 @@
     "title": "Systemic anti-cancer treatment in malignant ovarian germ cell tumours (MOGCTs): current management and promising approaches.",
     "abstract": "Malignant ovarian germ cell tumours (MOGCTs) are rare. Unlike epithelial ovarian cancer, MOGCTs typically occur in girls and young women. Fertility-sparing surgery and platinum-based chemotherapy remain the standard of care, providing high chance of cure at all stages. Given the lack of high-quality studies in this field, current practice guidelines recommend chemotherapy regimens adopted in testicular germ cell tumours. However, platinum-resistant/refractory MOGCTs retain a worse prognosis in comparison with their male counterpart. Herein, we focus on current systemic anti-cancer treatment options in MOGCTs and promising approaches. Future studies enrolling exclusively female participants or germ cell tumour trials allowing participation of MOGCT patients are strongly recommended in order to improve evidence on existing management and develop novel strategies.",
     "metadata": {
-      "rank": 5,
-      "score": 0.6715012700025748,
+      "rank": 2,
+      "score": 0.6608693608581773,
       "journal": "Ann Transl Med",
       "pub_date": "2020-12-01",
       "doi": "10.21037/atm.2020.04.15",
       "impact_factor": 3.616
     },
-    "cached_at": "2026-01-19T08:37:13.538388"
+    "cached_at": "2026-01-23T00:49:12.697915"
   },
   "35096598": {
     "pmid": "35096598",
@@ -228,14 +228,14 @@
     "title": "Homologous recombination deficiency status-based classification of high-grade serous ovarian carcinoma.",
     "abstract": "Homologous recombination repair (HRR) pathway deficiency (HRD) is involved in the tumorigenesis and progression of high-grade serous ovarian carcinoma (HGSOC) as well as in the sensitivity to platinum chemotherapy drugs. In this study, we obtained data from The Cancer Genome Atlas (TCGA) on HGSOC and identified scores for the loss of heterozygosity, telomeric allelic imbalance, and large-scale state transitions, and calculated the HRD score. We then investigated the relationships among the score, genetic/epigenetic alterations in HRR-related genes, and the clinical data. We found that BRCA1/2 mutations were enriched in the group with HRD scores ≥63. Compared with the groups with scores ≤62, this group had a good prognosis; we thus considered HRD scores ≥63 to be the best cutoff point for identifying HRD cases in HGSOC. Classification of HGSOC cases by the HRD status revealed a better prognosis for HRD cases caused by genetic alterations (genetic HRD) than those caused by epigenetic changes and those caused by undetermined reasons (p = 0.0002). Among cases without macroscopic residual tumors after primary debulking surgery, 11 of 12 genetic HRD cases survived after the median observation period of 6.6 years, showing remarkably high survival rates (p = 0.0059). In conclusion, HGSOC can be classified into subtypes with different prognoses according to HRD status. This classification could be useful for personalized HGSOC treatment.",
     "metadata": {
-      "rank": 4,
-      "score": 0.6902141024774812,
+      "rank": 1,
+      "score": 0.7333370951785828,
       "journal": "Sci Rep",
       "pub_date": "2020-02-17",
       "doi": "10.1158/2159-8290.CD-12-0095",
       "impact_factor": 3.9
     },
-    "cached_at": "2026-01-22T20:41:03.403964"
+    "cached_at": "2026-01-22T23:01:30.033499"
   },
   "27042109": {
     "pmid": "27042109",
@@ -508,28 +508,28 @@
     "title": "Significance of platinum distribution to predict platinum resistance in ovarian cancer after platinum treatment in neoadjuvant chemotherapy.",
     "abstract": "Most patients with ovarian cancer experience recurrence and develop resistance to platinum-based agents. The diagnosis of platinum resistance based on the platinum-free interval is not always accurate and timely in clinical settings. Herein, we used laser ablation inductively coupled plasma mass spectrometry to visualize the platinum distribution in the ovarian cancer tissues at the time of interval debulking surgery after neoadjuvant chemotherapy in 27patients with advanced high-grade serous ovarian cancer. Two distinct patterns of platinum distribution were observed. Type A (n = 16): platinum accumulation at the adjacent stroma but little in the tumor; type B (n = 11): even distribution of platinum throughout the tumor and adjacent stroma. The type A patients treated post-surgery with platinum-based adjuvant chemotherapy showed significantly shorter periods of recurrence after the last platinum-based chemotherapy session (p = 0.020) and were diagnosed with \"platinum-resistant recurrence\". Moreover, type A was significantly correlated with worse prognosis (p = 0.031). Post-surgery treatment with non-platinum-based chemotherapy could be effective for the patients classified as type A. Our findings indicate that the platinum resistance can be predicted prior to recurrence, based on the platinum distribution; this could contribute to the selection of more appropriate adjuvant chemotherapy, which may lead to improves prognoses.",
     "metadata": {
-      "rank": 5,
-      "score": 0.6881432989482387,
+      "rank": 3,
+      "score": 0.6913902864521562,
       "journal": "Sci Rep",
       "pub_date": "2022-03-16",
       "doi": "10.1038/s41598-022-08503-7",
       "impact_factor": 3.9
     },
-    "cached_at": "2026-01-22T07:02:53.316806"
+    "cached_at": "2026-01-22T23:26:23.451052"
   },
   "35845511": {
     "pmid": "35845511",
     "title": "Successful secondary radical operation on unretractable metastatic platinum-sensitive recurrent ovarian cancer by immunotherapy: a case report.",
     "abstract": "Although rechallenge with platinum-based chemotherapy is effective for most platinum-sensitive recurrent ovarian cancer (ROC) patients, there is still a subset of patients who have no responses to the standard care. Overcoming multidrug resistance (MDR) is a top priority in oncology clinics, but it remains intricate. It is difficult for clinicians to manage unretractable ROC when conventional therapy yields no results. The rational and effective use of immunotherapy will contribute to the clinical benefit of these patients, especially in patients without approved immunotherapy biomarkers. Here we present a case of successful secondary radical surgery for unretractable metastatic MDR ROC by immunotherapy based on her immune-infiltrating tumor microenvironment signatures.\n          \nA 57-year-old woman, diagnosed with IC2 stage high-grade serous ovarian cancer in 2015, underwent immediate ultra-radical cytoreductive surgery followed by 6 cycles of platinum-containing adjuvant chemotherapy. After nearly 37 months of disease-free status, the woman complained of spontaneous pain from the right subcostal margin for 1 month and was diagnosed with ROC accompanied by multiple unretractable colorectal and hepatic metastases. Standard chemotherapies were ineffective and quickly resulted in disease progression and grade IV myelosuppression followed impaired gastrointestinal function. Notably, after standard chemotherapy, the patient was tested negative for all immune biomarkers, but multiple fluorescence immunohistochemistry indicated that her tumor tissue was significantly infiltrated with the cluster of differentiation 8 (CD8) T cells and natural killer (NK) cells, implying potential benefits of immunotherapy. Then changed to 3 cycles of intravenous pembrolizumab, the main pelvic tumor and hepatic metastases showed significant shrinkage and achieved partial response, but the disease progressed after 8.7 months. Subsequently, arterial perfusion with pembrolizumab was performed combined with the chemotherapy. A comfortingly partial response was achieved again that enabled the patient to successfully undergo a secondary radical surgery for colorectal and liver metastases. Since that time the patient's postoperative course has been favorable, and she remains disease-free at present for at least 17 months.\n          \nImmune infiltration signatures of the tumor microenvironment could serve as an indication for immunotherapy in patients with unretractable platinum-sensitive ROC with MDR. In addition, the introduction of immunotherapy might bring some degree of chemotherapy resensitization.",
     "metadata": {
-      "rank": 5,
-      "score": 0.6767469859023668,
+      "rank": 3,
+      "score": 0.7001076940640254,
       "journal": "Ann Transl Med",
       "pub_date": "2022-06-01",
       "doi": "10.21037/atm-22-2128",
       "impact_factor": 3.616
     },
-    "cached_at": "2026-01-21T06:10:34.170037"
+    "cached_at": "2026-01-22T23:25:37.570667"
   },
   "33850907": {
     "pmid": "33850907",
@@ -564,14 +564,14 @@
     "title": "Niraparib as Maintenance Therapy in Germline ATM-mutated and Somatic",
     "abstract": "Brain metastases from epithelial ovarian cancer are very rare with an incidence of only 1-2.5%. Many therapeutic methods such as surgery, irradiation and chemotherapy do produce survival benefits, but the overall outcome remains unsatisfactory. The BRCA (breast cancer susceptibility gene) mutation status seems to be associated with the development of brain metastases from ovarian cancer and these patients may benefit from treatment with PARP (poly ADP ribose polymerase) inhibitors. Here is a case where a Chinese female patient diagnosed with high-grade serous ovarian cancer with brain metastases was detected to have known germline ATM mutation and somatic BRCA2 mutation. The patient underwent whole brain radiotherapy and systemic chemotherapy, commenced niraparib as maintenance treatment and then presented considerable clinical and radiological response.",
     "metadata": {
-      "rank": 5,
-      "score": 0.6783878905275873,
+      "rank": 3,
+      "score": 0.6738832957095137,
       "journal": "Onco Targets Ther",
       "pub_date": "2020-01-01",
       "doi": "10.2147/OTT.S281302",
       "impact_factor": 2.8
     },
-    "cached_at": "2026-01-22T20:13:26.491523"
+    "cached_at": "2026-01-23T00:49:59.405386"
   },
   "26774475": {
     "pmid": "26774475",
@@ -606,14 +606,14 @@
     "title": "Non-small cell neuroendocrine carcinoma of the ovary in a",
     "abstract": "Non-small cell neuroendocrine carcinomas (NSCNEC) account for 2% of gynecological cancer cases and are associated with a poor prognosis due to delayed diagnosis and aggressive tumor behavior. BRCA2-associated ovarian carcinomas predominantly possess a high-grade serous phenotype, which respond to platinum and targeted therapy with PARP inhibitors. Presented here is the case of an adult patient with NSCNEC of the ovaries associated with a deleterious BRCA2 germline mutation. The pathogenic mutation was also confirmed on the somatic level, while the wild-type allele had a high variant fraction, suggesting loss of heterozygosity. To the best of our knowledge, this is the first report of an adult BRCA2 germline mutation carrier with the rare NSCNEC of the ovary phenotype. Therefore, ovarian cancer patients with histological subtypes other than high-grade serous carcinomas should be tested for BRCA1/2 mutations, as they may benefit from targeted therapy with poly (ADP-ribose) polymerase inhibitors.",
     "metadata": {
-      "rank": 5,
-      "score": 0.680481967443128,
+      "rank": 4,
+      "score": 0.667821656342227,
       "journal": "Oncol Lett",
       "pub_date": "2018-04-01",
       "doi": "10.3892/ol.2018.7836",
       "impact_factor": 2.2
     },
-    "cached_at": "2026-01-22T19:03:50.073204"
+    "cached_at": "2026-01-23T00:49:59.409550"
   },
   "36865800": {
     "pmid": "36865800",
@@ -649,27 +649,27 @@
     "abstract": "Given the rarity of RAD51C mutations, the risk and treatment of metachronous breast cancer after the diagnosis of ovarian cancer in RAD51C mutation carriers is not clear, especially for those who have received PARPi treatment. We report the case of a 65-year-old woman diagnosed with stage IIIC high-grade serous primary fallopian tube cancer. The patient had no family history of breast or ovarian cancer. The patient received three cycles of neoadjuvant chemotherapy with paclitaxel and carboplatin and achieved a complete response. After interval debulking surgery, the patient received three cycles of adjuvant chemotherapy. Collection and extraction of saliva DNA for next-generation sequencing identified a RAD51C mutation c.838-2 A > G. The patient received niraparib as front-line maintenance treatment. After 36 months of niraparib treatment, the patient had grade II invasive ductal carcinoma of the left breast that was positive for estrogen receptor (90%) and Ki-67 (30%) and negative for progesterone receptor and human epidermal growth factor receptor 2. Computed tomography revealed the absence of distant metastases. Modified radical mastectomy and axillary lymph node dissection were then performed. The final pathological report of the breast showed a 1.8 cm Bloom-Richardson grade II invasive ductal carcinoma in the left breast with axillary lymph node metastasis (1/21). Finally, the breast cancer was stage IIA, pT1cN1M0. The metachronous breast cancer in this case may be the first report of second primary cancer in fallopian tube cancer patient harboring a RAD51C mutation during niraparib treatment. Further studies are required to determine optimal treatment.",
     "metadata": {
       "rank": 1,
-      "score": 0.7182287542935542,
+      "score": 0.7260714914276815,
       "journal": "Hered Cancer Clin Pract",
       "pub_date": "2024-02-15",
       "doi": "10.1186/s13053-024-00274-8",
       "impact_factor": 2.4
     },
-    "cached_at": "2026-01-22T20:41:03.394213"
+    "cached_at": "2026-01-22T22:58:47.821263"
   },
   "39312297": {
     "pmid": "39312297",
     "title": "Predictive value of homologous recombination deficiency status for survival outcomes in primary tubo-ovarian high-grade serous carcinoma.",
     "abstract": "This is a protocol for a Cochrane Review (prognosis). The objectives are as follows: To evaluate the predictive value of the prognostic factor HRD status, as determined by various clinically validated HRD assays at the time of staging laparotomy, compared to BRCA1/2 mutation status for progression-free survival and overall survival in patients with tubo-ovarian high-grade serous carcinoma treated in the first-line setting with a combination of surgery and platinum-based chemotherapy and/or maintenance with PARP inhibitors.",
     "metadata": {
-      "rank": 3,
-      "score": 0.7011952387465432,
+      "rank": 2,
+      "score": 0.7127830692985353,
       "journal": "Cochrane Database Syst Rev",
       "pub_date": "2024-09-23",
       "doi": "10.1002/14651858.CD015896",
       "impact_factor": 9.4
     },
-    "cached_at": "2026-01-22T20:41:03.400978"
+    "cached_at": "2026-01-22T23:01:30.037345"
   },
   "38515573": {
     "pmid": "38515573",
@@ -677,41 +677,41 @@
     "abstract": "Multiple primary malignant neoplasms are a rare gynecologic malignancy; particularly, cases originating from the heterologous organs, such as the ovary and cervix. Here, we report a case of two primary malignant neoplasms in a patient who had undergone laparoscopic radical hysterectomy + bilateral salpingo-oophorectomy + pelvic lymph node dissection + para-aortic lymphadenectomy + appendectomy + omentectomy + metastasectomy under general anesthesia. The patient experienced complete remission after six courses of postoperative chemotherapy with a standard Taxol and Carboplatin regimen. Genetic testing was performed to detect BRCA2 mutations, and poly (ADP-ribose) polymerase (PARP) inhibitors were used for maintenance therapy.",
     "metadata": {
       "rank": 2,
-      "score": 0.7069434268308659,
+      "score": 0.6775613646778693,
       "journal": "Front Oncol",
       "pub_date": "2024-01-01",
       "doi": "10.3389/fonc.2024.1298109",
       "impact_factor": 3.3
     },
-    "cached_at": "2026-01-22T20:41:03.397715"
+    "cached_at": "2026-01-23T00:49:59.401264"
   },
   "35359396": {
     "pmid": "35359396",
     "title": "Case Report: Niraparib-Related Pulmonary Embolism During the Treatment of",
     "abstract": "Niraparib, an oral, potent, highly selective poly (ADP-ribose) polymerase (PARP) inhibitor, has promising clinical benefit for maintenance treatment of patients with ovarian cancer in partial response to platinum-based chemotherapy, especially in patients with BRCA mutation. In publicly available niraparib treatment-related adverse events, gastrointestinal disorders and hematological toxicities were most commonly reported with manageable safety profile. Herein, we first describe a severe and never-reported pulmonary embolism (PE) associated with the use of niraparib in a patient with BRCA mutation advanced high-grade serous ovarian cancer and received anticoagulant therapy after PE. There have been no reports of PE caused by the use of niraparib in patients with advanced high-grade serous ovarian cancer; knowledge of the occurrence of PE after the use of niraparib may assist other clinicians in managing this rare but potentially serious toxic effect.",
     "metadata": {
-      "rank": 5,
-      "score": 0.6926065797885465,
+      "rank": 4,
+      "score": 0.707860763563736,
       "journal": "Front Oncol",
       "pub_date": "2022-01-01",
       "doi": "10.3389/fonc.2022.853211",
       "impact_factor": 3.3
     },
-    "cached_at": "2026-01-22T20:28:35.475290"
+    "cached_at": "2026-01-22T22:58:47.832261"
   },
   "38601768": {
     "pmid": "38601768",
     "title": "Case report: Response to everolimus in a patient with platinum resistant, high grade serous ovarian carcinoma with biallelic",
     "abstract": "Patients with platinum-resistant recurrent high grade serous ovarian carcinoma have poor outcomes and limited treatment options.\n          \nWe present a case of a 48-year-old woman with platinum-resistant high grade serous ovarian carcinoma harboring the pathogenic TSC2 R611Q variant with concomitant single copy loss of TSC2 (suggesting biallelic TSC2 inactivation) identified in targeted tumor sequencing. The patient was treated with the mTOR inhibitor everolimus, with an excellent response by imaging and a marked decrease in CA125; she remained on everolimus for 19 months until she developed progressive disease.\n          \nWhile mTOR inhibition is frequently used in tumors associated with tuberous sclerosis complex (TSC), such as lymphangioleiomyomatosis and malignant perivascular epithelioid cell tumors, this is the first case of a patient with ovarian cancer harboring TSC1/2 mutations who responded to mTOR inhibition. This case highlights the utility of targeted DNA sequencing in the management of ovarian carcinoma and demonstrates the value of tumor-agnostic targeted therapies.",
     "metadata": {
-      "rank": 5,
-      "score": 0.6889746830985797,
+      "rank": 1,
+      "score": 0.7118015450690712,
       "journal": "Front Oncol",
       "pub_date": "2024-01-01",
       "doi": "10.3389/fonc.2024.1357980",
       "impact_factor": 3.3
     },
-    "cached_at": "2026-01-22T20:37:57.640421"
+    "cached_at": "2026-01-22T23:08:51.310110"
   },
   "34316715": {
     "pmid": "34316715",
@@ -746,14 +746,14 @@
     "title": "Case Report: Niraparib as Maintenance Therapy in A Patient With Ovarian Carcinosarcoma.",
     "abstract": "Ovarian carcinosarcoma (OCS) is a rare, highly aggressive and rapidly progressing malignant tumor with an extremely poor prognosis. So far, due to the low incidence of OCS, there are no large-scale prospective studies exploring the standard care of OCS patients. There is no uniform and effective treatment for OCS. Within the development of precision medicine, targeted therapies (such as PARP inhibitors) have been widely used in epithelial ovarian cancer and various other solid tumors. Here, we report a BRCAwt patient with advanced OCS who experienced a second and a third cytoreductive surgery in June 2017 and October 2019 and has been on niraparib maintenance therapy for more than 20 months after receiving second-line and third-line chemotherapy.",
     "metadata": {
-      "rank": 1,
-      "score": 0.7326466027409532,
+      "rank": 2,
+      "score": 0.7101441171306966,
       "journal": "Front Oncol",
       "pub_date": "2021-01-01",
       "doi": "10.3389/fonc.2021.603591",
       "impact_factor": 3.3
     },
-    "cached_at": "2026-01-22T20:03:17.312557"
+    "cached_at": "2026-01-22T22:58:47.825062"
   },
   "35696850": {
     "pmid": "35696850",
@@ -803,27 +803,27 @@
     "abstract": "Poly ADP-ribose polymerase inhibitor (PARPi) has become an important maintenance therapy for ovarian cancer after surgery and cytotoxic chemotherapy, which has changed the disease management model of ovarian cancer, greatly decreased the risk of recurrence, and made the prognosis of ovarian cancer better to certain extent. The three PARPis currently approved by the United States Food and Drug Administration (FDA) and the European Medicines Agency (EMA) for the treatment of ovarian cancer are Olaparib, Niraparib and Rucaparib. With the incremental results from new clinical trials, the applicable population of PARPi for ovarian cancer have expanded to population with non-BRCA mutations. Although BRCA mutated population are still the main beneficiaries of PARPi, recent clinical trials indicated PARPis' therapeutic potential in non-BRCA mutated population, especially in homologous recombination repair deficiency (HRD) positive population. However, lack of unified HRD status detection method poses a challenge for the accurate selection of PARPi beneficiaries. The reversal of homologous recombination (HR) function during the treatment will not only cause resistance to PARPis, but also reduce the accuracy of the current method to determine HRD status. Therefore, the development of reliable HRD status detection methods to determine the beneficiary population, as well as rational combination treatment are warranted. This review mainly summarizes the latest clinical trial results and combination treatment of PARPis in ovarian cancer with non-BRCA mutations, and discusses the application prospects, including optimizing combination therapy against drug resistance, developing unified and accurate HRD status detection methods for patient selection and stratification. This review further poses an interesting topic: the efficacy and safety in patients retreated with PARPis after previous PARPi treatment---\"PARPi after PARPi\".",
     "metadata": {
       "rank": 4,
-      "score": 0.6939099578223773,
+      "score": 0.7092416683158412,
       "journal": "Front Pharmacol",
       "pub_date": "2021-01-01",
       "doi": "10.3389/fphar.2021.743073",
       "impact_factor": 4.8
     },
-    "cached_at": "2026-01-22T20:28:35.472005"
+    "cached_at": "2026-01-22T22:13:38.034029"
   },
   "31205507": {
     "pmid": "31205507",
     "title": "Olaparib as maintenance treatment for patients with platinum-sensitive relapsed ovarian cancer.",
     "abstract": "Poly (ADP-ribose) polymerase (PARP) inhibitors were developed with the intention of treating patients with homologous recombination repair deficiency (HRD), specifically for patients with tumours that harbour a BRCA mutation (BRCAm). Evidence from clinical trials to date has demonstrated that patients with a BRCAm derive the greatest benefit from PARP inhibitors. However, clinical studies have also shown that PARP inhibitors provide benefit to women with ovarian cancer who do not have a BRCAm. The recent updated approvals of olaparib, niraparib and rucaparib by the US Food and Drug Administration and the European Medicines Agency for the treatment of all platinum-sensitive relapsed (PSR) ovarian-cancer populations, regardless of their BRCAm status, support this. Long-term tolerability and efficacy of olaparib have been demonstrated in patients both with and without a BRCAm, with 13% of patients receiving maintenance olaparib for at least 5 years in one study, which is unprecedented in the relapsed ovarian-cancer setting (versus 1% on placebo). Further studies should be performed to elucidate which non-BRCAm patients are deriving benefit and what molecular processes are enabling this, so that patients continue to receive optimal treatment for their disease. Here, we review clinical and molecular markers of HRD, the long-term clinical safety and efficacy of PARP inhibitors in ovarian cancer, with a focus on olaparib and the current approved indications for PARP inhibitors, as well as guidance on treatment decisions for patients with PSR ovarian cancer.",
     "metadata": {
-      "rank": 2,
-      "score": 0.7242241983829905,
+      "rank": 4,
+      "score": 0.684684716238637,
       "journal": "Ther Adv Med Oncol",
       "pub_date": "2019-01-01",
       "doi": "10.1177/1758835919849753",
       "impact_factor": 4.2
     },
-    "cached_at": "2026-01-22T20:03:17.316615"
+    "cached_at": "2026-01-22T23:24:53.603864"
   },
   "29651149": {
     "pmid": "29651149",
@@ -831,13 +831,13 @@
     "abstract": "A correction to this article has been published and is linked from the HTML and PDF versions of this paper. The error has not been fixed in the paper.",
     "metadata": {
       "rank": 5,
-      "score": 0.682324490967095,
+      "score": 0.7022360576525443,
       "journal": "Sci Rep",
       "pub_date": "2018-04-13",
       "doi": "10.1038/s41598-018-24099-3",
       "impact_factor": 3.9
     },
-    "cached_at": "2026-01-22T18:44:52.726686"
+    "cached_at": "2026-01-22T23:01:30.047860"
   },
   "35004311": {
     "pmid": "35004311",
@@ -984,14 +984,14 @@
     "title": "Seven Genes Based Novel Signature Predicts Clinical Outcome and Platinum Sensitivity of High Grade IIIc Serous Ovarian Carcinoma.",
     "abstract": "Background: As a major subtype of ovarian cancer, high grade FIGO stage IIIc serous ovarian carcinoma (HG3cSOC), has various prognosis due to genetic heterogeneity. Methods: The transcriptome of 401 primary FIGO IIIc serous ovarian samples was screened, seven genes based prognostic model was developed. The prognostic valueof risk score in four different cohorts (TCGA-cohort, Poland-cohort, Japan-cohort and USA-cohort) was validated. The relationship between risk score and other clinical indicators were analyzed. The guide value of risk score for platinum-taxol chemotherapy was also assayed. Tissue microenvironment difference among samples with different risk scores was investigated. Results: High-risk group (N=200, median survival months: 39.6, 95% CI: 35.9-46.3 months) had a significantly worse prognosis than low-risk group (N=201, median survival months: 52.6, 95% CI: 45.2-64.9 months;). The risk score's performance was validated in Japan-cohort (N=90, Poland-cohort (N=48) and USA-cohort (N=84). The risk score is independent from age, primary tumor size, grade and treatment methods and the performance of risk score is uniform in subgroups. Furthermore, the risk score predicted the response of HG3cSOC to platinum-based regimen after surgery, and this finding was further validated in newly collected China-cohort (N=102). Gene Set Enrichment Analysis (GSEA) and tumor infiltration analysis revealed that risk score reflected the immune infiltration and cell-cell interaction status, and the migration function of candidate genes were also verified. Conclusions: The optimized seven genes-based model is a valuable and robust model in predicting the survival of HG3cSOC, and served as a valuable marker for the response to platinum-based chemotherapy.",
     "metadata": {
-      "rank": 5,
-      "score": 0.6873705616893819,
+      "rank": 4,
+      "score": 0.708300244818468,
       "journal": "Int J Biol Sci",
       "pub_date": "2018-01-01",
       "doi": "10.7150/ijbs.28249",
       "impact_factor": 10.0
     },
-    "cached_at": "2026-01-22T01:45:02.449235"
+    "cached_at": "2026-01-22T23:08:51.322016"
   },
   "40190557": {
     "pmid": "40190557",
@@ -1040,14 +1040,14 @@
     "title": "How BRCA and homologous recombination deficiency change therapeutic strategies in ovarian cancer: a review of literature.",
     "abstract": "About 50% of High Grade Serous Ovarian Cancer exhibit a high degree of genomic instability due to mutation of genes involved in Homologous Recombination (HRD) and such defect accounts for synthetic lethality mechanism of PARP inhibitors (PARP-i). Several clinical trials have shown how BRCA and HRD mutational status profoundly affect first line chemotherapy as well as response to maintenance therapy with PARP-i, hence Progression Free Survival and Overall Survival. Consequently, there is urgent need for the development of increasingly reliable HRD tests, overcoming present limitations, as they play a key role in the diagnostic and therapeutic process as well as have a prognostic and predictive value. In this review we offer an overview of the state of the art regarding the actual knowledge about BRCA and HRD mutational status, the rationale of PARPi use and HRD testing (current and in development assays) and their implications in clinical practice and in the treatment decision process, in order to optimize and choose the best tailored therapy in patients with ovarian cancer.",
     "metadata": {
-      "rank": 4,
-      "score": 0.6831946875561704,
+      "rank": 2,
+      "score": 0.6882101844637883,
       "journal": "Front Oncol",
       "pub_date": "2024-01-01",
       "doi": "10.3389/fonc.2024.1335196",
       "impact_factor": 3.3
     },
-    "cached_at": "2026-01-22T18:44:52.721597"
+    "cached_at": "2026-01-22T23:24:53.592677"
   },
   "27558151": {
     "pmid": "27558151",
@@ -1055,69 +1055,69 @@
     "abstract": "Ovarian cancer is not a single disease and can be subdivided into at least five different histological subtypes that have different identifiable risk factors, cells of origin, molecular compositions, clinical features and treatments. Ovarian cancer is a global problem, is typically diagnosed at a late stage and has no effective screening strategy. Standard treatments for newly diagnosed cancer consist of cytoreductive surgery and platinum-based chemotherapy. In recurrent cancer, chemotherapy, anti-angiogenic agents and poly(ADP-ribose) polymerase inhibitors are used, and immunological therapies are currently being tested. High-grade serous carcinoma (HGSC) is the most commonly diagnosed form of ovarian cancer and at diagnosis is typically very responsive to platinum-based chemotherapy. However, in addition to the other histologies, HGSCs frequently relapse and become increasingly resistant to chemotherapy. Consequently, understanding the mechanisms underlying platinum resistance and finding ways to overcome them are active areas of study in ovarian cancer. Substantial progress has been made in identifying genes that are associated with a high risk of ovarian cancer (such as BRCA1 and BRCA2), as well as a precursor lesion of HGSC called serous tubal intraepithelial carcinoma, which holds promise for identifying individuals at high risk of developing the disease and for developing prevention strategies.",
     "metadata": {
       "rank": 3,
-      "score": 0.6718191998718339,
+      "score": 0.709848838910893,
       "journal": "Nat Rev Dis Primers",
       "pub_date": "2016-08-25",
       "doi": "10.1038/nrdp.2016.61",
       "impact_factor": 60.6
     },
-    "cached_at": "2026-01-22T07:48:44.510534"
+    "cached_at": "2026-01-22T23:08:51.317843"
   },
   "37693130": {
     "pmid": "37693130",
     "title": "Effect of different metastasis patterns on the prognosis of patients with stage III high-grade serous ovarian cancer.",
     "abstract": "To investigate the effect of different metastatic patterns of stage III high-grade serous ovarian cancer on the patient prognosis. The clinical data of 134 patients with Stage III, high-grade serous ovarian cancer diagnosed in The Affiliated Hospital of Qingdao University from January 2018 to April 2020 were retrospectively collected, and the patients were grouped according to metastasis mode. Patients with simple lymph node metastasis (SLNM) were included in the SLNM group, and patients with simple abdominal implantation alone and patients with abdominal metastasis combined with lymph node metastasis were all in the abdominal metastasis (AM) group. The prognosis of the two groups was analyzed. Of the 134 enrolled patients, complete datasets from 128 were successfully collected. There were 20 cases of SLNM (15.63%) and 108 cases of AM (84.37%). Initial CA125, initial HE4, and whether neoadjuvant chemotherapy was used were compared between the two groups (P < 0.05). According to the chemotherapy results, patients was divided into two groups: chemotherapy remission and uncontrolled, including 111 patients with chemotherapy remission and 17 patients with uncontrolled chemotherapy. According to the criteria of relapse after complete completion of chemotherapy and clinical remission, 91 cases relapsed, 20 cases did not relapse, of which 78 cases were platinum-sensitive, and 13 were platinum-resistant relapses. There were 4 recurrence cases in SLNM group (4.40%) and 87 recurrence cases (95.60%) in AM group (P < 0.05). The recurrence sites of 91 patients were analyzed, including 52 cases (57.14%) in the peritoneum, 11 cases (12.09%) in distant regions, 9 cases (9.89%) in lymph nodes, 19 cases (20.88%) in the peritoneum and lymph nodes. Significant differences were noted in the two groups' peritoneum, lymph node, and distance (P < 0.05). The two groups had significant differences in progression-free survival, overall survival, and 3-year survival (all P < 0.05). Initial HE4 levels, chemotherapy sensitivity, and SLNM are independent prognostic factors for Stage III high-grade serous ovarian cancer patients. Initial HE4 level < 233.7 pmol/l and chemotherapy sensitivity were protective factors, indicating a good prognosis. Patients in the SLNM group had lower initial CA125 and HE4 levels and higher survival rates. Initial HE4 levels and chemotherapy sensitivity are independent factors affecting prognosis in Stage III high-grade serous ovarian cancer patients.",
     "metadata": {
-      "rank": 5,
-      "score": 0.6593138073908841,
+      "rank": 1,
+      "score": 0.6865965366299648,
       "journal": "Am J Cancer Res",
       "pub_date": "2023-01-01",
       "doi": null,
       "impact_factor": 2.9
     },
-    "cached_at": "2026-01-22T07:48:44.517624"
+    "cached_at": "2026-01-22T21:18:42.145452"
   },
   "35028612": {
     "pmid": "35028612",
     "title": "Multiomic analysis identifies CPT1A as a potential therapeutic target in platinum-refractory, high-grade serous ovarian cancer.",
     "abstract": "Resistance to platinum compounds is a major determinant of patient survival in high-grade serous ovarian cancer (HGSOC). To understand mechanisms of platinum resistance and identify potential therapeutic targets in resistant HGSOC, we generated a data resource composed of dynamic (±carboplatin) protein, post-translational modification, and RNA sequencing (RNA-seq) profiles from intra-patient cell line pairs derived from 3 HGSOC patients before and after acquiring platinum resistance. These profiles reveal extensive responses to carboplatin that differ between sensitive and resistant cells. Higher fatty acid oxidation (FAO) pathway expression is associated with platinum resistance, and both pharmacologic inhibition and CRISPR knockout of carnitine palmitoyltransferase 1A (CPT1A), which represents a rate limiting step of FAO, sensitize HGSOC cells to platinum. The results are further validated in patient-derived xenograft models, indicating that CPT1A is a candidate therapeutic target to overcome platinum resistance. All multiomic data can be queried via an intuitive gene-query user interface (https://sites.google.com/view/ptrc-cell-line).",
     "metadata": {
-      "rank": 3,
-      "score": 0.7033717670268433,
+      "rank": 5,
+      "score": 0.682126908405822,
       "journal": "Cell Rep Med",
       "pub_date": "2021-12-21",
       "doi": "10.1016/j.xcrm.2021.100471",
       "impact_factor": 10.6
     },
-    "cached_at": "2026-01-22T02:50:20.906515"
+    "cached_at": "2026-01-22T23:26:23.458753"
   },
   "29163180": {
     "pmid": "29163180",
     "title": "Risk Factors of Hypersensitivity to Carboplatin in Patients with Gynecologic Malignancies.",
     "abstract": "We evaluated the prevalence of and risk factors for hypersensitivity reactions related to carboplatin, which is commonly used to treat gynecological malignancies. All women with pathologically documented ovarian, fallopian tube, or primary peritoneal cancer treated with carboplatin alone or a carboplatin-based combination chemotherapy regimen at a single hospital between January 2006 and December 2013 were retrospectively recruited. We analyzed the incidence, characteristics, risk factors, management, and outcomes of carboplatin-related hypersensitivity reactions among these patients. Among 735 eligible women, 75 (10.2%) experienced a total of 215 carboplatin-related hypersensitivity reaction events. The annual incidence of carboplatin-related hypersensitivity reactions gradually increased from 0.88% in 2006 to 5.42% in 2013. The incidence of carboplatin-related hypersensitivity was higher in patients with advanced stage disease (P < 0.001, Kruskal-Wallis test), serous and mixed histological types (P = 0.003, Kruskal-Wallis test), malignant ascites (P = 0.009, chi-square test), and history of other drug allergy (P < 0.001, chi-square test). Compared to women without hypersensitivity reactions, women who experienced hypersensitivity reactions had a significantly greater median cycle number (12 vs. 6, P < 0.001, independent sample t-test) and dose (6,816 vs. 3,844 mg, P < 0.001, independent sample t-test). The cumulative incidence of carboplatin-related hypersensitivity reactions dramatically increased with >8 cycles or dose >3,500 mg. Therefore, disease severity, histological type, malignant ascites, past drug allergies, and cumulative carboplatin dose are risk factors for carboplatin-related hypersensitivity reactions. Such reactions could potentially be reduced or prevented by slowing the infusion rate and using a desensitization protocol involving anti-allergy medications.",
     "metadata": {
-      "rank": 3,
-      "score": 0.6923617346687081,
+      "rank": 2,
+      "score": 0.6981518309626455,
       "journal": "Front Pharmacol",
       "pub_date": "2017-01-01",
       "doi": "10.3389/fphar.2017.00800",
       "impact_factor": 4.8
     },
-    "cached_at": "2026-01-22T02:47:35.168262"
+    "cached_at": "2026-01-22T21:15:22.572838"
   },
   "38762636": {
     "pmid": "38762636",
     "title": "Histopathologic image-based deep learning classifier for predicting platinum-based treatment responses in high-grade serous ovarian cancer.",
     "abstract": "Platinum-based chemotherapy is the cornerstone treatment for female high-grade serous ovarian carcinoma (HGSOC), but choosing an appropriate treatment for patients hinges on their responsiveness to it. Currently, no available biomarkers can promptly predict responses to platinum-based treatment. Therefore, we developed the Pathologic Risk Classifier for HGSOC (PathoRiCH), a histopathologic image-based classifier. PathoRiCH was trained on an in-house cohort (n = 394) and validated on two independent external cohorts (n = 284 and n = 136). The PathoRiCH-predicted favorable and poor response groups show significantly different platinum-free intervals in all three cohorts. Combining PathoRiCH with molecular biomarkers provides an even more powerful tool for the risk stratification of patients. The decisions of PathoRiCH are explained through visualization and a transcriptomic analysis, which bolster the reliability of our model's decisions. PathoRiCH exhibits better predictive performance than current molecular biomarkers. PathoRiCH will provide a solid foundation for developing an innovative tool to transform the current diagnostic pipeline for HGSOC.",
     "metadata": {
-      "rank": 3,
-      "score": 0.6609867110881809,
+      "rank": 2,
+      "score": 0.7114232387629101,
       "journal": "Nat Commun",
       "pub_date": "2024-05-18",
       "doi": "10.1038/s41467-024-48667-6",
       "impact_factor": 15.7
     },
-    "cached_at": "2026-01-22T07:17:50.095243"
+    "cached_at": "2026-01-22T23:08:51.314059"
   },
   "30755819": {
     "pmid": "30755819",
@@ -1166,14 +1166,14 @@
     "title": "High Serpin Family A Member 10 Expression Confers Platinum Sensitivity and Is Associated With Survival Benefit in High-Grade Serous Ovarian Cancer: Based on Quantitative Proteomic Analysis.",
     "abstract": "This study aims to identify differentially expressed proteins related with platinum sensitivity and to find biomarkers for predicting platinum response and survival outcomes in patients with high-grade serous ovarian cancer (HGSOC). Eligible HGSOC patients were divided into platinum-sensitive and platinum-resistant groups according to platinum-free interval (PFI). Tissue protein lysates from tumor tissues were subjected to an in-solution tryptic digest followed by tandem mass tag (TMT) labeling of the resulting peptides and mass spectrometric analysis. Candidate proteins were identified using differentially expressed protein and gene set enrichment analysis (GSEA) and confirmed by immunohistochemistry (IHC), and their survival relevance was evaluated in The Cancer Genome Atlas (TCGA) ovarian cancer cohort. The results showed that there was a significant difference in the protein expression profiling between the two patient groups. In the GSEA model, a gene set of 239 extracellular matrix (ECM)-related proteins was significantly enriched in the platinum-sensitive group [normalized enrichment score (NES) = 3.82, q < 10-5], and this finding was confirmed in TCGA ovarian cancer cohort. Interestingly, an ECM-related gene expression, serpin family A member 10 (SERPINA10), was identified to be significantly positively correlated with overall survival (OS) and progression-free survival (PFS) in TCGA ovarian cancer cohort (all p < 0.05). IHC results demonstrated that HGSOC patients with high SERPINA10 expression had longer PFI than the patients with low SERPINA10 expression (9 vs. 5 months, p = 0.038), and the SERPINA10 expression had an area under the receiver operating characteristic curve (AUC) value of 0.758 (95% CI = 0.612-0.905; p = 0.005) to discriminate the platinum-sensitive group from the platinum-resistant group. In conclusion, the results suggested that SERPINA10 could be a promising biomarker for predicting the response and survival in platinum-based chemotherapy of HGSOC.",
     "metadata": {
-      "rank": 4,
-      "score": 0.6822399181547883,
+      "rank": 5,
+      "score": 0.6929808604455904,
       "journal": "Front Oncol",
       "pub_date": "2021-01-01",
       "doi": "10.3389/fonc.2021.761960",
       "impact_factor": 3.3
     },
-    "cached_at": "2026-01-22T03:14:02.499444"
+    "cached_at": "2026-01-22T23:08:51.326053"
   },
   "27148423": {
     "pmid": "27148423",
@@ -1292,14 +1292,14 @@
     "title": "Individualized treatment for a case of recurrent ovarian ependymoma.",
     "abstract": "Ovarian anaplastic ependymoma is a rare gynecologic malignancy. Owing to its rarity, treatment is challenging. Unilateral ovarian ependymoma was found during laparoscopy in a 19-year-old woman. After cytoreductive surgery, three cycles of bleomycin, etoposide, and cisplatin were administered. Four years after chemotherapy, the patient experienced relapse. After the secondary cytoreductive surgery, no further treatment was performed. She is in good condition, ~19 months after secondary cytoreductive surgery using hormone-replacement therapy without chemotherapy. Some cases of ovarian ependymoma can be treated with surgery alone without chemotherapy and the outcome has been satisfying. Choosing treatment based on malignant ovarian germ cell tumors may be not optimal. Therefore, we suggest individualized treatment for ovarian ependymoma.",
     "metadata": {
-      "rank": 3,
-      "score": 0.7073012488200037,
+      "rank": 4,
+      "score": 0.6484279764382901,
       "journal": "Onco Targets Ther",
       "pub_date": "2019-01-01",
       "doi": "10.2147/OTT.S180309",
       "impact_factor": 2.8
     },
-    "cached_at": "2026-01-22T04:49:44.789604"
+    "cached_at": "2026-01-23T00:49:12.705628"
   },
   "30992672": {
     "pmid": "30992672",
@@ -1334,14 +1334,14 @@
     "title": "Neoadjuvant therapy of BRCA1-driven ovarian cancer by combination of cisplatin, mitomycin C and doxorubicin.",
     "abstract": "Cisplatin, mitomycin C and anthracyclines demonstrate high activity in BRCA1-deficient tumors. This study aimed to evaluate the efficacy of the triplet combination of these drugs in BRCA1-driven high-grade serous ovarian carcinomas (HGSOCs).\n          \nTen HGSOC patients with germ-line BRCA1 mutation received neoadjuvant chemotherapy (NACT) consisting of mitomycin C 10 mg/m2 (day 1), doxorubicin 30 mg/m2 (days 1 and 8) and cisplatin 80 mg/m2 (day 1), given every 4 weeks (MAP regimen). The comparator group included 16 women, who received standard NACT combination of paclitaxel 175 mg/m2 and carboplatin (6 AUC), given every 3 weeks (TCbP scheme).\n          \nNone of the patients treated by the MAP scheme demonstrated complete pathologic response in ovaries, while 4 women showed absence of tumor cells in surgically excised omental specimens. When chemotherapy response scores (CRS) were considered, poor responsiveness (CRS 1) was not observed in the MAP group, but was common for the TCbP regimen (6/16 (38 %) for ovaries and 5/16 (31 %) for omentum; p = 0.05 and 0.12, respectively). Median treatment-free interval (TFI) was not reached in women treated by the MAP, but was 9.5 months for the TCbP scheme (p = 0.1). The rate of the recurrence within 1 year after the completion of the treatment was 4/10 (40 %) for the MAP and 10/13 (77 %) for the TCbP (p = 0.1).\n          \nThe attempt to intensify NACT by administering combination of 3 drugs did not result in high rate of complete pathologic responses. However, there was a trend towards higher efficacy of the MAP regimen versus conventional TCbP scheme with regard to CRS and clinical outcomes.",
     "metadata": {
-      "rank": 1,
-      "score": 0.6895139962231693,
+      "rank": 2,
+      "score": 0.6981271768490522,
       "journal": "Hered Cancer Clin Pract",
       "pub_date": "2021-02-03",
       "doi": "10.1186/s13053-021-00173-2",
       "impact_factor": 2.4
     },
-    "cached_at": "2026-01-22T04:59:11.346096"
+    "cached_at": "2026-01-22T21:16:14.528767"
   },
   "30349318": {
     "pmid": "30349318",
@@ -1418,14 +1418,14 @@
     "title": "Case Report: Influence of BRCA1 germline mutation on treatment-related morbidity of a non-seminomatous germ cell tumor patient.",
     "abstract": "We present the case of a 47-year-old male with advanced non-seminomatous germ cell tumor, who was found to carry a heterozygous pathogenic BRCA1 germline variant following molecular testing due to a positive family history. While tumor analysis did not confirm loss of heterozygosity, evidence suggests that BRCA1 haploinsufficiency also increases genomic instability and cancer risk. After pre-phase treatment and the first cycle of chemotherapy, the patient developed prolonged pancytopenia leading to neutropenic sepsis. Subsequent cycles showed a shorter duration of pancytopenia, though it remained significant. A literature review indicates that BRCA1 deficiency may impair bone marrow recovery after chemotherapy, as observed in breast cancer patients, which we hypothesize also applies in this case. After first-line treatment, the patient had a partial response. In case of recurrence, the use of PARP inhibitors should be considered due to the BRCA1 deficiency.",
     "metadata": {
-      "rank": 2,
-      "score": 0.6748396359561414,
+      "rank": 5,
+      "score": 0.6641290521952752,
       "journal": "Front Oncol",
       "pub_date": "2025-01-01",
       "doi": "10.3389/fonc.2025.1579574",
       "impact_factor": 3.3
     },
-    "cached_at": "2026-01-22T05:40:22.680815"
+    "cached_at": "2026-01-23T00:49:59.413383"
   },
   "31192125": {
     "pmid": "31192125",
@@ -1530,14 +1530,14 @@
     "title": "Biological intensity-modulated radiotherapy plus neoadjuvant chemotherapy for multiple peritoneal metastases of ovarian cancer: A case report.",
     "abstract": "The current study presents the case of a 68-year-old female patient who received biological intensity-modulated radiotherapy (BIMRT) and neoadjuvant chemotherapy for multiple peritoneal metastases of ovarian cancer. The International Federation of Gynecology and Obstetrics disease stage was IIIc. In addition, the patient presented with urination and defecation difficulties. The result of tumor marker detection showed a carcinoembryonic antigen level of 348.2ng/ml, a cancer antigen 125 level of 2,091 U/ml and a cancer antigen 19-9 level of 113 U/ml. Computed tomography (CT) indicated and ovarian cystic or solid package, enlargement of multiple abdominal and retroperitoneal lymph nodes and abdominal cavity effusion. Positron emission tomography/CT indicated multiple internal organ metastases. The center of the ovarian cystic or solid package was considered to be a malignant tumor. A large amount of ascites were detected, as well as abdominal and retroperitoneal lymph node metastasis. The patient was treated with BIMRT at a total dose of 48 Gy, administered as a single 4.0-Gy dose 12 times. In addition, 100 mg cisplatin was administered as a peritoneal perfusion, followed by two cycles of 180 mg Taxol and 100 mg cisplatin. Furthermore, the enlargement of the lymph nodes was reduced and the tumor in the region of the ovary had decreased in size by 90%. The ascites had disappeared and the abdominal pain was greatly improved. At the time of writing this manuscript, the patient was well and without relapse. Therefore, modern radiotherapy techniques, such as BIMRT, may be considered as a beneficial treatment option for ovarian cancer patients with multiple peritoneal metastases in whom surgery is not suitable.",
     "metadata": {
-      "rank": 4,
-      "score": 0.6877404760303727,
+      "rank": 3,
+      "score": 0.6625889341771439,
       "journal": "Oncol Lett",
       "pub_date": "2015-03-01",
       "doi": "10.3892/ol.2014.2820",
       "impact_factor": 2.2
     },
-    "cached_at": "2026-01-22T07:01:21.172427"
+    "cached_at": "2026-01-23T00:48:31.989854"
   },
   "38239650": {
     "pmid": "38239650",
@@ -1656,28 +1656,28 @@
     "title": "Beside P53 and PTEN: Identification of molecular alterations of the RAS/MAPK and PI3K/AKT signaling pathways in high-grade serous ovarian carcinomas to determine potential novel therapeutic targets.",
     "abstract": "Despite great histological and molecular heterogeneity, the clinical management of high-grade ovarian carcinomas remains unspecialized. As a major subgroup, high-grade serous ovarian carcinomas (HGSOCs) require novel therapies. In addition to utilizing conventional histological prognostic markers and performing oncogenetic investigations, the molecular diagnostic method of next generation sequencing (NGS) was performed to identify 'druggable' targets that could provide access to innovative therapy. The present study was performed in 45 HGSOC patients (mean age, 59.1 years; range, 25-87 years) with histologically proven HGSOC. Breast cancer 1/2 (BRCA1/2) germline mutations were screened in 17 patients with a familial or personal history of cancer, which was justified by oncogenetic investigations. Tumor protein 53 (P53) and phosphatase and tensin homolog (PTEN) expression were assessed in formalin-fixed paraffin-embedded tissues using immunohistochemistry. Somatic mutations of Kirsten rat sarcoma viral oncogene homolog, neuroblastoma RAS viral oncogene homolog (NRAS), B-Raf proto-oncogene, serine/threonine kinase, phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit α (PIK3CA) and MET proto-oncogene, receptor tyrosine kinase (MET) were screened using NGS on DNA extracts from frozen tumor specimens obtained at diagnosis. With a median follow-up of 38 months (range, 6-93 months), 20 patients are alive, 10 patients are disease-free and 14 patients progressed within 6 months following platinum-based therapy. P53 overexpression was detected in 67% of patients and PTEN loss was detected in 38% of the patients. The overexpression of mutant P53 was found to be associated with a longer progression-free and overall survival. In total, 2 NRAS (exon 3), 3 PIK3CA (exon 5 and 10) and 5 MET mutations (exons 14 and 18) were detected. In HGSOCs, in addition to P53 and PTEN alterations, somatic genetic abnormalities can be detected using NGS and provide molecular rationale for targeted therapies, potentially offering novel therapeutic opportunities to patients.",
     "metadata": {
-      "rank": 2,
-      "score": 0.7056124895384003,
+      "rank": 4,
+      "score": 0.7093061400382997,
       "journal": "Oncol Lett",
       "pub_date": "2016-11-01",
       "doi": "10.3892/ol.2016.5083",
       "impact_factor": 2.2
     },
-    "cached_at": "2026-01-22T20:37:57.631007"
+    "cached_at": "2026-01-22T22:55:06.384535"
   },
   "40687421": {
     "pmid": "40687421",
     "title": "Severe thrombocytopenia induced by niraparib in ovarian cancer patients: a case report and literature review.",
     "abstract": "Ovarian cancer (OC) is a common gynecological malignancy, and poly (ADP-ribose) polymerase inhibitor (PARPi) maintenance therapy has significantly prolonged the survival of newly diagnosed or platinum-sensitive recurrent ovarian cancer patients, which has become a new treatment paradigm for ovarian cancer. Niraparib is a widely used PARP inhibitor in the clinical setting, and its adverse effects are also a major concern. The common adverse reactions of Niraparib mainly include various hematological adverse reactions (such as thrombocytopenia and anemia), gastrointestinal adverse reactions (such as nausea and vomiting), and fatigue. In previous related reports, thrombocytopenia has been mentioned multiple times, a relatively common adverse reaction of Niraparib. However, there have been no reports of irreversible and persistent thrombocytopenia. This case report describes a 59-year-old woman who developed persistent thrombocytopenia 11 months after adjuvant chemotherapy for stage IIIC high-grade serous ovarian cancer. Despite various treatment measures, the patient's platelet count continues to fluctuate and remains low. This is a severe thrombocytopenia that may rare adverse reaction caused by Niraparib. This article adds important information to the scientific literature on potential serious adverse reactions in long-term treatment with Niraparib. It emphasizes the necessity of closely monitoring platelet counts during Niraparib treatment.",
     "metadata": {
-      "rank": 2,
-      "score": 0.7408058672631619,
+      "rank": 4,
+      "score": 0.7114855004922748,
       "journal": "Front Oncol",
       "pub_date": "2025-01-01",
       "doi": "10.3389/fonc.2025.1542646",
       "impact_factor": 3.3
     },
-    "cached_at": "2026-01-22T19:06:36.625407"
+    "cached_at": "2026-01-22T22:27:57.801430"
   },
   "40777128": {
     "pmid": "40777128",
@@ -1698,14 +1698,14 @@
     "title": "NLR and BRCA mutational status in patients with high grade serous advanced ovarian cancer.",
     "abstract": "Laboratory-markers of the systemic inflammatory-response, such as neutrophil/lymphocyte-ratio (NLR) have been studied as prognostic factors in several tumors but in OC-patients their role is still controversial and no data about the possible correlation with the BRCA-status has been ever reported. We consecutively enrolled a series of 397 newly diagnosed high-grade serous-advanced OC-patients. All patients were tested for BRCA-mutational-status and blood-parameters have been collected 48 h before staging-surgery. A significant correlation of NLR with disease distribution (p < 0.005) was found and patients with NLR < 4 underwent primary-debulking-surgery more frequently (p-value 0.001), with a lower surgical-complexity-score (p-value 0.002). Regarding survival-data, patients with NLR < 4 had a significant 7-month increase in mPFS (26 vs 19 months, p = 0.009); focusing on the BRCA-status, among both BRCA-mutated and BRCA-wild type patients, those with lower NLR had a significantly prolonged mPFS compared to patients with NLR > 4 (BRCA-mutated: 35 vs 23 months, p = 0.03; BRCA-wt: 19 vs 16 months, p = 0.05). At multivariate-analysis, independent factors of prolonged PFS were BRCA mutational status, having received complete cytoreduction and NLR < 4. Also, the strongest predictors of longer OS were BRCA-mutational status, having received complete cytoreductive surgery, NLR < 4 and age. NLR is confirmed to be a prognostic marker in OC-patients and it seems unrelated with BRCA-mutational status.",
     "metadata": {
-      "rank": 5,
-      "score": 0.7013539419415818,
+      "rank": 2,
+      "score": 0.6747046146901621,
       "journal": "Sci Rep",
       "pub_date": "2021-05-27",
       "doi": "10.1038/s41598-021-90361-w",
       "impact_factor": 3.9
     },
-    "cached_at": "2026-01-22T18:34:03.719718"
+    "cached_at": "2026-01-22T21:18:42.149128"
   },
   "35070965": {
     "pmid": "35070965",
@@ -1734,5 +1734,313 @@
       "impact_factor": 15.7
     },
     "cached_at": "2026-01-22T20:03:17.326713"
+  },
+  "28036387": {
+    "pmid": "28036387",
+    "title": "Association of ABCB1 and SLC22A16 Gene Polymorphisms with Incidence of Doxorubicin-Induced Febrile Neutropenia: A Survey of Iranian Breast Cancer Patients.",
+    "abstract": "Breast cancer is the most common cancer in women worldwide. Doxorubicin-based chemotherapy is used to treat breast cancer patients; however, neutropenia is a common hematologic side effect and can be life-threatening. The ABCB1 and SLC22A16 genes encode proteins that are essential for doxorubicin transport. In this study, we explored the effect of 2 common polymorphisms in ABCB1 (rs10276036 C/T) and SLC22A16 (rs12210538 A/G) on the development of grade 3/4 febrile neutropenia in Iranian breast cancer patients. Our results showed no significant association between these polymorphisms and grade 3/4 febrile neutropenia; however, allele C of ABCB1 (rs10276036 C/T) (p = 0.315, OR = 1.500, 95% CI = 0.679-3.312) and allele A of SLC22A16 (rs12210538 A/G) (p = 0.110, OR = 2.984, 95% CI = 0.743-11.988) tended to have a greater association with grade 3/4 febrile neutropenia, whereas allele T of ABCB1 (rs10276036) (p = 0.130, OR = 0.515, 95% CI = 0.217-1.223) and allele G of SLC22A16 (rs12210538) (p = 0.548, OR = 0.786, 95% CI = 0.358-1.726) tended to protect against this condition. In addition to breast cancer, a statistically significant association was also observed between the development of grade 3/4 febrile neutropenia and other clinical manifestations such as stage IIIC cancer (p = 0.037) and other diseases (p = 0.026). Our results indicate that evaluation of the risk of grade 3/4 neutropenia development and consideration of molecular and clinical findings may be of value when screening for high-risk breast cancer patients.",
+    "metadata": {
+      "rank": 2,
+      "score": 0.6702408153254094,
+      "journal": "PLoS One",
+      "pub_date": "2016-01-01",
+      "doi": "10.1371/journal.pone.0168519",
+      "impact_factor": 2.6
+    },
+    "cached_at": "2026-01-22T21:14:42.574953"
+  },
+  "35837812": {
+    "pmid": "35837812",
+    "title": "Anaemia and pathologic complete response rate according to carboplatin dose in HER2+ breast cancer treated with neoadjuvant TCHP.",
+    "abstract": "Grade 3/4 anaemia, which is mainly induced by carboplatin, frequently occurs in patients treated with neoadjuvant docetaxel/carboplatin/trastuzumab/pertuzumab (TCHP). However, dose reduction of carboplatin may raise concerns about the oncological outcome. This study investigated the pathologic complete response (pCR) rate, occurrence of grade 3/4 anaemia, and transfusion rate according to carboplatin dose in patients treated with neoadjuvant TCHP. We retrospectively analysed 294 patients treated with neoadjuvant TCHP between April 2015 and December 2020. Case matching was performed using propensity score matching. Among patients treated with neoadjuvant TCHP, carboplatin area under the plasma concentration-time curve 6 (AUC6) was used in 234 patients (79.6%) and upfront carboplatin AUC5 was used in 60 patients (20.4%). No significant difference in pCR rate was found between the two groups (AUC6: 70.9%, AUC5: 80.0%). In both oestrogen receptor-positive (ER+) and ER- patients, no significant differences were observed between the AUC6 and AUC5 groups (ER+: 54.3% vs. 50.0%, ER-: 81.7% vs. 86.0%). The case-matched cohort showed consistent findings. The AUC5 group had lower frequencies of grade 3/4 anaemia (18.3% vs. 34.2%) and transfusion events (10.0% vs. 21.8%) than the AUC6 group. Compared with AUC5, carboplatin at AUC6 would associate with a 2.7-fold increased risk of grade 3 or 4 chemotherapy-induced anaemia. Carboplatin AUC5 has comparable cytotoxic effects to carboplatin AUC6 in patients with HER2+ breast cancer treated with six cycles of neoadjuvant TCHP, with fewer complications associated with clinically meaningful anaemia. AUC5 may be the optimal carboplatin dose to reduce TCHP-induced anaemia in patients with HER2+ breast cancer treated with TCHP.",
+    "metadata": {
+      "rank": 1,
+      "score": 0.7075314914153185,
+      "journal": "Cancer Med",
+      "pub_date": "2023-01-01",
+      "doi": "10.1002/cam4.5022",
+      "impact_factor": 3.1
+    },
+    "cached_at": "2026-01-22T21:15:22.569494"
+  },
+  "26893787": {
+    "pmid": "26893787",
+    "title": "Serious neutropenia following neoadjuvant chemotherapy for locally advanced breast cancer: A case report.",
+    "abstract": "Neoadjuvant chemotherapy has been widely used in patients with locally advanced breast cancer (LABC) to increase the chance of breast conservation. Among the most active adjuvant chemotherapy regimens, doxorubicin and cyclophosphamide are the most common drugs used for breast cancer in adjuvant and advanced settings, and taxanes are added to neoadjuvant regimens to improve the pathological complete response rates. However, chemotherapy is often associated with a variety of acute and long-term side effects, and neutropenia is one of the most common chemotherapy-associated toxicities. Lethal neutropenia is rarely reported in clinics. The present study reports the case of a patient with LABC that received 1 cycle of neoadjuvant chemotherapy [intravenous docetaxel (75 mg/m2), pirarubicin (45 mg/m2) and cyclophosphamide (500 mg/m2) on day 2 in 3-weekly intervals] and succumbed to neutropenia and subsequent multiple organ dysfunction syndrome. The present study suggests that neutropenia may be associated with significant mortality if not managed appropriately. Based on the findings of the present study, individual chemotherapy regimens, dosing schedules, effective methods of the prevention and management of neutropenia, and the management of the discharged patient require additional consideration.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.680403292231091,
+      "journal": "Oncol Lett",
+      "pub_date": "2016-02-01",
+      "doi": "10.3892/ol.2016.4077",
+      "impact_factor": 2.2
+    },
+    "cached_at": "2026-01-22T21:16:14.538907"
+  },
+  "33490219": {
+    "pmid": "33490219",
+    "title": "Upfront debulking surgery for high-grade serous ovarian carcinoma: current evidence.",
+    "abstract": "High-grade serous ovarian carcinoma (HGSOC) is a leading cause of mortality among women worldwide. Currently, there is no clear consensus over the regime these patients should receive. The main two options are upfront debulking surgery with adjuvant chemotherapy or neoadjuvant chemotherapy followed by interval debulking surgery (IDS). The former approach is proposed to be accompanied by lower chemoresistance rates but could lead to severe surgical comorbidities and lower quality of life (QoL). Optimizing patient's selection for upfront debulking surgery might offer higher progression-free and overall survival rates. Further studies need to be conducted in order to elucidate the predictive factors, which are favorable for patients undergoing upfront debulking surgery in cases of high-grade serous ovarian cancer.",
+    "metadata": {
+      "rank": 1,
+      "score": 0.675370546666486,
+      "journal": "Ann Transl Med",
+      "pub_date": "2020-12-01",
+      "doi": "10.21037/atm-20-1620",
+      "impact_factor": 3.616
+    },
+    "cached_at": "2026-01-22T21:21:19.758518"
+  },
+  "31482065": {
+    "pmid": "31482065",
+    "title": "Pathological Chemotherapy Response Score in Patients Affected by High Grade Serous Ovarian Carcinoma: The Prognostic Role of Omental and Ovarian Residual Disease.",
+    "abstract": "Background: The chemotherapy response score (CRS) has emerged as a simple and reproducible histopathological grading system for assessing chemotherapy response in patients affected by ovarian high-grade serous carcinoma. Objective: To evaluate the prognostic impact of histological tumor response in ovarian and omental surgical specimens from patients with advanced stage ovarian high-grade serous carcinoma. Study Design: A cohort of 161 women were identified from the database of Department of Gynecology, \"Fondazione Policlinico Universitario Agostino Gemelli IRCCS\" of Rome, Italy between January 2014 and December 2017 with a follow-up of 65 months. All the omentum, the ovarian tissue and peritoneal samples, defined as \"other sites,\" were reviewed by gynecological pathologists to assign a CRS of 1-3 to the omentum and ovarian sites and a score of 0-1 to the peritoneal tissue. The Cox proportional hazards regression and the log-rank test were used to assess the survival pattern and the prognostic value of the CRS adjusting for age and stage. The Kaplan-Meier method was applied to estimate the progression free and overall survival. Results: The evaluation of adnexal disease showed significant differences in PFS, both in univariate and in multivariate analyses. On PFS univariate analysis, ovCRS1 vs. ovCRS3: HR, 2.27; 95% CI, 1.37-3.77; p = 0.001; ovCRS2 vs. ovCRS3: HR, 1.83; 95% CI, 1.03-3.23; p = 0.04, and on PFS multivariate model ovCRS1 vs. ovCRS3; HR, 2.53; 95% CI, 1.5-4.24; p = 0.001 and ovCRS2 vs. ovCRS3; HR, 1.90; 95% CI, 1.08-3.37; p = 0.03. Regarding the omental residual disease, as expected, CRS showed a significant prognostic value for OS and PFS; in detail the median PFS of patients with CRS1, 2 and 3 was 15, 15, and 22 months, respectively, the median OS was 41 and >50 months, respectively. Moreover, the univariate analysis for OS suggested that in our cohort the \"other sites\" score of 0 was significantly associated with an improvement in overall survival compared to score 1. Conclusions: We demonstrated for the first time the prognostic significance of adnexal CRS confirming also the prognostic role of omental CRS.",
+    "metadata": {
+      "rank": 4,
+      "score": 0.6601739969829284,
+      "journal": "Front Oncol",
+      "pub_date": "2019-01-01",
+      "doi": "10.3389/fonc.2019.00778",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-22T21:18:42.155837"
+  },
+  "39013870": {
+    "pmid": "39013870",
+    "title": "Neoadjuvant and adjuvant pembrolizumab in advanced high-grade serous carcinoma: the randomized phase II NeoPembrOV clinical trial.",
+    "abstract": "This open-label, non-comparative, 2:1 randomized, phase II trial (NCT03275506) in women with stage IIIC/IV high-grade serous carcinoma (HGSC) for whom upfront complete resection was unachievable assessed whether adding pembrolizumab (200 mg every 3 weeks) to standard-of-care carboplatin plus paclitaxel yielded a complete resection rate (CRR) of at least 50%. Postoperatively patients continued assigned treatment for a maximum of 2 years. Postoperative bevacizumab was optional. The primary endpoint was independently assessed CRR at interval debulking surgery. Secondary endpoints were Completeness of Cytoreduction Index (CCI) and peritoneal cancer index (PCI) scores, objective and best response rates, progression-free survival, overall survival, safety, postoperative morbidity, and pathological complete response. The CRR in 61 pembrolizumab-treated patients was 74% (one-sided 95% CI = 63%), exceeding the prespecified ≥50% threshold and meeting the primary objective. The CRR without pembrolizumab was 70% (one-sided 95% CI = 54%). In the remaining patients CCI scores were ≥3 in 27% of the standard-of-care group and 18% of the investigational group and CC1 in 3% of the investigational group. PCI score decreased by a mean of 9.6 in the standard-of-care group and 10.2 in the investigational group. Objective response rates were 60% and 72%, respectively, and best overall response rates were 83% and 90%, respectively. Progression-free survival was similar with the two regimens (median 20.8 versus 19.4 months in the standard-of-care versus investigational arms, respectively) but overall survival favored pembrolizumab-containing therapy (median 35.3 versus 49.8 months, respectively). The most common grade ≥3 adverse events with pembrolizumab-containing therapy were anemia during neoadjuvant therapy and infection/fever postoperatively. Pembrolizumab was discontinued prematurely because of adverse events in 23% of pembrolizumab-treated patients. Combining pembrolizumab with neoadjuvant chemotherapy is feasible for HGSC considered not completely resectable; observed activity in some subgroups justifies further evaluation to improve understanding of the role of immunotherapy in HGSC.",
+    "metadata": {
+      "rank": 2,
+      "score": 0.6627270893053506,
+      "journal": "Nat Commun",
+      "pub_date": "2024-07-16",
+      "doi": "10.1038/s41467-024-46999-x",
+      "impact_factor": 15.7
+    },
+    "cached_at": "2026-01-22T21:21:19.762236"
+  },
+  "34408495": {
+    "pmid": "34408495",
+    "title": "Erratum: Impact of the Time Interval Between Primary Debulking Surgery and Start of Adjuvant Chemotherapy in Advanced Epithelial Ovarian Cancer [Corrigendum].",
+    "abstract": "[This corrects the article DOI: 10.2147/CMAR.S313013.].",
+    "metadata": {
+      "rank": 3,
+      "score": 0.6569920347938977,
+      "journal": "Cancer Manag Res",
+      "pub_date": "2021-01-01",
+      "doi": "10.2147/CMAR.S332807",
+      "impact_factor": 2.6
+    },
+    "cached_at": "2026-01-22T21:21:19.765628"
+  },
+  "31243928": {
+    "pmid": "31243928",
+    "title": "Prognostic impact of intraoperative peritoneal cytology in interval debulking surgery for pelvic high-grade serous carcinoma.",
+    "abstract": "The aim of this study was to determine whether peritoneal washing cytology (PWC) during interval debulking surgery (IDS) could predict the prognosis of patients with pelvic high-grade serous carcinoma (HGSC) achieving R0 status.\n          \nBetween January 2007 and May 2018, 110 patients with ovarian/tubal/primary peritoneal HGSC received platinum-based neo-adjuvant chemotherapy, followed by IDS at National Cancer Center Hospital, Japan. All the patients achieved R0 debulking status, defined as no macroscopic residual tumor in the peritoneal cavity at the completion of IDS. PWC was performed before debulking during IDS. The survival outcomes were compared between the PWC-positive and PWC-negative groups.\n          \nThe median progression free survival (PFS) for the entire cohort was 17 months (range, 5-133 months). The median PFS for the PWC-positive group was significantly shorter than that of the PWC-negative group (16 vs 19 months, HR 2.04, 95% CI 1.22-3.41, P-value < 0.01). Increased risk of progression was observed on both univariate and multivariate analyses, including age and FIGO stage (HR 2.28; 95% CI 1.35-3.84, P < 0.01).\n          \nThe positive PWC during IDS was found to predict earlier disease recurrence in patients with pelvic HGSC achieving R0 status. As performing PWC during IDS becomes standard practice, prospective validation should be conducted in the future.",
+    "metadata": {
+      "rank": 4,
+      "score": 0.6516413068738705,
+      "journal": "Cancer Med",
+      "pub_date": "2019-08-01",
+      "doi": "10.1002/cam4.2377",
+      "impact_factor": 3.1
+    },
+    "cached_at": "2026-01-22T21:21:19.768984"
+  },
+  "35907904": {
+    "pmid": "35907904",
+    "title": "The impact of neoadjuvant chemotherapy on the tumor microenvironment in advanced high-grade serous carcinoma.",
+    "abstract": "High-grade serous ovarian, fallopian tube or peritoneal carcinoma is an aggressive subtype of ovarian cancer that frequently develops resistance to chemotherapy. It remains contested whether the resistance is caused by the acquisition of novel molecular aberrations or alternatively through the selection of rare pre-existing tumor clones. To address this question, we applied single-cell RNA sequencing to depict the tumor landscape of 6 samples from a single case of advanced high-grade serous fallopian tube carcinoma during neoadjuvant chemotherapy (NACT). We analyzed a total of 32,079 single cells, with 17,249 cells derived from the pre-NACT multisite tumor tissue samples and 14,830 cells derived from the post-NACT multisite tumor tissue samples. We identified the diverse properties of the tumor, immune and stromal cell types between the pre-NACT and post-NACT tumors. The malignant epithelial cells displayed a high degree of intratumor heterogeneity in response to NACT. We showed that the primary resistant clone (clone 63) epithelial genotype was already present in the pre-NACT tumors, and was adaptively enriched after NACT. This clone 63 was correlated with a poor clinical prognosis. Furthermore, single-cell analysis of CD4+ T cells demonstrated that IL2RAhi-CCL22+-Tregs were selectively enriched in post-NACT tumors. Interestingly, this Treg subtype could recruit and enrich themselves through secreting the CCL22-CCR1 combination in pre-NACT and post-NACT tumors, and further express CD274 to suppress other CD4 and CD8 T cells through a CD274-PDCD1 axis in the post-NACT tumors, and this predicted an immunosuppressive state after NACT. Overall, our results provide important evidence for the adaptive resistance theory of HGSC, and for the potential development of therapeutic strategies to treat HGSC and improve the survival of patients with HGSC.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.6499658648102299,
+      "journal": "Oncogenesis",
+      "pub_date": "2022-07-30",
+      "doi": "10.1038/s41389-022-00419-1",
+      "impact_factor": 6.4
+    },
+    "cached_at": "2026-01-22T21:21:19.772302"
+  },
+  "33692936": {
+    "pmid": "33692936",
+    "title": "Comparative Efficacy and Safety of PARP Inhibitors as Maintenance Therapy in Platinum Sensitive Recurrent Ovarian Cancer: A Network Meta-Analysis.",
+    "abstract": "This meta-analysis investigated the comparative efficacy and safety of PARP inhibitor monotherapy as maintenance treatment in platinum sensitive recurrent ovarian cancer (ROC). Electronic databases were systematically searched for relevant RCTs. The primary endpoint was PFS. The results were stratified based on three categories: BRCA mutated patients, HRD patients, and overall population. The secondary outcome were discontinuations due to adverse events and grade 3 or 4 adverse events in maintenance phase. Five eligible RCTs were included in the network meta-analysis. For patients with BRCA mutated ovarian cancer, olaparib-throughout (HR = 0.21 with 95% CrI: 0.081-0.55), rucaparib (HR = 0.23 with 95% CrI: 0.16-0.34), olaparib (HR = 0.27 with 95% CrI: 0.20-0.35), and niraparib (HR = 0.26 with 95% CrI: 0.17-0.41) were all highly effective in comparison with placebo at improving PFS. For HRD patients, both rucaparib (HR = 0.32 with 95% CrI: 0.24-0.42) and niraparib (HR = 0.38 with 95% CrI: 0.24-0.60) were all highly effective in comparison with placebo at improving PFS. For the overall population, olaparib-throughout (HR = 0.51 with 95% CrI: 0.34-0.76), rucaparib (HR = 0.37 with 95% CrI: 0.30-0.45), olaparib (HR = 0.35 with 95% CrI: 0.25-0.49), and niraparib (HR = 0.38 with 95% CrI: 0.30-0.48) were all highly effective in comparison with placebo at improving PFS. Regarding grade 3 or 4 adverse events, the incidence of grade 3 or 4 toxicity reactions to rucaparib and niraparib were significantly higher than in the olaparib group. In terms of discontinuations due to adverse events, the treatment discontinuations were not significantly different between the three drugs. In summary, all the included maintenance treatment regimens are effective regardless of BRCA mutational status, and no statistically significant differences between rucaparib, niraparib and Olaparib in terms of PFS. In terms of safety profile, the three drugs present manageable adverse events. Clinicians should consider potential adverse events related to each of these interventions in clinical practice, and the adverse events are generally manageable.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.7199488011011659,
+      "journal": "Front Oncol",
+      "pub_date": "2020-01-01",
+      "doi": "10.3389/fonc.2020.573801",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-22T22:55:50.680980"
+  },
+  "38371630": {
+    "pmid": "38371630",
+    "title": "PARP inhibitor maintenance treatment for newly diagnosed ovarian cancer patients: a real-world study from China.",
+    "abstract": "This study evaluated the efficacy and safety in a real-world population of epithelial ovarian cancer (EOC) treated with poly (ADP-ribose) polymerase inhibitor (PARPi) as first-line maintenance therapy in the largest gynecologic oncology center in Western China.\n          \nThis study included patients newly diagnosed EOC who received PARPi as first-line maintenance therapy in West China Second University Hospital from August 1, 2018 to September 31, 2022. The primary endpoints were progression-free survival (PFS) and safety evaluated by Common Terminology Criteria for Adverse Events Version 5.0(CTCAE 5.0). The secondary endpoints were overall survival (OS) and prognostic factors influencing the PFS of patients in real world.\n          \nAmong the eligible 164 patients, 104 patients received olaparib and 60 patients received niraparib. 100 patients (61.0%) had mutations in breast cancer susceptibility gene (BRCA). 87 patients (53.0%) received primary debulking surgery (PDS) while 77 patients (47.0%) received interval debulking surgery (IDS). 94 patients (94/164, 57.3%) achieved R0 and 39 patients (23.8%) achieved R1 after PDS/IDS. 112 (68.3%) achieved complete response (CR) after first-line chemotherapy, while 49 (29.9%) achieved partial response (PR). The median follow-up time was 17.0 months (95% CI 15.6-18.4), and the median PFS has not been reached yet. Multivariate analysis demonstrated that BRCA mutations and CR/PR after platinum-based chemotherapy were independent factors associated with prolonged PFS. Hematologic toxicity was the most common grade≥3 AE. There were no incidence of myelodysplastic syndromes/acute myelogenous leukemia (MDS/AML).\n          \nFocusing on PARPi as first-line maintenance therapy for patients with EOC, this study represented the largest single-center real-world study in China to date. Two independent factors were identified to prolong the PFS of patients: BRCA mutated type and CR/PR after primary treatment, which should be further confirmed with long-term follow-up and large sample sizes.",
+    "metadata": {
+      "rank": 4,
+      "score": 0.761587380754526,
+      "journal": "Front Oncol",
+      "pub_date": "2024-01-01",
+      "doi": "10.3389/fonc.2024.1336616",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-22T22:14:22.677765"
+  },
+  "29081841": {
+    "pmid": "29081841",
+    "title": "Niraparib in ovarian cancer: results to date and clinical potential.",
+    "abstract": "Ovarian cancer is the first cause of death from gynaecological malignancy. Germline mutation in BRCA1 and 2, two genes involved in the mechanisms of reparation of DNA damage, are showed to be related with the incidence of breast and ovarian cancer, both sporadic and familiar. PARP is a family of enzymes involved in the base excision repair (BER) system. The introduction of inhibitors of PARP in patients with BRCA-mutated ovarian cancer is correlated with the concept of synthetic lethality. Among the PARP inhibitors introduced in clinical practice, niraparib showed interesting results in a phase III trial in the setting of maintenance treatment in ovarian cancer, after platinum-based chemotherapy. Interestingly, was niraparib showed to be efficacious not only in BRCA-mutated patients, but also in patients with other alterations of the homologous recombination (HR) system and in patients with unknown alterations. These results position niraparib as the first PARP-inhibitor with clinically and statistically significant results also in patients with no alterations in BRCA 1/2 and other genes involved in the DNA repair system. Even if the results are potentially practice-changing, the action of niraparib must be further studied and deepened.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.6824934470075799,
+      "journal": "Ther Adv Med Oncol",
+      "pub_date": "2017-09-01",
+      "doi": "10.1177/1758834017718775",
+      "impact_factor": 4.2
+    },
+    "cached_at": "2026-01-22T22:38:25.309284"
+  },
+  "36267984": {
+    "pmid": "36267984",
+    "title": "Patient-associated risk factors for severe anemia in patients with advanced ovarian or breast cancer receiving olaparib monotherapy: A multicenter retrospective study.",
+    "abstract": "Olaparib-induced anemia is a frequently occurring complication in patients with advanced ovarian cancer, fallopian tube cancer, or primary peritoneal cancer and is associated with a marked deterioration in patients' health-related quality of life. This study aimed to clarify patient-specific risk factors for severe anemia in patients with advanced ovarian or breast cancer receiving olaparib monotherapy in a real-world setting.\n          \nThis multicenter, retrospective, observational study enrolled consecutively presenting patients with advanced ovarian or breast cancer who received olaparib monotherapy as maintenance or palliative treatment between April 2018 and December 2020 at three participating medical institutions in Japan. The primary endpoint was patient-associated risk factors underlying the onset of grade ≥3 anemia from olaparib treatment initiation to 90 days after treatment. Receiver operating characteristic curves were constructed and univariable and multivariable logistic regression analyses were performed to evaluate the association between patient-associated risk factors and grade ≥3 anemia.\n          \nOf 113 patients evaluated in this study, 32.7% (n = 37) had grade ≥3 anemia. Multivariable logistic regression analysis revealed that low baseline red blood cell (RBC) count (<3.3 × 106 cells/μL), low baseline hematocrit level (<35%), low baseline hemoglobin level (<11.6 g/dL), and breast cancer susceptibility (BRCA1/2) mutation were significantly associated with the onset of grade ≥3 anemia (adjusted odds ratio [OR], 3.39; 95% confidence interval [CI], 1.28-9.62; P = 0.017, adjusted OR, 3.63; 95% CI, 1.28-11.64; P = 0.021, adjusted OR, 3.89; 95% CI, 1.39-12.21; P = 0.014, and adjusted OR, 4.09; 95% CI, 1.55-11.67; P = 0.006, respectively).\n          \nOur findings suggest that low baseline RBC count, low baseline hematocrit level, and low baseline hemoglobin level might be the patient-associated risk factors for severe anemia induced by olaparib monotherapy. Additionally, BRCA1/2 mutation was suggested to be a patient-related risk factor for anemia regardless of severity. Therefore, applying these patient-associated risk factors would help classify and screen patients at risk of severe anemia.",
+    "metadata": {
+      "rank": 2,
+      "score": 0.70173969855968,
+      "journal": "Front Oncol",
+      "pub_date": "2022-01-01",
+      "doi": "10.3389/fonc.2022.898150",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-22T22:38:25.293110"
+  },
+  "38824213": {
+    "pmid": "38824213",
+    "title": "Safety assessments and clinical features of PARP inhibitors from real-world data of Japanese patients with ovarian cancer.",
+    "abstract": "Poly (ADP-ribose) polymerase inhibitors have been increasingly used in ovarian cancer treatment. However, the real-world safety data of these drugs in Japanese patients are limited. This retrospective study included 181 patients with ovarian cancer who received olaparib or niraparib at two independent hospitals in Japan between May 2018 and December 2022. Clinical information and blood sampling data were collected. Regarding patient backgrounds, the olaparib group had higher proportions of patients with serous carcinoma, BRCA positivity, homologous recombination deficiency, and those receiving maintenance therapy after recurrence treatment than the niraparib group. Regarding toxicity properties, the most common reasons for discontinuation in the olaparib group were anemia, fatigue, and nausea, while the reason in the niraparib was thrombocytopenia. Thrombocytopenia caused by niraparib treatment occurred earlier than anemia caused by olaparib treatment. Patients with a low body mass index or who had undergone several previous treatment regimens were more likely to discontinue treatment within the first 3 months. Although we analyzed blood collection data, predicting treatment interruptions due to blood toxicity was challenging. In this study, we revealed the characteristics of patients and the timing of interruptions for each drug, highlighting the importance of carefully managing adverse effects.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.7027184677589753,
+      "journal": "Sci Rep",
+      "pub_date": "2024-06-01",
+      "doi": "10.1038/s41598-024-63600-z",
+      "impact_factor": 3.9
+    },
+    "cached_at": "2026-01-22T22:19:15.702467"
+  },
+  "31920338": {
+    "pmid": "31920338",
+    "title": "Role of Olaparib as Maintenance Treatment for Ovarian Cancer: The Evidence to Date.",
+    "abstract": "PARP inhibitors have shown significant promise in the treatment of ovarian cancer. Olaparib is a PARP inhibitor that has been approved for maintenance for BRCA-mutated ovarian cancer in the recurrent and front-line setting as well as for treatment of BRCA-mutated ovarian cancer in patients who have received multiple prior lines of chemotherapy. In this review, we focus on the use of olaparib in the maintenance setting including the evidence to date, ongoing research, and future directions.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.7114297941864476,
+      "journal": "Onco Targets Ther",
+      "pub_date": "2019-01-01",
+      "doi": "10.2147/OTT.S195552",
+      "impact_factor": 2.8
+    },
+    "cached_at": "2026-01-22T22:27:57.805617"
+  },
+  "38989145": {
+    "pmid": "38989145",
+    "title": "BRCA1 foci test as a predictive biomarker of olaparib response in ovarian cancer patient-derived xenograft models.",
+    "abstract": "Standard therapy for high-grade ovarian carcinoma includes surgery followed by platinum-based chemotherapy and poly-ADP ribose polymerase inhibitors (PARPis). Deficiency in homologous recombination repair (HRD) characterizes almost half of high-grade ovarian carcinomas and is due to genetic and epigenetic alterations in genes involved in HR repair, mainly BRCA1/BRCA2, and predicts response to PARPi. The academic and commercial tests set up to define the HRD status of the tumor rely on DNA sequencing analysis, while functional tests such as the RAD51 foci assay are currently under study, but have not been validated yet and are available for patients. In a well-characterized ovarian carcinoma patient-derived xenograft platform whose response to cisplatin and olaparib, a PARPi, is known, we assessed the association between the BRCA1 foci score, determined in formalin-fixed paraffin-embedded tumor slices with an immunofluorescence technique, and other HRD biomarkers and explored the potential of the BRCA1 foci test to predict tumors' response to cisplatin and olaparib. The BRCA1 foci score was associated with both tumors' HRD status and RAD51 foci score. A low BRCA1 foci score predicted response to olaparib and cisplatin, while a high score was associated with resistance to therapy. As we recently published that a low RAD51 foci score predicted olaparib sensitivity in our xenobank, we combined the two scores and showed that the predictive value was better than with the single tests. This study reports for the first time the capacity of the BRCA1 foci test to identify HRD ovarian carcinomas and possibly predict response to olaparib.",
+    "metadata": {
+      "rank": 3,
+      "score": 0.730771222982785,
+      "journal": "Front Pharmacol",
+      "pub_date": "2024-01-01",
+      "doi": "10.3389/fphar.2024.1390116",
+      "impact_factor": 4.8
+    },
+    "cached_at": "2026-01-22T22:55:50.673946"
+  },
+  "33811746": {
+    "pmid": "33811746",
+    "title": "Tumor genomic, transcriptomic, and immune profiling characterizes differential response to first-line platinum chemotherapy in high grade serous ovarian cancer.",
+    "abstract": "In high grade serous ovarian cancer (HGSOC), there is a spectrum of sensitivity to first line platinum-based chemotherapy. This study molecularly characterizes HGSOC patients from two distinct groups of chemotherapy responders (good vs. poor).\n          \nFollowing primary debulking surgery and intravenous carboplatin/paclitaxel, women with stage III-IV HGSOC were grouped by response. Patients in the good response (GR) and poor response (PR) groups respectively had a progression-free intervals (PFI) of ≥12 and ≤6 months. Analysis of surgical specimens interrogated genomic and immunologic features using whole exome sequencing. RNA-sequencing detected gene expression outliers and inference of immune infiltrate, with validation by targeted NanoString arrays. PD-L1 expression was scored by immunohistochemistry (IHC).\n          \nA total of 39 patient samples were analyzed (GR = 20; PR = 19). Median PFI for GR and PR patient cohorts was 32 and 3 months, respectively. GR tumors were enriched for loss-of-function BRCA2 mutations and had a significantly higher nonsynonymous mutation rate compared to PR tumors (p = 0.001). Samples from the PR cohort were characterized by mutations in MGA and RAD51B and trended towards a greater rate of amplification of PIK3CA, MECOM, and ATR in comparison to GR tumors. Gene expression analysis by NanoString correlated increased PARP4 with PR and increased PD-L1 and EMSY with GR. There was greater tumor immune cell infiltration and higher immune cell PD-L1 protein expression in the GR group.\n          \nOur research demonstrates that tumors from HGSOC patients responding poorly to first line chemotherapy have a distinct molecular profile characterized by actionable drug targets including PARP4.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.694899243578047,
+      "journal": "Cancer Med",
+      "pub_date": "2021-05-01",
+      "doi": "10.1002/cam4.3831",
+      "impact_factor": 3.1
+    },
+    "cached_at": "2026-01-22T22:54:23.134348"
+  },
+  "38544832": {
+    "pmid": "38544832",
+    "title": "BRCA1/2 alterations and reversion mutations in the area of PARP inhibitors in high grade ovarian cancer: state of the art and forthcoming challenges.",
+    "abstract": "BRCA1/2 genes are part of homologous recombination (HR) DNA repair pathways in charge of error-free double-strand break (DSB) repair. Loss-of-function mutations of BRCA1/2 genes have been associated for a long time with breast and ovarian cancer hereditary syndrome. Recently, polyadenosine diphosphate-ribose polymerase inhibitors (PARPi) have revolutionized the therapeutic landscape of BRCA1/2-mutated tumors, especially of BRCA1/2 high-grade serous ovarian cancer (HGSC), taking advantage of HR deficiency through the synthetic lethality concept. However, PARPi efficiency differs among patients, and most of them will develop resistance, particularly in the relapse setting. In the current proposal, we aim to review primary and secondary resistance to PARPi in HGSC owing to BRCA1/2 alterations. Of note, as several mechanisms of primary or secondary resistance to PARPi have been described, BRCA1/2 reversion mutations that restore HR pathways are by far the most reported. First, the type and location of the BRCA1/2 primary mutation have been associated with PARPi and platinum-salt sensitivity and impact the probability of the occurrence and the type of secondary reversion mutation. Furthermore, the presence of multiple reversion mutations and the variation of allelic frequency under treatment underline the role of intratumor heterogeneity (ITH) in treatment resistance. Of note, circulating tumor DNA might help us to detect and characterize reversion mutations and ITH to finally refine the treatment strategy. Importantly, forthcoming therapeutic strategies, including combination with antiangiogenics or with targeted therapies, may help us delay and overcome PARPi resistance secondary to BRCA1/2 reversion mutations. Also, progression despite PARPi therapy does not preclude PARPi rechallenge in selected patients.",
+    "metadata": {
+      "rank": 5,
+      "score": 0.6790049297684132,
+      "journal": "Front Oncol",
+      "pub_date": "2024-01-01",
+      "doi": "10.3389/fonc.2024.1354427",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-22T23:24:53.607877"
+  },
+  "29670374": {
+    "pmid": "29670374",
+    "title": "Multiline treatment combining apatinib with toptecan for platinum-resistant recurrent ovarian cancer patients: a report of three cases.",
+    "abstract": "The aim of this study was to observe the efficacy and safety of apatinib combined with toptecan therapy in the multiline treatment of platinum-resistant recurrent ovarian cancer patients. The clinical records of three patients with platinum-resistant recurrent ovarian cancer treated with apatinib combined with toptecan therapy were analyzed and followed up for 3 months, and the related literatures were reviewed. The three patients achieved partial response and the tumor marker CA125 levels decreased significantly as an outcome of the treatment. Major adverse reactions were hypertension, hand-foot skin reaction, and anemia, which were manageable with medication. Apatinib combined with toptecan multiline therapy in the treatment of platinum-resistant recurrent ovarian cancer patients is effective, and the adverse effects are tolerated. Large-scale studies should be conducted to further determine the efficacy and safety of this treatment protocol.",
+    "metadata": {
+      "rank": 1,
+      "score": 0.7008655999566715,
+      "journal": "Onco Targets Ther",
+      "pub_date": "2018-01-01",
+      "doi": "10.2147/OTT.S158141",
+      "impact_factor": 2.8
+    },
+    "cached_at": "2026-01-22T23:26:23.442759"
+  },
+  "35858589": {
+    "pmid": "35858589",
+    "title": "Anlotinib combined with TQB2450 in patients with platinum-resistant or -refractory ovarian cancer: A multi-center, single-arm, phase 1b trial.",
+    "abstract": "This is a phase Ib study of anlotinib plus a programmed death-ligand 1 (PD-L1) inhibitor TQB2450 for platinum-resistant or -refractory ovarian cancer. Thirty-four patients are enrolled and receive treatment. The objective response rate (ORR) is 47.1%, and the disease control rate is 97.1%. The median duration of response (DOR) has not been reached, and 61.3% of patients have a DOR of at least 8 months. The median progression-free survival (PFS) is 7.8 months, and the median overall survival (OS) has not been reached. The PD-L1-positive group has an ORR of 25.0%, whereas the PD-L1-negative group has an ORR of 92.9%. Treatment-related grade 3 or 4 adverse events (AEs) occur in 70.6% of patients, with the most common being hypertension (29.4%) and palmar-plantar erythrodysesthesia syndrome (29.4%). Anlotinib plus TQB2450 show promising antitumor activity and manageable toxicities in patients with platinum-resistant or -refractory ovarian cancer. A phase 3 randomized controlled trial to further validate our findings is ongoing.",
+    "metadata": {
+      "rank": 2,
+      "score": 0.6934842248127951,
+      "journal": "Cell Rep Med",
+      "pub_date": "2022-07-19",
+      "doi": "10.1016/j.xcrm.2022.100689",
+      "impact_factor": 10.6
+    },
+    "cached_at": "2026-01-22T23:26:23.447457"
+  },
+  "36909189": {
+    "pmid": "36909189",
+    "title": "Case report: Idiopathic pulmonary fibrosis induced by nab-paclitaxel: A rare complication.",
+    "abstract": "Background: Ovarian cancer is one of the deadliest gynecological cancers, with the most advanced disease and poor survival. Although BRCA genes play a key role in maintaining genomic stability and providing the possibility of clinically individualized treatments, with the emergence of new and more appropriate treatment options, new treatment-related adverse events are challenging and difficult for clinicians. Case presentation: An 80-year-old Chinese woman was diagnosed with stage IIIC ovarian high-grade serous adenocarcinoma (CT3cN1MX) with BRCA2 as the causative gene. She underwent three courses of neoadjuvant chemotherapy with nab-paclitaxel 400 mg and carboplatin 450 mg before surgery. Chest HRCT prior to chemotherapy demonstrated bilateral interstitial pneumonia. During chemotherapy, there were four episodes of dry cough, shortness of breath, dyspnea, and three episodes of bone marrow suppression. The symptoms became intermittent and progressively worse, and after three sessions of empirical cough and phlegm relief, oxygen inhalation, corticosteroids, anti-infectives, and leukopenia therapy, the symptoms became intermittent and progressively worse. The diagnosis of idiopathic pulmonary fibrosis came a week after the third round of chemotherapy. After a strong dose of corticosteroids and nintedanib anti-fibrosis therapy, the pulmonary symptoms abated, and intermediate tumor starvation was performed. The combination therapy was subsequently discontinued, and the patient experienced significant relief from pulmonary symptoms. Treatment response was positive following single-agent nab-paclitaxel 400 mg chemotherapy in combination with nintedanib 150 mg anti-fibrosis therapy. Conclusion: In this report, we describe a rare case of idiopathic pulmonary fibrosis associated with the use of nab-paclitaxel and carboplatin in ovarian cancer. During treatment, it is necessary to maintain a high level of vigilance for patients with interstitial pneumonia and engage the attention of clinicians to improve medication safety. Early diagnosis and anti-fibrosis therapy can reverse lung damage.",
+    "metadata": {
+      "rank": 4,
+      "score": 0.6830992738804745,
+      "journal": "Front Pharmacol",
+      "pub_date": "2023-01-01",
+      "doi": "10.3389/fphar.2023.1094844",
+      "impact_factor": 4.8
+    },
+    "cached_at": "2026-01-22T23:26:23.454724"
+  },
+  "37954076": {
+    "pmid": "37954076",
+    "title": "Seminoma and dysgerminoma: evidence for alignment of clinical trials and de-escalation of systemic chemotherapy.",
+    "abstract": "Malignant germ cell tumours are a group of rare cancers whose incidence peaks in late adolescence and early adulthood. Dysgerminomas of the ovary and seminomas of the testis are analogous diseases, but seminomas have a 10-fold higher incidence. The two tumours are morphologically identical and are only differentiated by surrounding organ-specific tissue or testicular germ cell neoplasia in situ. They share genetic features including KIT and RAS mutations, amplification of chromosome 12p, and expression of pluripotency markers (NANOG (Nanog homeobox), OCT3/4 (Octamer-binding transcription factor 3/4), and SAL4 (Spalt-like trascription factor 4)). Both histologies are exquisitely sensitive to platinum chemotherapy, and the combination of bleomycin, etoposide, and cisplatin (BEP) yields survival rates greater than 90%. However, BEP causes significant, lifelong toxicity (cardiovascular, renal, respiratory, and neurological) in these young patients with an expectation of cure. Here, we comprehensively review the biological features of dysgerminoma and seminoma to demonstrate that they are biologically analogous diseases. We present available clinical trial data supporting de-escalation of chemotherapy treatment. Finally, we propose that future trials should enrol men, women, and children to benefit all patients regardless of age or sex.",
+    "metadata": {
+      "rank": 1,
+      "score": 0.6793389041639446,
+      "journal": "Front Oncol",
+      "pub_date": "2023-01-01",
+      "doi": "10.3389/fonc.2023.1271647",
+      "impact_factor": 3.3
+    },
+    "cached_at": "2026-01-23T00:49:59.397362"
   }
 }

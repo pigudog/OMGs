@@ -42,6 +42,8 @@ Core extraction rules for gynecologic oncology EHR:
 | PLATINUM | PFI: ≤28d Refractory; 28-180d Resistant; ≥180d Sensitive |
 | TOXICITIES | Only if explicitly mentioned with severity |
 | CLINICAL_TRIALS | Trial name, NCT ID, phase if mentioned |
+| DEMOGRAPHICS | Age if explicit; menopause status inferred from age/history; fertility preservation only if discussed |
+| FAMILY_HISTORY | First/second-degree relatives; prioritize BRCA/Lynch-related cancers; hereditary syndromes only if explicit |
 
 ### REFINE_INSTRUCTIONS
 
@@ -76,11 +78,13 @@ Used during iterative refinement when review identifies fixable issues:
 
 ```
 CASE_CORE
+├── DEMOGRAPHICS (age, age_at_diagnosis, menopause_status, fertility_preservation_*)
 ├── VISIT_DATE, ECOG, PLATINUM_STATUS, SCENE
 ├── DIAGNOSIS (primary, histology, site, laterality)
 ├── SURGERY_DONE, NEOADJUVANT, ADJUVANT_TREATMENT
 ├── LINE_OF_THERAPY[] (line, regimen, cycles, response_assessment, discontinuation)
 ├── MAINTENANCE, RELAPSE
+├── FAMILY_HISTORY (documented, relatives[], hereditary_syndrome_suspected)
 ├── HRD, BRCA1, BRCA2 (legacy fields)
 ├── GENOMICS (testing_performed, HRD_STATUS, alterations[])
 └── BIOMARKERS
