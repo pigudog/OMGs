@@ -464,6 +464,68 @@ def run_mdt_discussion(
         # print(interaction_log)
     return initial_ops, merged, final_round_ops, interaction_log
 
+# Helper to extract genomic info from GENOMICS section or legacy fields
+def _extract_genomic_status(case_json: Dict[str, Any]) -> Dict[str, str]:
+    """Extract HRD/BRCA status from either GENOMICS section (new) or legacy fields.
+    
+    Returns dict with keys: HRD, BRCA1, BRCA2, other_alterations
+    Prioritizes explicit values over Unknown.
+    """
+    case_core = case_json.get("CASE_CORE") or {}
+    genomics = case_core.get("GENOMICS") or {}
+    result = {
+        "HRD": "Unknown",
+        "BRCA1": "Unknown", 
+        "BRCA2": "Unknown",
+        "other_alterations": []
+    }
+    
+    # First try legacy fields
+    legacy_hrd = case_core.get("HRD", "Unknown")
+    legacy_brca1 = case_core.get("BRCA1", "Unknown")
+    legacy_brca2 = case_core.get("BRCA2", "Unknown")
+    
+    if legacy_hrd not in ["Unknown", "Not applicable", None, ""]:
+        result["HRD"] = legacy_hrd
+    if legacy_brca1 not in ["Unknown", "Not applicable", None, ""]:
+        result["BRCA1"] = legacy_brca1
+    if legacy_brca2 not in ["Unknown", "Not applicable", None, ""]:
+        result["BRCA2"] = legacy_brca2
+    
+    # Then try GENOMICS section (can override Unknown)
+    hrd_status = genomics.get("HRD_STATUS") or {}
+    if isinstance(hrd_status, dict):
+        hrd_result = hrd_status.get("result", "Unknown")
+        if hrd_result not in ["Unknown", "Not_applicable", None, ""] and result["HRD"] == "Unknown":
+            result["HRD"] = hrd_result
+    
+    # Check alterations array for BRCA1/BRCA2 and other genes
+    alterations = genomics.get("alterations") or []
+    for alt in alterations:
+        if not isinstance(alt, dict):
+            continue
+        gene = alt.get("gene", "").upper()
+        status = alt.get("status", "Unknown")
+        significance = alt.get("clinical_significance", "Unknown")
+        
+        # For BRCA1/BRCA2, update if we have better info
+        if gene == "BRCA1" and result["BRCA1"] == "Unknown":
+            if status == "Mutated" or (status != "Wildtype" and significance in ["Pathogenic", "Likely_pathogenic"]):
+                result["BRCA1"] = "Mutated"
+            elif status == "Wildtype":
+                result["BRCA1"] = "Wildtype"
+        elif gene == "BRCA2" and result["BRCA2"] == "Unknown":
+            if status == "Mutated" or (status != "Wildtype" and significance in ["Pathogenic", "Likely_pathogenic"]):
+                result["BRCA2"] = "Mutated"
+            elif status == "Wildtype":
+                result["BRCA2"] = "Wildtype"
+        # Collect other HRR/actionable genes
+        elif gene not in ["BRCA1", "BRCA2", ""] and status == "Mutated":
+            result["other_alterations"].append(f"{gene}:{status}")
+    
+    return result
+
+
 # important for evidence search!!!!
 def _build_rag_key_facts(case_json: Dict[str, Any], mut_reports: List[Dict[str, Any]]) -> str:
     """Build KEY FACTS string for RAG query from case data.
@@ -769,35 +831,49 @@ def process_omgs_multi_expert_query(
     trace.emit("rag_key_facts", {"facts": rag_key_facts})
     
     # Build RAG query with error handling
-    # IMPORTANT: If mutation reports exist, inject HRD/BRCA values into case_json
+    # IMPORTANT: Inject HRD/BRCA values from GENOMICS section or mutation reports
     # to override "Unknown" values that confuse the LLM
     rag_question_str = question_str  # Default to original
-    if mut_reports:
-        import copy
-        import re
-        rag_case_json = copy.deepcopy(case_json)
+    
+    # First try to get genomic info from structured GENOMICS section
+    genomic_status = _extract_genomic_status(case_json)
+    
+    import copy
+    rag_case_json = copy.deepcopy(case_json)
+    
+    # Apply GENOMICS-derived values
+    if genomic_status["HRD"] != "Unknown":
+        rag_case_json.setdefault("CASE_CORE", {})["HRD"] = genomic_status["HRD"]
+    if genomic_status["BRCA1"] != "Unknown":
+        rag_case_json.setdefault("CASE_CORE", {})["BRCA1"] = genomic_status["BRCA1"]
+    if genomic_status["BRCA2"] != "Unknown":
+        rag_case_json.setdefault("CASE_CORE", {})["BRCA2"] = genomic_status["BRCA2"]
+    
+    # Fallback: If still Unknown, try to extract from raw mutation reports
+    if mut_reports and (genomic_status["HRD"] == "Unknown" or genomic_status["BRCA1"] == "Unknown" or genomic_status["BRCA2"] == "Unknown"):
         latest_mut = mut_reports[-1]
         raw_text = latest_mut.get("raw_text", "")
         if raw_text:
             # Extract HRD status
-            if "HRD" in raw_text:
+            if "HRD" in raw_text and genomic_status["HRD"] == "Unknown":
                 if "阴性" in raw_text or "negative" in raw_text.lower():
                     rag_case_json.setdefault("CASE_CORE", {})["HRD"] = "Negative"
                 elif "阳性" in raw_text or "positive" in raw_text.lower():
                     rag_case_json.setdefault("CASE_CORE", {})["HRD"] = "Positive"
             # Extract BRCA1 status
-            if "BRCA1" in raw_text:
+            if "BRCA1" in raw_text and genomic_status["BRCA1"] == "Unknown":
                 if any(x in raw_text for x in ["未检出", "阴性", "视为阴性"]):
                     rag_case_json.setdefault("CASE_CORE", {})["BRCA1"] = "Negative"
                 elif "突变" in raw_text and "致病" in raw_text:
                     rag_case_json.setdefault("CASE_CORE", {})["BRCA1"] = "Positive"
             # Extract BRCA2 status
-            if "BRCA2" in raw_text:
+            if "BRCA2" in raw_text and genomic_status["BRCA2"] == "Unknown":
                 if any(x in raw_text for x in ["未检出", "阴性", "视为阴性"]):
                     rag_case_json.setdefault("CASE_CORE", {})["BRCA2"] = "Negative"
                 elif "突变" in raw_text and "致病" in raw_text:
                     rag_case_json.setdefault("CASE_CORE", {})["BRCA2"] = "Positive"
-        rag_question_str = json.dumps(rag_case_json, ensure_ascii=False)
+    
+    rag_question_str = json.dumps(rag_case_json, ensure_ascii=False)
     
     try:
         rag_query = build_rag_query_for_mdt(rag_query_builder, rag_question_str, key_facts=rag_key_facts)
@@ -1660,30 +1736,43 @@ def process_chair_sa_kep_query(
     rag_key_facts = _build_rag_key_facts(case_json, mut_reports)
     trace.emit("rag_key_facts", {"facts": rag_key_facts})
     
-    # Build RAG query with mutation-enhanced case
-    rag_question_str = question_str
-    if mut_reports:
-        import copy
-        rag_case_json = copy.deepcopy(case_json)
+    # Build RAG query with GENOMICS-enhanced case
+    # Uses new GENOMICS section when available, falls back to legacy fields and raw mutation reports
+    genomic_status = _extract_genomic_status(case_json)
+    
+    import copy
+    rag_case_json = copy.deepcopy(case_json)
+    
+    # Apply GENOMICS-derived values
+    if genomic_status["HRD"] != "Unknown":
+        rag_case_json.setdefault("CASE_CORE", {})["HRD"] = genomic_status["HRD"]
+    if genomic_status["BRCA1"] != "Unknown":
+        rag_case_json.setdefault("CASE_CORE", {})["BRCA1"] = genomic_status["BRCA1"]
+    if genomic_status["BRCA2"] != "Unknown":
+        rag_case_json.setdefault("CASE_CORE", {})["BRCA2"] = genomic_status["BRCA2"]
+    
+    # Fallback: extract from raw mutation reports if still Unknown
+    if mut_reports and (genomic_status["HRD"] == "Unknown" or genomic_status["BRCA1"] == "Unknown" or genomic_status["BRCA2"] == "Unknown"):
         latest_mut = mut_reports[-1]
         raw_text = latest_mut.get("raw_text", "")
         if raw_text:
-            if "HRD" in raw_text:
+            if "HRD" in raw_text and genomic_status["HRD"] == "Unknown":
                 if "阴性" in raw_text or "negative" in raw_text.lower():
                     rag_case_json.setdefault("CASE_CORE", {})["HRD"] = "Negative"
                 elif "阳性" in raw_text or "positive" in raw_text.lower():
                     rag_case_json.setdefault("CASE_CORE", {})["HRD"] = "Positive"
-            if "BRCA1" in raw_text:
+            if "BRCA1" in raw_text and genomic_status["BRCA1"] == "Unknown":
                 if any(x in raw_text for x in ["未检出", "阴性", "视为阴性"]):
                     rag_case_json.setdefault("CASE_CORE", {})["BRCA1"] = "Negative"
                 elif "突变" in raw_text and "致病" in raw_text:
                     rag_case_json.setdefault("CASE_CORE", {})["BRCA1"] = "Positive"
-            if "BRCA2" in raw_text:
+            if "BRCA2" in raw_text and genomic_status["BRCA2"] == "Unknown":
                 if any(x in raw_text for x in ["未检出", "阴性", "视为阴性"]):
                     rag_case_json.setdefault("CASE_CORE", {})["BRCA2"] = "Negative"
                 elif "突变" in raw_text and "致病" in raw_text:
                     rag_case_json.setdefault("CASE_CORE", {})["BRCA2"] = "Positive"
-        rag_question_str = json.dumps(rag_case_json, ensure_ascii=False)
+    
+    rag_question_str = json.dumps(rag_case_json, ensure_ascii=False)
     
     try:
         rag_query = build_rag_query_for_mdt(rag_query_builder, rag_question_str, key_facts=rag_key_facts)

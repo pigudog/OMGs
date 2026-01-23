@@ -127,38 +127,41 @@ flowchart LR
 
 ## 🆕 Recent Updates
 
-### v1.1 - Multi-Mode Support & Intelligent Routing
+### v1.2 - EHR Iterative Refinement Architecture
 
-**New Agent Modes:**
+**New Extract-Review-Refine Loop:**
+
+```
+Extract → Self-Review → Validator-Review → [Fixable Issues?]
+                                              ↓ Yes
+                                         Refine → Re-Review (max 2x)
+                                              ↓ No
+                                         Auto-Fix → Output with Confidence
+```
+
+- **Issue Classification**: `fixable` (LLM errors) / `truncation` / `ambiguous` (human review)
+- **Iterative Correction**: Auto-fixes inference errors (e.g., BRCA wrongly set to Wildtype)
+- **Field Confidence**: Per-field confidence scores (high/medium/low)
+- **Enhanced Output**: txt_out includes review issues, refinements, and confidence for human review
+
+**Concise Prompts**: `MASTER_INSTRUCTIONS` reduced from ~3200 to ~1200 chars (refinement catches errors)
+
+### v1.1 - Multi-Mode Support & Intelligent Routing
 
 | Mode | Description | Use Case |
 |------|-------------|----------|
-| `omgs` | Full multi-agent MDT discussion (default) | Complex cases requiring multi-specialty debate |
-| `chair_sa` | Simplest single-agent mode | Environment/API testing |
-| `chair_sa_k` | Single agent + Knowledge (Guidelines + PubMed) | Cases needing evidence reference |
-| `chair_sa_kep` | Single agent + Knowledge + Evidence Pack | Complex cases with patient data |
-| `auto` | **Intelligent routing** based on case complexity | Recommended for tiered care |
+| `omgs` | Full multi-agent MDT discussion | Complex cases |
+| `chair_sa` | Single-agent baseline | Testing |
+| `chair_sa_k` | Single agent + Knowledge | Evidence reference |
+| `chair_sa_kep` | Single agent + Knowledge + Evidence Pack | Complex with data |
+| `auto` | **Intelligent routing** | Recommended |
 
-**Auto Mode Features:**
-- Automatically assesses case complexity (treatment line, genetic testing, platinum status, comorbidities)
-- Routes to appropriate processing mode (`chair_sa` → `chair_sa_k` → `chair_sa_kep` → `omgs`)
-- Reduces resource usage for simpler cases while ensuring complex cases get full MDT support
-
-**Output Enhancements:**
-- `agent_mode` field recorded in `results.json` (e.g., `"auto(chair_sa_kep)"`)
-- HTML report displays mode badge in Pipeline Statistics card
-- **MDT Discussion Summary** section in HTML report (Key Knowledge, Controversies, Missing Info, Working Plan)
-- **Print button** (🖨️) in HTML report for one-click printing
-- Dark mode support (auto-detects system theme)
-- Print-friendly and responsive CSS styles
+**Auto Mode**: Routes cases to appropriate level based on complexity (line of therapy, genetic testing, platinum status).
 
 **Usage:**
 ```bash
 # Intelligent routing (recommended)
 python main.py --input_path ./data.jsonl --agent auto --provider azure --model gpt-5.1
-
-# Specific mode
-python main.py --input_path ./data.jsonl --agent chair_sa_kep --provider azure --model gpt-5.1
 ```
 
 ---
@@ -334,34 +337,24 @@ The `auto` mode automatically assesses case complexity and routes to the appropr
 
 ---
 
-## Documentation
+## 📚 Documentation
 
-### Getting Started
-
-- **[Installation Guide](docs/installation.md)** - Detailed installation steps, system requirements, and LLM provider configuration
-- **[Usage Guide](docs/usage.md)** - CLI arguments, input/output formats, and usage instructions
-- **[Examples](docs/examples.md)** - Complete workflow examples with different providers
-
-### Core Documentation
-
-- **[Project Structure](docs/project-structure.md)** - Complete directory structure and module descriptions
-- **[Evidence System](docs/evidence-system.md)** - Open Evidence References system and mutation report handling
-- **[Configuration Guide](config/README.md)** - Prompt customization, role permissions, and evidence tag rules
-- **[SKILL Protocol](skills/omgs/SKILL.md)** - Runtime skill injection and agent constraints
-
-### Advanced Topics
-
-- **[Troubleshooting](docs/troubleshooting.md)** - Error handling, common issues, and debugging
-- **[Evaluation Guide](docs/evaluation.md)** - Likert scale evaluation system for expert assessment
-- **[Development Guide](CONTRIBUTING.md)** - Adding new roles, report types, and development tasks
-- **[Multi-Provider Guide](clients/PROVIDERS.md)** - Detailed LLM provider usage and configuration
-
-### Reference Documentation
-
-- **[Architecture Details](skills/omgs/references/architecture.md)** - Three-layer architecture deep dive
-- **[Expert Roles](skills/omgs/references/expert-roles.md)** - Role definitions, permissions, and prompts
-- **[Extension Guide](skills/omgs/references/extension-guide.md)** - Step-by-step guide for adding roles and report types
-- **[Pipeline Operations](skills/omgs/references/pipeline-ops.md)** - CLI operations, configuration, and debugging
+| Category | Document | Description |
+|----------|----------|-------------|
+| **Getting Started** | [Installation](docs/installation.md) | Setup, requirements, LLM config |
+| | [Usage](docs/usage.md) | CLI, input/output formats |
+| | [Examples](docs/examples.md) | Workflow examples |
+| **Core** | [Project Structure](docs/project-structure.md) | Directory and modules |
+| | [Evidence System](docs/evidence-system.md) | RAG and citations |
+| | [Prompts Reference](docs/prompts-reference.md) | **Complete prompt documentation** |
+| | [Configuration](config/README.md) | Config files overview |
+| **Advanced** | [Troubleshooting](docs/troubleshooting.md) | Debugging guide |
+| | [Evaluation](docs/evaluation.md) | Assessment system |
+| | [Multi-Provider](clients/PROVIDERS.md) | LLM provider details |
+| **Reference** | [Architecture](skills/omgs/references/architecture.md) | Three-layer design |
+| | [Expert Roles](skills/omgs/references/expert-roles.md) | Role definitions |
+| | [Extension Guide](skills/omgs/references/extension-guide.md) | Adding roles/reports |
+| | [SKILL Protocol](skills/omgs/SKILL.md) | Runtime injection |
 
 ---
 

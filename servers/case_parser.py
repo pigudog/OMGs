@@ -28,21 +28,94 @@ from datetime import datetime
 from tqdm import tqdm
 
 # ===========================
-# Simple ANSI colors for CLI
+# Enhanced ANSI colors for CLI
 # ===========================
 _CLR_RED = "\033[91m"
+_CLR_GREEN = "\033[92m"
 _CLR_YELLOW = "\033[93m"
 _CLR_BLUE = "\033[94m"
+_CLR_MAGENTA = "\033[95m"
+_CLR_CYAN = "\033[96m"
+_CLR_WHITE = "\033[97m"
+_CLR_GRAY = "\033[90m"
 _CLR_RESET = "\033[0m"
+_CLR_BOLD = "\033[1m"
+_CLR_DIM = "\033[2m"
+
+# Box drawing characters
+_BOX_H = "─"
+_BOX_V = "│"
+_BOX_TL = "┌"
+_BOX_TR = "┐"
+_BOX_BL = "└"
+_BOX_BR = "┘"
+_BOX_T = "├"
+_BOX_CHECK = "✓"
+_BOX_CROSS = "✗"
+_BOX_ARROW = "→"
+_BOX_BULLET = "•"
 
 
 def _sev_color(sev: str) -> str:
     s = (sev or "").lower()
     if s == "critical":
-        return _CLR_RED
+        return _CLR_RED + _CLR_BOLD
     if s == "major":
         return _CLR_YELLOW
     return _CLR_BLUE
+
+
+def _sev_icon(sev: str) -> str:
+    s = (sev or "").lower()
+    if s == "critical":
+        return "🔴"
+    if s == "major":
+        return "🟡"
+    return "🔵"
+
+
+def _step_icon(step: str) -> str:
+    icons = {
+        "extract": "📥",
+        "review_self": "🔍",
+        "review_validator": "✅",
+        "refine": "🔧",
+        "re_review": "🔄",
+        "auto_fix": "⚙️",
+        "write": "💾",
+        "done": "✨",
+    }
+    for key, icon in icons.items():
+        if key in step.lower():
+            return icon
+    return "▶️"
+
+
+def _print_box(title: str, content: List[str], color: str = _CLR_CYAN):
+    """Print a boxed section with title."""
+    max_len = max(len(title), max((len(c) for c in content), default=20))
+    width = min(max_len + 4, 100)
+    print(f"{color}{_BOX_TL}{_BOX_H * (width - 2)}{_BOX_TR}{_CLR_RESET}")
+    print(f"{color}{_BOX_V}{_CLR_RESET} {_CLR_BOLD}{title}{_CLR_RESET}{' ' * (width - len(title) - 3)}{color}{_BOX_V}{_CLR_RESET}")
+    print(f"{color}{_BOX_T}{_BOX_H * (width - 2)}{_BOX_TR.replace(_BOX_TR, _BOX_T)}{_CLR_RESET}".replace(_BOX_T + _CLR_RESET, _CLR_RESET))
+    for line in content:
+        truncated = line[:width - 4] + "..." if len(line) > width - 4 else line
+        padding = width - len(truncated) - 3
+        print(f"{color}{_BOX_V}{_CLR_RESET} {truncated}{' ' * max(0, padding)}{color}{_BOX_V}{_CLR_RESET}")
+    print(f"{color}{_BOX_BL}{_BOX_H * (width - 2)}{_BOX_BR}{_CLR_RESET}")
+
+
+def _print_step(step: str, detail: str = "", status: str = "start"):
+    """Print a step with icon and status."""
+    icon = _step_icon(step)
+    if status == "start":
+        print(f"{_CLR_CYAN}{icon} [{step}]{_CLR_RESET} {_CLR_DIM}starting...{_CLR_RESET}")
+    elif status == "done":
+        print(f"{_CLR_GREEN}{icon} [{step}]{_CLR_RESET} {detail}")
+    elif status == "error":
+        print(f"{_CLR_RED}{icon} [{step}]{_CLR_RESET} {_CLR_RED}{detail}{_CLR_RESET}")
+    else:
+        print(f"{_CLR_CYAN}{icon} [{step}]{_CLR_RESET} {detail}")
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 if str(PROJECT_ROOT) not in sys.path:
@@ -245,6 +318,368 @@ def _pfis_to_status(pfi_days: int) -> str:
     return "Sensitive"
 
 
+# ===========================
+# Issue Classification & Refinement
+# ===========================
+
+def classify_issue(issue: Dict[str, Any]) -> str:
+    """Classify review issue as fixable/ambiguous/truncation.
+    
+    Args:
+        issue: Review issue dict with 'severity', 'field_path', 'description', etc.
+    
+    Returns:
+        'fixable': LLM can fix with feedback (inference errors, wrong values)
+        'truncation': Value was cut off (e.g., PLT:34 should be PLT:342)
+        'ambiguous': Source text is unclear, needs human review
+    """
+    desc = (issue.get("description") or "").lower()
+    severity = (issue.get("severity") or "").lower()
+    
+    # Truncation: value cutoff errors
+    if "truncat" in desc or re.search(r"\d+\s+instead of\s+\d+", desc):
+        return "truncation"
+    
+    # Fixable: LLM inference errors that can be corrected
+    fixable_patterns = [
+        "without support",
+        "without any support",
+        "not mentioned",
+        "no .* mentioned",
+        "incorrectly",
+        "should be",
+        "no explicit",
+        "not a gene",
+        "is not a",
+        "no brca",
+        "wildtype without",
+    ]
+    if any(re.search(p, desc) for p in fixable_patterns):
+        return "fixable"
+    
+    # Critical/major issues are more likely fixable
+    if severity in ["critical", "major"]:
+        # Check if it's about missing evidence
+        if any(x in desc for x in ["evidence", "stated", "documented", "mentioned"]):
+            return "fixable"
+    
+    # Default: ambiguous - needs human review
+    return "ambiguous"
+
+
+def get_nested(obj: Dict[str, Any], path: str) -> Any:
+    """Get value from nested dict using dot notation path.
+    
+    Supports array indexing: 'CASE_CORE.GENOMICS.alterations[0].gene'
+    """
+    parts = re.split(r'\.(?![^\[]*\])', path)  # Split on dots not inside brackets
+    current = obj
+    for part in parts:
+        if current is None:
+            return None
+        # Handle array indexing
+        match = re.match(r'([^\[]+)\[(\d+)\]', part)
+        if match:
+            key, idx = match.groups()
+            current = current.get(key)
+            if isinstance(current, list) and int(idx) < len(current):
+                current = current[int(idx)]
+            else:
+                return None
+        else:
+            if isinstance(current, dict):
+                current = current.get(part)
+            else:
+                return None
+    return current
+
+
+def set_nested(obj: Dict[str, Any], path: str, value: Any) -> None:
+    """Set value in nested dict using dot notation path.
+    
+    Creates intermediate dicts/lists as needed.
+    Supports array indexing: 'CASE_CORE.GENOMICS.alterations'
+    """
+    parts = re.split(r'\.(?![^\[]*\])', path)
+    current = obj
+    
+    for i, part in enumerate(parts[:-1]):
+        match = re.match(r'([^\[]+)\[(\d+)\]', part)
+        if match:
+            key, idx = match.groups()
+            idx = int(idx)
+            if key not in current:
+                current[key] = []
+            while len(current[key]) <= idx:
+                current[key].append({})
+            current = current[key][idx]
+        else:
+            if part not in current:
+                current[part] = {}
+            current = current[part]
+    
+    # Set the final value
+    final_part = parts[-1]
+    match = re.match(r'([^\[]+)\[(\d+)\]', final_part)
+    if match:
+        key, idx = match.groups()
+        idx = int(idx)
+        if key not in current:
+            current[key] = []
+        while len(current[key]) <= idx:
+            current[key].append(None)
+        current[key][idx] = value
+    else:
+        current[final_part] = value
+
+
+def merge_refinements(original: Dict[str, Any], refinements: Dict[str, Any]) -> Dict[str, Any]:
+    """Merge refined fields into original extraction.
+    
+    Args:
+        original: Original extracted JSON
+        refinements: Dict of {field_path: corrected_value}
+    
+    Returns:
+        Merged dict with refinements applied
+    """
+    import copy
+    result = copy.deepcopy(original)
+    
+    for path, value in refinements.items():
+        try:
+            set_nested(result, path, value)
+        except Exception as e:
+            print(f"[WARN] Failed to set {path}: {e}")
+    
+    return result
+
+
+def should_refine(issues: List[Dict[str, Any]], iteration: int, config: Dict[str, Any]) -> bool:
+    """Determine if refinement should be attempted.
+    
+    Args:
+        issues: List of review issues
+        iteration: Current iteration count (0-indexed)
+        config: Refinement config with max_iterations, min_fixable_issues, issue_severity_threshold
+    
+    Returns:
+        True if should attempt refinement
+    """
+    max_iterations = config.get("max_iterations", 2)
+    min_fixable = config.get("min_fixable_issues", 1)
+    severity_threshold = config.get("issue_severity_threshold", "major")
+    
+    if iteration >= max_iterations:
+        return False
+    
+    # Filter by severity
+    severity_order = {"critical": 0, "major": 1, "minor": 2}
+    threshold_idx = severity_order.get(severity_threshold, 1)
+    
+    relevant_issues = [
+        i for i in issues
+        if severity_order.get((i.get("severity") or "").lower(), 2) <= threshold_idx
+    ]
+    
+    # Count fixable issues
+    fixable = [i for i in relevant_issues if classify_issue(i) in ["fixable", "truncation"]]
+    return len(fixable) >= min_fixable
+
+
+def build_refine_prompt(
+    extracted_json: Dict[str, Any],
+    issues: List[Dict[str, Any]],
+    refine_instructions: str,
+    source_text: str,
+) -> str:
+    """Build the refinement prompt for LLM.
+    
+    Args:
+        extracted_json: Previously extracted JSON
+        issues: List of issues to fix
+        refine_instructions: Refinement instructions from config
+        source_text: Original source text for reference
+    
+    Returns:
+        Complete prompt string
+    """
+    # Filter to fixable/truncation issues only
+    fixable_issues = [i for i in issues if classify_issue(i) in ["fixable", "truncation"]]
+    
+    # Format issues as readable text
+    issues_text = "\n".join([
+        f"- [{i.get('severity', 'unknown')}] {i.get('field_path', 'unknown')}: {i.get('description', '')}"
+        for i in fixable_issues
+    ])
+    
+    # Build the prompt
+    prompt = f"""{refine_instructions}
+
+=== PREVIOUSLY EXTRACTED JSON ===
+{json.dumps(extracted_json, ensure_ascii=False, indent=2)}
+
+=== ISSUES TO FIX ===
+{issues_text}
+
+=== ORIGINAL SOURCE TEXT (for reference) ===
+{source_text[:8000]}  
+
+Please provide the corrected fields as JSON."""
+    
+    return prompt
+
+
+def call_refine_once(client, deployment: str, refine_prompt: str, *, max_completion_tokens: int):
+    """One-shot call to LLM for refinement.
+    
+    Returns:
+        content, req_id, err, tokens_used, finish_reason
+    """
+    messages = [
+        {"role": "system", "content": "You are an EHR extraction refinement engine. Output only valid JSON."},
+        {"role": "user", "content": refine_prompt},
+    ]
+    try:
+        resp = client.chat_completion(
+            model=deployment,
+            messages=messages,
+            max_completion_tokens=max_completion_tokens,
+        )
+        content = (resp.choices[0].message.content or "").strip()
+        req_id = getattr(resp, "id", "")
+        usage = getattr(resp, "usage", None)
+        tokens_used = getattr(usage, "total_tokens", 0) if usage else 0
+        finish = getattr(resp.choices[0], "finish_reason", "")
+        return content, req_id, None, tokens_used, finish
+    except Exception as e:
+        return "", "", str(e), 0, ""
+
+
+def refine_extraction(
+    client,
+    deployment: str,
+    original_json: Dict[str, Any],
+    issues: List[Dict[str, Any]],
+    source_text: str,
+    refine_instructions: str,
+    *,
+    max_completion_tokens: int = 8000,
+    verbose: bool = False,
+) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    """Refine extraction based on review issues.
+    
+    Args:
+        client: LLM client
+        deployment: Model deployment name
+        original_json: Previously extracted JSON
+        issues: List of review issues
+        source_text: Original source text
+        refine_instructions: Refinement instructions from config
+        max_completion_tokens: Max tokens for completion
+        verbose: Enable verbose logging
+    
+    Returns:
+        Tuple of (refined_json, refinement_audit)
+    """
+    # Build refinement prompt
+    refine_prompt = build_refine_prompt(
+        extracted_json=original_json,
+        issues=issues,
+        refine_instructions=refine_instructions,
+        source_text=source_text,
+    )
+    
+    _log(f"[refine] Calling LLM for refinement...", verbose=verbose)
+    
+    # Call LLM
+    content, req_id, err, tokens, finish = call_refine_once(
+        client, deployment, refine_prompt, max_completion_tokens=max_completion_tokens
+    )
+    
+    audit = {
+        "tokens": tokens,
+        "finish": finish,
+        "req_id": req_id,
+        "err": err,
+        "raw_response": content[:2000] if content else None,
+    }
+    
+    if err:
+        _log(f"[refine] LLM error: {err}", verbose=verbose)
+        return original_json, {**audit, "status": "error", "refinements_applied": {}}
+    
+    # Parse refinements JSON
+    parsed_refinements, parse_status = try_parse_json(content)
+    
+    if parsed_refinements is None:
+        _log(f"[refine] Failed to parse refinements: {parse_status}", verbose=verbose)
+        return original_json, {**audit, "status": parse_status, "refinements_applied": {}}
+    
+    if not isinstance(parsed_refinements, dict):
+        _log(f"[refine] Refinements not a dict", verbose=verbose)
+        return original_json, {**audit, "status": "invalid_format", "refinements_applied": {}}
+    
+    # Apply refinements
+    refined_json = merge_refinements(original_json, parsed_refinements)
+    
+    _log(f"[refine] Applied {len(parsed_refinements)} refinements", verbose=verbose)
+    
+    return refined_json, {
+        **audit,
+        "status": "ok",
+        "refinements_applied": parsed_refinements,
+        "fields_refined": list(parsed_refinements.keys()),
+    }
+
+
+def compute_field_confidence(
+    field_path: str,
+    issues: List[Dict[str, Any]],
+    refinement_history: List[Dict[str, Any]],
+) -> Dict[str, Any]:
+    """Compute confidence score for a field based on review and refinement history.
+    
+    Args:
+        field_path: Dot-notation path to field
+        issues: Final list of review issues
+        refinement_history: List of refinement audits
+    
+    Returns:
+        Dict with confidence info
+    """
+    # Check if field had issues
+    field_issues = [i for i in issues if i.get("field_path", "").startswith(field_path)]
+    
+    # Check if field was refined
+    times_refined = 0
+    for r in refinement_history:
+        if field_path in r.get("fields_refined", []):
+            times_refined += 1
+    
+    # Compute confidence
+    if field_issues:
+        # Still has issues - low confidence
+        max_severity = max([
+            {"critical": 0, "major": 1, "minor": 2}.get(i.get("severity", "").lower(), 2)
+            for i in field_issues
+        ])
+        confidence = "low" if max_severity <= 1 else "medium"
+    elif times_refined > 0:
+        # Was refined but no remaining issues - medium confidence
+        confidence = "medium"
+    else:
+        # No issues, never refined - high confidence
+        confidence = "high"
+    
+    return {
+        "confidence": confidence,
+        "had_issues": len(field_issues) > 0,
+        "times_refined": times_refined,
+        "remaining_issues": [i.get("description") for i in field_issues],
+    }
+
+
 def apply_auto_fixes(parsed: Dict[str, Any]) -> Tuple[Dict[str, Any], List[Dict[str, Any]]]:
     fixes: List[Dict[str, Any]] = []
     if not isinstance(parsed, dict):
@@ -309,6 +744,26 @@ def apply_auto_fixes(parsed: Dict[str, Any]) -> Tuple[Dict[str, Any], List[Dict[
                 relapse["evidence"] = new_evidence
                 case_core["RELAPSE_DATE"] = relapse
 
+    # LINE_OF_THERAPY: compute pfs_days if end_date and next line start_date available
+    line_of_therapy = case_core.get("LINE_OF_THERAPY") or []
+    if isinstance(line_of_therapy, list) and len(line_of_therapy) > 1:
+        # Sort by start_date to ensure correct order
+        for i, line in enumerate(line_of_therapy[:-1]):
+            end_date = _parse_date_ymd(line.get("end_date"))
+            next_start = _parse_date_ymd(line_of_therapy[i + 1].get("start_date"))
+            if end_date and next_start and next_start > end_date:
+                pfs_days = (next_start - end_date).days
+                current_pfs = line.get("pfs_days")
+                if current_pfs in [None, "", "Unknown"]:
+                    record_fix(f"CASE_CORE.LINE_OF_THERAPY[{i}].pfs_days", current_pfs, str(pfs_days), "compute_pfs_days")
+                    line["pfs_days"] = str(pfs_days)
+    
+    # Ensure new array fields exist (for schema v2.0 compatibility)
+    if "TOXICITIES" not in parsed:
+        parsed["TOXICITIES"] = []
+    if "CLINICAL_TRIALS" not in parsed:
+        parsed["CLINICAL_TRIALS"] = []
+    
     # Timeline ordering
     events = timeline.get("events")
     if isinstance(events, list) and events:
@@ -536,7 +991,10 @@ def process_file(
             # -------------------------------
             # 1) MAIN EHR EXTRACTION
             # -------------------------------
-            print(f"[step] extract_ehr start | patient_id={patient_id_safe}")
+            print(f"\n{_CLR_BOLD}{_CLR_WHITE}{'─' * 60}{_CLR_RESET}")
+            print(f"{_CLR_BOLD}📋 Patient: {_CLR_CYAN}{patient_id_safe}{_CLR_RESET}")
+            print(f"{_CLR_BOLD}{_CLR_WHITE}{'─' * 60}{_CLR_RESET}")
+            _print_step("extract_ehr", f"patient={patient_id_safe}", "start")
             t0 = time.time()
             ehr_content, req_id, err, tokens, finish, errs, attempts = call_with_retry(
                 call_extract_once,
@@ -548,7 +1006,8 @@ def process_file(
                 max_completion_tokens=max_completion_tokens,
                 verbose=verbose,
             )
-            print(f"[step] extract_ehr done | finish={finish} tokens={tokens} err={err} elapsed={time.time()-t0:.2f}s")
+            finish_color = _CLR_GREEN if finish == "stop" else _CLR_RED
+            _print_step("extract_ehr", f"finish={finish_color}{finish}{_CLR_RESET} tokens={_CLR_CYAN}{tokens}{_CLR_RESET} elapsed={time.time()-t0:.2f}s", "done")
             pbar.set_postfix_str("step=review_self")
 
             parsed, status = try_parse_json(ehr_content)
@@ -569,7 +1028,7 @@ def process_file(
             review_validator = None
             review_fixes: List[Dict[str, Any]] = []
             if parsed is not None:
-                print("[step] review_self start")
+                _print_step("review_self", "", "start")
                 t0 = time.time()
                 review_self = run_ehr_review(
                     client=client,
@@ -580,16 +1039,18 @@ def process_file(
                     max_completion_tokens=min(4000, max_completion_tokens),
                 )
                 issues_self = (review_self.get("parsed") or {}).get("issues") or []
-                print(f"[step] review_self done | parse_status={review_self.get('parse_status')} issues={len(issues_self)} elapsed={time.time()-t0:.2f}s")
+                _print_step("review_self", f"issues={_CLR_YELLOW}{len(issues_self)}{_CLR_RESET} elapsed={time.time()-t0:.2f}s", "done")
                 if issues_self:
-                    print("  [review_self issues]")
+                    print(f"  {_CLR_DIM}┌─ Self-review issues:{_CLR_RESET}")
                     for it in issues_self[:5]:
                         sev = it.get("severity", "unknown")
                         path = it.get("field_path", "")
                         desc = it.get("description", "")
                         color = _sev_color(sev)
-                        print(f"   - {color}({sev}){_CLR_RESET} {path} :: {desc[:120]}")
-                print("[step] review_validator start")
+                        icon = _sev_icon(sev)
+                        print(f"  {_CLR_DIM}│{_CLR_RESET} {icon} {color}{path}{_CLR_RESET}: {desc[:80]}...")
+                    print(f"  {_CLR_DIM}└{'─' * 50}{_CLR_RESET}")
+                _print_step("review_validator", "", "start")
                 pbar.set_postfix_str("step=review_validator")
                 t0 = time.time()
                 review_validator = run_ehr_review(
@@ -601,28 +1062,102 @@ def process_file(
                     max_completion_tokens=min(4000, max_completion_tokens),
                 )
                 issues_validator = (review_validator.get("parsed") or {}).get("issues") or []
-                print(f"[step] review_validator done | parse_status={review_validator.get('parse_status')} issues={len(issues_validator)} elapsed={time.time()-t0:.2f}s")
+                _print_step("review_validator", f"issues={_CLR_YELLOW}{len(issues_validator)}{_CLR_RESET} elapsed={time.time()-t0:.2f}s", "done")
                 if issues_validator:
-                    print("  [review_validator issues]")
+                    print(f"  {_CLR_DIM}┌─ Validator issues:{_CLR_RESET}")
                     for it in issues_validator[:5]:
                         sev = it.get("severity", "unknown")
                         path = it.get("field_path", "")
                         desc = it.get("description", "")
                         color = _sev_color(sev)
-                        print(f"   - {color}({sev}){_CLR_RESET} {path} :: {desc[:120]}")
-                print("[step] auto_fix start")
+                        icon = _sev_icon(sev)
+                        print(f"  {_CLR_DIM}│{_CLR_RESET} {icon} {color}{path}{_CLR_RESET}: {desc[:80]}...")
+                    print(f"  {_CLR_DIM}└{'─' * 50}{_CLR_RESET}")
+                
+                # -------------------------------
+                # 1c) Iterative Refinement Loop (NEW)
+                # -------------------------------
+                refinement_config = cfg_ehr.get("REFINEMENT_CONFIG", {
+                    "max_iterations": 2,
+                    "min_fixable_issues": 1,
+                    "issue_severity_threshold": "major"
+                })
+                refine_instructions = cfg_ehr.get("REFINE_INSTRUCTIONS", "")
+                refinement_history: List[Dict[str, Any]] = []
+                
+                # Combine issues from both reviews
+                all_issues = issues_self + issues_validator
+                
+                iteration = 0
+                while refine_instructions and should_refine(all_issues, iteration, refinement_config):
+                    iteration += 1
+                    pbar.set_postfix_str(f"step=refine_{iteration}")
+                    _print_step(f"refine #{iteration}", "", "start")
+                    t0 = time.time()
+                    
+                    # Refine extraction based on issues
+                    parsed, refine_audit = refine_extraction(
+                        client=client,
+                        deployment=deployment,
+                        original_json=parsed,
+                        issues=all_issues,
+                        source_text=src_for_llm,
+                        refine_instructions=refine_instructions,
+                        max_completion_tokens=max_completion_tokens,
+                        verbose=verbose,
+                    )
+                    refinement_history.append(refine_audit)
+                    
+                    fields_refined = refine_audit.get("fields_refined", [])
+                    status = refine_audit.get("status", "unknown")
+                    status_color = _CLR_GREEN if status == "ok" else _CLR_RED
+                    _print_step(f"refine #{iteration}", f"status={status_color}{status}{_CLR_RESET} fields={_CLR_CYAN}{len(fields_refined)}{_CLR_RESET} elapsed={time.time()-t0:.2f}s", "done")
+                    if fields_refined:
+                        print(f"  {_CLR_DIM}┌─ Refinements applied:{_CLR_RESET}")
+                        for f in fields_refined[:5]:
+                            new_val = refine_audit.get("refinements_applied", {}).get(f, "?")
+                            print(f"  {_CLR_DIM}│{_CLR_RESET} {_CLR_GREEN}✓{_CLR_RESET} {_CLR_CYAN}{f}{_CLR_RESET} → {new_val}")
+                        print(f"  {_CLR_DIM}└{'─' * 50}{_CLR_RESET}")
+                    
+                    # Re-review after refinement
+                    if refine_audit.get("status") == "ok" and fields_refined:
+                        pbar.set_postfix_str(f"step=re_review_{iteration}")
+                        _print_step(f"re-review #{iteration}", "", "start")
+                        t0 = time.time()
+                        re_review = run_ehr_review(
+                            client=client,
+                            deployment=deployment,
+                            review_system_prompt=review_system,
+                            source_text=src_for_llm,
+                            extracted_json=parsed,
+                            max_completion_tokens=min(4000, max_completion_tokens),
+                        )
+                        all_issues = (re_review.get("parsed") or {}).get("issues") or []
+                        issue_color = _CLR_GREEN if len(all_issues) == 0 else (_CLR_YELLOW if len(all_issues) < 5 else _CLR_RED)
+                        _print_step(f"re-review #{iteration}", f"remaining={issue_color}{len(all_issues)}{_CLR_RESET} elapsed={time.time()-t0:.2f}s", "done")
+                    else:
+                        # No refinements applied or error - stop loop
+                        break
+                
+                # Add refinement summary to review record
+                review_validator["refinement_history"] = refinement_history
+                review_validator["refinement_iterations"] = iteration
+                review_validator["final_issues"] = all_issues
+                
+                _print_step("auto_fix", "", "start")
                 pbar.set_postfix_str("step=auto_fix")
                 t0 = time.time()
                 parsed, review_fixes = apply_auto_fixes(parsed)
-                print(f"[step] auto_fix done | fixes={len(review_fixes)} elapsed={time.time()-t0:.2f}s")
+                _print_step("auto_fix", f"fixes={_CLR_CYAN}{len(review_fixes)}{_CLR_RESET} elapsed={time.time()-t0:.2f}s", "done")
                 if review_fixes:
-                    print("  [auto_fix changes]")
+                    print(f"  {_CLR_DIM}┌─ Auto fixes applied:{_CLR_RESET}")
                     for fx in review_fixes[:5]:
                         path = fx.get("path", "")
                         reason = fx.get("reason", "")
-                        print(f"   - {path} :: {reason}")
+                        print(f"  {_CLR_DIM}│{_CLR_RESET} {_CLR_MAGENTA}⚙{_CLR_RESET} {path} → {reason}")
+                    print(f"  {_CLR_DIM}└{'─' * 50}{_CLR_RESET}")
             else:
-                print("[step] review skipped | reason=extract_parse_failed")
+                _print_step("review", f"{_CLR_RED}skipped (parse failed){_CLR_RESET}", "error")
                 pbar.set_postfix_str("step=write_output")
 
             # Attempt repair if JSON broken
@@ -672,6 +1207,15 @@ def process_file(
             # Optional: keep legacy keys OFF by default to avoid duplication.
             # If you need back-compat later, you can add flags to include them.
 
+            # Get refinement info if available
+            refinement_iterations = 0
+            refinement_history_out = []
+            final_issues = []
+            if review_validator and isinstance(review_validator, dict):
+                refinement_iterations = review_validator.get("refinement_iterations", 0)
+                refinement_history_out = review_validator.get("refinement_history", [])
+                final_issues = review_validator.get("final_issues", [])
+            
             audit_ehr = {
                 "tokens": tokens,
                 "finish": finish,
@@ -684,7 +1228,21 @@ def process_file(
                 "repair_used": repair_used,
                 "repair_parse_status": repair_parse_status,
                 "repair_raw": repair_raw,
+                "refinement_iterations": refinement_iterations,
+                "refinement_status": "ok" if refinement_iterations > 0 else "not_needed",
             }
+            
+            # Compute field confidence for critical fields
+            critical_fields = [
+                "CASE_CORE.HRD", "CASE_CORE.BRCA1", "CASE_CORE.BRCA2",
+                "CASE_CORE.PLATINUM_STATUS", "CASE_CORE.DIAGNOSIS.histology",
+            ]
+            field_confidence = {}
+            for field in critical_fields:
+                field_confidence[field] = compute_field_confidence(
+                    field, final_issues, refinement_history_out
+                )
+            
             review_record = {
                 "patient_id": patient_id,
                 "Time": Time_val,
@@ -696,45 +1254,151 @@ def process_file(
                     "validator": review_validator,
                     "auto_fixes": review_fixes,
                 },
+                "refinement": {
+                    "iterations": refinement_iterations,
+                    "history": refinement_history_out,
+                    "final_issues": final_issues,
+                },
+                "field_confidence": field_confidence,
             }
 
-            print("[step] write_output")
+            _print_step("write_output", "", "start")
             fw.write(compact_json_line(out) + "\n")
             if review_self or review_validator or review_fixes or audit_ehr:
                 fw_review.write(compact_json_line(review_record) + "\n")
-            print(f"[step] record_done | elapsed={time.time()-record_t0:.2f}s")
+            _print_step("record_done", f"elapsed={time.time()-record_t0:.2f}s", "done")
             pbar.set_postfix_str("step=done")
 
             # -------------------------------
-            # Optional: TXT preview output
+            # Enhanced TXT preview output (for human review)
             # -------------------------------
             if txt_dir:
                 txt_path = Path(txt_dir) / f"{idx:06d}_{patient_id_safe}.txt"
                 with open(txt_path, "w", encoding="utf-8") as ftxt:
-                    ftxt.write(f"patient_id: {patient_id}\n")
-                    ftxt.write(f"patient_id_safe: {patient_id_safe}\n")
-                    ftxt.write(f"Time: {Time_val}\n\n")
-
-                    ftxt.write("==== SOURCE TEXT ====\n")
-                    ftxt.write(src + "\n\n")
-
-                    ftxt.write("==== EHR ====\n")
-                    ftxt.write(f"finish: {finish}\n")
-                    ftxt.write(f"parse_status: {status}\n")
-                    ftxt.write(f"attempts: {attempts}\n")
-                    if errs:
-                        ftxt.write("errors:\n" + "\n".join([f"- {e}" for e in errs]) + "\n")
-                    ftxt.write(f"repair_attempted: {repair_attempted}\n")
-                    ftxt.write(f"repair_used: {repair_used}\n")
-                    if repair_parse_status:
-                        ftxt.write(f"repair_parse_status: {repair_parse_status}\n")
+                    # Header
+                    ftxt.write("=" * 80 + "\n")
+                    ftxt.write(f"EHR EXTRACTION REPORT\n")
+                    ftxt.write("=" * 80 + "\n\n")
+                    ftxt.write(f"Patient ID: {patient_id}\n")
+                    ftxt.write(f"Visit Time: {Time_val}\n")
+                    ftxt.write(f"Extraction Status: {status}\n")
+                    ftxt.write(f"Refinement Iterations: {refinement_iterations}\n")
                     ftxt.write("\n")
 
-                    ftxt.write("==== EHR JSON ====\n")
+                    # Summary box
+                    ftxt.write("┌" + "─" * 40 + "┐\n")
+                    ftxt.write("│ EXTRACTION SUMMARY                     │\n")
+                    ftxt.write("├" + "─" * 40 + "┤\n")
+                    ftxt.write(f"│ Parse Status: {status:<24} │\n")
+                    ftxt.write(f"│ Tokens Used: {tokens:<25} │\n")
+                    ftxt.write(f"│ Refinement Iterations: {refinement_iterations:<15} │\n")
+                    ftxt.write(f"│ Auto Fixes Applied: {len(review_fixes):<18} │\n")
+                    ftxt.write("└" + "─" * 40 + "┘\n\n")
+
+                    # Field Confidence Section
+                    ftxt.write("=" * 80 + "\n")
+                    ftxt.write("FIELD CONFIDENCE (Critical Fields)\n")
+                    ftxt.write("=" * 80 + "\n")
+                    for field, conf in field_confidence.items():
+                        conf_level = conf.get("confidence", "unknown")
+                        refined = conf.get("times_refined", 0)
+                        icon = "✓" if conf_level == "high" else ("?" if conf_level == "medium" else "✗")
+                        ftxt.write(f"  [{icon}] {field}: {conf_level.upper()}")
+                        if refined > 0:
+                            ftxt.write(f" (refined {refined}x)")
+                        ftxt.write("\n")
+                    ftxt.write("\n")
+
+                    # Review Issues Section
+                    issues_self = (review_self.get("parsed") or {}).get("issues") or [] if review_self else []
+                    issues_validator = (review_validator.get("parsed") or {}).get("issues") or [] if review_validator else []
+                    
+                    if issues_self or issues_validator:
+                        ftxt.write("=" * 80 + "\n")
+                        ftxt.write("REVIEW ISSUES (Initial)\n")
+                        ftxt.write("=" * 80 + "\n")
+                        
+                        all_initial_issues = issues_self + issues_validator
+                        # Deduplicate by field_path
+                        seen_paths = set()
+                        for issue in all_initial_issues:
+                            path = issue.get("field_path", "")
+                            if path in seen_paths:
+                                continue
+                            seen_paths.add(path)
+                            sev = issue.get("severity", "unknown")
+                            desc = issue.get("description", "")
+                            evidence = issue.get("evidence_snippet", "")
+                            suggested = issue.get("suggested_fix", "")
+                            
+                            sev_icon = "🔴" if sev == "critical" else ("🟡" if sev == "major" else "🔵")
+                            ftxt.write(f"\n  {sev_icon} [{sev.upper()}] {path}\n")
+                            ftxt.write(f"     Description: {desc}\n")
+                            if evidence:
+                                ftxt.write(f"     Evidence: \"{evidence[:100]}{'...' if len(evidence) > 100 else ''}\"\n")
+                            if suggested:
+                                ftxt.write(f"     Suggested: {suggested}\n")
+                        ftxt.write("\n")
+
+                    # Refinements Applied Section
+                    if refinement_history_out:
+                        ftxt.write("=" * 80 + "\n")
+                        ftxt.write("REFINEMENTS APPLIED\n")
+                        ftxt.write("=" * 80 + "\n")
+                        for i, refine in enumerate(refinement_history_out, 1):
+                            ftxt.write(f"\n  🔧 Iteration {i}:\n")
+                            fields_refined = refine.get("fields_refined", [])
+                            refinements = refine.get("refinements_applied", {})
+                            for field in fields_refined:
+                                new_val = refinements.get(field, "?")
+                                ftxt.write(f"     → {field}: {new_val}\n")
+                        ftxt.write("\n")
+
+                    # Final Issues (Remaining)
+                    if final_issues:
+                        ftxt.write("=" * 80 + "\n")
+                        ftxt.write("REMAINING ISSUES (After Refinement)\n")
+                        ftxt.write("=" * 80 + "\n")
+                        for issue in final_issues:
+                            sev = issue.get("severity", "unknown")
+                            path = issue.get("field_path", "")
+                            desc = issue.get("description", "")
+                            sev_icon = "🔴" if sev == "critical" else ("🟡" if sev == "major" else "🔵")
+                            ftxt.write(f"  {sev_icon} [{sev.upper()}] {path}\n")
+                            ftxt.write(f"     {desc[:150]}{'...' if len(desc) > 150 else ''}\n")
+                        ftxt.write("\n")
+
+                    # Auto Fixes Section
+                    if review_fixes:
+                        ftxt.write("=" * 80 + "\n")
+                        ftxt.write("AUTO FIXES (Rule-Based)\n")
+                        ftxt.write("=" * 80 + "\n")
+                        for fx in review_fixes:
+                            path = fx.get("path", "")
+                            before = fx.get("before", "")
+                            after = fx.get("after", "")
+                            reason = fx.get("reason", "")
+                            ftxt.write(f"  ⚙️  {path}\n")
+                            ftxt.write(f"     Before: {before}\n")
+                            ftxt.write(f"     After:  {after}\n")
+                            ftxt.write(f"     Reason: {reason}\n")
+                        ftxt.write("\n")
+
+                    # Source Text Section
+                    ftxt.write("=" * 80 + "\n")
+                    ftxt.write("SOURCE TEXT\n")
+                    ftxt.write("=" * 80 + "\n")
+                    ftxt.write(src + "\n\n")
+
+                    # Extracted JSON Section
+                    ftxt.write("=" * 80 + "\n")
+                    ftxt.write("EXTRACTED JSON\n")
+                    ftxt.write("=" * 80 + "\n")
                     if parsed is not None:
                         ftxt.write(json.dumps(parsed, ensure_ascii=False, indent=2))
                     else:
                         ftxt.write((ehr_content or "").strip())
+                    ftxt.write("\n")
 
             pbar.update(1)
 

@@ -23,7 +23,7 @@ echo "[STEP 1] Running EHR Structurer..."
 python ehr_structurer.py \
   --input "$INPUT_FILE" \
   --output "$OUTPUT_EHR" \
-  --deployment gpt-5-mini \
+  --deployment gpt-5.1 \
   --prompts "$PROMPTS_FILE" \
   --txt-dir "$TXT_DIR" \
   --provider azure
