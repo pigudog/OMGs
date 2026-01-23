@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MDT Report</title>
+  <style>
+    :root {
+      --border: #e5e7eb;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --card: #ffffff;
+      --soft: #f7f7f8;
+      --accent: #2563eb;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; background: var(--bg); }
+    h1 { font-size: 20px; margin: 0 0 12px 0; }
+    h2 { font-size: 16px; margin: 0 0 10px 0; }
+    h3 { font-size: 14px; margin: 10px 0 6px 0; }
+    .meta { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .card { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: var(--card); }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; background: var(--card); }
+    summary { cursor: pointer; font-weight: 600; }
+    pre { white-space: pre-wrap; word-wrap: break-word; background: var(--soft); padding: 12px; border-radius: 10px; overflow-x: auto; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .mt { margin-top: 12px; }
+    .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+    .warn { color: #b45309; font-weight: 600; }
+    table.grid { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.grid th, table.grid td { border: 1px solid var(--border); padding: 8px; vertical-align: top; }
+    table.grid th { background: #f3f4f6; text-align: left; }
+    /* References section styling */
+    .refs-section { border: 1px solid var(--border); border-radius: 12px; padding: 16px; background: var(--card); }
+    .refs-title { font-size: 16px; font-weight: 700; color: #1f2937; margin: 0 0 16px 0; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+    .ref-category { margin-bottom: 16px; }
+    .ref-cat-header { font-size: 14px; font-weight: 600; color: #374151; margin-bottom: 10px; padding: 6px 10px; background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); border-radius: 6px; }
+    .ref-entry { margin-bottom: 10px; padding: 10px 12px; background: #fafafa; border-radius: 8px; border-left: 3px solid var(--accent); }
+    .ref-tag { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 6px; word-break: break-all; }
+    .ref-details { font-size: 13px; color: #4b5563; line-height: 1.6; }
+    .ref-detail-line { margin-bottom: 2px; }
+    /* Category-specific colors */
+    .ref-guidelines .ref-entry { border-left-color: #059669; }
+    .ref-guidelines .ref-tag { color: #059669; }
+    .ref-literature .ref-entry { border-left-color: #7c3aed; }
+    .ref-literature .ref-tag { color: #7c3aed; }
+    .ref-clinical-trials .ref-entry { border-left-color: #dc2626; }
+    .ref-clinical-trials .ref-tag { color: #dc2626; }
+    .ref-clinical-reports .ref-entry { border-left-color: #d97706; }
+    .ref-clinical-reports .ref-tag { color: #d97706; }
+    /* Mermaid chart styling */
+    .mermaid-container { border-color: #10b981; }
+    .mermaid-container > summary { color: #059669; }
+    .mermaid-chart { padding: 16px; background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border-radius: 10px; margin-top: 10px; overflow-x: auto; }
+    .mermaid-chart svg { max-width: 100%; height: auto; }
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --border: #374151;
+        --muted: #9ca3af;
+        --bg: #111827;
+        --card: #1f2937;
+        --soft: #374151;
+        --accent: #60a5fa;
+      }
+      body { color: #f3f4f6; }
+      h1, h2, h3 { color: #f9fafb; }
+      table.grid th { background: #374151; color: #f3f4f6; }
+      .refs-title { color: #f9fafb; }
+      .ref-cat-header { background: linear-gradient(135deg, #374151 0%, #4b5563 100%); color: #f3f4f6; }
+      .ref-entry { background: #374151; }
+      .ref-details { color: #d1d5db; }
+      .mermaid-chart { background: linear-gradient(135deg, #1f2937 0%, #374151 100%); }
+      .stats-card { background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%) !important; border-color: #0ea5e9 !important; }
+      .stats-card h2 { color: #7dd3fc !important; }
+    }
+    /* Print button */
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; z-index: 1000;
+      padding: 10px 18px; cursor: pointer;
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: white; border: none; border-radius: 8px;
+      font-size: 14px; font-weight: 600;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+      transition: all 0.2s ease;
+    }
+    .print-btn:hover { background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4); }
+    .print-btn:active { transform: translateY(0); }
+    /* Print-friendly styles */
+    @media print {
+      body { margin: 0; background: white; }
+      .card, details { border: 1px solid #ccc; page-break-inside: avoid; }
+      details[open] > summary ~ * { display: block; }
+      .mermaid-chart { page-break-inside: avoid; }
+      .stats-card { background: #f0f9ff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .no-print { display: none !important; }
+    }
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      body { margin: 12px; }
+      .cols { grid-template-columns: 1fr; }
+      table.grid { font-size: 11px; }
+      table.grid th, table.grid td { padding: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <button onclick="window.print()" class="print-btn no-print">🖨️ Print Report</button>
+  <h1>OMGs / MDT Report</h1>
+  <div class='card stats-card' style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #0ea5e9; margin-bottom: 16px;'>
+<h2 style='margin-top: 0; color: #0369a1;'>📊 Pipeline Execution Statistics</h2>
+<div style='margin-bottom: 12px;'>
+<strong>🎯 Mode:</strong> <code style='background: #e0f2fe; padding: 2px 8px; border-radius: 4px; font-weight: 600;'>chair_sa_k</code>
+</div>
+<div style='margin-bottom: 12px;'>
+<strong>⏱️ Total Execution Time:</strong> 34.0 seconds (34秒)
+</div>
+<div style='margin-bottom: 12px;'>
+<strong>🔢 Total Tokens:</strong>
+<ul style='margin: 6px 0 0 20px; padding: 0;'>
+<li>Input: 10,865</li>
+<li>Output: 1,168</li>
+<li>Total: 12,033</li>
+</ul>
+</div>
+<div style='margin-bottom: 8px;'>
+<strong>🤖 Models Used:</strong>
+<ul style='margin: 6px 0 0 20px; padding: 0;'>
+<li style='margin-bottom: 6px;'>
+<strong>gpt-5.1 (Azure)</strong>: 
+3 calls, 
+12,033 tokens 
+(10,865 in / 1,168 out)
+</li>
+</ul>
+</div>
+</div>
+  <div class="meta">
+    <div><b>Timestamp</b>: 2026-01-22_18-32-56</div>
+  </div>
+
+  <div class="cols mt">
+    <div class="card">
+      <h2>Final MDT Output</h2>
+      <pre>Final Assessment:
+Post–primary surgery, adjuvant platinum, now on first‑line PARP maintenance with HRD‑positive disease, ECOG 1, no radiologic recurrence. Major concern is recurrent severe thrombocytopenia temporally related to maintenance. Missing: up‑to‑date CBC, renal/hepatic function, CA‑125, BRCA1/2 status, detailed current PARP dose/schedule, and full report of the “low‑density liver lesion.”
+
+Core Treatment Strategy:
+- Continue first‑line PARP maintenance in principle, but urgently reassess dose/intensity given recurrent severe thrombocytopenia. [@guideline:esmo_cpg_epithelialovarian_2023__v00000000 | Page 8; @pubmed | 40687421]  
+- Obtain immediate CBC, coagulation, renal/hepatic function, CA‑125, and characterize liver lesion with dedicated imaging before firm long‑term decisions.  
+- Schedule structured surveillance: symptom review, exam, CA‑125, and cross‑sectional imaging every 3–6 months while on maintenance. [@guideline:esgo_esmo_esp_consensus_ovariancancer_2024__v00000000 | Page 10]  
+
+Change Triggers:
+- If platelets remain &lt;50×10⁹/L or other grade ≥3 cytopenias, hold/modify or discontinue PARP and involve hematology. [@pubmed | 40687421]  
+- If imaging or CA‑125 indicates first recurrence, re‑stage fully and pivot to recurrence strategy with platinum‑based systemic therapy consideration. [@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 15]</pre>
+<div class='refs-section mt'>
+<h3 class='refs-title'>References</h3>
+<div class='ref-category ref-guidelines'>
+<div class='ref-cat-header'>📋 Guidelines</div>
+<div class='ref-entry'>
+<div class='ref-tag'>[@guideline:esmo_cpg_epithelialovarian_2023__v00000000 | Page 8]</div>
+<div class='ref-details'>
+<div class='ref-detail-line'>Document: esmo_cpg_epithelialovarian_2023__v00000000, Page 8</div>
+<div class='ref-detail-line'>Content: MCBS v1.1 score: 4; ESMO Scale for Clinical Actionabil-</div>
+<div class='ref-detail-line'>ity...</div>
+</div>
+</div>
+<div class='ref-entry'>
+<div class='ref-tag'>[@guideline:esgo_esmo_esp_consensus_ovariancancer_2024__v00000000 | Page 10]</div>
+<div class='ref-details'>
+<div class='ref-detail-line'>Document: esgo_esmo_esp_consensus_ovariancancer_2024__v00000000, Page 10</div>
+<div class='ref-detail-line'>Content: platinum-based ChT followed by niraparib or rucaparib if</div>
+<div class='ref-detail-line'>in...</div>
+</div>
+</div>
+<div class='ref-entry'>
+<div class='ref-tag'>[@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 15]</div>
+<div class='ref-details'>
+<div class='ref-detail-line'>Document: nccn_ovariancancer_v3_2025__v00000000, Page 15</div>
+<div class='ref-detail-line'>Content: and/or disease status.</div>
+<div class='ref-detail-line'>ii Ancillary Palliative Surgical...</div>
+</div>
+</div>
+</div>
+<div class='ref-category ref-literature'>
+<div class='ref-cat-header'>📚 Literature</div>
+<div class='ref-entry'>
+<div class='ref-tag'>[@pubmed | 40687421]</div>
+<div class='ref-details'>
+<div class='ref-detail-line'>PMID: 40687421 | Front Oncol | 2025-01-01</div>
+<div class='ref-detail-line'>Title: Severe thrombocytopenia induced by niraparib in ovarian cancer patients: a case report and literature review.</div>
+<div class='ref-detail-line'>DOI: 10.3389/fonc.2025.1542646</div>
+</div>
+</div>
+</div>
+<div class='ref-category ref-clinical-trials'>
+<div class='ref-cat-header'>🔬 Clinical Trials</div>
+</div>
+<div class='ref-category ref-clinical-reports'>
+<div class='ref-cat-header'>📄 Clinical Reports</div>
+</div>
+</div>
+    </div>
+    <div class="card">
+      <h2>Question (raw)</h2>
+      <div class="hint">Original user question for observability (passed from main via args.question_raw).</div>
+      <pre>卵巢癌：流调否认中高风险地区旅居史，否认体温异常等新冠肺炎症状。2021.08.26在全麻下行扩大性全子宫切除术+双附件切除术+盆腔肿块切除术+直肠乙状结肠部分切除术+乙状结肠造口术+大网膜切除术+盆腔淋巴结清扫术+阑尾切除术+腹主动脉旁淋巴结清扫术。术后病理：标本类型:扩大子宫+双附件+巨大盆块+部分直乙结肠+盆腹腔多病灶肿瘤大小:左侧：3.5×2×1.5cm；右侧：6×5.5×4.5cm肿瘤侧别:双侧病理类型:腺癌，结合免疫组化结果（I2021-07819），符合高级别浆液性癌。其他部位情况:左输卵管:见癌累及右输卵管:见癌累及子宫内膜:萎缩改变宫颈:慢性炎子宫肌层:见癌累及；肌壁间平滑肌瘤（多枚，直径0.5-2cm）盆腹腔多部位病灶:（部分直乙结肠）见癌累及，自浆膜层浸润至浅肌层，肠管两切缘未见癌累及。（大网膜、大网膜及盆腔肿块、左侧结肠旁沟腹膜、小肠系膜肿瘤、乙状结肠系膜肿瘤）见癌累及.（阑尾及周围肿块） 浆膜层见癌累及。其他:送检淋巴结（6/24）见癌转移，其中：左盆腔淋巴结（1/4）；右盆腔淋巴结（3/8）；腹主肠系膜下方淋巴结（1/4）； 肠系膜下动脉上方淋巴结（1/2）；腹主动脉旁淋巴结（0/6） .
+2021.09.06、09.07予顺铂50mg腹腔化疗、2021.10.18起行TP化疗6程，末次化疗2022.3.22我院基因检测结果：HRD(+)服用尼拉帕利1周，诉反应大，自2022.4.26开始停药。2022.4.18血常规：PLT:33今日血常规：PLT:342022.5.23起恢复尼拉帕利1#qd。
+目前反应可。2022.6.24至中山医院行腹壁疝修补术。因手术尼拉帕利停药3周。目前继续口服尼拉帕利中。诉最近腹痛几次，腹胀明显。CT（2022.09.27）：右上肺动静脉瘘可能同前，请结合临床及专项检查。右上肺尖段小结节同前，左上肺散在小微小结节，随访。两侧胸腔内少量积液较前吸收；双肺散在慢性炎症及纤维，肺叶不张较前好转。右侧心膈角处结节较前不明显。甲状腺及腹部情况请结合相关检查。
+CT（2022.10.08）：肝右叶VII段血管瘤同前。左肾囊肿同前。腰椎局部骨质不均匀致密同前，随访。胸部情况请结合相关检查。
+MR（2022.10.25）：卵巢癌术后，目前盆腔未见异常软组织影，请随访。最近复查报告好。2022.12.30中山医院：切口疝，肝右叶低密度灶。血常规、肝肾功能一般可; ECOG=1</pre>
+
+      <details class="mt">
+        <summary>Case (Structured JSON)</summary>
+        <pre>{&quot;CASE_CORE&quot;:{&quot;ADJUVANT_TREATMENT&quot;:{&quot;cycles_or_courses&quot;:&quot;6&quot;,&quot;given&quot;:&quot;Yes&quot;,&quot;regimens&quot;:[&quot;TP&quot;]},&quot;BIOMARKERS&quot;:{&quot;AFP&quot;:&quot;Unknown&quot;,&quot;CA125&quot;:&quot;Unknown&quot;,&quot;HER2&quot;:&quot;Unknown&quot;,&quot;MSI&quot;:&quot;Unknown&quot;,&quot;PDL1_CPS&quot;:&quot;Unknown&quot;,&quot;TMB&quot;:&quot;Unknown&quot;},&quot;BRCA1&quot;:&quot;Unknown&quot;,&quot;BRCA2&quot;:&quot;Unknown&quot;,&quot;CURRENT_STATUS&quot;:&quot;On maintenance niraparib; ECOG 1; recent imaging without pelvic recurrence.&quot;,&quot;DIAGNOSIS&quot;:{&quot;components&quot;:[&quot;Adenocarcinoma&quot;,&quot;High-grade serous carcinoma&quot;],&quot;histology&quot;:&quot;High-grade serous carcinoma&quot;,&quot;laterality&quot;:&quot;Bilateral&quot;,&quot;primary&quot;:&quot;Ovarian cancer&quot;,&quot;site&quot;:&quot;Ovary&quot;},&quot;ECOG&quot;:&quot;1&quot;,&quot;GENOMICS&quot;:{&quot;HRD_STATUS&quot;:{&quot;method&quot;:&quot;Unknown&quot;,&quot;result&quot;:&quot;Positive&quot;,&quot;score&quot;:&quot;Unknown&quot;},&quot;alterations&quot;:[],&quot;testing_date&quot;:&quot;Unknown&quot;,&quot;testing_performed&quot;:&quot;Yes&quot;,&quot;testing_platform&quot;:&quot;Unknown&quot;},&quot;HRD&quot;:&quot;Positive&quot;,&quot;INITIAL_TREATMENT&quot;:&quot;Yes&quot;,&quot;LINE_OF_THERAPY&quot;:[{&quot;concurrent_bevacizumab&quot;:&quot;No&quot;,&quot;cycles_completed&quot;:&quot;1&quot;,&quot;cycles_planned&quot;:&quot;Unknown&quot;,&quot;discontinuation&quot;:{&quot;detail&quot;:&quot;Switched to TP chemotherapy&quot;,&quot;reason&quot;:&quot;Other&quot;},&quot;end_date&quot;:&quot;2021-09-07&quot;,&quot;in_clinical_trial&quot;:&quot;No&quot;,&quot;intent&quot;:&quot;First_line&quot;,&quot;line&quot;:&quot;1L&quot;,&quot;pfs_days&quot;:&quot;41&quot;,&quot;regimen&quot;:&quot;顺铂50mg腹腔化疗&quot;,&quot;response_assessment&quot;:{&quot;best_response&quot;:&quot;Unknown&quot;,&quot;ca125_response&quot;:&quot;Unknown&quot;,&quot;response_criteria&quot;:&quot;Unknown&quot;,&quot;response_date&quot;:&quot;Unknown&quot;},&quot;start_date&quot;:&quot;2021-09-06&quot;},{&quot;concurrent_bevacizumab&quot;:&quot;No&quot;,&quot;cycles_completed&quot;:&quot;6&quot;,&quot;cycles_planned&quot;:&quot;6&quot;,&quot;discontinuation&quot;:{&quot;detail&quot;:&quot;Completed 6 cycles&quot;,&quot;reason&quot;:&quot;Completed&quot;},&quot;end_date&quot;:&quot;2022-03-22&quot;,&quot;in_clinical_trial&quot;:&quot;No&quot;,&quot;intent&quot;:&quot;First_line&quot;,&quot;line&quot;:&quot;1L&quot;,&quot;pfs_days&quot;:&quot;Unknown&quot;,&quot;regimen&quot;:&quot;TP&quot;,&quot;response_assessment&quot;:{&quot;best_response&quot;:&quot;Unknown&quot;,&quot;ca125_response&quot;:&quot;Unknown&quot;,&quot;response_criteria&quot;:&quot;Unknown&quot;,&quot;response_date&quot;:&quot;Unknown&quot;},&quot;start_date&quot;:&quot;2021-10-18&quot;},{&quot;concurrent_bevacizumab&quot;:&quot;No&quot;,&quot;cycles_completed&quot;:&quot;Unknown&quot;,&quot;cycles_planned&quot;:&quot;Unknown&quot;,&quot;discontinuation&quot;:{&quot;detail&quot;:&quot;Temporarily stopped due to adverse reactions and low platelets; restarted 2022-05-23; held 3 weeks around hernia repair; currently continuing&quot;,&quot;reason&quot;:&quot;Other&quot;},&quot;end_date&quot;:&quot;Unknown&quot;,&quot;in_clinical_trial&quot;:&quot;No&quot;,&quot;intent&quot;:&quot;Maintenance&quot;,&quot;line&quot;:&quot;1L&quot;,&quot;pfs_days&quot;:&quot;Unknown&quot;,&quot;regimen&quot;:&quot;尼拉帕利&quot;,&quot;response_assessment&quot;:{&quot;best_response&quot;:&quot;Unknown&quot;,&quot;ca125_response&quot;:&quot;Unknown&quot;,&quot;response_criteria&quot;:&quot;Unknown&quot;,&quot;response_date&quot;:&quot;Unknown&quot;},&quot;start_date&quot;:&quot;2022-04-Unknown&quot;}],&quot;MAINTENANCE&quot;:&quot;Yes&quot;,&quot;MAINTENANCE_DETAIL&quot;:{&quot;end_date&quot;:&quot;Unknown&quot;,&quot;given&quot;:&quot;Yes&quot;,&quot;regimens&quot;:[&quot;尼拉帕利&quot;],&quot;start_date&quot;:&quot;2022-04-Unknown&quot;},&quot;NEOADJUVANT&quot;:&quot;Unknown&quot;,&quot;PFI_days&quot;:&quot;Unknown&quot;,&quot;PLATINUM_HISTORY&quot;:[{&quot;PFI_days&quot;:&quot;Unknown&quot;,&quot;end_date&quot;:&quot;2022-03-22&quot;,&quot;evidence&quot;:&quot;TP chemotherapy 6 cycles after primary surgery; no explicit relapse documented.&quot;,&quot;evidence_type&quot;:&quot;Unknown&quot;,&quot;first_relapse_date&quot;:&quot;Unknown&quot;,&quot;line&quot;:&quot;1L&quot;,&quot;start_date&quot;:&quot;2021-10-18&quot;,&quot;status&quot;:&quot;Unknown&quot;}],&quot;PLATINUM_PFI_CURRENT&quot;:&quot;Unknown&quot;,&quot;PLATINUM_STATUS&quot;:&quot;Unknown&quot;,&quot;PLATINUM_STATUS_CURRENT&quot;:&quot;Unknown&quot;,&quot;RELAPSE&quot;:&quot;No&quot;,&quot;RELAPSE_DATE&quot;:{&quot;date&quot;:&quot;Unknown&quot;,&quot;evidence&quot;:&quot;No relapse; pelvic MRI 2022-10-25 showed no abnormal soft tissue in pelvis.&quot;,&quot;type&quot;:&quot;Unknown&quot;},&quot;SCENE&quot;:&quot;Maintenance_surveillance_followup&quot;,&quot;STAGE&quot;:{&quot;stage_basis&quot;:&quot;Unknown&quot;,&quot;stage_system&quot;:&quot;Unknown&quot;,&quot;stage_text&quot;:&quot;Unknown&quot;},&quot;SURGERY_DONE&quot;:{&quot;date&quot;:&quot;2021-08-26&quot;,&quot;performed&quot;:&quot;Yes&quot;,&quot;procedure&quot;:&quot;Radical hysterectomy with bilateral salpingo-oophorectomy, pelvic mass resection, partial rectosigmoid resection, sigmoid colostomy, omentectomy, pelvic lymphadenectomy, appendectomy, paraaortic lymphadenectomy&quot;},&quot;TIMELINE&quot;:{&quot;constraints&quot;:{&quot;max_events&quot;:30,&quot;min_events&quot;:3,&quot;must_include&quot;:[&quot;first diagnostic imaging or pathology confirmation (if available)&quot;],&quot;ordering_rules&quot;:{&quot;prioritize_last_event&quot;:true}},&quot;events&quot;:[{&quot;date&quot;:&quot;2021-08-26&quot;,&quot;description&quot;:&quot;Primary cytoreductive surgery including radical hysterectomy, bilateral salpingo-oophorectomy, bowel resection, omentectomy, lymphadenectomy, colostomy, appendectomy&quot;,&quot;event_type&quot;:&quot;Surgery&quot;,&quot;key_result&quot;:&quot;Multiple peritoneal sites and 6/24 lymph nodes positive for carcinoma&quot;,&quot;regimen_or_test&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2021-08-26&quot;,&quot;description&quot;:&quot;Pathology confirmed high-grade serous carcinoma of bilateral ovaries with widespread peritoneal involvement and nodal metastases&quot;,&quot;event_type&quot;:&quot;Diagnosis&quot;,&quot;key_result&quot;:&quot;High-grade serous carcinoma, bilateral ovaries; 6/24 lymph nodes positive&quot;,&quot;regimen_or_test&quot;:&quot;Pathology&quot;},{&quot;date&quot;:&quot;2021-09-06&quot;,&quot;description&quot;:&quot;Intraperitoneal chemotherapy with cisplatin 50mg&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Completed over 2021-09-06 and 2021-09-07&quot;,&quot;regimen_or_test&quot;:&quot;顺铂50mg腹腔化疗&quot;},{&quot;date&quot;:&quot;2021-10-18&quot;,&quot;description&quot;:&quot;Started TP chemotherapy, planned 6 cycles&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Completed 6 cycles, last on 2022-03-22&quot;,&quot;regimen_or_test&quot;:&quot;TP&quot;},{&quot;date&quot;:&quot;2022-03-22&quot;,&quot;description&quot;:&quot;Last cycle of TP chemotherapy&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Adjuvant chemotherapy completed&quot;,&quot;regimen_or_test&quot;:&quot;TP&quot;},{&quot;date&quot;:&quot;2022-04-18&quot;,&quot;description&quot;:&quot;Complete blood count showing thrombocytopenia&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;PLT:33&quot;,&quot;regimen_or_test&quot;:&quot;Blood routine&quot;},{&quot;date&quot;:&quot;2022-04-26&quot;,&quot;description&quot;:&quot;Stopped niraparib due to strong adverse reactions&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;Maintenance paused&quot;,&quot;regimen_or_test&quot;:&quot;尼拉帕利&quot;},{&quot;date&quot;:&quot;2022-05-23&quot;,&quot;description&quot;:&quot;Restarted niraparib 1# qd&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Maintenance resumed&quot;,&quot;regimen_or_test&quot;:&quot;尼拉帕利&quot;},{&quot;date&quot;:&quot;2022-06-24&quot;,&quot;description&quot;:&quot;Abdominal wall hernia repair at Zhongshan Hospital&quot;,&quot;event_type&quot;:&quot;Surgery&quot;,&quot;key_result&quot;:&quot;Niraparib held for 3 weeks around surgery&quot;,&quot;regimen_or_test&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2022-09-27&quot;,&quot;description&quot;:&quot;CT chest/abdomen showing small bilateral pleural effusions improved; pulmonary AV fistula and nodules similar to prior&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;No new malignant findings reported; abdominal details deferred&quot;,&quot;regimen_or_test&quot;:&quot;CT&quot;},{&quot;date&quot;:&quot;2022-10-08&quot;,&quot;description&quot;:&quot;CT showing liver segment VII hemangioma and left renal cyst, stable&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;No new findings; chest to correlate with other exams&quot;,&quot;regimen_or_test&quot;:&quot;CT&quot;},{&quot;date&quot;:&quot;2022-10-25&quot;,&quot;description&quot;:&quot;Pelvic MRI after ovarian cancer surgery&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;No abnormal soft tissue in pelvis; follow-up recommended&quot;,&quot;regimen_or_test&quot;:&quot;MR&quot;},{&quot;date&quot;:&quot;2022-12-30&quot;,&quot;description&quot;:&quot;Zhongshan Hospital evaluation: incisional hernia, low-density lesion in right liver lobe&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;Blood count and liver/kidney function generally acceptable&quot;,&quot;regimen_or_test&quot;:&quot;Imaging&quot;},{&quot;date&quot;:&quot;2023-01-09&quot;,&quot;description&quot;:&quot;Recent blood routine showed platelet count 34 (year not fully specified)&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;PLT:34 (interpreted from &#x27;PLT:342022.5.23起恢复&#x27;, year unclear)&quot;,&quot;regimen_or_test&quot;:&quot;Blood routine&quot;}]},&quot;VISIT_DATE&quot;:&quot;2023-01-09&quot;,&quot;first_relapse_date&quot;:&quot;Unknown&quot;,&quot;last_platinum_end_date&quot;:&quot;2022-03-22&quot;},&quot;CLINICAL_TRIALS&quot;:[],&quot;LAB_TRENDS&quot;:{&quot;labs&quot;:[{&quot;analyte&quot;:&quot;Other&quot;,&quot;history&quot;:[{&quot;date&quot;:&quot;2022-04-18&quot;,&quot;flag&quot;:&quot;↓&quot;,&quot;value&quot;:&quot;PLT:33&quot;}],&quot;latest&quot;:{&quot;date&quot;:&quot;2022-04-18&quot;,&quot;flag&quot;:&quot;↓&quot;,&quot;value&quot;:&quot;PLT:33&quot;},&quot;reference_range&quot;:&quot;Unknown&quot;,&quot;unit&quot;:&quot;Unknown&quot;}],&quot;milestones&quot;:[{&quot;date&quot;:&quot;2021-08-26&quot;,&quot;description&quot;:&quot;Primary debulking surgery for ovarian cancer&quot;,&quot;type&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2021-10-18&quot;,&quot;description&quot;:&quot;Started TP chemotherapy&quot;,&quot;type&quot;:&quot;ChemoStart&quot;},{&quot;date&quot;:&quot;2022-03-22&quot;,&quot;description&quot;:&quot;Completed TP chemotherapy&quot;,&quot;type&quot;:&quot;ChemoEnd&quot;},{&quot;date&quot;:&quot;2022-04-18&quot;,&quot;description&quot;:&quot;Thrombocytopenia (PLT 33) on blood routine&quot;,&quot;type&quot;:&quot;Other&quot;}]},&quot;MED_ONC&quot;:{&quot;current_regimen&quot;:{&quot;cycle_info&quot;:&quot;Continuous oral maintenance; temporarily stopped 2022-04-26 and around 2022-06-24 surgery; currently continuing&quot;,&quot;last_admin_date&quot;:&quot;Unknown&quot;,&quot;name&quot;:&quot;尼拉帕利&quot;},&quot;genetic_testing&quot;:{&quot;germline&quot;:[],&quot;somatic&quot;:[&quot;HRD&quot;]},&quot;monitoring_points&quot;:[{&quot;drug_or_class&quot;:&quot;尼拉帕利&quot;,&quot;monitoring&quot;:[&quot;Monitor platelet count due to prior thrombocytopenia&quot;]}],&quot;planned_next_regimen&quot;:&quot;Unknown&quot;,&quot;prior_systemic_therapies&quot;:[&quot;顺铂50mg腹腔化疗&quot;,&quot;TP&quot;]},&quot;NUC_MED&quot;:{&quot;studies&quot;:[]},&quot;PATHOLOGY&quot;:{&quot;specimens&quot;:[{&quot;components&quot;:[&quot;High-grade serous carcinoma&quot;,&quot;Myometrial leiomyomas&quot;,&quot;Chronic cervicitis&quot;],&quot;date&quot;:&quot;2021-08-26&quot;,&quot;diagnosis&quot;:&quot;Adenocarcinoma consistent with high-grade serous carcinoma&quot;,&quot;grade&quot;:&quot;High-grade&quot;,&quot;ihc&quot;:[],&quot;involvement_sites&quot;:[&quot;Left ovary&quot;,&quot;Right ovary&quot;,&quot;Left fallopian tube&quot;,&quot;Right fallopian tube&quot;,&quot;Uterine myometrium&quot;,&quot;Pelvic and abdominal peritoneum&quot;,&quot;Partial rectosigmoid colon from serosa to superficial muscle&quot;,&quot;Omentum&quot;,&quot;Left paracolic gutter peritoneum&quot;,&quot;Small bowel mesentery&quot;,&quot;Sigmoid mesentery&quot;,&quot;Appendiceal serosa&quot;,&quot;Pelvic lymph nodes&quot;,&quot;Para-aortic and mesenteric lymph nodes (some positive)&quot;],&quot;laterality&quot;:&quot;Bilateral ovarian involvement&quot;,&quot;molecular&quot;:[{&quot;result&quot;:&quot;Positive&quot;,&quot;test&quot;:&quot;HRD&quot;}],&quot;raw_text&quot;:&quot;术后病理：标本类型:扩大子宫+双附件+巨大盆块+部分直乙结肠+盆腹腔多病灶肿瘤大小:左侧：3.5×2×1.5cm；右侧：6×5.5×4.5cm肿瘤侧别:双侧病理类型:腺癌，结合免疫组化结果（I2021-07819），符合高级别浆液性癌。其他部位情况:左输卵管:见癌累及右输卵管:见癌累及子宫内膜:萎缩改变宫颈:慢性炎子宫肌层:见癌累及；肌壁间平滑肌瘤（多枚，直径0.5-2cm）盆腹腔多部位病灶:（部分直乙结肠）见癌累及，自浆膜层浸润至浅肌层，肠管两切缘未见癌累及。（大网膜、大网膜及盆腔肿块、左侧结肠旁沟腹膜、小肠系膜肿瘤、乙状结肠系膜肿瘤）见癌累及.（阑尾及周围肿块） 浆膜层见癌累及。其他:送检淋巴结（6/24）见癌转移，其中：左盆腔淋巴结（1/4）；右盆腔淋巴结（3/8）；腹主肠系膜下方淋巴结（1/4）； 肠系膜下动脉上方淋巴结（1/2）；腹主动脉旁淋巴结（0/6）。&quot;,&quot;sample_type&quot;:&quot;Surgical resection&quot;,&quot;site&quot;:&quot;Uterus, bilateral adnexa, pelvic mass, rectosigmoid colon, peritoneum, omentum, appendix, lymph nodes&quot;,&quot;tumor_size&quot;:&quot;Left ovary 3.5×2×1.5cm; right ovary 6×5.5×4.5cm&quot;,&quot;uncertainty_or_missing&quot;:[&quot;FIGO stage not provided&quot;,&quot;IHC panel details not provided&quot;]}]},&quot;RADIOLOGY&quot;:{&quot;next_imaging_plan&quot;:{&quot;modality&quot;:&quot;Unknown&quot;,&quot;timing&quot;:&quot;Unknown&quot;},&quot;studies&quot;:[{&quot;anatomic_sites&quot;:[&quot;Lung&quot;,&quot;Pleura&quot;,&quot;Chest&quot;],&quot;date&quot;:&quot;2022-09-27&quot;,&quot;findings&quot;:[&quot;Right upper lung arteriovenous fistula similar to prior&quot;,&quot;Right upper lung apical segment small nodule similar to prior&quot;,&quot;Left upper lung scattered tiny nodules&quot;,&quot;Small bilateral pleural effusions decreased compared with prior&quot;,&quot;Scattered chronic inflammatory and fibrotic changes in lungs&quot;,&quot;Atelectasis improved&quot;,&quot;Nodule at right cardiophrenic angle less apparent&quot;],&quot;impression&quot;:&quot;Pulmonary AV fistula and nodules unchanged; pleural effusions and atelectasis improved&quot;,&quot;modality&quot;:&quot;CT&quot;,&quot;trend_vs_prior&quot;:&quot;Improved&quot;},{&quot;anatomic_sites&quot;:[&quot;Liver&quot;,&quot;Kidney&quot;,&quot;Spine&quot;],&quot;date&quot;:&quot;2022-10-08&quot;,&quot;findings&quot;:[&quot;Hemangioma in liver right lobe segment VII similar to prior&quot;,&quot;Left renal cyst similar to prior&quot;,&quot;Localized uneven sclerotic change in lumbar vertebrae similar to prior&quot;],&quot;impression&quot;:&quot;Stable hemangioma and renal cyst; spinal sclerosis unchanged; chest findings to correlate with other exams&quot;,&quot;modality&quot;:&quot;CT&quot;,&quot;trend_vs_prior&quot;:&quot;Stable&quot;},{&quot;anatomic_sites&quot;:[&quot;Pelvis&quot;],&quot;date&quot;:&quot;2022-10-25&quot;,&quot;findings&quot;:[&quot;Postoperative changes after ovarian cancer surgery&quot;,&quot;No abnormal soft tissue mass in pelvis&quot;],&quot;impression&quot;:&quot;No pelvic recurrence; follow-up recommended&quot;,&quot;modality&quot;:&quot;MRI&quot;,&quot;trend_vs_prior&quot;:&quot;Stable&quot;}]},&quot;TIMELINE&quot;:{&quot;constraints&quot;:{&quot;max_events&quot;:30,&quot;min_events&quot;:3,&quot;must_include&quot;:[&quot;first diagnostic imaging or pathology confirmation (if available)&quot;],&quot;ordering_rules&quot;:{&quot;prioritize_last_event&quot;:true}},&quot;events&quot;:[{&quot;date&quot;:&quot;2021-08-26&quot;,&quot;description&quot;:&quot;Primary cytoreductive surgery including radical hysterectomy, bilateral salpingo-oophorectomy, bowel resection, omentectomy, lymphadenectomy, colostomy, appendectomy&quot;,&quot;event_type&quot;:&quot;Surgery&quot;,&quot;key_result&quot;:&quot;Multiple peritoneal sites and 6/24 lymph nodes positive for carcinoma&quot;,&quot;regimen_or_test&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2021-08-26&quot;,&quot;description&quot;:&quot;Pathology confirmed high-grade serous carcinoma of bilateral ovaries with widespread peritoneal involvement and nodal metastases&quot;,&quot;event_type&quot;:&quot;Diagnosis&quot;,&quot;key_result&quot;:&quot;High-grade serous carcinoma, bilateral ovaries; 6/24 lymph nodes positive&quot;,&quot;regimen_or_test&quot;:&quot;Pathology&quot;},{&quot;date&quot;:&quot;2021-09-06&quot;,&quot;description&quot;:&quot;Intraperitoneal chemotherapy with cisplatin 50mg&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Completed over 2021-09-06 and 2021-09-07&quot;,&quot;regimen_or_test&quot;:&quot;顺铂50mg腹腔化疗&quot;},{&quot;date&quot;:&quot;2021-10-18&quot;,&quot;description&quot;:&quot;Started TP chemotherapy, planned 6 cycles&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Completed 6 cycles, last on 2022-03-22&quot;,&quot;regimen_or_test&quot;:&quot;TP&quot;},{&quot;date&quot;:&quot;2022-03-22&quot;,&quot;description&quot;:&quot;Last cycle of TP chemotherapy&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Adjuvant chemotherapy completed&quot;,&quot;regimen_or_test&quot;:&quot;TP&quot;},{&quot;date&quot;:&quot;2022-04-18&quot;,&quot;description&quot;:&quot;Complete blood count showing thrombocytopenia&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;PLT:33&quot;,&quot;regimen_or_test&quot;:&quot;Blood routine&quot;},{&quot;date&quot;:&quot;2022-04-26&quot;,&quot;description&quot;:&quot;Stopped niraparib due to strong adverse reactions&quot;,&quot;event_type&quot;:&quot;Other&quot;,&quot;key_result&quot;:&quot;Maintenance paused&quot;,&quot;regimen_or_test&quot;:&quot;尼拉帕利&quot;},{&quot;date&quot;:&quot;2022-05-23&quot;,&quot;description&quot;:&quot;Restarted niraparib 1# qd&quot;,&quot;event_type&quot;:&quot;Chemo&quot;,&quot;key_result&quot;:&quot;Maintenance resumed&quot;,&quot;regimen_or_test&quot;:&quot;尼拉帕利&quot;},{&quot;date&quot;:&quot;2022-06-24&quot;,&quot;description&quot;:&quot;Abdominal wall hernia repair at Zhongshan Hospital&quot;,&quot;event_type&quot;:&quot;Surgery&quot;,&quot;key_result&quot;:&quot;Niraparib held for 3 weeks around surgery&quot;,&quot;regimen_or_test&quot;:&quot;Surgery&quot;},{&quot;date&quot;:&quot;2022-09-27&quot;,&quot;description&quot;:&quot;CT chest/abdomen showing small bilateral pleural effusions improved; pulmonary AV fistula and nodules similar to prior&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;No new malignant findings reported; abdominal details deferred&quot;,&quot;regimen_or_test&quot;:&quot;CT&quot;},{&quot;date&quot;:&quot;2022-10-08&quot;,&quot;description&quot;:&quot;CT showing liver segment VII hemangioma and left renal cyst, stable&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;No new findings; chest to correlate with other exams&quot;,&quot;regimen_or_test&quot;:&quot;CT&quot;},{&quot;date&quot;:&quot;2022-10-25&quot;,&quot;description&quot;:&quot;Pelvic MRI after ovarian cancer surgery&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;No abnormal soft tissue in pelvis; follow-up recommended&quot;,&quot;regimen_or_test&quot;:&quot;MR&quot;},{&quot;date&quot;:&quot;2022-12-30&quot;,&quot;description&quot;:&quot;Zhongshan Hospital evaluation: incisional hernia, low-density lesion in right liver lobe&quot;,&quot;event_type&quot;:&quot;Imaging&quot;,&quot;key_result&quot;:&quot;Blood count and liver/kidney function generally acceptable&quot;,&quot;regimen_or_test&quot;:&quot;Imaging&quot;},{&quot;date&quot;:&quot;2023-01-09&quot;,&quot;description&quot;:&quot;Recent blood routine showed platelet count 34 (year not fully specified)&quot;,&quot;event_type&quot;:&quot;Lab&quot;,&quot;key_result&quot;:&quot;PLT:34 (interpreted from &#x27;PLT:342022.5.23起恢复&#x27;, year unclear)&quot;,&quot;regimen_or_test&quot;:&quot;Blood routine&quot;}]},&quot;TOXICITIES&quot;:[{&quot;attribution&quot;:&quot;Probable&quot;,&quot;dose_modification&quot;:&quot;Yes&quot;,&quot;onset_date&quot;:&quot;2022-04-18&quot;,&quot;outcome&quot;:&quot;Resolved&quot;,&quot;related_line&quot;:&quot;1L&quot;,&quot;related_regimen&quot;:&quot;尼拉帕利&quot;,&quot;severity&quot;:&quot;Severe&quot;,&quot;toxicity&quot;:&quot;Strong adverse reaction to niraparib with thrombocytopenia (PLT 33)&quot;}]}</pre>
+      </details>
+    </div>
+  </div>
+
+  <details class="mt" open>
+    <summary>Clinical Trial Recommendation</summary>
+    <pre>None</pre>
+    <div class="hint">Shown only when the trial matcher produced a recommendation.</div>
+  </details>
+
+  <details class="mt" open>
+    <summary>📋 MDT Discussion Summary (Assistant)</summary>
+    <pre>(Chair-SA(K): Single agent mode - no MDT discussion)</pre>
+    <div class="hint">Structured summary of Key Knowledge, Controversies, Missing Info, and Working Plan.</div>
+  </details>
+
+  <details class="mt" open>
+    <summary>Expert Debate (Round × Turn)</summary>
+    <div class='warn'>No interaction log captured.</div>
+    <div class="hint">Only includes messages that were actually emitted (non-empty).</div>
+  </details>
+
+  <details class="mt">
+    <summary>Initial Expert Opinions (raw)</summary>
+    <pre>{
+  &quot;chair&quot;: &quot;(Single agent mode)&quot;
+}</pre>
+  </details>
+
+  <details class="mt">
+    <summary>Final Refined Plans (per round, raw)</summary>
+    <pre>{}</pre>
+  </details>
+
+  <details class="mt" open>
+    <summary>Selected Clinical Context</summary>
+    <div class='warn'>No selected reports.</div>
+    <div class="hint">Counts and newest dates per role/report type (including mutation).</div>
+    <details class="mt">
+      <summary>Raw Context (JSON)</summary>
+      <pre>{}</pre>
+    </details>
+  </details>
+
+  <details class="mt">
+    <summary>Guideline + PubMed RAG</summary>
+    <h3>RAG Query</h3>
+    <pre>HRD-positive high-grade serous ovarian carcinoma, platinum-sensitive, with prior extensive peritoneal and nodal metastases; on niraparib maintenance complicated by severe thrombocytopenia but otherwise acceptable organ function; histology: High-grade serous carcinoma</pre>
+    <h3>Evidence Pack (top-k)</h3>
+    <pre># GUIDELINE RAG
+RAG Evidence Pack (top=5):
+[1] score=0.6379 esgo_esmo_esp_consensus_ovariancancer_2024__v00000000 [PAGE 10] [@guideline:esgo_esmo_esp_consensus_ovariancancer_2024__v00000000 | Page 10]
+    platinum-based ChT followed by niraparib or rucaparib if in CR/PR/NED [I, B]. Consensus: 97% (35) yes, 0% (0) no, 3% (1) abstain (36 voters) Recommendation 13.9: When used as maintenance in patients in CR/PR/NED to platinum-based ChT, olaparib (alone or in combination with bevacizumab) and rucaparib…
+[2] score=0.6320 esmo_cpg_epithelialovarian_2023__v00000000 [PAGE 8] [@guideline:esmo_cpg_epithelialovarian_2023__v00000000 | Page 8]
+    MCBS v1.1 score: 4; ESMO Scale for Clinical Actionabil- ity of molecular Targets (ESCAT) score: I-A], niraparib for 3 years [ESMO-MCBS v1.1 score: 3; ESCAT score: I-A] or olaparibebevacizumab for 2 years [ESMO- MCBS v1.1 score: 3; ESCAT score: I-A]. o For BRCA1/2-wt/HRD-positive: niraparib for 3 yea…
+[3] score=0.6243 nccn_ovariancancer_v3_2025__v00000000 [PAGE 15] [@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 15]
+    based chemotherapy,n preferred for first recurrence (category 1) or Recurrence therapyn,kk and/or Best supportive care (See NCCN Guidelines for Palliative Care) Consider secondary cytoreductive surgeryj,k Immediate platinum-based recurrence therapyn (category 2B) and/or Best supportive care (See NCC…
+[4] score=0.6239 nccn_ovariancancer_v3_2025__v00000000 [PAGE 15] [@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 15]
+    and/or disease status. ii Ancillary Palliative Surgical Procedures (OV-A 4 of 4). kk Localized RT can be considered to palliate symptoms and/or for oligometastatic disease. ll PARPi options include niraparib, olaparib, or rucaparib in patients with BRCA-mutated platinum-sensitive disease who have co…
+[5] score=0.6171 esmo_cpg_epithelialovarian_2023__v00000000 [PAGE 7] [@guideline:esmo_cpg_epithelialovarian_2023__v00000000 | Page 7]
+    A descriptive OS analysis of SOLO1 at 7-year follow-up60 and the ﬁnal OS analysis of PAOLA-161 have shown a beneﬁt in OS for olaparib in patients with BRCA1/2-mutated tu- mours and olaparibebevacizumab in patients with HRD- positive tumours regardless of BRCA1/2-mut status (see Supplementary Materia…
+
+# PUBMED RAG
+PUBMED Evidence Pack (top=5):
+[1] score=0.7641 PMID 40687421 [@pubmed | 40687421]
+    Severe thrombocytopenia induced by niraparib in ovarian cancer patients: a case report and literature review.
+    Ovarian cancer (OC) is a common gynecological malignancy, and poly (ADP-ribose) polymerase inhibitor (PARPi) maintenance therapy has significantly prolonged the survival of newly diagnosed or platinum-sensitive recurrent ovarian cancer patients, which has become a new treatment paradigm for ovarian …
+[2] score=0.7432 PMID 35359396 [@pubmed | 35359396]
+    Case Report: Niraparib-Related Pulmonary Embolism During the Treatment of
+    Niraparib, an oral, potent, highly selective poly (ADP-ribose) polymerase (PARP) inhibitor, has promising clinical benefit for maintenance treatment of patients with ovarian cancer in partial response to platinum-based chemotherapy, especially in patients with BRCA mutation. In publicly available ni…
+[3] score=0.7346 PMID 40777128 [@pubmed | 40777128]
+    Correction: Severe thrombocytopenia induced by niraparib in ovarian cancer patients: a case report and literature review.
+    [This corrects the article DOI: 10.3389/fonc.2025.1542646.].
+[4] score=0.6938 PMID 34938651 [@pubmed | 34938651]
+    Case Report: Niraparib as Maintenance Therapy in A Patient With Ovarian Carcinosarcoma.
+    Ovarian carcinosarcoma (OCS) is a rare, highly aggressive and rapidly progressing malignant tumor with an extremely poor prognosis. So far, due to the low incidence of OCS, there are no large-scale prospective studies exploring the standard care of OCS patients. There is no uniform and effective tre…
+[5] score=0.6838 PMID 33376347 [@pubmed | 33376347]
+    Niraparib as Maintenance Therapy in Germline ATM-mutated and Somatic
+    Brain metastases from epithelial ovarian cancer are very rare with an incidence of only 1-2.5%. Many therapeutic methods such as surgery, irradiation and chemotherapy do produce survival benefits, but the overall outcome remains unsatisfactory. The BRCA (breast cancer susceptibility gene) mutation s…</pre>
+    <h3>RAG Raw Hits (JSON)</h3>
+    <pre>[
+  {
+    &quot;rank&quot;: 1,
+    &quot;score&quot;: 0.6379285454750061,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;esgo_esmo_esp_consensus_ovariancancer_2024__v00000000&quot;,
+    &quot;page&quot;: 10,
+    &quot;text&quot;: &quot;platinum-based ChT followed by niraparib or rucaparib if\nin CR/PR/NED [I, B].\nConsensus: 97% (35) yes, 0% (0) no, 3% (1) abstain (36\nvoters)\nRecommendation 13.9: When used as maintenance in\npatients in CR/PR/NED to platinum-based ChT, olaparib\n(alone or in combination with bevacizumab) and rucaparib\nare recommended for 2 years, and niraparib is recom-\nmended for 3 years [I, A].\nConsensus: 97% (34) yes, 0% (0) no, 3% (1) abstain (35\nvoters)\n14. How should older/frail patients with tubo-ovarian\ncarcinoma be investigated and treated?\nOlder patients are under-represented in clinical trials due\nto their poor performance status (PS) and comorbidities,88\nand their outcomes are poorer.89 Geriatric assessment\ngathers information on functional, mental and nutritional\nstatus, emotional conditions and social support.90 Vulner-\nability scores have been validated in clinical trials.90,91\nSurgery, frequently carried out in an emergency context\nand in unspecialised centres, is often incomplete, with\nhigher\npost-operative\ncomplications.92\nChT\nmay\nbe\nunderutilised.93,94\nRecommendation 14.1: Patients should not be excluded\nfrom diagnostic procedures, clinical trials and speciﬁc&quot;
+  },
+  {
+    &quot;rank&quot;: 2,
+    &quot;score&quot;: 0.6319940090179443,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;esmo_cpg_epithelialovarian_2023__v00000000&quot;,
+    &quot;page&quot;: 8,
+    &quot;text&quot;: &quot;MCBS v1.1 score: 4; ESMO Scale for Clinical Actionabil-\nity of molecular Targets (ESCAT) score: I-A], niraparib\nfor 3 years [ESMO-MCBS v1.1 score: 3; ESCAT score:\nI-A] or olaparibebevacizumab for 2 years [ESMO-\nMCBS v1.1 score: 3; ESCAT score: I-A].\no For BRCA1/2-wt/HRD-positive: niraparib for 3 years\n[ESMO-MCBS v1.1 score: 3; ESCAT score: I-A] or\nolaparibebevacizumab for 2 years [ESMO-MCBS v1.1\nscore: 3; ESCAT score: I-A).\n\u0004 Maintenance treatment with either bevacizumab [I, A] or\nniraparib for 3 years [I, B; ESMO-MCBS v1.1 score: 3] can\nbe recommended for HRD-negative tumours, with the\nlatter\nfollowing\ncomplete\nor\npartial\nresponse\nto\nplatinumepaclitaxel ﬁrst-line ChT. The choice of treat-\nment should be based on disease and clinical character-\nistics of the patient.\n\u0004 Maintenance with anti-estrogen therapy after ﬁrst-line\nplatinum-based ChT can be considered in LGSC [IV, B].\nMANAGEMENT OF RECURRENT EOC\nPatient assessment\nUp to 70% of patients with stage III-IV high-grade ovarian\ncancer will relapse within 3 years. Relapse rates for early-\nstage ovarian cancer are much lower.\nSeveral factors need to be assessed when selecting a&quot;
+  },
+  {
+    &quot;rank&quot;: 3,
+    &quot;score&quot;: 0.6243247985839844,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 15,
+    &quot;text&quot;: &quot;based chemotherapy,n\npreferred for first\nrecurrence (category 1)\nor\nRecurrence therapyn,kk\nand/or\nBest supportive care\n(See NCCN Guidelines\nfor Palliative Care)\nConsider\nsecondary\ncytoreductive\nsurgeryj,k\nImmediate platinum-based\nrecurrence therapyn (category 2B)\nand/or\nBest supportive care (See NCCN\nGuidelines for Palliative Care)\nRECURRENCE THERAPY FOR PLATINUM-SENSITIVE DISEASEn,gg,hh,ii\nMaintenance therapy (if PR or CR)\n• Useful in certain circumstances:\n\u0017Continue bevacizumab if previously\ntreated with chemotherapy +\nbevacizumab;\nor\n\u0017PARPi therapy (for those with BRCA\n1/2 mutation)ll:\n ◊If not previously used (category 1)\n ◊If disease has not progressed\nduring prior PARPi treatment\nor\nObserve\ngg Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.\nhh During and after treatment for recurrence, patients should be evaluated as indicated with\ntumor markers and repeat imaging (with modalities previously used) to document response\nand/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\nkk Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.&quot;
+  },
+  {
+    &quot;rank&quot;: 4,
+    &quot;score&quot;: 0.6238834261894226,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;nccn_ovariancancer_v3_2025__v00000000&quot;,
+    &quot;page&quot;: 15,
+    &quot;text&quot;: &quot;and/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\nkk Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.\nll PARPi options include niraparib, olaparib, or rucaparib in patients with BRCA-mutated\nplatinum-sensitive disease who have completed two or more lines of platinum-based\ntherapy. Based on FDA indication, niraparib is limited to those with a deleterious or\nsuspected deleterious germline BRCA mutation. Based on FDA indications, olaparib and\nrucaparib are limited to those with a deleterious or suspected deleterious BRCA mutation\n(germline or somatic). Caution should be used when using maintenance PARPi for longer\nthan 24 months. There are limited data on the use of a maintenance PARPi in patients who\npreviously received a PARPi. Combination bevacizumab/PARPi is not recommended for\nmaintenance after recurrence therapy.\nMonitoring/\nFollow-up\n(OV-6)\nDelay treatment until\nradiographic and/or clinical\nrelapse\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.&quot;
+  },
+  {
+    &quot;rank&quot;: 5,
+    &quot;score&quot;: 0.6171013712882996,
+    &quot;source&quot;: &quot;guideline&quot;,
+    &quot;doc_id&quot;: &quot;esmo_cpg_epithelialovarian_2023__v00000000&quot;,
+    &quot;page&quot;: 7,
+    &quot;text&quot;: &quot;A descriptive OS analysis of SOLO1 at 7-year follow-up60\nand the ﬁnal OS analysis of PAOLA-161 have shown a beneﬁt\nin OS for olaparib in patients with BRCA1/2-mutated tu-\nmours and olaparibebevacizumab in patients with HRD-\npositive tumours regardless of BRCA1/2-mut status (see\nSupplementary Material Section 3, available at https://doi.\norg/10.1016/j.annonc.2023.07.011).\nNon-high-grade serous advanced ovarian cancer. Pacli-\ntaxelecarboplatin is the standard systemic ChT used in\nLGSC, CCC and MC. Multiple retrospective studies, however,\nshowed lower response rates in these histotypes compared\nwith HGSC.62-64 Bevacizumab has shown activity in all his-\ntotypes including those less chemoresponsive, e.g. LGSC or\nCCC.49 The majority of LGSCs have high expression of es-\ntrogen receptor (ER) and progesterone receptor (PgR);\nretrospective studies suggest a possible therapeutic value of\nhormone therapy in the maintenance of newly diagnosed\nadvanced LGSC.65 This intervention is currently under\nevaluation in a prospective RCT (NCT04095364).\nRecommendations\n\u0004 Patients with advanced EOC should be evaluated for PCS\nby a specialised team, with the aim of achieving&quot;
+  },
+  {
+    &quot;rank&quot;: 1,
+    &quot;score&quot;: 0.7640884737462115,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;40687421&quot;,
+    &quot;title&quot;: &quot;Severe thrombocytopenia induced by niraparib in ovarian cancer patients: a case report and literature review.&quot;,
+    &quot;abstract&quot;: &quot;Ovarian cancer (OC) is a common gynecological malignancy, and poly (ADP-ribose) polymerase inhibitor (PARPi) maintenance therapy has significantly prolonged the survival of newly diagnosed or platinum-sensitive recurrent ovarian cancer patients, which has become a new treatment paradigm for ovarian cancer. Niraparib is a widely used PARP inhibitor in the clinical setting, and its adverse effects are also a major concern. The common adverse reactions of Niraparib mainly include various hematological adverse reactions (such as thrombocytopenia and anemia), gastrointestinal adverse reactions (such as nausea and vomiting), and fatigue. In previous related reports, thrombocytopenia has been mentioned multiple times, a relatively common adverse reaction of Niraparib. However, there have been no reports of irreversible and persistent thrombocytopenia. This case report describes a 59-year-old woman who developed persistent thrombocytopenia 11 months after adjuvant chemotherapy for stage IIIC high-grade serous ovarian cancer. Despite various treatment measures, the patient&#x27;s platelet count continues to fluctuate and remains low. This is a severe thrombocytopenia that may rare adverse reaction caused by Niraparib. This article adds important information to the scientific literature on potential serious adverse reactions in long-term treatment with Niraparib. It emphasizes the necessity of closely monitoring platelet counts during Niraparib treatment.&quot;,
+    &quot;journal&quot;: &quot;Front Oncol&quot;,
+    &quot;pub_date&quot;: &quot;2025-01-01&quot;,
+    &quot;doi&quot;: &quot;10.3389/fonc.2025.1542646&quot;,
+    &quot;impact_factor&quot;: 3.3,
+    &quot;similarity&quot;: 0.7640884737462115
+  },
+  {
+    &quot;rank&quot;: 2,
+    &quot;score&quot;: 0.7431944447012304,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;35359396&quot;,
+    &quot;title&quot;: &quot;Case Report: Niraparib-Related Pulmonary Embolism During the Treatment of&quot;,
+    &quot;abstract&quot;: &quot;Niraparib, an oral, potent, highly selective poly (ADP-ribose) polymerase (PARP) inhibitor, has promising clinical benefit for maintenance treatment of patients with ovarian cancer in partial response to platinum-based chemotherapy, especially in patients with BRCA mutation. In publicly available niraparib treatment-related adverse events, gastrointestinal disorders and hematological toxicities were most commonly reported with manageable safety profile. Herein, we first describe a severe and never-reported pulmonary embolism (PE) associated with the use of niraparib in a patient with BRCA mutation advanced high-grade serous ovarian cancer and received anticoagulant therapy after PE. There have been no reports of PE caused by the use of niraparib in patients with advanced high-grade serous ovarian cancer; knowledge of the occurrence of PE after the use of niraparib may assist other clinicians in managing this rare but potentially serious toxic effect.&quot;,
+    &quot;journal&quot;: &quot;Front Oncol&quot;,
+    &quot;pub_date&quot;: &quot;2022-01-01&quot;,
+    &quot;doi&quot;: &quot;10.3389/fonc.2022.853211&quot;,
+    &quot;impact_factor&quot;: 3.3,
+    &quot;similarity&quot;: 0.7431944447012304
+  },
+  {
+    &quot;rank&quot;: 3,
+    &quot;score&quot;: 0.7346260152933268,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;40777128&quot;,
+    &quot;title&quot;: &quot;Correction: Severe thrombocytopenia induced by niraparib in ovarian cancer patients: a case report and literature review.&quot;,
+    &quot;abstract&quot;: &quot;[This corrects the article DOI: 10.3389/fonc.2025.1542646.].&quot;,
+    &quot;journal&quot;: &quot;Front Oncol&quot;,
+    &quot;pub_date&quot;: &quot;2025-01-01&quot;,
+    &quot;doi&quot;: &quot;10.3389/fonc.2025.1661708&quot;,
+    &quot;impact_factor&quot;: 3.3,
+    &quot;similarity&quot;: 0.7346260152933268
+  },
+  {
+    &quot;rank&quot;: 4,
+    &quot;score&quot;: 0.6938286125519701,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;34938651&quot;,
+    &quot;title&quot;: &quot;Case Report: Niraparib as Maintenance Therapy in A Patient With Ovarian Carcinosarcoma.&quot;,
+    &quot;abstract&quot;: &quot;Ovarian carcinosarcoma (OCS) is a rare, highly aggressive and rapidly progressing malignant tumor with an extremely poor prognosis. So far, due to the low incidence of OCS, there are no large-scale prospective studies exploring the standard care of OCS patients. There is no uniform and effective treatment for OCS. Within the development of precision medicine, targeted therapies (such as PARP inhibitors) have been widely used in epithelial ovarian cancer and various other solid tumors. Here, we report a BRCAwt patient with advanced OCS who experienced a second and a third cytoreductive surgery in June 2017 and October 2019 and has been on niraparib maintenance therapy for more than 20 months after receiving second-line and third-line chemotherapy.&quot;,
+    &quot;journal&quot;: &quot;Front Oncol&quot;,
+    &quot;pub_date&quot;: &quot;2021-01-01&quot;,
+    &quot;doi&quot;: &quot;10.3389/fonc.2021.603591&quot;,
+    &quot;impact_factor&quot;: 3.3,
+    &quot;similarity&quot;: 0.6938286125519701
+  },
+  {
+    &quot;rank&quot;: 5,
+    &quot;score&quot;: 0.6837821443171651,
+    &quot;source&quot;: &quot;pubmed&quot;,
+    &quot;pmid&quot;: &quot;33376347&quot;,
+    &quot;title&quot;: &quot;Niraparib as Maintenance Therapy in Germline ATM-mutated and Somatic&quot;,
+    &quot;abstract&quot;: &quot;Brain metastases from epithelial ovarian cancer are very rare with an incidence of only 1-2.5%. Many therapeutic methods such as surgery, irradiation and chemotherapy do produce survival benefits, but the overall outcome remains unsatisfactory. The BRCA (breast cancer susceptibility gene) mutation status seems to be associated with the development of brain metastases from ovarian cancer and these patients may benefit from treatment with PARP (poly ADP ribose polymerase) inhibitors. Here is a case where a Chinese female patient diagnosed with high-grade serous ovarian cancer with brain metastases was detected to have known germline ATM mutation and somatic BRCA2 mutation. The patient underwent whole brain radiotherapy and systemic chemotherapy, commenced niraparib as maintenance treatment and then presented considerable clinical and radiological response.&quot;,
+    &quot;journal&quot;: &quot;Onco Targets Ther&quot;,
+    &quot;pub_date&quot;: &quot;2020-01-01&quot;,
+    &quot;doi&quot;: &quot;10.2147/OTT.S281302&quot;,
+    &quot;impact_factor&quot;: 2.8,
+    &quot;similarity&quot;: 0.6837821443171651
+  }
+]</pre>
+    <h3>Evidence Digest (1:1 per RAG result)</h3>
+    <pre>- Consider platinum-based chemotherapy followed by maintenance with a PARP inhibitor (niraparib or rucaparib) in patients achieving CR/PR/NED after platinum; olaparib (alone or with bevacizumab) and rucaparib are also recommended maintenance options in this setting. [1] [@guideline:esgo_esmo_esp_consensus_ovariancancer_2024__v00000000 | Page 10]
+
+- For BRCA1/2‑mutated or HRD‑positive disease responding to first‑line platinum chemotherapy, maintenance options include niraparib for 3 years, or olaparib ± bevacizumab for 2 years; selection should consider molecular profile and the ESMO-MCBS/ESCAT scores supporting these agents. [2] [@guideline:esmo_cpg_epithelialovarian_2023__v00000000 | Page 8]
+
+- At first recurrence, platinum-based chemotherapy is preferred for platinum-sensitive disease, with consideration of secondary cytoreductive surgery and integration of systemic therapy into a broader recurrence strategy including best supportive care when appropriate. [3] [@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 15]
+
+- In recurrent platinum-sensitive, BRCA-mutated disease, PARP inhibitors (niraparib, olaparib, or rucaparib) are guideline-endorsed options; localized radiotherapy may be considered for symptom palliation or oligometastatic sites as part of a multimodal approach. [4] [@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 15]
+
+- Long-term follow-up of SOLO1 and PAOLA-1 shows overall survival benefit with olaparib in BRCA1/2-mutated tumors and with olaparib–bevacizumab in HRD‑positive tumors regardless of BRCA status, supporting PARP-based maintenance in appropriately selected first-line patients. [5] [@guideline:esmo_cpg_epithelialovarian_2023__v00000000 | Page 7]
+
+- Severe thrombocytopenia is a recognized, potentially life-threatening toxicity of niraparib; MDT should plan close hematologic monitoring, early dose modification, and management protocols when considering niraparib maintenance. [6] [@pubmed | 40687421]
+
+- Niraparib has been associated with pulmonary embolism in case reports; risk assessment for venous thromboembolism and vigilance for respiratory or thrombotic symptoms are warranted during niraparib therapy. [7] [@pubmed | 35359396]
+
+- Case evidence suggests niraparib maintenance may be feasible and beneficial in rare histologies such as ovarian carcinosarcoma, supporting its consideration when standard evidence is limited, with individualized risk–benefit assessment. [8] [@pubmed | 40777128]
+
+- Niraparib maintenance has shown activity in patients with germline ATM and somatic mutations in the context of ovarian cancer with brain metastases, supporting consideration of PARP inhibition beyond BRCA mutations in selected molecularly defined cases. [9] [@pubmed | 34938651]
+
+- Brain metastases from epithelial ovarian cancer are rare and have poor prognosis; multimodal management (surgery, radiotherapy, systemic therapy including PARP inhibitors when molecularly appropriate) may offer survival benefit and should be discussed in MDT. [10] [@pubmed | 33376347]</pre>
+  </details>
+
+  <details class='mt mermaid-container' open><summary>Pipeline Flow</summary><div class='mermaid-chart'>flowchart TD
+  A[Load Case + Fingerprint] --> B[Load Reports]
+  B --> C[Report Selection per Role]
+  C --> D[Guideline+PubMed RAG]
+  D --> E[Init Specialist Agents]
+  E --> F[MDT Discussion Engine]
+  F --> G[Trial Matching]
+  G --> H[Final Chair Output]
+  H --> I[Save Logs]</div></details>
+
+  <details class="mt">
+    <summary>Trace Events (JSON)</summary>
+    <pre>[
+  {
+    &quot;ts&quot;: &quot;2026-01-22T18:32:22.934136&quot;,
+    &quot;event&quot;: &quot;pipeline_start&quot;,
+    &quot;payload&quot;: {
+      &quot;mode&quot;: &quot;chair_sa_k&quot;,
+      &quot;visit_time&quot;: &quot;2023-01-09 09:23:13.113000&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-22T18:32:22.934673&quot;,
+    &quot;event&quot;: &quot;case_fingerprint&quot;,
+    &quot;payload&quot;: {
+      &quot;case_fingerprint&quot;: &quot;fa2f34f1e565&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-22T18:32:23.061279&quot;,
+    &quot;event&quot;: &quot;rag_key_facts&quot;,
+    &quot;payload&quot;: {
+      &quot;facts&quot;: &quot;DIAGNOSIS: primary=Ovarian cancer; histology=High-grade serous carcinoma; components=Adenocarcinoma;High-grade serous carcinoma\nPATHOLOGY: Adenocarcinoma consistent with high-grade serous carcinoma\nPLATINUM: status=Unknown; pfi_days=Unknown\nGENETICS: HRD=Positive; BRCA1=Unknown; BRCA2=Unknown\nBIOMARKERS: CA125=Unknown; AFP=Unknown; TMB=Unknown; MSI=Unknown; PDL1_CPS=Unknown&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-22T18:32:45.139357&quot;,
+    &quot;event&quot;: &quot;rag_query&quot;,
+    &quot;payload&quot;: {
+      &quot;query&quot;: &quot;HRD-positive high-grade serous ovarian carcinoma, platinum-sensitive, with prior extensive peritoneal and nodal metastases; on niraparib maintenance complicated by severe thrombocytopenia but otherwise acceptable organ function; histology: High-grade serous carcinoma&quot;
+    }
+  },
+  {
+    &quot;ts&quot;: &quot;2026-01-22T18:32:45.139369&quot;,
+    &quot;event&quot;: &quot;rag_hits_merged&quot;,
+    &quot;payload&quot;: {
+      &quot;n&quot;: 10
+    }
+  }
+]</pre>
+  </details>
+
+  <!-- Mermaid.js for flowchart rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis'
+        },
+        securityLevel: 'loose'
+      });
+      // Re-render mermaid charts in .mermaid-chart containers
+      document.querySelectorAll('.mermaid-chart').forEach(function(el) {
+        el.classList.add('mermaid');
+      });
+      mermaid.init(undefined, '.mermaid-chart');
+    });
+  </script>
+</body>
+</html>

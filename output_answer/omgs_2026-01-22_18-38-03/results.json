@@ -1,0 +1,585 @@
+[
+    {
+        "agent_mode": "omgs",
+        "mode": "omgs",
+        "model": "deepseek/deepseek-v3.2",
+        "scene": null,
+        "question": {
+            "CASE_CORE": {
+                "VISIT_DATE": "2023-01-09",
+                "ECOG": "1",
+                "last_platinum_end_date": "2022-03-22",
+                "first_relapse_date": "Unknown",
+                "PFI_days": "Unknown",
+                "PLATINUM_STATUS": "Unknown",
+                "PLATINUM_STATUS_CURRENT": "Unknown",
+                "PLATINUM_PFI_CURRENT": "Unknown",
+                "SCENE": "Maintenance_surveillance_followup",
+                "PLATINUM_HISTORY": [
+                    {
+                        "line": "1L",
+                        "start_date": "2021-10-18",
+                        "end_date": "2022-03-22",
+                        "first_relapse_date": "Unknown",
+                        "PFI_days": "Unknown",
+                        "status": "Unknown",
+                        "evidence_type": "Unknown",
+                        "evidence": "TP chemotherapy 6 cycles after primary surgery; no explicit relapse documented."
+                    }
+                ],
+                "DIAGNOSIS": {
+                    "primary": "Ovarian cancer",
+                    "histology": "High-grade serous carcinoma",
+                    "site": "Ovary",
+                    "laterality": "Bilateral",
+                    "components": [
+                        "Adenocarcinoma",
+                        "High-grade serous carcinoma"
+                    ]
+                },
+                "STAGE": {
+                    "stage_text": "Unknown",
+                    "stage_system": "Unknown",
+                    "stage_basis": "Unknown"
+                },
+                "INITIAL_TREATMENT": "Yes",
+                "SURGERY_DONE": {
+                    "performed": "Yes",
+                    "date": "2021-08-26",
+                    "procedure": "Radical hysterectomy with bilateral salpingo-oophorectomy, pelvic mass resection, partial rectosigmoid resection, sigmoid colostomy, omentectomy, pelvic lymphadenectomy, appendectomy, paraaortic lymphadenectomy"
+                },
+                "NEOADJUVANT": "Unknown",
+                "ADJUVANT_TREATMENT": {
+                    "given": "Yes",
+                    "regimens": [
+                        "TP"
+                    ],
+                    "cycles_or_courses": "6"
+                },
+                "LINE_OF_THERAPY": [
+                    {
+                        "line": "1L",
+                        "intent": "First_line",
+                        "regimen": "顺铂50mg腹腔化疗",
+                        "start_date": "2021-09-06",
+                        "end_date": "2021-09-07",
+                        "cycles_planned": "Unknown",
+                        "cycles_completed": "1",
+                        "response_assessment": {
+                            "best_response": "Unknown",
+                            "response_criteria": "Unknown",
+                            "response_date": "Unknown",
+                            "ca125_response": "Unknown"
+                        },
+                        "discontinuation": {
+                            "reason": "Other",
+                            "detail": "Switched to TP chemotherapy"
+                        },
+                        "pfs_days": "41",
+                        "concurrent_bevacizumab": "No",
+                        "in_clinical_trial": "No"
+                    },
+                    {
+                        "line": "1L",
+                        "intent": "First_line",
+                        "regimen": "TP",
+                        "start_date": "2021-10-18",
+                        "end_date": "2022-03-22",
+                        "cycles_planned": "6",
+                        "cycles_completed": "6",
+                        "response_assessment": {
+                            "best_response": "Unknown",
+                            "response_criteria": "Unknown",
+                            "response_date": "Unknown",
+                            "ca125_response": "Unknown"
+                        },
+                        "discontinuation": {
+                            "reason": "Completed",
+                            "detail": "Completed 6 cycles"
+                        },
+                        "pfs_days": "Unknown",
+                        "concurrent_bevacizumab": "No",
+                        "in_clinical_trial": "No"
+                    },
+                    {
+                        "line": "1L",
+                        "intent": "Maintenance",
+                        "regimen": "尼拉帕利",
+                        "start_date": "2022-04-Unknown",
+                        "end_date": "Unknown",
+                        "cycles_planned": "Unknown",
+                        "cycles_completed": "Unknown",
+                        "response_assessment": {
+                            "best_response": "Unknown",
+                            "response_criteria": "Unknown",
+                            "response_date": "Unknown",
+                            "ca125_response": "Unknown"
+                        },
+                        "discontinuation": {
+                            "reason": "Other",
+                            "detail": "Temporarily stopped due to adverse reactions and low platelets; restarted 2022-05-23; held 3 weeks around hernia repair; currently continuing"
+                        },
+                        "pfs_days": "Unknown",
+                        "concurrent_bevacizumab": "No",
+                        "in_clinical_trial": "No"
+                    }
+                ],
+                "MAINTENANCE": "Yes",
+                "MAINTENANCE_DETAIL": {
+                    "given": "Yes",
+                    "regimens": [
+                        "尼拉帕利"
+                    ],
+                    "start_date": "2022-04-Unknown",
+                    "end_date": "Unknown"
+                },
+                "RELAPSE": "No",
+                "RELAPSE_DATE": {
+                    "date": "Unknown",
+                    "type": "Unknown",
+                    "evidence": "No relapse; pelvic MRI 2022-10-25 showed no abnormal soft tissue in pelvis."
+                },
+                "HRD": "Positive",
+                "BRCA1": "Unknown",
+                "BRCA2": "Unknown",
+                "GENOMICS": {
+                    "testing_performed": "Yes",
+                    "testing_date": "Unknown",
+                    "testing_platform": "Unknown",
+                    "HRD_STATUS": {
+                        "result": "Positive",
+                        "score": "Unknown",
+                        "method": "Unknown"
+                    },
+                    "alterations": []
+                },
+                "BIOMARKERS": {
+                    "TMB": "Unknown",
+                    "MSI": "Unknown",
+                    "PDL1_CPS": "Unknown",
+                    "HER2": "Unknown",
+                    "AFP": "Unknown",
+                    "CA125": "Unknown"
+                },
+                "CURRENT_STATUS": "On maintenance niraparib; ECOG 1; recent imaging without pelvic recurrence.",
+                "TIMELINE": {
+                    "events": [
+                        {
+                            "date": "2021-08-26",
+                            "event_type": "Surgery",
+                            "description": "Primary cytoreductive surgery including radical hysterectomy, bilateral salpingo-oophorectomy, bowel resection, omentectomy, lymphadenectomy, colostomy, appendectomy",
+                            "regimen_or_test": "Surgery",
+                            "key_result": "Multiple peritoneal sites and 6/24 lymph nodes positive for carcinoma"
+                        },
+                        {
+                            "date": "2021-08-26",
+                            "event_type": "Diagnosis",
+                            "description": "Pathology confirmed high-grade serous carcinoma of bilateral ovaries with widespread peritoneal involvement and nodal metastases",
+                            "regimen_or_test": "Pathology",
+                            "key_result": "High-grade serous carcinoma, bilateral ovaries; 6/24 lymph nodes positive"
+                        },
+                        {
+                            "date": "2021-09-06",
+                            "event_type": "Chemo",
+                            "description": "Intraperitoneal chemotherapy with cisplatin 50mg",
+                            "regimen_or_test": "顺铂50mg腹腔化疗",
+                            "key_result": "Completed over 2021-09-06 and 2021-09-07"
+                        },
+                        {
+                            "date": "2021-10-18",
+                            "event_type": "Chemo",
+                            "description": "Started TP chemotherapy, planned 6 cycles",
+                            "regimen_or_test": "TP",
+                            "key_result": "Completed 6 cycles, last on 2022-03-22"
+                        },
+                        {
+                            "date": "2022-03-22",
+                            "event_type": "Chemo",
+                            "description": "Last cycle of TP chemotherapy",
+                            "regimen_or_test": "TP",
+                            "key_result": "Adjuvant chemotherapy completed"
+                        },
+                        {
+                            "date": "2022-04-18",
+                            "event_type": "Lab",
+                            "description": "Complete blood count showing thrombocytopenia",
+                            "regimen_or_test": "Blood routine",
+                            "key_result": "PLT:33"
+                        },
+                        {
+                            "date": "2022-04-26",
+                            "event_type": "Other",
+                            "description": "Stopped niraparib due to strong adverse reactions",
+                            "regimen_or_test": "尼拉帕利",
+                            "key_result": "Maintenance paused"
+                        },
+                        {
+                            "date": "2022-05-23",
+                            "event_type": "Chemo",
+                            "description": "Restarted niraparib 1# qd",
+                            "regimen_or_test": "尼拉帕利",
+                            "key_result": "Maintenance resumed"
+                        },
+                        {
+                            "date": "2022-06-24",
+                            "event_type": "Surgery",
+                            "description": "Abdominal wall hernia repair at Zhongshan Hospital",
+                            "regimen_or_test": "Surgery",
+                            "key_result": "Niraparib held for 3 weeks around surgery"
+                        },
+                        {
+                            "date": "2022-09-27",
+                            "event_type": "Imaging",
+                            "description": "CT chest/abdomen showing small bilateral pleural effusions improved; pulmonary AV fistula and nodules similar to prior",
+                            "regimen_or_test": "CT",
+                            "key_result": "No new malignant findings reported; abdominal details deferred"
+                        },
+                        {
+                            "date": "2022-10-08",
+                            "event_type": "Imaging",
+                            "description": "CT showing liver segment VII hemangioma and left renal cyst, stable",
+                            "regimen_or_test": "CT",
+                            "key_result": "No new findings; chest to correlate with other exams"
+                        },
+                        {
+                            "date": "2022-10-25",
+                            "event_type": "Imaging",
+                            "description": "Pelvic MRI after ovarian cancer surgery",
+                            "regimen_or_test": "MR",
+                            "key_result": "No abnormal soft tissue in pelvis; follow-up recommended"
+                        },
+                        {
+                            "date": "2022-12-30",
+                            "event_type": "Imaging",
+                            "description": "Zhongshan Hospital evaluation: incisional hernia, low-density lesion in right liver lobe",
+                            "regimen_or_test": "Imaging",
+                            "key_result": "Blood count and liver/kidney function generally acceptable"
+                        },
+                        {
+                            "date": "2023-01-09",
+                            "event_type": "Lab",
+                            "description": "Recent blood routine showed platelet count 34 (year not fully specified)",
+                            "regimen_or_test": "Blood routine",
+                            "key_result": "PLT:34 (interpreted from 'PLT:342022.5.23起恢复', year unclear)"
+                        }
+                    ],
+                    "constraints": {
+                        "min_events": 3,
+                        "max_events": 30,
+                        "must_include": [
+                            "first diagnostic imaging or pathology confirmation (if available)"
+                        ],
+                        "ordering_rules": {
+                            "prioritize_last_event": true
+                        }
+                    }
+                }
+            },
+            "TIMELINE": {
+                "events": [
+                    {
+                        "date": "2021-08-26",
+                        "event_type": "Surgery",
+                        "description": "Primary cytoreductive surgery including radical hysterectomy, bilateral salpingo-oophorectomy, bowel resection, omentectomy, lymphadenectomy, colostomy, appendectomy",
+                        "regimen_or_test": "Surgery",
+                        "key_result": "Multiple peritoneal sites and 6/24 lymph nodes positive for carcinoma"
+                    },
+                    {
+                        "date": "2021-08-26",
+                        "event_type": "Diagnosis",
+                        "description": "Pathology confirmed high-grade serous carcinoma of bilateral ovaries with widespread peritoneal involvement and nodal metastases",
+                        "regimen_or_test": "Pathology",
+                        "key_result": "High-grade serous carcinoma, bilateral ovaries; 6/24 lymph nodes positive"
+                    },
+                    {
+                        "date": "2021-09-06",
+                        "event_type": "Chemo",
+                        "description": "Intraperitoneal chemotherapy with cisplatin 50mg",
+                        "regimen_or_test": "顺铂50mg腹腔化疗",
+                        "key_result": "Completed over 2021-09-06 and 2021-09-07"
+                    },
+                    {
+                        "date": "2021-10-18",
+                        "event_type": "Chemo",
+                        "description": "Started TP chemotherapy, planned 6 cycles",
+                        "regimen_or_test": "TP",
+                        "key_result": "Completed 6 cycles, last on 2022-03-22"
+                    },
+                    {
+                        "date": "2022-03-22",
+                        "event_type": "Chemo",
+                        "description": "Last cycle of TP chemotherapy",
+                        "regimen_or_test": "TP",
+                        "key_result": "Adjuvant chemotherapy completed"
+                    },
+                    {
+                        "date": "2022-04-18",
+                        "event_type": "Lab",
+                        "description": "Complete blood count showing thrombocytopenia",
+                        "regimen_or_test": "Blood routine",
+                        "key_result": "PLT:33"
+                    },
+                    {
+                        "date": "2022-04-26",
+                        "event_type": "Other",
+                        "description": "Stopped niraparib due to strong adverse reactions",
+                        "regimen_or_test": "尼拉帕利",
+                        "key_result": "Maintenance paused"
+                    },
+                    {
+                        "date": "2022-05-23",
+                        "event_type": "Chemo",
+                        "description": "Restarted niraparib 1# qd",
+                        "regimen_or_test": "尼拉帕利",
+                        "key_result": "Maintenance resumed"
+                    },
+                    {
+                        "date": "2022-06-24",
+                        "event_type": "Surgery",
+                        "description": "Abdominal wall hernia repair at Zhongshan Hospital",
+                        "regimen_or_test": "Surgery",
+                        "key_result": "Niraparib held for 3 weeks around surgery"
+                    },
+                    {
+                        "date": "2022-09-27",
+                        "event_type": "Imaging",
+                        "description": "CT chest/abdomen showing small bilateral pleural effusions improved; pulmonary AV fistula and nodules similar to prior",
+                        "regimen_or_test": "CT",
+                        "key_result": "No new malignant findings reported; abdominal details deferred"
+                    },
+                    {
+                        "date": "2022-10-08",
+                        "event_type": "Imaging",
+                        "description": "CT showing liver segment VII hemangioma and left renal cyst, stable",
+                        "regimen_or_test": "CT",
+                        "key_result": "No new findings; chest to correlate with other exams"
+                    },
+                    {
+                        "date": "2022-10-25",
+                        "event_type": "Imaging",
+                        "description": "Pelvic MRI after ovarian cancer surgery",
+                        "regimen_or_test": "MR",
+                        "key_result": "No abnormal soft tissue in pelvis; follow-up recommended"
+                    },
+                    {
+                        "date": "2022-12-30",
+                        "event_type": "Imaging",
+                        "description": "Zhongshan Hospital evaluation: incisional hernia, low-density lesion in right liver lobe",
+                        "regimen_or_test": "Imaging",
+                        "key_result": "Blood count and liver/kidney function generally acceptable"
+                    },
+                    {
+                        "date": "2023-01-09",
+                        "event_type": "Lab",
+                        "description": "Recent blood routine showed platelet count 34 (year not fully specified)",
+                        "regimen_or_test": "Blood routine",
+                        "key_result": "PLT:34 (interpreted from 'PLT:342022.5.23起恢复', year unclear)"
+                    }
+                ],
+                "constraints": {
+                    "min_events": 3,
+                    "max_events": 30,
+                    "must_include": [
+                        "first diagnostic imaging or pathology confirmation (if available)"
+                    ],
+                    "ordering_rules": {
+                        "prioritize_last_event": true
+                    }
+                }
+            },
+            "MED_ONC": {
+                "current_regimen": {
+                    "name": "尼拉帕利",
+                    "last_admin_date": "Unknown",
+                    "cycle_info": "Continuous oral maintenance; temporarily stopped 2022-04-26 and around 2022-06-24 surgery; currently continuing"
+                },
+                "planned_next_regimen": "Unknown",
+                "prior_systemic_therapies": [
+                    "顺铂50mg腹腔化疗",
+                    "TP"
+                ],
+                "genetic_testing": {
+                    "somatic": [
+                        "HRD"
+                    ],
+                    "germline": []
+                },
+                "monitoring_points": [
+                    {
+                        "drug_or_class": "尼拉帕利",
+                        "monitoring": [
+                            "Monitor platelet count due to prior thrombocytopenia"
+                        ]
+                    }
+                ]
+            },
+            "RADIOLOGY": {
+                "studies": [
+                    {
+                        "date": "2022-09-27",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Lung",
+                            "Pleura",
+                            "Chest"
+                        ],
+                        "findings": [
+                            "Right upper lung arteriovenous fistula similar to prior",
+                            "Right upper lung apical segment small nodule similar to prior",
+                            "Left upper lung scattered tiny nodules",
+                            "Small bilateral pleural effusions decreased compared with prior",
+                            "Scattered chronic inflammatory and fibrotic changes in lungs",
+                            "Atelectasis improved",
+                            "Nodule at right cardiophrenic angle less apparent"
+                        ],
+                        "impression": "Pulmonary AV fistula and nodules unchanged; pleural effusions and atelectasis improved",
+                        "trend_vs_prior": "Improved"
+                    },
+                    {
+                        "date": "2022-10-08",
+                        "modality": "CT",
+                        "anatomic_sites": [
+                            "Liver",
+                            "Kidney",
+                            "Spine"
+                        ],
+                        "findings": [
+                            "Hemangioma in liver right lobe segment VII similar to prior",
+                            "Left renal cyst similar to prior",
+                            "Localized uneven sclerotic change in lumbar vertebrae similar to prior"
+                        ],
+                        "impression": "Stable hemangioma and renal cyst; spinal sclerosis unchanged; chest findings to correlate with other exams",
+                        "trend_vs_prior": "Stable"
+                    },
+                    {
+                        "date": "2022-10-25",
+                        "modality": "MRI",
+                        "anatomic_sites": [
+                            "Pelvis"
+                        ],
+                        "findings": [
+                            "Postoperative changes after ovarian cancer surgery",
+                            "No abnormal soft tissue mass in pelvis"
+                        ],
+                        "impression": "No pelvic recurrence; follow-up recommended",
+                        "trend_vs_prior": "Stable"
+                    }
+                ],
+                "next_imaging_plan": {
+                    "modality": "Unknown",
+                    "timing": "Unknown"
+                }
+            },
+            "PATHOLOGY": {
+                "specimens": [
+                    {
+                        "date": "2021-08-26",
+                        "site": "Uterus, bilateral adnexa, pelvic mass, rectosigmoid colon, peritoneum, omentum, appendix, lymph nodes",
+                        "diagnosis": "Adenocarcinoma consistent with high-grade serous carcinoma",
+                        "components": [
+                            "High-grade serous carcinoma",
+                            "Myometrial leiomyomas",
+                            "Chronic cervicitis"
+                        ],
+                        "grade": "High-grade",
+                        "tumor_size": "Left ovary 3.5×2×1.5cm; right ovary 6×5.5×4.5cm",
+                        "laterality": "Bilateral ovarian involvement",
+                        "sample_type": "Surgical resection",
+                        "involvement_sites": [
+                            "Left ovary",
+                            "Right ovary",
+                            "Left fallopian tube",
+                            "Right fallopian tube",
+                            "Uterine myometrium",
+                            "Pelvic and abdominal peritoneum",
+                            "Partial rectosigmoid colon from serosa to superficial muscle",
+                            "Omentum",
+                            "Left paracolic gutter peritoneum",
+                            "Small bowel mesentery",
+                            "Sigmoid mesentery",
+                            "Appendiceal serosa",
+                            "Pelvic lymph nodes",
+                            "Para-aortic and mesenteric lymph nodes (some positive)"
+                        ],
+                        "ihc": [],
+                        "molecular": [
+                            {
+                                "test": "HRD",
+                                "result": "Positive"
+                            }
+                        ],
+                        "raw_text": "术后病理：标本类型:扩大子宫+双附件+巨大盆块+部分直乙结肠+盆腹腔多病灶肿瘤大小:左侧：3.5×2×1.5cm；右侧：6×5.5×4.5cm肿瘤侧别:双侧病理类型:腺癌，结合免疫组化结果（I2021-07819），符合高级别浆液性癌。其他部位情况:左输卵管:见癌累及右输卵管:见癌累及子宫内膜:萎缩改变宫颈:慢性炎子宫肌层:见癌累及；肌壁间平滑肌瘤（多枚，直径0.5-2cm）盆腹腔多部位病灶:（部分直乙结肠）见癌累及，自浆膜层浸润至浅肌层，肠管两切缘未见癌累及。（大网膜、大网膜及盆腔肿块、左侧结肠旁沟腹膜、小肠系膜肿瘤、乙状结肠系膜肿瘤）见癌累及.（阑尾及周围肿块） 浆膜层见癌累及。其他:送检淋巴结（6/24）见癌转移，其中：左盆腔淋巴结（1/4）；右盆腔淋巴结（3/8）；腹主肠系膜下方淋巴结（1/4）； 肠系膜下动脉上方淋巴结（1/2）；腹主动脉旁淋巴结（0/6）。",
+                        "uncertainty_or_missing": [
+                            "FIGO stage not provided",
+                            "IHC panel details not provided"
+                        ]
+                    }
+                ]
+            },
+            "NUC_MED": {
+                "studies": []
+            },
+            "LAB_TRENDS": {
+                "labs": [
+                    {
+                        "analyte": "Other",
+                        "unit": "Unknown",
+                        "reference_range": "Unknown",
+                        "latest": {
+                            "date": "2022-04-18",
+                            "value": "PLT:33",
+                            "flag": "↓"
+                        },
+                        "history": [
+                            {
+                                "date": "2022-04-18",
+                                "value": "PLT:33",
+                                "flag": "↓"
+                            }
+                        ]
+                    }
+                ],
+                "milestones": [
+                    {
+                        "date": "2021-08-26",
+                        "type": "Surgery",
+                        "description": "Primary debulking surgery for ovarian cancer"
+                    },
+                    {
+                        "date": "2021-10-18",
+                        "type": "ChemoStart",
+                        "description": "Started TP chemotherapy"
+                    },
+                    {
+                        "date": "2022-03-22",
+                        "type": "ChemoEnd",
+                        "description": "Completed TP chemotherapy"
+                    },
+                    {
+                        "date": "2022-04-18",
+                        "type": "Other",
+                        "description": "Thrombocytopenia (PLT 33) on blood routine"
+                    }
+                ]
+            },
+            "TOXICITIES": [
+                {
+                    "toxicity": "Strong adverse reaction to niraparib with thrombocytopenia (PLT 33)",
+                    "severity": "Severe",
+                    "attribution": "Probable",
+                    "related_regimen": "尼拉帕利",
+                    "related_line": "1L",
+                    "onset_date": "2022-04-18",
+                    "outcome": "Resolved",
+                    "dose_modification": "Yes"
+                }
+            ],
+            "CLINICAL_TRIALS": []
+        },
+        "response": "Final Assessment:\nHRD-positive, BRCA-wildtype high-grade serous ovarian carcinoma in first remission on maintenance niraparib. Current stable imaging [@2022-09-27|CT | CT][@2022-10-25|MR | MR] and low CA125 [@20230109|9701878 | LAB] support clinical remission. Key uncertainties include metastatic nature of stable lung nodules and lack of recent comprehensive restaging.\n\nCore Treatment Strategy:\n- Continue niraparib maintenance per HRD-positive status [@OH2201222 | Genomics] and guideline [@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 17].\n- Order updated CT chest/abdomen/pelvis now, as last staging was 3+ months ago [@2022-09-27|CT | CT].\n- Consider FDG-PET/CT for metabolic assessment, especially of stable lung nodules.\n- Obtain original surgical pathology for definitive IHC and FIGO stage.\n\nChange Triggers:\n- If platelet count drops below 100 [@unknown | LAB], dose-reduce or hold niraparib; reassess duration.\n- If new metastasis on imaging, stop maintenance and start platinum-based chemotherapy [@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 15].\n\n---\n## References\n\n### Guidelines\n\n[@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 17]\n  Document: nccn_ovariancancer_v3_2025__v00000000, Page 17\n  Content: i Germline and somatic BRCA1/2 status informs maintenance...\n\n[@guideline:nccn_ovariancancer_v3_2025__v00000000 | Page 15]\n  Document: nccn_ovariancancer_v3_2025__v00000000, Page 15\n  Content: based chemotherapy,n\npreferred for first\nrecurrence...\n\n### Literature\n\n### Clinical Trials\n\n### Clinical Reports\n\n[@2022-09-27|CT | CT]\n  CT ID: 2022-09-27|CT | Date: 2022-09-27\n  Content: 对比前片2021-09-01：右上肺动脉分支远端增粗且与右上肺静脉分支相通，右上肺静脉分支增粗，同前。右肺尖段见小结节同...\n\n[@2022-10-25|MR | MR]\n  MR ID: 2022-10-25|MR | Date: 2022-10-25\n  Content: 对比2021-8-17：卵巢癌术后，阴道残端未见明显增厚，盆腔未见明显异常信号肿块，盆组及腹股沟淋巴结未见明显肿大，盆腔...\n\n[@20230109|9701878 | LAB]\n  LAB ID: 20230109|9701878 | Date: 2023-01-09\n  Content: 糖链抗原125 6.45 U/ml (CA125) 人附睾蛋白4 78.30 pmol/L (HE4)...\n\n[@OH2201222 | Genomics]\n  Genomics ID: OH2201222 | Date: 2022-01-24\n  Content: HRD 阳性；BRCA1 胚系和体系未检出致病突变（视为阴性）；BRCA2...\n\n[@unknown | LAB]\n  LAB ID: unknown\n",
+        "gold_plan": "继续用药\n检验科申请：血常规新(五分类)　肝功能(全套)　肾功能(不含血糖)　CA125(肿瘤抗原CA125)　HE4（卵巢癌）检查地点：徐汇院区：东安路270号1号楼3楼检验科 。西药及中成药方：[甲]琥珀酸亚铁片　0.1g*12片*3板/盒,PVC×2盒/口服　2片/bid[甲]利可君片　20mg*48#×1盒/口服　1片/bid。西药及中成药方：※[乙10%]甲苯磺酸尼拉帕利胶囊(　100mg*30粒/盒,铝塑包×2盒/口服　2粒/qd【医保限定支付范围:本品适用于晚期上皮性卵巢癌、输卵管癌或原发性腹膜癌成人患者对一线含铂化疗达到完全缓解或部分缓解后的维持治疗】。",
+        "question_raw": "卵巢癌：流调否认中高风险地区旅居史，否认体温异常等新冠肺炎症状。2021.08.26在全麻下行扩大性全子宫切除术+双附件切除术+盆腔肿块切除术+直肠乙状结肠部分切除术+乙状结肠造口术+大网膜切除术+盆腔淋巴结清扫术+阑尾切除术+腹主动脉旁淋巴结清扫术。术后病理：标本类型:扩大子宫+双附件+巨大盆块+部分直乙结肠+盆腹腔多病灶肿瘤大小:左侧：3.5×2×1.5cm；右侧：6×5.5×4.5cm肿瘤侧别:双侧病理类型:腺癌，结合免疫组化结果（I2021-07819），符合高级别浆液性癌。其他部位情况:左输卵管:见癌累及右输卵管:见癌累及子宫内膜:萎缩改变宫颈:慢性炎子宫肌层:见癌累及；肌壁间平滑肌瘤（多枚，直径0.5-2cm）盆腹腔多部位病灶:（部分直乙结肠）见癌累及，自浆膜层浸润至浅肌层，肠管两切缘未见癌累及。（大网膜、大网膜及盆腔肿块、左侧结肠旁沟腹膜、小肠系膜肿瘤、乙状结肠系膜肿瘤）见癌累及.（阑尾及周围肿块） 浆膜层见癌累及。其他:送检淋巴结（6/24）见癌转移，其中：左盆腔淋巴结（1/4）；右盆腔淋巴结（3/8）；腹主肠系膜下方淋巴结（1/4）； 肠系膜下动脉上方淋巴结（1/2）；腹主动脉旁淋巴结（0/6） .\n2021.09.06、09.07予顺铂50mg腹腔化疗、2021.10.18起行TP化疗6程，末次化疗2022.3.22我院基因检测结果：HRD(+)服用尼拉帕利1周，诉反应大，自2022.4.26开始停药。2022.4.18血常规：PLT:33今日血常规：PLT:342022.5.23起恢复尼拉帕利1#qd。\n目前反应可。2022.6.24至中山医院行腹壁疝修补术。因手术尼拉帕利停药3周。目前继续口服尼拉帕利中。诉最近腹痛几次，腹胀明显。CT（2022.09.27）：右上肺动静脉瘘可能同前，请结合临床及专项检查。右上肺尖段小结节同前，左上肺散在小微小结节，随访。两侧胸腔内少量积液较前吸收；双肺散在慢性炎症及纤维，肺叶不张较前好转。右侧心膈角处结节较前不明显。甲状腺及腹部情况请结合相关检查。\nCT（2022.10.08）：肝右叶VII段血管瘤同前。左肾囊肿同前。腰椎局部骨质不均匀致密同前，随访。胸部情况请结合相关检查。\nMR（2022.10.25）：卵巢癌术后，目前盆腔未见异常软组织影，请随访。最近复查报告好。2022.12.30中山医院：切口疝，肝右叶低密度灶。血常规、肝肾功能一般可; ECOG=1",
+        "Time": "2023-01-09 09:23:13.113000",
+        "meta_info": "310103195705270044"
+    }
+]

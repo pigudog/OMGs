@@ -58,23 +58,7 @@ Multidisciplinary team (MDT) meetings are the gold standard for complex cancer c
 
 ### Clinical Workflow Integration
 
-```mermaid
-flowchart LR
-    subgraph Clinical_Workflow [Clinical Workflow]
-        EHR[EHR System] --> Extract[OMGs: Extract & Structure]
-        Extract --> MDT[OMGs: MDT Discussion]
-        MDT --> Decision[MDT Decision]
-        Decision --> Treatment[Treatment Plan]
-    end
-    
-    subgraph Evidence [Evidence Sources]
-        Guidelines[Clinical Guidelines]
-        PubMed[PubMed Literature]
-        Reports[Patient Reports]
-    end
-    
-    Evidence --> MDT
-```
+OMGs integrates into clinical workflow: **EHR System** → **Extract & Structure** → **MDT Discussion** → **Treatment Plan**, with evidence from Guidelines, PubMed, and Patient Reports.
 
 ---
 
@@ -168,99 +152,17 @@ python main.py --input_path ./data.jsonl --agent auto --provider azure --model g
 
 ## 🏗️ System Architecture
 
-![OMGs Multi-Agent Architecture](draw.png)
+OMGs follows a **three-layer architecture** (host/ servers/ core/) with multi-agent collaboration:
 
-### High-Level Architecture
+- **Input Layer**: Case data, clinical reports, guidelines
+- **Core Infrastructure**: Agent class, multi-provider LLM client
+- **Service Layer**: Case parser, evidence search, report selector
+- **Orchestration Layer**: Multi-agent coordinator, expert agents, decision maker
+- **Output Layer**: JSON results, HTML reports, MDT logs
 
-```mermaid
-flowchart TB
-    subgraph Input [Input Layer]
-        CaseData[Case Data JSONL]
-        Reports[Clinical Reports]
-        Guidelines[Guideline PDFs]
-    end
-    
-    subgraph Core [Core Infrastructure]
-        Agent[Agent Class]
-        Client[Multi-Provider LLM Client]
-        Config[Configuration]
-    end
-    
-    subgraph Servers [Agent Servers - Service Layer]
-        CaseParser[Case Parser]
-        InfoDelivery[Info Delivery]
-        EvidenceSearch[Evidence Search]
-        ReportsSelector[Reports Selector]
-        Trace[Trace Logger]
-    end
-    
-    subgraph Host [Central Host - Orchestration Layer]
-        Orchestrator[Orchestrator]
-        Experts[Expert Agents]
-        Decision[Decision Maker]
-    end
-    
-    subgraph Skill [SKILL Protocol]
-        SkillMD[SKILL.md]
-        SkillLoader[skill_loader.py]
-    end
-    
-    subgraph Output [Output Layer]
-        JSON[JSON Results]
-        HTML[HTML Report]
-        Logs[MDT Logs]
-    end
-    
-    Input --> Core
-    Core --> Servers
-    Servers --> Host
-    Skill --> Experts
-    Host --> Output
-```
+**Pipeline**: Load → Filter → Select → RAG → Digest → Initialize → Discuss (2-round × 2-turn) → Trial Match → Synthesize → Output
 
-### Detailed Pipeline Flow
-
-```mermaid
-flowchart TD
-    Start([Input Case]) --> Load[1. Load Case & Reports]
-    
-    Load --> Filter[2. Filter Reports by Visit Time]
-    Filter --> Select[3. Role-Based Report Selection]
-    
-    Select --> RAG[4. Guideline & PubMed RAG]
-    RAG --> Digest[5. Generate Evidence Digest]
-    
-    Digest --> Init[6. Initialize Expert Agents]
-    Init --> Views[7. Build Role-Specific Views]
-    
-    Views --> Discussion{8. MDT Discussion Engine}
-    
-    Discussion --> |Round 1| R1T1[Turn 1: Initial Opinions]
-    R1T1 --> R1T2[Turn 2: Cross-Expert Debate]
-    R1T2 --> R1Final[Round 1 Final Plans]
-    
-    R1Final --> |Round 2| R2T1[Turn 1: Refined Discussion]
-    R2T1 --> R2T2[Turn 2: Consensus Building]
-    R2T2 --> R2Final[Round 2 Final Plans]
-    
-    R2Final --> Trial[9. Clinical Trial Matching]
-    Trial --> Final[10. Chair Final Synthesis]
-    
-    Final --> Save[11. Save Artifacts]
-    Save --> End([Output Results])
-```
-
-### Roles and Permissions Matrix
-
-| Role | Lab Reports | Imaging Reports | Pathology Reports | Mutation Reports | Primary Focus |
-|------|:-----------:|:---------------:|:-----------------:|:----------------:|---------------|
-| **Chair** | ✅ | ✅ | ❌ | ✅ | Overall synthesis & safety |
-| **Oncologist** | ✅ | ❌ | ❌ | ✅ | Systemic therapy planning |
-| **Radiologist** | ❌ | ✅ | ❌ | ❌ | Disease distribution & imaging |
-| **Pathologist** | ❌ | ❌ | ✅ | ✅ | Histology & molecular markers |
-| **Nuclear Medicine** | ❌ | ✅ | ❌ | ❌ | PET/metabolic findings |
-
-For detailed architecture documentation, see [skills/omgs/references/architecture.md](skills/omgs/references/architecture.md).
+📖 **[Complete Architecture Documentation](docs/system-architecture.md)** - High-level diagrams, detailed pipeline flow, roles & permissions, agent modes
 
 ---
 
@@ -344,11 +246,13 @@ The `auto` mode automatically assesses case complexity and routes to the appropr
 | **Getting Started** | [Installation](docs/installation.md) | Setup, requirements, LLM config |
 | | [Usage](docs/usage.md) | CLI, input/output formats |
 | | [Examples](docs/examples.md) | Workflow examples |
-| **Core** | [Project Structure](docs/project-structure.md) | Directory and modules |
+| **Core** | [System Architecture](docs/system-architecture.md) | Architecture diagrams and pipeline |
+| | [Project Structure](docs/project-structure.md) | Directory and modules |
 | | [Evidence System](docs/evidence-system.md) | RAG and citations |
 | | [Prompts Reference](docs/prompts-reference.md) | **Complete prompt documentation** |
 | | [Configuration](config/README.md) | Config files overview |
-| **Advanced** | [Troubleshooting](docs/troubleshooting.md) | Debugging guide |
+| **Advanced** | [Contributing](docs/contributing.md) | Development guide |
+| | [Troubleshooting](docs/troubleshooting.md) | Debugging guide |
 | | [Evaluation](docs/evaluation.md) | Assessment system |
 | | [Multi-Provider](clients/PROVIDERS.md) | LLM provider details |
 | **Reference** | [Architecture](skills/omgs/references/architecture.md) | Three-layer design |

@@ -5,14 +5,14 @@ EHR EXTRACTION REPORT
 Patient ID: 310103195705270044
 Visit Time: 2023-01-09 09:23:13.113000
 Extraction Status: ok
-Refinement Iterations: 0
+Refinement Iterations: 1
 
 ┌────────────────────────────────────────┐
 │ EXTRACTION SUMMARY                     │
 ├────────────────────────────────────────┤
 │ Parse Status: ok                       │
-│ Tokens Used: 7062                      │
-│ Refinement Iterations: 0               │
+│ Tokens Used: 8037                      │
+│ Refinement Iterations: 1               │
 │ Auto Fixes Applied: 1                  │
 └────────────────────────────────────────┘
 
@@ -29,50 +29,53 @@ FIELD CONFIDENCE (Critical Fields)
 REVIEW ISSUES (Initial)
 ================================================================================
 
-  🟡 [MAJOR] CASE_CORE.LINE_OF_THERAPY[2].start_date
-     Description: Niraparib first start date is recorded as an imprecise "2022-04-Unknown", but the note indicates she took niraparib for 1 week and then stopped on 2022-04-26, so the start date can be approximated more precisely to around 2022-04-19.
-     Evidence: "服用尼拉帕利1周，诉反应大，自2022.4.26开始停药。"
-     Suggested: Change start_date from "2022-04-Unknown" to "2022-04-19" or at least "2022-04-20" to reflect 1 week prior to 2022-04-26, or leave as Unknown if such approximation is not allowed.
+  🟡 [MAJOR] TIMELINE.events[13].key_result
+     Description: The platelet value from the most recent blood count is mis-extracted as 34 instead of reflecting the text, which states a new platelet value after 2022-04-18 but is concatenated with the date string and not clearly 34.
+     Evidence: "2022.4.18血常规：PLT:33今日血常规：PLT:342022.5.23起恢复尼拉帕利1#qd。"
+     Suggested: Mark the most recent platelet value as Unknown or leave it unparsed instead of PLT:34, since the concatenated string 'PLT:342022.5.23' does not clearly support a value of 34.
+
+  🟡 [MAJOR] LAB_TRENDS.labs[0].latest.flag
+     Description: The flag for platelet 33 is marked as elevated (↑), but thrombocytopenia is implied; 33 should be below normal.
+     Evidence: "2022.4.18血常规：PLT:33"
+     Suggested: Change the flag for PLT:33 to '↓' or 'Low' to reflect thrombocytopenia rather than elevation.
 
   🔵 [MINOR] LAB_TRENDS.labs[0].history[0].flag
-     Description: Platelet value 33 is severely low, but the flag is set as increased ("↑"), which contradicts typical interpretation and the clinical context of thrombocytopenia.
+     Description: Same misflagging in the lab history: PLT 33 is labeled as elevated.
      Evidence: "2022.4.18血常规：PLT:33"
-     Suggested: Change the flag from "↑" to "↓" or "Low" to reflect thrombocytopenia, or set to "Abnormal" if direction-specific flags are not used.
+     Suggested: Change the history flag for PLT:33 to '↓' or 'Low'.
 
-  🔵 [MINOR] LAB_TRENDS.labs[0].latest.date
-     Description: The note states a current CBC with PLT value on the visit date, but the latest lab entry uses 2022-12-30 instead of the current note date 2023-01-09, and omits the PLT value mentioned.
-     Evidence: "今日血常规：PLT:34"
-     Suggested: Update latest.date to "2023-01-09" and latest.value to include "PLT 34" (e.g., "PLT 34; blood routine generally acceptable"), or add a separate lab history entry for 2023-01-09 with PLT 34.
+  🔵 [MINOR] PATHOLOGY.specimens[0].molecular[0]
+     Description: HRD positivity is documented as a result of hospital gene testing, but not as part of the surgical pathology specimen; representing it under this specimen may be misleading.
+     Evidence: "我院基因检测结果：HRD(+)"
+     Suggested: Either move HRD(+) from the pathology specimen molecular section to a separate genomics or genetic testing section, or note that the HRD test was from separate hospital gene testing, not necessarily this pathology specimen.
 
-  🔵 [MINOR] LAB_TRENDS.labs[1].latest
-     Description: There is an extra empty key in the latest object for liver/kidney function.
-     Evidence: ""latest": {"date": "2022-12-30","value": "Liver and kidney function generally acceptable","flag": "U..."
-     Suggested: Remove the empty "" key from this latest object to conform to proper JSON structure.
+  🔵 [MINOR] LAB_TRENDS.labs[0].analyte
+     Description: The analyte is labeled generically as 'Other' despite the text specifying platelet count (PLT).
+     Evidence: "血常规：PLT:33"
+     Suggested: Change analyte from 'Other' to 'Platelet count' or 'PLT' to be specific.
 
-  🔵 [MINOR] LAB_TRENDS.labs[1].latest.extra_field
-     Description: There is an empty string key in the latest object for the second lab entry, which is malformed JSON relative to the intended schema.
-     Evidence: ""latest": {
-          "date": "2022-12-30",
-          "value": "Liver and kidney function generally ..."
-     Suggested: Remove the empty string key from the latest object so that only valid fields (date, value, flag) remain.
+  🔵 [MINOR] LAB_TRENDS.labs[0].latest.value
+     Description: The lab analyte value stores the entire string "PLT:33" instead of the numeric platelet count, which may hinder numeric trend analysis.
+     Evidence: "2022.4.18血常规：PLT:33"
+     Suggested: Store the numeric component (e.g., "33") in value and, if needed, move the label "PLT" to the analyte field or a separate label field.
+
+================================================================================
+REFINEMENTS APPLIED
+================================================================================
+
+  🔧 Iteration 1:
+     → LAB_TRENDS.labs[0].latest.flag: ↓
+     → LAB_TRENDS.labs[0].history[0].flag: ↓
 
 ================================================================================
 REMAINING ISSUES (After Refinement)
 ================================================================================
-  🟡 [MAJOR] CASE_CORE.LINE_OF_THERAPY[2].start_date
-     Niraparib first start date is recorded as an imprecise "2022-04-Unknown", but the note indicates she took niraparib for 1 week and then stopped on 202...
-  🔵 [MINOR] LAB_TRENDS.labs[0].history[0].flag
-     Platelet value 33 is severely low, but the flag is set as increased ("↑"), which contradicts typical interpretation and the clinical context of thromb...
+  🟡 [MAJOR] TIMELINE.events[13].key_result
+     The platelet value from the most recent blood count is mis-parsed; the source text does not state PLT 34 and the characters "PLT:342022.5.23起恢复" likel...
   🔵 [MINOR] LAB_TRENDS.labs[0].latest.date
-     The note states a current CBC with PLT value on the visit date, but the latest lab entry uses 2022-12-30 instead of the current note date 2023-01-09, ...
-  🔵 [MINOR] LAB_TRENDS.labs[1].latest
-     There is an extra empty key in the latest object for liver/kidney function.
-  🔵 [MINOR] LAB_TRENDS.labs[0].history[0].flag
-     Platelet value PLT 33 was labeled with an up-arrow flag, but a value of 33 is markedly low and indicates thrombocytopenia, not elevation.
-  🔵 [MINOR] LAB_TRENDS.labs[0].latest.date
-     The note states a platelet result on the current day without a full date, but the JSON assigns the latest blood routine to 2022-12-30, which is an ass...
-  🔵 [MINOR] LAB_TRENDS.labs[1].latest.extra_field
-     There is an empty string key in the latest object for the second lab entry, which is malformed JSON relative to the intended schema.
+     The latest lab entry uses 2022-04-18 as the date, but the narrative indicates there is a later platelet result on an unspecified later date (“今日血常规：PL...
+  🔵 [MINOR] PATHOLOGY.specimens[0].molecular[0]
+     HRD positivity is represented as part of the surgical pathology specimen, but the text attributes HRD(+) to a separate hospital genetic test result ra...
 
 ================================================================================
 AUTO FIXES (Rule-Based)
@@ -108,33 +111,23 @@ EXTRACTED JSON
     "PLATINUM_HISTORY": [
       {
         "line": "1L",
-        "start_date": "2021-09-06",
+        "start_date": "2021-10-18",
         "end_date": "2022-03-22",
         "first_relapse_date": "Unknown",
         "PFI_days": "Unknown",
         "status": "Unknown",
         "evidence_type": "Unknown",
-        "evidence": "Postoperative TP chemotherapy after debulking surgery with intraperitoneal cisplatin"
-      },
-      {
-        "line": "Unknown",
-        "start_date": "Unknown",
-        "end_date": "Unknown",
-        "first_relapse_date": "Unknown",
-        "PFI_days": "Unknown",
-        "status": "Unknown",
-        "evidence_type": "Unknown",
-        "evidence": "Unknown"
+        "evidence": "TP chemotherapy 6 cycles after primary surgery; no explicit relapse documented."
       }
     ],
     "DIAGNOSIS": {
       "primary": "Ovarian cancer",
-      "histology": "High grade serous carcinoma",
+      "histology": "High-grade serous carcinoma",
       "site": "Ovary",
       "laterality": "Bilateral",
       "components": [
         "Adenocarcinoma",
-        "High grade serous carcinoma"
+        "High-grade serous carcinoma"
       ]
     },
     "STAGE": {
@@ -146,16 +139,15 @@ EXTRACTED JSON
     "SURGERY_DONE": {
       "performed": "Yes",
       "date": "2021-08-26",
-      "procedure": "Extended total hysterectomy + bilateral salpingo-oophorectomy + pelvic mass resection + partial rectosigmoid resection + sigmoid colostomy + omentectomy + pelvic lymphadenectomy + appendectomy + para-aortic lymphadenectomy"
+      "procedure": "Radical hysterectomy with bilateral salpingo-oophorectomy, pelvic mass resection, partial rectosigmoid resection, sigmoid colostomy, omentectomy, pelvic lymphadenectomy, appendectomy, paraaortic lymphadenectomy"
     },
-    "NEOADJUVANT": "No",
+    "NEOADJUVANT": "Unknown",
     "ADJUVANT_TREATMENT": {
       "given": "Yes",
       "regimens": [
-        "顺铂腹腔化疗",
         "TP"
       ],
-      "cycles_or_courses": "6 cycles TP after intraperitoneal cisplatin"
+      "cycles_or_courses": "6"
     },
     "LINE_OF_THERAPY": [
       {
@@ -174,7 +166,7 @@ EXTRACTED JSON
         },
         "discontinuation": {
           "reason": "Other",
-          "detail": "Transitioned to TP chemotherapy"
+          "detail": "Switched to TP chemotherapy"
         },
         "pfs_days": "41",
         "concurrent_bevacizumab": "No",
@@ -203,7 +195,7 @@ EXTRACTED JSON
         "in_clinical_trial": "No"
       },
       {
-        "line": "Unknown",
+        "line": "1L",
         "intent": "Maintenance",
         "regimen": "尼拉帕利",
         "start_date": "2022-04-Unknown",
@@ -217,30 +209,8 @@ EXTRACTED JSON
           "ca125_response": "Unknown"
         },
         "discontinuation": {
-          "reason": "Toxicity",
-          "detail": "Stopped after 1 week due to strong adverse reaction and thrombocytopenia"
-        },
-        "pfs_days": "Unknown",
-        "concurrent_bevacizumab": "No",
-        "in_clinical_trial": "No"
-      },
-      {
-        "line": "Unknown",
-        "intent": "Maintenance",
-        "regimen": "尼拉帕利",
-        "start_date": "2022-05-23",
-        "end_date": "Unknown",
-        "cycles_planned": "Unknown",
-        "cycles_completed": "Unknown",
-        "response_assessment": {
-          "best_response": "Unknown",
-          "response_criteria": "Unknown",
-          "response_date": "Unknown",
-          "ca125_response": "Unknown"
-        },
-        "discontinuation": {
-          "reason": "Unknown",
-          "detail": "Ongoing at last visit; temporarily held 3 weeks for hernia repair surgery"
+          "reason": "Other",
+          "detail": "Temporarily stopped due to adverse reactions and low platelets; restarted 2022-05-23; held 3 weeks around hernia repair; currently continuing"
         },
         "pfs_days": "Unknown",
         "concurrent_bevacizumab": "No",
@@ -253,14 +223,14 @@ EXTRACTED JSON
       "regimens": [
         "尼拉帕利"
       ],
-      "start_date": "2022-05-23",
+      "start_date": "2022-04-Unknown",
       "end_date": "Unknown"
     },
     "RELAPSE": "No",
     "RELAPSE_DATE": {
       "date": "Unknown",
       "type": "Unknown",
-      "evidence": "Unknown"
+      "evidence": "No relapse; pelvic MRI 2022-10-25 showed no abnormal soft tissue in pelvis."
     },
     "HRD": "Positive",
     "BRCA1": "Unknown",
@@ -284,93 +254,107 @@ EXTRACTED JSON
       "AFP": "Unknown",
       "CA125": "Unknown"
     },
-    "CURRENT_STATUS": "On maintenance niraparib with generally good tolerance; reports recent episodic abdominal pain and marked abdominal distension; postoperative state after abdominal wall hernia repair; ECOG 1"
+    "CURRENT_STATUS": "On maintenance niraparib; ECOG 1; recent imaging without pelvic recurrence."
   },
   "TIMELINE": {
     "events": [
       {
         "date": "2021-08-26",
         "event_type": "Surgery",
-        "description": "Primary debulking surgery with hysterectomy, bilateral salpingo-oophorectomy, bowel resection, colostomy, omentectomy, lymphadenectomy, appendectomy, para-aortic lymphadenectomy",
+        "description": "Primary cytoreductive surgery including radical hysterectomy, bilateral salpingo-oophorectomy, bowel resection, omentectomy, lymphadenectomy, colostomy, appendectomy",
         "regimen_or_test": "Surgery",
-        "key_result": "Extensive peritoneal and lymph node involvement by high grade serous carcinoma"
+        "key_result": "Multiple peritoneal sites and 6/24 lymph nodes positive for carcinoma"
+      },
+      {
+        "date": "2021-08-26",
+        "event_type": "Diagnosis",
+        "description": "Pathology confirmed high-grade serous carcinoma of bilateral ovaries with widespread peritoneal involvement and nodal metastases",
+        "regimen_or_test": "Pathology",
+        "key_result": "High-grade serous carcinoma, bilateral ovaries; 6/24 lymph nodes positive"
       },
       {
         "date": "2021-09-06",
         "event_type": "Chemo",
-        "description": "Intraperitoneal chemotherapy",
+        "description": "Intraperitoneal chemotherapy with cisplatin 50mg",
         "regimen_or_test": "顺铂50mg腹腔化疗",
-        "key_result": "Unknown"
+        "key_result": "Completed over 2021-09-06 and 2021-09-07"
       },
       {
         "date": "2021-10-18",
         "event_type": "Chemo",
-        "description": "Start of TP chemotherapy, planned 6 cycles",
+        "description": "Started TP chemotherapy, planned 6 cycles",
         "regimen_or_test": "TP",
-        "key_result": "Completed 6 cycles; last cycle 2022-03-22"
+        "key_result": "Completed 6 cycles, last on 2022-03-22"
       },
       {
         "date": "2022-03-22",
         "event_type": "Chemo",
         "description": "Last cycle of TP chemotherapy",
         "regimen_or_test": "TP",
-        "key_result": "Unknown"
+        "key_result": "Adjuvant chemotherapy completed"
       },
       {
         "date": "2022-04-18",
         "event_type": "Lab",
-        "description": "CBC showing thrombocytopenia",
+        "description": "Complete blood count showing thrombocytopenia",
         "regimen_or_test": "Blood routine",
-        "key_result": "PLT 33"
+        "key_result": "PLT:33"
       },
       {
         "date": "2022-04-26",
         "event_type": "Other",
-        "description": "Stopped niraparib after 1 week due to strong reaction",
+        "description": "Stopped niraparib due to strong adverse reactions",
         "regimen_or_test": "尼拉帕利",
-        "key_result": "Drug held"
+        "key_result": "Maintenance paused"
       },
       {
         "date": "2022-05-23",
         "event_type": "Chemo",
         "description": "Restarted niraparib 1# qd",
         "regimen_or_test": "尼拉帕利",
-        "key_result": "Tolerated; currently continuing"
+        "key_result": "Maintenance resumed"
       },
       {
         "date": "2022-06-24",
         "event_type": "Surgery",
-        "description": "Abdominal wall hernia repair at Zhongshan Hospital; niraparib held 3 weeks around surgery",
-        "regimen_or_test": "Hernia repair",
-        "key_result": "Postoperative state"
+        "description": "Abdominal wall hernia repair at Zhongshan Hospital",
+        "regimen_or_test": "Surgery",
+        "key_result": "Niraparib held for 3 weeks around surgery"
       },
       {
         "date": "2022-09-27",
         "event_type": "Imaging",
-        "description": "CT chest/abdomen",
+        "description": "CT chest/abdomen showing small bilateral pleural effusions improved; pulmonary AV fistula and nodules similar to prior",
         "regimen_or_test": "CT",
-        "key_result": "Small bilateral pleural effusions decreased; chronic lung changes; pulmonary AVM and nodules stable"
+        "key_result": "No new malignant findings reported; abdominal details deferred"
       },
       {
         "date": "2022-10-08",
         "event_type": "Imaging",
-        "description": "CT abdomen",
+        "description": "CT showing liver segment VII hemangioma and left renal cyst, stable",
         "regimen_or_test": "CT",
-        "key_result": "Liver hemangioma in segment VII, left renal cyst, lumbar bone sclerosis unchanged"
+        "key_result": "No new findings; chest to correlate with other exams"
       },
       {
         "date": "2022-10-25",
         "event_type": "Imaging",
-        "description": "Pelvic MRI post ovarian cancer surgery",
+        "description": "Pelvic MRI after ovarian cancer surgery",
         "regimen_or_test": "MR",
-        "key_result": "No abnormal pelvic soft tissue; follow-up advised"
+        "key_result": "No abnormal soft tissue in pelvis; follow-up recommended"
       },
       {
         "date": "2022-12-30",
         "event_type": "Imaging",
-        "description": "Evaluation at Zhongshan Hospital",
-        "regimen_or_test": "CT or other imaging",
-        "key_result": "Incisional hernia, low-density lesion in right liver lobe; blood, liver and kidney function generally acceptable"
+        "description": "Zhongshan Hospital evaluation: incisional hernia, low-density lesion in right liver lobe",
+        "regimen_or_test": "Imaging",
+        "key_result": "Blood count and liver/kidney function generally acceptable"
+      },
+      {
+        "date": "2023-01-09",
+        "event_type": "Lab",
+        "description": "Recent blood routine showed platelet count 34 (year not fully specified)",
+        "regimen_or_test": "Blood routine",
+        "key_result": "PLT:34 (interpreted from 'PLT:342022.5.23起恢复', year unclear)"
       }
     ],
     "constraints": {
@@ -388,7 +372,7 @@ EXTRACTED JSON
     "current_regimen": {
       "name": "尼拉帕利",
       "last_admin_date": "Unknown",
-      "cycle_info": "Continuous oral maintenance; temporarily stopped 3 weeks around hernia repair"
+      "cycle_info": "Continuous oral maintenance; temporarily stopped 2022-04-26 and around 2022-06-24 surgery; currently continuing"
     },
     "planned_next_regimen": "Unknown",
     "prior_systemic_therapies": [
@@ -405,8 +389,7 @@ EXTRACTED JSON
       {
         "drug_or_class": "尼拉帕利",
         "monitoring": [
-          "Monitor platelet count due to prior thrombocytopenia",
-          "Monitor for abdominal pain and distension"
+          "Monitor platelet count due to prior thrombocytopenia"
         ]
       }
     ]
@@ -417,20 +400,20 @@ EXTRACTED JSON
         "date": "2022-09-27",
         "modality": "CT",
         "anatomic_sites": [
-          "Chest",
-          "Lungs",
-          "Pleural cavities"
+          "Lung",
+          "Pleura",
+          "Chest"
         ],
         "findings": [
           "Right upper lung arteriovenous fistula similar to prior",
-          "Right upper lung apical small nodule similar to prior",
+          "Right upper lung apical segment small nodule similar to prior",
           "Left upper lung scattered tiny nodules",
-          "Small bilateral pleural effusions decreased",
-          "Scattered chronic inflammatory and fibrotic lung changes",
-          "Lobar atelectasis improved",
-          "Right cardiophrenic angle nodule less conspicuous"
+          "Small bilateral pleural effusions decreased compared with prior",
+          "Scattered chronic inflammatory and fibrotic changes in lungs",
+          "Atelectasis improved",
+          "Nodule at right cardiophrenic angle less apparent"
         ],
-        "impression": "Chronic lung changes with small nodules and AVM; small pleural effusions improving; recommend correlation and follow-up",
+        "impression": "Pulmonary AV fistula and nodules unchanged; pleural effusions and atelectasis improved",
         "trend_vs_prior": "Improved"
       },
       {
@@ -439,14 +422,14 @@ EXTRACTED JSON
         "anatomic_sites": [
           "Liver",
           "Kidney",
-          "Lumbar spine"
+          "Spine"
         ],
         "findings": [
-          "Hemangioma in segment VII of right hepatic lobe unchanged",
-          "Left renal cyst unchanged",
-          "Localized heterogeneous dense bone in lumbar spine unchanged"
+          "Hemangioma in liver right lobe segment VII similar to prior",
+          "Left renal cyst similar to prior",
+          "Localized uneven sclerotic change in lumbar vertebrae similar to prior"
         ],
-        "impression": "Stable liver hemangioma, renal cyst, and lumbar bone changes; follow-up advised",
+        "impression": "Stable hemangioma and renal cyst; spinal sclerosis unchanged; chest findings to correlate with other exams",
         "trend_vs_prior": "Stable"
       },
       {
@@ -459,22 +442,8 @@ EXTRACTED JSON
           "Postoperative changes after ovarian cancer surgery",
           "No abnormal soft tissue mass in pelvis"
         ],
-        "impression": "No pelvic recurrence seen; follow-up recommended",
+        "impression": "No pelvic recurrence; follow-up recommended",
         "trend_vs_prior": "Stable"
-      },
-      {
-        "date": "2022-12-30",
-        "modality": "CT",
-        "anatomic_sites": [
-          "Abdominal wall",
-          "Liver"
-        ],
-        "findings": [
-          "Incisional hernia",
-          "Low-density lesion in right hepatic lobe"
-        ],
-        "impression": "Incisional hernia and hepatic low-density lesion; clinical correlation required",
-        "trend_vs_prior": "Unknown"
       }
     ],
     "next_imaging_plan": {
@@ -486,16 +455,15 @@ EXTRACTED JSON
     "specimens": [
       {
         "date": "2021-08-26",
-        "site": "Uterus, bilateral adnexa, pelvic mass, rectosigmoid colon, omentum, peritoneum, appendix, lymph nodes",
-        "diagnosis": "Adenocarcinoma consistent with high grade serous carcinoma",
+        "site": "Uterus, bilateral adnexa, pelvic mass, rectosigmoid colon, peritoneum, omentum, appendix, lymph nodes",
+        "diagnosis": "Adenocarcinoma consistent with high-grade serous carcinoma",
         "components": [
-          "Adenocarcinoma",
-          "High grade serous carcinoma",
-          "Smooth muscle leiomyoma",
+          "High-grade serous carcinoma",
+          "Myometrial leiomyomas",
           "Chronic cervicitis"
         ],
-        "grade": "High grade",
-        "tumor_size": "Left ovary: 3.5×2×1.5cm; Right ovary: 6×5.5×4.5cm",
+        "grade": "High-grade",
+        "tumor_size": "Left ovary 3.5×2×1.5cm; right ovary 6×5.5×4.5cm",
         "laterality": "Bilateral ovarian involvement",
         "sample_type": "Surgical resection",
         "involvement_sites": [
@@ -503,16 +471,16 @@ EXTRACTED JSON
           "Right ovary",
           "Left fallopian tube",
           "Right fallopian tube",
-          "Myometrium",
-          "Pelvic and abdominal cavity multiple lesions",
-          "Partial rectosigmoid colon from serosa to superficial muscle layer",
+          "Uterine myometrium",
+          "Pelvic and abdominal peritoneum",
+          "Partial rectosigmoid colon from serosa to superficial muscle",
           "Omentum",
-          "Peritoneum of left paracolic gutter",
-          "Small bowel mesentery tumor",
-          "Sigmoid mesentery tumor",
+          "Left paracolic gutter peritoneum",
+          "Small bowel mesentery",
+          "Sigmoid mesentery",
           "Appendiceal serosa",
           "Pelvic lymph nodes",
-          "Mesenteric lymph nodes below inferior mesenteric artery"
+          "Para-aortic and mesenteric lymph nodes (some positive)"
         ],
         "ihc": [],
         "molecular": [
@@ -521,10 +489,10 @@ EXTRACTED JSON
             "result": "Positive"
           }
         ],
-        "raw_text": "术后病理：标本类型:扩大子宫+双附件+巨大盆块+部分直乙结肠+盆腹腔多病灶肿瘤大小:左侧：3.5×2×1.5cm；右侧：6×5.5×4.5cm肿瘤侧别:双侧病理类型:腺癌，结合免疫组化结果（I2021-07819），符合高级别浆液性癌。其他部位情况:左输卵管:见癌累及右输卵管:见癌累及子宫内膜:萎缩改变宫颈:慢性炎子宫肌层:见癌累及；肌壁间平滑肌瘤（多枚，直径0.5-2cm）盆腹腔多部位病灶:（部分直乙结肠）见癌累及，自浆膜层浸润至浅肌层，肠管两切缘未见癌累及。（大网膜、大网膜及盆腔肿块、左侧结肠旁沟腹膜、小肠系膜肿瘤、乙状结肠系膜肿瘤）见癌累及.（阑尾及周围肿块） 浆膜层见癌累及。其他:送检淋巴结（6/24）见癌转移，其中：左盆腔淋巴结（1/4）；右盆腔淋巴结（3/8）；腹主肠系膜下方淋巴结（1/4）； 肠系膜下动脉上方淋巴结（1/2）；腹主动脉旁淋巴结（0/6） .",
+        "raw_text": "术后病理：标本类型:扩大子宫+双附件+巨大盆块+部分直乙结肠+盆腹腔多病灶肿瘤大小:左侧：3.5×2×1.5cm；右侧：6×5.5×4.5cm肿瘤侧别:双侧病理类型:腺癌，结合免疫组化结果（I2021-07819），符合高级别浆液性癌。其他部位情况:左输卵管:见癌累及右输卵管:见癌累及子宫内膜:萎缩改变宫颈:慢性炎子宫肌层:见癌累及；肌壁间平滑肌瘤（多枚，直径0.5-2cm）盆腹腔多部位病灶:（部分直乙结肠）见癌累及，自浆膜层浸润至浅肌层，肠管两切缘未见癌累及。（大网膜、大网膜及盆腔肿块、左侧结肠旁沟腹膜、小肠系膜肿瘤、乙状结肠系膜肿瘤）见癌累及.（阑尾及周围肿块） 浆膜层见癌累及。其他:送检淋巴结（6/24）见癌转移，其中：左盆腔淋巴结（1/4）；右盆腔淋巴结（3/8）；腹主肠系膜下方淋巴结（1/4）； 肠系膜下动脉上方淋巴结（1/2）；腹主动脉旁淋巴结（0/6）。",
         "uncertainty_or_missing": [
-          "FIGO stage not explicitly documented",
-          "Margins status for all sites not fully detailed"
+          "FIGO stage not provided",
+          "IHC panel details not provided"
         ]
       }
     ]
@@ -539,38 +507,15 @@ EXTRACTED JSON
         "unit": "Unknown",
         "reference_range": "Unknown",
         "latest": {
-          "date": "2022-12-30",
-          "value": "Blood routine generally acceptable",
-          "flag": "Unknown"
+          "date": "2022-04-18",
+          "value": "PLT:33",
+          "flag": "↓"
         },
         "history": [
           {
             "date": "2022-04-18",
-            "value": "PLT 33",
-            "flag": "↑"
-          },
-          {
-            "date": "2022-12-30",
-            "value": "Blood routine generally acceptable",
-            "flag": "Unknown"
-          }
-        ]
-      },
-      {
-        "analyte": "Other",
-        "unit": "Unknown",
-        "reference_range": "Unknown",
-        "latest": {
-          "date": "2022-12-30",
-          "value": "Liver and kidney function generally acceptable",
-          "flag": "Unknown",
-          "": ""
-        },
-        "history": [
-          {
-            "date": "2022-12-30",
-            "value": "Liver and kidney function generally acceptable",
-            "flag": "Unknown"
+            "value": "PLT:33",
+            "flag": "↓"
           }
         ]
       }
@@ -584,42 +529,27 @@ EXTRACTED JSON
       {
         "date": "2021-10-18",
         "type": "ChemoStart",
-        "description": "Start TP chemotherapy"
+        "description": "Started TP chemotherapy"
       },
       {
         "date": "2022-03-22",
         "type": "ChemoEnd",
-        "description": "End of TP chemotherapy"
+        "description": "Completed TP chemotherapy"
       },
       {
         "date": "2022-04-18",
         "type": "Other",
-        "description": "Severe thrombocytopenia, PLT 33"
-      },
-      {
-        "date": "2022-05-23",
-        "type": "Other",
-        "description": "Restarted niraparib maintenance"
-      },
-      {
-        "date": "2022-10-25",
-        "type": "Imaging",
-        "description": "Pelvic MRI showing no recurrence"
-      },
-      {
-        "date": "2022-12-30",
-        "type": "Imaging",
-        "description": "Zhongshan Hospital imaging: incisional hernia, hepatic low-density lesion"
+        "description": "Thrombocytopenia (PLT 33) on blood routine"
       }
     ]
   },
   "TOXICITIES": [
     {
-      "toxicity": "Thrombocytopenia",
+      "toxicity": "Strong adverse reaction to niraparib with thrombocytopenia (PLT 33)",
       "severity": "Severe",
       "attribution": "Probable",
       "related_regimen": "尼拉帕利",
-      "related_line": "Unknown",
+      "related_line": "1L",
       "onset_date": "2022-04-18",
       "outcome": "Resolved",
       "dose_modification": "Yes"

@@ -5,9 +5,9 @@
     "text": "f See Principles of Systemic Therapy (OV-C) and Management of Drug Reactions (OV-D).\ng If not previously done, consider surgical staging and resection of residual disease (OV-3).\nh If not previously done, consider germline and somatic testing (OV-B).\ni Germline and somatic BRCA1/2 status informs maintenance therapy. In the absence of a BRCA1/2 mutation, HRD status may provide information on the magnitude\nof benefit of PARPi therapy. For PARPi therapy in advanced stage disease, include measure of HR (OV-B).\nj Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.\nPrinted by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.",
     "metadata": {
       "rank": 5,
-      "score": 0.6238511800765991
+      "score": 0.6380085349082947
     },
-    "cached_at": "2026-01-21T17:35:36.171218"
+    "cached_at": "2026-01-22T18:38:34.539994"
   },
   "esmo_cpg_epithelialovarian_2023__v00000000|10": {
     "doc_id": "esmo_cpg_epithelialovarian_2023__v00000000",
@@ -25,19 +25,19 @@
     "text": "cytoreduction\no Residual ChT toxicity\no The patient’s general condition and preferences\n\u0004 Patients with ﬁrst relapse of ovarian cancer after >6\nmonths of last platinum administration should be evalu-\nated by a gynaecological oncology centre experienced in\nsurgery for ovarian cancer to identify potential candi-\ndates for surgical cytoreduction [I, A].\n\u0004 Patients who have previously responded to platinum\nwithout early symptomatic relapse should be treated\nwith either a platinum-based doublet (PLD, gemcitabine\nor paclitaxel) with bevacizumab [I, A; carboplatine\ngemcitabineebevacizumab ESMO-MCBS v1.1 score: 3]\nor a platinum-based doublet followed by maintenance\nwith PARPi therapy if a response is achieved and the\npatient has not been previously exposed to PARPis\n[I, A; olaparib for BRCA1/2-mutated: ESMO-MCBS v1.1\nscore: 2; niraparib regardless of BRCA1/2-mut status:\nESMO-MCBS v1.1 score: 3; rucaparib regardless of\nBRCA1/2-mut status: ESMO-MCBS v1.1 score: 3].\n\u0004 For patients requiring rapid response, the combination\nof a platinum-based doublet (PLD, gemcitabine or pacli-\ntaxel) with bevacizumab is preferred [V, A; carboplatine\ngemcitabineebevacizumab ESMO-MCBS v1.1 score: 3].",
     "metadata": {
       "rank": 5,
-      "score": 0.6331446766853333
+      "score": 0.6609175205230713
     },
-    "cached_at": "2026-01-22T07:02:53.298930"
+    "cached_at": "2026-01-22T18:33:22.334522"
   },
   "nccn_ovariancancer_v3_2025__v00000000|15": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 15,
     "text": "based chemotherapy,n\npreferred for first\nrecurrence (category 1)\nor\nRecurrence therapyn,kk\nand/or\nBest supportive care\n(See NCCN Guidelines\nfor Palliative Care)\nConsider\nsecondary\ncytoreductive\nsurgeryj,k\nImmediate platinum-based\nrecurrence therapyn (category 2B)\nand/or\nBest supportive care (See NCCN\nGuidelines for Palliative Care)\nRECURRENCE THERAPY FOR PLATINUM-SENSITIVE DISEASEn,gg,hh,ii\nMaintenance therapy (if PR or CR)\n• Useful in certain circumstances:\n\u0017Continue bevacizumab if previously\ntreated with chemotherapy +\nbevacizumab;\nor\n\u0017PARPi therapy (for those with BRCA\n1/2 mutation)ll:\n ◊If not previously used (category 1)\n ◊If disease has not progressed\nduring prior PARPi treatment\nor\nObserve\ngg Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.\nhh During and after treatment for recurrence, patients should be evaluated as indicated with\ntumor markers and repeat imaging (with modalities previously used) to document response\nand/or disease status.\nii Ancillary Palliative Surgical Procedures (OV-A 4 of 4).\nkk Localized RT can be considered to palliate symptoms and/or for oligometastatic disease.",
     "metadata": {
-      "rank": 4,
-      "score": 0.6163729429244995
+      "rank": 2,
+      "score": 0.6544389128684998
     },
-    "cached_at": "2026-01-22T07:17:50.080406"
+    "cached_at": "2026-01-22T18:38:34.530525"
   },
   "nccn_ovariancancer_v3_2025__v00000000|14": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
@@ -74,20 +74,20 @@
     "page": 7,
     "text": "A descriptive OS analysis of SOLO1 at 7-year follow-up60\nand the ﬁnal OS analysis of PAOLA-161 have shown a beneﬁt\nin OS for olaparib in patients with BRCA1/2-mutated tu-\nmours and olaparibebevacizumab in patients with HRD-\npositive tumours regardless of BRCA1/2-mut status (see\nSupplementary Material Section 3, available at https://doi.\norg/10.1016/j.annonc.2023.07.011).\nNon-high-grade serous advanced ovarian cancer. Pacli-\ntaxelecarboplatin is the standard systemic ChT used in\nLGSC, CCC and MC. Multiple retrospective studies, however,\nshowed lower response rates in these histotypes compared\nwith HGSC.62-64 Bevacizumab has shown activity in all his-\ntotypes including those less chemoresponsive, e.g. LGSC or\nCCC.49 The majority of LGSCs have high expression of es-\ntrogen receptor (ER) and progesterone receptor (PgR);\nretrospective studies suggest a possible therapeutic value of\nhormone therapy in the maintenance of newly diagnosed\nadvanced LGSC.65 This intervention is currently under\nevaluation in a prospective RCT (NCT04095364).\nRecommendations\n\u0004 Patients with advanced EOC should be evaluated for PCS\nby a specialised team, with the aim of achieving",
     "metadata": {
-      "rank": 3,
-      "score": 0.601442813873291
+      "rank": 5,
+      "score": 0.6541137099266052
     },
-    "cached_at": "2026-01-22T05:24:41.313816"
+    "cached_at": "2026-01-22T18:36:19.244577"
   },
   "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000|10": {
     "doc_id": "esgo_esmo_esp_consensus_ovariancancer_2024__v00000000",
     "page": 10,
     "text": "platinum-based ChT followed by niraparib or rucaparib if\nin CR/PR/NED [I, B].\nConsensus: 97% (35) yes, 0% (0) no, 3% (1) abstain (36\nvoters)\nRecommendation 13.9: When used as maintenance in\npatients in CR/PR/NED to platinum-based ChT, olaparib\n(alone or in combination with bevacizumab) and rucaparib\nare recommended for 2 years, and niraparib is recom-\nmended for 3 years [I, A].\nConsensus: 97% (34) yes, 0% (0) no, 3% (1) abstain (35\nvoters)\n14. How should older/frail patients with tubo-ovarian\ncarcinoma be investigated and treated?\nOlder patients are under-represented in clinical trials due\nto their poor performance status (PS) and comorbidities,88\nand their outcomes are poorer.89 Geriatric assessment\ngathers information on functional, mental and nutritional\nstatus, emotional conditions and social support.90 Vulner-\nability scores have been validated in clinical trials.90,91\nSurgery, frequently carried out in an emergency context\nand in unspecialised centres, is often incomplete, with\nhigher\npost-operative\ncomplications.92\nChT\nmay\nbe\nunderutilised.93,94\nRecommendation 14.1: Patients should not be excluded\nfrom diagnostic procedures, clinical trials and speciﬁc",
     "metadata": {
-      "rank": 4,
-      "score": 0.6566630601882935
+      "rank": 1,
+      "score": 0.6699762940406799
     },
-    "cached_at": "2026-01-22T05:36:14.501687"
+    "cached_at": "2026-01-22T18:36:19.231162"
   },
   "esgo_eshre_esge_fertilitysparing_pocket_2025__v00000000|17": {
     "doc_id": "esgo_eshre_esge_fertilitysparing_pocket_2025__v00000000",
@@ -182,22 +182,22 @@
   "esmo_cpg_epithelialovarian_2023__v00000000|8": {
     "doc_id": "esmo_cpg_epithelialovarian_2023__v00000000",
     "page": 8,
-    "text": "safety proﬁle, the combination of carboplatinePLD is\nconsidered the preferred option.75 If combination therapy is\ncontraindicated, carboplatin monotherapy remains an option.\nTreatment is usually recommended for four to six cycles.\nPlatinum hypersensitivity reactions (HSRs) affect w5% of\nthe general cancer population. Several outpatient-based\nplatinum ‘desensitisation’ protocols exist for gynaecological\noncology patients with HSRs that permit the successful re-\nintroduction of platinum-based therapy (carboplatin or\ncisplatin) after patients have experienced HSRs.76\nAnnals of Oncology\nA. González-Martín et al.\n840\nhttps://doi.org/10.1016/j.annonc.2023.07.011\nVolume 34",
+    "text": "MCBS v1.1 score: 4; ESMO Scale for Clinical Actionabil-\nity of molecular Targets (ESCAT) score: I-A], niraparib\nfor 3 years [ESMO-MCBS v1.1 score: 3; ESCAT score:\nI-A] or olaparibebevacizumab for 2 years [ESMO-\nMCBS v1.1 score: 3; ESCAT score: I-A].\no For BRCA1/2-wt/HRD-positive: niraparib for 3 years\n[ESMO-MCBS v1.1 score: 3; ESCAT score: I-A] or\nolaparibebevacizumab for 2 years [ESMO-MCBS v1.1\nscore: 3; ESCAT score: I-A).\n\u0004 Maintenance treatment with either bevacizumab [I, A] or\nniraparib for 3 years [I, B; ESMO-MCBS v1.1 score: 3] can\nbe recommended for HRD-negative tumours, with the\nlatter\nfollowing\ncomplete\nor\npartial\nresponse\nto\nplatinumepaclitaxel ﬁrst-line ChT. The choice of treat-\nment should be based on disease and clinical character-\nistics of the patient.\n\u0004 Maintenance with anti-estrogen therapy after ﬁrst-line\nplatinum-based ChT can be considered in LGSC [IV, B].\nMANAGEMENT OF RECURRENT EOC\nPatient assessment\nUp to 70% of patients with stage III-IV high-grade ovarian\ncancer will relapse within 3 years. Relapse rates for early-\nstage ovarian cancer are much lower.\nSeveral factors need to be assessed when selecting a",
     "metadata": {
       "rank": 4,
-      "score": 0.5864976048469543
+      "score": 0.6541700959205627
     },
-    "cached_at": "2026-01-22T03:01:18.225560"
+    "cached_at": "2026-01-22T18:36:19.241361"
   },
   "nccn_ovariancancer_v3_2025__v00000000|9": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
     "page": 9,
     "text": "Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nEpithelial Ovarian Cancer/Fallopian Tube Cancer/\nPrimary Peritoneal Cancer\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nIDS with completion\nhysterectomy/BSOj,k and\ncytoreduction. Consider\nHIPEC.j\nor\nContinue current therapy (for\na total of at least 6 cycles)n\nor\nTherapy for Persistent\nDisease or Recurrence (OV-7)\nOV-2\nf See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian, Pancreatic,\nand Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment: Colorectal,\nEndometrial, and Gastric.\ng Germline and somatic BRCA1/2 status informs maintenance therapy.\nh In the absence of a BRCA1/2 mutation, HRD status may provide information on the\nmagnitude of benefit of PARPi therapy. For PARPi therapy in advanced stage disease, include\nmeasure of HR (OV-B).\ni Evaluation by a gynecologic oncologist is recommended for:",
     "metadata": {
-      "rank": 5,
-      "score": 0.6054003834724426
+      "rank": 3,
+      "score": 0.6468763947486877
     },
-    "cached_at": "2026-01-22T07:37:48.581783"
+    "cached_at": "2026-01-22T18:38:34.533708"
   },
   "nccn_ovariancancer_v3_2025__v00000000|26": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
@@ -274,10 +274,10 @@
     "page": 12,
     "text": "Version 3.2025, 07/16/25 © 2025 National Comprehensive Cancer Network® (NCCN®), All rights reserved. NCCN Guidelines® and this illustration may not be reproduced in any form without the express written permission of NCCN.\nNote: All recommendations are category 2A unless otherwise indicated.\nNCCN Guidelines Version 3.2025\nEpithelial Ovarian Cancer/Fallopian Tube Cancer/\nPrimary Peritoneal Cancer\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nCRx/PR\nOV-5\nSTAGE II, III, IVw\nPOST PRIMARY TREATMENT\nHR\ndeficient\nHomologous\nrecombination (HR)\nproficient or status\nunknown\nOlaparib (category 1)\nor\nNiraparib (category 1)\nor\nRucaparib\nor\nObserve for select stage II disease with CR\nObserve (if CR)\nor\nNiraparib (HR deficient)\nor\nRucaparib\nor\nOlaparib (HR deficient) (category 2B)\nor\nTherapy for Persistent Disease or Recurrence (OV-7)\nMonitoring/\nFollow-up (OV-6)\nMonitoring/\nFollow-Up (OV-6)\nMAINTENANCE THERAPYh,n,y\nBevacizumab\nused as part\nof primary\ntherapy\nNo\nbevacizumab\nused during\nprimary\ntherapy\nGermline\nor somatic\nBRCA1/2\nmutation\nBRCA1/2\nwild-type or\nunknownh\nGermline\nor somatic\nBRCA1/2\nmutation\nBRCA1/2\nwild-type or\nunknownh\nBevacizumab + olaparib (category 1)\nor",
     "metadata": {
-      "rank": 1,
-      "score": 0.6107217669487
+      "rank": 3,
+      "score": 0.658991813659668
     },
-    "cached_at": "2026-01-22T07:37:48.560491"
+    "cached_at": "2026-01-22T18:36:19.238064"
   },
   "nccn_ovariancancer_v3_2025__v00000000|17": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
@@ -285,9 +285,9 @@
     "text": "i Germline and somatic BRCA1/2 status informs maintenance therapy. In the absence of a BRCA1/2 mutation, HRD status may provide information on the magnitude of\nbenefit of PARPi therapy. For PARPi therapy in advanced stage disease, include measure of HR (OV-B).\nj Data are limited on primary and maintenance therapy for recurrent/persistent LCOC.\nMONITORING/\nFOLLOW-UP\nMonitoring/\nFollow-up\n(including\ntumor testing)\nand\nRecurrence\ntherapyj\n(OV-6)\nIf known BRCA1/2\nmutation, consider\nmaintenance therapy\n(post-primary\ntherapy) (OV-5)\nPLEASE NOTE that use of this NCCN Content is governed by the End-User License Agreement, and you MAY NOT distribute this Content or use it with any artificial intelligence model or tool.\nPrinted by Yangyang Zhang on 11/25/2025 9:00:15 PM. Copyright © 2025 National Comprehensive Cancer Network, Inc. All Rights Reserved.",
     "metadata": {
       "rank": 1,
-      "score": 0.6245537400245667
+      "score": 0.660053014755249
     },
-    "cached_at": "2026-01-21T23:15:11.649918"
+    "cached_at": "2026-01-22T18:38:34.526833"
   },
   "nccn_ovariancancer_v3_2025__v00000000|7": {
     "doc_id": "nccn_ovariancancer_v3_2025__v00000000",
@@ -304,10 +304,10 @@
     "page": 8,
     "text": "management.\nc If there is concern for metastatic or disseminated disease.\nd Other tumor markers may include inhibin, beta-human chorionic gonadotropin (β-hCG), alpha-\nfetoprotein, lactate dehydrogenase (LDH), carcinoembryonic antigen (CEA), CA 19-9, and HE4.\nSee Discussion for usefulness of diagnostic tests.\ne Reconsider REI as clinically indicated once pathologic diagnosis is available.\nf See NCCN Guidelines for Genetic/Familial High-Risk Assessment: Breast, Ovarian, Pancreatic,\nand Prostate and NCCN Guidelines for Genetic/Familial High-Risk Assessment: Colorectal,\nEndometrial, and Gastric.\ng Germline and somatic BRCA1/2 status informs maintenance therapy.\nh In the absence of a BRCA1/2 mutation, homologous recombination deficiency (HRD) status may\nprovide information on the magnitude of benefit of PARP inhibitor (PARPi) therapy. For PARPi\ntherapy in advanced stage disease, include measure of homologous recombination (HR) (OV-B).\ni Evaluation by a gynecologic oncologist is recommended for:\n•\tAll patients with suspected ovarian malignancies; published data demonstrate that primary\nassessment and debulking by a gynecologic oncologist results in a survival advantage.",
     "metadata": {
-      "rank": 2,
-      "score": 0.6393094062805176
+      "rank": 4,
+      "score": 0.6417195796966553
     },
-    "cached_at": "2026-01-22T07:48:44.485581"
+    "cached_at": "2026-01-22T18:38:34.536803"
   },
   "esgo_ovariancancer_pocketguidelines_2025__v00000000|11": {
     "doc_id": "esgo_ovariancancer_pocketguidelines_2025__v00000000",
