@@ -43,6 +43,7 @@ Core extraction rules for gynecologic oncology EHR:
 | TOXICITIES | Only if explicitly mentioned with severity |
 | CLINICAL_TRIALS | Trial name, NCT ID, phase if mentioned |
 | DEMOGRAPHICS | Age if explicit; menopause status inferred from age/history; fertility preservation only if discussed |
+| VISIT_CONTEXT | Visit purpose, treatment goals, patient preferences (trial participation, aggressive treatment, QoL priority), current status (disease, symptoms, functional, QoL) |
 | FAMILY_HISTORY | First/second-degree relatives; prioritize BRCA/Lynch-related cancers; hereditary syndromes only if explicit |
 | MEDICAL_HISTORY | Comorbidities affecting treatment; prior malignancies; drug allergies; prior surgeries affecting planning |
 
@@ -80,7 +81,8 @@ Used during iterative refinement when review identifies fixable issues:
 ```
 CASE_CORE
 ├── DEMOGRAPHICS (age, age_at_diagnosis, menopause_status, fertility_preservation_*)
-├── VISIT_DATE, ECOG, PLATINUM_STATUS, SCENE
+├── VISIT_DATE, VISIT_CONTEXT (visit_purpose, treatment_goal, patient_preferences, current_status)
+├── ECOG, PLATINUM_STATUS, SCENE
 ├── DIAGNOSIS (primary, histology, site, laterality)
 ├── SURGERY_DONE, NEOADJUVANT, ADJUVANT_TREATMENT
 ├── LINE_OF_THERAPY[] (line, regimen, cycles, response_assessment, discontinuation)
