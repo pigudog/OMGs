@@ -44,6 +44,7 @@ Core extraction rules for gynecologic oncology EHR:
 | CLINICAL_TRIALS | Trial name, NCT ID, phase if mentioned |
 | DEMOGRAPHICS | Age if explicit; menopause status inferred from age/history; fertility preservation only if discussed |
 | FAMILY_HISTORY | First/second-degree relatives; prioritize BRCA/Lynch-related cancers; hereditary syndromes only if explicit |
+| MEDICAL_HISTORY | Comorbidities affecting treatment; prior malignancies; drug allergies; prior surgeries affecting planning |
 
 ### REFINE_INSTRUCTIONS
 
@@ -85,6 +86,7 @@ CASE_CORE
 ├── LINE_OF_THERAPY[] (line, regimen, cycles, response_assessment, discontinuation)
 ├── MAINTENANCE, RELAPSE
 ├── FAMILY_HISTORY (documented, relatives[], hereditary_syndrome_suspected)
+├── MEDICAL_HISTORY (comorbidities[], prior_malignancies[], allergies[], prior_surgeries[])
 ├── HRD, BRCA1, BRCA2 (legacy fields)
 ├── GENOMICS (testing_performed, HRD_STATUS, alterations[])
 └── BIOMARKERS

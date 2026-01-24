@@ -1,5 +1,5 @@
 {
-  "MASTER_INSTRUCTIONS": "EHR extraction engine for gynecologic oncology. Extract ONLY explicit facts from source text.\n\n[1] OUTPUT: Valid JSON only. Missing values = \"Unknown\". Empty arrays = []. Free-text <= 40 words (except PATHOLOGY.raw_text).\n\n[2] VERBATIM: Drug names, regimens, histology must be EXACTLY as source. English for free-text descriptions.\n\n[3] DATES: YYYY-MM-DD | YYYY-MM | YYYY | Unknown. Never invent.\n\n[4] LINE_OF_THERAPY: Verbatim regimen, cycles, response (CR/PR/SD/PD if stated), discontinuation reason, bevacizumab, trial enrollment.\n\n[5] GENOMICS [ESMO 2023]: HRD/BRCA inference rules:\n- BRCA1/BRCA2: \"Mutated\" if explicit mutation; \"Wildtype\" ONLY if explicit negative result; otherwise \"Unknown\".\n- HRD: \"Positive\"/\"Negative\" if explicit; otherwise \"Unknown\".\n- HRD is a phenotype, NOT a gene mutation.\n- Populate both GENOMICS section and legacy HRD/BRCA1/BRCA2 fields.\n\n[6] PLATINUM [GCIG 2011]: PFI thresholds: <=28d Refractory; 28-180d Resistant; >=180d Sensitive.\n\n[7] TOXICITIES: Extract ONLY if explicitly mentioned with severity/attribution.\n\n[8] CLINICAL_TRIALS: Extract trial name/NCT ID/phase if mentioned.\n\n[9] SCENE: Frontline > Maintenance > Platinum_sensitive/resistant > Non_epithelial.\n\n[10] DEMOGRAPHICS:\n- Age: Extract if explicitly stated. Use numeric value or \"Unknown\".\n- Menopause status: \"Postmenopausal\" if explicitly stated or inferred from age/history; \"Premenopausal\" if explicitly stated; otherwise \"Unknown\".\n- Fertility preservation: Extract only if explicitly mentioned or discussed in treatment planning context.\n\n[11] FAMILY_HISTORY:\n- Extract first-degree and second-degree relatives with cancer history.\n- Prioritize BRCA-related cancers (breast, ovarian, pancreatic, prostate) and Lynch-related cancers (colorectal, endometrial, ovarian).\n- Note suspected hereditary syndromes only if explicitly mentioned or strongly suggested by pattern.\n\nOUTPUT: Single JSON matching OUTPUT_SCHEMA.",
+  "MASTER_INSTRUCTIONS": "EHR extraction engine for gynecologic oncology. Extract ONLY explicit facts from source text.\n\n[1] OUTPUT: Valid JSON only. Missing values = \"Unknown\". Empty arrays = []. Free-text <= 40 words (except PATHOLOGY.raw_text).\n\n[2] VERBATIM: Drug names, regimens, histology must be EXACTLY as source. English for free-text descriptions.\n\n[3] DATES: YYYY-MM-DD | YYYY-MM | YYYY | Unknown. Never invent.\n\n[4] LINE_OF_THERAPY: Verbatim regimen, cycles, response (CR/PR/SD/PD if stated), discontinuation reason, bevacizumab, trial enrollment.\n\n[5] GENOMICS [ESMO 2023]: HRD/BRCA inference rules:\n- BRCA1/BRCA2: \"Mutated\" if explicit mutation; \"Wildtype\" ONLY if explicit negative result; otherwise \"Unknown\".\n- HRD: \"Positive\"/\"Negative\" if explicit; otherwise \"Unknown\".\n- HRD is a phenotype, NOT a gene mutation.\n- Populate both GENOMICS section and legacy HRD/BRCA1/BRCA2 fields.\n\n[6] PLATINUM [GCIG 2011]: PFI thresholds: <=28d Refractory; 28-180d Resistant; >=180d Sensitive.\n\n[7] TOXICITIES: Extract ONLY if explicitly mentioned with severity/attribution.\n\n[8] CLINICAL_TRIALS: Extract trial name/NCT ID/phase if mentioned.\n\n[9] SCENE: Frontline > Maintenance > Platinum_sensitive/resistant > Non_epithelial.\n\n[10] DEMOGRAPHICS:\n- Age: Extract if explicitly stated. Use numeric value or \"Unknown\".\n- Menopause status: \"Postmenopausal\" if explicitly stated or inferred from age/history; \"Premenopausal\" if explicitly stated; otherwise \"Unknown\".\n- Fertility preservation: Extract only if explicitly mentioned or discussed in treatment planning context.\n\n[11] FAMILY_HISTORY:\n- Extract first-degree and second-degree relatives with cancer history.\n- Prioritize BRCA-related cancers (breast, ovarian, pancreatic, prostate) and Lynch-related cancers (colorectal, endometrial, ovarian).\n- Note suspected hereditary syndromes only if explicitly mentioned or strongly suggested by pattern.\n\n[12] MEDICAL_HISTORY:\n- Comorbidities: Extract conditions that may affect treatment tolerance or surgical risk (e.g., hypertension, diabetes, cardiac disease, renal impairment). Include status (Active/Controlled/Resolved) if mentioned.\n- Prior malignancies: Extract only if explicitly mentioned. Include type, diagnosis date, treatment, and current status.\n- Allergies: Extract drug allergies and reactions. Critical for medication safety.\n- Prior surgeries: Extract non-oncologic surgeries that may affect current surgical planning (especially gynecologic procedures).\n\nOUTPUT: Single JSON matching OUTPUT_SCHEMA.",
   "REVIEW_INSTRUCTIONS": "You are an EHR extraction quality reviewer for gynecologic oncology.\nCheck the extracted JSON against the source text and identify concrete errors, omissions, or contradictions.\nOnly cite issues that are clearly supported by the text. Do NOT invent facts.\nReturn JSON only, matching REVIEW_SCHEMA. No extra text.",
   "REVIEW_SCHEMA": {
     "issues": [
@@ -125,6 +125,37 @@
         "hereditary_syndrome_suspected": "BRCA|Lynch|Li_Fraumeni|Cowden|Peutz_Jeghers|None|Unknown",
         "genetic_counseling_recommended": "Yes|No|Unknown",
         "notes": "string"
+      },
+      "MEDICAL_HISTORY": {
+        "comorbidities": [
+          {
+            "condition": "string",
+            "status": "Active|Controlled|Resolved|Unknown",
+            "impact_on_treatment": "string"
+          }
+        ],
+        "prior_malignancies": [
+          {
+            "type": "string",
+            "diagnosis_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+            "treatment": "string",
+            "status": "Cured|Active|Unknown"
+          }
+        ],
+        "allergies": [
+          {
+            "allergen": "string",
+            "reaction": "string",
+            "severity": "Mild|Moderate|Severe|Unknown"
+          }
+        ],
+        "prior_surgeries": [
+          {
+            "procedure": "string",
+            "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+            "site": "string"
+          }
+        ]
       },
       "HRD": "Positive|Negative|Unknown|Not applicable",
       "BRCA1": "Mutated|Wildtype|Unknown|Not applicable",
@@ -359,7 +390,7 @@
   },
   "FINAL_OUTPUT_REQUIREMENT": "Return exactly one JSON object with the top-level keys: CASE_CORE, TIMELINE, MED_ONC, RADIOLOGY, PATHOLOGY, NUC_MED, LAB_TRENDS, TOXICITIES, CLINICAL_TRIALS. Do not output MASTER_INSTRUCTIONS or OUTPUT_SCHEMA. Do not include any additional text.",
   "SCHEMA_METADATA": {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "date": "2026-01-23",
     "target_publication": "xxx",
     "references": {
