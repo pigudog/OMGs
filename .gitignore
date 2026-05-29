@@ -1,0 +1,32 @@
+# Local secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Runtime outputs
+tmp/
+output_answer/
+mdt_logs/
+api_trace.db
+omgs_engine_api_trace.db
+data/logs/
+
+# Local-only or restricted evidence assets
+files/lab_reports_summary.jsonl
+files/imaging_reports.jsonl
+files/pathology_reports.jsonl
+files/mutation_reports.jsonl
+files/all_trials_filtered.json
+files/nccn_ovarian_rules.json
+files/nccn_ovarian_matcher_rules.manual.json
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+.Rproj.user/

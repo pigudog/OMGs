@@ -1,0 +1,29 @@
+{
+  "data_files": {
+    "lab_reports": "files/lab_reports.example.jsonl",
+    "imaging_reports": "files/imaging_reports.example.jsonl",
+    "pathology_reports": "files/pathology_reports.example.jsonl",
+    "mutation_reports": "files/mutation_reports.example.jsonl"
+  },
+  "output_dirs": {
+    "output_answer": "output_answer",
+    "api_trace_db": "data/logs/omgs_api_trace.db"
+  },
+  "llm": {
+    "default_provider": "azure",
+    "providers": {
+      "azure": {
+        "api_key_env": "AZURE_OPENAI_API_KEY",
+        "endpoint_env": "AZURE_OPENAI_ENDPOINT"
+      },
+      "openai": {
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": "https://api.openai.com/v1"
+      },
+      "openrouter": {
+        "api_key_env": "OPENROUTER_API_KEY",
+        "base_url": "https://openrouter.ai/api/v1"
+      }
+    }
+  }
+}

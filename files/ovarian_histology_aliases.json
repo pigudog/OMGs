@@ -1,0 +1,497 @@
+{
+  "schema_version": "2",
+  "description": "Ovarian tumor histology alias table used by _clean_histology_for_query (src/omgs/products/omgs/mdt_core/servers/evidence_retrieval.py). Surface forms in Chinese (aliases_zh) and English abbreviations (aliases_en) found in pathology reports and clinical notes are mapped to NCCN-canonical English phrases used to seed guideline / PubMed RAG queries.",
+  "sources": [
+    "WHO Classification of Female Genital Tumours, 5th edition (2020) — https://whobluebooks.iarc.who.int/structures/female-genital-tumours/",
+    "NCCN Clinical Practice Guidelines in Oncology: Ovarian Cancer, including Fallopian Tube Cancer and Primary Peritoneal Cancer (consolidated guideline covering Epithelial Ovarian, Less Common Ovarian Cancers, Malignant Germ Cell Tumors, Malignant Sex Cord-Stromal Tumors, and Small Cell Carcinoma of the Ovary)"
+  ],
+  "usage_notes": [
+    "Matching is longest-alias-first: “高级别浆液性癌” wins over the shorter backstop “浆液性癌”.",
+    "aliases_zh matches are case-sensitive, substring over the raw input.",
+    "aliases_en matches are case-insensitive to accept HGSC / hgsc / HgSc equally.",
+    "canonical_en is used verbatim inside the RAG query string; lower-case wording aligns with typical NCCN / PubMed abstract casing.",
+    "english_term_whitelist drives the fallback ASCII-only branch: if an input already contains one of these, we strip non-ASCII instead of returning empty."
+  ],
+  "entries": [
+    {
+      "category": "epithelial_serous",
+      "canonical_en": "high-grade serous carcinoma",
+      "aliases_zh": ["高级别浆液性卵巢癌", "高级别浆液性癌"],
+      "aliases_en": ["HGSC"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "epithelial_serous",
+      "canonical_en": "low-grade serous carcinoma",
+      "aliases_zh": ["低级别浆液性卵巢癌", "低级别浆液性癌"],
+      "aliases_en": ["LGSC"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "epithelial_serous",
+      "canonical_en": "serous carcinoma",
+      "aliases_zh": ["浆液性乳头状囊腺癌", "浆液性囊腺癌", "浆液性癌"],
+      "reference": "WHO 2020 (historical naming retained as backstop)"
+    },
+    {
+      "category": "epithelial_serous_borderline",
+      "canonical_en": "serous borderline tumor, micropapillary variant",
+      "aliases_zh": ["微乳头型浆液性交界性肿瘤", "浆液性交界性肿瘤微乳头型"],
+      "aliases_en": ["SBT-MP", "micropapillary SBT"],
+      "reference": "WHO 2020 (behaves like non-invasive LGSC)"
+    },
+    {
+      "category": "epithelial_endometrioid",
+      "canonical_en": "endometrioid carcinoma",
+      "aliases_zh": ["子宫内膜样腺癌", "子宫内膜样癌"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "epithelial_endometrioid",
+      "canonical_en": "endometrioid borderline tumor",
+      "aliases_zh": ["子宫内膜样交界性肿瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "epithelial_clear_cell",
+      "canonical_en": "clear cell carcinoma",
+      "aliases_zh": ["透明细胞腺癌", "透明细胞癌"],
+      "aliases_en": ["OCCC"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "epithelial_clear_cell",
+      "canonical_en": "clear cell borderline tumor",
+      "aliases_zh": ["透明细胞交界性肿瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "epithelial_mucinous",
+      "canonical_en": "mucinous carcinoma",
+      "aliases_zh": ["黏液性囊腺癌", "粘液性囊腺癌", "黏液性癌", "粘液性癌"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "epithelial_seromucinous",
+      "canonical_en": "seromucinous carcinoma",
+      "aliases_zh": ["浆黏液性癌", "浆粘液性癌"],
+      "reference": "WHO 2020 (reclassified as endometrioid subtype; historical term still common)"
+    },
+    {
+      "category": "epithelial_seromucinous",
+      "canonical_en": "seromucinous borderline tumor",
+      "aliases_zh": ["浆黏液性交界性肿瘤", "浆粘液性交界性肿瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "epithelial_brenner",
+      "canonical_en": "malignant Brenner tumor",
+      "aliases_zh": ["恶性布伦纳瘤", "恶性Brenner瘤"],
+      "reference": "WHO 2020; NCCN Ovarian (Less Common Ovarian Cancers)"
+    },
+    {
+      "category": "epithelial_brenner",
+      "canonical_en": "borderline Brenner tumor",
+      "aliases_zh": ["交界性布伦纳瘤", "交界性Brenner瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "epithelial_transitional",
+      "canonical_en": "transitional cell carcinoma",
+      "aliases_zh": ["移行细胞癌"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "epithelial_undifferentiated",
+      "canonical_en": "undifferentiated carcinoma",
+      "aliases_zh": ["未分化癌"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "epithelial_dedifferentiated",
+      "canonical_en": "dedifferentiated carcinoma",
+      "aliases_zh": ["去分化癌"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "epithelial_mesonephric_like",
+      "canonical_en": "mesonephric-like adenocarcinoma",
+      "aliases_zh": ["中肾管样腺癌", "中肾管样癌"],
+      "reference": "WHO 2020 (new entity)"
+    },
+    {
+      "category": "epithelial_carcinosarcoma",
+      "canonical_en": "carcinosarcoma (malignant mixed Mullerian tumor)",
+      "aliases_zh": ["恶性苗勒管混合瘤", "恶性米勒管混合瘤"],
+      "aliases_en": ["MMMT"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "epithelial_carcinosarcoma",
+      "canonical_en": "carcinosarcoma",
+      "aliases_zh": ["癌肉瘤"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "epithelial_mixed",
+      "canonical_en": "mixed epithelial carcinoma",
+      "aliases_zh": ["混合性上皮癌", "混合型上皮癌"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "origin_peritoneum",
+      "canonical_en": "primary peritoneal carcinoma",
+      "aliases_zh": ["原发性腹膜癌"],
+      "reference": "NCCN Ovarian (same pathway as HGSC)"
+    },
+    {
+      "category": "origin_peritoneum",
+      "canonical_en": "primary peritoneal serous carcinoma",
+      "aliases_zh": ["腹膜浆液性癌"],
+      "reference": "NCCN Ovarian"
+    },
+    {
+      "category": "origin_fallopian_tube",
+      "canonical_en": "fallopian tube serous carcinoma",
+      "aliases_zh": ["输卵管浆液性癌"],
+      "reference": "NCCN Ovarian"
+    },
+    {
+      "category": "origin_fallopian_tube",
+      "canonical_en": "fallopian tube carcinoma",
+      "aliases_zh": ["输卵管癌"],
+      "reference": "NCCN Ovarian"
+    },
+    {
+      "category": "borderline",
+      "canonical_en": "serous borderline tumor",
+      "aliases_zh": ["交界性浆液性肿瘤"],
+      "aliases_en": ["SBT"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "borderline",
+      "canonical_en": "mucinous borderline tumor",
+      "aliases_zh": ["交界性黏液性肿瘤", "交界性粘液性肿瘤"],
+      "aliases_en": ["MBT"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "borderline",
+      "canonical_en": "borderline tumor",
+      "aliases_zh": ["低度恶性潜能肿瘤", "交界性肿瘤"],
+      "aliases_en": ["LMP"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "mesenchymal",
+      "canonical_en": "ovarian leiomyosarcoma",
+      "aliases_zh": ["卵巢平滑肌肉瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "mesenchymal",
+      "canonical_en": "ovarian leiomyoma",
+      "aliases_zh": ["卵巢平滑肌瘤"],
+      "reference": "WHO 2020 (benign)"
+    },
+    {
+      "category": "mesenchymal",
+      "canonical_en": "endometrioid stromal sarcoma of the ovary",
+      "aliases_zh": ["卵巢子宫内膜样间质肉瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "mesenchymal",
+      "canonical_en": "adenosarcoma of the ovary",
+      "aliases_zh": ["卵巢腺肉瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "mesenchymal",
+      "canonical_en": "ovarian myxoma",
+      "aliases_zh": ["卵巢黏液瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "adult granulosa cell tumor",
+      "aliases_zh": ["成人型颗粒细胞瘤"],
+      "aliases_en": ["AGCT"],
+      "reference": "WHO 2020; NCCN Ovarian (Sex Cord-Stromal subsection)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "juvenile granulosa cell tumor",
+      "aliases_zh": ["幼年型颗粒细胞瘤"],
+      "aliases_en": ["JGCT"],
+      "reference": "WHO 2020; NCCN Ovarian (Sex Cord-Stromal subsection)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "granulosa cell tumor",
+      "aliases_zh": ["颗粒细胞瘤"],
+      "reference": "WHO 2020; NCCN Ovarian (Sex Cord-Stromal subsection)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "Sertoli-Leydig cell tumor",
+      "aliases_zh": ["支持-间质细胞瘤", "支持间质细胞瘤"],
+      "reference": "WHO 2020; NCCN Ovarian (Sex Cord-Stromal subsection)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "Sertoli cell tumor",
+      "aliases_zh": ["支持细胞瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "Leydig cell tumor",
+      "aliases_zh": ["Leydig细胞瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "steroid cell tumor",
+      "aliases_zh": ["类固醇细胞瘤"],
+      "reference": "WHO 2020; NCCN Ovarian (Sex Cord-Stromal subsection)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "sex cord-stromal tumor",
+      "aliases_zh": ["性索间质肿瘤"],
+      "reference": "WHO 2020; NCCN Ovarian (Sex Cord-Stromal subsection; backstop)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "ovarian fibroma",
+      "aliases_zh": ["卵巢纤维瘤"],
+      "reference": "WHO 2020 (benign)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "cellular fibroma",
+      "aliases_zh": ["富细胞性纤维瘤", "富于细胞的纤维瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "thecoma",
+      "aliases_zh": ["卵泡膜细胞瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "luteinized thecoma associated with sclerosing peritonitis",
+      "aliases_zh": ["伴硬化性腹膜炎的黄素化卵泡膜细胞瘤", "黄素化卵泡膜细胞瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "sclerosing stromal tumor",
+      "aliases_zh": ["硬化性间质瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "microcystic stromal tumor",
+      "aliases_zh": ["微囊性间质瘤"],
+      "reference": "WHO 2020 (new entity; CTNNB1/APC driven)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "signet-ring stromal tumor",
+      "aliases_zh": ["印戒细胞间质瘤", "印戒间质瘤"],
+      "aliases_en": ["SRST"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "sex cord tumor with annular tubules",
+      "aliases_zh": ["环状小管性索肿瘤"],
+      "aliases_en": ["SCTAT"],
+      "reference": "WHO 2020 (associated with Peutz-Jeghers syndrome)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "gynandroblastoma",
+      "aliases_zh": ["两性母细胞瘤"],
+      "reference": "WHO 2020 (reintroduced in 5th edition)"
+    },
+    {
+      "category": "sex_cord_stromal",
+      "canonical_en": "ovarian fibrosarcoma",
+      "aliases_zh": ["卵巢纤维肉瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "mixed germ cell tumor",
+      "aliases_zh": ["混合性生殖细胞肿瘤"],
+      "reference": "WHO 2020; NCCN Ovarian (Germ Cell subsection)"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "mature teratoma",
+      "aliases_zh": ["成熟畸胎瘤", "成熟性囊性畸胎瘤", "皮样囊肿"],
+      "reference": "WHO 2020 (benign; a.k.a. dermoid cyst)"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "immature teratoma",
+      "aliases_zh": ["未成熟畸胎瘤"],
+      "reference": "WHO 2020; NCCN Ovarian (Germ Cell subsection)"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "teratoma with malignant transformation",
+      "aliases_zh": ["畸胎瘤恶变", "畸胎瘤伴恶性转化", "畸胎瘤恶性转化"],
+      "reference": "WHO 2020; NCCN Ovarian (somatic-type tumor arising from dermoid)"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "embryonal carcinoma",
+      "aliases_zh": ["胚胎性癌", "胚胎癌"],
+      "reference": "WHO 2020; NCCN Ovarian (Germ Cell subsection)"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "dysgerminoma",
+      "aliases_zh": ["无性细胞瘤"],
+      "reference": "WHO 2020; NCCN Ovarian (Germ Cell subsection)"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "yolk sac tumor",
+      "aliases_zh": ["卵黄囊瘤", "内胚窦瘤"],
+      "aliases_en": ["YST"],
+      "reference": "WHO 2020; NCCN Ovarian (Germ Cell subsection)"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "non-gestational choriocarcinoma",
+      "aliases_zh": ["非妊娠性绒毛膜癌"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "choriocarcinoma",
+      "aliases_zh": ["绒毛膜癌"],
+      "reference": "WHO 2020; NCCN Ovarian (Germ Cell subsection)"
+    },
+    {
+      "category": "germ_cell",
+      "canonical_en": "germ cell tumor",
+      "aliases_zh": ["生殖细胞肿瘤"],
+      "reference": "WHO 2020; NCCN Ovarian (Germ Cell subsection; backstop)"
+    },
+    {
+      "category": "germ_cell_monodermal",
+      "canonical_en": "malignant struma ovarii",
+      "aliases_zh": ["恶性卵巢甲状腺肿"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "germ_cell_monodermal",
+      "canonical_en": "struma ovarii",
+      "aliases_zh": ["卵巢甲状腺肿"],
+      "reference": "WHO 2020 (monodermal teratoma)"
+    },
+    {
+      "category": "germ_cell_monodermal",
+      "canonical_en": "strumal carcinoid",
+      "aliases_zh": ["甲状腺肿类癌"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "germ_cell_monodermal",
+      "canonical_en": "ovarian carcinoid",
+      "aliases_zh": ["卵巢类癌"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "germ_cell_sex_cord_stromal",
+      "canonical_en": "gonadoblastoma",
+      "aliases_zh": ["性腺母细胞瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "germ_cell_sex_cord_stromal",
+      "canonical_en": "mixed germ cell-sex cord-stromal tumor",
+      "aliases_zh": ["混合性生殖细胞-性索间质肿瘤", "混合生殖细胞性索间质肿瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "small_cell_ovary",
+      "canonical_en": "small cell carcinoma of the ovary, hypercalcemic type",
+      "aliases_zh": ["卵巢小细胞癌高钙型"],
+      "aliases_en": ["SCCOHT"],
+      "reference": "WHO 2020 (SMARCA4-deficient); NCCN Ovarian (Less Common Ovarian Cancers)"
+    },
+    {
+      "category": "small_cell_ovary",
+      "canonical_en": "small cell carcinoma of the ovary, pulmonary type",
+      "aliases_zh": ["卵巢小细胞癌肺型"],
+      "reference": "WHO 2020; NCCN Ovarian"
+    },
+    {
+      "category": "small_cell_ovary",
+      "canonical_en": "small cell carcinoma of the ovary",
+      "aliases_zh": ["卵巢小细胞癌"],
+      "reference": "WHO 2020; NCCN Ovarian (backstop)"
+    },
+    {
+      "category": "miscellaneous",
+      "canonical_en": "solid pseudopapillary tumor",
+      "aliases_zh": ["实性假乳头状肿瘤"],
+      "aliases_en": ["SPT", "SPN"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "miscellaneous",
+      "canonical_en": "Wolffian tumor of the ovary",
+      "aliases_zh": ["Wolffian管肿瘤", "中肾管肿瘤"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "miscellaneous",
+      "canonical_en": "rete adenocarcinoma of the ovary",
+      "aliases_zh": ["卵巢网腺癌"],
+      "reference": "WHO 2020"
+    },
+    {
+      "category": "metastasis_to_ovary",
+      "canonical_en": "Krukenberg tumor",
+      "aliases_zh": ["库肯勃瘤", "Krukenberg瘤", "印戒细胞转移癌"],
+      "reference": "WHO 2020 (metastasis to ovary, typically GI signet-ring)"
+    },
+    {
+      "category": "metastasis_to_ovary",
+      "canonical_en": "metastatic carcinoma to the ovary",
+      "aliases_zh": ["卵巢转移癌", "转移至卵巢"],
+      "reference": "WHO 2020 (generic backstop for ovarian metastases)"
+    }
+  ],
+  "english_term_whitelist": [
+    "carcinoma", "cancer", "adenocarcinoma",
+    "high-grade serous", "low-grade serous", "hgsc", "lgsc", "occc",
+    "serous", "endometrioid", "clear cell", "mucinous", "seromucinous",
+    "brenner", "transitional cell", "undifferentiated", "dedifferentiated",
+    "mesonephric", "mullerian", "müllerian", "mmmt",
+    "fallopian tube", "peritoneal",
+    "borderline", "low malignant potential", "lmp", "sbt", "mbt",
+    "granulosa", "sertoli", "leydig", "sex cord", "steroid cell",
+    "fibroma", "thecoma", "luteinized",
+    "sclerosing stromal", "microcystic stromal", "signet-ring stromal", "srst",
+    "annular tubules", "sctat", "gynandroblastoma", "fibrosarcoma",
+    "germ cell", "dysgerminoma", "yolk sac", "endodermal sinus", "yst",
+    "teratoma", "dermoid", "embryonal", "choriocarcinoma",
+    "struma ovarii", "strumal carcinoid", "carcinoid",
+    "gonadoblastoma",
+    "small cell", "sccoht", "hypercalcemic",
+    "solid pseudopapillary", "wolffian", "rete",
+    "krukenberg", "metastatic",
+    "leiomyosarcoma", "leiomyoma", "adenosarcoma", "stromal sarcoma", "myxoma"
+  ]
+}

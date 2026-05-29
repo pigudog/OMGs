@@ -1,0 +1,437 @@
+{
+  "MASTER_INSTRUCTIONS": "EHR extraction engine for gynecologic oncology. Extract ONLY explicit facts from source text.\n\n[1] OUTPUT: Valid JSON only. Missing values = \"Unknown\". Empty arrays = []. Free-text <= 40 words (except PATHOLOGY.raw_text).\n\n[2] VERBATIM: Drug names, regimens, histology must be EXACTLY as source. English for free-text descriptions.\n\n[3] DATES: YYYY-MM-DD | YYYY-MM | YYYY | Unknown. Never invent.\n\n[4] LINE_OF_THERAPY: Verbatim regimen, cycles, response (CR/PR/SD/PD if stated), discontinuation reason, bevacizumab, trial enrollment.\n\n[5] GENOMICS [ESMO 2023]: HRD/BRCA inference rules:\n- BRCA1/BRCA2: \"Mutated\" if explicit mutation; \"Wildtype\" ONLY if explicit negative result; otherwise \"Unknown\".\n- HRD: \"Positive\"/\"Negative\" if explicit; otherwise \"Unknown\".\n- HRD is a phenotype, NOT a gene mutation.\n- Populate both the GENOMICS section and top-level HRD/BRCA1/BRCA2 fields.\n\n[6] PLATINUM [GCIG 2011]: PFI thresholds: <=28d Refractory; 28-180d Resistant; >=180d Sensitive.\n\n[7] MED_ONC.TOXICITIES: Extract ONLY if explicitly mentioned with severity/attribution.\n\n[8] MED_ONC.CLINICAL_TRIALS: Extract trial name/NCT ID/phase if mentioned.\n\n[9] DEMOGRAPHICS:\n- Age: Extract if explicitly stated. Use numeric value or \"Unknown\".\n- Menopause status: \"Postmenopausal\" if explicitly stated or inferred from age/history; \"Premenopausal\" if explicitly stated; otherwise \"Unknown\".\n- Fertility preservation: Extract only if explicitly mentioned or discussed in treatment planning context.\n\n[10] FAMILY_HISTORY:\n- Extract first-degree and second-degree relatives with cancer history.\n- Prioritize BRCA-related cancers (breast, ovarian, pancreatic, prostate) and Lynch-related cancers (colorectal, endometrial, ovarian).\n- Note suspected hereditary syndromes only if explicitly mentioned or strongly suggested by pattern.\n\n[11] MEDICAL_HISTORY:\n- Comorbidities: Extract conditions that may affect treatment tolerance or surgical risk (e.g., hypertension, diabetes, cardiac disease, renal impairment). Include status (Active/Controlled/Resolved) if mentioned.\n- Prior malignancies: Extract only if explicitly mentioned. Include type, diagnosis date, treatment, and current status.\n- Allergies: Extract drug allergies and reactions. Critical for medication safety.\n- Prior surgeries: Extract non-oncologic surgeries that may affect current surgical planning (especially gynecologic procedures).\n\n[12] VISIT_CONTEXT:\n- Visit purpose: Extract the primary reason for this visit (e.g., treatment evaluation, adjustment, symptom management, surveillance).\n- Treatment goal: Extract explicit clinical intent, MDT decision aim, or patient-stated care goal as concise free text; use \"Unknown\" if absent.\n- Patient preferences: Extract only if explicitly stated: trial participation willingness, aggressive treatment acceptance, QoL priority, palliative care acceptance.\n- Current status: Extract disease status (stable/progression/response), symptom burden, functional status beyond ECOG, and quality of life assessment if mentioned.\n\n[13] TIMELINE.event_type taxonomy:\n- Use Maintenance for maintenance-intent therapy after response/stable disease, including PARP inhibitor or bevacizumab maintenance. Do not label maintenance PARP or anti-VEGF as Targeted therapy unless the source frames it as active non-maintenance treatment.\n- Use Targeted therapy for non-maintenance targeted/ADC/anti-VEGF therapy.\n- Use Immunotherapy for checkpoint inhibitors or other immune-directed therapy.\n- Use Chemo for cytotoxic chemotherapy regimens.\n- Use Radiotherapy for radiation treatment.\n- Use Pathology for biopsy/surgical pathology events; use Biomarker testing for NGS, HRD/BRCA, FRalpha, HER2, PD-L1, MSI/TMB, or other treatment-selection marker testing.\n- Use Relapse when recurrence is newly detected after response/remission or a treatment-free/maintenance interval. Use Progression when known disease worsens on/soon after therapy or defines treatment failure/resistance.\n- Use Other only when none of the listed categories applies.\n\nOUTPUT: Single JSON matching OUTPUT_SCHEMA.",
+  "REVIEW_INSTRUCTIONS": "You are an EHR extraction quality reviewer for gynecologic oncology.\nCheck the extracted JSON against the source text and identify concrete errors, omissions, or contradictions.\nOnly cite issues that are clearly supported by the text. Do NOT invent facts.\nReturn JSON only, matching REVIEW_SCHEMA. No extra text.",
+  "REVIEW_SCHEMA": {
+    "issues": [
+      {
+        "severity": "critical|major|minor",
+        "field_path": "string",
+        "description": "string",
+        "evidence_snippet": "string",
+        "suggested_fix": "string"
+      }
+    ]
+  },
+  "REVIEWER_OUTPUT_REQUIREMENT": "Return exactly ONE JSON object matching REVIEWER_SCHEMA. No markdown. No extra text.",
+  "OUTPUT_SCHEMA": {
+    "CASE_CORE": {
+      "DEMOGRAPHICS": {
+        "age": "string",
+        "age_at_diagnosis": "string",
+        "menopause_status": "Premenopausal|Perimenopausal|Postmenopausal|Unknown",
+        "fertility_preservation_desired": "Yes|No|Unknown",
+        "fertility_preservation_discussed": "Yes|No|Unknown",
+        "fertility_preservation_method": "string"
+      },
+      "VISIT_DATE": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+      "VISIT_CONTEXT": {
+        "visit_purpose": "Treatment_evaluation|Treatment_adjustment|Symptom_management|Surveillance_followup|Pre_treatment_assessment|Other|Unknown",
+        "treatment_goal": "string",
+        "patient_preferences": {
+          "trial_participation_willing": "Yes|No|Unknown",
+          "aggressive_treatment_acceptable": "Yes|No|Unknown",
+          "quality_of_life_priority": "Yes|No|Unknown",
+          "palliative_care_acceptance": "Yes|No|Unknown",
+          "notes": "string"
+        },
+        "current_status": {
+          "disease_status": "Stable|Progression|Response|Remission|Unknown",
+          "symptom_burden": "None|Mild|Moderate|Severe|Unknown",
+          "functional_status": "Fully_active|Restricted|Ambulatory|Limited_self_care|Bedridden|Unknown",
+          "quality_of_life_assessment": "Excellent|Good|Fair|Poor|Unknown"
+        }
+      },
+      "ECOG": "0|1|2|3|4|5|Unknown",
+      "last_platinum_end_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+      "first_relapse_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+      "PFI_days": "string",
+      "PLATINUM_STATUS": "Refractory|Resistant|Sensitive|Unknown",
+      "PLATINUM_STATUS_CURRENT": "Refractory|Resistant|Sensitive|Unknown",
+      "PLATINUM_PFI_CURRENT": "string",
+      "PLATINUM_HISTORY": [
+        {
+          "line": "1L|2L|3L|4L+|Unknown",
+          "start_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "end_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "first_relapse_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "PFI_days": "string",
+          "status": "Refractory|Resistant|Sensitive|Unknown",
+          "evidence_type": "Biochemical|Radiologic|Clinical|Unknown",
+          "evidence": "string"
+        }
+      ],
+      "DIAGNOSIS": {
+        "primary": "string",
+        "histology": "string",
+        "site": "string",
+        "laterality": "string",
+        "components": [
+          "string"
+        ]
+      },
+      "STAGE": {
+        "stage_text": "string",
+        "stage_system": "FIGO|TNM|Other|Unknown",
+        "stage_basis": "Pathology|Imaging|Clinical|Unknown"
+      },
+      "INITIAL_TREATMENT": "Yes|No|Unknown",
+      "SURGERY_DONE": {
+        "performed": "Yes|No|Unknown",
+        "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+        "procedure": "string"
+      },
+      "NEOADJUVANT": "Yes|No|Unknown",
+      "ADJUVANT_TREATMENT": {
+        "given": "Yes|No|Unknown",
+        "regimens": [
+          "string"
+        ],
+        "cycles_or_courses": "string"
+      },
+      "LINE_OF_THERAPY": [
+        {
+          "line": "1L|2L|3L|4L|5L|6L+|Unknown",
+          "intent": "Curative|Neoadjuvant|Adjuvant|First_line|Salvage|Palliative|Unknown",
+          "regimen": "string (verbatim from source)",
+          "start_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "end_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "cycles_planned": "string",
+          "cycles_completed": "string",
+          "response_assessment": {
+            "best_response": "CR|PR|SD|PD|Not_evaluable|Unknown",
+            "response_criteria": "RECIST_1.1|GCIG_CA125|iRECIST|Clinical|Unknown",
+            "response_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+            "ca125_response": "Response|Stable|Progression|Not_applicable|Unknown"
+          },
+          "discontinuation": {
+            "reason": "Completed|Progression|Toxicity|Patient_choice|Death|Other|Unknown",
+            "detail": "string"
+          },
+          "pfs_days": "string",
+          "concurrent_bevacizumab": "Yes|No|Unknown",
+          "in_clinical_trial": "Yes|No|Unknown"
+        }
+      ],
+      "MAINTENANCE": "Yes|No|Unknown",
+      "MAINTENANCE_DETAIL": {
+        "given": "Yes|No|Unknown",
+        "regimens": [
+          "string"
+        ],
+        "start_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+        "end_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown"
+      },
+      "RELAPSE": "Yes|No|Unknown",
+      "RELAPSE_DATE": {
+        "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+        "type": "Biochemical|Radiologic|Clinical|Unknown",
+        "evidence": "string"
+      },
+      "FAMILY_HISTORY": {
+        "documented": "Yes|No|Unknown",
+        "significant_cancer_history": "Yes|No|Unknown",
+        "relatives": [
+          {
+            "relationship": "Mother|Father|Sister|Brother|Daughter|Son|Maternal_grandmother|Paternal_grandmother|Maternal_grandfather|Paternal_grandfather|Maternal_aunt|Paternal_aunt|Maternal_uncle|Paternal_uncle|Cousin|Other|Unknown",
+            "cancer_type": "string",
+            "age_at_diagnosis": "string",
+            "vital_status": "Alive|Deceased|Unknown"
+          }
+        ],
+        "hereditary_syndrome_suspected": "BRCA|Lynch|Li_Fraumeni|Cowden|Peutz_Jeghers|None|Unknown",
+        "genetic_counseling_recommended": "Yes|No|Unknown",
+        "notes": "string"
+      },
+      "MEDICAL_HISTORY": {
+        "comorbidities": [
+          {
+            "condition": "string",
+            "status": "Active|Controlled|Resolved|Unknown",
+            "impact_on_treatment": "string"
+          }
+        ],
+        "prior_malignancies": [
+          {
+            "type": "string",
+            "diagnosis_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+            "treatment": "string",
+            "status": "Cured|Active|Unknown"
+          }
+        ],
+        "allergies": [
+          {
+            "allergen": "string",
+            "reaction": "string",
+            "severity": "Mild|Moderate|Severe|Unknown"
+          }
+        ],
+        "prior_surgeries": [
+          {
+            "procedure": "string",
+            "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+            "site": "string"
+          }
+        ]
+      },
+      "HRD": "Positive|Negative|Unknown|Not applicable",
+      "BRCA1": "Mutated|Wildtype|Unknown|Not applicable",
+      "BRCA2": "Mutated|Wildtype|Unknown|Not applicable",
+      "GENOMICS": {
+        "testing_performed": "Yes|No|Unknown",
+        "testing_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+        "testing_platform": "string",
+        "HRD_STATUS": {
+          "result": "Positive|Negative|Unknown|Not_applicable",
+          "score": "string",
+          "method": "Myriad_myChoice|FoundationOne|Academic|Other|Unknown"
+        },
+        "alterations": [
+          {
+            "gene": "string",
+            "category": "HRR|MMR|Oncogene|Tumor_suppressor|Other",
+            "status": "Mutated|Wildtype|Amplified|Deleted|Rearranged|LOH|Unknown",
+            "variant": "string",
+            "source": "somatic|germline|unknown",
+            "clinical_significance": "Pathogenic|Likely_pathogenic|VUS|Benign|Likely_benign|Unknown",
+            "allele_frequency": "string"
+          }
+        ]
+      },
+      "BIOMARKERS": {
+        "TMB": "string",
+        "MSI": "string",
+        "PDL1_CPS": "string",
+        "HER2": "string",
+        "AFP": "string",
+        "CA125": "string"
+      },
+      "CURRENT_STATUS": "string"
+    },
+    "TIMELINE": {
+      "events": [
+        {
+          "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "event_type": "Diagnosis|Surgery|Chemo|Maintenance|Targeted therapy|Immunotherapy|Radiotherapy|Imaging|Lab|Pathology|Biomarker testing|Progression|Relapse|Other",
+          "description": "string",
+          "regimen_or_test": "string",
+          "key_result": "string"
+        }
+      ],
+      "constraints": {
+        "min_events": 3,
+        "max_events": 30,
+        "must_include": [
+          "first diagnostic imaging or pathology confirmation (if available)",
+          "primary surgery (if performed)",
+          "start and end of each line of systemic therapy (if available)",
+          "first evidence of relapse/progression (if available)",
+          "latest treatment administration (if available)",
+          "latest lab marker value (AFP/CA125/etc., if available)",
+          "latest imaging assessment (if available)",
+          "the last-mentioned clinical event in the narrative (even if date is Unknown)"
+        ],
+        "ordering_rules": {
+          "prioritize_last_event": true
+        }
+      }
+    },
+    "MED_ONC": {
+      "current_regimen": {
+        "name": "string",
+        "last_admin_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+        "cycle_info": "string"
+      },
+      "planned_next_regimen": "string",
+      "prior_systemic_therapies": [
+        "string"
+      ],
+      "genetic_testing": {
+        "somatic": [
+          "string"
+        ],
+        "germline": [
+          "string"
+        ]
+      },
+      "monitoring_points": [
+        {
+          "drug_or_class": "string",
+          "monitoring": [
+            "string"
+          ]
+        }
+      ],
+      "notes": {
+        "allowed_content": "Only extract explicit plans or monitoring instructions. If none, set planned_next_regimen to \"Unknown\"."
+      },
+      "TOXICITIES": [
+        {
+          "toxicity": "string",
+          "severity": "Mild|Moderate|Severe|Life_threatening|Unknown",
+          "attribution": "Definite|Probable|Possible|Unlikely|Unknown",
+          "related_regimen": "string",
+          "related_line": "1L|2L|3L|4L|5L|6L+|Unknown",
+          "onset_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "outcome": "Resolved|Ongoing|Led_to_discontinuation|Death|Unknown",
+          "dose_modification": "Yes|No|Unknown"
+        }
+      ],
+      "CLINICAL_TRIALS": [
+        {
+          "trial_name": "string",
+          "trial_id": "string",
+          "phase": "I|II|III|IV|Unknown",
+          "treatment_line": "1L|2L|3L|4L+|Unknown",
+          "enrollment_date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "status": "Enrolled|Completed|Withdrawn|Unknown",
+          "arm": "string"
+        }
+      ]
+    },
+    "RADIOLOGY": {
+      "studies": [
+        {
+          "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "modality": "CT|MRI|US|Other",
+          "anatomic_sites": [
+            "string"
+          ],
+          "findings": [
+            "string"
+          ],
+          "impression": "string",
+          "trend_vs_prior": "Improved|Stable|Worse|Mixed|Unknown"
+        }
+      ],
+      "next_imaging_plan": {
+        "modality": "string",
+        "timing": "string"
+      }
+    },
+    "PATHOLOGY": {
+      "specimens": [
+        {
+          "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "site": "string",
+          "diagnosis": "string",
+          "components": [
+            "string"
+          ],
+          "grade": "string",
+          "tumor_size": "string",
+          "laterality": "string",
+          "sample_type": "string",
+          "involvement_sites": [
+            "string"
+          ],
+          "ihc": [
+            {
+              "marker": "string",
+              "result": "string"
+            }
+          ],
+          "molecular": [
+            {
+              "test": "string",
+              "result": "string"
+            }
+          ],
+          "raw_text": "string",
+          "uncertainty_or_missing": [
+            "string"
+          ]
+        }
+      ]
+    },
+    "NUC_MED": {
+      "studies": [
+        {
+          "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "type": "FDG-PET/CT|SPECT|Other",
+          "avid_lesions": [
+            "string"
+          ],
+          "non_avid_notes": [
+            "string"
+          ],
+          "confidence": "High|Moderate|Low"
+        }
+      ]
+    },
+    "LAB_TRENDS": {
+      "labs": [
+        {
+          "analyte": "AFP|CA125|CA19-9|CA15-3|CA72-4|HE4|ROMA|CEA|NSE|Hb|Cr|Other",
+          "unit": "string",
+          "reference_range": "string",
+          "latest": {
+            "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+            "value": "string",
+            "flag": "↑|↓|→|Unknown"
+          },
+          "history": [
+            {
+              "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+              "value": "string",
+              "flag": "↑|↓|→|Unknown"
+            }
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "YYYY-MM-DD|YYYY-MM|YYYY|Unknown",
+          "type": "Surgery|ChemoStart|ChemoEnd|Maintenance|Targeted therapy|Immunotherapy|Radiotherapy|Relapse|Progression|Imaging|Pathology|Biomarker testing|Other",
+          "description": "string"
+        }
+      ],
+      "rules": {
+        "must_extract_if_present": [
+          "AFP",
+          "CA125",
+          "CA19-9",
+          "CA15-3",
+          "CA72-4",
+          "HE4",
+          "ROMA",
+          "CEA",
+          "NSE",
+          "Hb",
+          "Plt",
+          "Cr"
+        ],
+        "flag_logic": "Use ↑ if explicitly described as elevated/high or clearly increasing; ↓ if low or clearly decreasing; → if explicitly described as stable; otherwise Unknown."
+      }
+    }
+  },
+  "FINAL_OUTPUT_REQUIREMENT": "Return exactly one JSON object with the top-level keys: CASE_CORE, TIMELINE, MED_ONC, RADIOLOGY, PATHOLOGY, NUC_MED, LAB_TRENDS. Do not output MASTER_INSTRUCTIONS or OUTPUT_SCHEMA. Do not include any additional text.",
+  "SCHEMA_METADATA": {
+    "version": "2.3.0",
+    "date": "2026-01-23",
+    "target_publication": "xxx",
+    "references": {
+      "response_criteria": {
+        "RECIST": "Eisenhauer EA, et al. Eur J Cancer 2009;45:228-247",
+        "GCIG_CA125": "Rustin GJ, et al. Int J Gynecol Cancer 2011;21:419-423"
+      },
+      "platinum_sensitivity": {
+        "definition": "GCIG consensus 2011",
+        "thresholds": "Refractory <=28d, Resistant 28-180d, Sensitive >=180d"
+      },
+      "HRD_definition": "ESMO CPG Epithelial Ovarian Cancer 2023",
+      "toxicity_grading": "CTCAE v5.0 (simplified to Mild/Moderate/Severe/Life_threatening)"
+    },
+    "priority_genes": {
+      "HRR": ["BRCA1", "BRCA2", "PALB2", "RAD51C", "RAD51D", "ATM", "BARD1", "BRIP1", "CDK12", "CHEK2", "NBN"],
+      "MMR": ["MLH1", "MSH2", "MSH6", "PMS2"],
+      "actionable": ["TP53", "KRAS", "NRAS", "PIK3CA", "PTEN", "CCNE1", "ARID1A"]
+    }
+  },
+  "REFINE_INSTRUCTIONS": "You are an EHR extraction refinement engine.\nYou will receive a previously extracted JSON and a list of issues identified by review.\nYour task is to provide ONLY the corrected field values for the problematic fields.\n\nRULES:\n- Output ONLY a JSON object with field paths as keys and corrected values.\n- Use dot notation for nested paths (e.g., \"CASE_CORE.BRCA1\").\n- For array fields, use bracket notation (e.g., \"CASE_CORE.GENOMICS.alterations\").\n- Do NOT re-extract fields that were correct.\n- Follow the original extraction rules strictly.\n- If a field should be \"Unknown\" because source text lacks evidence, set it to \"Unknown\".\n- If a value was truncated (e.g., PLT:34 should be PLT:342), provide the correct full value.\n- HRD is a phenotype, NOT a gene - never include it in GENOMICS.alterations array.\n- BRCA1/BRCA2 should only be Wildtype if explicitly tested and negative; otherwise \"Unknown\".\n\nOutput format example:\n{\n  \"CASE_CORE.BRCA1\": \"Unknown\",\n  \"CASE_CORE.BRCA2\": \"Unknown\",\n  \"CASE_CORE.GENOMICS.alterations\": [],\n  \"LAB_TRENDS.labs[0].latest.value\": \"PLT:342\"\n}",
+  "REFINE_OUTPUT_REQUIREMENT": "Return exactly one JSON object with field paths as keys and corrected values. No markdown. No extra text.",
+  "REFINEMENT_CONFIG": {
+    "max_iterations": 2,
+    "min_fixable_issues": 1,
+    "issue_severity_threshold": "major"
+  }
+}
